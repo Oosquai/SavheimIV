@@ -10,4 +10,4 @@ requireOnlyOneIngredient: false
 reqs:
 - Wood:1:0:True
 - Resin:1:0:True
-- FoxPelt_TW:0:1:True
+- DeerHide:0:1:True

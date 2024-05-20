@@ -20,6 +20,7 @@ BepInEx/LogOutput.log
 BepInEx/cache/harmony_interop_cache.dat
 BepInEx/cache/chainloader_typeloader.dat
 BepInEx/plugins/CLIENT_SIDE_DEV_ONLY
+BepInEx/config/wackyDatabase-BulkYML
 BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
 BepInEx/config/org.bepinex.plugins.darwinawards.cfg
 BepInEx/config/org.bepinex.plugins.groups.cfg
