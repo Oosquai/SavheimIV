@@ -1,0 +1,13 @@
+name: RBMP_IceScepterAncient
+clonePrefabName: BMP_IceScepterAncient
+craftingStation: $piece_magetable
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- BorealWood_TW:12:6:True
+- FrozenOrb_TW:6:3:True
+- Eitr:16:8:True

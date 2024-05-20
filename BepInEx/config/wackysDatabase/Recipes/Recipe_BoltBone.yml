@@ -1,0 +1,12 @@
+name: BoltBone
+clonePrefabName: 
+craftingStation: $piece_workbench
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- BoneFragments:8:1:True
+- Feathers:2:1:True

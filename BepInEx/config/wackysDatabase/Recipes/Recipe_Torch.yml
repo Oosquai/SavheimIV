@@ -1,0 +1,13 @@
+name: Torch
+clonePrefabName: 
+craftingStation: ''
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- Wood:1:0:True
+- Resin:1:0:True
+- FoxPelt_TW:0:1:True

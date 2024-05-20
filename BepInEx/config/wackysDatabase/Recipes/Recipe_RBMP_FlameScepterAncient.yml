@@ -1,0 +1,13 @@
+name: RBMP_FlameScepterAncient
+clonePrefabName: BMP_FlameScepterAncient
+craftingStation: $piece_magetable
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- ScorchedWood_TW:12:6:True
+- SmolderingCore_TW:6:3:True
+- Eitr:16:8:True

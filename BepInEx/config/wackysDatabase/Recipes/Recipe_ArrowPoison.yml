@@ -1,0 +1,13 @@
+name: ArrowPoison
+clonePrefabName: 
+craftingStation: $piece_fletchertable_TW
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- ElderBark:8:0:True
+- Feathers:2:0:True
+- Ooze:1:0:True
