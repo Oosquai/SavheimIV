@@ -1,0 +1,42 @@
+Savheim IV - Lots of important information has been added to item tooltips.  For example, look closely at your Hammer's description for new ways to build, and at boss trophies!
+Savheim IV - You can reposition some GUI windows by clicking & dragging, or Left-Alt and then click & drag.  Press Esc to get a cursor.
+Savheim IV - Recommended game settings:  Disable Camera Shake, Depth of Field, Chromatic Aberration, and Motion Blur.  You can also disable Key Hints and Raven hints if you like.  Iron Gate swapped Mouse 2 and 3 for Secondary Attack and Block - swap them back if you prefer.
+Savheim IV - The game takes a while to load with so many mods installed.  Go get a tankard of ale and use the Viking potty.  Please be patient.
+*Savheim IV - Group commands: /invite [name]; /leave; /remove [name]; /promote [name].  Group benefits:  group gem effects, draggable user interface, group chat (/p), colored names, and group ping (LeftAlt).
+Savheim IV - Press ~ (above Tab) to swap hotbars.  Practice the following, young Viking!  Middle mouse - special attack.  Dodge - hold block and press jump.  Parry - block just in time.
+Savheim IV - Most weapon classes have received physics upgrades to give them unique and improved playstyles.  Give them all a second swing, even if you decided against them last playthrough.  ... wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
+Savheim IV - Swords - on-demand slash vs. pierce.  Clubs - stagger.  Daggers - flanking, crit, unique dodge.  Axes - chain attack DPS.  Spears - throwable (with slow auto-return & owner-only auto-pickup) and improved melee attack range.  Warpikes - reach and knockback.
+Savheim IV - Atgeirs - AOE knockback.  Lances - knockback and bleed.  Claymores - parry & speed.  Bastard Swords - parry & damage.  Sledges - AOE.  Battlehammers - stagger.  Battleaxes - slow but powerful execute.  Crystal Battleaxes - stagger poke.  Fists - parry, unique dodge, pull enemies, staggering uppercut.  Claws - parry, unique dodge, pull enemies, pounce.
+Savheim IV - Bows - normal draw and projectile speeds.  Greatbows - slower draw speed, faster projectile speed, greater range and damage, knockback.  Crossbows - slow reload, very high damage and knockback.  Zoom with right click while aiming.  Press Interact (default E) to cancel draw.
+Savheim IV - Wands - one-hand, low cost, no special attack.  Scepters - later-game alternative one-handers with special attacks.  Staves - two-hand, higher damage and cost, bigger effects, special attacks (late-game staves only).
+Savheim IV - Bucklers excel at parrying.  Tower shields let you block for days, and some of them offer special resists.  Medium shields are a blend of both.
+Savheim IV - Dual wield pairs of swords, clubs, knives, or axes by equipping two of the same class.  Try their special attacks!  Mainhand block and parry are ignored.  Offhand base damage is ignored.  Gems should work in either weapon.  Dual_* skills do nothing.
+Savheim IV - Block Armor = how much you can block.  [Block Armor * Parry Bonus] = how much you can parry.  Excess damage drains health.  Tower shields drain stamina before health.  Block Force does nothing.
+Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Flanking: Attack an enemy's back.  Critical:  Attack a staggered enemy.
+Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
+Savheim IV - Harpoons now have a basic secondary attack.  Primary attack tethers, and then the Use key reels the tether in if it's lighter than you.  If it's heavier than you, well, with great power comes great responsibility.
+Savheim IV - Stealth no longer consumes stamina.  Swimming consumes less stamina as you level it up.  Food and rested buffs help even more with stamina.  Being Cold hurts stamina.
+Savheim IV - Torches are much more useful now!  They protect from Cold in a small radius, though they fade quickly in Mountains.  They last longer, and they can be upgraded at the workbench for greater duration and damage.
+Savheim IV - No more than 3 sockets can be crafted into any piece of gear, and some gear isn't allowed to have any sockets.  You must increase the level of your Gemcutters table to add additional sockets.
+Savheim IV - Try to unlock as many recipes as you can...  Bronze Nails?  What do I need those for?  Craft them and see!
+Savheim IV - Once you can craft them, it's a good idea to keep a Rune Focus and a Soulcatcher Lantern with you on adventures.  Use the Rune Focus on lore stones.  Use the lantern on souls of defeated enemies.
+Savheim IV - You can modify the color of text on signs.  Open the sign prompt as usual and type < color=white> or < color=#FFFFFF> (remove the space between "< color"), then type your message.  Use multiple tags for rainbow signs!  The color automatically resets if you enter new text.
+Savheim IV - Building tips!  While holding your hammer and hovering over a placed piece, hold shift and press the deconstruct button to select that piece.  Q and E cycle snap points.  Selections per tab persist, so you can change tabs and then hit Esc to quickly swap build pieces on different tabs.
+Savheim IV - You've learned to dive under the water by pointing down and pressing crouch!  Go swimming!  Wat-er you waiting for??
+Savheim IV - Boss powers now have both passive and active aspects, and you get to choose two!  Read about them at the starting stones or in your Valheim Compendium (inventory -> raven icon).  Keybinds are hardcoded to F and G, regardless of in-game settings.
+Savheim IV - Death went to therapy and is nicer now.  You'll no longer drop equipment, ammo, or consumables when you die, and most non-combat skills don't lose experience.  Resurrect each other with Surtling Cores.
+Savheim IV - Check your Valheim Compendium (inventory -> raven icon) for useful game and mod information, including Active Effects.
+Savheim IV - Teleporting long distances now reduces your Rested duration.  (Full map radius = ~60 minutes)
+Savheim IV - There are more ways to gain Rested now, and each level of Comfort adds more Rested time than it used to.  F6 toggles a list of pieces while in shelter.  Rest in groups for extra duration!
+Savheim IV - Waypoints offer safety from monsters, warmth, and a way to pick up a Rested buff in the field if you sit next to it for long enough when the weather is good.
+Savheim IV - Zone progression:  Meadows -> Black Forest -> Swamp -> Mountains -> Plains -> Mistlands -> Ashlands -> Deep North.  Mistlands has better mist.  Ashlands is all new.  Deep North has deadly surprises.
+Savheim IV - Outdoor camps, resources, and dungeons will all respawn slowly at varying rates.
+Savheim IV - Steps have been taken to ensure we can all coexist in the same world despite playing at different speeds.  Relax and enjoy the journey.
+Savheim IV - Sell precious stones & trophies to the traders.  Split stacks in your inventory to control quantities you want to sell.  Double-click items you want to buy to specify quantities.
+Savheim IV - The world gets more dangerous the further from center you travel.  Those who venture far return wealthy... if they return at all.
+Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, to all the creative modders out there for so many massive additions to it, and to the community for beautiful fanart.
+Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymole, KG, Blacks7ar, Searica, MSchmoecker, shudnal, and more!
+Savheim IV - Thank you to Matt, Jake, and Woody for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for TotinoTunes and Jake for that awesome Savheim IV video in Discord!
+Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
+Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
+Savheim IV - Press Z while hovering over an item to compare to currently equipped.

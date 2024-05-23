@@ -1,7 +1,7 @@
 name: AxeIron
 m_weight: 2
 m_name: $item_axe_iron
-m_description: $item_axe_iron_description  Whether using one or dual-wieling, axes have a 2-hit combo instead of 3 for greater sustained DPS.
+m_description: $item_axe_iron_description  Axes have a 2-hit combo instead of 3 for greater sustained DPS, and their secondary attack pulls enemies.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -20,7 +20,7 @@ Primary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.2
+  SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1
@@ -55,22 +55,22 @@ Primary_Attack:
     Trail_Effect: 
     Burst_Effect: 
 Secondary_Attack:
-  AttackType: Vertical
+  AttackType: Horizontal
   Attack_Animation: axe_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.1
-  m_attackStamina: 20
+  Custom_AttackSpeed: 2
+  m_attackStamina: 10
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.2
-  DmgMultiplier: 2.5
-  ForceMultiplier: 1.5
+  SpeedFactor: 0.7
+  DmgMultiplier: 1
+  ForceMultiplier: -80
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2.2
+  AttackRange: 2.7
   AttackHeight: 0.6
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -81,8 +81,8 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 90
-  Attack_Ray_Width: 0
+  Attack_Angle: 20
+  Attack_Ray_Width: 0.3
   Lower_Dmg_Per_Hit: false
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -148,9 +148,9 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 0
+m_knockback: 1
 m_useDurability: true
-m_useDurabilityDrain: 1
+m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
 m_maxDurability: 175
 m_durabilityPerLevel: 50

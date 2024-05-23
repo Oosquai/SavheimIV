@@ -1,7 +1,7 @@
 name: JC_Reaper_Knife
 m_weight: 0.3
 m_name: $jc_reaper_knife
-m_description: "A dagger made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has a quicker attack and improved parrying, and it deals 10% bonus damage to world bosses.  Knives have a unique dodge and bonuses to flanking and critical damage, emphasizing a dodge-heavy playstyle when dual-wielded."
+m_description: "A dagger made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has quicker attacks and deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -20,7 +20,7 @@ Primary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.3
+  SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1
@@ -60,12 +60,12 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.2
+  Custom_AttackSpeed: 1.7
   m_attackStamina: 36
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0
+  SpeedFactor: 0.7
   DmgMultiplier: 3
   ForceMultiplier: 4
   StaggerMultiplier: 1
@@ -135,7 +135,7 @@ SE_SET_Equip:
 ShieldStats:
   m_blockPower: 30
   m_blockPowerPerLevel: 3
-  m_timedBlockBonus: 6
+  m_timedBlockBonus: 4
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -150,7 +150,7 @@ m_teleportable: true
 m_backstabbonus: 6.5
 m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 1
+m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 75

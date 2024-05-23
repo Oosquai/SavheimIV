@@ -139,7 +139,7 @@ m_teleportable: true
 m_backstabbonus: 4
 m_knockback: 50
 m_useDurability: true
-m_useDurabilityDrain: 1
+m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
