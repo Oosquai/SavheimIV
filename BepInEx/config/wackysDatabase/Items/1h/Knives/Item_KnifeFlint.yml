@@ -1,7 +1,7 @@
 name: KnifeFlint
 m_weight: 0.3
 m_name: $item_knife_flint
-m_description: $item_knife_flint_description  Knives have an improved dodge and bonuses to flanking and critical damage.
+m_description: $item_knife_flint_description  Knives have an improved dodge and high backstab damage.
 clonePrefabName: 
 mockName: 
 customIcon: 

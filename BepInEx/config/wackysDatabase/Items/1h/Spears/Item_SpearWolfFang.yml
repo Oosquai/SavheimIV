@@ -25,7 +25,7 @@ Primary_Attack:
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2.3
+  AttackRange: 2.4
   AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false

@@ -1,7 +1,7 @@
 name: JC_Reaper_Axe
 m_weight: 2
 m_name: $jc_reaper_axe
-m_description: "An axe made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses, has a stronger pull on its special attack, and surpasses all other axes when it comes to chopping trees."
+m_description: "An axe made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -55,22 +55,22 @@ Primary_Attack:
     Trail_Effect: 
     Burst_Effect: 
 Secondary_Attack:
-  AttackType: Horizontal
+  AttackType: Vertical
   Attack_Animation: axe_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 2
-  m_attackStamina: 14
+  Custom_AttackSpeed: 1.5
+  m_attackStamina: 28
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1
-  ForceMultiplier: -95
+  DmgMultiplier: 2
+  ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2.7
+  AttackRange: 2.2
   AttackHeight: 0.6
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -81,13 +81,13 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 20
-  Attack_Ray_Width: 0.3
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: false
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
-  Last_Chain_Dmg_Multiplier: 2
+  Last_Chain_Dmg_Multiplier: 1.5
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

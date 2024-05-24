@@ -1,0 +1,183 @@
+Celestial Blessing:
+  duration: default
+  prizes:
+    celestial bone pickaxe:
+      chance: 0.1
+      sockets:
+        - perfect spinel
+        - perfect sulfur
+        - perfect onyx
+        - perfect topaz
+    frame of chaos:
+      chance: 0.2
+Astral Serenity:
+  duration: default
+  prizes:
+    celestial bone battleaxe:
+      chance: 0.1
+      sockets:
+        - perfect onyx
+        - perfect sulfur
+        - perfect ruby
+        - perfect topaz
+    celestial bone hammer:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect sapphire
+        - perfect spinel
+        - perfect topaz
+Nebulous Aegis:
+  duration: default
+  prizes:
+    celestial bone tower:
+      chance: 0.1
+      sockets:
+        - perfect onyx
+        - perfect sulfur
+        - perfect sapphire
+        - perfect topaz
+    celestial bone buckler:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect sapphire
+        - perfect spinel
+        - perfect topaz
+Divine Intervention:
+  duration: default
+  prizes:
+    celestial bone sword:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect emerald
+        - perfect sapphire
+        - perfect topaz
+    blessed crystal mirror:
+      chance: 0.15
+Radiant Echoes:
+  duration: default
+  prizes:
+    celestial bone shield:
+      chance: 0.1
+      sockets:
+        - perfect sapphire
+        - perfect sulfur
+        - perfect spinel
+        - perfect topaz
+    celestial bone dagger:
+      chance: 0.1
+      sockets:
+        - perfect onyx
+        - perfect sulfur
+        - perfect humite
+        - perfect topaz
+Heavenly Dominance:
+  duration: default
+  prizes:
+    celestial bone bow:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect spinel
+        - perfect emerald
+        - perfect topaz
+    frame of chance:
+      chance: 0.2
+Luminescent Ascendancy:
+  duration: default
+  prizes:
+    celestial bone great sword:
+      chance: 0.1
+      sockets:
+        - perfect sapphire
+        - perfect emerald
+        - perfect ruby
+        - perfect topaz
+    celestial bone spear:
+      chance: 0.1
+      sockets:
+        - perfect onyx
+        - perfect spinel
+        - perfect sulfur
+        - perfect topaz
+Stellar Impact:
+  duration: default
+  prizes:
+    celestial bone axe:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect spinel
+        - perfect sulfur
+        - perfect topaz
+    celestial crystal mirror:
+      chance: 0.05
+Nebula Mirage:
+  duration: default
+  prizes:
+    celestial bone shocker:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect sapphire
+        - perfect humite
+        - perfect topaz
+    celestial bone stinger:
+      chance: 0.1
+      sockets:
+        - perfect humite
+        - perfect spinel
+        - perfect sulfur
+        - perfect topaz
+Empyrean Odyssey:
+  duration: default
+  prizes:
+    celestial bone mace:
+      chance: 0.1
+      sockets:
+        - perfect ruby
+        - perfect sapphire
+        - perfect emerald
+        - perfect topaz
+    celestial bone crossbow:
+      chance: 0.1
+      sockets:
+        - perfect humite
+        - perfect sapphire
+        - perfect sulfur
+        - perfect topaz
+      
+# You can create a global blacklist. Gems on the global blacklist cannot be obtained from any event.
+#global blacklist:
+#  - Shattered_Black_Crystal      
+
+# If you want to create your own Event, you can use the following example.     
+#Example Event:
+#  start:
+#    year: 2022
+#    month: 11
+#    day: 01
+#    hour: 00
+#    minute: 00
+#  end:
+#    year: 2022
+#    month: 11
+#    day: 20
+#    hour: 10
+#    minute: 01
+#  prizes:
+#    celestial bone sword:
+#      chance: 0.02
+#      sockets:
+#        - perfect ruby
+#        - perfect merged gem
+#        - empty
+#        - empty
+#    celestial bone bow:
+#      chance: 0.02
+#      sockets:
+#        - perfect sapphire
+#  blacklist:
+#    - perfect sapphire

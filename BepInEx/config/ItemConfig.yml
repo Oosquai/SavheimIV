@@ -1,0 +1,413 @@
+﻿# Example ItemConfig.yml
+# Do not forget to turn the YAML file on in the settings.
+
+# Predefined groups:
+# all, ore, metal, food, potions, woods, trophy, boss trophy, valuable, seed, crop, stackable.
+# pants, chest, helmet, cape, armor.
+# axes, clubs, knives, pickaxes, polearms, spears, swords, bows, crossbows, weapon, arrows, bolts, ammo.
+# round shield, tower shield, shield.
+# special (fishing rod and megingjord), tool, equipment.
+
+# Things you can change: amount, weight, weight factor, stack, stack factor, pickup, floating, teleportable, loss.
+# Things you can configure per world level: amount, pickup, teleportable, loss.
+
+# Note: If you are using mods that create custom items / prefabs, you might need to add and configure them
+#       explicitly by creating your own groups for those. Predefined groups only contain Valheim's original
+#       items. 
+
+# Define your own groups here and assign items via display name (or the internal ID) to your groups.
+# Hint: If you want to find the internal ID of an item, you can look it up in the wiki.
+# https://valheim.fandom.com
+# For custom items, please refer to the documentation of the mod that adds them.
+#
+# groups:
+#   My Group:
+#      - Display Name
+#      - InternalID
+
+groups:
+  Helmet:
+    - HelmetBronze
+    - HelmetDrake
+    - HelmetDverger
+    - HelmetIron
+    - HelmetLeather
+    - HelmetOdin
+    - HelmetPadded
+    - HelmetRoot
+    - HelmetTrollLeather
+    - HelmetYule
+    - HelmetCarapace
+    - HelmetMage
+    - HelmetFenring
+    - BMP_AdvanceWizardHat
+    - BMP_BeginnersWizardHat
+    - BMP_PolarWolfHood
+    - BMP_RedWizardHat
+    - BMP_RedWizardHelm
+    - BMP_ShamanHat
+    - BMP_TrollMagicHood
+    - VDS_AtlantianCrown
+
+  Chest:
+    - ArmorBronzeChest
+    - ArmorIronChest
+    - ArmorLeatherChest
+    - ArmorPaddedCuirass
+    - ArmorRagsChest
+    - ArmorRootChest
+    - ArmorTrollLeatherChest
+    - ArmorWolfChest
+    - ArmorCarapaceChest
+    - ArmorMageChest
+    - ArmorFenringChest
+    - BMP_PolarWolfChest
+    - BMP_RedWizardChest
+
+  Legs:
+    - ArmorBronzeLegs
+    - ArmorIronLegs
+    - ArmorLeatherLegs
+    - ArmorPaddedGreaves
+    - ArmorRagsLegs
+    - ArmorRootLegs
+    - ArmorTrollLeatherLegs
+    - ArmorWolfLegs
+    - ArmorCarapaceLegs
+    - ArmorMageLegs
+    - ArmorFenringLegs
+    - BMP_PolarWolfLegs
+    - BMP_RedWizardLegs
+
+  Shoulder:
+    - CapeDeerHide
+    - CapeLinen
+    - CapeLox
+    - CapeOdin
+    - CapeTest
+    - CapeTrollHide
+    - CapeWolf
+    - CapeFeather
+    - BMP_CultistCape
+    - BMP_RedWizardCape
+    - BMP_TrollMagicCape
+
+  Utility:
+    - BeltStrength
+    - Wishbone
+    - SaddleLox
+    - CryptKey
+    - BBH_BlackForest_Quiver
+    - BBH_OdinPlus_Quiver
+    - BBH_PlainsLox_Quiver
+    - BBH_Seeker_Quiver
+    - JC_blueish_Necklace
+    - JC_Necklace_Blue
+    - JC_Necklace_Green
+    - JC_Necklace_Purple
+    - JC_Necklace_Red
+    - JC_Necklace_Yellow
+    - JC_Ring_Blue
+    - JC_Ring_Green
+    - JC_Ring_Purple
+    - JC_Ring_Red
+    - BMP_AdvanceMagicBook
+    - BMP_BeginnersMagicBook
+    - BMP_DruidsTome
+    - BMP_Dvergr_Earring
+    - BMP_DvergrBelt
+    - BMP_Eitr_Earring
+    - BMP_EitrBelt
+    - BMP_ElementalistBelt
+    - BMP_FireResist_Earring
+    - BMP_FrostResist_Earring
+    - BMP_LightBelt
+    - BMP_NecromancerBelt
+    - BMP_PoisonResist_Earring
+    - JC_Blue_Necklace
+    - JC_Blue_Ring
+    - JC_Cyan_Necklace
+    - JC_Cyan_Ring
+    - JC_Green_Necklace
+    - JC_Green_Ring
+    - JC_Purple_Necklace
+    - JC_Purple_Ring
+    - JC_Red_Necklace
+    - JC_Red_Ring
+    - JC_SoulNecklace_Necklace
+    - JC_SoulRing_Ring
+
+  TwoHandedWeapon:
+    - AtgeirBlackmetal
+    - AtgeirBronze
+    - AtgeirIron
+    - Battleaxe
+    - BattleaxeCrystal
+    - FishingRod
+    - PickaxeAntler
+    - PickaxeBronze
+    - PickaxeIron
+    - PickaxeStone
+    - SledgeCheat
+    - SledgeIron
+    - SledgeStagbreaker
+    - PickaxeBlackMetal
+    - AtgeirHimminAfl
+    - SpearCarapace
+    - SledgeDemolisher
+    - SwordKrom
+    - SwordMistwalker
+    - KnifeSkollAndHati
+    - StaffFireball
+    - StaffIceShards
+    - StaffShield
+    - StaffSkeleton
+    - StaffFireballAncient
+    - StaffIceShardsAncient
+    - JC_Lightning_Staff
+    - JC_Poison_Staff
+    - JC_Reaper_Battleaxe
+    - JC_Reaper_Pickaxe
+    - JC_Reaper_TH_Mace
+    - JC_Reaper_TH_Sword
+    - BMP_ArcticStaff
+    - BMP_HealStaff
+    - BMP_LightningStaff
+    - BMP_PoisonStaff
+    - BMP_SurtlingStaff
+    - BMP_FlameStaff
+    - BMP_ThunderStaff
+    - BMP_NeckTotem
+    - BMP_EikthyrsStaff
+
+  OneHandedWeapon:
+    - AxeBlackMetal
+    - AxeBronze
+    - AxeFlint
+    - AxeIron
+    - AxeStone
+    - BombOoze
+    - Club
+    - KnifeBlackMetal
+    - KnifeButcher
+    - KnifeChitin
+    - KnifeCopper
+    - KnifeFlint
+    - KnifeSilver
+    - MaceBronze
+    - MaceIron
+    - MaceNeedle
+    - MaceSilver
+    - SpearBronze
+    - SpearChitin
+    - SpearElderbark
+    - SpearFlint
+    - SpearWolfFang
+    - SwordBlackmetal
+    - SwordBronze
+    - SwordCheat
+    - SwordIron
+    - SwordIronFire
+    - SwordSilver
+    - Tankard
+    - TankardOdin
+    - Torch
+    - Lantern
+    - AxeJotunBane
+    - BombBile
+    - JC_Reaper_Axe
+    - JC_Reaper_Knife
+    - JC_Reaper_Mace
+    - JC_Reaper_Spear
+    - JC_Reaper_Sword
+    - BMP_FlameScepter
+    - BMP_FlameWand
+    - BMP_IceScepter
+    - BMP_IceWand
+    - BMP_LightningScepter
+    - BMP_LightningWand
+    - BMP_PoisonWand
+    - BMP_FlameScepterAncient
+    - BMP_IceScepterAncient
+
+  Shield:
+    - ShieldBlackmetal
+    - ShieldBlackmetalTower
+    - ShieldBoneTower
+    - ShieldIronBuckler
+    - ShieldIronSquare
+    - ShieldIronTower
+    - ShieldKnight
+    - ShieldSerpentscale
+    - ShieldSilver
+    - ShieldWoodTower
+    - ShieldCarapaceBuckler
+    - ShieldCarapace
+    - JC_Reaper_Shield
+    - JC_Shield_Buckler
+    - JC_Shield_Tower
+    - LanternSoulcatcher
+
+  Bow:
+    - Bow
+    - BowDraugrFang
+    - BowFineWood
+    - BowHuntsman
+    - BowSpineSnap
+    - CrossbowArbalest
+    - JC_Reaper_Bow
+    - JC_Reaper_Crossbow
+
+  Tool:
+    - Cultivator
+    - Hammer
+    - Hoe
+    - RuneFocus
+
+  ArrowsAndBolts:
+    - ArrowBronze
+    - ArrowFire
+    - ArrowFlint
+    - ArrowFrost
+    - ArrowIron
+    - ArrowNeedle
+    - ArrowObsidian
+    - ArrowPoison
+    - ArrowSilver
+    - ArrowWood
+    - ArrowCarapace
+    - BoltBone
+    - BoltIron
+    - BoltBlackmetal
+    - BoltCarapace
+    - TurretBoltWood
+    - TurretBolt
+
+  Consumable:
+    - BarleyWine
+    - BlackSoup
+    - BloodPudding
+    - BoarJerky
+    - Bread
+    - CarrotSoup
+    - CookedDeerMeat
+    - CookedLoxMeat
+    - CookedMeat
+    - CookedWolfMeat
+    - DeerStew
+    - Eyescream
+    - FishCooked
+    - FishWraps
+    - LoxPie
+    - MeadFrostResist
+    - MeadHealthMedium
+    - MeadHealthMinor
+    - MeadPoisonResist
+    - MeadStaminaMedium
+    - MeadStaminaMinor
+    - MeadTasty
+    - MinceMeatSauce
+    - NeckTailGrilled
+    - OnionSoup
+    - QueensJam
+    - Sausages
+    - SerpentMeatCooked
+    - SerpentStew
+    - ShocklateSmoothie
+    - TurnipStew
+    - WolfJerky
+    - WolfMeatSkewer
+    - MushroomMagecap
+    - MushroomJotunpuffs
+    - CookedEgg
+    - cookedbugmeat
+    - cookedharemeat
+    - CookedChickenMeat
+    - Meatplatter
+    - HoneyGlazedChicken
+    - Mistharesupreme
+    - Salad
+    - MushroomOmelette
+    - fishandbread
+    - MagicallyStuffedShroom
+    - YggdrasilPorridge
+    - SeekerAspic
+    - MeadHealthMajor
+    - MeadStaminaLingering
+    - MeadEitrMinor
+    - ct_bonfireinabottle
+    - ct_campfireinabottle
+    - ct_livingroominabottle
+    - BMP_MountainSoup
+    - BMP_MountainStew
+    - BMP_MushroomJam
+    - BMP_MushroomPie
+    - BMP_SautedMeatMushroom
+    - HoneyCookedMeat
+    - HoneyCookedDeer
+    - HoneyCookedNeck
+    - HoneyTeriyakiSalmon
+    - HoneySausages
+    - HoneySerpentMeat
+    - HoneyMushroomSoup
+    - HoneyTeriyakiSalmonWrap
+    - HoneyCookedWolf
+    - OdinsDelight
+    - HoneyYellowStewLesser
+    - HoneyBread
+    - HoneyCookedLox
+    - HoneyCookedHare
+    - HoneyCookedSeeker
+    - HoneyMushroomStew
+    - HoneyYellowStew
+    - HoneyNeckJerky
+    - HoneyDeerJerky
+    - HoneyLoxJerky
+    - HoneyCooked
+    - HoneyDessertPie
+    - HoneyHarePie
+    - HoneyMeadSpeed
+    - HoneyMeadDamage
+
+  AllWood:
+    - Wood
+    - FineWood
+    - RoundLog
+    - YggdrasilWood
+    - Blackwood
+
+  AllEquipment:
+    - ArrowsAndBolts
+    - Bow
+    - Chest
+    - Helmet
+    - Legs
+    - OneHandedWeapon
+    - TwoHandedWeapon
+    - Shield
+    - Shoulder
+    - Utility
+    - Tool
+
+  NoLossOnDeath:
+    - AllEquipment
+    - Consumable
+
+  DontSink:
+    - SerpentScale
+    - TrophySerpent
+
+  IncreaseStackSize:
+    - ArrowsAndBolts
+
+NoLossOnDeath:
+  loss: no
+
+DontSink:
+  floating: yes
+
+AllWood:
+  weight factor: 0.5
+
+#IncreaseStackSize:
+#  stack factor: 2

@@ -1,7 +1,7 @@
 name: JC_Reaper_Mace
 m_weight: 2
 m_name: $jc_reaper_mace
-m_description: "A mace made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals additional stagger damage to all enemies and 10% bonus damage to world bosses."
+m_description: "A mace made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -23,7 +23,7 @@ Primary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.7
+  StaggerMultiplier: 1.5
   RecoilMultiplier: 0
   AttackRange: 2.4
   AttackHeight: 0.8
@@ -68,7 +68,7 @@ Secondary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 2.5
+  StaggerMultiplier: 2.25
   RecoilMultiplier: 0
   AttackRange: 2.5
   AttackHeight: 0.8

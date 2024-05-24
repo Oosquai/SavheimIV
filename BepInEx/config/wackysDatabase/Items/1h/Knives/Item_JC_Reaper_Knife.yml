@@ -1,7 +1,7 @@
 name: JC_Reaper_Knife
 m_weight: 0.3
 m_name: $jc_reaper_knife
-m_description: "A dagger made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has quicker attacks and deals 10% bonus damage to world bosses."
+m_description: "A dagger made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -15,7 +15,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.2
+  Custom_AttackSpeed: 1
   m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -60,7 +60,7 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.7
+  Custom_AttackSpeed: 1.5
   m_attackStamina: 36
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -147,13 +147,13 @@ spawn_on_hit:
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
-m_backstabbonus: 6.5
+m_backstabbonus: 6
 m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
 m_maxDurability: 200
-m_durabilityPerLevel: 75
+m_durabilityPerLevel: 50
 m_equipDuration: 0
 m_skillType: Knives
 m_animationState: Unarmed
