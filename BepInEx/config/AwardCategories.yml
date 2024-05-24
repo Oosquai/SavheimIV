@@ -1,0 +1,147 @@
+# You can add your own texts here.
+# No, you cannot add your own categories.
+# Don't use very long texts.
+
+general:
+  - "{player} died an unspectacular death."
+  - "{player} has been promoted to 'dead player'!"
+  - "{player} likes to respawn."
+  - "{player} body is soooooo far away."
+  - "{player}'s gear is up for grabs - first come, first served."
+  - "{player} states, Wake me up, Scott."
+  - "{player} brought a knife to a gun fight."
+  - "{player} should not have stated, hold my beer."
+  - "{player}'s last words were, It's a harmless little bunny."
+  - "{player} went into the cold dark night."
+  - "{player} really thought there would be virgins."
+  - "{player} has this newfound sense of floating."
+  - "Oh, is that you again, {player}? -Death"
+
+death by fire:
+  - "{player} is now crispy."
+  - "{player} chose to be cremated."
+  - "{player} is a huge fan of the Human Torch."
+  - "{player} tried a Ghost Pepper sauce from Bryan Ivory."
+  - "{player} picked the wrong week to quit smoking."
+  - "{player}'s body has been converted to ash and vapor."
+  - "{player} should not have bought the Musk flamethrower."
+  - "{player}'s body is a well-rendered brisket."
+  - "{player} did not prevent forest fires."
+  - "{player} screams, HELP I'm on Fire!"
+
+death by poison:
+  - "{player} had a tea party with Putin."
+  - "{player} turned brave, then green, then dead."
+  - "{player} is not imunne to iocaine powder."
+  - "{player} chose the wrong cup."
+  - "{player} needs to make more poison potions, stat!"
+  - "{player} had bad gas, then stood downwind."
+  - "{player} should wear their mask to prevent more than COVID."
+  - "{player} should not have drank the rancid milk."
+  - "{player} did not check the expiration dates."
+
+death by frost:
+  - "{player} got turned into an icicle."
+  - "{player} will never complain about being hot again."
+  - "{player} needs a fur coat."
+  - "{player} needs more fires."
+  - "{player} is now a frozen caveman."
+  - "{player} realized that they forgot their jacket."
+  - "{player} spent too much time in an ice bath."
+  - "{player} tried Sav's new shower gel (Brrrrr)."
+
+death by lightning:
+  - "{player} is now thunderstruck."
+  - "{player} is now ash, thanks to a flash."
+  - "{player} got zapped. Brzzz!"
+  - "{player} took too much Wattage."
+  - "{player} forgot to unplug the cord."
+  - "{player} went literally into the light."
+  - "{player} states, Watt the F$%K!"
+
+death by elemental:
+  - "{player} challenged the elements and lost."
+  - "{player} was out of their element."
+  - "{player} will lament the elements."
+  - "{player} states, Elementary, my dear Watson."
+  - "{player} should have spent more time in Elementary school."
+
+death by tree:
+  - "{player} forgot to yell 'Timber!' and suffers the consequences now."
+  - "{player} fought the tree boss, but lost."
+  - "{player} took a big Woody."
+  - "{player} is near free cut wood!"
+  - "{player} is a lumberjack that should have trained more."
+  - "{player} thought they were Paul Bunyan."
+  - "{player} should not have cut down old growth."
+  - "{player} thought they could whack wood all day.  :-("
+  - "{player} died by a hard log."
+  - "{player} has secured the pole position."
+
+death by pierce:
+  - "{player} met the superperforator: {enemy}!"
+  - "{player} got a new piercing. Or two. Or a hundred."
+  - "{player} mishandled sharp objects."
+  - "{player} was told not to run with scissors."
+  - "{player} thought they were Pierce Brosnan."
+  - "{player} was placed on a pike."
+
+death by slash:
+  - "{player} got sliced in two."
+  - "{player} died, even though it was just a flesh wound."
+  - "{player} was slap-chopped - you're going to love their nuts!"
+  - "{player} has a papercut."
+  - "{player} should not have been playing in the shredder bin."
+
+death by blunt:
+  - "{player} got smacked on the head by {enemy}."
+  - "{player} looks smashing today."
+  - "{player} wanted a different kind of blunt.  :-("
+  - "{player} was bludgeoned to death."
+  - "{player} wanted to go to a different club."
+
+death by physical:
+  - "{player} challenged {enemy} and came in second."
+  - "{player} got too physical."
+  - "{player} should have studied physics more."
+
+death by gravity:
+  - "{player} discovered gravity. Huzzah!"
+  - "{player} forgot to brake before landing."
+  - "{player} confirmed Newton's laws."
+  - "{player} said they were not afraid of heights."
+  - "{player} is no longer afraid of heights."
+  - "{player} went, wee, wee, wee, all the way down."
+  - "{player} forgot their parachute."
+  - "{player} thought they could fly."
+
+death by drowning:
+  - "{player} is no longer thirsty."
+  - "{player} wants to be a fish, apparently."
+  - "{player} lives in a pineapple under the sea now."
+  - "{player} never learned to swim."
+  - "{player} wanted to say high to baby sharks."
+  - "{player} tried to get their white whale."
+  - "{player} needs a lifejacket."
+  - "{player} has made it impossible to swim to his things."
+  - "{player} should have brought a raft."
+  - "{player} loves Davey Jones' locker."
+
+death by player:
+  - "{player} wanted to hug {enemy} and found death instead."
+  - "{player} wanted to make new friends, but got disappointed."
+  - "{player} was murdered by teammates."
+  - "{player} said, Wait {enemy}, you weren't supposed to do that!"
+
+death by creature:
+  - "{player} is more dead than a Draugr now, thanks to {enemy}."
+  - "{player} fought {enemy} and lost."
+  - "{player} failed to ROLL ROLL ROLL!"
+  - "{player} is crying out for help from Kry."
+
+death by boss:
+  - "{player} learned that {enemy} is the boss around here."
+  - "{player} tried to boss around {enemy} and paid the price."
+  - "{player} was smote by {enemy}."
+  - "{player} should have had some help with {enemy}."
+  - "{player} request that Sav reduce the HP of {enemy}."
