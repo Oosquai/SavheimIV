@@ -152,7 +152,7 @@ m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
-m_maxDurability: 100
+m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
 m_skillType: Spears
