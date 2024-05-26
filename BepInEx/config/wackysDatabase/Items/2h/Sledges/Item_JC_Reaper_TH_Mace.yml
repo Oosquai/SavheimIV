@@ -49,14 +49,14 @@ Primary_Attack:
   Projectiles: 1
   AEffects:
     Hit_Effects:
-    - vfx_HitSparksTW
-    - sfx_sledge_lowervolhitTW
-    - fx_hit_camshakeTW
+    - 
+    - 
+    - 
     Hit_Terrain_Effects: 
     Start_Effect: 
     Trigger_Effect:
-    - fx_swing_camshakeTW
-    - sfx_battleaxe_swing_woshTW
+    - 
+    - 
     Trail_Effect: 
     Burst_Effect: 
 Secondary_Attack:
@@ -101,11 +101,11 @@ Secondary_Attack:
     Hit_Effects: 
     Hit_Terrain_Effects: 
     Start_Effect:
-    - sfx_sledge_swingTW
+    - 
     Trigger_Effect:
-    - fx_swing_camshakeTW
-    - vfx_sledge_iron_hitTW
-    - sfx_sledge_iron_hit_TW
+    - 
+    - 
+    - 
     Trail_Effect: 
     Burst_Effect: 
 Damage:

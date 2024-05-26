@@ -7,7 +7,7 @@ Celestial Blessing:
         - perfect spinel
         - perfect sulfur
         - perfect onyx
-        - perfect topaz
+        - empty
     frame of chaos:
       chance: 0.2
 Astral Serenity:
@@ -19,14 +19,14 @@ Astral Serenity:
         - perfect onyx
         - perfect sulfur
         - perfect ruby
-        - perfect topaz
+        - empty
     celestial bone hammer:
       chance: 0.1
       sockets:
         - perfect ruby
         - perfect sapphire
         - perfect spinel
-        - perfect topaz
+        - empty
 Nebulous Aegis:
   duration: default
   prizes:
@@ -36,14 +36,14 @@ Nebulous Aegis:
         - perfect onyx
         - perfect sulfur
         - perfect sapphire
-        - perfect topaz
+        - empty
     celestial bone buckler:
       chance: 0.1
       sockets:
         - perfect ruby
         - perfect sapphire
         - perfect spinel
-        - perfect topaz
+        - empty
 Divine Intervention:
   duration: default
   prizes:
@@ -53,7 +53,7 @@ Divine Intervention:
         - perfect ruby
         - perfect emerald
         - perfect sapphire
-        - perfect topaz
+        - empty
     blessed crystal mirror:
       chance: 0.15
 Radiant Echoes:
@@ -65,14 +65,14 @@ Radiant Echoes:
         - perfect sapphire
         - perfect sulfur
         - perfect spinel
-        - perfect topaz
+        - empty
     celestial bone dagger:
       chance: 0.1
       sockets:
         - perfect onyx
         - perfect sulfur
         - perfect humite
-        - perfect topaz
+        - empty
 Heavenly Dominance:
   duration: default
   prizes:
@@ -82,7 +82,7 @@ Heavenly Dominance:
         - perfect ruby
         - perfect spinel
         - perfect emerald
-        - perfect topaz
+        - empty
     frame of chance:
       chance: 0.2
 Luminescent Ascendancy:
@@ -94,14 +94,14 @@ Luminescent Ascendancy:
         - perfect sapphire
         - perfect emerald
         - perfect ruby
-        - perfect topaz
+        - empty
     celestial bone spear:
       chance: 0.1
       sockets:
         - perfect onyx
         - perfect spinel
         - perfect sulfur
-        - perfect topaz
+        - empty
 Stellar Impact:
   duration: default
   prizes:
@@ -111,7 +111,7 @@ Stellar Impact:
         - perfect ruby
         - perfect spinel
         - perfect sulfur
-        - perfect topaz
+        - empty
     celestial crystal mirror:
       chance: 0.05
 Nebula Mirage:
@@ -123,14 +123,14 @@ Nebula Mirage:
         - perfect ruby
         - perfect sapphire
         - perfect humite
-        - perfect topaz
+        - empty
     celestial bone stinger:
       chance: 0.1
       sockets:
         - perfect humite
         - perfect spinel
         - perfect sulfur
-        - perfect topaz
+        - empty
 Empyrean Odyssey:
   duration: default
   prizes:
@@ -140,14 +140,14 @@ Empyrean Odyssey:
         - perfect ruby
         - perfect sapphire
         - perfect emerald
-        - perfect topaz
+        - empty
     celestial bone crossbow:
       chance: 0.1
       sockets:
         - perfect humite
         - perfect sapphire
         - perfect sulfur
-        - perfect topaz
+        - empty
       
 # You can create a global blacklist. Gems on the global blacklist cannot be obtained from any event.
 #global blacklist:

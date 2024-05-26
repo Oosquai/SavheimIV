@@ -1,0 +1,44 @@
+[
+  {
+    "prefab": "Dandelion", 
+    "stack": 1,
+    "price": 5,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Raspberry", 
+    "stack": 1,
+    "price": 5,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Mushroom", 
+    "stack": 1,
+    "price": 5,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "MushroomYellow", 
+    "stack": 1,
+    "price": 7,
+    "requiredGlobalKey": "defeated_eikthyr"
+  },
+  {
+    "prefab": "Thistle", 
+    "stack": 1,
+    "price": 10,
+    "requiredGlobalKey": "defeated_gdking"
+  },
+  {
+    "prefab": "Blueberries", 
+    "stack": 1,
+    "price": 10,
+    "requiredGlobalKey": "defeated_gdking"
+  },
+  {
+    "prefab": "QueenBee", 
+    "stack": 1,
+    "price": 300,
+    "requiredGlobalKey": "defeated_eikthyr"
+  }
+]

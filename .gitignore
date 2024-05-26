@@ -15,10 +15,10 @@ steam_appid.txt
 UnityCrashHandler64.exe
 UnityPlayer.dll
 valheim.exe
+BepInEx/Debug
 BepInEx/DumpedAssemblies
 BepInEx/LogOutput.log
-BepInEx/cache/harmony_interop_cache.dat
-BepInEx/cache/chainloader_typeloader.dat
+BepInEx/cache
 BepInEx/plugins/CLIENT_SIDE_DEV_ONLY
 BepInEx/config/wackyDatabase-BulkYML_vanilla
 BepInEx/config/wackyDatabase-BulkYML_savheimIII
