@@ -9,28 +9,35 @@ fire starter:
   gem: red
   power:
     power: [5, 10, 15]
-    chance: [50, 50, 50]
+    chance: [20, 35, 50]
   # Optional Configs:
   # - chance (default: 20)
 
 ice heart:
   slot: [weapon, elementalmagic]
   gem: blue
-  power: [5, 10, 15]
+  power:
+    power: [5, 10, 15]
+    chance: [20, 35, 50]
   # Optional Configs:
   # - chance (default: 20)
 
 snake bite:
   slot: [weapon, elementalmagic]
   gem: green
-  power: [5, 10, 15]
+  power:
+    power: [5, 10, 15]
+    chance: [20, 35, 50]
   # Optional Configs:
   # - chance (default: 20)
 
 shadow hit:
   slot: weapon
   gem: black
-  power: [2, 3, 4]
+  power:
+    power: [5, 10, 15]
+    range: [5, 6, 7]
+    amount: [1, 2, 3]
   # Optional Configs:
   # - range (default: 5)
   # - amount (default: 1)
@@ -38,14 +45,16 @@ shadow hit:
 vampire:
   slot: [weapon, elementalmagic]
   gem: yellow
-  power: [6, 8, 10]
+  power:
+    power: [6, 8, 10]
+    max heal: [6, 9, 12]
   # Optional Configs:
   # - max heal (default: 6)
   
 berserk:
   slot: [weapon, magic]
   gem: purple
-  power: [1, 2, 3]
+  power: [5, 10, 15]
 
 # Specific Weapons
 
