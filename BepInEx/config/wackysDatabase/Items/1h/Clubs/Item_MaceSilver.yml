@@ -23,7 +23,7 @@ Primary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.5
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 2.4
   AttackHeight: 0.8
@@ -60,7 +60,7 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 2
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -68,7 +68,7 @@ Secondary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 2.25
+  StaggerMultiplier: 4
   RecoilMultiplier: 0
   AttackRange: 2.5
   AttackHeight: 0.8

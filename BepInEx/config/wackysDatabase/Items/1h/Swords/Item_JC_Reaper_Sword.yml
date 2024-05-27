@@ -1,7 +1,7 @@
 name: JC_Reaper_Sword
 m_weight: 0.8
 m_name: $jc_reaper_sword
-m_description: "A sword made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has a quicker and stronger secondary attack and deals 10% bonus damage to world bosses."
+m_description: "A sword made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -60,14 +60,14 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 2.3
+  Custom_AttackSpeed: 2.5
   m_attackStamina: 21
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1.4
-  ForceMultiplier: 80
+  DmgMultiplier: 1.2
+  ForceMultiplier: 100
   StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 2.7
