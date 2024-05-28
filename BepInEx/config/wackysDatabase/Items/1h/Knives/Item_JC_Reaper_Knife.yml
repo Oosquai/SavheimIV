@@ -103,26 +103,26 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 20
-  Frost: 20
-  Lightning: 20
+  Fire: 0
+  Frost: 0
+  Lightning: 0
   Pickaxe: 0
-  Pierce: 20
+  Pierce: 65
   Poison: 0
-  Slash: 20
-  Spirit: 20
+  Slash: 65
+  Spirit: 14
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 2
-  Frost: 2
-  Lightning: 2
+  Fire: 0
+  Frost: 0
+  Lightning: 0
   Pickaxe: 0
-  Pierce: 2
+  Pierce: 1
   Poison: 0
-  Slash: 2
-  Spirit: 2
+  Slash: 1
+  Spirit: 1
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -159,7 +159,7 @@ m_skillType: Knives
 m_animationState: Unarmed
 m_itemType: OneHandedWeapon
 m_toolTier: 0
-m_maxQuality: 3
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
