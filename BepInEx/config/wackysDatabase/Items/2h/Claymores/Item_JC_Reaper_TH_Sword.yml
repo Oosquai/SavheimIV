@@ -1,7 +1,7 @@
 name: JC_Reaper_TH_Sword
 m_weight: 4
 m_name: $jc_reaper_th_sword
-m_description: "A claymore made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon swings faster than other claymores, has improved parrying capability, and deals 10% bonus damage to world bosses."
+m_description: "A claymore made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

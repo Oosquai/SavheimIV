@@ -1,7 +1,7 @@
 name: JC_Reaper_Pickaxe
 m_weight: 2
 m_name: $jc_reaper_pickaxe
-m_description: "A pickaxe made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses and surpasses all other pickaxes when it comes to crushing rocks."
+m_description: "A pickaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

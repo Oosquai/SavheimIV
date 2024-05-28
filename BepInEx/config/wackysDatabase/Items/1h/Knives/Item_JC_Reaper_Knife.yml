@@ -1,7 +1,7 @@
 name: JC_Reaper_Knife
 m_weight: 0.3
 m_name: $jc_reaper_knife
-m_description: "A dagger made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses."
+m_description: "A dagger made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

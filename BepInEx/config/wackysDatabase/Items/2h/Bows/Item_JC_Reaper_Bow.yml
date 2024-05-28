@@ -1,7 +1,7 @@
 name: JC_Reaper_Bow
 m_weight: 1.5
 m_name: $jc_reaper_bow
-m_description: "A bow made from a mysterious, otherworldly material that upgrades more strongly than others.  This weaopn shoots two projectiles at once and deals 10% bonus damage to world bosses."
+m_description: "A bow made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

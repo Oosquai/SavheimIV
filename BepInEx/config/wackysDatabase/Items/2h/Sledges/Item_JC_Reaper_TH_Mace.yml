@@ -1,7 +1,7 @@
 name: JC_Reaper_TH_Mace
 m_weight: 4
 m_name: $jc_reaper_th_mace
-m_description: "A giant mace made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has a larger explosion on its special attack and deals 10% bonus damage to world bosses."
+m_description: "A giant mace made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

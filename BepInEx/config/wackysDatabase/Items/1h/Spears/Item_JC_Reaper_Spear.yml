@@ -1,7 +1,7 @@
 name: JC_Reaper_Spear
 m_weight: 1.5
 m_name: $jc_reaper_spear
-m_description: "A spear made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon deals 10% bonus damage to world bosses."
+m_description: "A spear made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

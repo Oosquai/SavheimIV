@@ -1,7 +1,7 @@
 name: JC_Reaper_Crossbow
 m_weight: 1.5
 m_name: $jc_reaper_crossbow
-m_description: "A crossbow made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has the unique ability to yank enemies toward you, and it deals 10% bonus damage to world bosses."
+m_description: "A crossbow made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

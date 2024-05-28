@@ -1,7 +1,7 @@
 name: JC_Reaper_Battleaxe
 m_weight: 4
 m_name: $jc_reaper_battleaxe
-m_description: "A battleaxe made from a mysterious, otherworldly material that upgrades more strongly than others.  This weapon has a surprisingly effective poke attack and deals 10% bonus damage to world bosses."
+m_description: "A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 

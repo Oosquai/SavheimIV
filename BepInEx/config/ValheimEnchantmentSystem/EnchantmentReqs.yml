@@ -22,6 +22,7 @@
   - CrossbowArbalest
   - SwordCheat
   - KnifeSkollAndHati
+  - KnifeSkollAndHatiFlametal
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_S
     amount: 1
@@ -50,6 +51,7 @@
   - ShieldBlackmetalTower
   - SwordBlackmetal
   - MaceNeedle
+  - KnifeSkollAndHatiBlackSilver
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_A
     amount: 1
@@ -118,6 +120,7 @@
   - KnifeChitin
   - SpearChitin
   - ArmorRootChest
+  - KnifeSkollAndHatiIron
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_C
     amount: 1
