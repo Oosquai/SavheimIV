@@ -1,0 +1,14 @@
+name: JC_Ring_Bone_ring
+clonePrefabName: 
+craftingStation: $jc_transmution_table
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- BoneFragments:12:0:True
+- Bronze:1:0:True
+- Advanced_Red_Socket:1:0:True

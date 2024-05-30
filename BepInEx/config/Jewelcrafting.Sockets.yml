@@ -8,8 +8,8 @@ fire starter:
   slot: [weapon, elementalmagic]
   gem: red
   power:
-    power: [9-11, 18-22, 27-33]
-    chance: [32-38, 45-55, 59-71]
+    power: [10, 20, 30]
+    chance: [40, 50, 60]
   # Optional Configs:
   # - chance (default: 20)
 
@@ -17,8 +17,8 @@ ice heart:
   slot: weapon
   gem: blue
   power:
-    power: [4-6, 9-11, 14-16]
-    chance: [45-55, 59-71, 72-88]
+    power: [5, 10, 15]
+    chance: [50, 65, 80]
   # Optional Configs:
   # - chance (default: 20)
 
@@ -26,8 +26,8 @@ snake bite:
   slot: weapon
   gem: green
   power:
-    power: [20-24, 35-41, 50-60]
-    chance: [17-19, 23-27, 29-35]
+    power: [20, 40, 60]
+    chance: [22, 25, 28]
   # Optional Configs:
   # - chance (default: 20)
 
@@ -35,9 +35,9 @@ shadow hit:
   slot: weapon
   gem: black
   power:
-    power: [4-6, 8-10, 12-14]
-    range: [4-5, 4.5-5.5, 5-6]
-    amount: [1, 1-2, 2-3]
+    power: [8, 10, 12]
+    range: [5, 5, 5]
+    amount: [1, 2, 3]
   # Optional Configs:
   # - range (default: 5)
   # - amount (default: 1)
@@ -46,20 +46,27 @@ vampire:
   slot: weapon
   gem: yellow
   power:
-    power: [6-8, 9-11, 12-14]
-    max heal: [5-7, 8-10, 11-13]
+    power: [7, 10, 13]
+    max heal: [6, 9, 12]
   # Optional Configs:
   # - max heal (default: 6)
   
 berserk:
   slot: [weapon, magic]
   gem: purple
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 acceleration:
   slot: [weapon, magic]
   gem: redish
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
+
+overexertion:
+  slot: [weapon, elementalmagic]
+  gem: blueish
+  power:
+    damage increase: [6, 12, 18]
+    penalty: [1, 1, 1]
 
 # Specific Weapons
 
@@ -71,53 +78,53 @@ magnetic:
 opportunity:
   slot: axe
   gem: red
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
 
 perforation:
   slot: knife
   gem: orange
-  power: [10-12, 18-20, 26-30]
+  power: [10, 20, 30]
 
 thunderclap:
   slot: polearm
   gem: orange
-  power: [3-5, 6-8, 9-11]
+  power: [4, 7, 10]
 
 # Magic Weapons
 
 magical bargain:
   slot: magic
   gem: orange
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 precious blood:
   slot: bloodmagic
   gem: blue
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
 
 # Chest
 
 defender:
-  slot: chest
+  slot: [chest, utility]
   gem: red
-  power: [1-3, 3-5, 5-7]
+  power: [2, 4, 6]
 
 vitality:
   slot: chest
   gem: blue
-  power: [9-11, 18-22, 27-33]
+  power: [10, 20, 30]
 
 regeneration:
-  slot: chest
+  slot: [chest, shield]
   gem: green
-  power: [1-2, 2-3, 3-4]
+  power: [1, 2, 3]
 
 mirror:
-  slot: chest
+  slot: [chest, magic]
   gem: black
   power:
-    power: [6-8, 10-12, 14-16]
-    damage reflected: [45-55, 75-85, 105-115]
+    power: [6, 12, 18]
+    damage reflected: [50, 75, 100]
   # Optional Configs:
   # - damage reflected (default: 100)
   
@@ -125,79 +132,89 @@ fade:
   slot: chest
   gem: orange
   power:
-    power: [0.8-1.2, 1.7-2.3, 2.7-3.3]
-    damage threshold: [32-36, 28-32, 24-28]
+    power: [1, 2, 3]
+    damage threshold: [34, 30, 26]
   # Optional Configs:
   # - damage threshold (default: 30)
-  
+
+invigorated:
+  slot: [chest, shield]
+  gem: redish
+  power: [8, 16, 24]
+
 # Legs
 
 sprinter:
   slot: legs
   gem: red
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 ninja:
   slot: legs
   gem: black
-  power: [9-11, 14-16, 18-22]
+  power: [10, 15, 20]
 
 nimble:
   slot: legs
   gem: blue
-  power: [9-11, 18-22, 27-33]
+  power: [10, 20, 30]
 
 marathon:
   slot: legs
   gem: yellow
-  power: [9-11, 14-16, 18-22]
+  power: [10, 15, 20]
 
 mountain goat:
   slot: legs
   gem: purple
-  power: [9-11, 18-22, 27-33]
+  power: [10, 20, 30]
 
 lifeguard:
-  slot: legs
+  slot: [legs, utility]
   gem: orange
-  power: [20-25, 25-30, 30-35]
+  power: [20, 25, 30]
 
 momentum:
   slot: legs
   gem: green
-  power: [23-27, 45-55, 68-82]
+  power: [25, 50, 75]
+
+restless legs:
+  slot: legs
+  gem: blueish
+  power: [15, 30, 45]
 
 # Utility
 
 power recovery:
   slot: utility
   gem: green
-  power: [4-6, 9-11, 14-16]
+  power: [8, 16, 24]
 
 comfortable:
   slot: utility
   gem: yellow
-  power: [2-4, 4-6, 6-8]
+  power: [3, 5, 7]
 
 hercules:
   slot: utility
   gem: purple
-  power: [4-6, 9-11, 14-16]
+  power: [10, 20, 30]
 
 glowing spirit:
-  slot: utility
+  slot: [utility, tool]
   gem: blue
-  power: [2-4, 5-7, 8-9]
+  power: [3, 6, 9]
 
 dungeon guide:
   slot: utility
   gem: black
-  power: [2-4, 5-7, 8-9]
+  power: [3, 6, 9]
 
-daring:
-  slot: utility
-  gem: orange
-  power: [9-11, 18-22, 27-33]
+daring: unset
+#  slot: utility
+#  gem: orange
+#  power: [10, 20, 30]
 
 wisplight:
   slot: utility
@@ -214,44 +231,49 @@ wishbone:
 explorer:
   slot: head
   gem: green
-  power: [45-55, 90-110, 135-165]
+  power: [50, 100, 150]
 
 student:
   slot: head
   gem: red
-  power: [1-3, 3-5, 5-7]
+  power: [2, 4, 6]
 
 resilience:
   slot: head
   gem: yellow
-  power: [9-11, 18-22, 27-33]
+  power: [10, 20, 30]
 
 gourmet:
   slot: head
   gem: purple
-  power: [9-11, 27-33, 45-55]
+  power: [10, 30, 50]
 
 merciful death:
   slot: head
   gem: blue
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
 
 eitr surge:
-  slot: head
+  slot: [head, shield]
   gem: orange
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
+
+refreshed mind:
+  slot: head
+  gem: blueish
+  power: [3, 6, 9]
 
 # Bow
 
 endless arrows:
   slot: bow
   gem: red
-  power: [9-11, 18-22, 27-33]
+  power: [10, 20, 30]
 
 master archer:
   slot: bow
   gem: purple
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 stealth archer: unset
 #  slot: bow
@@ -261,24 +283,24 @@ stealth archer: unset
 quick draw:
   slot: bow
   gem: black
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
 
 # Crossbow
 
 endless bolts:
   slot: crossbow
   gem: red
-  power: [9-11, 18-22, 27-33]
+  power: [10, 20, 30]
 
 master arbalist:
   slot: crossbow
   gem: purple
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 quick load:
   slot: crossbow
   gem: black
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
   
 # Bow and Crossbow
 
@@ -286,8 +308,8 @@ echo:
   slot: [bow, crossbow, elementalmagic]
   gem: yellow
   power:
-    power: [4-6, 9-11, 14-16]
-    bonus projectiles: [1, 1, 1.5-2.5]
+    power: [5, 10, 15]
+    bonus projectiles: [1, 1, 2]
   # Optional Configs:
   # - bonus projectiles (default: 1)
   
@@ -295,8 +317,8 @@ necromancer:
   slot: [bow, crossbow, elementalmagic]
   gem: green
   power:
-    power: [4-6, 9-11, 14-16]
-    duration: [7-9, 9-11, 11-13]
+    power: [5, 10, 15]
+    duration: [8, 10, 12]
   # Optional Configs:
   # - duration (default: 10)
   
@@ -304,8 +326,8 @@ ricochet:
   slot: [bow, crossbow]
   gem: orange
   power:
-    power: [4-6, 9-11, 14-16]
-    range: [11-13, 14-16, 17-19]
+    power: [5, 10, 15]
+    range: [12, 15, 18]
   # Optional Configs:
   # - range (default: 15)
   
@@ -313,8 +335,8 @@ elemental chaos:
   slot: [bow, crossbow, elementalmagic]
   gem: blue
   power:
-    power: [9-11, 18-22, 27-33]
-    chance: [17-19, 23-27, 29-35]
+    power: [10, 20, 30]
+    chance: [22, 25, 28]
   # Optional Configs:
   # - chance (default: 20)
   
@@ -323,67 +345,74 @@ elemental chaos:
 glider:
   slot: cloak
   gem: green
-  power: [2-4, 5-7, 8-10]
+  power: [3, 6, 9]
   # Optional Configs:
   # - required height (default: 3.5)
   
 inconspicuous:
   slot: cloak
   gem: black
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
 
 turtle shell:
   slot: cloak
   gem: yellow
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
+
+nourishing:
+  slot: [cloak, utility]
+  gem: blueish
+  power:
+    health: [34, 67, 100]
+    comfort requirement: [1, 1, 1]
 
 # Shield
 
 unfazed:
   slot: shield
   gem: blue
-  power: [7-9, 15-17, 22-26]
+  power: [8, 16, 24]
 
 parry master:
   slot: shield
   gem: purple
-  power: [50-60, 70-80, 90-110]
+  power: [50, 75, 100]
 
 avoidance:
   slot: shield
   gem: yellow
   power:
-    power: [4-6, 9-11, 14-16]
-    damage reduction: [41-49, 54-66, 68-82]
+    power: [5, 10, 15]
+    damage reduction: [50, 65, 80]
   # Optional Configs:
   # - damage reduction (default 100)
 
 tank:
   slot: shield
   gem: black
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 pain tolerance:
   slot: shield
   gem: red
-  power: [2-4, 4-6, 6-8]
+  power: [3, 5, 7]
 
 # Tool
 
 unbreakable:
   slot: tool
   gem: purple
-  power: [40-44, 50-55, 60-66]
+  power: [40, 50, 60]
 
 energetic:
   slot: tool
   gem: yellow
-  power: [15-17, 30-33, 45-49]
+  power: [15, 30, 45]
 
 frenzy:
   slot: tool
   gem: black
-  power: [4-6, 9-11, 14-16]
+  power: [5, 10, 15]
 
 # Boss
 

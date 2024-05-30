@@ -2,7 +2,7 @@ name: Odins_Jewelry_Box
 piecehammer: Hammer
 m_name: $jc_jewelry_box
 sizeMultiplier: 1
-m_description: $jc_jewelry_box_description  Only accepts Emerald Headhunter Ring, Ring of Moder's Sapphire Blessing, or Ruby Ring of Warmth.
+m_description: Improve your Gemcutters Table by crafting a box to store a Ring of Onyx Legacy, Emerald Headhunter Ring, Ring of Moder's Sapphire Blessing, or Ruby Ring of Warmth.
 customIcon: 
 clonePrefabName: 
 material: 

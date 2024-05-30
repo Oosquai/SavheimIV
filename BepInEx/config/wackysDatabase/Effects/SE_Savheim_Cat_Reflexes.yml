@@ -1,11 +1,11 @@
 Name: SE_Savheim_Cat_Reflexes
 Status_m_name: Cat Reflexes
 Category: ''
-IconName: DragonCape_icon_ygg
+IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: Leap and glide like gravity was just a bad dad joke.
+Tooltip: Land gracefully, as if gravity were just a bad dad joke.
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -49,7 +49,7 @@ SeData:
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
   m_speedModifier: 0
-  m_maxMaxFallSpeed: 15
+  m_maxMaxFallSpeed: 0
   m_fallDamageModifier: -0.5
   m_tickTimer: 0
   m_healthOverTimeTimer: 0

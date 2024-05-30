@@ -1,0 +1,79 @@
+leading wolf:
+  slot: cloak
+  gem: cyan
+  power: [10, 15, 20]
+
+shared healing:
+  slot: head
+  gem: cyan
+  power: [20, 30, 50]
+
+fleeting life:
+  slot: weapon
+  gem: cyan
+  power: [6, 8, 10]
+
+safe haven:
+  slot: chest
+  gem: cyan
+  power: [2, 3, 5]
+
+cowardice:
+  slot: legs
+  gem: cyan
+  power: [3, 5, 7]
+
+archery mentor:
+  slot: bow
+  gem: cyan
+  power: [20, 30, 40]
+  
+arbalist mentor:
+  slot: crossbow
+  gem: cyan
+  power: [20, 30, 40]
+  
+dedicated tank:
+  slot: shield
+  gem: cyan
+  power: [50, 60, 70]
+  
+together forever:
+  slot: all
+  gem: group
+  power:
+    movement speed: 30
+    min cooldown: 45
+    max cooldown: 90
+    duration: 8
+    attack speed: 20
+    damage increase: 10
+    movement speed reduction: 10
+    damage taken increase: 25
+  unique: all
+
+# Gem Spawn
+
+gems:
+  meadows:
+    cyan: 0.06
+  black forest:
+    cyan: 0.08
+  swamp:
+    cyan: 0.1
+  mountain:
+    cyan: 0.12
+  plains:
+    cyan: 0.14
+  ash lands:
+    cyan: 0.1
+  mistlands:
+    cyan: 0.1
+    
+# Synergies
+
+cyan is the most common color:
+  conditions:
+    - cyan > max other
+  effect:
+    never alone: 100

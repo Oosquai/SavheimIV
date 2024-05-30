@@ -36,5 +36,12 @@ groups:
     - Rancid Remains
     - Draugr Elite
 
+  HPBuffMinorCreatures:
+    - Draugr
+    - Fuling
+
 HPBuffCreatures:
   health: 1.5
+
+HPBuffMinorCreatures:
+  health: 1.25
