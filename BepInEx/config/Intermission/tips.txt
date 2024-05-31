@@ -34,3 +34,4 @@ Savheim IV - Thank you to Matt, Jake, and Woody for playtesting Savheim IV and h
 Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
 Savheim IV - Press Z while hovering over an item to compare to currently equipped.
+Savheim IV - Gems and jewelry have been completely reworked.

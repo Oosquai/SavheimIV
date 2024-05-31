@@ -23,7 +23,7 @@ Primary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 0.8
+  StaggerMultiplier: 0.5
   RecoilMultiplier: 0
   AttackRange: 1.8
   AttackHeight: 0.8

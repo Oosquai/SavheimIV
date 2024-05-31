@@ -18,14 +18,14 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 14
+  m_attackStamina: 13
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 0.6
   RecoilMultiplier: 0
   AttackRange: 1.8
   AttackHeight: 0.8
@@ -72,7 +72,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 42
+  m_attackStamina: 39
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -127,9 +127,9 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 65
+  Pierce: 60
   Poison: 0
-  Slash: 65
+  Slash: 60
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -176,7 +176,7 @@ spawn_on_hit:
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
-m_backstabbonus: 6
+m_backstabbonus: 4.5
 m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.25

@@ -5,7 +5,7 @@ IconName:
 CustomIcon:
 FlashIcon: false
 CooldownIcon: false
-Tooltip: $se_beltstrength_tooltip
+Tooltip: ''
 Attributes: None
 StartMessageLoc: Center
 StartMessage: You feel a bit stronger

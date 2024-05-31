@@ -6,11 +6,9 @@
 socket cost:
   meadows:
     1:
-      flint: 3
-      leather scraps: 5
+      flint: 2
     2:
-      flint: 5
-      deer hide: 5
+      BoneFragments: 3
     3:
       flint: 10
       BoneFragments: 5

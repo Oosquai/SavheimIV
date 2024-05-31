@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "You feel sturdier."
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''

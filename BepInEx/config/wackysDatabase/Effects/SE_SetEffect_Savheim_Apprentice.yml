@@ -5,7 +5,7 @@ IconName: HelmetTrollLeather
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: Small traces of eitr begin to flow through your veins.
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''

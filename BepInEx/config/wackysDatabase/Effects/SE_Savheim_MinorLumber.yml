@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "You'd look good in plaid."
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''

@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Blend into the shadows."
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
