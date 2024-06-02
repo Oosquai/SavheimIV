@@ -1,7 +1,7 @@
 name: RKnifeSkollAndHatiBlackSilver
 clonePrefabName: KnifeSkollAndHatiBlackSilver
 craftingStation: $piece_forge
-minStationLevel: 3
+minStationLevel: 4
 maxStationLevelCap: 
 repairStation: 
 amount: 1

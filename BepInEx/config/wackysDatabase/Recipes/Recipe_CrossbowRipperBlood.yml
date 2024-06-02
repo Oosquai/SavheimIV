@@ -1,0 +1,15 @@
+name: CrossbowRipperBlood
+clonePrefabName: 
+craftingStation: $piece_blackforge
+minStationLevel: 4
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- FlametalNew:8:4:True
+- MorgenSinew:2:1:True
+- BonemawSerpentTooth:4:4:True
+- GemstoneRed:1:1:True

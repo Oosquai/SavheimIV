@@ -1,0 +1,14 @@
+name: RAxeBerzerkrSilver
+clonePrefabName: AxeBerzerkrSilver
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Wood:4:2:True
+- Silver:20:10:True
+- Obsidian:20:10:True

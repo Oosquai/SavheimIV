@@ -9,6 +9,6 @@ disabled: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- CharredBone:3:0:True
-- FlametalNew:12:10:True
-- AskHide:2:2:True
+- CharredBone:3:1:True
+- FlametalNew:12:6:True
+- AskHide:2:1:True

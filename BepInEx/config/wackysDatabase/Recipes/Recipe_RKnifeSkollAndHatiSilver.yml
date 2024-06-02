@@ -1,0 +1,14 @@
+name: RKnifeSkollAndHatiSilver
+clonePrefabName: KnifeSkollAndHatiSilver
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Wood:2:1:True
+- Silver:10:5:True
+- Obsidian:10:5:True

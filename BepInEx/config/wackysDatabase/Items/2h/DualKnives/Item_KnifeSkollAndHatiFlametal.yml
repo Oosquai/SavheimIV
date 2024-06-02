@@ -5,7 +5,7 @@ m_description: $item_knife_skollandhati_description  Dual knives are fast and ha
 clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 
-material: ObsidianRock_mat
+material: flametalbeam_mat
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true

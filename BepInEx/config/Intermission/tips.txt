@@ -1,7 +1,7 @@
 Savheim IV - Lots of important information has been added to item tooltips.  For example, look closely at your Hammer's description for new ways to build, and at boss trophies!
 Savheim IV - You can reposition some GUI windows by clicking & dragging, or Left-Alt and then click & drag.  Press Esc to get a cursor.
 Savheim IV - Recommended game settings:  Disable Camera Shake, Depth of Field, Chromatic Aberration, and Motion Blur.  You can also disable Key Hints and Raven hints if you like.  Iron Gate swapped Mouse 2 and 3 for Secondary Attack and Block - swap them back if you prefer.
-Savheim IV - The game takes a while to load with so many mods installed.  Go get a tankard of ale and use the Viking potty.  Patience is a viking virtue.
+Savheim IV - The game takes a while to load with so many mods installed.  Go get a tankard of ale and use the Viking potty.
 Savheim IV - Group commands: /invite [name]; /leave; /remove [name]; /promote [name].  Group benefits:  shared exp, group gem effects, draggable user interface, group chat (/p), colored names, and group ping (LeftAlt).
 Savheim IV - Press ~ (above Tab) to swap hotbars.  Dodge - press Alt or hold block and press jump.  Parry - block just in time.  Secondary attack - middle mouse button.  
 Savheim IV - All weapon classes have been reworked in Savheim IV to give them unique and improved playstyles.  Give them all a second swing, even if you decided against them last playthrough.  ... wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
@@ -29,7 +29,7 @@ Savheim IV - Steps have been taken to ensure we can all coexist in the same worl
 Savheim IV - Sell precious stones & trophies to the traders.  Split stacks in your inventory to control quantities you want to sell.  Double-click items you want to buy to specify quantities.
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, to all the creative modders out there for so many massive additions to it, and to the community for beautiful fanart.
-Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymole, KG, Blacks7ar, ASharpPen, Searica, MSchmoecker, shudnal, and more!
+Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymole, KG, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, and more!
 Savheim IV - Thank you to Matt, Jake, and Woody for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for TotinoTunes and Jake for that awesome Savheim IV video in Discord!
 Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>

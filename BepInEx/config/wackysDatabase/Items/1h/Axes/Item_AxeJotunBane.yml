@@ -158,7 +158,7 @@ m_equipDuration: 0
 m_skillType: Axes
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
-m_toolTier: 6
+m_toolTier: 4
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 

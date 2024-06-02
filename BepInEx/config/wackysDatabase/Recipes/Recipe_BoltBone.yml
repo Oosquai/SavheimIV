@@ -1,6 +1,6 @@
 name: BoltBone
 clonePrefabName: 
-craftingStation: $piece_workbench
+craftingStation: $piece_forge
 minStationLevel: 1
 maxStationLevelCap: 
 repairStation: 

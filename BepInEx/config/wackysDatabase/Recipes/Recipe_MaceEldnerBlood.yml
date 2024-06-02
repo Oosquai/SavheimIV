@@ -1,0 +1,15 @@
+name: MaceEldnerBlood
+clonePrefabName: 
+craftingStation: $piece_blackforge
+minStationLevel: 4
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- CharredBone:10:5:True
+- FlametalNew:10:5:True
+- SulfurStone:5:3:True
+- GemstoneRed:1:1:True
