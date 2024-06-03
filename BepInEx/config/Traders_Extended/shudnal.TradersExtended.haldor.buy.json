@@ -1,5 +1,11 @@
 [
   {
+    "prefab": "BeltStamina", 
+    "stack": 1,
+    "price": 950,
+    "requiredGlobalKey": ""
+  },
+  {
     "prefab": "Wood", 
     "stack": 1,
     "price": 2,

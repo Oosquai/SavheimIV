@@ -1,7 +1,7 @@
 name: JC_Ring_Humite_Ring_of_Perception
 m_weight: 0.1
 m_name: $jc_ring_humite_ring_of_perception
-m_description: $jc_ring_humite_ring_of_perception_description
+m_description: This ring emits a glow that helps you breathe deeper.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -32,7 +32,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip:
-  EffectName: SE_Savheim_MinorElemental
+  EffectName: SE_Savheim_StamRegen20
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

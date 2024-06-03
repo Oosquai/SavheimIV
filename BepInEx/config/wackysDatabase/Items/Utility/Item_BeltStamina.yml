@@ -1,8 +1,8 @@
-name: JC_Necklace_Blue
-m_weight: 0.1
-m_name: $jc_necklace_blue
-m_description: $jc_necklace_blue_description  It's also slightly attuned to the trace amounts of eitr naturally found in water.
-clonePrefabName: 
+name: BeltStamina
+m_weight: 2
+m_name: Threytugjord
+m_description: Gives the wearer greatly improved stamina regeneration.
+clonePrefabName: BeltStrength
 mockName: 
 customIcon: 
 material: 
@@ -16,12 +16,12 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 1
+  armor: 10
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
   m_movementModifier: 0
-  m_EitrRegen: 0.1
+  m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0
@@ -31,7 +31,8 @@ Moddifiers:
   m_swimStaminaModifier: 0
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
-SE_Equip: 
+SE_Equip:
+  EffectName: SE_Savheim_StamRegen50
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10
@@ -55,7 +56,7 @@ m_useDurabilityDrain: 1
 m_durabilityDrain: 0
 m_maxDurability: 100
 m_durabilityPerLevel: 50
-m_equipDuration: 1
+m_equipDuration: 2
 m_skillType: Swords
 m_animationState: OneHanded
 m_itemType: Utility

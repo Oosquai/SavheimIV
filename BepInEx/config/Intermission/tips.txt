@@ -35,3 +35,4 @@ Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever s
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
 Savheim IV - Press Z while hovering over an item to compare to currently equipped.
 Savheim IV - Gems and jewelry have been completely reworked.
+Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  Block them to learn their timing before trying to parry them!

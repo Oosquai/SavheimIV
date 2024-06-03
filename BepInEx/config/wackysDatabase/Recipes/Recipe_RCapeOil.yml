@@ -1,0 +1,14 @@
+name: RCapeOil
+clonePrefabName: CapeOil
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- TrollHide:10:5:True
+- Root:4:2:True
+- Ooze:10:5:True
