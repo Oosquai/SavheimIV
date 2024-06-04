@@ -1,0 +1,14 @@
+name: RFistFenrirClawFlametal
+clonePrefabName: FistFenrirClawFlametal
+craftingStation: $piece_blackforge
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- CharredBone:3:1:True
+- FlametalNew:12:2:True
+- AskHide:2:1:True

@@ -122,7 +122,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip:
   SetName: troll
-  Size: 4
+  Size: 2
   EffectName: SetEffect_TrollArmor
 ShieldStats:
   m_blockPower: 10

@@ -1,0 +1,16 @@
+name: RSledgeFlametal
+clonePrefabName: SledgeFlametal
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Blackwood:10:5:True
+- CharredBone:6:3:True
+- FlametalNew:30:15:True
+- TrophyMorgen:1:0:True

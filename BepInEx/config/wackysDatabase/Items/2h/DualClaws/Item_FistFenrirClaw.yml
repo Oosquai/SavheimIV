@@ -1,7 +1,7 @@
 name: FistFenrirClaw
 m_weight: 2
 m_name: $item_fistweapon_fenris
-m_description: $item_fistweapon_fenris_description
+m_description: Claw weapons offer unparalleled movement during combat, a reliable parry, and a savage kick to knock your opponents off balance before tearing them to shreds.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -22,7 +22,7 @@ Primary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 1
+  SpeedFactor: 0.9
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 0.6
@@ -109,7 +109,7 @@ Secondary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 1
+  SpeedFactor: 0.9
   DmgMultiplier: 1
   ForceMultiplier: 40
   StaggerMultiplier: 6
