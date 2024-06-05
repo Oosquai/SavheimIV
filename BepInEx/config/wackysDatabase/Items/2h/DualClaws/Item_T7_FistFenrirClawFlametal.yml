@@ -255,7 +255,7 @@ GEffectsPLUS:
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: true
+    m_enabled: false
     m_variant: 0
     m_attach: false
     m_follow: false

@@ -1,7 +1,7 @@
 name: Torch
 m_weight: 1
 m_name: $item_torch
-m_description: "It brings light and precious warmth on cold nights, but it can't withstand the frigid environments at higher altitudes.  This can be upgraded at the workbench."
+m_description: "It brings light and precious warmth on cold nights.  Torches can be upgraded at a workbench."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -131,6 +131,7 @@ Moddifiers:
   m_movementModifier: -0.05
   m_EitrRegen: 0
 SE_Equip: 
+  EffectName: SE_Savheim_Frost_Resistance
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 3
@@ -162,19 +163,78 @@ m_toolTier: 0
 m_maxQuality: 2
 m_value: 0
 ConsumableStatusEffect: 
-damageModifiers:
-- 2048:Resistant
-- 1024:Resistant
-GEffects:
+damageModifiers: []
+GEffects: 
+GEffectsPLUS:
   Hit_Effects:
-  - sfx_club_hit
-  - vfx_torch_hit
-  - fx_hit_camshake
-  Hit_Terrain_Effects: 
+  - name: sfx_club_hit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: vfx_torch_hit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: fx_hit_camshake
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Hit_Terrain_Effects: []
   Start_Effect:
-  - sfx_club_swing
-  - sfx_torch_swing
-  Hold_Start_Effects: 
+  - name: sfx_club_swing
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_torch_swing
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Hold_Start_Effects: []
   Trigger_Effect:
-  - fx_swing_camshake
-  Trail_Effect: 
+  - name: fx_swing_camshake
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Trail_Effect: []

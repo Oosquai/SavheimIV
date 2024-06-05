@@ -164,15 +164,66 @@ m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
-GEffects:
+GEffects: 
+GEffectsPLUS:
   Hit_Effects:
-  - vfx_arrowhit
-  - sfx_spear_hit
-  - fx_hit_camshake
-  Hit_Terrain_Effects: 
-  Start_Effect: 
-  Hold_Start_Effects: 
+  - name: vfx_arrowhit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_spear_hit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: fx_hit_camshake
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Hit_Terrain_Effects: []
+  Start_Effect: []
+  Hold_Start_Effects: []
   Trigger_Effect:
-  - fx_swing_camshake
+  - name: fx_swing_camshake
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
   Trail_Effect:
-  - sfx_atgeir_attack
+  - name: sfx_atgeir_attack
+    m_enabled: true
+    m_variant: -1
+    m_attach: true
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''

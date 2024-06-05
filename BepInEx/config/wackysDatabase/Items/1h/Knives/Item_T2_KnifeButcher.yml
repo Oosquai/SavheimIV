@@ -152,15 +152,66 @@ m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
-GEffects:
+GEffects: 
+GEffectsPLUS:
   Hit_Effects:
-  - vfx_HitSparks
-  - sfx_arrow_hit
-  - fx_hit_camshake_knife
-  Hit_Terrain_Effects: 
-  Start_Effect: 
-  Hold_Start_Effects: 
+  - name: vfx_HitSparks
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_arrow_hit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: fx_hit_camshake_knife
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Hit_Terrain_Effects: []
+  Start_Effect: []
+  Hold_Start_Effects: []
   Trigger_Effect:
-  - fx_swing_camshake
+  - name: fx_swing_camshake
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
   Trail_Effect:
-  - sfx_knife_swing
+  - name: sfx_knife_swing
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''

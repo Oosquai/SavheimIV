@@ -92,13 +92,47 @@ Secondary_Attack:
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
   Projectiles: 1
-  AEffects:
-    Hit_Effects: 
-    Hit_Terrain_Effects: 
-    Start_Effect: 
-    Trigger_Effect: 
-    Trail_Effect: 
-    Burst_Effect: 
+  AEffects: 
+  AEffectsPLUS:
+    Hit_Effects:
+    - name: fx_hit_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_rocks
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    Hit_Terrain_Effects: []
+    Start_Effect:
+    - name: sfx_atgeir_attack_secondary
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    Trigger_Effect: []
+    Trail_Effect: []
+    Burst_Effect: []
 Damage:
   Blunt: 0
   Chop: 0
@@ -152,15 +186,66 @@ m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
-GEffects:
+GEffects: 
+GEffectsPLUS:
   Hit_Effects:
-  - vfx_HitSparks
-  - sfx_pickaxe_hit
-  - fx_hit_camshake
-  Hit_Terrain_Effects: 
+  - name: vfx_HitSparks
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_pickaxe_hit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: fx_swing_camshake
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Hit_Terrain_Effects: []
   Start_Effect:
-  - sfx_pickaxe_swing
-  Hold_Start_Effects: 
+  - name: sfx_pickaxe_swing
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Hold_Start_Effects: []
   Trigger_Effect:
-  - fx_swing_camshake
-  Trail_Effect: 
+  - name: fx_swing_camshake
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  Trail_Effect: []

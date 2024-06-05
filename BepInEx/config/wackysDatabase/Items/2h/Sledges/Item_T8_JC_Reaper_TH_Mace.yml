@@ -126,7 +126,7 @@ Secondary_Attack:
       m_scale: false
       m_childTransform: ''
     Trigger_Effect:
-    - name: fx_swing_camshake
+    - name: fx_hit_camshake
       m_enabled: true
       m_variant: -1
       m_attach: false
@@ -259,7 +259,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: fx_hit_camshake
+  - name: fx_swing_camshake
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -275,7 +275,7 @@ GEffectsPLUS:
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: true
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false

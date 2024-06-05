@@ -218,7 +218,7 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   - name: fx_hit_camshake
-    m_enabled: true
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false
@@ -229,11 +229,33 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Hit_Terrain_Effects: []
-  Start_Effect: []
+  Start_Effect:
+  - name: sfx_sword_swing
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: true
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: true
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_sword_swing
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false
@@ -247,7 +269,7 @@ GEffectsPLUS:
   - name: sfx_sword_swing
     m_enabled: true
     m_variant: -1
-    m_attach: false
+    m_attach: true
     m_follow: false
     m_inheritParentRotation: false
     m_inheritParentScale: false

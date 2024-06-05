@@ -229,7 +229,7 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   - name: fx_hit_camshake
-    m_enabled: true
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false
@@ -266,7 +266,7 @@ GEffectsPLUS:
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: true
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false

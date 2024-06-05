@@ -1,11 +1,11 @@
 Name: SE_Savheim_Frost_Resistance
 Status_m_name: Frost Resist
 Category: ''
-IconName: potion_frostresist
+IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Protects you from the cold."
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
