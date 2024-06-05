@@ -1,7 +1,7 @@
-name: SpearBronze
+name: JC_Reaper_Spear
 m_weight: 1.5
-m_name: $item_spear_bronze
-m_description: $item_spear_bronze_description  Spears can be thrown.
+m_name: $jc_reaper_spear
+m_description: "A spear made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 8
+  m_attackStamina: 14
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -26,7 +26,7 @@ Primary_Attack:
   StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 2.4
-  AttackHeight: 1
+  AttackHeight: 1.5
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -44,8 +44,8 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_Projectile: 
-  Projectile_Vel: 25
-  Projectile_Accuraccy: 1
+  Projectile_Vel: 35
+  Projectile_Accuraccy: 0
   Projectiles: 1
   AEffects:
     Hit_Effects: 
@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 10
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -88,7 +88,7 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_Projectile: bronzespear_projectile
+  Attack_Projectile: JC_Reaper_Spear_Pro
   Projectile_Vel: 30
   Projectile_Accuraccy: 1
   Projectiles: 1
@@ -103,26 +103,26 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 0
-  Frost: 0
-  Lightning: 0
+  Fire: 30
+  Frost: 30
+  Lightning: 30
   Pickaxe: 0
-  Pierce: 35
+  Pierce: 30
   Poison: 0
   Slash: 0
-  Spirit: 0
+  Spirit: 30
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 0
-  Frost: 0
-  Lightning: 0
+  Fire: 4
+  Frost: 4
+  Lightning: 4
   Pickaxe: 0
-  Pierce: 6
+  Pierce: 4
   Poison: 0
   Slash: 0
-  Spirit: 0
+  Spirit: 4
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -133,8 +133,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 9
-  m_blockPowerPerLevel: 3
+  m_blockPower: 50
+  m_blockPowerPerLevel: 9
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -147,7 +147,7 @@ spawn_on_hit:
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
-m_backstabbonus: 3
+m_backstabbonus: 3.5
 m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
@@ -158,7 +158,7 @@ m_equipDuration: 0
 m_skillType: Spears
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
-m_toolTier: 1
+m_toolTier: 0
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 

@@ -1,7 +1,7 @@
-name: SpearElderbark
+name: SpearBronze
 m_weight: 1.5
-m_name: $item_spear_ancientbark
-m_description: $item_spear_ancientbark_description  Spears can be thrown.
+m_name: $item_spear_bronze
+m_description: $item_spear_bronze_description  Spears can be thrown.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 10
+  m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -26,7 +26,7 @@ Primary_Attack:
   StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 2.4
-  AttackHeight: 1
+  AttackHeight: 1.5
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -44,7 +44,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_Projectile: 
-  Projectile_Vel: 30
+  Projectile_Vel: 25
   Projectile_Accuraccy: 1
   Projectiles: 1
   AEffects:
@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 12
+  m_attackStamina: 10
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -88,7 +88,7 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_Projectile: ancientbarkspear_projectile
+  Attack_Projectile: bronzespear_projectile
   Projectile_Vel: 30
   Projectile_Accuraccy: 1
   Projectiles: 1
@@ -107,7 +107,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 55
+  Pierce: 35
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -133,7 +133,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 19
+  m_blockPower: 9
   m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -158,7 +158,7 @@ m_equipDuration: 0
 m_skillType: Spears
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
-m_toolTier: 2
+m_toolTier: 1
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 

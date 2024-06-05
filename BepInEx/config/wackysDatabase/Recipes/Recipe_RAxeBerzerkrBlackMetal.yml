@@ -10,6 +10,6 @@ requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
 - Wood:4:2:True
-- Silver:16:8:True
+- Silver:8:4:True
 - BlackMetal:16:8:True
 - LeatherScraps:4:2:True

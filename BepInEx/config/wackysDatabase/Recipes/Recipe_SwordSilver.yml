@@ -1,5 +1,5 @@
-name: RAxeSilver
-clonePrefabName: AxeSilver
+name: SwordSilver
+clonePrefabName: 
 craftingStation: $piece_forge
 minStationLevel: 3
 maxStationLevelCap: 
@@ -10,7 +10,7 @@ disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- Wood:8:4:True
-- Silver:20:10:True
-- Obsidian:30:15:True
-- WolfClaw:4:2:True
+- Wood:2:1:True
+- Silver:30:15:True
+- LeatherScraps:3:1:True
+- Iron:5:3:True

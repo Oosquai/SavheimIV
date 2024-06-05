@@ -1,3 +1,21 @@
+# No Meadows raids
+Fuling:
+  Meadows:
+    amount: 0
+
+Seeker:
+  Meadows:
+    amount: 0
+
+Tick:
+  Meadows:
+    amount: 0
+
+Seeker brood:
+  Meadows:
+    amount: 0
+
+# HP Nerfs
 Bonemass:
   health: 0.7
 
@@ -13,15 +31,25 @@ Seeker Soldier:
 Charred Warlock:
   health: 0.8
 
+# HP Buffs
+Skeleton:
+  health: 1.5
+
+Rancid Remains:
+  health: 1.5
+
+Draugr Elite:
+  health: 1.5
+
+Draugr:
+  health: 1.25
+
+Fuling:
+  health: 1.25
+
+# Overhauls
 Gjall:
   health: 0.9
-  stars:
-    0: [10, 2, 0]
-    1: [15, 5, 1]
-    2: [18, 8, 2]
-    3: [22, 10, 3]
-    4: [25, 12, 5]
-    5: [30, 15, 8]
   effect:
     Armored: 0
     Aggressive: 0
@@ -30,18 +58,3 @@ Gjall:
     Curious: 0
     Splitting: 0
 
-groups:
-  HPBuffCreatures:
-    - Skeleton
-    - Rancid Remains
-    - Draugr Elite
-
-  HPBuffMinorCreatures:
-    - Draugr
-    - Fuling
-
-HPBuffCreatures:
-  health: 1.5
-
-HPBuffMinorCreatures:
-  health: 1.25

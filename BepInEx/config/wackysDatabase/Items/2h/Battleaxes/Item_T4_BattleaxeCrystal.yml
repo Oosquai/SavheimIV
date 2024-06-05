@@ -1,8 +1,8 @@
-name: BattleaxeFlametal
+name: BattleaxeCrystal
 m_weight: 2.5
-m_name: BattleaxeFlametal
-m_description: $item_battleaxe_description  Battleaxes focus on damage and have an alternate moveset that trades speed for damage and reach.
-clonePrefabName: Battleaxe
+m_name: $item_battleaxe_crystal
+m_description: $item_battleaxe_crystal_description  Battleaxes focus on damage and have an alternate moveset that trades speed for damage and reach.
+clonePrefabName: 
 mockName: 
 customIcon: 
 material: 
@@ -17,8 +17,8 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
-  m_attackStamina: 14
+  Custom_AttackSpeed: 1.2
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -72,7 +72,7 @@ Secondary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 18
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -121,7 +121,7 @@ Secondary_Attack:
     Burst_Effect: []
 Damage:
   Blunt: 0
-  Chop: 55
+  Chop: 65
   Damage: 0
   Fire: 0
   Frost: 0
@@ -129,8 +129,8 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 70
-  Spirit: 0
+  Slash: 90
+  Spirit: 30
 Damage_Per_Level:
   Blunt: 0
   Chop: 3
@@ -142,7 +142,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 0
   Slash: 6
-  Spirit: 0
+  Spirit: 3
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -162,7 +162,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 25
+  m_blockPower: 37
   m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0
