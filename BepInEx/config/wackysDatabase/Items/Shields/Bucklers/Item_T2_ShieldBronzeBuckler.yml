@@ -1,7 +1,7 @@
-name: ShieldWood
-m_weight: 4
-m_name: $item_shield_wood
-m_description: $item_shield_wood_description
+name: ShieldBronzeBuckler
+m_weight: 2
+m_name: $item_shield_bronzebuckler
+m_description: $item_shield_bronzebuckler_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -18,14 +18,14 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.05
+  m_movementModifier: -0.02
   m_EitrRegen: 0
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 8
-  m_blockPowerPerLevel: 6
-  m_timedBlockBonus: 1.5
+  m_blockPower: 19
+  m_blockPowerPerLevel: 2
+  m_timedBlockBonus: 3
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -42,24 +42,21 @@ m_knockback: 40
 m_useDurability: true
 m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
-m_maxDurability: 125
+m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
 m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
-m_toolTier: 0
+m_toolTier: 1
 m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
 GEffects:
-  Hit_Effects:
-  - vfx_clubhit
-  - sfx_club_hit
+  Hit_Effects: 
   Hit_Terrain_Effects: 
-  Start_Effect:
-  - sfx_club_swing
+  Start_Effect: 
   Hold_Start_Effects: 
   Trigger_Effect: 
   Trail_Effect: 

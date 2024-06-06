@@ -1,7 +1,7 @@
-name: ShieldBoneTower
-m_weight: 4
-m_name: $item_shield_bonetower
-m_description: "The bones of dead warriors excel at turning slashing attacks, and they weigh less than metal."
+name: ShieldWood
+m_weight: 3
+m_name: $item_shield_wood
+m_description: $item_shield_wood_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -18,15 +18,14 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.1
+  m_movementModifier: -0.05
   m_EitrRegen: 0
 SE_Equip: 
-  EffectName: SE_Savheim_Slash_Resistance
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 34
-  m_blockPowerPerLevel: 6
-  m_timedBlockBonus: 0
+  m_blockPower: 17
+  m_blockPowerPerLevel: 2
+  m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -43,13 +42,13 @@ m_knockback: 40
 m_useDurability: true
 m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
-m_maxDurability: 200
+m_maxDurability: 125
 m_durabilityPerLevel: 50
 m_equipDuration: 0
 m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
-m_toolTier: 1
+m_toolTier: 0
 m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
@@ -59,7 +58,8 @@ GEffects:
   - vfx_clubhit
   - sfx_club_hit
   Hit_Terrain_Effects: 
-  Start_Effect: 
+  Start_Effect:
+  - sfx_club_swing
   Hold_Start_Effects: 
   Trigger_Effect: 
   Trail_Effect: 

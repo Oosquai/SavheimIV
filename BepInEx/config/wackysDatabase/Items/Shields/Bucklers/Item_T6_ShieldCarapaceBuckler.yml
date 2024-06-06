@@ -1,7 +1,7 @@
-name: ShieldBlackmetalTower
-m_weight: 5
-m_name: $item_shield_blackmetal_tower
-m_description: $item_shield_blackmetal_tower_description
+name: ShieldCarapaceBuckler
+m_weight: 2
+m_name: $item_shield_carapacebuckler
+m_description: $item_shield_carapacebuckler_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -117,15 +117,14 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.15
+  m_movementModifier: -0.02
   m_EitrRegen: 0
 SE_Equip: 
-  EffectName: SE_Savheim_HPRegen2
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 141
-  m_blockPowerPerLevel: 6
-  m_timedBlockBonus: 0
+  m_blockPower: 59
+  m_blockPowerPerLevel: 5
+  m_timedBlockBonus: 3
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -148,7 +147,7 @@ m_equipDuration: 0
 m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
-m_toolTier: 4
+m_toolTier: 5
 m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 

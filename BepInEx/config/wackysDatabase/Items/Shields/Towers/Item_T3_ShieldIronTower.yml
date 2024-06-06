@@ -1,5 +1,5 @@
 name: ShieldIronTower
-m_weight: 4
+m_weight: 8
 m_name: $item_shield_iron_tower
 m_description: $item_shield_iron_tower_description
 clonePrefabName: 
@@ -21,11 +21,10 @@ Moddifiers:
   m_movementModifier: -0.15
   m_EitrRegen: 0
 SE_Equip: 
-  EffectName: SE_Savheim_HPRegen1
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 75
-  m_blockPowerPerLevel: 6
+  m_blockPower: 94
+  m_blockPowerPerLevel: 8
   m_timedBlockBonus: 0
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

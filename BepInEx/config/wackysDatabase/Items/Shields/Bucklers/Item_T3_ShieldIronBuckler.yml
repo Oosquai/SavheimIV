@@ -1,7 +1,7 @@
-name: ShieldBronzeBuckler
-m_weight: 3
-m_name: $item_shield_bronzebuckler
-m_description: $item_shield_bronzebuckler_description
+name: ShieldIronBuckler
+m_weight: 2
+m_name: $item_shield_ironbuckler
+m_description: $item_shield_ironbuckler_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -14,18 +14,18 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 100
+  armor: 150
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.03
+  m_movementModifier: -0.02
   m_EitrRegen: 0
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 16
-  m_blockPowerPerLevel: 6
-  m_timedBlockBonus: 2.5
+  m_blockPower: 30
+  m_blockPowerPerLevel: 3
+  m_timedBlockBonus: 3
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -48,7 +48,7 @@ m_equipDuration: 0
 m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
-m_toolTier: 1
+m_toolTier: 2
 m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 

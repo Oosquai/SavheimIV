@@ -1,7 +1,7 @@
-name: ShieldBanded
-m_weight: 5
-m_name: $item_shield_banded
-m_description: $item_shield_banded_description
+name: ShieldCarapace
+m_weight: 4
+m_name: $item_shield_carapace
+m_description: $item_shield_carapace_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -118,14 +118,12 @@ Armor:
 FoodStats: 
 Moddifiers:
   m_movementModifier: -0.05
-  m_EitrRegen: 0
+  m_EitrRegen: 0.15
 SE_Equip: 
-SE_Equip: 
-  EffectName: SE_Savheim_StamRegen8
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 44
-  m_blockPowerPerLevel: 6
+  m_blockPower: 107
+  m_blockPowerPerLevel: 10
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -149,7 +147,7 @@ m_equipDuration: 0
 m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
-m_toolTier: 2
+m_toolTier: 5
 m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
