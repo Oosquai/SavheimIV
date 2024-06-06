@@ -134,7 +134,7 @@ SE_Equip:
   EffectName: SE_Savheim_Frost_Resistance
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 3
+  m_blockPower: 4
   m_blockPowerPerLevel: 0
   m_timedBlockBonus: 2
   m_deflectionForce: 0

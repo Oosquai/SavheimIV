@@ -75,9 +75,9 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 1
-  ForceMultiplier: 120
-  StaggerMultiplier: 1
+  DmgMultiplier: 0.7
+  ForceMultiplier: 150
+  StaggerMultiplier: 1.4
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 0
