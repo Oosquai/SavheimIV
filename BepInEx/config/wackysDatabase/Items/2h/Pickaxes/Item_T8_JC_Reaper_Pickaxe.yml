@@ -1,7 +1,7 @@
 name: JC_Reaper_Pickaxe
 m_weight: 2
 m_name: $jc_reaper_pickaxe
-m_description: "A pickaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: "A pickaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and tremendous damage to mining nodes."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -137,26 +137,26 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 15
-  Frost: 15
-  Lightning: 15
-  Pickaxe: 98
-  Pierce: 15
+  Fire: 0
+  Frost: 0
+  Lightning: 0
+  Pickaxe: 109
+  Pierce: 99
   Poison: 0
   Slash: 0
-  Spirit: 30
+  Spirit: 25
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 4
-  Frost: 4
-  Lightning: 4
-  Pickaxe: 10
-  Pierce: 4
+  Fire: 0
+  Frost: 0
+  Lightning: 0
+  Pickaxe: 6
+  Pierce: 6
   Poison: 0
   Slash: 0
-  Spirit: 4
+  Spirit: 2
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -167,8 +167,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 64
-  m_blockPowerPerLevel: 10
+  m_blockPower: 79
+  m_blockPowerPerLevel: 5
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -192,7 +192,7 @@ m_equipDuration: 0
 m_skillType: Pickaxes
 m_animationState: TwoHandedClub
 m_itemType: TwoHandedWeapon
-m_toolTier: 7
+m_toolTier: 3
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 

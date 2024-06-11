@@ -1,7 +1,7 @@
 name: JC_Reaper_Battleaxe
 m_weight: 4
 m_name: $jc_reaper_battleaxe
-m_description: "A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: "A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and tremendous damage to trees."
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -143,28 +143,28 @@ Secondary_Attack:
     Burst_Effect: []
 Damage:
   Blunt: 0
-  Chop: 95
+  Chop: 105
   Damage: 0
   Fire: 0
   Frost: 0
-  Lightning: 20
+  Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 130
-  Spirit: 30
+  Slash: 162
+  Spirit: 40
 Damage_Per_Level:
   Blunt: 0
-  Chop: 3
+  Chop: 6
   Damage: 0
   Fire: 0
   Frost: 0
-  Lightning: 1
+  Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 5
-  Spirit: 3
+  Slash: 10
+  Spirit: 4
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -175,8 +175,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 64
-  m_blockPowerPerLevel: 3
+  m_blockPower: 79
+  m_blockPowerPerLevel: 5
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

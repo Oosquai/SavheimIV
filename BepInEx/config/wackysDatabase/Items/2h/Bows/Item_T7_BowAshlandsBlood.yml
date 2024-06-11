@@ -25,7 +25,7 @@ Primary_Attack:
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 0
   RecoilMultiplier: 0
   AttackRange: 1
   AttackHeight: 1.5
@@ -35,7 +35,7 @@ Primary_Attack:
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
   Bow_Draw: true
-  Bow_Duration_Min: 2.5
+  Bow_Duration_Min: 1.5
   Bow_Stamina_Drain: 14
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
@@ -127,7 +127,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 82
+  Pierce: 75
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -139,7 +139,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 4
+  Pierce: 5
   Poison: 0
   Slash: 0
   Spirit: 5
@@ -162,8 +162,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 3
-  m_blockPowerPerLevel: 0
+  m_blockPower: 30
+  m_blockPowerPerLevel: 2
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -177,13 +177,13 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 25
+m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 1
+m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
-m_maxDurability: 100
+m_maxDurability: 200
 m_durabilityPerLevel: 50
-m_equipDuration: 0.2
+m_equipDuration: 0
 m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
@@ -211,7 +211,7 @@ GEffectsPLUS:
     m_childTransform: ''
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: true
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false

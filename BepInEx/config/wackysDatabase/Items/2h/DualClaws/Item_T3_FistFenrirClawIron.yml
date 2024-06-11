@@ -162,7 +162,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 40
+  Slash: 41
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -174,7 +174,7 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 4
+  Slash: 2
   Spirit: 0
 Armor:
   armor: 20
@@ -195,7 +195,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 11
+  m_blockPower: 13
   m_blockPowerPerLevel: 1
   m_timedBlockBonus: 6
   m_deflectionForce: 0

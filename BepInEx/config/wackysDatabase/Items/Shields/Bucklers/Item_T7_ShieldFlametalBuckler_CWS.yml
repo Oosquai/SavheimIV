@@ -1,7 +1,7 @@
-name: CWS_Buckler_Shield_1
+name: CWS_Buckler_Shield_2
 m_weight: 2
-m_name: $cws_buckler_shield_1
-m_description: A disc of black metal fashioned into a buckler.
+m_name: Flametal Buckler
+m_description: An elegant flametal buckler.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -151,8 +151,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 50
-  m_blockPowerPerLevel: 5
+  m_blockPower: 68
+  m_blockPowerPerLevel: 6
   m_timedBlockBonus: 3
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

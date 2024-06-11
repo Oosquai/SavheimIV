@@ -103,26 +103,26 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 30
-  Frost: 30
-  Lightning: 30
+  Fire: 0
+  Frost: 0
+  Lightning: 0
   Pickaxe: 0
-  Pierce: 30
+  Pierce: 135
   Poison: 0
   Slash: 0
-  Spirit: 30
+  Spirit: 33
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 4
-  Frost: 4
-  Lightning: 4
+  Fire: 0
+  Frost: 0
+  Lightning: 0
   Pickaxe: 0
-  Pierce: 4
+  Pierce: 8
   Poison: 0
   Slash: 0
-  Spirit: 4
+  Spirit: 3
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -133,8 +133,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 50
-  m_blockPowerPerLevel: 9
+  m_blockPower: 62
+  m_blockPowerPerLevel: 4
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

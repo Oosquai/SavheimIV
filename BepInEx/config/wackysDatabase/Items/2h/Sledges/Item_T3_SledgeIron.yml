@@ -175,7 +175,7 @@ Secondary_Attack:
       m_childTransform: ''
     Burst_Effect: []
 Damage:
-  Blunt: 65
+  Blunt: 66
   Chop: 0
   Damage: 0
   Fire: 0
@@ -187,7 +187,7 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 6
+  Blunt: 4
   Chop: 0
   Damage: 0
   Fire: 0
@@ -217,8 +217,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 25
-  m_blockPowerPerLevel: 3
+  m_blockPower: 35
+  m_blockPowerPerLevel: 2
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

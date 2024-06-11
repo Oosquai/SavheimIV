@@ -100,10 +100,10 @@ Secondary_Attack:
     Trail_Effect: 
     Burst_Effect: 
 Damage:
-  Blunt: 4
+  Blunt: 3
   Chop: 0
   Damage: 0
-  Fire: 15
+  Fire: 12
   Frost: 0
   Lightning: 0
   Pickaxe: 0

@@ -1,11 +1,11 @@
-name: FistFenrirClawFlametal
-m_weight: 2
-m_name: Flametal Flesh Rippers
-m_description: Claw weapons offer unparalleled movement during combat, a reliable parry, and a savage kick to knock your opponents off balance before tearing them to shreds.
-clonePrefabName: FistFenrirClaw
+name: CWS_Round_Shield_2
+m_weight: 4
+m_name: Bronze Shield
+m_description: A round shield constructed of wood and reinforced with bronze.
+clonePrefabName: 
 mockName: 
 customIcon: 
-material: slayer_nature_mat
+material: 
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
@@ -13,22 +13,22 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Horizontal
-  Attack_Animation: dual_knives
+  Attack_Animation: ''
   Attack_Random_Animation: 0
-  Chain_Attacks: 3
+  Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 17
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.9
+  SpeedFactor: 0.2
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 0.6
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2
-  AttackHeight: 1
+  AttackRange: 2.4
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -38,13 +38,13 @@ Primary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 60
-  Attack_Ray_Width: 0.5
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
-  Last_Chain_Dmg_Multiplier: 1
+  Last_Chain_Dmg_Multiplier: 2
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -59,63 +59,30 @@ Primary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects:
-    - name: sfx_sword_hit
-      m_enabled: true
-      m_variant: 0
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
-    - name: vfx_HitSparks
-      m_enabled: true
-      m_variant: 0
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Hit_Effects: []
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
-    Trail_Effect:
-    - name: sfx_claw_swing
-      m_enabled: true
-      m_variant: 0
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Trail_Effect: []
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: unarmed_kick
+  Attack_Animation: ''
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 25
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.9
+  SpeedFactor: 0.2
   DmgMultiplier: 1
-  ForceMultiplier: 40
-  StaggerMultiplier: 6
+  ForceMultiplier: 1
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2
-  AttackHeight: 1
+  AttackRange: 1.5
+  AttackHeight: 0.6
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -125,8 +92,8 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 25
-  Attack_Ray_Width: 0.3
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -153,7 +120,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 0
+  Blunt: 10
   Chop: 0
   Damage: 0
   Fire: 0
@@ -162,26 +129,15 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 120
+  Slash: 0
   Spirit: 0
-Damage_Per_Level:
-  Blunt: 0
-  Chop: 0
-  Damage: 0
-  Fire: 0
-  Frost: 0
-  Lightning: 0
-  Pickaxe: 0
-  Pierce: 0
-  Poison: 0
-  Slash: 4
-  Spirit: 0
+Damage_Per_Level: 
 Armor:
-  armor: 20
+  armor: 200
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: 0
+  m_movementModifier: -0.05
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -195,9 +151,9 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 30
-  m_blockPowerPerLevel: 1
-  m_timedBlockBonus: 6
+  m_blockPower: 35
+  m_blockPowerPerLevel: 3
+  m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -209,28 +165,39 @@ spawn_on_hit:
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
-m_backstabbonus: 6
-m_knockback: 1
+m_backstabbonus: 4
+m_knockback: 50
 m_useDurability: true
 m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-m_skillType: Unarmed
-m_animationState: Unarmed
-m_itemType: TwoHandedWeapon
-m_toolTier: 3
-m_maxQuality: 4
+m_skillType: Blocking
+m_animationState: Shield
+m_itemType: Shield
+m_toolTier: 0
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
 GEffects: 
 GEffectsPLUS:
   Hit_Effects:
-  - name: sfx_unarmed_hit
+  - name: vfx_clubhit
     m_enabled: true
-    m_variant: 0
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_club_hit
+    m_enabled: true
+    m_variant: -1
     m_attach: false
     m_follow: false
     m_inheritParentRotation: false
@@ -241,9 +208,9 @@ GEffectsPLUS:
     m_childTransform: ''
   Hit_Terrain_Effects: []
   Start_Effect:
-  - name: sfx_unarmed_swing
+  - name: sfx_club_swing
     m_enabled: true
-    m_variant: 0
+    m_variant: -1
     m_attach: false
     m_follow: false
     m_inheritParentRotation: false
@@ -253,16 +220,5 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Hold_Start_Effects: []
-  Trigger_Effect:
-  - name: fx_swing_camshake
-    m_enabled: false
-    m_variant: 0
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Trigger_Effect: []
   Trail_Effect: []
