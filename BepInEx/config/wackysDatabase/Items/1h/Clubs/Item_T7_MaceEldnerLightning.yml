@@ -1,7 +1,7 @@
 name: MaceEldnerLightning
 m_weight: 2
 m_name: $item_mace_eldner_lightning
-m_description: $item_mace_eldner_lightning_description
+m_description: $item_mace_eldner_lightning_description  Maces excel at staggering foes.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -83,7 +83,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.2
-  m_attackStamina: 25
+  m_attackStamina: 27
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0

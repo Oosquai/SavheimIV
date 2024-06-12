@@ -1,7 +1,7 @@
 name: RKnifeSkollAndHatiFlametal
 clonePrefabName: KnifeSkollAndHatiFlametal
 craftingStation: $piece_blackforge
-minStationLevel: 1
+minStationLevel: 3
 maxStationLevelCap: 
 repairStation: 
 amount: 1

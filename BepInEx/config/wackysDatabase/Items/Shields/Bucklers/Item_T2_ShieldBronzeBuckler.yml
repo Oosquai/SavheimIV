@@ -54,9 +54,12 @@ m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
 GEffects:
-  Hit_Effects: 
+  Hit_Effects:
+  - vfx_clubhit
+  - sfx_club_hit
   Hit_Terrain_Effects: 
-  Start_Effect: 
+  Start_Effect:
+  - sfx_club_swing
   Hold_Start_Effects: 
   Trigger_Effect: 
   Trail_Effect: 

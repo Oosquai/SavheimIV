@@ -1,11 +1,11 @@
 name: THSwordSilver
 m_weight: 4
-m_name: Obsidian Greatsword
+m_name: Silver Greatsword
 m_description: Greatswords have a balanced moveset and reliable parry, designed to overpower and outmaneuver your foes.
 clonePrefabName: THSwordKrom
 mockName: 
 customIcon: 
-material: ObsidianRock_mat
+material: 
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true

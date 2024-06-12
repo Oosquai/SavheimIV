@@ -59,6 +59,7 @@ GEffects:
   - sfx_club_hit
   Hit_Terrain_Effects: 
   Start_Effect: 
+  - sfx_club_swing
   Hold_Start_Effects: 
   Trigger_Effect: 
   Trail_Effect: 
