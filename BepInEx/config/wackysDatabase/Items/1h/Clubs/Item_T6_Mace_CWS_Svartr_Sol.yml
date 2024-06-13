@@ -114,7 +114,7 @@ Secondary_Attack:
   AEffects: 
   AEffectsPLUS:
     Hit_Effects:
-    - name: fx_hit_camshake_knife
+    - name: fx_swing_camshake
       m_enabled: true
       m_variant: -1
       m_attach: false
@@ -142,7 +142,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 75
+  Blunt: 115
   Chop: 0
   Damage: 0
   Fire: 0
@@ -152,9 +152,9 @@ Damage:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 30
+  Spirit: 0
 Damage_Per_Level:
-  Blunt: 5
+  Blunt: 7
   Chop: 0
   Damage: 0
   Fire: 0
@@ -164,7 +164,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 2
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -184,8 +184,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 36
-  m_blockPowerPerLevel: 2
+  m_blockPower: 54
+  m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -239,8 +239,8 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: fx_hit_camshake
-    m_enabled: false
+  - name: fx_hit_camshake_knife
+    m_enabled: true
     m_variant: -1
     m_attach: false
     m_follow: false

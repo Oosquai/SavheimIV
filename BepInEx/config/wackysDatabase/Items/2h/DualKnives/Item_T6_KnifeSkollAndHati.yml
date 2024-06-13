@@ -1,7 +1,7 @@
 name: KnifeSkollAndHati
 m_weight: 0.3
 m_name: $item_knife_skollandhati
-m_description: $item_knife_skollandhati_description  Dual knives are fast and have a reliable parry.
+m_description: $item_knife_skollandhati_description  Dual knives allow the wielder to dodge more effectively, pounce on distant enemies, and viciously slice and stab their foes to ribbons.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 12
+  m_attackStamina: 13
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -135,7 +135,7 @@ SE_SET_Equip:
 ShieldStats:
   m_blockPower: 26
   m_blockPowerPerLevel: 2
-  m_timedBlockBonus: 6
+  m_timedBlockBonus: 4
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1

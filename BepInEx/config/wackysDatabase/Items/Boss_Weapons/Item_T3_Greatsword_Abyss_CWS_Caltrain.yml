@@ -18,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1.3
-  m_attackStamina: 14
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -72,12 +72,12 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 28
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 2
+  DmgMultiplier: 1.5
   ForceMultiplier: 1
   StaggerMultiplier: 1.5
   RecoilMultiplier: 0
@@ -173,7 +173,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 66
+  Slash: 78
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -206,7 +206,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 32
+  m_blockPower: 38
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 2.5
   m_deflectionForce: 0
@@ -232,7 +232,7 @@ m_skillType: Swords
 m_animationState: Greatsword
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
@@ -261,8 +261,8 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: fx_hit_camshake
-    m_enabled: false
+  - name: fx_hit_camshake_knife
+    m_enabled: true
     m_variant: -1
     m_attach: false
     m_follow: false

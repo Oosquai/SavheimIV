@@ -115,7 +115,18 @@ Secondary_Attack:
   AEffectsPLUS:
     Hit_Effects: []
     Hit_Terrain_Effects: []
-    Start_Effect: []
+    Start_Effect:
+    - name: sfx_axe_swing
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Trigger_Effect: []
     Trail_Effect: []
     Burst_Effect: []
@@ -217,8 +228,8 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: fx_hit_camshake
-    m_enabled: false
+  - name: fx_hit_camshake_knife
+    m_enabled: true
     m_variant: -1
     m_attach: false
     m_follow: false

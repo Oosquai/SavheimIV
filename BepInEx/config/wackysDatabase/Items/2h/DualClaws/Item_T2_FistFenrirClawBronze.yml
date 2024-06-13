@@ -1,7 +1,7 @@
 name: FistFenrirClawBronze
 m_weight: 2
 m_name: Bronze Flesh Rippers
-m_description: Claws combine rapid slashes with a savage kick to make quick work of most enemies.  They also have a reliable parry.
+m_description: Claws attack in a frenzy, weaving in savage kicks to knock foes off balance before tearing them to shreds.  They rely on parries to keep them close to their victims.
 clonePrefabName: FistFenrirClaw
 mockName: 
 customIcon: 
@@ -110,9 +110,9 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1
-  ForceMultiplier: 40
-  StaggerMultiplier: 6
+  DmgMultiplier: 0.5
+  ForceMultiplier: 80
+  StaggerMultiplier: 12
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 1
@@ -146,7 +146,18 @@ Secondary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects: []
+    Hit_Effects: 
+    - name: fx_swing_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []

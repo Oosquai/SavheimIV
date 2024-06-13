@@ -1,7 +1,7 @@
 name: KnifeSkollAndHatiFlametal
 m_weight: 0.3
 m_name: Flametal Knife and Sickle
-m_description: $item_knife_skollandhati_description  Dual knives are fast and have a reliable parry.
+m_description: $item_knife_skollandhati_description  Dual knives allow the wielder to dodge more effectively, pounce on distant enemies, and viciously slice and stab their foes to ribbons.
 clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 
@@ -18,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 13
+  m_attackStamina: 15
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -72,7 +72,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 39
+  m_attackStamina: 45
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -164,7 +164,7 @@ SE_SET_Equip:
 ShieldStats:
   m_blockPower: 30
   m_blockPowerPerLevel: 2
-  m_timedBlockBonus: 6
+  m_timedBlockBonus: 4
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
