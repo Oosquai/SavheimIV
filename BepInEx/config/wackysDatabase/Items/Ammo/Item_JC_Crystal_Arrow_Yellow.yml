@@ -176,7 +176,7 @@ m_equipDuration: 0
 m_skillType: Bows
 m_animationState: OneHanded
 m_itemType: Ammo
-m_toolTier: 0
+m_toolTier: 2
 m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 

@@ -1,4 +1,5 @@
-# No Meadows raids
+# ----------------------------------------
+# Peaceful Meadows
 Fuling:
   Meadows:
     amount: 0
@@ -15,39 +16,201 @@ Seeker brood:
   Meadows:
     amount: 0
 
-# HP Nerfs
-Bonemass:
-  health: 0.7
+# ----------------------------------------
+# Creature Adjustments - Meadows
+# Boar base stats - HP: 10; dmg: 10; weak: -; resist: -; immune: Spirit
+#Boar:
+#  health: 1
 
-Abomination:
-  health: 0.85
+# Neck base stats - HP: 5; dmg: 6; weak: Fire; resist: Poison; immune: Spirit
+#Neck:
+#  health: 1
 
-Stone Golem:
-  health: 0.9
+# Greyling base stats - HP: 20; dmg: 5; weak: Fire; resist: Poison; immune: Spirit
+#Greyling:
+#  health: 1
 
-Seeker Soldier:
-  health: 0.9
+# Eikthyr (BOSS) base stats - HP: 500; dmg: 20; weak: -; resist: -; immune: Stagger
+#Eikthyr:
+#  health: 1
 
-Charred Warlock:
-  health: 0.8
+# ----------------------------------------
+# Creature Adjustments - Black Forest
+# Greydwarf base stats - HP: 40; dmg: 14; weak: Fire; resist: Poison; immune: Spirit
+#Greydwarf:
+#  health: 1
 
-# HP Buffs
+# Greydwarf Brute base stats - HP: 150; dmg: 30; weak: Fire; resist: Poison; immune: Spirit
+#Greydwarf Brute:
+#  health: 1
+
+# Greydwarf Shaman base stats - HP: 60; dmg: 30; weak: Fire; resist: Poison; immune: Spirit
+#Greydwarf Shaman:
+#  health: 1
+
+# Troll base stats - HP: 600; dmg: 70; weak: Pierce; resist: Blunt; immune: Spirit
+#Troll:
+#  health: 1
+
+# Skeleton base stats - HP: 40; dmg: 25; weak: Blunt, Fire; resist: Pierce; immune: Poison
 Skeleton:
   health: 1.5
 
+# Rancid Remains base stats - HP: 100; dmg: 30; weak: Blunt, Fire; resist: Pierce; immune: Poison
 Rancid Remains:
   health: 1.5
 
+# Ghost base stats - HP: 60; dmg: 25; weak: Spirit, Fire; resist: Physical; immune: Poison
+#Ghost:
+#  health: 1
+
+# Root (spawn, The Elder) base stats - HP: 20; dmg: 55; weak: Fire; resist: Frost; immune: Poison, Stagger
+#Root:
+#  health: 1
+
+# Brenna (Miniboss) base stats - HP: 1200; dmg: 50; weak: Blunt, Frost; resist: Pierce; immune: Fire, Poison
+#Brenna:
+#  health: 1
+
+# The Elder (BOSS) base stats - HP: 2500; dmg: 60; weak: Fire; resist: -; immune: Poison, Spirit, Stagger
+#The Elder:
+#  health: 1
+
+# ----------------------------------------
+# Creature Adjustments - Ocean
+# Serpent base stats - HP: 400; dmg: 70; weak: Frost; resist: Poison; immune: Fire, Spirit, Stagger
+#Serpent:
+#  health: 1
+
+# ----------------------------------------
+# Creature Adjustments - Swamp
+# Abomination base stats - HP: 800; dmg: 80; weak: Fire; resist: Blunt, Pierce; immune: Frost, Poison, Spirit
+Abomination:
+  health: 0.85
+
+# Blob base stats - HP: 50; dmg: 90; weak: Blunt, Frost, Lightning; resist: Fire, Pierce, Slash; immune: Poison, Stagger
+#Blob:
+#  health: 1
+
+# Oozer base stats - HP: 150; dmg: 115 weak: Blunt, Frost, Lightning; resist: Fire, Pierce, Slash; immune: Poison, Stagger
+#Oozer:
+#  health: 1
+
+# Draugr base stats - HP: 100; dmg: 48; weak: -; resist: Fire; immune: Poison
+Draugr:
+  health: 1.2
+
+# Draugr Elite base stats - HP: 200; dmg: 58; weak: -; resist: Fire; immune: Poison
 Draugr Elite:
   health: 1.5
 
-Draugr:
-  health: 1.25
+# Leech base stats - HP: 60; dmg: 70; weak: -; resist: Poison; immune: Fire, Spirit, Stagger
+#Leech:
+#  health: 1
 
+# Surtling base stats - HP: 20; dmg: 40; weak: Frost; resist: -; immune: Fire, Spirit
+#Surtling:
+#  health: 1
+
+# Wraith base stats - HP: 100; dmg: 60; weak: Fire, Spirit; resist: Blunt, Pierce, Slash; immune: Frost, Poison
+#Wraith:
+#  health: 1
+
+# Bonemass (BOSS) base stats - HP: 5000; dmg: 130; weak: Blunt, Frost; resist: Fire, Slash, Pierce; immune: Poison, Stagger
+Bonemass:
+  health: 0.8
+
+# ----------------------------------------
+# Creature Adjustments - Mountains
+# Wolf base stats - HP: 80; dmg: 70; weak: -; resist: -; immune: Spirit
+Wolf:
+  health: 1.1
+
+# Drake base stats - HP: 100; dmg: 90; weak: Fire; resist: -; immune: Frost, Spirit, Stagger
+#Drake:
+#  health: 1
+
+# Fenring base stats - HP: 300; dmg: 95; weak: Fire; resist: -; immune: -
+#Fenring:
+#  health: 1
+
+# Stone Golem base stats - HP: 800; dmg: 110; weak: Pickaxe; resist: Pierce, Slash; immune: Fire, Frost, Poison, Spirit
+Stone Golem:
+  health: 0.9
+
+# Bat base stats - HP: 10; dmg: 20; weak: Fire, Spirit; resist: Physical; immune: Frost, Poison
+#Bat:
+#  health: 1
+
+# Ulv base stats - HP: 50; dmg: 70; weak: Poison; resist: Fire; immune: -
+#Ulv:
+#  health: 1
+
+# Cultist base stats - HP: 200; dmg: 50; weak: Poison; resist: Fire; immune: -
+#Cultist:
+#  health: 1
+
+# Geirrhafa (Miniboss) base stats - HP: 3700; dmg: 90; weak: Fire; resist: -; immune: Frost
+#Geirrhafa:
+#  health: 1
+
+# Moder (BOSS) base stats - HP: 7500; dmg: 200; weak: Fire; resist: -; immune: Frost, Spirit, Stagger
+#Moder:
+#  health: 1
+
+# ----------------------------------------
+# Creature Adjustments - Plains
+# Deathsquito base stats - HP: 10; dmg: 90; weak: -; resist: -; immune: Spirit, Stagger
+#Deathsquito:
+#  health: 1
+
+# Lox base stats - HP: 1000; dmg: 130; weak: Fire; resist: Blunt, Frost, Slash; immune: Spirit
+Lox:
+  health: 0.9
+
+# Fuling base stats - HP: 175; dmg: 85; weak: -; resist: -; immune: Spirit
 Fuling:
-  health: 1.25
+  health: 1.2
 
-# Overhauls
+# Fuling Berserker base stats - HP: 800; dmg: 130; weak: -; resist: -; immune: Spirit
+#Fuling Berserker:
+#  health: 1
+
+# Fuling Shaman base stats - HP: 100; dmg: 100; weak: -; resist: -; immune: Spirit
+#Fuling Shaman:
+#  health: 1
+
+# Growth base stats - HP: 100; dmg: 50; weak: Blunt, Fire; resist: Frost, Pierce, Slash; immune: Poison, Stagger
+#Growth:
+#  health: 1
+
+# Zil (Miniboss, paired with Thungr) base stats - HP: 2100; dmg: 100; weak: -; resist: -; immune: -
+#Zil:
+#  health: 1
+
+# Thungr (Miniboss, paired with Zil) base stats - HP: 4200; dmg: 150; weak: -; resist: -; immune: -
+#Thungr:
+#  health: 1
+
+# Yagluth (BOSS) base stats - HP: 10000; dmg: 120; weak: -; resist: Fire, Pierce; immune: Poison, Stagger
+#Yagluth:
+#  health: 1
+
+# ----------------------------------------
+# Creature Adjustments - Mistlands
+# Seeker base stats - HP: 200; dmg: 120; weak: -; resist: Physical; immune: Spirit
+#Seeker:
+#  health: 1
+
+# Seeker Soldier base stats - HP: 1500; dmg: 120; weak: -; resist: Physical; immune: Spirit
+Seeker Soldier:
+  health: 0.75
+
+# Seeker Brood base stats - HP: 20; dmg: 60; weak: -; resist: Physical; immune: Spirit
+#Seeker Brood:
+#  health: 1
+
+# Gjall base stats - HP: 1500; dmg: 80; weak: -; resist: Fire; immune: Spirit
 Gjall:
   health: 0.9
   effect:
@@ -57,4 +220,71 @@ Gjall:
     Regenerating: 0
     Curious: 0
     Splitting: 0
+
+# Tick base stats - HP: 50; dmg: 50; weak: Pierce; resist: -; immune: Spirit
+#Tick:
+#  health: 1
+
+# Dvergr Rogue base stats - HP: 350; dmg: 110; weak: -; resist: -; immune: Spirit
+#Dvergr Rogue:
+#  health: 1
+
+# Dvergr Mage base stats - HP: 350; dmg: 200; weak: -; resist: Fire, Frost; immune: Spirit
+#Dvergr Mage:
+#  health: 1
+
+# The Queen (BOSS) base stats - HP: 12500; dmg: 150; weak: -; resist: Pierce; immune: Spirit
+#The Queen:
+#  health: 1
+
+# ----------------------------------------
+# Creature Adjustments - Ashlands
+# Askvin base stats - HP: 800; dmg: 150; weak: -; resist: Fire, Poison; immune: Spirit
+#Askvin:
+#  health: 1
+
+# Bonemaw Serpent base stats - HP: 1100; dmg: 140; weak: Frost; resist: Poison; immune: Fire, Spirit
+#Bonemaw Serpent:
+#  health: 1
+
+# Charred Marksman base stats - HP: 200; dmg: 200; weak: Spirit; resist: Pierce; very resist: Fire; immune: Poison
+#Charred Marksman:
+#  health: 1
+
+# Charred Twitcher base stats - HP: 220; dmg: 100; weak: Spirit; resist: Pierce; very resist: Fire; immune: Poison
+#Charred Twitcher:
+#  health: 1
+
+# Charred Warlock base stats - HP: 600; dmg: 100; weak: Spirit; resist: Pierce, Frost; very resist: Fire, Stagger; immune: Poison
+#Charred Warlock:
+Charred Warlock:
+  health: 0.7
+
+# Charred Warrior base stats - HP: 600; dmg: 160; weak: Spirit; resist: Pierce; very resist: Fire, immune: Poison
+#Charred Warrior:
+#  health: 1
+
+# Fallen Valkyrie base stats - HP: 1500; dmg: 160; weak: Spirit; resist: Fire; immune: Poison
+#Fallen Valkyrie:
+#  health: 1
+
+# Lava Blob base stats - HP: 300; dmg: 70; weak: Blunt, Frost, Lightning; resist: Pierce, Poison; immune: Fire
+#Lava Blob:
+#  health: 1
+
+# Morgen base stats - HP: 1600; dmg: 160; weak: Lightning; resist: Physical, Fire, Stagger; immune: -
+#Morgen:
+#  health: 1
+
+# Volture base stats - HP: 200; dmg: 110; weak: Frost; resist: -; very resist: Stagger; immune: Poison
+#Volture:
+#  health: 1
+
+# Skugg base stats - HP: 400; dmg: 120; weak: -; resist: Pierce, Pickaxe, Fire, Lightning; immune: Poison
+#Skugg:
+#  health: 1
+
+# Fader (BOSS) base stats - HP: 25000; dmg: ?; weak: -; resist: Pierce; immune: Fire, Spirit
+#Fader:
+#  health: 1
 
