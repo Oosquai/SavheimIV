@@ -1,14 +1,14 @@
-name: MechanicalSpring
+name: TurretBoltWood
 clonePrefabName: 
 craftingStation: $piece_artisanstation
 minStationLevel: 1
 maxStationLevelCap: 
 repairStation: 
-amount: 1
+amount: 20
 disabled: false
+disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- Silver:1:1:True
+- RoundLog:5:1:True
 - SerpentScale:1:1:True
-- Guck:1:1:True

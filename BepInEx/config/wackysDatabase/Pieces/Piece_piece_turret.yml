@@ -49,7 +49,7 @@ fermStationData:
 sapData: 
 incineratorData: 
 build:
-- BlackMetal:5:1:True
-- Silver:5:1:True
-- YggdrasilWood:10:1:True
-- MechanicalSpring:3:1:True
+- Silver:10:1:True
+- RoundLog:20:1:True
+- BronzeNails:20:1:True
+- MechanicalSpring:2:1:True

@@ -1,7 +1,7 @@
 name: MechanicalSpring
 m_weight: 5
 m_name: $item_mechanicalspring
-m_description: $item_mechanicalspring_description
+m_description: A mysterious contraption built by ancient artisans.  Used to build traps.
 clonePrefabName: 
 mockName: 
 customIcon: 
