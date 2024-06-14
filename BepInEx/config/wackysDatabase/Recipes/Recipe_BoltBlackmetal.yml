@@ -1,7 +1,7 @@
 name: BoltBlackmetal
 clonePrefabName: 
-craftingStation: $piece_forge
-minStationLevel: 2
+craftingStation: $piece_workbench
+minStationLevel: 4
 maxStationLevelCap: 
 repairStation: 
 amount: 20

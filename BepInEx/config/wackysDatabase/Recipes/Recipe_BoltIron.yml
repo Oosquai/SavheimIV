@@ -1,7 +1,7 @@
 name: BoltIron
 clonePrefabName: 
-craftingStation: $piece_forge
-minStationLevel: 1
+craftingStation: $piece_workbench
+minStationLevel: 3
 maxStationLevelCap: 
 repairStation: 
 amount: 20

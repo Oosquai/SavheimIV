@@ -32,7 +32,7 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: true
   Reload_Animation: reload_crossbow
-  ReloadTimeMultiplier: 1
+  ReloadTimeMultiplier: 0.7
   Reload_Stamina_Drain: 1
   Bow_Draw: false
   Bow_Duration_Min: 0

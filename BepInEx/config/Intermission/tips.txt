@@ -37,3 +37,4 @@ Savheim IV - There's now a search feature in the hammer build menu.  Advanced se
 Savheim IV - Press Z while hovering over an item to compare to what you currently have equipped.
 Savheim IV - Gems and jewelry have been completely reworked.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  Block them to learn their timing before trying to parry them!
+Savheim IV - All build pieces can now be reinforced with resin and tar to prevent weather damage.  Put it on your hotbar and press the corresponding button while moused over.  Resin fades.  Tar is permanent.  You don't need both.
