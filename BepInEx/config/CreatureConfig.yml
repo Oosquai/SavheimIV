@@ -1,20 +1,39 @@
 # ----------------------------------------
 # Peaceful Meadows
-Fuling:
-  Meadows:
+Meadows:
+  Fuling:
     amount: 0
-
-Seeker:
-  Meadows:
+  Seeker:
     amount: 0
-
-Tick:
-  Meadows:
+  Tick:
     amount: 0
-
-Seeker brood:
-  Meadows:
+  Seeker Brood:
     amount: 0
+  Surtling:
+    amount: 0
+  Charred Marksman:
+    amount: 0
+  Charred Twitcher:
+    amount: 0
+  Charred Warlock:
+    amount: 0
+  Charred Warrior:
+    amount: 0
+#Fuling:
+#  Meadows:
+#    amount: 0
+#
+#Seeker:
+#  Meadows:
+#    amount: 0
+#
+#Tick:
+#  Meadows:
+#    amount: 0
+#
+#Seeker brood:
+#  Meadows:
+#    amount: 0
 
 # ----------------------------------------
 # Creature Adjustments - Meadows
@@ -205,6 +224,9 @@ Fuling:
 # Seeker Soldier base stats - HP: 1500; dmg: 120; weak: -; resist: Physical; immune: Spirit
 Seeker Soldier:
   health: 0.75
+  effect:
+    Armored: 0
+    Regenerating: 0
 
 # Seeker Brood base stats - HP: 20; dmg: 60; weak: -; resist: Physical; immune: Spirit
 #Seeker Brood:
