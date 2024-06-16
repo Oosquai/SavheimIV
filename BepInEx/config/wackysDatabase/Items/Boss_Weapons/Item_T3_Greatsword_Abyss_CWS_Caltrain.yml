@@ -125,7 +125,7 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
-    - name: sfx_battleaxe_hit
+    - name: sfx_goblinbrute_clubhit
       m_enabled: true
       m_variant: -1
       m_attach: false

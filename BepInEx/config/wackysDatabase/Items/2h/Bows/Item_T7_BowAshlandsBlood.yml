@@ -1,6 +1,6 @@
 name: BowAshlandsBlood
 m_weight: 1.5
-m_name: $item_bow_ashlandsblood
+m_name: Blood Fang Longbow
 m_description: $item_bow_ashlandsblood_description
 clonePrefabName: 
 mockName: 
@@ -25,7 +25,7 @@ Primary_Attack:
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 0
+  StaggerMultiplier: 0.5
   RecoilMultiplier: 0
   AttackRange: 1
   AttackHeight: 1.5
@@ -35,8 +35,8 @@ Primary_Attack:
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
   Bow_Draw: true
-  Bow_Duration_Min: 1.5
-  Bow_Stamina_Drain: 14
+  Bow_Duration_Min: 2.5
+  Bow_Stamina_Drain: 16
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
   Attack_Ray_Width: 0
@@ -50,7 +50,7 @@ Primary_Attack:
   Projectile_Accuraccy: 0
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: 0
+  Launch_Angle: -2
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -104,7 +104,7 @@ Secondary_Attack:
   Projectile_Accuraccy: 10
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: 0
+  Launch_Angle: -2
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -127,7 +127,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 75
+  Pierce: 77
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -187,7 +187,7 @@ m_equipDuration: 0
 m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
-m_toolTier: 5
+m_toolTier: 3
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 

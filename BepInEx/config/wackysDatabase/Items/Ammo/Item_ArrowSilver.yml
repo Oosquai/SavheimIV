@@ -107,7 +107,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 52
+  Pierce: 55
   Poison: 0
   Slash: 0
   Spirit: 20
@@ -137,7 +137,7 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 25
+m_knockback: 0
 m_useDurability: false
 m_useDurabilityDrain: 1
 m_durabilityDrain: 0

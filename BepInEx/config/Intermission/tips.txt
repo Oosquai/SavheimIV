@@ -5,7 +5,7 @@ Savheim IV - Recommended game settings II:  Please try turning Settings -> Acces
 Savheim IV - The game takes a while to load with so many mods installed.  Go get a tankard of ale and use the Viking potty.
 Savheim IV - Group commands: /invite [name]; /leave; /remove [name]; /promote [name].  Group benefits:  shared exp, group gem effects, draggable user interface, group chat (/p), colored names, and group ping (LeftAlt).
 Savheim IV - Swap hotbars - ~ (above Tab).  Dodge - Tap Alt or hold block and press jump.  Parry - block just in time.  Secondary attack - middle mouse button.  
-Savheim IV - All weapon classes have been reworked in Savheim IV to give them unique and improved playstyles.  Give them all a second swing, even if you decided against them last playthrough.  ... wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
+Savheim IV - All weapon classes have been reworked in Savheim IV to give them unique and improved playstyles.  Give them all a second swing, even if you decided against them last playthrough...  Wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
 Savheim IV - Block Armor = how much you can block.  [Block Armor * Parry Bonus] = how much you can parry.  Excess damage drains health.  Tower shields drain stamina before health.  Block Force does nothing.
 Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical:  Attack a staggered enemy.
 Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!

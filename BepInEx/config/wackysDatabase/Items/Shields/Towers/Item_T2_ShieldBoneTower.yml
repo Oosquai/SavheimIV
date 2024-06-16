@@ -1,7 +1,7 @@
 name: ShieldBoneTower
 m_weight: 7
 m_name: $item_shield_bonetower
-m_description: "The bones of dead warriors excel at turning slashing attacks, and they weigh less than metal."
+m_description: "The bones of dead warriors make for good protection."
 clonePrefabName: 
 mockName: 
 customIcon: 

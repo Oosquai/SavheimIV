@@ -1,7 +1,7 @@
 name: KnifeChitin
 m_weight: 0.3
 m_name: $item_knife_chitin
-m_description: $item_knife_chitin_description  Knives are all about speed.
+m_description: $item_knife_chitin_description  Knives allow the wielder to attack, dodge, and move faster than other weapons.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,39 +1,40 @@
 # ----------------------------------------
 # Peaceful Meadows
-Meadows:
-  Fuling:
+Fuling:
+  Meadows:
     amount: 0
-  Seeker:
+
+Seeker:
+  Meadows:
     amount: 0
-  Tick:
+
+Tick:
+  Meadows:
     amount: 0
-  Seeker Brood:
+
+Seeker brood:
+  Meadows:
     amount: 0
-  Surtling:
+
+Surtling:
+  Meadows:
     amount: 0
-  Charred Marksman:
+
+Charred Marksman:
+  Meadows:
     amount: 0
-  Charred Twitcher:
+
+Charred Twitcher:
+  Meadows:
     amount: 0
-  Charred Warlock:
+
+Charred Warlock:
+  Meadows:
     amount: 0
-  Charred Warrior:
+
+Charred Warrior:
+  Meadows:
     amount: 0
-#Fuling:
-#  Meadows:
-#    amount: 0
-#
-#Seeker:
-#  Meadows:
-#    amount: 0
-#
-#Tick:
-#  Meadows:
-#    amount: 0
-#
-#Seeker brood:
-#  Meadows:
-#    amount: 0
 
 # ----------------------------------------
 # Creature Adjustments - Meadows
