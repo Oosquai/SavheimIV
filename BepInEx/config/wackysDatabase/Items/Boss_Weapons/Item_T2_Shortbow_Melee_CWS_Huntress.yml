@@ -1,7 +1,7 @@
 name: CWS_Bow_11
 m_weight: 1.5
 m_name: $cws_bow_11
-m_description: Keep your enemies close, and your ammo reserves even closer.  This bow has a secondary attack.
+m_description: Keep your enemies close, and your ammo reserves even closer.  This autofire shortbow has a melee secondary attack and can block as well as a melee weapon.  The enchanted melee attack recyles an arrow if the attack lands.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -9,7 +9,7 @@ material:
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
-sizeMultiplier: 1
+sizeMultiplier: 0.9
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Projectile
@@ -18,13 +18,13 @@ Primary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 0.5
-  m_attackStamina: 8
+  m_attackStamina: 7
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.5
   DmgMultiplier: 1
-  ForceMultiplier: 1
+  ForceMultiplier: 0
   StaggerMultiplier: 0
   RecoilMultiplier: 0
   AttackRange: 1
@@ -121,11 +121,11 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.6
-  DmgMultiplier: 1.5
+  DmgMultiplier: 1.68
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2.6
+  AttackRange: 2
   AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -237,7 +237,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 24
+  Pierce: 22
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -272,7 +272,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 18
+  m_blockPower: 19
   m_blockPowerPerLevel: 1
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -298,7 +298,7 @@ m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
 m_toolTier: 3
-m_maxQuality: 4
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

@@ -1,7 +1,7 @@
 name: ArrowBronze
 m_weight: 0.01
 m_name: $item_arrow_bronze
-m_description: $item_arrow_bronze_description
+m_description: $item_arrow_bronze_description  The use of metal in the arrowhead adds a bit of damage.
 clonePrefabName: 
 mockName: 
 customIcon: 

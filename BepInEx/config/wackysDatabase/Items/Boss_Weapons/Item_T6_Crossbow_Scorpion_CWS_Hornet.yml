@@ -25,7 +25,7 @@ Primary_Attack:
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: -2
-  StaggerMultiplier: 1
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 1
   AttackHeight: 1.2
@@ -50,7 +50,7 @@ Primary_Attack:
   Projectile_Accuraccy: 0
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: -1
+  Launch_Angle: -2
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -127,7 +127,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 217
+  Pierce: 195
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -162,7 +162,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 32
+  m_blockPower: 28
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0

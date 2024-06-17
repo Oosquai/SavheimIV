@@ -9,7 +9,7 @@ material:
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
-sizeMultiplier: 1
+sizeMultiplier: 0.8
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Projectile
@@ -127,10 +127,10 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 74
+  Pierce: 60
   Poison: 0
   Slash: 0
-  Spirit: 20
+  Spirit: 16
 Damage_Per_Level:
   Blunt: 0
   Chop: 0

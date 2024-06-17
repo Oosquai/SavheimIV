@@ -1,7 +1,7 @@
 name: CWS_Crossbow_7
 m_weight: 1.5
 m_name: Repeater
-m_description: This ingenious design spreads loading across an extra pair of arms, allowing the wielder to reload with ease.
+m_description: This ingenious design splits each bolt into two projectiles as it fires.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -25,14 +25,14 @@ Primary_Attack:
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 1
   AttackHeight: 1.2
   Spawn_On_Trigger: 
   Requires_Reload: true
   Reload_Animation: reload_crossbow
-  ReloadTimeMultiplier: 0.5
+  ReloadTimeMultiplier: 0.7
   Reload_Stamina_Drain: 1
   Bow_Draw: false
   Bow_Duration_Min: 0
@@ -48,9 +48,9 @@ Primary_Attack:
   Attack_Projectile: 
   Projectile_Vel: 200
   Projectile_Accuraccy: 0
-  Projectiles: 1
+  Projectiles: 2
   Skill_Accuracy: false
-  Launch_Angle: -1
+  Launch_Angle: -2
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -79,7 +79,7 @@ Secondary_Attack:
   SpeedFactor: 0.2
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 1.5
   AttackHeight: 0.6
@@ -127,7 +127,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 65
+  Pierce: 30
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -177,7 +177,7 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 210
+m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
@@ -210,7 +210,7 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Trigger_Effect:
-  - name: fx_swing_camshake
+  - name: fx_hit_camshake_knife
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -243,4 +243,26 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  Trail_Effect: []
+  Trail_Effect:
+  - name: fx_hit_camshake_knife
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_arbalest_fire
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''

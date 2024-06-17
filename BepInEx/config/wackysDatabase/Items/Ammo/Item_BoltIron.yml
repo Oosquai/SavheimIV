@@ -1,7 +1,7 @@
 name: BoltIron
 m_weight: 0.01
 m_name: $item_bolt_iron
-m_description: $item_bolt_iron_description
+m_description: $item_bolt_iron_description  The use of metal in the arrowhead adds a bit of damage.
 clonePrefabName: 
 mockName: 
 customIcon: 

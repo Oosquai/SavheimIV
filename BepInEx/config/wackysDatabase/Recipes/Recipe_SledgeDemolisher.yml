@@ -9,7 +9,7 @@ disabled: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- YggdrasilWood:10:5:True
-- BlackMetal:20:10:True
-- BlackMarble:20:10:True
+- YggdrasilWood:12:6:True
+- BlackMetal:30:15:True
 - Eitr:10:2:True
+- TrophyGjall:1:0:True

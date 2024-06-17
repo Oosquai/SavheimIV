@@ -77,9 +77,9 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 0.5
+  DmgMultiplier: 0.4
   ForceMultiplier: -150
-  StaggerMultiplier: 5
+  StaggerMultiplier: 6
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 0
@@ -93,7 +93,7 @@ Secondary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 4
+  Attack_Ray_Width: 6
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -175,7 +175,7 @@ Secondary_Attack:
       m_childTransform: ''
     Burst_Effect: []
 Damage:
-  Blunt: 135
+  Blunt: 121
   Chop: 0
   Damage: 0
   Fire: 0
@@ -217,7 +217,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 67
+  m_blockPower: 61
   m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0
