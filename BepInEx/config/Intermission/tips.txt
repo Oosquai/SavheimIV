@@ -20,7 +20,7 @@ Savheim IV - Building tips!  While holding your hammer and hovering over a place
 Savheim IV - You've learned to dive under the water by pointing down and pressing crouch!  Go swimming!  Wat-er you waiting for??
 Savheim IV - Boss powers now have both passive and active aspects, and you get to choose two!  Read about them at the starting stones or in your Valheim Compendium (inventory -> raven icon).  Keybinds are hardcoded to F and G, regardless of in-game settings.
 Savheim IV - World progression is now tied to your character.  You must be present for boss kills to get credit for them.  This affects boss powers, merchant inventory, raids, and maybe more!
-Savheim IV - Death went to therapy and is nicer now.  You'll no longer drop equipment, ammo, or consumables when you die, and most non-combat skills don't lose experience.  Resurrect each other with Surtling Cores.
+Savheim IV - Death went to therapy and is nicer now.  You'll no longer drop equipment, ammo, or consumables when you die.  Resurrect each other with Surtling Cores.
 Savheim IV - Check your Valheim Compendium (inventory -> raven icon) for useful game and mod information, including Active Effects.
 Savheim IV - Comfort and Rested are easier to obtain, but teleporting long distances will now reduce your Rested duration (Full map radius = ~60m).  F6 toggles a list of pieces while in shelter.  Rest in groups for extra duration!
 Savheim IV - Waypoints offer safety from monsters, warmth, and a way to pick up a Rested buff in the field if you sit near it during favorable weather.
@@ -39,3 +39,4 @@ Savheim IV - Gems and jewelry have been completely reworked.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  Block them to learn their timing before trying to parry them!
 Savheim IV - All build pieces can now be reinforced with resin and tar to prevent weather damage.  Put it on your hotbar and press the corresponding button while moused over.  Resin fades.  Tar is permanent.  You don't need both.
 Savheim IV - All bosses have a small chance to drop a variety of unique weapons.  These can't be upgraded, and thus suffer lower damage than others in their tier, but they offer powerful special effects.  You'll have opportunities to find endgame versions of each.
+Savheim IV - You'll now earn catch-up experience for skills working back toward all-time highs, as well as alternate weapon skills compared to your most experienced weapon skill.

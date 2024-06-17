@@ -123,8 +123,8 @@ mirror:
   slot: [chest, magic]
   gem: black
   power:
-    power: [6, 12, 18]
-    damage reflected: [50, 75, 100]
+    power: [6, 8, 10]
+    damage reflected: [30, 40, 50]
   # Optional Configs:
   # - damage reflected (default: 100)
   
@@ -183,6 +183,12 @@ restless legs:
   slot: legs
   gem: blueish
   power: [15, 30, 45]
+
+cowardice:
+  slot: [legs, magic]
+  gem: cyan
+  power: [3, 5, 7]
+
 
 # Utility
 
