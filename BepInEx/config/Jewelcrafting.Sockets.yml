@@ -5,7 +5,7 @@
 # means a perfect gem rolls its power randomly between 15 and 20.
 
 fire starter:
-  slot: [weapon, elementalmagic]
+  slot: weapon
   gem: red
   power:
     power: [10, 20, 30]
@@ -62,7 +62,7 @@ acceleration:
   power: [8, 16, 24]
 
 overexertion:
-  slot: [weapon, elementalmagic]
+  slot: [weapon, magic, bow, crossbow]
   gem: blueish
   power:
     damage increase: [6, 12, 18]
@@ -105,14 +105,14 @@ precious blood:
 # Chest
 
 defender:
-  slot: [chest, utility]
+  slot: [chest, utility, magic]
   gem: red
   power: [2, 4, 6]
 
 vitality:
   slot: chest
   gem: blue
-  power: [10, 20, 30]
+  power: [12, 18, 24]
 
 regeneration:
   slot: [chest, shield]
@@ -138,9 +138,14 @@ fade:
   # - damage threshold (default: 30)
 
 invigorated:
-  slot: [chest, shield]
+  slot: [chest, shield, bow]
   gem: redish
   power: [8, 16, 24]
+
+relaxed:
+  slot: [utility, crossbow]
+  gem: redish
+  power: [10, 20, 30]
 
 # Legs
 
@@ -208,7 +213,7 @@ hercules:
   power: [10, 20, 30]
 
 glowing spirit:
-  slot: [utility, tool]
+  slot: [utility, tool, elementalmagic]
   gem: blue
   power: [3, 6, 9]
 
@@ -311,20 +316,20 @@ quick load:
 # Bow and Crossbow
 
 echo:
-  slot: [bow, crossbow, elementalmagic]
+  slot: [bow, crossbow, magic]
   gem: yellow
   power:
-    power: [5, 10, 15]
-    bonus projectiles: [1, 1, 2]
+    power: [6, 9, 12]
+    bonus projectiles: [1, 1, 1]
   # Optional Configs:
   # - bonus projectiles (default: 1)
   
 necromancer:
-  slot: [bow, crossbow, elementalmagic]
+  slot: [bow, crossbow, magic]
   gem: green
   power:
-    power: [6, 9, 12]
-    duration: [8, 10, 12]
+    power: [5, 7, 9]
+    duration: [6, 6, 9]
   # Optional Configs:
   # - duration (default: 10)
   
@@ -332,17 +337,17 @@ ricochet:
   slot: [bow, crossbow]
   gem: orange
   power:
-    power: [5, 10, 15]
+    power: [6, 9, 12]
     range: [12, 15, 18]
   # Optional Configs:
   # - range (default: 15)
   
 elemental chaos:
-  slot: [bow, crossbow, elementalmagic]
+  slot: [bow, crossbow]
   gem: blue
   power:
     power: [10, 20, 30]
-    chance: [22, 25, 28]
+    chance: [16, 20, 24]
   # Optional Configs:
   # - chance (default: 20)
   

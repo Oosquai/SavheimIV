@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Purple
 m_weight: 0.1
 m_name: $JC_Crystal_Arrow_Purple
-m_description: $JC_Crystal_Arrow_Purple_Description that will melt your foes.
+m_description: $JC_Crystal_Arrow_Purple_Description that will electrocute your target.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -123,14 +123,14 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 31
+  Fire: 0
   Frost: 0
-  Lightning: 0
+  Lightning: 51
   Pickaxe: 0
-  Pierce: 0
-  Poison: 62
+  Pierce: 11
+  Poison: 0
   Slash: 0
-  Spirit: 20
+  Spirit: 0
 Damage_Per_Level: 
 Armor:
   armor: 10

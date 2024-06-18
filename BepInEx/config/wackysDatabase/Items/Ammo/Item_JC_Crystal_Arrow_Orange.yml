@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Orange
 m_weight: 0.1
 m_name: $JC_Crystal_Arrow_Orange
-m_description: $JC_Crystal_Arrow_Orange_Description that can knock enemies away.
+m_description: $JC_Crystal_Arrow_Orange_Description that will leesh your target.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -120,14 +120,14 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 32
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 0
+  Pierce: 16
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -160,13 +160,13 @@ m_maxStackSize: 100
 m_canBeReparied: true
 m_destroyBroken: true
 m_dodgeable: true
-Attack_status_effect: 
+Attack_status_effect: Harpooned
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 200
+m_knockback: 0
 m_useDurability: false
 m_useDurabilityDrain: 1
 m_durabilityDrain: 0

@@ -63,7 +63,7 @@ Primary_Attack:
     Hit_Terrain_Effects: []
     Start_Effect:
     - name: sfx_bow_draw
-      m_enabled: true
+      m_enabled: false
       m_variant: -1
       m_attach: false
       m_follow: false

@@ -1,0 +1,15 @@
+name: BBH_Seeker_Bow
+clonePrefabName: 
+craftingStation: ''
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: $piece_workbench
+amount: 1
+disabled: true
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- YggdrasilWood:3:1:True
+- Carapace:3:1:True
+- Wisp:1:0:True
