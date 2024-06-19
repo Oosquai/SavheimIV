@@ -32,8 +32,10 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
+  ReloadTime: 
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
+  Reload_Eitr_Drain: 
   Bow_Draw: false
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
@@ -45,6 +47,13 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Reset_Chain_If_hit: 
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 
+  Raise_Skill_Amount: 
+  Skill_Hit_Type: 
+  Special_Hit_Skill: 
+  Special_Hit_Type: 
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -86,8 +95,10 @@ Secondary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
+  ReloadTime: 
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
+  Reload_Eitr_Drain: 
   Bow_Draw: false
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
@@ -99,6 +110,13 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Reset_Chain_If_hit: 
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 
+  Raise_Skill_Amount: 
+  Skill_Hit_Type: 
+  Special_Hit_Skill: 
+  Special_Hit_Type: 
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -195,6 +213,7 @@ m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
+Attach_Override: 
 m_skillType: Axes
 m_animationState: DualAxes
 m_itemType: TwoHandedWeapon

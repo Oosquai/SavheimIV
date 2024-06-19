@@ -46,7 +46,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_Projectile: 
-  Projectile_Vel: 40
+  Projectile_Vel: 35
   Projectile_Accuraccy: 6
   Projectiles: 6
   Skill_Accuracy: false

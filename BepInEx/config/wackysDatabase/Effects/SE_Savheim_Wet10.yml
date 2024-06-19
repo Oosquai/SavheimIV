@@ -1,22 +1,35 @@
-Name: SE_Savheim_StamRegen11
-Status_m_name: Stamina Regen
+Name: SE_Savheim_Wet10
+Status_m_name: $se_wet_name
 Category: ''
-IconName: ShieldBoneTower
+IconName: Wet
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "You feel invigorated."
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
-StartMessage: ''
+StartMessage: $se_wet_start
 StopMessageLoc: TopLeft
-StopMessage: ''
+StopMessage: $se_wet_stop
 RepeatMessageLoc: TopLeft
-RepeatMessage: ''
-RepeatInterval: 0
-TimeToLive: 0
+RepeatMessage: $se_wet_repeat
+RepeatInterval: 60
+TimeToLive: 10
 StartEffect_: 
 StopEffect_: 
+StartEffect_PLUS:
+- name: vfx_Wet
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
@@ -25,7 +38,7 @@ SeData:
   m_healthPerTick: 0
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
-  m_healthOverTimeInterval: 0
+  m_healthOverTimeInterval: 5
   m_staminaOverTime: 0
   m_staminaOverTimeDuration: 0
   m_staminaDrainPerSec: 0
@@ -34,7 +47,7 @@ SeData:
   m_eitrOverTime: 0
   m_eitrOverTimeDuration: 0
   m_healthRegenMultiplier: 1
-  m_staminaRegenMultiplier: 1.11
+  m_staminaRegenMultiplier: 1
   m_eitrRegenMultiplier: 1
   m_raiseSkill: None
   m_raiseSkillModifier: 0
@@ -42,9 +55,15 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods: []
+  m_mods:
+  - m_type: Fire
+    m_modifier: Resistant
+  - m_type: Frost
+    m_modifier: Weak
+  - m_type: Lightning
+    m_modifier: Weak
   m_modifyAttackSkill: None
-  m_damageModifier: 0
+  m_damageModifier: 1
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0

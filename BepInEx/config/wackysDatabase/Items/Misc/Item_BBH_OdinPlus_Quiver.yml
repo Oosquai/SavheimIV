@@ -1,7 +1,7 @@
 name: BBH_OdinPlus_Quiver
 m_weight: 1.5
-m_name: $item_quiver_odinplus
-m_description: $item_quiver_odinplus_description
+m_name: Flametal Quiver
+m_description: A quiver made from mythical materials.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -188,7 +188,7 @@ m_skillType: Bows
 m_animationState: Bow
 m_itemType: None
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 6
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

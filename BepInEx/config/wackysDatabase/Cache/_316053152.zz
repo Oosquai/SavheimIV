@@ -57,6 +57,7 @@ m_durabilityDrain: 0
 m_maxDurability: 100
 m_durabilityPerLevel: 50
 m_equipDuration: 2
+Attach_Override: 
 m_skillType: Swords
 m_animationState: OneHanded
 m_itemType: Utility
