@@ -18,14 +18,14 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 20
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.5
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 2.5
+  StaggerMultiplier: 2.25
   RecoilMultiplier: 0
   AttackRange: 2.5
   AttackHeight: 1
@@ -38,15 +38,15 @@ Primary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 90
+  Attack_Angle: 110
   Attack_Ray_Width: 0.5
-  Lower_Dmg_Per_Hit: false
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_Projectile: 
-  Projectile_Vel: 0
+  Projectile_Vel: 20
   Projectile_Accuraccy: 0
   Projectiles: 1
   Skill_Accuracy: false
@@ -72,14 +72,14 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 40
+  m_attackStamina: 32
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
   DmgMultiplier: 0.4
-  ForceMultiplier: -150
-  StaggerMultiplier: 6
+  ForceMultiplier: -160
+  StaggerMultiplier: 10
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 0
@@ -94,7 +94,7 @@ Secondary_Attack:
   Bow_Animation_State: ''
   Attack_Angle: 90
   Attack_Ray_Width: 6
-  Lower_Dmg_Per_Hit: true
+  Lower_Dmg_Per_Hit: false
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false

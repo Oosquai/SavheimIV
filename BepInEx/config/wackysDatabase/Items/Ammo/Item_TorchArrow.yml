@@ -1,5 +1,5 @@
 name: TorchArrow
-m_weight: 0.1
+m_weight: 0.01
 m_name: $item_arrow_torch
 m_description: $item_arrow_torch_description
 clonePrefabName: 

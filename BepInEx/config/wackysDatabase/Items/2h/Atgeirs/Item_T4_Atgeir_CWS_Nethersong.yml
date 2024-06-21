@@ -1,7 +1,7 @@
 name: CWS_Atgeir_10
 m_weight: 2.5
 m_name: Silver Atgeir
-m_description: A beautifully crafted silver atgeir.  Atgeirs excel at area control.
+m_description: A beautifully crafted silver atgeir.  Atgeirs control opponents by hamstringing them with every attack, and they have an area-clearing spin attack.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -18,14 +18,14 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 16
+  m_attackStamina: 14
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.2
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 3.2
   AttackHeight: 1
@@ -72,14 +72,14 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 32
+  m_attackStamina: 28
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
   DmgMultiplier: 1
-  ForceMultiplier: 2
-  StaggerMultiplier: 1.2
+  ForceMultiplier: 160
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 3
   AttackHeight: 1
@@ -95,7 +95,7 @@ Secondary_Attack:
   Attack_Angle: 360
   Attack_Ray_Width: 0.3
   Lower_Dmg_Per_Hit: false
-  Hit_Through_Walls: true
+  Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
@@ -182,13 +182,13 @@ m_maxStackSize: 1
 m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: true
-Attack_status_effect: 
+Attack_status_effect: SE_Savheim_Hamstring
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 80
+m_knockback: 1
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0

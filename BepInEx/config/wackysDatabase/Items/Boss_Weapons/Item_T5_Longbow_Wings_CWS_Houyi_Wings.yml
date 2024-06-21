@@ -49,7 +49,7 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
   SpawnOnHit: Crow
-  SpawnOnHit_Chance: 0.1
+  SpawnOnHit_Chance: 0.02
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None

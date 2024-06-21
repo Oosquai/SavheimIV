@@ -1,7 +1,7 @@
 name: CWS_Sledge_10
 m_weight: 4
 m_name: Flametal Sledge
-m_description: This hunk of metal is heavy and likes to get hot.  Sledges excel at staggering foes and have an earth-shattering ground slam, but only for those with the stamina to wield them properly.
+m_description: This hunk of metal is heavy and likes to get hot.  Sledges excel at staggering foes and have an earth-shattering ground slam.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -18,14 +18,14 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 24
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.5
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 2.5
+  StaggerMultiplier: 2.25
   RecoilMultiplier: 0
   AttackRange: 2.5
   AttackHeight: 1
@@ -38,9 +38,9 @@ Primary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 90
+  Attack_Angle: 110
   Attack_Ray_Width: 0.5
-  Lower_Dmg_Per_Hit: false
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
@@ -72,14 +72,14 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 48
+  m_attackStamina: 40
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 0.75
-  ForceMultiplier: 200
-  StaggerMultiplier: 1.5
+  DmgMultiplier: 0.65
+  ForceMultiplier: 1
+  StaggerMultiplier: 6
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 0
@@ -94,7 +94,7 @@ Secondary_Attack:
   Bow_Animation_State: ''
   Attack_Angle: 90
   Attack_Ray_Width: 4
-  Lower_Dmg_Per_Hit: true
+  Lower_Dmg_Per_Hit: false
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
@@ -221,7 +221,7 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 2
-m_knockback: 1
+m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0

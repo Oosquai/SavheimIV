@@ -23,7 +23,7 @@ Primary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 0.2
+  DmgMultiplier: 0.25
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -45,10 +45,12 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  SpawnOnHit: Feathers
+  SpawnOnHit_Chance: 0.0125
   Attack_Projectile: 
   Projectile_Vel: 35
   Projectile_Accuraccy: 6
-  Projectiles: 6
+  Projectiles: 4
   Skill_Accuracy: false
   Launch_Angle: -2
   Projectile_Burst: 1

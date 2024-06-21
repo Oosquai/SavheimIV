@@ -14,7 +14,7 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 5
+TimeToLive: 4
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
@@ -72,7 +72,7 @@ SeData:
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
-  m_speedModifier: -1000
+  m_speedModifier: -0.75
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0

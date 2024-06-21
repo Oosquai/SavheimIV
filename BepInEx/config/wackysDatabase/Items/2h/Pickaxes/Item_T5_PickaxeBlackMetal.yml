@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1.2
-  m_attackStamina: 34
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0

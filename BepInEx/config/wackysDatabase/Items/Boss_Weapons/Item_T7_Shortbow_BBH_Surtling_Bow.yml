@@ -24,7 +24,7 @@ Primary_Attack:
   m_attackHealthPercentage: 0
   SpeedFactor: 0.5
   DmgMultiplier: 1
-  ForceMultiplier: 0
+  ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
   AttackRange: 1
@@ -45,6 +45,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  SpawnOnHit: Feathers
+  SpawnOnHit_Chance: 0.05
   Attack_Projectile: 
   Projectile_Vel: 40
   Projectile_Accuraccy: 0
@@ -229,7 +231,7 @@ Damage:
   Pierce: 32
   Poison: 0
   Slash: 0
-  Spirit: 6
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -241,7 +243,7 @@ Damage_Per_Level:
   Pierce: 2
   Poison: 0
   Slash: 0
-  Spirit: 1
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1

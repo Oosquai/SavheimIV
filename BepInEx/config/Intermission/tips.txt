@@ -10,7 +10,7 @@ Savheim IV - Block Armor = how much you can block.  [Block Armor * Parry Bonus] 
 Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical:  Attack a staggered enemy.
 Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
 Savheim IV - Harpoons now have a basic secondary attack.  Primary attack tethers, and then the Use key reels the tether in if it's lighter than you.  If it's heavier than you, well, with great power comes great responsibility.
-Savheim IV - Stealth no longer consumes stamina, moves faster, and levels faster.  Swimming consumes less stamina as you level it up.  Food and rested buffs help even more with stamina.  Being Cold hurts stamina.
+Savheim IV - Sneaking no longer consumes stamina, moves faster, and levels faster.  Swimming consumes less stamina as you level it up.  Food and rested buffs help even more with stamina.  Being Cold hurts stamina.
 Savheim IV - Torches are much more useful now!  They protect from Cold in a small radius, except in Mountains.  They last longer, and they can be upgraded at the workbench for greater duration.
 Savheim IV - Most gear can have 3 sockets max, though you'll need to hunt rare materials for the third socket.  Jewelry cannot be socketed.
 Savheim IV - Try to unlock as many recipes as you can...  Bronze Nails?  What do I need those for?  Craft them and see!
@@ -30,7 +30,7 @@ Savheim IV - Steps have been taken to ensure we can all coexist in the same worl
 Savheim IV - Sell precious stones & trophies to the traders.  Split stacks in your inventory to control quantities you want to sell.  Double-click items you want to buy to specify quantities.
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and to all the creative modders out there for so many incredible additions!
-Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymole, KG, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, and more!
+Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymole, KG, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, and more!
 Savheim IV - Thank you to Matt, Jake, and Woody for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for TotinoTunes and Jake for that awesome Savheim IV video in Discord!
 Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
@@ -40,3 +40,4 @@ Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  Block them
 Savheim IV - All build pieces can now be reinforced with resin and tar to prevent weather damage.  Put it on your hotbar and press the corresponding button while moused over.  Resin fades.  Tar is permanent.  You don't need both.
 Savheim IV - All bosses have a small chance to drop a variety of unique weapons.  These can't be upgraded, and thus suffer lower damage than others in their tier, but they offer powerful special effects.  You'll have opportunities to find endgame versions of each.
 Savheim IV - You'll now earn catch-up experience for skills working back toward all-time highs, as well as alternate weapon skills compared to your most experienced weapon skill.
+Savheim IV - All bows and crossbows now have a small chance their projectiles will leave behind reusable fletchings.

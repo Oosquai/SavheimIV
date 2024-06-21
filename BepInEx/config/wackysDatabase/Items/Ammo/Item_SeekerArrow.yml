@@ -1,7 +1,7 @@
 name: SeekerArrow
-m_weight: 0.1
-m_name: $item_arrow_seeker
-m_description: $item_arrow_seeker_description
+m_weight: 0.01
+m_name: Lightning Arrow
+m_description: A lightning-infused arrow.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -125,10 +125,10 @@ Damage:
   Damage: 0
   Fire: 0
   Frost: 0
-  Lightning: 0
+  Lightning: 46
   Pickaxe: 0
-  Pierce: 36
-  Poison: 72
+  Pierce: 26
+  Poison: 0
   Slash: 0
   Spirit: 0
 Damage_Per_Level: 

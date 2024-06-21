@@ -45,6 +45,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  SpawnOnHit: Feathers
+  SpawnOnHit_Chance: 0.05
   Attack_Projectile: 
   Projectile_Vel: 40
   Projectile_Accuraccy: 0
@@ -130,7 +132,7 @@ Damage:
   Pierce: 52
   Poison: 0
   Slash: 0
-  Spirit: 5
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -142,7 +144,7 @@ Damage_Per_Level:
   Pierce: 4
   Poison: 0
   Slash: 0
-  Spirit: 1
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1

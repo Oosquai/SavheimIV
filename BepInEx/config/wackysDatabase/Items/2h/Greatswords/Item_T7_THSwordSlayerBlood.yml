@@ -25,7 +25,7 @@ Primary_Attack:
   SpeedFactor: 0.6
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.5
+  StaggerMultiplier: 1.25
   RecoilMultiplier: 0
   AttackRange: 2.6
   AttackHeight: 1
@@ -83,7 +83,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 40
+  m_attackStamina: 30
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -104,8 +104,8 @@ Secondary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 30
-  Attack_Ray_Width: 0.5
-  Lower_Dmg_Per_Hit: true
+  Attack_Ray_Width: 0.7
+  Lower_Dmg_Per_Hit: false
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
@@ -199,7 +199,7 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 1
+m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0

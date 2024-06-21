@@ -1,5 +1,5 @@
 name: JC_Crystal_Arrow_Blue
-m_weight: 0.1
+m_weight: 0.01
 m_name: $JC_Crystal_Arrow_Blue
 m_description: $JC_Crystal_Arrow_Blue_Description that will drench your target.
 clonePrefabName: 
@@ -127,7 +127,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 16
+  Pierce: 11
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -160,7 +160,7 @@ m_maxStackSize: 100
 m_canBeReparied: true
 m_destroyBroken: true
 m_dodgeable: true
-Attack_status_effect: SE_Savheim_Wet10
+Attack_status_effect: SE_Savheim_Wet
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

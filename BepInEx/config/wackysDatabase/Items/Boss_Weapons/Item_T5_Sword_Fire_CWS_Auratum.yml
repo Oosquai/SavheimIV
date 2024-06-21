@@ -40,7 +40,7 @@ Primary_Attack:
   Bow_Animation_State: ''
   Attack_Angle: 90
   Attack_Ray_Width: 0.5
-  Lower_Dmg_Per_Hit: false
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false

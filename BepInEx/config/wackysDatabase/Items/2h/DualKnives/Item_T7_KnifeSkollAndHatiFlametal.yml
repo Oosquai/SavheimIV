@@ -18,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 15
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -72,13 +72,13 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 45
+  m_attackStamina: 48
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
   DmgMultiplier: 3
-  ForceMultiplier: 4
+  ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 1.8
