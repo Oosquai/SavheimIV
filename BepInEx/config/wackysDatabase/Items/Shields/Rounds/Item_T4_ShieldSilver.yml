@@ -117,7 +117,7 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.05
+  m_movementModifier: -0.03
   m_EitrRegen: 0.1
 SE_Equip: 
 SE_SET_Equip: 

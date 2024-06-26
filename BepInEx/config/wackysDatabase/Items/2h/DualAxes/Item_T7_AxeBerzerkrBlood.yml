@@ -18,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 4
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 20
+  m_attackStamina: 11
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -83,7 +83,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 40
+  m_attackStamina: 22
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0

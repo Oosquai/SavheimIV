@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1.2
-  m_attackStamina: 28
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -162,7 +162,7 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.05
+  m_movementModifier: -0.06
   m_EitrRegen: 0
 SE_Equip: 
 SE_SET_Equip: 

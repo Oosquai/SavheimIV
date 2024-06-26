@@ -36,7 +36,7 @@ Primary_Attack:
   Reload_Stamina_Drain: 0
   Bow_Draw: false
   Bow_Duration_Min: 1.5
-  Bow_Stamina_Drain: 6
+  Bow_Stamina_Drain: 8
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
   Attack_Ray_Width: 0
@@ -118,7 +118,7 @@ Secondary_Attack:
   Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 8
+  m_attackStamina: 6
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
