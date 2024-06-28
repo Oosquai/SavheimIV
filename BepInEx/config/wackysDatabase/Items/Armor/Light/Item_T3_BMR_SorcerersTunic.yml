@@ -69,8 +69,7 @@ m_toolTier: 3
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
-damageModifiers:
-- Pierce:Weak
+damageModifiers: []
 GEffects: 
 GEffectsPLUS:
   Hit_Effects: []

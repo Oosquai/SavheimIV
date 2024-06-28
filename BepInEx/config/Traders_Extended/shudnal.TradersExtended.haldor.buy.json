@@ -1,11 +1,5 @@
 [
   {
-    "prefab": "MoltenCore",
-    "stack": 1,
-    "price": 750,
-    "requiredGlobalKey": "defeated_eikthyr"
-  },
-  {
     "prefab": "Feathers",
     "stack": 1,
     "price": 5,
@@ -16,6 +10,18 @@
     "stack": 1,
     "price": 20,
     "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "MoltenCore",
+    "stack": 1,
+    "price": 750,
+    "requiredGlobalKey": "defeated_eikthyr"
+  },
+  {
+    "prefab": "AncientSeed",
+    "stack": 1,
+    "price": 90,
+    "requiredGlobalKey": "defeated_gdking"
   },
   {
     "prefab": "SurtlingCore",
@@ -30,22 +36,16 @@
     "requiredGlobalKey": "defeated_bonemass"
   },
   {
-    "prefab": "SerpentScale",
-    "stack": 1,
-    "price": 75,
-    "requiredGlobalKey": "defeated_dragon"
-  },
-  {
-    "prefab": "AncientSeed",
-    "stack": 1,
-    "price": 90,
-    "requiredGlobalKey": "defeated_gdking"
-  },
-  {
     "prefab": "WitheredBone",
     "stack": 1,
     "price": 50,
     "requiredGlobalKey": "defeated_bonemass"
+  },
+  {
+    "prefab": "SerpentScale",
+    "stack": 1,
+    "price": 75,
+    "requiredGlobalKey": "defeated_dragon"
   },
   {
     "prefab": "DragonEgg",

@@ -22,6 +22,7 @@ notOnFloor: false
 onlyinTeleportArea: false
 allowedInDungeons: false
 canBeRemoved: true
+notOnWood: true
 wearNTearData:
   health: 1000
   damageModifiers:
@@ -63,6 +64,8 @@ beehiveData:
 fermStationData: 
 sapData: 
 incineratorData: 
+fireplaceData: 
+teleportWorldData: 
 build:
 - BlackMarble:20:1:True
 - BlackMetal:5:1:True

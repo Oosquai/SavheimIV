@@ -69,8 +69,7 @@ m_toolTier: 2
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
-damageModifiers:
-- Poison:Resistant
+damageModifiers: []
 GEffects: 
 GEffectsPLUS:
   Hit_Effects: []
