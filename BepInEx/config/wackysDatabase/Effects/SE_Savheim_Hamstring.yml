@@ -3,12 +3,12 @@ Status_m_name: Hamstring
 Category: ''
 IconName: Tared
 CustomIcon: 
-FlashIcon: true
+FlashIcon: false
 CooldownIcon: false
 Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
-StartMessage: $se_tared_start
+StartMessage: ''
 StopMessageLoc: TopLeft
 StopMessage: ''
 RepeatMessageLoc: TopLeft
@@ -27,7 +27,7 @@ SeData:
   m_healthPerTick: 0
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
-  m_healthOverTimeInterval: 5
+  m_healthOverTimeInterval: 0
   m_staminaOverTime: 0
   m_staminaOverTimeDuration: 0
   m_staminaDrainPerSec: 0
@@ -44,7 +44,7 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods:
+  m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

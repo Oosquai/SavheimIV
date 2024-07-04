@@ -1,6 +1,6 @@
 name: JC_Crystal_Arrow_Yellow
 m_weight: 0.01
-m_name: $JC_Crystal_Arrow_Yellow
+m_name: $JC_Crystal_Arrow_Yellow (Exorcise)
 m_description: $JC_Crystal_Arrow_Yellow_Description that will cleanse an undead target.
 clonePrefabName: 
 mockName: 
@@ -130,7 +130,7 @@ Damage:
   Pierce: 11
   Poison: 0
   Slash: 0
-  Spirit: 137
+  Spirit: 93
 Damage_Per_Level: 
 Armor:
   armor: 10

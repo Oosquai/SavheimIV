@@ -1,7 +1,7 @@
 name: CWS_Bow_7
 m_weight: 1.5
 m_name: Nevermore
-m_description: Take to the skies, and rain death down upon your foes.  The ravens await the feast.
+m_description: Soar with your raven-kin, and rain death down upon your foes.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -38,7 +38,7 @@ Primary_Attack:
   Reload_Eitr_Drain: 0
   Bow_Draw: true
   Bow_Duration_Min: 2.5
-  Bow_Stamina_Drain: 14
+  Bow_Stamina_Drain: 19
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
   Attack_Ray_Width: 0
@@ -49,7 +49,7 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
   SpawnOnHit: Crow
-  SpawnOnHit_Chance: 0.02
+  SpawnOnHit_Chance: 0.01
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None

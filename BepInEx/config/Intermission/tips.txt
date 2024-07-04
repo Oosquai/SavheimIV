@@ -40,5 +40,5 @@ Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  Block them
 Savheim IV - All build pieces can now be reinforced with resin and tar to prevent weather damage.  Put it on your hotbar and press the corresponding button while moused over.  Resin fades.  Tar is permanent.  You don't need both.
 Savheim IV - All bosses have a small chance to drop a variety of unique weapons.  These can't be upgraded, and thus suffer lower damage than others in their tier, but they offer powerful special effects.  You'll have opportunities to find endgame versions of each.
 Savheim IV - You'll now earn catch-up experience for skills working back toward all-time highs, as well as alternate weapon skills compared to your most experienced weapon skill.
-Savheim IV - All bows and crossbows now have a small chance their projectiles will leave behind reusable fletchings.
+Savheim IV - All bows and crossbows now have a small chance their projectiles will leave behind reusable fletchings.  Wood arrows and bolts can now be crafted from inventory, but they do less damage.
 Savheim IV - All players can now create a marketplace for other players to buy from.  Please help make the economy interesting by setting what you think are fair prices.

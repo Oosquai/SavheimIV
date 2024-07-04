@@ -1,0 +1,642 @@
+[
+	{
+		"OriginalPrefab": "FishCooked",
+		"Prefab": "SweetFish",
+		"ItemName": "$item_sweetfish",
+		"ItemIcon": "IconSweetFish",
+		"Recipe": {
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "FishRaw",
+					"Amount": 1
+				},
+				{
+					"Item": "Honey",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_food": 35,
+			"m_foodStamina": 25,
+			"m_foodEitr": 15,
+			"m_foodRegen": 2,
+			"m_foodBurnTime": 1500,
+			"m_maxStackSize": 10
+		}
+	},
+	{
+		"OriginalPrefab": "FishCooked",
+		"Prefab": "SweetFishWithCarrot",
+		"ItemName": "$item_sweetfishwithcarrot",
+		"ItemIcon": "IconSweetFishWithCarrot",
+		"Recipe": {
+			"CraftingStation": "piece_cauldron",
+			"MinStationLevel": 1,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "FishRaw",
+					"Amount": 1
+				},
+				{
+					"Item": "Honey",
+					"Amount": 1
+				},
+				{
+					"Item": "Carrot",
+					"Amount": 3
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_food": 40,
+			"m_foodStamina": 30,
+			"m_foodEitr": 20,
+			"m_foodRegen": 3,
+			"m_foodBurnTime": 1500,
+			"m_maxStackSize": 10
+		}
+	},
+	{
+		"OriginalPrefab": "FishCooked",
+		"Prefab": "SweetFishWithTurnip",
+		"ItemName": "$item_sweetfishwithturnip",
+		"ItemIcon": "IconSweetFishWithTurnip",
+		"Recipe": {
+			"CraftingStation": "piece_cauldron",
+			"MinStationLevel": 2,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "FishRaw",
+					"Amount": 1
+				},
+				{
+					"Item": "Honey",
+					"Amount": 1
+				},
+				{
+					"Item": "Turnip",
+					"Amount": 3
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_food": 50,
+			"m_foodStamina": 40,
+			"m_foodEitr": 30,
+			"m_foodRegen": 3,
+			"m_foodBurnTime": 1500,
+			"m_maxStackSize": 10
+		}
+	},
+	{
+		"OriginalPrefab": "FishCooked",
+		"Prefab": "SweetFishWithOnion",
+		"ItemName": "$item_sweetfishwithonion",
+		"ItemIcon": "IconSweetFishWithOnion",
+		"Recipe": {
+			"CraftingStation": "piece_cauldron",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "FishRaw",
+					"Amount": 1
+				},
+				{
+					"Item": "Honey",
+					"Amount": 1
+				},
+				{
+					"Item": "Onion",
+					"Amount": 3
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_food": 60,
+			"m_foodStamina": 50,
+			"m_foodEitr": 40,
+			"m_foodRegen": 3,
+			"m_foodBurnTime": 1500,
+			"m_maxStackSize": 10
+		}
+	},
+	{
+		"OriginalPrefab": "BloodPudding",
+		"Prefab": "SweetSushi",
+		"ItemName": "$item_sweetsushi",
+		"ItemIcon": "IconSweetSushi",
+		"Recipe": {
+			"CraftingStation": "piece_cauldron",
+			"MinStationLevel": 4,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "FishRaw",
+					"Amount": 2
+				},
+				{
+					"Item": "Honey",
+					"Amount": 2
+				},
+				{
+					"Item": "Turnip",
+					"Amount": 3
+				},
+				{
+					"Item": "BarleyFlour",
+					"Amount": 4
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_food": 70,
+			"m_foodStamina": 60,
+			"m_foodEitr": 50,
+			"m_foodRegen": 4,
+			"m_foodBurnTime": 1800,
+			"m_maxStackSize": 10
+		}
+	},
+	{
+		"OriginalPrefab": "BloodPudding",
+		"Prefab": "SweetShrimp",
+		"ItemName": "$item_sweetshrimp",
+		"ItemIcon": "IconSweetShrimp",
+		"Recipe": {
+			"CraftingStation": "piece_cauldron",
+			"MinStationLevel": 5,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "FishRaw",
+					"Amount": 2
+				},
+				{
+					"Item": "Honey",
+					"Amount": 2
+				},
+				{
+					"Item": "RoyalJelly",
+					"Amount": 3
+				},
+				{
+					"Item": "MushroomJotunPuffs",
+					"Amount": 4
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_food": 80,
+			"m_foodStamina": 70,
+			"m_foodEitr": 60,
+			"m_foodRegen": 5,
+			"m_foodBurnTime": 1800,
+			"m_maxStackSize": 10
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedAncientSeed",
+		"ItemName": "$item_infusedancientseed",
+		"ItemIcon": "IconInfusedAncientSeed",
+		"Recipe": {
+			"CraftingStation": "piece_workbench",
+			"MinStationLevel": 4,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Guck",
+					"Amount": 150
+				},
+				{
+					"Item": "Root",
+					"Amount": 30
+				},
+				{
+					"Item": "AncientSeed",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Freyja"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedBones",
+		"ItemName": "$item_infusedbones",
+		"ItemIcon": "IconInfusedBones",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 7,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "BoneFragments",
+					"Amount": 200
+				},
+				{
+					"Item": "TrophyWraith",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Hel"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedClaws",
+		"ItemName": "$item_infusedclaws",
+		"ItemIcon": "IconInfusedClaws",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 7,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "WolfClaw",
+					"Amount": 40
+				},
+				{
+					"Item": "TrophyFenring",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Fenrir"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedCrystal",
+		"ItemName": "$item_infusedcrystal",
+		"ItemIcon": "IconInfusedCrystal",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 7,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "Feathers",
+					"Amount": 60
+				},
+				{
+					"Item": "Crystal",
+					"Amount": 80
+				}
+				{
+					"Item": "TrophySerpent",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Njord"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedFeathers",
+		"ItemName": "$item_infusedfeathers",
+		"ItemIcon": "IconInfusedFeathers",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 7,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "Feathers",
+					"Amount": 200
+				},
+				{
+					"Item": "TrophyEikthyr",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Ullr"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedHammer",
+		"ItemName": "$item_infusedhammer",
+		"ItemIcon": "IconInfusedHammer",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 7,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "HardAntler",
+					"Amount": 15
+				},
+				{
+					"Item": "SledgeIron",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Thor"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedHoney",
+		"ItemName": "$item_infusedhoney",
+		"ItemIcon": "IconInfusedHoney",
+		"Recipe": {
+			"CraftingStation": "piece_workbench",
+			"MinStationLevel": 4,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Honey",
+					"Amount": 50
+				},
+				{
+					"Item": "HardAntler",
+					"Amount": 15
+				},
+				{
+					"Item": "Fish1",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Eir"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedSurtling",
+		"ItemName": "$item_infusedsurtling",
+		"ItemIcon": "IconInfusedSurtling",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 7,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "SurtlingCore",
+					"Amount": 30
+				},
+				{
+					"Item": "TrophySurtling",
+					"Amount": 1
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedAbilities",
+			"VisualEffectPrefab": "vfx_GodExplosion",
+			"RestrictedToDemigod": "Surtr"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedBloodbag",
+		"ItemName": "$item_infusedbloodbag",
+		"ItemIcon": "IconInfusedBloodbag",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 10
+				},
+				{
+					"Item": "Bloodbag",
+					"Amount": 50
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedBloodbag",
+			"VisualEffectPrefab": "vfx_HealthUpgrade"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedChitin",
+		"ItemName": "$item_infusedchitin",
+		"ItemIcon": "IconInfusedChitin",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 10
+				},
+				{
+					"Item": "Bronze",
+					"Amount": 10
+				},
+				{
+					"Item": "Chitin",
+					"Amount": 50
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedChitin",
+			"VisualEffectPrefab": "vfx_HealthUpgrade"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedEitr",
+		"ItemName": "$item_infusedeitr",
+		"ItemIcon": "IconInfusedEitr",
+		"Recipe": {
+			"CraftingStation": "piece_magetable",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 40
+				},
+				{
+					"Item": "Eitr",
+					"Amount": 60
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedEitr",
+			"VisualEffectPrefab": "vfx_StaminaUpgrade"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedHardAntlers",
+		"ItemName": "$item_infusedhardantlers",
+		"ItemIcon": "IconInfusedHardAntlers",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "SurtlingCore",
+					"Amount": 5
+				},
+				{
+					"Item": "HardAntler",
+					"Amount": 3
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedHardAntlers",
+			"VisualEffectPrefab": "vfx_StaminaUpgrade"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedLeatherScraps",
+		"ItemName": "$item_infusedleatherscraps",
+		"ItemIcon": "IconInfusedLeatherScraps",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 5
+				},
+				{
+					"Item": "LeatherScraps",
+					"Amount": 50
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedLeatherScraps",
+			"VisualEffectPrefab": "vfx_StaminaUpgrade"
+		}
+	},
+	{
+		"OriginalPrefab": "Thunderstone",
+		"Prefab": "InfusedSerpentScale",
+		"ItemName": "$item_infusedserpentscale",
+		"ItemIcon": "IconInfusedSerpentScale",
+		"Recipe": {
+			"CraftingStation": "forge",
+			"MinStationLevel": 3,
+			"Amount": 1,
+			"Requirements": [
+				{
+					"Item": "Thunderstone",
+					"Amount": 10
+				},
+				{
+					"Item": "SerpentScale",
+					"Amount": 10
+				}
+			]
+		},
+		"ItemSharedProperties": {
+			"m_maxStackSize": 1
+		},
+		"ItemCustomData": {
+			"AttributeToGive": "AttributeInfusedSerpentScale",
+			"VisualEffectPrefab": "vfx_HealthUpgrade"
+		}
+	}
+]

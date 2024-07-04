@@ -1,0 +1,434 @@
+[
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxBirdsFlapping",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxBlast",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.5,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxBlink",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 0.6,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxCharging",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.6,
+		"FadeTime": 0.25,
+		"StartTime": 0.75,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxCharm",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxDash1",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.6,
+		"FadeTime": 0.1,
+		"StartTime": 0.65,
+		"EndTime": 1.15
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxDash2",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.6,
+		"FadeTime": 0.1,
+		"StartTime": 1.6,
+		"EndTime": 2
+	},
+	{
+		"AudioTypeName": "SteadyLoop",
+		"AudioClipName": "SfxDecay1",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.4,
+		"FadeTime": 1
+	},
+	{
+		"AudioTypeName": "SteadyLoop",
+		"AudioClipName": "SfxDecay2",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 1,
+		"FadeTime": 0.5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxDisenchant",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.35,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxElectricity",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 1,
+		"FadeTime": 1.5,
+		"StartTime": 0,
+		"EndTime": 7.5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxEnchant",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.45,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxEnergyBlast",
+		"MinDistance": 20,
+		"MaxDistance": 100,
+		"MaxVolume": 1,
+		"FadeTime": 0.5,
+		"StartTime": 0,
+		"EndTime": 5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxExplosion",
+		"MinDistance": 20,
+		"MaxDistance": 100,
+		"MaxVolume": 0.5,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxFireBeam",
+		"MinDistance": 10,
+		"MaxDistance": 70,
+		"MaxVolume": 1,
+		"FadeTime": 1,
+		"StartTime": 0.5,
+		"EndTime": 3.5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxFireBurst",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 0.4,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxGlass",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 1,
+		"FadeTime": 0.1,
+		"StartTime": 0.5,
+		"EndTime": 1.35
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHealing",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHeavyImpact",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 0.45,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHolyConjuration",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.5,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},	
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHolyHeal",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 1,
+		"FadeTime": 0.1,
+		"StartTime": 0.9,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHolyShield",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.3,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHolyStrike",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxHorn",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.75,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxImpact",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.6,
+		"FadeTime": 2,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxLaser",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.5,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "SteadyLoop",
+		"AudioClipName": "SfxLightning",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.75,
+		"FadeTime": 0.5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxLightningStart",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.35,
+		"FadeTime": 0.25,
+		"StartTime": 0.15,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "PhasedLoop",
+		"AudioClipName": "SfxMeditation",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.55,
+		"FadeTime": 1,
+		"StartTime": 0,
+		"EndTime": 10
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxRestoration",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.25,
+		"FadeTime": 1,
+		"StartTime": 0,
+		"EndTime": 2
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxSenseCreatures",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxSenseCreaturesFailed",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.4,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxTexturedImpact",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 0.25,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxThunder",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxThunderImpact",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0.5,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxTornado",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 1,
+		"FadeTime": 1.5,
+		"StartTime": 0,
+		"EndTime": 7.5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxTreeEnergy",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.35,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "PhasedLoop",
+		"AudioClipName": "SfxWater",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.5,
+		"FadeTime": 1.0,
+		"StartTime": 0.5,
+		"EndTime": 9.5
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxWaterSplash",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "SteadyLoop",
+		"AudioClipName": "SfxWind",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.5,
+		"FadeTime": 0.5
+	},
+	{
+		"AudioTypeName": "PhasedLoop",
+		"AudioClipName": "SfxWindMagic",
+		"MinDistance": 5,
+		"MaxDistance": 20,
+		"MaxVolume": 0.45,
+		"FadeTime": 1,
+		"StartTime": 0,
+		"EndTime": 9
+	},
+	{
+		"AudioTypeName": "PhasedLoop",
+		"AudioClipName": "SfxWindMystic",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 0.8,
+		"FadeTime": 1.5,
+		"StartTime": 0,
+		"EndTime": 6
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxWoosh",
+		"MinDistance": 10,
+		"MaxDistance": 30,
+		"MaxVolume": 1,
+		"FadeTime": 0,
+		"StartTime": 0,
+		"EndTime": 0
+	},
+	{
+		"AudioTypeName": "OneTime",
+		"AudioClipName": "SfxTeleport",
+		"MinDistance": 10,
+		"MaxDistance": 50,
+		"MaxVolume": 1,
+		"FadeTime": 0.25,
+		"StartTime": 0.5,
+		"EndTime": 0
+	}
+]

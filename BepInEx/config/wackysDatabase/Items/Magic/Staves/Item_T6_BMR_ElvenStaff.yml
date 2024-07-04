@@ -48,8 +48,6 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
-  SpawnOnHit: BMR_PaperLow 
-  SpawnOnHit_Chance: 0.05
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -138,7 +136,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 72
+  Blunt: 65
   Chop: 0
   Damage: 0
   Fire: 0
@@ -150,7 +148,7 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 5
+  Blunt: 4
   Chop: 0
   Damage: 0
   Fire: 0

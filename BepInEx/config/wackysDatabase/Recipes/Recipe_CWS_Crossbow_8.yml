@@ -10,5 +10,4 @@ disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- CWS_Hot_Steel_Finished:2:4:True
-- RoundLog:6:8:True
+- Carapace:2:1:True

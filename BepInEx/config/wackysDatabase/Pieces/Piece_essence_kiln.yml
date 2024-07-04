@@ -1,0 +1,77 @@
+name: essence_kiln
+piecehammer: Hammer
+m_name: Essence Cycler
+sizeMultiplier: 0.5
+m_description: An enchanted kiln that can cycle essences from fire to ice to lightning to poison and back to fire again.
+customIcon: 
+clonePrefabName: charcoal_kiln
+material: ObsidianRock_mat
+damagedMaterial: 
+craftingStation: $piece_workbench
+piecehammerCategory: Crafting
+minStationLevel: 1
+amount: 1
+disabled: false
+adminonly: false
+comfort: 
+groundPiece: false
+ground: false
+waterPiece: false
+noInWater: true
+notOnFloor: false
+onlyinTeleportArea: false
+allowedInDungeons: false
+canBeRemoved: true
+wearNTearData:
+  health: 1500
+  damageModifiers:
+    m_blunt: Resistant
+    m_slash: Resistant
+    m_pierce: Resistant
+    m_chop: Resistant
+    m_pickaxe: Normal
+    m_fire: Immune
+    m_frost: Immune
+    m_lightning: Normal
+    m_poison: Immune
+    m_spirit: Immune
+  noRoofWear: false
+  noSupportWear: true
+  supports: true
+  triggerPrivateArea: true
+craftingStationData: 
+cSExtensionData: 
+contData: 
+smelterData:
+  addOreTooltip: Place items on hotbar to add $bmr_essence_fire, $bmr_essence_ice, $bmr_essence_lightning, or $bmr_essence_poison
+  emptyOreTooltip: $piece_smelter_empty
+  fuelItem: 
+  maxOre: 200
+  maxFuel: 
+  fuelPerProduct: 
+  secPerProduct: 7
+  spawnStack: 
+  requiresRoof: 
+  addOreAnimationLength: 
+  smelterConversion:
+  - FromName: BMR_FireEssence
+    ToName: BMR_IceEssence
+    Remove: false
+  - FromName: BMR_IceEssence
+    ToName: BMR_LightningEssence
+    Remove: false
+  - FromName: BMR_LightningEssence
+    ToName: BMR_PoisonEssence
+    Remove: false
+  - FromName: BMR_PoisonEssence
+    ToName: BMR_FireEssence
+    Remove: false
+cookingStationData: 
+beehiveData: 
+fermStationData: 
+sapData: 
+incineratorData: 
+build:
+- Stone:20:1:True
+- GreydwarfEye:10:1:True
+- SurtlingCore:2:1:True

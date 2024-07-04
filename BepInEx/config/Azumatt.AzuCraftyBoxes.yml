@@ -281,6 +281,10 @@ charcoal_kiln:
   includeOverride:
     - Wood
 
+essence_kiln:
+  exclude:
+    - All
+
 smelter:
   exclude:
     - Ores

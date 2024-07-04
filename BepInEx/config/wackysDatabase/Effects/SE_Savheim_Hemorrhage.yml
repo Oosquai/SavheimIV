@@ -3,17 +3,17 @@ Status_m_name: Hemorrhage
 Category: ''
 IconName: 
 CustomIcon: 
-FlashIcon: true
+FlashIcon: false
 CooldownIcon: false
 Tooltip: "Lose 31 health over 3 seconds, unmodified by armor or resistances."
 Attributes: None
-StartMessageLoc: Center
-StartMessage: $se_freezing_start
+StartMessageLoc: TopLeft
+StartMessage: ''
 StopMessageLoc: TopLeft
-StopMessage: $se_freezing_stop
+StopMessage: ''
 RepeatMessageLoc: TopLeft
-RepeatMessage: $se_freezing_repeat
-RepeatInterval: 60
+RepeatMessage: ''
+RepeatInterval: 0
 TimeToLive: 3
 StartEffect_: 
 StopEffect_: 
@@ -38,7 +38,7 @@ SeData:
   m_healthPerTick: -2
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
-  m_healthOverTimeInterval: 5
+  m_healthOverTimeInterval: 0
   m_staminaOverTime: 0
   m_staminaOverTimeDuration: 0
   m_staminaDrainPerSec: 0

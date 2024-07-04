@@ -156,7 +156,7 @@ Armor:
 FoodStats: 
 Moddifiers:
   m_movementModifier: -0.01
-  m_EitrRegen: 0.32
+  m_EitrRegen: 0.39
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0
