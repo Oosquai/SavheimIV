@@ -1,7 +1,7 @@
-name: CWS_Sword_6
-m_weight: 0.8
-m_name: $cws_sword_6
-m_description: A blade made almost entirely of flame.  This is a mage's weapon.
+name: CWS_Mace_9
+m_weight: 2
+m_name: $cws_mace_9
+m_description: Catch your foes off guard, then smash them to a pulp.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -18,17 +18,17 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 4
-  m_eitrCost: 4
+  m_attackStamina: 8
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 1.75
   RecoilMultiplier: 0
   AttackRange: 2.4
-  AttackHeight: 1
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -39,7 +39,7 @@ Primary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 0.5
+  Attack_Ray_Width: 0.3
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -67,22 +67,22 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: sword_secondary
+  Attack_Animation: dualaxes_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 2.5
-  m_attackStamina: 8
-  m_eitrCost: 8
+  Custom_AttackSpeed: 1.5
+  m_attackStamina: 16
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1.2
-  ForceMultiplier: 100
-  StaggerMultiplier: 1
+  DmgMultiplier: 0.5
+  ForceMultiplier: 1
+  StaggerMultiplier: 10
   RecoilMultiplier: 0
-  AttackRange: 2.7
-  AttackHeight: 1
+  AttackRange: 2.5
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -92,8 +92,8 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 10
-  Attack_Ray_Width: 0.7
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -113,10 +113,43 @@ Secondary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects: []
+    Hit_Effects:
+    - name: fx_hit_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_battleaxe_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: fx_charred_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
-    Start_Effect:
-    - name: sfx_axe_swing
+    Start_Effect: 
+    - name: sfx_battleaxe_swing_wosh
       m_enabled: true
       m_variant: -1
       m_attach: false
@@ -131,29 +164,29 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 0
+  Blunt: 101
   Chop: 0
   Damage: 0
-  Fire: 81
+  Fire: 0
   Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 20
-  Spirit: 32
+  Slash: 0
+  Spirit: 0
 Damage_Per_Level:
-  Blunt: 0
+  Blunt: 6
   Chop: 0
   Damage: 0
-  Fire: 5
+  Fire: 0
   Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 1
-  Spirit: 2
+  Slash: 0
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -173,8 +206,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 48
-  m_blockPowerPerLevel: 3
+  m_blockPower: 38
+  m_blockPowerPerLevel: 2
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -188,14 +221,14 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 1
+m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-m_skillType: ElementalMagic
+m_skillType: Clubs
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 3
@@ -206,7 +239,7 @@ damageModifiers: []
 GEffects: 
 GEffectsPLUS:
   Hit_Effects:
-  - name: vfx_HitSparks
+  - name: vfx_clubhit
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -217,7 +250,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: sfx_sword_hit
+  - name: sfx_club_hit
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -239,44 +272,11 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: vfx_ice_hit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
   Hit_Terrain_Effects: []
-  Start_Effect:
-  - name: sfx_sword_swing
-    m_enabled: false
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Start_Effect: []
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: false
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: true
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: sfx_sword_swing
     m_enabled: false
     m_variant: -1
     m_attach: false
@@ -288,10 +288,10 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Trail_Effect:
-  - name: sfx_sword_swing
+  - name: sfx_club_swing
     m_enabled: true
     m_variant: -1
-    m_attach: true
+    m_attach: false
     m_follow: false
     m_inheritParentRotation: false
     m_inheritParentScale: false

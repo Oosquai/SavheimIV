@@ -1,7 +1,7 @@
-name: CWS_Sword_7
+name: CWS_Sword_6
 m_weight: 0.8
-m_name: $cws_sword_7
-m_description: An enchanted shard of razor sharp ice.  This is a mage's weapon.
+m_name: $cws_sword_6
+m_description: A blade made almost entirely of flame.  This is a mage's weapon.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -18,8 +18,8 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 3
-  m_eitrCost: 3
+  m_attackStamina: 2.25
+  m_eitrCost: 7
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
@@ -72,8 +72,8 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 2.5
-  m_attackStamina: 6
-  m_eitrCost: 6
+  m_attackStamina: 4.5
+  m_eitrCost: 14
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
@@ -134,26 +134,26 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 0
-  Frost: 64
+  Fire: 92
+  Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 16
-  Spirit: 32
+  Slash: 30
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 0
-  Frost: 4
+  Fire: 5
+  Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 1
-  Spirit: 2
+  Slash: 2
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -173,8 +173,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 38
-  m_blockPowerPerLevel: 2
+  m_blockPower: 57
+  m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

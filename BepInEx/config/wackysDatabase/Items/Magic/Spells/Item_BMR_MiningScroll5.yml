@@ -1,7 +1,7 @@
-name: BBP_SeekerBow
-m_weight: 4
-m_name: Annihilation
-m_description: A greatbow from the end-times.  This bow's destructive force takes a toll on durability.
+name: BMR_MiningScroll5
+m_weight: 0.1
+m_name: $bmr_scroll_mining5
+m_description: $bmr_scroll_mining5_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -9,26 +9,26 @@ material:
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
-sizeMultiplier: 1.1
+sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
-  AttackType: Projectile
-  Attack_Animation: bow_fire
+  AttackType: Horizontal
+  Attack_Animation: staff_fireball
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 0
+  m_eitrCost: 8
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.3
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 1
-  AttackHeight: 1.5
+  AttackRange: 2.4
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -36,10 +36,10 @@ Primary_Attack:
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
   Reload_Eitr_Drain: 0
-  Bow_Draw: true
-  Bow_Duration_Min: 3.5
-  Bow_Stamina_Drain: 25
-  Bow_Animation_State: bow_aim
+  Bow_Draw: false
+  Bow_Duration_Min: 0
+  Bow_Stamina_Drain: 0
+  Bow_Animation_State: ''
   Attack_Angle: 90
   Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
@@ -47,14 +47,19 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  SpawnOnHit: projectile_ashlandmeteor2
-  SpawnOnHit_Chance: 0.666
-  Attack_Projectile: 
-  Projectile_Vel: 100
+  Reset_Chain_If_hit: None
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 0
+  Raise_Skill_Amount: 1
+  Skill_Hit_Type: Character
+  Special_Hit_Skill: None
+  Special_Hit_Type: None
+  Attack_Projectile: bmr_miningscroll_projectile5
+  Projectile_Vel: 0
   Projectile_Accuraccy: 0
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: -2
+  Launch_Angle: 0
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -139,29 +144,18 @@ Damage:
   Fire: 0
   Frost: 0
   Lightning: 0
-  Pickaxe: 0
-  Pierce: 11
+  Pickaxe: 65
+  Pierce: 0
   Poison: 0
   Slash: 0
   Spirit: 0
-Damage_Per_Level:
-  Blunt: 0
-  Chop: 0
-  Damage: 0
-  Fire: 0
-  Frost: 0
-  Lightning: 0
-  Pickaxe: 0
-  Pierce: 1
-  Poison: 0
-  Slash: 0
-  Spirit: 0
+Damage_Per_Level: 
 Armor:
-  armor: 15
+  armor: 10
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.05
+  m_movementModifier: 0
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -175,14 +169,14 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 32
-  m_blockPowerPerLevel: 2
+  m_blockPower: 10
+  m_blockPowerPerLevel: 0
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
-m_maxStackSize: 1
+m_maxStackSize: 400
 m_canBeReparied: true
-m_destroyBroken: false
+m_destroyBroken: true
 m_dodgeable: true
 Attack_status_effect: 
 Attack_status_effect_chance: 1
@@ -191,17 +185,17 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 0
-m_useDurability: true
-m_useDurabilityDrain: 2
+m_knockback: 50
+m_useDurability: false
+m_useDurabilityDrain: 1
 m_durabilityDrain: 0
-m_maxDurability: 200
+m_maxDurability: 100
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-Attach_Override: Shield
-m_skillType: Bows
-m_animationState: Bow
-m_itemType: Bow
+Attach_Override: None
+m_skillType: Pickaxes
+m_animationState: OneHanded
+m_itemType: Ammo
 m_toolTier: 3
 m_maxQuality: 1
 m_value: 0
@@ -209,64 +203,9 @@ ConsumableStatusEffect:
 damageModifiers: []
 GEffects: 
 GEffectsPLUS:
-  Hit_Effects: 
-  - name: fx_fireball_staff_explosion
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Hit_Effects: []
   Hit_Terrain_Effects: []
   Start_Effect: []
-  Hold_Start_Effects:
-  - name: sfx_bow_draw
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  Trigger_Effect:
-  - name: fx_swing_camshake
-    m_enabled: false
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: vfx_bow_fire
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: sfx_bow_fire
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Hold_Start_Effects: []
+  Trigger_Effect: []
   Trail_Effect: []

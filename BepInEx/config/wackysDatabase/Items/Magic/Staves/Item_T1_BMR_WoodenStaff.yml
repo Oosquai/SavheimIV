@@ -19,7 +19,7 @@ Primary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 8
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
@@ -109,8 +109,6 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
-  SpawnOnHit: BMR_PaperLow 
-  SpawnOnHit_Chance: 0.05
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -218,7 +216,7 @@ GEffectsPLUS:
   Hold_Start_Effects: []
   Trigger_Effect: []
   Trail_Effect:
-  - name: bmr_sfx_bomb_throw
+  - name: sfx_bomb_throw
     m_enabled: true
     m_variant: -1
     m_attach: false

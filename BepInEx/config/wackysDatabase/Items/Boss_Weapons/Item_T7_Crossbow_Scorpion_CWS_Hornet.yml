@@ -1,7 +1,7 @@
-name: BBH_PlainsLox_Quiver
+name: CWS_Crossbow_8
 m_weight: 1.5
-m_name: $item_quiver_plainslox
-m_description: $item_quiver_plainslox_description
+m_name: Scorpion
+m_description: Get over here!
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -13,7 +13,7 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Projectile
-  Attack_Animation: bow_fire
+  Attack_Animation: crossbow_fire
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
@@ -24,20 +24,20 @@ Primary_Attack:
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
   DmgMultiplier: 1
-  ForceMultiplier: 1
-  StaggerMultiplier: 1
+  ForceMultiplier: -420
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 1
-  AttackHeight: 1.5
+  AttackHeight: 1.2
   Spawn_On_Trigger: 
-  Requires_Reload: false
-  Reload_Animation: ''
-  ReloadTimeMultiplier: 1
-  Reload_Stamina_Drain: 0
-  Bow_Draw: true
-  Bow_Duration_Min: 2.5
-  Bow_Stamina_Drain: 10
-  Bow_Animation_State: bow_aim
+  Requires_Reload: true
+  Reload_Animation: reload_crossbow
+  ReloadTimeMultiplier: 0.7
+  Reload_Stamina_Drain: 1
+  Bow_Draw: false
+  Bow_Duration_Min: 0
+  Bow_Stamina_Drain: 0
+  Bow_Animation_State: ''
   Attack_Angle: 90
   Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
@@ -46,11 +46,11 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_Projectile: 
-  Projectile_Vel: 60
+  Projectile_Vel: 200
   Projectile_Accuraccy: 0
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: 0
+  Launch_Angle: -2
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -127,8 +127,8 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 47
-  Poison: 5
+  Pierce: 229
+  Poison: 0
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
@@ -139,8 +139,8 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 3
-  Poison: 5
+  Pierce: 13
+  Poison: 0
   Slash: 0
   Spirit: 0
 Armor:
@@ -148,7 +148,7 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: 0
+  m_movementModifier: -0.06
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -162,8 +162,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 3
-  m_blockPowerPerLevel: 0
+  m_blockPower: 28
+  m_blockPowerPerLevel: 2
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -177,18 +177,18 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 20
+m_knockback: 1
 m_useDurability: true
-m_useDurabilityDrain: 1
+m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
-m_maxDurability: 100
+m_maxDurability: 200
 m_durabilityPerLevel: 50
-m_equipDuration: 0.2
-m_skillType: Bows
-m_animationState: Bow
-m_itemType: None
+m_equipDuration: 0
+m_skillType: Crossbows
+m_animationState: Crossbow
+m_itemType: Bow
 m_toolTier: 0
-m_maxQuality: 5
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
@@ -221,7 +221,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: vfx_bow_fire
+  - name: vfx_arbalest_fire
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -232,7 +232,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: sfx_bow_fire
+  - name: sfx_arbalest_fire
     m_enabled: true
     m_variant: -1
     m_attach: false
