@@ -209,7 +209,7 @@ ConsumableStatusEffect:
 damageModifiers: []
 GEffects: 
 GEffectsPLUS:
-  Hit_Effects: 
+  Hit_Effects: []
   Hit_Terrain_Effects: []
   Start_Effect: []
   Hold_Start_Effects:

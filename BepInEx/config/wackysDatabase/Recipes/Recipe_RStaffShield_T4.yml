@@ -1,0 +1,16 @@
+name: RStaffShield_T4
+clonePrefabName: StaffShield_T4
+craftingStation: $bmr_spell_table
+minStationLevel: 2
+maxStationLevelCap: 3
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- ElderBark:20:10:True
+- Silver:12:6:True
+- BoneFragments:12:6:True
+- AncientSeed:4:2:True

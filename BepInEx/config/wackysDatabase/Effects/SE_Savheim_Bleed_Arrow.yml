@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Lose 20 health over 10 seconds, unmodified by armor or resistances."
+Tooltip: "Target loses 24 health over 12 seconds, unmodified by armor or resistances."
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,7 +14,7 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 10
+TimeToLive: 12
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:

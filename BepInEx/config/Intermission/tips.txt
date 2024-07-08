@@ -18,8 +18,9 @@ Savheim IV - Once you can craft them, it's a good idea to keep a Rune Focus and 
 Savheim IV - You can modify the color of text on signs.  Open the sign prompt as usual and type < color=white> or < color=#FFFFFF> (remove the space between "< color"), then type your message.  Use multiple tags for rainbow signs!  The color automatically resets if you enter new text.
 Savheim IV - Building tips!  While holding your hammer and hovering over a placed piece, hold shift and press the deconstruct button to select that piece.  Q and E cycle snap points.  Selections per tab persist, so you can change tabs and then hit Esc to quickly swap build pieces on different tabs.
 Savheim IV - You've learned to dive under the water by pointing down and pressing crouch!  Go swimming!  Wat-er you waiting for??
-Savheim IV - Boss powers now have both passive and active aspects, and you get to choose two!  Read about them at the starting stones or in your Valheim Compendium (inventory -> raven icon).  Keybinds are hardcoded to F and G, regardless of in-game settings.
+Savheim IV - Boss powers now have both passive and active aspects, and you get to choose two!  Read about them at the starting stones or in your Valheim Compendium (inventory -> raven icon).  Keybinds are hardcoded to T and G, regardless of in-game settings.
 Savheim IV - World progression is now tied to your character.  You must be present for boss kills to get credit for them.  This affects your ability to equip gear, boss powers, merchant inventory, raids, and maybe more!
+Savheim IV - You must defeat all main bosses preceeding the tier of gear you wish to equip, including unique weapons.  Iron Sword?  Gotta deal with Eikthyr and The Elder before you know how to use one.
 Savheim IV - Death went to therapy and is nicer now.  You'll no longer drop equipment, ammo, or consumables when you die.  Resurrect each other with Surtling Cores.
 Savheim IV - Check your Valheim Compendium (inventory -> raven icon) for useful game and mod information, including Active Effects.
 Savheim IV - Comfort and Rested are easier to obtain, but teleporting long distances will now reduce your Rested duration (Full map radius = ~60m).  F6 toggles a list of pieces while in shelter.  Rest in groups for extra duration!
@@ -38,7 +39,9 @@ Savheim IV - Press Z while hovering over an item to compare to what you currentl
 Savheim IV - Gems and jewelry have been completely reworked.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  Block them to learn their timing before trying to parry them!
 Savheim IV - All build pieces can now be reinforced with resin and tar to prevent weather damage.  Put it on your hotbar and press the corresponding button while moused over.  Resin fades.  Tar is permanent.  You don't need both.
-Savheim IV - All bosses have a small chance to drop a variety of unique weapons.  These can't be upgraded, and thus suffer lower damage than others in their tier, but they offer powerful special effects.  You'll have opportunities to find endgame versions of each.
+Savheim IV - All bosses have a small chance to drop a variety of unique weapons.  These weapons trade upgradeable stats for powerful special effects.  You'll have opportunities to find endgame versions of each.
 Savheim IV - You'll now earn catch-up experience for skills working back toward all-time highs, as well as alternate weapon skills compared to your most experienced weapon skill.
 Savheim IV - Most bows and crossbows now have a small chance their projectiles will leave behind reusable fletchings.  Wood arrows and bolts can now be crafted from inventory, but they do less damage.
 Savheim IV - All players can now create a marketplace for other players to buy from.  Please help make the economy interesting by setting what you think are fair prices.
+Savheim IV - Pick an ammo type to be your top of the order, put it on your hotbar, then tap that number instead of F to reset your rotation.  Ammo sequence is based on inventory location.  Utility spells only enter the rotation if on your main hotbar.  The Ammo Tote hides ammo.
+Savheim IV - New keys:  Left-ctrl: Change + to - for crafting resource tracker.  Alt: roll.  Z: compare item.  T, G: use boss power.  F: cycle ammo.

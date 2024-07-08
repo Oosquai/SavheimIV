@@ -160,7 +160,7 @@ m_maxStackSize: 100
 m_canBeReparied: true
 m_destroyBroken: true
 m_dodgeable: true
-Attack_status_effect: SE_Savheim_Wet
+Attack_status_effect: SE_Savheim_Wet_Arrow
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false
