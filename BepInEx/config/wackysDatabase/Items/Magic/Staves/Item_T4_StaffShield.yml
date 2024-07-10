@@ -1,6 +1,6 @@
 name: StaffShield_T4
 m_weight: 0.3
-m_name: Staff of Protection
+m_name: Sage's Staff of Protection
 m_description: $item_staffshield_description
 clonePrefabName: StaffShield
 mockName: 
