@@ -134,7 +134,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 15
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -146,7 +146,7 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 1
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -178,7 +178,7 @@ SE_SET_Equip:
 ShieldStats:
   m_blockPower: 4
   m_blockPowerPerLevel: 0
-  m_timedBlockBonus: 1.5
+  m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1

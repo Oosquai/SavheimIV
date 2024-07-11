@@ -48,6 +48,10 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 0
+  Attack_status_effect: 
+  Attack_status_effect_chance: 
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -73,30 +77,30 @@ Primary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Secondary_Attack:
-  AttackType: Horizontal
-  Attack_Animation: ''
+  AttackType: Projectile
+  Attack_Animation: staff_fireball
   Attack_Random_Animation: 0
-  Chain_Attacks: 0
+  Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 20
+  m_attackStamina: 0
   m_eitrCost: 0
   AttackHealthCost: 0
-  m_attackHealthPercentage: 0
-  SpeedFactor: 0.2
+  m_attackHealthPercentage: 25
+  SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
-  AttackRange: 1.5
-  AttackHeight: 0.6
+  AttackRange: 2
+  AttackHeight: 1.2
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
-  ReloadTime: 
+  ReloadTime: 2
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
-  Reload_Eitr_Drain: 
+  Reload_Eitr_Drain: 0
   Bow_Draw: false
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
@@ -109,16 +113,20 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 0
+  Attack_status_effect: 
+  Attack_status_effect_chance: 
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 10
-  Projectile_Accuraccy: 10
+  Projectile_Vel: 45
+  Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: 0
+  Launch_Angle: -4
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -134,7 +142,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 65
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -146,7 +154,7 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 4
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -176,17 +184,17 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 26
-  m_blockPowerPerLevel: 2
-  m_timedBlockBonus: 1.5
+  m_blockPower: 8
+  m_blockPowerPerLevel: 0
+  m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
 m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: true
-Attack_status_effect: 
-Attack_status_effect_chance: 1
+Attack_status_effect: SE_Savheim_VeryWeakLightning
+Attack_status_effect_chance: 0.13
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

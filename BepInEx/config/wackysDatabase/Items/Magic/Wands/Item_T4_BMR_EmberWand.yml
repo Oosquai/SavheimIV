@@ -1,7 +1,7 @@
-name: BMR_VoodooStaff
-m_weight: 0.3
-m_name: $bmr_voodoostaff
-m_description: $bmr_voodoostaff_description
+name: BMR_EmberWand
+m_weight: 0.5
+m_name: $bmr_wand_ember
+m_description: $bmr_wand_ember_description
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -13,9 +13,9 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Projectile
-  Attack_Animation: staff_fireball
+  Attack_Animation: swing_axe
   Attack_Random_Animation: 0
-  Chain_Attacks: 2
+  Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
@@ -27,7 +27,7 @@ Primary_Attack:
   ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
-  AttackRange: 2
+  AttackRange: 2.4
   AttackHeight: 1.2
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -41,7 +41,7 @@ Primary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 0
+  Attack_Ray_Width: 0.3
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -53,7 +53,7 @@ Primary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 40
+  Projectile_Vel: 20
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
@@ -79,17 +79,17 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 20
+  m_attackStamina: 40
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.2
   DmgMultiplier: 1
-  ForceMultiplier: 1
+  ForceMultiplier: 5
   StaggerMultiplier: 0
   RecoilMultiplier: 0
-  AttackRange: 1.5
-  AttackHeight: 0.6
+  AttackRange: 3
+  AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -101,10 +101,10 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 90
-  Attack_Ray_Width: 0
-  Lower_Dmg_Per_Hit: true
-  Hit_Through_Walls: false
+  Attack_Angle: 360
+  Attack_Ray_Width: 0.3
+  Lower_Dmg_Per_Hit: false
+  Hit_Through_Walls: true
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
@@ -134,7 +134,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 55
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -146,7 +146,7 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 3
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -162,7 +162,7 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.05
+  m_movementModifier: 0
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -176,17 +176,17 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 22
-  m_blockPowerPerLevel: 1
-  m_timedBlockBonus: 1.5
+  m_blockPower: 8
+  m_blockPowerPerLevel: 0
+  m_timedBlockBonus: 0
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
 m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: true
-Attack_status_effect: 
-Attack_status_effect_chance: 1
+Attack_status_effect: SE_Savheim_WeakFire
+Attack_status_effect_chance: 0.13
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false
@@ -199,11 +199,11 @@ m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-Attach_Override: Bow
+Attach_Override: None
 m_skillType: ElementalMagic
-m_animationState: Staves
-m_itemType: TwoHandedWeapon
-m_toolTier: 4
+m_animationState: OneHanded
+m_itemType: OneHandedWeapon
+m_toolTier: 1
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
