@@ -10,14 +10,14 @@ Neck Soul Power:
   slot: legs
   gem: Neck Soul Gem
   power:
-    value: [5, 10, 15, 20, 25]
+    value: [10, 15, 20, 25, 30]
   unique: None
 
 Boar Soul Power:
-  slot: all
+  slot: utility
   gem: Boar Soul Gem
   power:
-    value: [3, 5, 7, 9, 11]
+    value: [5, 10, 15, 20, 25]
   unique: None
 
 Greydwarf Soul Power:
@@ -25,29 +25,29 @@ Greydwarf Soul Power:
   gem: Greydwarf Soul Gem
   power:
     value: [3, 6, 9, 12, 15]
-    cooldown: [60, 50, 45, 40, 35]
+    cooldown: [60, 52, 44, 36, 28]
   unique: Item
 
 GreydwarfBrute Soul Power:
-  slot: all
+  slot: weapon
   gem: GreydwarfBrute Soul Gem
   power:
-    value: [0.4, 0.7, 1, 1.3, 1.6]
+    value: [0.5, 0.7, 0.9, 1.1, 1.3]
   unique: Gem
 
 GreydwarfShaman Soul Power:
-  slot: all
+  slot: [weapon, shield]
   gem: GreydwarfShaman Soul Gem
   power:
-    value: [26, 25, 24, 23, 20]
+    value: [60, 55, 50, 45, 40]
   unique: Gem
 
 Troll Soul Power:
-  slot: weapon
+  slot: [weapon, crossbow]
   gem: Troll Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
-    chance: [30, 35, 40, 45, 50]
+    chance: [20, 25, 30, 35, 40]
   unique: None
 
 Skeleton Soul Power:
@@ -59,7 +59,7 @@ Skeleton Soul Power:
   unique: Gem
 
 Draugr Soul Power:
-  slot: shield
+  slot: [shield, weapon]
   gem: Draugr Soul Gem
   power:
     value: [20, 30, 40, 50, 60]
@@ -73,10 +73,10 @@ Blob Soul Power:
   unique: None
 
 Leech Soul Power:
-  slot: weapon
+  slot: [weapon, bow, crossbow]
   gem: Leech Soul Gem
   power:
-    value: [1, 1.5, 2, 2.5, 3]
+    value: [1, 2, 3, 4, 5]
   unique: None
 
 Wraith Soul Power:
@@ -95,7 +95,7 @@ Abomination Soul Power:
   unique: Gem
 
 Wolf Soul Power:
-  slot: [head, chest, legs, weapon]
+  slot: all
   gem: Wolf Soul Gem
   power:
     value: [9, 12, 15, 18, 21]
@@ -109,7 +109,7 @@ Bat Soul Power:
   unique: None
 
 Fenring Soul Power:
-  slot: weapon
+  slot: [weapon, bow, magic, crossbow]
   gem: Fenring Soul Gem
   power:
     value: [1, 2, 3, 4, 5]
@@ -131,10 +131,10 @@ Ulv Soul Power:
   unique: Gem
 
 StoneGolem Soul Power:
-  slot: all
+  slot: [shield, chest]
   gem: StoneGolem Soul Gem
   power:
-    value: [5, 10, 15, 20, 25]
+    value: [10, 15, 20, 25, 30]
   unique: Gem
 
 Hatchling Soul Power:
@@ -145,35 +145,35 @@ Hatchling Soul Power:
   unique: Gem
 
 Goblin Soul Power:
-  slot: weapon
+  slot: [weapon, bow, magic, crossbow]
   gem: Goblin Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
   unique: Gem
 
 Deathsquito Soul Power:
-  slot: weapon
+  slot: [weapon, bow, magic, crossbow]
   gem: Deathsquito Soul Gem
   power:
     value: [5, 7, 9, 11, 13]
   unique: Gem
 
 Lox Soul Power:
-  slot: [head, chest, legs, weapon, cloak]
+  slot: [bow, magic, crossbow]
   gem: Lox Soul Gem
   power:
     value: [10, 20, 30, 40, 50]
   unique: Gem
 
 GoblinBrute Soul Power:
-  slot: [head, chest, legs, cloak]
+  slot: [weapon, bow, crossbow]
   gem: GoblinBrute Soul Gem
   power:
     value: [15, 20, 25, 30, 35]
   unique: Gem
 
 GoblinShaman Soul Power:
-  slot: [head, chest, legs, cloak]
+  slot: [head, chest, legs, cloak, shield]
   gem: GoblinShaman Soul Gem
   power:
     value: [10, 15, 20, 25, 30]
@@ -188,7 +188,7 @@ TarBlob Soul Power:
   unique: Gem
 
 Surtling Soul Power:
-  slot: weapon
+  slot: [weapon, bow, magic, crossbow]
   gem: Surtling Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
@@ -196,113 +196,113 @@ Surtling Soul Power:
   unique: Gem
 
 Serpent Soul Power:
-  slot: shield
+  slot: [shield, weapon]
   gem: Serpent Soul Gem
   power:
-    value: [25, 50, 75, 100, 125]
+    value: [24, 36, 48, 60, 72]
   unique: Gem
 
 Hare Soul Power:
-  slot: weapon
+  slot: crossbow
   gem: Hare Soul Gem
   power:
     value: [4, 8, 12, 16, 20]
   unique: None
 
 Dverger Soul Power:
-  slot: all
+  slot: crossbow
   gem: Dverger Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
   unique: Item
 
 Dverger Fire Mage Soul Power:
-  slot: all
+  slot: magic
   gem: Dverger Fire Mage Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
   unique: Item
 
 Dverger Blood Mage Soul Power:
-  slot: all
+  slot: magic
   gem: Dverger Blood Mage Soul Gem
   power:
     value: [10, 15, 20, 25, 30]
   unique: Item
 
 Dverger Ice Mage Soul Power:
-  slot: all
+  slot: magic
   gem: Dverger Ice Mage Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
   unique: Item
 
 Tick Soul Power:
-  slot: all
+  slot: utility
   gem: Tick Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
   unique: Item
 
 Gjall Soul Power:
-  slot: all
+  slot: cloak
   gem: Gjall Soul Gem
   power:
-    value: [3, 6, 9, 12, 15]
+    value: [10, 20, 30, 40, 50]
   unique: Item
 
 Seeker Soul Power:
-  slot: all
+  slot: [head, chest, legs, cloak, shield]
   gem: Seeker Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
   unique: Item
 
 Seeker Brute Soul Power:
-  slot: all
+  slot: [chest, shield]
   gem: Seeker Brute Soul Gem
   power:
     value: 1
   unique: Gem
 
 Eikthyr Soul Power:
-  slot: all
+  slot: legs
   gem: Eikthyr Soul Gem
   power:
     value: [1, 2, 3, 4, 5]
   unique: Gem
 
 Elder Soul Power:
-  slot: all
+  slot: [magic, head]
   gem: Elder Soul Gem
   power:
     value: [25, 24, 23, 22, 21]
   unique: Gem
 
 Bonemass Soul Power:
-  slot: all
+  slot: [cloak, shield, head]
   gem: Bonemass Soul Gem
   power:
     value: 40
   unique: Gem
 
 Moder Soul Power:
-  slot: all
+  slot: [head, chest, cloak]
   gem: Moder Soul Gem
   power:
-    value: [20, 30, 40, 50, 60]
+    value: [18, 26, 34, 42, 50]
   unique: Gem
 
 Yagluth Soul Power:
-  slot: all
+  slot: [cloak, shield]
   gem: Yagluth Soul Gem
   power:
     value: 40
   unique: Gem
 
 The Queen Soul Power:
-  slot: all
+  slot: [chest, shield]
   gem: The Queen Soul Gem
   power:
-    value: 20
+    value: 25
   unique: Gem

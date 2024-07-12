@@ -15,7 +15,7 @@ Primary_Attack:
   AttackType: Projectile
   Attack_Animation: swing_axe
   Attack_Random_Animation: 0
-  Chain_Attacks: 3
+  Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
