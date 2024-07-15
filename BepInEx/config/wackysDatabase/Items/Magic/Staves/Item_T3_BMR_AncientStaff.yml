@@ -53,11 +53,11 @@ Primary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 30
+  Projectile_Vel: 20
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: -5
+  Launch_Angle: -4
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -186,7 +186,7 @@ m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: true
 Attack_status_effect: SE_Savheim_WeakFrost
-Attack_status_effect_chance: 0.19
+Attack_status_effect_chance: 0.2
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

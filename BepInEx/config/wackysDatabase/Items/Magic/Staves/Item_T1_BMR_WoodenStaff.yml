@@ -57,7 +57,7 @@ Primary_Attack:
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: -5
+  Launch_Angle: -4
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -163,7 +163,7 @@ Armor:
 FoodStats: 
 Moddifiers:
   m_movementModifier: -0.05
-  m_EitrRegen: 0
+  m_EitrRegen: 0.05
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0

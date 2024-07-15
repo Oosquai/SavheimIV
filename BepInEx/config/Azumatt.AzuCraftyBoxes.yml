@@ -108,27 +108,6 @@ groups:
     - PickaxeBronze
     - ArmorBronzeChest
     - ArmorBrozeLeggings
-  CookingStationIngredients:
-    - SerpentMeat
-    - LoxMeat
-    - FishRaw
-    - RawMeat
-    - NeckTail
-    - DeerMeat
-    - WolfMeat
-    - BugMeat
-    - ChickenMeat
-    - HareMeat
-    - FoxMeat_TW
-    - BearSteak_TW
-    - CrabMeat_TW
-    - ScorpidMeat_TW
-    - DimetrodonMeat_TW
-    - AshenSharkMeat_TW
-    - ArcticBearSteak_TW
-    - ArcticSerpentMeat_TW
-    - ArcticWolfMeat_TW
-    - MammothMeat_TW
 
 # By default, if you don't specify a container below, it will be considered as you want to allow pulling all objects for pulling from it.
 # If you are having issues with a container, please make sure you have the full prefab name of the container. Additionally, make sure you have exclude or includeOverride set up correctly.
@@ -154,7 +133,6 @@ groups:
 
 #piece_chest_wood:
 #  exclude:
-#    - CookingStationIngredients
 #    - Swords # Exclude all in group
 #    - Tier 2 Items # Exclude all in group
 #    - Bows # Exclude all in group
@@ -169,7 +147,6 @@ piece_chest_private:
 
 #piece_chest_blackmetal:
 #  exclude:
-#    - CookingStationIngredients
 #    - Swords # Exclude all in group
 #    - Tier 2 Items # Exclude all in group
 #    - Bows # Exclude all in group
@@ -177,66 +154,6 @@ piece_chest_private:
 #    - BowFineWood
 #    - Wood
 #    - Bronze
-
-#piece_chest:
-#  exclude:
-#    - CookingStationIngredients
-#
-#piece_chest_wooden_drawer:
-#  exclude:
-#    - CookingStationIngredients
-#
-#GB_Large_Chest:
-#  exclude:
-#    - CookingStationIngredients
-#
-#GB_Cloth_Bag:
-#  exclude:
-#    - CookingStationIngredients
-#
-#GB_Wooden_Barrel:
-#  exclude:
-#    - CookingStationIngredients
-#
-#GB_Large_Crate:
-#  exclude:
-#    - CookingStationIngredients
-#
-#GB_Small_Cupboard:
-#  exclude:
-#    - CookingStationIngredients
-#
-#GB_Large_Cupboard:
-#  exclude:
-#    - CookingStationIngredients
-#
-#rae_bronze_storage_small:
-#  exclude:
-#    - CookingStationIngredients
-#
-#rae_bronze_storage_big:
-#  exclude:
-#    - CookingStationIngredients
-#
-#rae_iron_storage_small:
-#  exclude:
-#    - CookingStationIngredients
-#
-#rae_iron_storage_big:
-#  exclude:
-#    - CookingStationIngredients
-#
-#IG_Wood_Crates:
-#  exclude:
-#    - CookingStationIngredients
-#
-#IG_Barrels_Closed_Up:
-#  exclude:
-#    - CookingStationIngredients
-#
-#IG_Barrels_Closed_Down:
-#  exclude:
-#    - CookingStationIngredients
 
 #rk_cabinet: # rk_ is typically the prefix for containers coming from RockerKitten's mods
 #  exclude:
@@ -300,7 +217,6 @@ piece_cookingstation:
 piece_cookingstation_iron:
   exclude:
     - Food
-    - CookingStationIngredients
 
 piece_oven:
   exclude: []

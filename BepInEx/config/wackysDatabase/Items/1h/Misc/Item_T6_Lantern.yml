@@ -32,7 +32,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
-  EffectName: SE_Savheim_Frost_Resistance
+  EffectName: SE_Savheim_Resistant_Frost
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 6

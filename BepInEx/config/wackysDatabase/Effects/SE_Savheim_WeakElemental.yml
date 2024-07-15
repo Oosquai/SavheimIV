@@ -64,6 +64,8 @@ SeData:
     m_modifier: Weak
   - m_type: Poison
     m_modifier: Weak
+  - m_type: Spirit
+    m_modifier: Weak
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

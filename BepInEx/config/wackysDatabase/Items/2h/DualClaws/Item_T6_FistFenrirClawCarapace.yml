@@ -1,7 +1,7 @@
 name: FistFenrirClawCarapace
 m_weight: 2
 m_name: Seeker Flesh Rippers
-m_description: Claws attack in a frenzy, weaving in savage kicks to knock foes off balance before tearing them to shreds.  They rely on parries to keep them close to their victims.
+m_description: Claws attack in a frenzy that can cause massive bloodloss, and they can weave in savage kicks to knock foes off balance.  They rely on parries to keep them close to their victims.
 clonePrefabName: FistFenrirClaw
 mockName: 
 customIcon: 
@@ -45,6 +45,15 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1
+  Reset_Chain_If_hit: None
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 0
+  Attack_status_effect: SE_Savheim_Hemorrhage_T6
+  Attack_status_effect_chance: 0.2
+  Raise_Skill_Amount: 1
+  Skill_Hit_Type: Character
+  Special_Hit_Skill: None
+  Special_Hit_Type: None
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
