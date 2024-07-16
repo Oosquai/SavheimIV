@@ -1,11 +1,11 @@
-Name: SE_Savheim_WeakSpirit
-Status_m_name: Spirit Sensitivity
+Name: SE_Savheim_Bleed_Sword_T7
+Status_m_name: Puncture
 Category: ''
 IconName: 
 CustomIcon: 
-FlashIcon: true
+FlashIcon: false
 CooldownIcon: false
-Tooltip: ''
+Tooltip: "Target suffers bloodloss, unmodified by armor or resistances."
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,11 +14,33 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 3
+TimeToLive: 8
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
-- name: fx_Potion_frostresist
+- name: fx_bloodweapon_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_weapons_blood_impact
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_serpent_attack_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -33,9 +55,9 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0
+  m_tickInterval: 0.2
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: 0
+  m_healthPerTick: -1
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0
@@ -55,9 +77,7 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods:
-  - m_type: Spirit
-    m_modifier: Weak
+  m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

@@ -1,7 +1,7 @@
 name: CWS_TH_Axe_6
 m_weight: 2.5
 m_name: Bearded Battleaxe
-m_description: Engraved silver and gruesome fangs make this battleaxe terrifying to behold.  Battleaxes deal full damage to multiple targets in a wide cleave with their primary attack, or increased damage with their secondary attack when hitting a single target.
+m_description: Engraved silver and gruesome fangs make this battleaxe terrifying to behold.  Battleaxes cleave a wide area with their primary attacks, and they tear armor off victims with their secondary attack.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -67,9 +67,9 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: greatsword
+  Attack_Animation: greatsword2
   Attack_Random_Animation: 0
-  Chain_Attacks: 3
+  Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.3
   m_attackStamina: 16
@@ -77,7 +77,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.5
-  DmgMultiplier: 1.5
+  DmgMultiplier: 0.67
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -92,13 +92,15 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 75
+  Attack_Angle: 135
   Attack_Ray_Width: 0.5
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 4
+  Attack_status_effect: SE_Savheim_Rend_2H
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

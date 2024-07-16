@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Target rapidly loses 12 health, unmodified by armor or resistances."
+Tooltip: "Target suffers rapid bloodloss, unmodified by armor or resistances."
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -55,7 +55,7 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.25
+  m_tickInterval: 0.333
   m_healthPerTickMinHealthPercentage: 0
   m_healthPerTick: -1
   m_healthOverTime: 0

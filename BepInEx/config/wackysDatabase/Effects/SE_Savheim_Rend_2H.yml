@@ -1,5 +1,5 @@
-Name: SE_Savheim_WeakLightning
-Status_m_name: Lightning Sensitivity
+Name: SE_Savheim_Rend_2H
+Status_m_name: Greater Rend
 Category: ''
 IconName: 
 CustomIcon: 
@@ -14,11 +14,11 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 3
+TimeToLive: 3.5
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
-- name: fx_Potion_frostresist
+- name: fx_clusterbombstaff_splinter_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -28,6 +28,17 @@ StartEffect_PLUS:
   m_multiplyParentVisualScale: false
   m_randomRotation: false
   m_scale: true
+  m_childTransform: ''
+- name: sfx_sword_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: false
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: false
   m_childTransform: ''
 StopEffect_PLUS: []
 Cooldown: 0
@@ -56,8 +67,8 @@ SeData:
   m_skillLevel2: None
   m_skillLevelModifier2: 0
   m_mods:
-  - m_type: Lightning
-    m_modifier: Weak
+  - m_type: Slash
+    m_modifier: VeryWeak
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

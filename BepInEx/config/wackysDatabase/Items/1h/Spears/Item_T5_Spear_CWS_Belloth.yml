@@ -1,7 +1,7 @@
 name: CWS_Spear_1
 m_weight: 1.5
 m_name: Black Metal Spear
-m_description: A sleek black metal spear.  Spears can be thrown.
+m_description: A sleek black metal spear.  When thrown, spears have a chance to pin their target.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -110,6 +110,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Attack_status_effect: SE_Savheim_Pinned
+  Attack_status_effect_chance: 0.2
   Attack_Projectile: CWS_Spear_1_Projectile
   Projectile_Vel: 30
   Projectile_Accuraccy: 1

@@ -17,7 +17,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.3
+  Custom_AttackSpeed: 1.5
   m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -92,7 +92,7 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 30
+  Attack_Angle: 90
   Attack_Ray_Width: 0.5
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false

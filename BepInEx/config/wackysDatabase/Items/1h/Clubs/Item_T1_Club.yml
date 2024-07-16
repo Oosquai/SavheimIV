@@ -1,7 +1,7 @@
 name: Club
 m_weight: 2
 m_name: $item_club
-m_description: $item_club_description  Clubs excel at staggering foes.
+m_description: $item_club_description  Clubs have a staggering kick.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -23,7 +23,7 @@ Primary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.5
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 2.4
   AttackHeight: 0.8

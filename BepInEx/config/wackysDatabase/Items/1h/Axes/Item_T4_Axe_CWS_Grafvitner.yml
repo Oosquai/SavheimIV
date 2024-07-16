@@ -1,7 +1,7 @@
 name: CWS_Axe_7
 m_weight: 2
 m_name: Frosted Axe
-m_description: A rugged axe for mountainous regions.  Axes emphasize damage.
+m_description: A rugged axe for mountainous regions.  Axes emphasize damage, and their secondary attack rends the target's armor for a brief duration.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -77,7 +77,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 2
+  DmgMultiplier: 0.8
   ForceMultiplier: 1
   StaggerMultiplier: 0.5
   RecoilMultiplier: 0
@@ -99,6 +99,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1.5
+  Attack_status_effect: SE_Savheim_Rend
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

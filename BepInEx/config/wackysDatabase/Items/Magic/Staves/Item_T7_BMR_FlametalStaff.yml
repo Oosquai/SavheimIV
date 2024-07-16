@@ -185,7 +185,7 @@ m_maxStackSize: 1
 m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: false
-Attack_status_effect: SE_Savheim_WeakElemental
+Attack_status_effect: SE_Savheim_VeryWeakElemental
 Attack_status_effect_chance: 0.2
 spawn_on_hit: 
 spawn_on_terrain_hit: 

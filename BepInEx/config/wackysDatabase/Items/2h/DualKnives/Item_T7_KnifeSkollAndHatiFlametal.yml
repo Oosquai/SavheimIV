@@ -1,7 +1,7 @@
 name: KnifeSkollAndHatiFlametal
 m_weight: 0.3
 m_name: Flametal Knife and Sickle
-m_description: $item_knife_skollandhati_description  Dual knives allow the wielder to dodge more effectively, pounce on distant enemies, and viciously slice and stab their foes to ribbons.
+m_description: $item_knife_skollandhati_description  Dual knives allow the wielder to dodge more effectively, pounce on distant enemies, and viciously slice and stab their foes to ribbons.  They sometimes twist and tear their victim's guts after penetrating their armor with both blades.
 clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 
@@ -45,6 +45,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1
+  Attack_status_effect: SE_Savheim_Gut_Twist_Double_T7
+  Attack_status_effect_chance: 0.08
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

@@ -1,7 +1,7 @@
 name: AxeBerzerkr
 m_weight: 2
 m_name: $item_axe_berzerkr
-m_description: $item_axe_berzerkr_description
+m_description: $item_axe_berzerkr_description  These weapons will chew through your enemies, especially after you tear pieces of their armor away.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -45,6 +45,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Attack_status_effect: SE_Savheim_Rend
+  Attack_status_effect_chance: 0.1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -99,6 +101,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Attack_status_effect: SE_Savheim_Rend
+  Attack_status_effect_chance: 0.25
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

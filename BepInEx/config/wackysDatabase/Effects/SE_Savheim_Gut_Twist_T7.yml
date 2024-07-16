@@ -1,11 +1,11 @@
-Name: SE_Savheim_WeakFire
-Status_m_name: Fire Sensitivity
+Name: SE_Savheim_Gut_Twist_T7
+Status_m_name: Gut Twist
 Category: ''
 IconName: 
 CustomIcon: 
-FlashIcon: true
+FlashIcon: false
 CooldownIcon: false
-Tooltip: ''
+Tooltip: "Penetrate their armor, then violently twist and yank your blade back out of your victim's gut."
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,11 +14,12 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 3
+TimeToLive: 0.1
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS:
-- name: fx_Potion_frostresist
+StartEffect_PLUS: []
+StopEffect_PLUS: 
+- name: vfx_player_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -29,13 +30,34 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-StopEffect_PLUS: []
+- name: sfx_club_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_serpent_attack_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0
+  m_tickInterval: 0.1
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: 0
+  m_healthPerTick: -56
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0
@@ -55,9 +77,7 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods:
-  - m_type: Fire
-    m_modifier: Weak
+  m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

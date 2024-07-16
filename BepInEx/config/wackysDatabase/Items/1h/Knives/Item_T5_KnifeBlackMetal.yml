@@ -1,7 +1,7 @@
 name: KnifeBlackMetal
 m_weight: 0.3
 m_name: $item_knife_blackmetal
-m_description: $item_knife_blackmetal_description  Knives allow the wielder to attack, dodge, and move faster than other weapons.
+m_description: $item_knife_blackmetal_description  Knives allow the wielder to attack, dodge, and move faster than other weapons, and they sometimes twist and tear their victim's guts after penetrating their armor.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -43,6 +43,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1
+  Attack_status_effect: SE_Savheim_Gut_Twist_T5
+  Attack_status_effect_chance: 0.1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

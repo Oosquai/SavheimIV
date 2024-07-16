@@ -1,5 +1,5 @@
-Name: SE_Savheim_WeakElemental
-Status_m_name: Elemental Sensitivity
+Name: SE_Savheim_VeryWeakFrost
+Status_m_name: Frost Sensitivity
 Category: ''
 IconName: 
 CustomIcon: 
@@ -56,16 +56,8 @@ SeData:
   m_skillLevel2: None
   m_skillLevelModifier2: 0
   m_mods:
-  - m_type: Fire
-    m_modifier: Weak
   - m_type: Frost
-    m_modifier: Weak
-  - m_type: Lightning
-    m_modifier: Weak
-  - m_type: Poison
-    m_modifier: Weak
-  - m_type: Spirit
-    m_modifier: Weak
+    m_modifier: VeryWeak
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

@@ -1,7 +1,7 @@
 name: AxeBerzerkrSilver
 m_weight: 2
 m_name: Obsidian Berserkir Axes
-m_description: More axes means more damage.  These weapons will chew through your enemies... and your stamina.  Who needs defense with this kind of offense?
+m_description: More axes means more damage.  These weapons will chew through your enemies, especially after you tear pieces of their armor away.
 clonePrefabName: AxeBerzerkr
 mockName: 
 customIcon: 
@@ -51,8 +51,8 @@ Primary_Attack:
   Reset_Chain_If_hit: 
   SpawnOnHit: 
   SpawnOnHit_Chance: 
-  Attack_status_effect: 
-  Attack_status_effect_chance: 
+  Attack_status_effect: SE_Savheim_Rend
+  Attack_status_effect_chance: 0.1
   Raise_Skill_Amount: 
   Skill_Hit_Type: 
   Special_Hit_Skill: 
@@ -116,8 +116,8 @@ Secondary_Attack:
   Reset_Chain_If_hit: 
   SpawnOnHit: 
   SpawnOnHit_Chance: 
-  Attack_status_effect: 
-  Attack_status_effect_chance: 
+  Attack_status_effect: SE_Savheim_Rend
+  Attack_status_effect_chance: 0.25
   Raise_Skill_Amount: 
   Skill_Hit_Type: 
   Special_Hit_Skill: 

@@ -1,9 +1,9 @@
-Name: SE_Savheim_WeakFrost
-Status_m_name: Frost Sensitivity
+Name: SE_Savheim_Pinned
+Status_m_name: Pinned
 Category: ''
 IconName: 
 CustomIcon: 
-FlashIcon: true
+FlashIcon: false
 CooldownIcon: false
 Tooltip: ''
 Attributes: None
@@ -17,8 +17,19 @@ RepeatInterval: 0
 TimeToLive: 3
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS:
-- name: fx_Potion_frostresist
+StartEffect_PLUS: 
+- name: vfx_barnacle_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_arrow_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -55,15 +66,13 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods:
-  - m_type: Frost
-    m_modifier: Weak
+  m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
-  m_speedModifier: 0
+  m_speedModifier: -0.95
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0

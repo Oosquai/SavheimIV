@@ -106,6 +106,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Attack_status_effect: SE_Savheim_Pinned
+  Attack_status_effect_chance: 0.2
   Attack_Projectile: JC_Reaper_Spear_Pro
   Projectile_Vel: 30
   Projectile_Accuraccy: 1

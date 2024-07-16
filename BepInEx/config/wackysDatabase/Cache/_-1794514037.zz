@@ -1,7 +1,7 @@
 name: THSwordBronze
 m_weight: 4
 m_name: Bronze Greatsword
-m_description: Greatswords have a balanced moveset and reliable parry, designed to overpower and outmaneuver your foes.
+m_description: Greatswords have a balanced moveset and reliable parry, designed to overpower, outmaneuver, and bleed your foes.
 clonePrefabName: THSwordKrom
 mockName: 
 customIcon: 
@@ -89,7 +89,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.6
-  DmgMultiplier: 2
+  DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -116,8 +116,8 @@ Secondary_Attack:
   Reset_Chain_If_hit: 
   SpawnOnHit: 
   SpawnOnHit_Chance: 
-  Attack_status_effect: 
-  Attack_status_effect_chance: 
+  Attack_status_effect: SE_Savheim_Bleed_Sword_T3
+  Attack_status_effect_chance: 1
   Raise_Skill_Amount: 
   Skill_Hit_Type: 
   Special_Hit_Skill: 

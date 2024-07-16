@@ -1,7 +1,7 @@
 name: MaceEldnerNature
 m_weight: 2
 m_name: $item_mace_eldner_nature
-m_description: $item_mace_eldner_nature_description  Maces excel at staggering foes.
+m_description: $item_mace_eldner_nature_description  Maces have a staggering secondary attack.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -25,7 +25,7 @@ Primary_Attack:
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.75
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 2.4
   AttackHeight: 0.8
