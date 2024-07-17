@@ -29,21 +29,21 @@ Greydwarf Soul Power:
   unique: Item
 
 GreydwarfBrute Soul Power:
-  slot: weapon
+  slot: [weapon, bloodmagic]
   gem: GreydwarfBrute Soul Gem
   power:
     value: [0.5, 0.7, 0.9, 1.1, 1.3]
   unique: Gem
 
 GreydwarfShaman Soul Power:
-  slot: [weapon, shield]
+  slot: [weapon, bloodmagic, shield]
   gem: GreydwarfShaman Soul Gem
   power:
     value: [60, 55, 50, 45, 40]
   unique: Gem
 
 Troll Soul Power:
-  slot: [weapon, crossbow]
+  slot: [weapon, bloodmagic, crossbow]
   gem: Troll Soul Gem
   power:
     value: [5, 10, 15, 20, 25]
@@ -102,7 +102,7 @@ Wolf Soul Power:
   unique: Item
 
 Bat Soul Power:
-  slot: weapon
+  slot: [weapon, bloodmagic]
   gem: Bat Soul Gem
   power:
     value: [1, 1.5, 2, 2.5, 3]
@@ -138,7 +138,7 @@ StoneGolem Soul Power:
   unique: Gem
 
 Hatchling Soul Power:
-  slot: weapon
+  slot: [weapon, bloodmagic]
   gem: Hatchling Soul Gem
   power:
     value: [150, 200, 250, 300, 350]
@@ -196,7 +196,7 @@ Surtling Soul Power:
   unique: Gem
 
 Serpent Soul Power:
-  slot: [shield, weapon]
+  slot: [shield, weapon, bloodmagic]
   gem: Serpent Soul Gem
   power:
     value: [24, 36, 48, 60, 72]
@@ -241,7 +241,7 @@ Tick Soul Power:
   slot: utility
   gem: Tick Soul Gem
   power:
-    value: [5, 10, 15, 20, 25]
+    value: [10, 20, 30, 40, 50]
   unique: Item
 
 Gjall Soul Power:

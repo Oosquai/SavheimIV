@@ -76,9 +76,6 @@ smelterData:
   - FromName: CopperScrap
     ToName: Copper
     Remove: false
-  - FromName: FlametalOreNew
-    ToName: FlametalNew
-    Remove: false
   - FromName: BlackMetalScrap
     ToName: BlackMetal
     Remove: false

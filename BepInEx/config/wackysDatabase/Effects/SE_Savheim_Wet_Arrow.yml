@@ -61,7 +61,7 @@ SeData:
   - m_type: Frost
     m_modifier: Weak
   - m_type: Lightning
-    m_modifier: Weak
+    m_modifier: VeryWeak
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

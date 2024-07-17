@@ -5,7 +5,7 @@
 # means a perfect gem rolls its power randomly between 15 and 20.
 
 fire starter:
-  slot: weapon
+  slot: [weapon, magic]
   gem: red
   power:
     power: [10, 20, 30]
@@ -14,7 +14,7 @@ fire starter:
   # - chance (default: 20)
 
 ice heart:
-  slot: weapon
+  slot: [weapon, elementalmagic]
   gem: blue
   power:
     power: [5, 10, 15]
@@ -32,7 +32,7 @@ snake bite:
   # - chance (default: 20)
 
 shadow hit:
-  slot: weapon
+  slot: [weapon, bloodmagic]
   gem: black
   power:
     power: [7, 10, 13]
@@ -43,7 +43,7 @@ shadow hit:
   # - amount (default: 1)
   
 vampire:
-  slot: weapon
+  slot: [weapon, bloodmagic]
   gem: yellow
   power:
     power: [7, 10, 13]
@@ -93,19 +93,19 @@ thunderclap:
 # Magic Weapons
 
 magical bargain:
-  slot: magic
+  slot: elementalmagic
   gem: orange
   power: [5, 10, 15]
 
 precious blood:
   slot: bloodmagic
   gem: blue
-  power: [8, 16, 24]
+  power: [5, 10, 15]
 
 # Chest
 
 defender:
-  slot: [chest, utility, magic]
+  slot: [chest, utility]
   gem: red
   power: [2, 4, 6]
 
@@ -115,12 +115,12 @@ vitality:
   power: [12, 18, 24]
 
 regeneration:
-  slot: [chest, shield]
+  slot: chest
   gem: green
   power: [1, 2, 3]
 
 mirror:
-  slot: [chest, magic]
+  slot: [chest, elementalmagic]
   gem: black
   power:
     power: [6, 8, 10]
@@ -190,10 +190,14 @@ restless legs:
   power: [15, 30, 45]
 
 cowardice:
-  slot: [legs, magic]
+  slot: [legs, elementalmagic]
   gem: cyan
   power: [3, 5, 7]
 
+fleeting life:
+  slot: weapon
+  gem: cyan
+  power: [6, 8, 10]
 
 # Utility
 
@@ -213,7 +217,7 @@ hercules:
   power: [10, 20, 30]
 
 glowing spirit:
-  slot: [utility, tool, elementalmagic]
+  slot: [utility, tool]
   gem: blue
   power: [3, 6, 9]
 
@@ -265,7 +269,7 @@ merciful death:
   power: [8, 16, 24]
 
 eitr surge:
-  slot: [head, shield]
+  slot: head
   gem: orange
   power: [5, 10, 15]
 
@@ -312,15 +316,15 @@ quick load:
   slot: crossbow
   gem: black
   power: [8, 16, 24]
-  
+
 # Bow and Crossbow
 
 echo:
-  slot: [bow, crossbow, magic]
+  slot: [bow, crossbow]
   gem: yellow
   power:
-    power: [6, 9, 12]
-    bonus projectiles: [1, 1, 1]
+    power: [6, 8, 10]
+    bonus projectiles: [1, 1, 2]
   # Optional Configs:
   # - bonus projectiles (default: 1)
   
@@ -377,6 +381,11 @@ nourishing:
     health: [34, 67, 100]
     comfort requirement: [1, 1, 1]
 
+wind walk:
+  slot: cloak
+  gem: purple
+  power: [10, 20, 30]
+
 # Shield
 
 unfazed:
@@ -407,6 +416,18 @@ pain tolerance:
   slot: shield
   gem: red
   power: [3, 5, 7]
+
+fast reaction:
+  slot: [shield, bloodmagic]
+  gem: orange
+  power:
+    parry frame decrease: [30, 30, 30]
+    parry power increase: [10, 20, 30]
+
+vampiric parry:
+  slot: [shield, bloodmagic]
+  gem: green
+  power: [1, 2, 3]
 
 # Tool
 

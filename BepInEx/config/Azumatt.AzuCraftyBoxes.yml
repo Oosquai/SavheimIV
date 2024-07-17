@@ -206,9 +206,53 @@ smelter:
   exclude:
     - Ores
 
+smelter_copper:
+  exclude:
+    - Ores
+  includeOverride:
+    - CopperOre
+    - CopperScrap
+
+smelter_iron:
+  exclude:
+    - Ores
+  includeOverride:
+    - IronOre
+    - IronScrap
+
+smelter_silver:
+  exclude:
+    - Ores
+  includeOverride:
+    - SilverOre
+
+smelter_tin:
+  exclude:
+    - Ores
+  includeOverride:
+    - TinOre
+
 blastfurnace:
   exclude:
     - Ores
+
+blastfurnace_blackmetal:
+  exclude:
+    - Ores
+  includeOverride:
+    - BlackMetalScrap
+
+blastfurnace_flametal:
+  exclude:
+    - Ores
+  includeOverride:
+    - FlametalOreNew
+
+blastfurnace_silica:
+  exclude:
+    - Ores
+  includeOverride:
+    - BGP_SilicaOre
 
 piece_cookingstation:
   exclude:
