@@ -1,0 +1,16 @@
+name: RT4_Reaper
+clonePrefabName: T4_Reaper
+craftingStation: $piece_forge
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Silver:30:15:True
+- Bloodbag:12:6:True
+- ElderBark:8:4:True
+- Uncut_Green_Stone:4:2:True

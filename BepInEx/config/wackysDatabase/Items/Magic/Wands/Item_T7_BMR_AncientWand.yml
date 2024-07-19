@@ -1,6 +1,6 @@
 name: BMR_AncientWand
 m_weight: 0.5
-m_name: Hexing Wand
+m_name: $bmr_wand_ancient
 m_description: $bmr_wand_ancient_description
 clonePrefabName: 
 mockName: 
@@ -104,7 +104,7 @@ Secondary_Attack:
   Attack_Angle: 360
   Attack_Ray_Width: 0.3
   Lower_Dmg_Per_Hit: false
-  Hit_Through_Walls: true
+  Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2

@@ -1,0 +1,16 @@
+name: RT7_Reaper
+clonePrefabName: T7_Reaper
+craftingStation: $piece_blackforge
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- FlametalNew:30:15:True
+- GiantBloodSack:12:6:True
+- Blackwood:8:4:True
+- GemstoneRed:1:1:True

@@ -1,0 +1,16 @@
+name: RT3_Reaper
+clonePrefabName: T3_Reaper
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Iron:30:15:True
+- Bloodbag:12:6:True
+- ElderBark:8:4:True
+- Uncut_Yellow_Stone:4:2:True

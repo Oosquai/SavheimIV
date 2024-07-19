@@ -27,117 +27,155 @@
 
 groups:
   Helmet:
+    - HelmetAshlandsMediumHood
     - HelmetBronze
+    - HelmetCarapace
     - HelmetDrake
     - HelmetDverger
+    - HelmetFenring
+    - HelmetFishingHat
+    - HelmetFlametal
+    - HelmetHat1
+    - HelmetHat2
+    - HelmetHat3
+    - HelmetHat4
+    - HelmetHat5
+    - HelmetHat6
+    - HelmetHat7
+    - HelmetHat8
+    - HelmetHat9
+    - HelmetHat10
     - HelmetIron
     - HelmetLeather
+    - HelmetMage
+    - HelmetMage_Ashlands
+    - HelmetMidsummerCrown
     - HelmetOdin
     - HelmetPadded
+    - HelmetPointyHat
     - HelmetRoot
     - HelmetTrollLeather
     - HelmetYule
-    - HelmetCarapace
-    - HelmetMage
-    - HelmetFenring
-    - BMP_AdvanceWizardHat
-    - BMP_BeginnersWizardHat
-    - BMP_PolarWolfHood
-    - BMP_RedWizardHat
-    - BMP_RedWizardHelm
-    - BMP_ShamanHat
-    - BMP_TrollMagicHood
+    - BMR_TatteredHelm
+    - BMR_SorcerersHat
+    - BMR_WarlocksHood
+    - BMR_PolarWolfHood
+    - BMR_SeekerHat
+    - BMR_CrimsonHood
+    - BOH_HuntersLapinHood
+    - HelmetNomad_SH
+    - Helmet_Dvergr_SH
     - VDS_AtlantianCrown
 
   Chest:
+    - ArmorAshlandsMediumChest
     - ArmorBronzeChest
+    - ArmorCarapaceChest
+    - ArmorDress1
+    - ArmorDress2
+    - ArmorDress3
+    - ArmorDress4
+    - ArmorDress5
+    - ArmorDress6
+    - ArmorDress7
+    - ArmorDress8
+    - ArmorDress9
+    - ArmorDress10
+    - ArmorFenringChest
+    - ArmorFlametalChest
     - ArmorIronChest
     - ArmorLeatherChest
+    - ArmorMageChest
+    - ArmorMageChest_Ashlands
     - ArmorPaddedCuirass
     - ArmorRagsChest
     - ArmorRootChest
     - ArmorTrollLeatherChest
+    - ArmorTunic1
+    - ArmorTunic2
+    - ArmorTunic3
+    - ArmorTunic4
+    - ArmorTunic5
+    - ArmorTunic6
+    - ArmorTunic7
+    - ArmorTunic8
+    - ArmorTunic9
+    - ArmorTunic10
     - ArmorWolfChest
-    - ArmorCarapaceChest
-    - ArmorMageChest
-    - ArmorFenringChest
-    - BMP_PolarWolfChest
-    - BMP_RedWizardChest
+    - BMR_TatteredChest
+    - BMR_SorcerersTunic
+    - BMR_WarlocksVest
+    - BMR_PolarWolfChest
+    - BMR_SeekerChest
+    - BMR_CrimsonChest
+    - BOH_HuntersLapinTunic
+    - ArmorNomadChest_SH
+    - ArmorDvergrChest_SH
 
   Legs:
+    - ArmorAshlandsMediumlegs
     - ArmorBronzeLegs
+    - ArmorCarapaceLegs
+    - ArmorFenringLegs
+    - ArmorFlametalLegs
     - ArmorIronLegs
     - ArmorLeatherLegs
+    - ArmorMageLegs
+    - ArmorMageLegs_Ashlands
     - ArmorPaddedGreaves
     - ArmorRagsLegs
     - ArmorRootLegs
     - ArmorTrollLeatherLegs
     - ArmorWolfLegs
-    - ArmorCarapaceLegs
-    - ArmorMageLegs
-    - ArmorFenringLegs
-    - BMP_PolarWolfLegs
-    - BMP_RedWizardLegs
+    - BMR_TatteredLegs
+    - BMR_SorcerersTrousers
+    - BMR_WarlocksPants
+    - BMR_PolarWolfLegs
+    - BMR_SeekerLegs
+    - BMR_CrimsonLegs
+    - BOH_HuntersLapinPants
+    - ArmorNomadLegs_SH
+    - ArmorDvergrLegs_SH
 
   Shoulder:
+    - CapeAsh
+    - CapeAsksvin
     - CapeDeerHide
+    - CapeFeather
     - CapeLinen
     - CapeLox
     - CapeOdin
-    - CapeTest
     - CapeTrollHide
     - CapeWolf
-    - CapeFeather
-    - BMP_CultistCape
-    - BMP_RedWizardCape
-    - BMP_TrollMagicCape
+    - BOH_HuntersLapinCape
+    - CapeOil
 
   Utility:
     - BeltStrength
     - Wishbone
     - SaddleLox
-    - JC_blueish_Necklace
-    - JC_Necklace_Blue
-    - JC_Necklace_Green
-    - JC_Necklace_Purple
+    - SaddleAsksvin
     - JC_Necklace_Red
+    - JC_Necklace_Green
+    - JC_Necklace_Blue
     - JC_Necklace_Yellow
-    - JC_Ring_Blue
-    - JC_Ring_Green
-    - JC_Ring_Purple
-    - JC_Ring_Red
-    - BMP_AdvanceMagicBook
-    - BMP_BeginnersMagicBook
-    - BMP_DruidsTome
-    - BMP_Dvergr_Earring
-    - BMP_DvergrBelt
-    - BMP_Eitr_Earring
-    - BMP_EitrBelt
-    - BMP_ElementalistBelt
-    - BMP_FireResist_Earring
-    - BMP_FrostResist_Earring
-    - BMP_LightBelt
-    - BMP_NecromancerBelt
-    - BMP_PoisonResist_Earring
-    - JC_Blue_Necklace
-    - JC_Blue_Ring
-    - JC_Cyan_Necklace
-    - JC_Cyan_Ring
-    - JC_Green_Necklace
-    - JC_Green_Ring
-    - JC_Purple_Necklace
-    - JC_Purple_Ring
-    - JC_Red_Necklace
-    - JC_Red_Ring
+    - JC_Necklace_Purple
+    - JC_Necklace_Orange
+    - JC_Necklace_Leather_cord
+    - JC_Necklace_Polished_silver_necklace
     - JC_SoulNecklace_Necklace
-    - JC_SoulRing_Ring
-    - JC_Gem_Box
+    - JC_blueish_Necklace
+    - JC_Ring_Purple
+    - JC_Ring_Green
+    - JC_Ring_Red
+    - JC_Ring_Blue
+    - JC_Ring_Black
     - JC_Ring_Stone_ring
     - JC_Ring_Bone_ring
-    - JC_Necklace_Leather_cord
     - JC_Ring_Humite_Ring_of_Perception
     - JC_Ring_Silver_band
-    - JC_Necklace_Polished_silver_necklace
+    - JC_SoulRing_Ring
+    - JC_Gem_Box
     - bp_explorer
     - AmmoTote
     - CryptKey
@@ -149,56 +187,129 @@ groups:
   TwoHandedWeapon:
     - AtgeirBlackmetal
     - AtgeirBronze
+    - AtgeirHimminAfl
     - AtgeirIron
+    - AxeBerzerkr
+    - AxeBerzerkrBlood
+    - AxeBerzerkrLightning
+    - AxeBerzerkrNature
     - Battleaxe
     - BattleaxeCrystal
     - FishingRod
+    - FistFenrirClaw
+    - KnifeSkollAndHati
     - PickaxeAntler
+    - PickaxeBlackMetal
     - PickaxeBronze
     - PickaxeIron
     - PickaxeStone
-    - SledgeCheat
+    - SledgeDemolisher
     - SledgeIron
     - SledgeStagbreaker
-    - PickaxeBlackMetal
-    - AtgeirHimminAfl
-    - SpearCarapace
-    - SledgeDemolisher
-    - SwordKrom
-    - SwordMistwalker
-    - KnifeSkollAndHati
-    - KnifeSkollAndHatiIron
-    - KnifeSkollAndHatiBlackSilver
-    - KnifeSkollAndHatiFlametal
+    - StaffClusterbomb
     - StaffFireball
+    - StaffGreenRoots
     - StaffIceShards
+    - StaffLightning
+    - StaffRedTroll
     - StaffShield
     - StaffSkeleton
-    - StaffFireballAncient
-    - StaffIceShardsAncient
-    - JC_Lightning_Staff
-    - JC_Poison_Staff
-    - JC_Reaper_Battleaxe
+    - THSwordKrom
+    - THSwordSlayer
+    - THSwordSlayerBlood
+    - THSwordSlayerLightning
+    - THSwordSlayerNature
     - JC_Reaper_Pickaxe
+    - JC_Reaper_Battleaxe
     - JC_Reaper_TH_Mace
     - JC_Reaper_TH_Sword
-    - BMP_ArcticStaff
-    - BMP_HealStaff
-    - BMP_LightningStaff
-    - BMP_PoisonStaff
-    - BMP_SurtlingStaff
-    - BMP_FlameStaff
-    - BMP_ThunderStaff
-    - BMP_NeckTotem
-    - BMP_EikthyrsStaff
+    - JC_Lightning_Staff
+    - JC_Poison_Staff
+    - BMR_WoodenStaff
+    - BMR_EmberStaff
+    - BMR_AncientStaff
+    - BMR_CrystalStaff
+    - BMR_VoodooStaff
+    - BMR_ElvenStaff
+    - BMR_FlametalStaff
+    - CWS_TH_Axe_1
+    - CWS_TH_Axe_2
+    - CWS_TH_Axe_3
+    - CWS_TH_Axe_4
+    - CWS_TH_Axe_5
+    - CWS_TH_Axe_6
+    - CWS_TH_Axe_7
+    - CWS_TH_Axe_8
+    - CWS_TH_Axe_9
+    - CWS_TH_Axe_10
+    - CWS_Sledge_1
+    - CWS_Sledge_2
+    - CWS_Sledge_3
+    - CWS_Sledge_4
+    - CWS_Sledge_5
+    - CWS_Sledge_6
+    - CWS_Sledge_7
+    - CWS_Sledge_8
+    - CWS_Sledge_9
+    - CWS_Sledge_10
+    - CWS_Sledge_11
+    - CWS_TH_Sword_1
+    - CWS_TH_Sword_2
+    - CWS_TH_Sword_3
+    - CWS_TH_Sword_4
+    - CWS_TH_Sword_5
+    - CWS_TH_Sword_6
+    - CWS_TH_Sword_7
+    - CWS_TH_Sword_8
+    - CWS_TH_Sword_9
+    - CWS_TH_Sword_10
+    - CWS_TH_Sword_11
+    - CWS_Atgeir_1
+    - CWS_Atgeir_2
+    - CWS_Atgeir_3
+    - CWS_Atgeir_4
+    - CWS_Atgeir_5
+    - CWS_Atgeir_6
+    - CWS_Atgeir_7
+    - CWS_Atgeir_8
+    - CWS_Atgeir_9
+    - CWS_Atgeir_10
+    - AxeBerzerkrIron
+    - AxeBerzerkrSilver
+    - AxeBerzerkrBlackMetal
+    - AxeBerzerkrCarapace
+    - FistFenrirClawBronze
+    - FistFenrirClawIron
+    - FistFenrirClawBlackmetal
+    - FistFenrirClawCarapace
+    - FistFenrirClawFlametal
+    - KnifeSkollAndHatiIron
+    - KnifeSkollAndHatiSilver
+    - KnifeSkollAndHatiBlackSilver
+    - KnifeSkollAndHatiFlametal
+    - THSwordBronze
+    - THSwordSilver
+    - T3_Reaper
+    - T4_Reaper
+    - T5_Reaper
+    - T6_Reaper
+    - T7_Reaper
+    - StaffShield_T2
+    - T3_StaffLightning
+    - StaffShield_T4
+    - T5_StaffLightning
 
   OneHandedWeapon:
     - AxeBlackMetal
     - AxeBronze
     - AxeFlint
     - AxeIron
+    - AxeJotunBane
     - AxeStone
+    - BombBile
+    - BombLava
     - BombOoze
+    - BombSmoke
     - Club
     - KnifeBlackMetal
     - KnifeButcher
@@ -206,69 +317,190 @@ groups:
     - KnifeCopper
     - KnifeFlint
     - KnifeSilver
+    - Lantern
     - MaceBronze
+    - MaceEldner
+    - MaceEldnerBlood
+    - MaceEldnerLightning
+    - MaceEldnerNature
     - MaceIron
     - MaceNeedle
     - MaceSilver
     - SpearBronze
+    - SpearCarapace
     - SpearChitin
     - SpearElderbark
     - SpearFlint
+    - SpearSplitner
+    - SpearSplitner_Blood
+    - SpearSplitner_Lightning
+    - SpearSplitner_Nature
     - SpearWolfFang
     - SwordBlackmetal
     - SwordBronze
-    - SwordCheat
+    - SwordDyrnwyn
     - SwordIron
     - SwordIronFire
+    - SwordMistwalker
+    - SwordNiedhogg
+    - SwordNiedhoggBlood
+    - SwordNiedhoggLightning
+    - SwordNiedhoggNature
     - SwordSilver
     - Tankard
+    - Tankard_dvergr
+    - TankardAnniversary
     - TankardOdin
     - Torch
-    - Lantern
-    - AxeJotunBane
-    - BombBile
     - JC_Reaper_Axe
+    - JC_Reaper_Sword
+    - JC_Reaper_Spear
     - JC_Reaper_Knife
     - JC_Reaper_Mace
-    - JC_Reaper_Spear
-    - JC_Reaper_Sword
-    - BMP_FlameScepter
-    - BMP_FlameWand
-    - BMP_IceScepter
-    - BMP_IceWand
-    - BMP_LightningScepter
-    - BMP_LightningWand
-    - BMP_PoisonWand
-    - BMP_FlameScepterAncient
-    - BMP_IceScepterAncient
+    - BMR_WoodenWand
+    - BMR_EmberWand
+    - BMR_RootWand
+    - BMR_CrystalWand
+    - BMR_CursedWand
+    - BMR_ElvenWand
+    - BMR_AncientWand
+    - CWS_Axe_1
+    - CWS_Axe_2
+    - CWS_Axe_3
+    - CWS_Axe_4
+    - CWS_Axe_5
+    - CWS_Axe_6
+    - CWS_Axe_7
+    - CWS_Axe_8
+    - CWS_Axe_9
+    - CWS_Axe_10
+    - CWS_Dagger_1
+    - CWS_Dagger_2
+    - CWS_Dagger_3
+    - CWS_Dagger_4
+    - CWS_Dagger_5
+    - CWS_Dagger_6
+    - CWS_Dagger_7
+    - CWS_Dagger_8
+    - CWS_Dagger_9
+    - CWS_Dagger_10
+    - CWS_Dagger_11
+    - CWS_Mace_1
+    - CWS_Mace_2
+    - CWS_Mace_3
+    - CWS_Mace_4
+    - CWS_Mace_5
+    - CWS_Mace_6
+    - CWS_Mace_7
+    - CWS_Mace_8
+    - CWS_Mace_9
+    - CWS_Mace_10
+    - CWS_Spear_1
+    - CWS_Spear_2
+    - CWS_Spear_3
+    - CWS_Spear_4
+    - CWS_Spear_5
+    - CWS_Spear_6
+    - CWS_Spear_7
+    - CWS_Spear_8
+    - CWS_Spear_9
+    - CWS_Sword_1
+    - CWS_Sword_2
+    - CWS_Sword_3
+    - CWS_Sword_4
+    - CWS_Sword_5
+    - CWS_Sword_6
+    - CWS_Sword_7
+    - CWS_Sword_8
+    - CWS_Sword_9
+    - CWS_Sword_10
+    - CWS_Sword_11
+    - CWS_Sword_12
+    - CWS_Sword_13
+    - CWS_Sword_14
 
   Shield:
+    - ShieldBanded
     - ShieldBlackmetal
     - ShieldBlackmetalTower
     - ShieldBoneTower
+    - ShieldBronzeBuckler
+    - ShieldCarapace
+    - ShieldCarapaceBuckler
+    - ShieldFlametal
+    - ShieldFlametalTower
     - ShieldIronBuckler
-    - ShieldIronSquare
     - ShieldIronTower
-    - ShieldKnight
     - ShieldSerpentscale
     - ShieldSilver
+    - ShieldWood
     - ShieldWoodTower
-    - ShieldCarapaceBuckler
-    - ShieldCarapace
     - JC_Reaper_Shield
     - JC_Shield_Buckler
     - JC_Shield_Tower
+    - CWS_Buckler_Shield_1
+    - CWS_Buckler_Shield_2
+    - CWS_Round_Shield_1
+    - CWS_Round_Shield_2
+    - CWS_Round_Shield_3
+    - CWS_Round_Shield_4
+    - CWS_Round_Shield_5
+    - CWS_Round_Shield_6
+    - CWS_Round_Shield_7
+    - CWS_Heater_Shield_1
+    - CWS_Heater_Shield_2
+    - CWS_Heater_Shield_3
+    - CWS_Heater_Shield_4
+    - CWS_Heater_Shield_5
+    - CWS_Tower_Shield_1
+    - CWS_Tower_Shield_2
+    - CWS_Tower_Shield_3
+    - CWS_Tower_Shield_4
+    - CWS_Tower_Shield_5
     - LanternSoulcatcher
 
   Bow:
     - Bow
+    - BowAshlands
+    - BowAshlandsBlood
+    - BowAshlandsRoot
+    - BowAshlandsStorm
     - BowDraugrFang
     - BowFineWood
     - BowHuntsman
     - BowSpineSnap
     - CrossbowArbalest
+    - CrossbowRipper
+    - CrossbowRipperBlood
+    - CrossbowRipperLightning
+    - CrossbowRipperNature
     - JC_Reaper_Bow
     - JC_Reaper_Crossbow
+    - BBP_BoneBow
+    - BBP_ElvenBow
+    - BBP_SeekerBow
+    - BBP_BlackMetalBow
+    - BBP_SilverBow
+    - CWS_Bow_1
+    - CWS_Bow_2
+    - CWS_Bow_3
+    - CWS_Bow_4
+    - CWS_Bow_5
+    - CWS_Bow_6
+    - CWS_Bow_7
+    - CWS_Bow_8
+    - CWS_Bow_9
+    - CWS_Bow_10
+    - CWS_Bow_11
+    - CWS_Crossbow_1
+    - CWS_Crossbow_2
+    - CWS_Crossbow_3
+    - CWS_Crossbow_4
+    - CWS_Crossbow_5
+    - CWS_Crossbow_6
+    - CWS_Crossbow_7
+    - CWS_Crossbow_8
+    - CWS_Crossbow_9
 
   Tool:
     - Cultivator
@@ -304,6 +536,7 @@ groups:
     - BoltCarapace
     - BoltCharred
     - BoltIron
+    - BBP_Bolt_Bronze
     - BBP_Bolt_Flint
     - BBP_Bolt_Wood
     - BBP_ExplodingBolt_Fire
@@ -415,66 +648,89 @@ groups:
     - BMR_CleanseScroll5
     - BMR_CleanseScroll6
 
-  Consumable:
+  Consumables:
     - BarleyWine
     - BlackSoup
     - BloodPudding
     - BoarJerky
     - Bread
     - CarrotSoup
+    - CookedAsksvinMeat
+    - CookedBoneMawSerpentMeat
+    - CookedBugMeat
+    - CookedChickenMeat
     - CookedDeerMeat
+    - CookedEgg
+    - CookedHareMeat
     - CookedLoxMeat
     - CookedMeat
+    - CookedVoltureMeat
     - CookedWolfMeat
     - DeerStew
     - Eyescream
+    - FierySvinstew
+    - FishAndBread
     - FishCooked
     - FishWraps
+    - HoneyGlazedChicken
     - LoxPie
+    - MagicallyStuffedShroom
+    - MarinatedGreens
+    - MashedMeat
+    - MeadEitrLingering
+    - MeadEitrMinor
     - MeadFrostResist
+    - MeadHealthLingering
+    - MeadHealthMajor
     - MeadHealthMedium
     - MeadHealthMinor
     - MeadPoisonResist
+    - MeadStaminaLingering
     - MeadStaminaMedium
     - MeadStaminaMinor
     - MeadTasty
+    - MeatPlatter
     - MinceMeatSauce
+    - MisthareSupreme
+    - MushroomOmelette
     - NeckTailGrilled
     - OnionSoup
+    - PiquantPie
     - QueensJam
+    - RoastedCrustPie
+    - Salad
     - Sausages
+    - ScorchingMedley
+    - SeekerAspic
     - SerpentMeatCooked
     - SerpentStew
     - ShocklateSmoothie
+    - SizzlingBerryBroth
+    - SparklingShroomshake
+    - SpicyMarmalade
     - TurnipStew
     - WolfJerky
     - WolfMeatSkewer
-    - MushroomMagecap
-    - MushroomJotunpuffs
-    - CookedEgg
-    - cookedbugmeat
-    - cookedharemeat
-    - CookedChickenMeat
-    - Meatplatter
-    - HoneyGlazedChicken
-    - Mistharesupreme
-    - Salad
-    - MushroomOmelette
-    - fishandbread
-    - MagicallyStuffedShroom
     - YggdrasilPorridge
-    - SeekerAspic
-    - MeadHealthMajor
-    - MeadStaminaLingering
-    - MeadEitrMinor
-    - ct_bonfireinabottle
+    - Hearthstone
+    - BCA_BoiledEgg
+    - BCA_ChickenSoup
+    - BCA_FishSoup
+    - BCA_MeatSoup
+    - BCA_SpicyMeatPlatter
+    - BCA_SpicyMeatSupreme
+    - BCA_SpicySerpentMeat
+    - BCA_SweetNSpicyFish
+    - BCA_TomatoSoup
+    - BCA_VeggieSoup
+    - BHP_PumpkinBread
+    - BHP_PumpkinPie
+    - BHP_PumpkinWine
     - ct_campfireinabottle
+    - ct_bonfireinabottle
     - ct_livingroominabottle
-    - BMP_MountainSoup
-    - BMP_MountainStew
-    - BMP_MushroomJam
-    - BMP_MushroomPie
-    - BMP_SautedMeatMushroom
+    - BOH_CookedHare_Meat
+    - BOH_HareStew
     - HoneyCookedMeat
     - HoneyCookedDeer
     - HoneyCookedNeck
@@ -501,13 +757,6 @@ groups:
     - HoneyMeadSpeed
     - HoneyMeadDamage
 
-  AllWood:
-    - Wood
-    - FineWood
-    - RoundLog
-    - YggdrasilWood
-    - Blackwood
-
   AllEquipment:
     - Bow
     - Chest
@@ -523,24 +772,15 @@ groups:
   NoLossOnDeath:
     - AllEquipment
     - ArrowsAndBolts
-    - Consumable
+    - Consumables
     - Spells
 
   DontSink:
     - SerpentScale
     - TrophySerpent
 
-#  IncreaseStackSize:
-#    - ArrowsAndBolts
-
 NoLossOnDeath:
   loss: no
 
 DontSink:
   floating: yes
-
-AllWood:
-  weight factor: 0.5
-
-#IncreaseStackSize:
-#  stack factor: 2

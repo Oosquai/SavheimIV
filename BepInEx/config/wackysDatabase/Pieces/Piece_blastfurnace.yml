@@ -82,6 +82,9 @@ smelterData:
   - FromName: FlametalOreNew
     ToName: FlametalNew
     Remove: false
+  - FromName: BGP_SilicaOre
+    ToName: BGP_Glass
+    Remove: false
 cookingStationData: 
 beehiveData: 
 fermStationData: 

@@ -84,7 +84,7 @@ Secondary_Attack:
   Attack_Angle: 90
   Attack_Ray_Width: 4
   Lower_Dmg_Per_Hit: true
-  Hit_Through_Walls: true
+  Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2

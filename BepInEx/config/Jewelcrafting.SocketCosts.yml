@@ -8,74 +8,76 @@ socket cost:
     1:
       flint: 2
     2:
-      BoneFragments: 3
+      BoneFragments: 2
     3:
-      flint: 10
-      BoneFragments: 5
+      Bezel_T1: 1
   black forest:
     1:
-      bronze: 3
-      Yellow mushroom: 5
+      BoneFragments: 2
+      Coins: 10
     2:
-      bronze: 5
-      Greydwarf eye: 10
+      Bronze: 1
+      Coins: 15
     3:
-      bronze: 10
-      Ancient seed: 3
+      Bezel_T2: 1
+      Coins: 20
   swamp:
     1:
-      iron: 3
-      Ooze: 5
+      Ooze: 2
+      Coins: 12
     2:
-      iron: 5
-      Withered bone: 5
+      Iron: 1
+      Coins: 18
     3:
-      iron: 10
-      Root: 5
+      Bezel_T3: 1
+      Coins: 24
   ocean:
     1:
-      chitin: 5
+      Ooze: 2
+      Coins: 12
     2:
-      chitin: 10
+      Iron: 1
+      Coins: 18
     3:
-      chitin: 15
+      Bezel_T3: 1
+      Coins: 24
   mountain:
     1:
-      silver: 3
-      Wolf fang: 5
+      WolfFang: 2
+      Coins: 14
     2:
-      silver: 5
-      Freeze gland: 5
+      Silver: 1
+      Coins: 21
     3:
-      silver: 10
-      WolfHairBundle: 5
+      Bezel_T4: 1
+      Coins: 28
   plains:
     1:
-      Black metal: 3
-      Cloudberries: 5
+      Needle: 2
+      Coins: 16
     2:
-      Black metal: 5
-      Needle: 5
+      BlackMetal: 1
+      Coins: 24
     3:
-      Black metal: 10
-      Lox pelt: 5
+      Bezel_T5: 1
+      Coins: 32
   mistlands:
     1:
-      Refined eitr: 3
-      Soft tissue: 5
+      BugMeat: 2
+      Coins: 18
     2:
-      Refined eitr: 5
-      Carapace: 5
+      BlackMarble: 1
+      Coins: 27
     3:
-      Refined eitr: 10
-      Mandible: 5
+      Bezel_T6: 1
+      Coins: 36
   ash lands:
     1:
-      Flametal: 3
-      Asksvin Hide: 5
+      CharredBone: 2
+      Coins: 20
     2:
-      Flametal: 5
-      Morgen Sinew: 3
+      FlametalNew: 1
+      Coins: 30
     3:
-      Flametal: 7
-      Morgen Heart: 1
+      Bezel_T7: 1
+      Coins: 40

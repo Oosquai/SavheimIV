@@ -1,0 +1,16 @@
+name: RT5_Reaper
+clonePrefabName: T5_Reaper
+craftingStation: $piece_forge
+minStationLevel: 4
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- BlackMetal:30:15:True
+- Bloodbag:12:6:True
+- ElderBark:8:4:True
+- Uncut_Blue_Stone:4:2:True

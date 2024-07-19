@@ -66,48 +66,48 @@
 
 
 
-groups:
-  Armor: # Group name
-    - ArmorBronzeChest # Item prefab name, note that this is case sensitive and must be the prefab name
-    - ArmorBronzeLegs
-    - ArmorCarapaceChest
-    - ArmorCarapaceLegs
-    - ArmorFenringChest
-    - ArmorFenringLegs
-    - ArmorIronChest
-    - ArmorIronLegs
-    - ArmorLeatherChest
-    - ArmorLeatherLegs
-    - ArmorMageChest
-    - ArmorMageLegs
-    - ArmorPaddedCuirass
-    - ArmorPaddedGreaves
-    - ArmorRagsChest
-    - ArmorRagsLegs
-    - ArmorRootChest
-    - ArmorRootLegs
-    - ArmorTrollLeatherChest
-    - ArmorTrollLeatherLegs
-    - ArmorWolfChest
-    - ArmorWolfLegs
-  Arrows:
-    - ArrowBronze
-    - ArrowCarapace
-    - ArrowFire
-    - ArrowFlint
-    - ArrowFrost
-    - ArrowIron
-    - ArrowNeedle
-    - ArrowObsidian
-    - ArrowPoison
-    - ArrowSilver
-    - ArrowWood
-    - draugr_arrow
-  Tier 2 Items:
-    - Bronze
-    - PickaxeBronze
-    - ArmorBronzeChest
-    - ArmorBrozeLeggings
+#groups:
+#  Armor: # Group name
+#    - ArmorBronzeChest # Item prefab name, note that this is case sensitive and must be the prefab name
+#    - ArmorBronzeLegs
+#    - ArmorCarapaceChest
+#    - ArmorCarapaceLegs
+#    - ArmorFenringChest
+#    - ArmorFenringLegs
+#    - ArmorIronChest
+#    - ArmorIronLegs
+#    - ArmorLeatherChest
+#    - ArmorLeatherLegs
+#    - ArmorMageChest
+#    - ArmorMageLegs
+#    - ArmorPaddedCuirass
+#    - ArmorPaddedGreaves
+#    - ArmorRagsChest
+#    - ArmorRagsLegs
+#    - ArmorRootChest
+#    - ArmorRootLegs
+#    - ArmorTrollLeatherChest
+#    - ArmorTrollLeatherLegs
+#    - ArmorWolfChest
+#    - ArmorWolfLegs
+#  Arrows:
+#    - ArrowBronze
+#    - ArrowCarapace
+#    - ArrowFire
+#    - ArrowFlint
+#    - ArrowFrost
+#    - ArrowIron
+#    - ArrowNeedle
+#    - ArrowObsidian
+#    - ArrowPoison
+#    - ArrowSilver
+#    - ArrowWood
+#    - draugr_arrow
+#  Tier 2 Items:
+#    - Bronze
+#    - PickaxeBronze
+#    - ArmorBronzeChest
+#    - ArmorBrozeLeggings
 
 # By default, if you don't specify a container below, it will be considered as you want to allow pulling all objects for pulling from it.
 # If you are having issues with a container, please make sure you have the full prefab name of the container. Additionally, make sure you have exclude or includeOverride set up correctly.
@@ -203,8 +203,9 @@ essence_kiln:
     - All
 
 smelter:
-  exclude:
-    - Ores
+  exclude: []
+#  exclude:
+#    - Ores
 
 smelter_copper:
   exclude:
@@ -233,8 +234,9 @@ smelter_tin:
     - TinOre
 
 blastfurnace:
-  exclude:
-    - Ores
+  exclude: []
+#  exclude:
+#    - Ores
 
 blastfurnace_blackmetal:
   exclude:

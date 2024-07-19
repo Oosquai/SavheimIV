@@ -1,0 +1,29 @@
+name: slayer_blood_mat_clone_T4
+original: slayer_blood_mat
+overwrite: false
+changes:
+  colors:
+    _Color: [2, 2, 2, 1]
+    _EmissionColor: [1.665452, 0, 0.08445873, 1]
+  floats:
+    _Cutoff: 0.5
+    _Glossiness: 0.5
+    _GlossMapScale: 0.819
+    _SmoothnessTextureChannel: 0
+    _Metallic: 0
+    _SpecularHighlights: 1
+    _GlossyReflections: 1
+    _BumpScale: 1
+    _Parallax: 0.02
+    _OcclusionStrength: 1
+    _DetailNormalMapScale: 1
+    _UVSec: 0
+    _Mode: 0
+    _SrcBlend: 1
+    _DstBlend: 0
+    _ZWrite: 1
+  textures:
+    _MainTex: Slayer_blood_d
+    _MetallicGlossMap: NiedhoggSlayer_m
+    _BumpMap: NiedhoggSlayer_n
+    _EmissionMap: NiedhoggSlayer_e

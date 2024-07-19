@@ -1,8 +1,8 @@
 name: smelter_copper
 piecehammer: Hammer
 m_name: Copper Smelter
-sizeMultiplier: 0.7
-m_description: ''
+sizeMultiplier: 0.5
+m_description: Identical performance to the full-sized version, but restricted to one type of input for controlled loading.
 customIcon: 
 clonePrefabName: smelter
 material: rock1_copper

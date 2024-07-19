@@ -95,12 +95,12 @@ thunderclap:
 magical bargain:
   slot: elementalmagic
   gem: orange
-  power: [5, 10, 15]
+  power: [8, 16, 24]
 
 precious blood:
   slot: bloodmagic
   gem: blue
-  power: [5, 10, 15]
+  power: [8, 16, 24]
 
 # Chest
 
@@ -329,7 +329,7 @@ echo:
   # - bonus projectiles (default: 1)
   
 necromancer:
-  slot: [bow, crossbow, magic]
+  slot: [bow, crossbow, elementalmagic]
   gem: green
   power:
     power: [5, 7, 9]
@@ -427,7 +427,7 @@ fast reaction:
 vampiric parry:
   slot: [shield, bloodmagic]
   gem: green
-  power: [1, 2, 3]
+  power: [3, 5, 7]
 
 # Tool
 
@@ -437,9 +437,9 @@ unbreakable:
   power: [40, 50, 60]
 
 energetic:
-  slot: tool
+  slot: [tool, elementalmagic]
   gem: yellow
-  power: [15, 30, 45]
+  power: [14, 28, 42]
 
 frenzy:
   slot: tool
