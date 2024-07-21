@@ -5,10 +5,9 @@ Savheim IV - Recommended game settings II:  Please try Settings/Accessibility/Ca
 Savheim IV - The game takes a while to load with so many mods installed.  Go get a tankard of ale and use the Viking potty.
 Savheim IV - Group commands: /invite [name]; /leave; /remove [name]; /promote [name].  Group benefits:  shared exp, group gem effects, draggable user interface, group chat (/p), colored names, and group ping (LeftAlt).
 Savheim IV - Press 'O' to open Guild panel.  This has been added to Savheim IV only to allow sharing semi-private portals.
-Savheim IV - Swap hotbars - ~ (above Tab).  Dodge - Tap Alt or hold block and press jump.  Parry - block just in time.  Secondary attack - middle mouse button.  
-Savheim IV - All weapon classes have been reworked in Savheim IV to give them unique and improved playstyles.  Give them all a second swing, even if you decided against them last playthrough...  Wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
-Savheim IV - Block Armor = how much you can block.  [Block Armor * Parry Bonus] = how much you can parry.  Excess damage drains health.  Tower shields drain stamina before health.  Block Force does nothing.
-Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical:  Attack a staggered enemy.
+Savheim IV - All weapon classes have been majorly reworked in Savheim IV (again!) to give them unique and improved playstyles.  Give them all another swing, even if you decided against them last playthrough...  Wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
+Savheim IV - Block Armor = amount you can block.  [Block Armor * Parry Bonus] = amount you can parry.  Excess damage drains health.  Block Force does nothing.
+Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical: attack a staggered enemy.  Parry: perfectly-timed block.
 Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
 Savheim IV - Harpoons now have a basic secondary attack.  Primary attack tethers, and then the Use key reels the tether in if it's lighter than you.  If it's heavier than you, well, with great power comes great responsibility.
 Savheim IV - Sneaking no longer consumes stamina, levels faster, and now gains movement speed instead of stamina benefits from leveling.  Succesful backstabs award bonus experience.  Swimming consumes less stamina as you level it up.
@@ -20,7 +19,7 @@ Savheim IV - You can modify the color of text on signs.  Open the sign prompt as
 Savheim IV - Building tips!  While holding your hammer and hovering over a placed piece, hold shift and press the deconstruct button to select that piece.  Q and E cycle snap points.  Selections per tab persist, so you can change tabs and then hit Esc to quickly swap build pieces on different tabs.
 Savheim IV - You've learned to dive under the water by pointing down and pressing crouch!  Go swimming!  Wat-er you waiting for??
 Savheim IV - Boss powers now have both passive and active aspects, and you get to choose two!  Read about them at the starting stones or in your Valheim Compendium (inventory -> raven icon).  Keybinds are hardcoded to T and G, regardless of in-game settings.
-Savheim IV - World progression is now tied to your character.  You must be present for boss kills to get credit for them.  This affects your ability to equip gear, boss powers, merchant inventory, raids, and maybe more!
+Savheim IV - World progression is now tied to your character.  You must be present for boss kills to get credit for them.  This affects your ability to equip gear & boss powers, merchant inventory, raids, and maybe more!
 Savheim IV - You must defeat all main bosses preceeding the tier of gear you wish to equip, including unique weapons.  Iron Sword?  Gotta deal with Eikthyr and The Elder before you know how to use one.
 Savheim IV - Death went to therapy and is nicer now.  You'll no longer drop equipment, ammo, or consumables when you die.  Resurrect each other with Surtling Cores.
 Savheim IV - Check your Valheim Compendium (inventory -> raven icon) for useful game and mod information, including Active Effects.
@@ -44,4 +43,4 @@ Savheim IV - You'll now earn catch-up experience for skills working back toward 
 Savheim IV - Most bows and crossbows now have a small chance their projectiles will leave behind reusable fletchings.  Wood arrows and bolts can now be crafted from inventory, but they do less damage.
 Savheim IV - All players can now create a marketplace for other players to buy from.  Please help make the economy interesting by setting what you think are fair prices.
 Savheim IV - Pick an ammo type to be your top of the order, put it on your hotbar, then tap that number instead of F to reset your rotation.  Ammo sequence is based on inventory location.  Utility spells only enter the rotation if on your main hotbar.  The Ammo Tote hides ammo.
-Savheim IV - New keys:  Alt: roll.  T, G: use boss power.  F: cycle ammo.  Z: compare item.  Z, X, C: mini-hotbar.  P: toggle map portal display.  O: Guilds interface.  Left-ctrl: Change + to - for crafting resource tracker.
+Savheim IV - New keys:  Alt: roll.  T, G: use boss power.  F: cycle ammo.  Z: compare item.  ~: swap hotbars.  Z, X, C: mini-hotbar.  P: toggle map portal display.  O: Guilds interface.  Left-ctrl: Change + to - for crafting resource tracker.
