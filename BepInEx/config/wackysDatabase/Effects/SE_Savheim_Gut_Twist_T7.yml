@@ -30,7 +30,7 @@ StopEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_club_hit
+- name: sfx_goblinbrute_clubhit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -57,7 +57,7 @@ ActivationAnimation: gpower
 SeData:
   m_tickInterval: 0.1
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -56
+  m_healthPerTick: -70
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

@@ -1,4 +1,4 @@
-Name: SE_Savheim_Gut_Twist_T5
+Name: SE_Savheim_Gut_Twist_T8
 Status_m_name: Gut Twist
 Category: ''
 IconName: 
@@ -57,7 +57,7 @@ ActivationAnimation: gpower
 SeData:
   m_tickInterval: 0.1
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -50
+  m_healthPerTick: -80
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

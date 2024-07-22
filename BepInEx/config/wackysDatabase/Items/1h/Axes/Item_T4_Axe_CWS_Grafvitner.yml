@@ -67,17 +67,17 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Vertical
-  Attack_Animation: axe_secondary
+  Attack_Animation: swing_axe2
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.5
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 14
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 0.8
+  DmgMultiplier: 0.5
   ForceMultiplier: 1
   StaggerMultiplier: 0.5
   RecoilMultiplier: 0

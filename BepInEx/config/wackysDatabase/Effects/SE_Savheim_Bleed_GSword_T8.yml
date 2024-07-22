@@ -1,11 +1,11 @@
-Name: SE_Savheim_Gut_Twist_T5
-Status_m_name: Gut Twist
+Name: SE_Savheim_Bleed_GSword_T8
+Status_m_name: Puncture
 Category: ''
 IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Penetrate their armor, then violently twist and yank your blade back out of your victim's gut."
+Tooltip: "Target suffers bloodloss, unmodified by armor or resistances."
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,12 +14,11 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0.1
+TimeToLive: 8
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS: []
-StopEffect_PLUS: 
-- name: vfx_player_hit
+StartEffect_PLUS:
+- name: fx_bloodweapon_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -41,7 +40,7 @@ StopEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_serpent_attack_hit
+- name: sfx_blob_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -52,12 +51,13 @@ StopEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
+StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.1
+  m_tickInterval: 0.146
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -50
+  m_healthPerTick: -8
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

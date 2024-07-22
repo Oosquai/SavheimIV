@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Target loses 24 health over 12 seconds, unmodified by armor or resistances."
+Tooltip: "Target suffers bloodloss, unmodified by armor or resistances."
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -29,7 +29,7 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_weapons_blood_impact
+- name: sfx_goblinbrute_clubhit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -40,7 +40,7 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_serpent_attack_hit
+- name: sfx_blob_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -55,9 +55,9 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.5
+  m_tickInterval: 0.857
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -1
+  m_healthPerTick: -9
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

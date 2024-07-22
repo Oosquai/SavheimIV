@@ -30,7 +30,7 @@ StartEffect_PLUS:
   m_scale: true
   m_childTransform: ''
 - name: sfx_weapons_blood_impact
-  m_enabled: true
+  m_enabled: false
   m_variant: -1
   m_attach: true
   m_follow: false
@@ -55,9 +55,9 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.15
+  m_tickInterval: 0.051
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -1
+  m_healthPerTick: -3
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

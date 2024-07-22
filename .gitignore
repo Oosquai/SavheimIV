@@ -20,6 +20,7 @@ BepInEx/DumpedAssemblies
 BepInEx/LogOutput.log
 BepInEx/cache
 BepInEx/plugins/CLIENT_SIDE_DEV_ONLY
+BepInEx/config/wackyDatabase-BulkYML
 BepInEx/config/wackyDatabase-BulkYML_vanilla
 BepInEx/config/wackyDatabase-BulkYML_savheimIII
 BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg

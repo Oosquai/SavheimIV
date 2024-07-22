@@ -1,7 +1,7 @@
 name: AxeFlint
 m_weight: 1.5
 m_name: $item_axe_flint
-m_description: $item_axe_flint_description  Axes emphasize damage, and their secondary attack rends the target's armor for a brief duration.
+m_description: $item_axe_flint_description  Axes emphasize damage.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -66,9 +66,9 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 0.8
+  DmgMultiplier: 2
   ForceMultiplier: 1
-  StaggerMultiplier: 0.5
+  StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 2.2
   AttackHeight: 0.6
@@ -88,8 +88,6 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1.5
-  Attack_status_effect: SE_Savheim_Rend
-  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

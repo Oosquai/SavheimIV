@@ -4,7 +4,7 @@ overwrite: false
 changes:
   colors:
     _Color: [1, 1, 1, 1]
-    _EmissionColor: [1.665452, 0, 0.08445873, 1]
+    _EmissionColor: [0.2, 0.2, 0.2, 1]
   floats:
     _Cutoff: 0.5
     _Glossiness: 0.1

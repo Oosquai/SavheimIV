@@ -52,7 +52,7 @@ Primary_Attack:
   SpawnOnHit: 
   SpawnOnHit_Chance: 0
   Attack_status_effect: SE_Savheim_Rend_2H
-  Attack_status_effect_chance: 0.15
+  Attack_status_effect_chance: 0.25
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -100,7 +100,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 20
   SpeedFactor: 0.6
-  DmgMultiplier: 2
+  DmgMultiplier: 2.5
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0

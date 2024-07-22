@@ -29,18 +29,7 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_club_hit
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: sfx_serpent_attack_hit
+- name: sfx_goblinbrute_clubhit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -53,17 +42,6 @@ StartEffect_PLUS:
   m_childTransform: ''
 StopEffect_PLUS: 
 - name: vfx_boar_hit
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: sfx_arrow_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -90,7 +68,7 @@ ActivationAnimation: gpower
 SeData:
   m_tickInterval: 0.05
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -28
+  m_healthPerTick: -31
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0
