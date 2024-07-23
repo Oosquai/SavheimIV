@@ -1,7 +1,7 @@
 name: T6_Reaper
 m_weight: 4
 m_name: Ebonstone Reaper
-m_description: Reapers demand blood to fuel increasingly devastating attacks as the wielder's health decreases.  Primary attacks can rend armor, setting up for extremely high damage secondary attacks.  Reapers synergize well with certain gems.
+m_description: Reapers demand blood instead of stamina to fuel increasingly devastating attacks as the wielder's health decreases.  Primary attacks can destroy armor, providing a brief window for an extremely high-damage secondary attack.  Reapers synergize well with certain gems.
 clonePrefabName: THSwordSlayerBlood
 mockName: 
 customIcon: 
@@ -51,8 +51,8 @@ Primary_Attack:
   Reset_Chain_If_hit: None
   SpawnOnHit: 
   SpawnOnHit_Chance: 0
-  Attack_status_effect: SE_Savheim_Rend_2H
-  Attack_status_effect_chance: 0.25
+  Attack_status_effect: SE_Savheim_Rend_Reaper
+  Attack_status_effect_chance: 0.3
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None

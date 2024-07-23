@@ -43,6 +43,7 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Reset_Chain_If_hit: None
   Attack_Projectile: 
   Projectile_Vel: 20
   Projectile_Accuraccy: 0

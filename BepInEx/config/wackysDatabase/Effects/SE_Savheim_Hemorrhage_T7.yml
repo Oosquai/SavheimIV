@@ -29,8 +29,8 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_weapons_blood_impact
-  m_enabled: false
+- name: sfx_staff_elder_root_hit
+  m_enabled: true
   m_variant: -1
   m_attach: true
   m_follow: false

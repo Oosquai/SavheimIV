@@ -14,11 +14,10 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0.1
+TimeToLive: 0.5
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS: []
-StopEffect_PLUS: 
+StartEffect_PLUS: 
 - name: vfx_player_hit
   m_enabled: true
   m_variant: -1
@@ -30,7 +29,7 @@ StopEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_goblinbrute_clubhit
+- name: sfx_spear_hit
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -41,21 +40,11 @@ StopEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_serpent_attack_hit
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
+StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.1
+  m_tickInterval: 0.5
   m_healthPerTickMinHealthPercentage: 0
   m_healthPerTick: -50
   m_healthOverTime: 0

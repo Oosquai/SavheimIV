@@ -43,6 +43,7 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1.5
+  Reset_Chain_If_hit: None
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -55,7 +56,7 @@ Primary_Attack:
     Trail_Effect: 
     Burst_Effect: 
 Secondary_Attack:
-  AttackType: Vertical
+  AttackType: Horizontal
   Attack_Animation: swing_axe2
   Attack_Random_Animation: 0
   Chain_Attacks: 0
@@ -71,7 +72,7 @@ Secondary_Attack:
   StaggerMultiplier: 0.5
   RecoilMultiplier: 0
   AttackRange: 2.2
-  AttackHeight: 0.6
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -82,7 +83,7 @@ Secondary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 0
+  Attack_Ray_Width: 0.3
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
