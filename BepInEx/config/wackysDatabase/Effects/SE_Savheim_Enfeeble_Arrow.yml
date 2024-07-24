@@ -1,11 +1,11 @@
-Name: SE_Savheim_StamRegen20
-Status_m_name: Stamina Regen
+Name: SE_Savheim_Enfeeble_Arrow
+Status_m_name: Enfeeble
 Category: ''
 IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: ''
+Tooltip: Enfeeble target for a brief time, reducing damage.
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,9 +14,44 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0
+TimeToLive: 12
 StartEffect_: 
 StopEffect_: 
+StartEffect_PLUS: 
+- name: vfx_Smoked
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_gjall_idle_shiver
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_staff_elder_root_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
@@ -34,7 +69,7 @@ SeData:
   m_eitrOverTime: 0
   m_eitrOverTimeDuration: 0
   m_healthRegenMultiplier: 1
-  m_staminaRegenMultiplier: 1.2
+  m_staminaRegenMultiplier: 1
   m_eitrRegenMultiplier: 1
   m_raiseSkill: None
   m_raiseSkillModifier: 0
@@ -42,9 +77,9 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods: 
-  m_modifyAttackSkill: None
-  m_damageModifier: 0
+  m_mods: []
+  m_modifyAttackSkill: All
+  m_damageModifier: 0.85
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0

@@ -258,11 +258,11 @@ blastfurnace_silica:
 
 piece_cookingstation:
   exclude:
-    - Food
+    - All
 
 piece_cookingstation_iron:
   exclude:
-    - Food
+    - All
 
 piece_oven:
   exclude: []

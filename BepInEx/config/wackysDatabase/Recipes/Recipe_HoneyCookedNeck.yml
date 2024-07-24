@@ -1,0 +1,14 @@
+name: HoneyCookedNeck
+clonePrefabName: 
+craftingStation: ''
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 2
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Honey:2:0:False
+- NeckTailGrilled:2:0:False

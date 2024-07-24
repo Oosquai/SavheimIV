@@ -1,24 +1,25 @@
-Name: SE_Savheim_Wet_Arrow
-Status_m_name: $se_wet_name
-Category: ''
-IconName: Wet
+Name: SE_Savheim_potion_eitr_minor
+Status_m_name: $item_mead_eitr_minor
+Category: eitrpotion
+IconName: potion_eitr_minor
+ClonedSE: Potion_eitr_minor
 CustomIcon: 
 FlashIcon: false
-CooldownIcon: false
-Tooltip: ''
+CooldownIcon: true
+Tooltip: $se_potion_eitrminor_tooltip
 Attributes: None
 StartMessageLoc: TopLeft
-StartMessage: $se_wet_start
+StartMessage: $se_potion_start
 StopMessageLoc: TopLeft
-StopMessage: $se_wet_stop
+StopMessage: ''
 RepeatMessageLoc: TopLeft
-RepeatMessage: $se_wet_repeat
-RepeatInterval: 60
-TimeToLive: 12
+RepeatMessage: ''
+RepeatInterval: 0
+TimeToLive: 120
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
-- name: vfx_Wet
+- name: vfx_Potion_eitr_minor
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -29,7 +30,7 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_silvermace_hit
+- name: sfx_Potion_eitr_minor
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -38,18 +39,7 @@ StartEffect_PLUS:
   m_inheritParentScale: false
   m_multiplyParentVisualScale: false
   m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: sfx_gjall_idle_shiver
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
+  m_scale: false
   m_childTransform: ''
 StopEffect_PLUS: []
 Cooldown: 0
@@ -60,14 +50,14 @@ SeData:
   m_healthPerTick: 0
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
-  m_healthOverTimeInterval: 5
+  m_healthOverTimeInterval: 0
   m_staminaOverTime: 0
   m_staminaOverTimeDuration: 0
   m_staminaDrainPerSec: 0
   m_runStaminaDrainModifier: 0
   m_jumpStaminaUseModifier: 0
-  m_eitrOverTime: 0
-  m_eitrOverTimeDuration: 0
+  m_eitrOverTime: 75
+  m_eitrOverTimeDuration: 10
   m_healthRegenMultiplier: 1
   m_staminaRegenMultiplier: 1
   m_eitrRegenMultiplier: 1
@@ -77,22 +67,24 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods:
-  - m_type: Fire
-    m_modifier: Resistant
-  - m_type: Frost
-    m_modifier: Weak
-  - m_type: Lightning
-    m_modifier: VeryWeak
+  m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
   m_speedModifier: 0
+  m_jumpModifier: &o0
+    x: 0
+    y: 0
+    z: 0
+    normalized: *o0
+    magnitude: 0
+    sqrMagnitude: 0
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0
   m_healthOverTimeTimer: 0
   m_healthOverTimeTicks: 0
   m_healthOverTimeTickHP: 0
+SeShield: 
