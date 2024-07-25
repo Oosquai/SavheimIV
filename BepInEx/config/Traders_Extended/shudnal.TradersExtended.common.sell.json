@@ -1,5 +1,29 @@
 [
   {
+    "prefab": "BOM_EikthyrKey",
+    "stack": 1,
+    "price": 4,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "CryptKey",
+    "stack": 1,
+    "price": 5,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "BOM_BonemassKey",
+    "stack": 1,
+    "price": 3,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Wishbone",
+    "stack": 1,
+    "price": 3,
+    "requiredGlobalKey": ""
+  },
+  {
     "prefab": "TrophyDeer",
     "stack": 1,
     "price": 4,

@@ -1,6 +1,6 @@
 name: CWS_Tower_Shield_1
 m_weight: 8
-m_name: $item_shield_iron_tower
+m_name: Iron Tower Shield
 m_description: $item_shield_iron_tower_description
 clonePrefabName: 
 mockName: 

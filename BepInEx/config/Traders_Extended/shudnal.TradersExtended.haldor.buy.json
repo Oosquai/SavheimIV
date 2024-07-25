@@ -1,5 +1,11 @@
 [
   {
+    "prefab": "MoltenCore",
+    "stack": 1,
+    "price": 750,
+    "requiredGlobalKey": "defeated_eikthyr"
+  },
+  {
     "prefab": "Feathers",
     "stack": 1,
     "price": 5,
@@ -10,12 +16,6 @@
     "stack": 1,
     "price": 20,
     "requiredGlobalKey": ""
-  },
-  {
-    "prefab": "MoltenCore",
-    "stack": 1,
-    "price": 750,
-    "requiredGlobalKey": "defeated_eikthyr"
   },
   {
     "prefab": "AncientSeed",

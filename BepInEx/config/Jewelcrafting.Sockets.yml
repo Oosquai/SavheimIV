@@ -23,7 +23,7 @@ ice heart:
   # - chance (default: 20)
 
 snake bite:
-  slot: weapon
+  slot: [weapon, crossbow]
   gem: green
   power:
     power: [20, 40, 60]
@@ -89,6 +89,9 @@ thunderclap:
   slot: polearm
   gem: orange
   power: [4, 7, 10]
+  slot: bloodmagic
+  gem: cyan
+  power: [4, 7, 10]
 
 # Magic Weapons
 
@@ -138,7 +141,7 @@ fade:
   # - damage threshold (default: 30)
 
 invigorated:
-  slot: [chest, shield, bow]
+  slot: [chest, shield, bow, tool]
   gem: redish
   power: [8, 16, 24]
 
@@ -190,7 +193,7 @@ restless legs:
   power: [15, 30, 45]
 
 cowardice:
-  slot: [legs, elementalmagic]
+  slot: legs
   gem: cyan
   power: [3, 5, 7]
 
@@ -272,6 +275,9 @@ eitr surge:
   slot: head
   gem: orange
   power: [5, 10, 15]
+  slot: elementalmagic
+  gem: yellow
+  power: [5, 10, 15]
 
 refreshed mind:
   slot: head
@@ -283,7 +289,7 @@ refreshed mind:
 endless arrows:
   slot: bow
   gem: red
-  power: [10, 20, 30]
+  power: [5, 10, 15]
 
 master archer:
   slot: bow
@@ -305,7 +311,7 @@ quick draw:
 endless bolts:
   slot: crossbow
   gem: red
-  power: [10, 20, 30]
+  power: [5, 10, 15]
 
 master arbalist:
   slot: crossbow
@@ -329,7 +335,7 @@ echo:
   # - bonus projectiles (default: 1)
   
 necromancer:
-  slot: [bow, crossbow, elementalmagic]
+  slot: [bow, elementalmagic]
   gem: green
   power:
     power: [5, 7, 9]
@@ -437,7 +443,7 @@ unbreakable:
   power: [40, 50, 60]
 
 energetic:
-  slot: [tool, elementalmagic]
+  slot: tool
   gem: yellow
   power: [14, 28, 42]
 
