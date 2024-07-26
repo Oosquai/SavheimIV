@@ -223,11 +223,11 @@ Fuling:
 #  health: 1
 
 # Seeker Soldier base stats - HP: 1500; dmg: 120; weak: -; resist: Physical; immune: Spirit
-Seeker Soldier:
-  health: 0.75
-  effect:
-    Armored: 0
-    Regenerating: 0
+#Seeker Soldier:
+#  health: 0.75
+#  effect:
+#    Armored: 0
+#    Regenerating: 0
 
 # Seeker Brood base stats - HP: 20; dmg: 60; weak: -; resist: Physical; immune: Spirit
 #Seeker Brood:

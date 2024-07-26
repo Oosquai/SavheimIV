@@ -1,0 +1,94 @@
+name: food_smelter
+piecehammer: Hammer
+m_name: $food_smelter
+sizeMultiplier: 1
+m_description: $food_smelter
+customIcon: 
+clonePrefabName: 
+material: 
+damagedMaterial: 
+craftingStation: $piece_workbench
+piecehammerCategory: OdinArchitect Misc
+minStationLevel: 1
+amount: 1
+disabled: true
+adminonly: false
+comfort: 
+groundPiece: false
+ground: false
+waterPiece: false
+noInWater: true
+notOnFloor: false
+onlyinTeleportArea: false
+allowedInDungeons: true
+canBeRemoved: true
+notOnWood: true
+wearNTearData:
+  health: 2000
+  damageModifiers:
+    m_blunt: Resistant
+    m_slash: Resistant
+    m_pierce: Resistant
+    m_chop: Resistant
+    m_pickaxe: Normal
+    m_fire: Immune
+    m_frost: Immune
+    m_lightning: Normal
+    m_poison: Immune
+    m_spirit: Immune
+  noRoofWear: false
+  noSupportWear: true
+  supports: true
+  triggerPrivateArea: true
+craftingStationData: 
+cSExtensionData: 
+contData: 
+smelterData:
+  addOreTooltip: $food_smelter_additem
+  emptyOreTooltip: $food_smelter_empty
+  fuelItem:
+    name: Coal
+  maxOre: 100
+  maxFuel: 100
+  fuelPerProduct: 1
+  secPerProduct: 5
+  spawnStack: false
+  requiresRoof: false
+  addOreAnimationLength: 0
+  smelterConversion:
+  - FromName: NeckTail
+    ToName: NeckTailGrilled
+    Remove: false
+  - FromName: RawMeat
+    ToName: CookedMeat
+    Remove: false
+  - FromName: NeckTail
+    ToName: NeckTailGrilled
+    Remove: false
+  - FromName: DeerMeat
+    ToName: CookedDeerMeat
+    Remove: false
+  - FromName: FishRaw
+    ToName: FishCooked
+    Remove: false
+  - FromName: WolfMeat
+    ToName: CookedWolfMeat
+    Remove: false
+  - FromName: SerpentMeat
+    ToName: SerpentMeatCooked
+    Remove: false
+  - FromName: LoxMeat
+    ToName: CookedLoxMeat
+    Remove: false
+cookingStationData: 
+beehiveData: 
+fermStationData: 
+sapData: 
+incineratorData: 
+fireplaceData: 
+teleportWorldData: 
+plantData: 
+build:
+- Coal:20:0:True
+- SurtlingCore:10:0:True
+- Bronze:15:0:True

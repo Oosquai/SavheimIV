@@ -1,40 +1,56 @@
 1:
-  damage_percentage: 2
+  damage_percentage: 1
 2:
-  damage_percentage: 4
+  damage_percentage: 2
 3:
-  damage_percentage: 6
+  damage_percentage: 3
 4:
-  damage_percentage: 8
+  damage_percentage: 4
 5:
-  damage_percentage: 10
+  damage_percentage: 5
+  attack_speed: 5
 6:
-  damage_percentage: 12
+  damage_percentage: 6
+  attack_speed: 5
 7:
-  damage_percentage: 16
+  damage_percentage: 7
+  attack_speed: 5
 8:
-  damage_percentage: 20
+  damage_percentage: 8
+  attack_speed: 5
 9:
-  damage_percentage: 24
+  damage_percentage: 9
+  attack_speed: 5
 10:
-  damage_percentage: 28
+  damage_percentage: 10
+  attack_speed: 10
 11:
-  damage_percentage: 32
+  damage_percentage: 11
+  attack_speed: 10
 12:
-  damage_percentage: 36
+  damage_percentage: 12
+  attack_speed: 10
 13:
-  damage_percentage: 40
+  damage_percentage: 13
+  attack_speed: 10
 14:
-  damage_percentage: 45
+  damage_percentage: 14
+  attack_speed: 10
 15:
-  damage_percentage: 50
+  damage_percentage: 15
+  attack_speed: 15
 16:
-  damage_percentage: 55
+  damage_percentage: 16
+  attack_speed: 15
 17:
-  damage_percentage: 60
+  damage_percentage: 17
+  attack_speed: 15
 18:
-  damage_percentage: 70
+  damage_percentage: 18
+  attack_speed: 15
 19:
-  damage_percentage: 85
+  damage_percentage: 19
+  attack_speed: 15
 20:
-  damage_percentage: 100
+  damage_percentage: 20
+  attack_speed: 20
