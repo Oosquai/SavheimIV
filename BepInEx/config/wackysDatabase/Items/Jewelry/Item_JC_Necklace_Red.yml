@@ -1,7 +1,7 @@
 name: JC_Necklace_Red
 m_weight: 0.1
 m_name: $jc_necklace_red
-m_description: $jc_necklace_red_description
+m_description: $jc_necklace_red_description  You also become sneakier.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -32,7 +32,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip:
-  EffectName: JC_Se_Necklace_Red
+  EffectName: JC_Se_Necklace_Red_SH
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

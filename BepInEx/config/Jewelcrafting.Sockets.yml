@@ -52,9 +52,12 @@ vampire:
   # - max heal (default: 6)
   
 berserk:
-  slot: [weapon, magic]
-  gem: purple
-  power: [5, 10, 15]
+  - slot: [weapon, magic]
+    gem: purple
+    power: [5, 10, 15]
+  - slot: tool
+    gem: red
+    power: [5, 10, 15]
 
 acceleration:
   slot: [weapon, magic]
@@ -62,7 +65,7 @@ acceleration:
   power: [8, 16, 24]
 
 overexertion:
-  slot: [weapon, magic, bow, crossbow]
+  slot: [weapon, magic, bow, crossbow, tool]
   gem: blueish
   power:
     damage increase: [6, 12, 18]
@@ -86,12 +89,12 @@ perforation:
   power: [20, 25, 30]
 
 thunderclap:
-  slot: polearm
-  gem: orange
-  power: [4, 7, 10]
-  slot: bloodmagic
-  gem: cyan
-  power: [4, 7, 10]
+  - slot: polearm
+    gem: orange
+    power: [4, 7, 10]
+  - slot: bloodmagic
+    gem: cyan
+    power: [4, 7, 10]
 
 # Magic Weapons
 
@@ -198,7 +201,7 @@ cowardice:
   power: [3, 5, 7]
 
 fleeting life:
-  slot: weapon
+  slot: [weapon, elementalmagic]
   gem: cyan
   power: [6, 8, 10]
 
@@ -272,12 +275,12 @@ merciful death:
   power: [8, 16, 24]
 
 eitr surge:
-  slot: head
-  gem: orange
-  power: [5, 10, 15]
-  slot: elementalmagic
-  gem: yellow
-  power: [5, 10, 15]
+  - slot: head
+    gem: orange
+    power: [5, 10, 15]
+  - slot: elementalmagic
+    gem: yellow
+    power: [5, 10, 15]
 
 refreshed mind:
   slot: head

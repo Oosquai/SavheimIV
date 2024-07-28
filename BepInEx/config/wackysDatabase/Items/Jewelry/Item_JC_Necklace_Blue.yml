@@ -1,7 +1,7 @@
 name: JC_Necklace_Blue
 m_weight: 0.1
 m_name: $jc_necklace_blue
-m_description: $jc_necklace_blue_description  It will also make you a better swimmer.
+m_description: $jc_necklace_blue_description  It will also improve your abilities to fish and swim.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -32,7 +32,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
-  EffectName: SE_Savheim_Swim
+  EffectName: SE_Savheim_Aquaphile
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

@@ -138,7 +138,7 @@ StoneGolem Soul Power:
   unique: Gem
 
 Hatchling Soul Power:
-  slot: [weapon, bloodmagic]
+  slot: [weapon, magic]
   gem: Hatchling Soul Gem
   power:
     value: [150, 200, 250, 300, 350]

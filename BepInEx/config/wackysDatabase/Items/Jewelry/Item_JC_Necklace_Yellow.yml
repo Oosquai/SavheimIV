@@ -1,7 +1,7 @@
 name: JC_Necklace_Yellow
 m_weight: 0.1
 m_name: $jc_necklace_yellow
-m_description: $jc_necklace_yellow_description
+m_description: $jc_necklace_yellow_description  In exchange, it deals increased damage to trees.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -32,7 +32,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip:
-  EffectName: JC_Se_Necklace_Yellow
+  EffectName: JC_Se_Necklace_Yellow_SH
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

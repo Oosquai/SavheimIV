@@ -10,5 +10,4 @@ requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
 - Perfect_Black_Socket:1:0:True
-- Chain:1:0:True
-- SilverNecklace:1:0:True
+- Silver:1:0:True

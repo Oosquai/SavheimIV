@@ -1,11 +1,11 @@
-Name: SE_Savheim_MinorBlocking
-Status_m_name: Minor Blocking
+Name: SE_Savheim_Aquaphile
+Status_m_name: Aquaphile
 Category: ''
 IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: ''
+Tooltip: You love being in the water.
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -38,10 +38,10 @@ SeData:
   m_eitrRegenMultiplier: 1
   m_raiseSkill: None
   m_raiseSkillModifier: 0
-  m_skillLevel: Blocking
-  m_skillLevelModifier: 7
-  m_skillLevel2: None
-  m_skillLevelModifier2: 0
+  m_skillLevel: Fishing
+  m_skillLevelModifier: 15
+  m_skillLevel2: Swim
+  m_skillLevelModifier2: 15
   m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
