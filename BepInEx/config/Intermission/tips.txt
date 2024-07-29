@@ -36,7 +36,7 @@ Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymo
 *Savheim IV - Thank you to Matt, Jake, and Woody for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for TotinoTunes and Jake for that awesome Savheim IV video in Discord!
 Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
-Savheim IV - Gems and jewelry have been completely reworked.  Build a Jeweler's Box at the Gemcutter's table to conveniently take jewelry options with you on adventures.  Remember to check the Artisan table when you get there later...
+Savheim IV - Gems and jewelry have been completely reworked.  Build a Jeweler's Box at the Gemcutter's table to conveniently take jewelry options with you on adventures.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  They're scary.  Block them to learn their timing before trying to parry them!
 Savheim IV - Each boss now has a small chance to drop a variety of weapons unique to that boss.  These weapons trade upgradeable stats for powerful special effects.  You'll have opportunities to find endgame versions of each.
 Savheim IV - You'll now earn catch-up experience for skills working back toward all-time highs, as well as alternate weapon skills compared to your most experienced weapon skill.
@@ -49,3 +49,4 @@ Savheim IV - Fishing no longer requires stamina.  Fish chum help attract fish.  
 Savheim IV - You're not intended to achieve high enchanting levels on early-game gear.  It's Ok to not have a +20 Flint Knife.  Your Enchanting skill will increase with time as you adventure and fight creatures.  Chill, and get back to adventuring.
 Savheim IV - Level 50 blacksmiths can repair from inventory.  Level 50 builders sometimes save resources.  Level 30 farmers can see plant progress.  Level 30 foragers can see respawn times.  Level 50 miners have a chance to demolish entire rocks.  Ranchers can sense hunger at level 10, calm nearby creatures at level 25, and see pregnancy status at level 50.
 Savheim IV - Most weapon types now offer some form of debuff or secondary damage.  Different creatures are susceptible to these in unique ways.  Experiment to find viable strategies for applying these new tools.
+Savheim IV - The more stars a creature has, the better the loot.  At three stars and up you'll start to see increasingly precious components.  Infused creatures are rare and have coveted treasures.

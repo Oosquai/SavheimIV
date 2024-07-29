@@ -9,7 +9,7 @@ shared healing:
   power: [20, 30, 50]
 
 fleeting life:
-  slot: weapon
+  slot: [weapon, elementalmagic]
   gem: cyan
   power: [6, 8, 10]
 

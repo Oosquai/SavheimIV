@@ -284,3 +284,113 @@
       max_hp: 5
       max_stamina: 5
       resistance_lightning: Resistant
+
+- Items:
+  - JC_Necklace_Red
+  - JC_Necklace_Green
+  - JC_Necklace_Blue
+  - JC_Necklace_Yellow
+  - JC_Necklace_Purple
+  - JC_Necklace_Orange
+  - JC_SoulNecklace_Necklace
+  - JC_blueish_Necklace
+  - JC_Ring_Purple
+  - JC_Ring_Green
+  - JC_Ring_Red
+  - JC_Ring_Blue
+  - JC_Ring_Black
+  - JC_SoulRing_Ring
+  - JC_Ring_Stone_ring
+  - JC_Ring_Bone_ring
+  - JC_Ring_Humite_Ring_of_Perception
+  - JC_Ring_Silver_band
+  - JC_Necklace_Leather_cord
+  - JC_Necklace_Polished_silver_necklace
+  Stats:
+    1:
+      max_hp: 1
+      max_stamina: 1
+    2:
+      max_hp: 2
+      max_stamina: 2
+    3:
+      max_hp: 3
+      max_stamina: 3
+    4:
+      max_hp: 4
+      max_stamina: 4
+    5:
+      max_hp: 5
+      max_stamina: 5
+      hp_regen: 1
+    6:
+      max_hp: 6
+      max_stamina: 6
+      hp_regen: 1
+    7:
+      max_hp: 7
+      max_stamina: 7
+      hp_regen: 1
+    8:
+      max_hp: 8
+      max_stamina: 8
+      hp_regen: 1
+    9:
+      max_hp: 9
+      max_stamina: 9
+      hp_regen: 1
+    10:
+      max_hp: 10
+      max_stamina: 10
+      hp_regen: 2
+      stamina_regen: 1
+    11:
+      max_hp: 11
+      max_stamina: 11
+      hp_regen: 2
+      stamina_regen: 1
+    12:
+      max_hp: 12
+      max_stamina: 12
+      hp_regen: 2
+      stamina_regen: 1
+    13:
+      max_hp: 13
+      max_stamina: 13
+      hp_regen: 2
+      stamina_regen: 1
+    14:
+      max_hp: 14
+      max_stamina: 14
+      hp_regen: 2
+      stamina_regen: 1
+    15:
+      max_hp: 15
+      max_stamina: 15
+      hp_regen: 3
+      stamina_regen: 1
+    16:
+      max_hp: 16
+      max_stamina: 16
+      hp_regen: 3
+      stamina_regen: 1
+    17:
+      max_hp: 17
+      max_stamina: 17
+      hp_regen: 3
+      stamina_regen: 1
+    18:
+      max_hp: 18
+      max_stamina: 18
+      hp_regen: 3
+      stamina_regen: 1
+    19:
+      max_hp: 19
+      max_stamina: 19
+      hp_regen: 3
+      stamina_regen: 1
+    20:
+      max_hp: 20
+      max_stamina: 20
+      hp_regen: 4
+      stamina_regen: 2

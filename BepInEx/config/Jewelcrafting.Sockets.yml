@@ -195,16 +195,6 @@ restless legs:
   gem: blueish
   power: [15, 30, 45]
 
-cowardice:
-  slot: legs
-  gem: cyan
-  power: [3, 5, 7]
-
-fleeting life:
-  slot: [weapon, elementalmagic]
-  gem: cyan
-  power: [6, 8, 10]
-
 # Utility
 
 power recovery:

@@ -1,7 +1,7 @@
 name: JC_Ring_Silver_band
 clonePrefabName: 
 craftingStation: $jc_transmution_table
-minStationLevel: 2
+minStationLevel: 3
 maxStationLevelCap: 
 repairStation: 
 amount: 1
