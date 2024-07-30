@@ -39,7 +39,7 @@ SeData:
   m_raiseSkill: None
   m_raiseSkillModifier: 0
   m_skillLevel: Blocking
-  m_skillLevelModifier: 7
+  m_skillLevelModifier: 10
   m_skillLevel2: None
   m_skillLevelModifier2: 0
   m_mods: []

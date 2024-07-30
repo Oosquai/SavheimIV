@@ -1,124 +1,309 @@
-# Write your entries here. Good luck!
-
 ##############################################################
 # Infused creatures drop bezels per zone.
 - prefab: creature
   type: destroy
-  filter: string, infusion, [Lightning, Fire, Frost, Poison, Chaos, Spirit]
+  filter: int, CL&LC infusion, 1;6
   biomes: Meadows
   spawn: Bezel_T1
 
-##############################################################
-# 3+ star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
   type: destroy
-  filter: int, level, 4;10
+  filter: int, CL&LC infusion, 1;6
+  biomes: Blackforest
+  spawn: Bezel_T2
+
+- prefab: creature
+  type: destroy
+  filter: int, CL&LC infusion, 1;6
+  biomes: Swamp, Ocean
+  spawn: Bezel_T3
+
+- prefab: creature
+  type: destroy
+  filter: int, CL&LC infusion, 1;6
+  biomes: Mountain
+  spawn: Bezel_T4
+
+- prefab: creature
+  type: destroy
+  filter: int, CL&LC infusion, 1;6
+  biomes: Plains
+  spawn: Bezel_T5
+
+- prefab: creature
+  type: destroy
+  filter: int, CL&LC infusion, 1;6
+  biomes: Mistlands
+  spawn: Bezel_T6
+
+- prefab: creature
+  type: destroy
+  filter: int, CL&LC infusion, 1;6
+  biomes: AshLands, DeepNorth
+  spawn: Bezel_T7
+
+##############################################################
+# 3 star creatures drop Draumheim Essence (jewelry enchant).
+- prefab: creature
+  type: destroy
+  filter: int, level, 4
   spawn: DraumheimEssence
 
 ##############################################################
-# 4+ star creatures drop Blessed Scrolls appropriate to zone.
+# 4 star creatures drop Draumheim Essense and Blessed Scrolls per zone.
 # Meadows - Weapon
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Meadows
-  spawn: kg_EnchantScroll_Weapon_Blessed_F
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_F
 
 # Meadows - Armor
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Meadows
-  spawn: kg_EnchantScroll_Armor_Blessed_F
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_F
 
 # Black Forest - Weapon
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Blackforest
-  spawn: kg_EnchantScroll_Weapon_Blessed_D
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_D
 
 # Black Forest - Armor
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Blackforest
-  spawn: kg_EnchantScroll_Armor_Blessed_D
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_D
 
 # Swamp, Ocean - Weapon
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Swamp, Ocean
-  spawn: kg_EnchantScroll_Weapon_Blessed_C
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_C
 
 # Swamp, Ocean - Armor
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Swamp, Ocean
-  spawn: kg_EnchantScroll_Armor_Blessed_C
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_C
 
 # Mountain - Weapon
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Mountain
-  spawn: kg_EnchantScroll_Weapon_Blessed_B
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_B
 
 # Mountain - Armor
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Mountain
-  spawn: kg_EnchantScroll_Armor_Blessed_B
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_B
 
 # Plains - Weapon
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Plains
-  spawn: kg_EnchantScroll_Weapon_Blessed_A
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_A
 
 # Plains - Armor
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
+  filter: int, level, 5
   biomes: Plains
-  spawn: kg_EnchantScroll_Armor_Blessed_A
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_A
 
-# Mistlands, Ashlands, Deep North - Weapon
+# Mistlands, Ashlands - Weapon
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
-  biomes: Mistlands, AshLands, DeepNorth
-  spawn: kg_EnchantScroll_Weapon_Blessed_S
+  filter: int, level, 5
+  biomes: Mistlands, AshLands
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_S
 
-# Mistlands, Ashlands, Deep North - Armor
+# Mistlands, Ashlands - Armor
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5;10
-  biomes: Mistlands, AshLands, DeepNorth
-  spawn: kg_EnchantScroll_Armor_Blessed_S
+  filter: int, level, 5
+  biomes: Mistlands, AshLands
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_S
 
 ##############################################################
-# 5+ star creatures drop Oosnexus.
+# 5+ star creatures drop Draumheim Essense, Blessed Scrolls per zone, and a Molten Core.
+# Meadows - Weapon
 - prefab: creature
   type: destroy
-  filter: int, level, 6;10
-  spawn: MoltenCore
+  weight: 100
+  filter: int, level, 6
+  biomes: Meadows
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_F
+  - MoltenCore
+
+# Meadows - Armor
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Meadows
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_F
+  - MoltenCore
+
+# Black Forest - Weapon
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Blackforest
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_D
+  - MoltenCore
+
+# Black Forest - Armor
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Blackforest
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_D
+  - MoltenCore
+
+# Swamp, Ocean - Weapon
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Swamp, Ocean
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_C
+  - MoltenCore
+
+# Swamp, Ocean - Armor
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Swamp, Ocean
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_C
+  - MoltenCore
+
+# Mountain - Weapon
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Mountain
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_B
+  - MoltenCore
+
+# Mountain - Armor
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Mountain
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_B
+  - MoltenCore
+
+# Plains - Weapon
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Plains
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_A
+  - MoltenCore
+
+# Plains - Armor
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Plains
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_A
+  - MoltenCore
+
+# Mistlands, Ashlands - Weapon
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Mistlands, AshLands
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Weapon_Blessed_S
+  - MoltenCore
+
+# Mistlands, Ashlands - Armor
+- prefab: creature
+  type: destroy
+  weight: 100
+  filter: int, level, 6
+  biomes: Mistlands, AshLands
+  spawns:
+  - DraumheimEssence
+  - kg_EnchantScroll_Armor_Blessed_S
+  - MoltenCore
 
 ##############################################################
 # Limit Staff of the Wild summons

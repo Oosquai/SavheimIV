@@ -1,3 +1,35 @@
 - name: tamed
   ints:
   - tamed, 1
+
+- name: infused_none
+  ints:
+  - CL&LC infusion, 0
+
+- name: infused_lightning
+  ints:
+  - CL&LC infusion, 1
+
+- name: infused_fire
+  ints:
+  - CL&LC infusion, 2
+
+- name: infused_frost
+  ints:
+  - CL&LC infusion, 3
+
+- name: infused_poison
+  ints:
+  - CL&LC infusion, 4
+
+- name: infused_chaos
+  ints:
+  - CL&LC infusion, 5
+
+- name: infused_spirit
+  ints:
+  - CL&LC infusion, 6
+
+- name: infused_any
+  ints:
+  - CL&LC infusion, 1;6

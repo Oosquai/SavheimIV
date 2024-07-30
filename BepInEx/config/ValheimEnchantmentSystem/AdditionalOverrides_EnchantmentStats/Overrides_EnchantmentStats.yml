@@ -343,54 +343,54 @@
       max_hp: 10
       max_stamina: 10
       hp_regen: 2
-      stamina_regen: 1
+      stamina_regen: 0.5
     11:
       max_hp: 11
       max_stamina: 11
       hp_regen: 2
-      stamina_regen: 1
+      stamina_regen: 0.5
     12:
       max_hp: 12
       max_stamina: 12
       hp_regen: 2
-      stamina_regen: 1
+      stamina_regen: 0.5
     13:
       max_hp: 13
       max_stamina: 13
       hp_regen: 2
-      stamina_regen: 1
+      stamina_regen: 0.5
     14:
       max_hp: 14
       max_stamina: 14
       hp_regen: 2
-      stamina_regen: 1
+      stamina_regen: 0.5
     15:
       max_hp: 15
       max_stamina: 15
       hp_regen: 3
-      stamina_regen: 1
+      stamina_regen: 0.5
     16:
       max_hp: 16
       max_stamina: 16
       hp_regen: 3
-      stamina_regen: 1
+      stamina_regen: 0.5
     17:
       max_hp: 17
       max_stamina: 17
       hp_regen: 3
-      stamina_regen: 1
+      stamina_regen: 0.5
     18:
       max_hp: 18
       max_stamina: 18
       hp_regen: 3
-      stamina_regen: 1
+      stamina_regen: 0.5
     19:
       max_hp: 19
       max_stamina: 19
       hp_regen: 3
-      stamina_regen: 1
+      stamina_regen: 0.5
     20:
       max_hp: 20
       max_stamina: 20
       hp_regen: 4
-      stamina_regen: 2
+      stamina_regen: 1
