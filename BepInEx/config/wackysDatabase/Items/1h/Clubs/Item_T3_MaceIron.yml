@@ -117,6 +117,17 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: true
       m_childTransform: ''
+    - name: fx_charred_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: true
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: true
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect:
     - name: sfx_atgeir_attack_secondary

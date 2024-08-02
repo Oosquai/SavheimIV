@@ -1,7 +1,7 @@
 name: CWS_Crossbow_2
-m_weight: 1.5
+m_weight: 8
 m_name: Corewood Crossbow
-m_description: Crossbows offer a massive punch of damage at any range.
+m_description: A heavy but powerful weapon.  Crossbows stay loaded when stowed, offering an on-demand burst of damage at any time and at any range.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -32,7 +32,7 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: true
   Reload_Animation: reload_crossbow
-  ReloadTimeMultiplier: 0.7
+  ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 1
   Bow_Draw: false
   Bow_Duration_Min: 0

@@ -5,7 +5,7 @@ IconName:
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: Enemies have a much harder time hearing you when you're sneaking.
+Tooltip: Enemies have a much harder time hearing you.
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''

@@ -1,0 +1,94 @@
+MeadowsLoot1:
+  - Flint
+  - Feathers
+  - Raspberry
+  - Amber
+MeadowsLoot2:
+  - Flint
+  - Feathers
+  - LeatherScraps
+  - DeerHide
+  - Raspberry
+  - Amber
+MeadowsLoot3:
+  - FineWood
+  - AmberPearl
+  - Ruby
+  - DeerHide
+  - MeadTasty
+BlackforestLoot1:
+  - Amber
+  - Ruby
+  - BoneFragments
+  - Blueberries
+BlackforestLoot2:
+  - Blueberries
+  - CarrotSeeds
+  - AmberPearl
+  - TinOre
+  - CopperOre
+BlackforestLoot3:
+  - Bronze
+  - Copper
+  - AmberPearl
+  - SurtlingCore
+  - MeadHealthMinor
+WoodTavernLoot1:
+  - CarrotSeeds
+  - Blueberries
+  - MinceMeatSauce
+  - DeerStew
+  - SilverNecklace
+  - MeadTasty
+SwampLoot1:
+  - WitheredBone
+  - SurtlingCore
+  - AmberPearl
+  - Ruby
+  - ElderBark
+  - ArrowPoison
+SwampLoot2:
+  - WitheredBone
+  - SurtlingCore
+  - Chain
+  - TurnipSeeds
+  - Guck
+  - Root
+SwampLoot3:
+  - Chain
+  - Guck
+  - IronScrap
+  - WitheredBone
+  - ct_campfireinabottle
+MountainsLoot1:
+  - OnionSeeds
+  - SurtlingCore
+  - MeadEitrMinor
+  - AmberPearl
+  - Crystal
+  - JuteRed
+PlainsLoot1:
+  - BlackMetalScrap
+  - LinenThread
+  - IronScrap
+  - SurtlingCore
+  - HoneyMeadSpeed
+PlainsLoot2:
+  - CoralDelightCooked
+  - LoxPie
+  - FishWraps
+  - MeadHealthMedium
+  - ct_bonfireinabottle
+MistLoot1:
+  - MeadStaminaMedium
+  - HoneyMeadDamage
+  - Softtissue
+  - JuteBlue
+  - IronScrap
+MistLoot2:
+  - BHP_PumpkinWine
+  - Mandible
+  - Bilebag
+  - ScaleHide
+  - SilverNecklace
+  - MeadEitrMinor

@@ -196,6 +196,7 @@ groups:
     - Battleaxe
     - BattleaxeCrystal
     - FishingRod
+    - SpectaculureRod
     - FistFenrirClaw
     - KnifeSkollAndHati
     - PickaxeAntler
@@ -470,6 +471,7 @@ groups:
     - BowHuntsman
     - BowSpineSnap
     - CrossbowArbalest
+    - CrossbowEbonSteel_SH
     - CrossbowRipper
     - CrossbowRipperBlood
     - CrossbowRipperLightning

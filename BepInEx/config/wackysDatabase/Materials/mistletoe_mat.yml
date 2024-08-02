@@ -1,0 +1,30 @@
+name: mistletoe_mat
+original: birch_seeds
+overwrite: false
+changes:
+  colors:
+    _Color: [0.1, 0.4, 0.1, 1]
+    _MetalColor: [1, 1, 1, 1]
+    _EmissionColor: [0, 0, 0, 1]
+  floats:
+    _Cutoff: 0.5
+    _Metallic: 0
+    _MetallicAlphaGloss: 0
+    _BumpScale: 1
+    _TriplanarMap: 0
+    _TriplanarLocalPos: 0
+    _TriplanarScale: 1
+    _Glossiness: 0.1
+    _RippleDistance: 0
+    _RippleFreq: 1
+    _ValueNoise: 0.5
+    _ValueNoiseVertex: 0
+    _TwoSidedNormals: 0
+    _Cull: 2
+    _AddRain: 1
+    _MoveableObject: 0
+  textures:
+    _MainTex: oak_bark
+    _NoiseTex:
+      name: Noise
+      filterMode: Trilinear

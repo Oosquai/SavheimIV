@@ -1,0 +1,790 @@
+- target_prefab_name: TreasureChest_forestcrypt
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Feathers
+    stack_min: 1
+    stack_max: 10
+    weight: 1
+  - item_name: ArrowFlint
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Coins
+    stack_min: 10
+    stack_max: 30
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+- target_prefab_name: TreasureChest_dvergrtown (2)
+  name: $piece_dvergrchest
+  health: 1000
+  width: 4
+  height: 2
+  drop_min: 3
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: MeadHealthMinor
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: MeadStaminaMinor
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: MeadPoisonResist
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Sausages
+    stack_min: 3
+    stack_max: 6
+    weight: 1
+  - item_name: Tankard_dvergr
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+- target_prefab_name: TreasureChest_dvergrtown (1)
+  name: $piece_dvergrchest
+  health: 1000
+  width: 4
+  height: 2
+  drop_min: 3
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: MeadHealthMinor
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: MeadStaminaMinor
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: MeadPoisonResist
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Sausages
+    stack_min: 3
+    stack_max: 6
+    weight: 1
+  - item_name: Tankard_dvergr
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+- target_prefab_name: TreasureChest_fCrypt
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Feathers
+    stack_min: 5
+    stack_max: 15
+    weight: 1
+  - item_name: ArrowFlint
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: Coins
+    stack_min: 5
+    stack_max: 50
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+- target_prefab_name: TreasureChest_mountaincave_hildir
+  name: $piece_dvergrchest
+  health: 1000
+  width: 4
+  height: 2
+  drop_min: 1
+  drop_max: 1
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: HildirKey_mountaincave
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+- target_prefab_name: TreasureChest_forestcrypt_hildir
+  name: $piece_dvergrchest
+  health: 1000
+  width: 4
+  height: 2
+  drop_min: 1
+  drop_max: 1
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: HildirKey_forestcrypt
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+- target_prefab_name: TreasureChest_dvergr_loose_stone
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 1
+  drop_max: 2
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Coins
+    stack_min: 19
+    stack_max: 99
+    weight: 1
+  - item_name: BoneFragments
+    stack_min: 2
+    stack_max: 3
+    weight: 0.5
+- target_prefab_name: TreasureChest_plainsfortress_hildir
+  name: $piece_dvergrchest
+  health: 1000
+  width: 4
+  height: 2
+  drop_min: 1
+  drop_max: 1
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: HildirKey_plainsfortress
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+- target_prefab_name: TreasureChest_heath_hildir
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 4
+  drop_max: 5
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: AmberPearl
+    stack_min: 2
+    stack_max: 4
+    weight: 1
+  - item_name: Chain
+    stack_min: 2
+    stack_max: 5
+    weight: 1
+  - item_name: Coins
+    stack_min: 11
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 99
+    weight: 1
+  - item_name: ChickenEgg
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+- target_prefab_name: TreasureChest_swamp
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: WitheredBone
+    stack_min: 1
+    stack_max: 1
+    weight: 0.5
+  - item_name: ArrowIron
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: ArrowPoison
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: Coins
+    stack_min: 20
+    stack_max: 60
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 5
+    weight: 1
+  - item_name: AmberPearl
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: Chain
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+  - item_name: ElderBark
+    stack_min: 20
+    stack_max: 30
+    weight: 1
+- target_prefab_name: TreasureChest_mountains
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: OnionSeeds
+    stack_min: 3
+    stack_max: 9
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 6
+    weight: 1
+  - item_name: Coins
+    stack_min: 46
+    stack_max: 96
+    weight: 1
+  - item_name: AmberPearl
+    stack_min: 2
+    stack_max: 5
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Obsidian
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: ArrowFrost
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+- target_prefab_name: TreasureChest_meadows
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Feathers
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: Coins
+    stack_min: 5
+    stack_max: 15
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+  - item_name: ArrowFlint
+    stack_min: 10
+    stack_max: 20
+    weight: 1
+  - item_name: Torch
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+  - item_name: Flint
+    stack_min: 2
+    stack_max: 4
+    weight: 1
+- target_prefab_name: TreasureChest_plains_stone
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Feathers
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: ArrowObsidian
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: SilverNecklace
+    stack_min: 1
+    stack_max: 1
+    weight: 0.5
+  - item_name: Coins
+    stack_min: 66
+    stack_max: 99
+    weight: 1
+  - item_name: GoblinTotem
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+- target_prefab_name: TreasureChest_charredfortress
+  name: $piece_charredchest
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 5
+  drop_max: 6
+  drop_chance: 1
+  one_of_each: false
+  default_items:
+  - item_name: GemstoneBlue
+    stack_min: 1
+    stack_max: 1
+    weight: 0.5
+  - item_name: GemstoneGreen
+    stack_min: 1
+    stack_max: 1
+    weight: 0.5
+  - item_name: GemstoneRed
+    stack_min: 1
+    stack_max: 1
+    weight: 0.5
+  - item_name: Coins
+    stack_min: 200
+    stack_max: 500
+    weight: 1
+  - item_name: CharredBone
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: Charredskull
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: CelestialFeather
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+  - item_name: MoltenCore
+    stack_min: 1
+    stack_max: 2
+    weight: 0.5
+  - item_name: FlametalOreNew
+    stack_min: 10
+    stack_max: 20
+    weight: 1
+- target_prefab_name: TreasureChest_meadows_buried
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: ArrowFire
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: Coins
+    stack_min: 20
+    stack_max: 50
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: AmberPearl
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: SilverNecklace
+    stack_min: 1
+    stack_max: 1
+    weight: 1
+- target_prefab_name: TreasureChest_sunkencrypt
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: WitheredBone
+    stack_min: 1
+    stack_max: 1
+    weight: 0.5
+  - item_name: ArrowIron
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: ArrowPoison
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: Coins
+    stack_min: 20
+    stack_max: 60
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 5
+    weight: 1
+  - item_name: AmberPearl
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: Chain
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+  - item_name: ElderBark
+    stack_min: 20
+    stack_max: 30
+    weight: 1
+  - item_name: IronScrap
+    stack_min: 10
+    stack_max: 20
+    weight: 2
+- target_prefab_name: TreasureChest_mountaincave
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 5
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Obsidian
+    stack_min: 3
+    stack_max: 9
+    weight: 0.5
+  - item_name: SilverNecklace
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 2
+    weight: 0.5
+  - item_name: Coins
+    stack_min: 15
+    stack_max: 35
+    weight: 1
+  - item_name: Coins
+    stack_min: 15
+    stack_max: 35
+    weight: 1
+  - item_name: Obsidian
+    stack_min: 1
+    stack_max: 5
+    weight: 1
+- target_prefab_name: TreasureChest_trollcave
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 3
+  drop_max: 5
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Wood
+    stack_min: 10
+    stack_max: 30
+    weight: 1
+  - item_name: Stone
+    stack_min: 10
+    stack_max: 30
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Coins
+    stack_min: 20
+    stack_max: 50
+    weight: 1
+  - item_name: DeerHide
+    stack_min: 2
+    stack_max: 4
+    weight: 1
+  - item_name: BoneFragments
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: LeatherScraps
+    stack_min: 3
+    stack_max: 5
+    weight: 1
+- target_prefab_name: TreasureChest_blackforest
+  name: $piece_chestwood
+  health: 200
+  width: 5
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Feathers
+    stack_min: 2
+    stack_max: 4
+    weight: 1
+  - item_name: ArrowFlint
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: Coins
+    stack_min: 5
+    stack_max: 30
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+- target_prefab_name: TreasureChest_dvergrtower
+  name: $piece_dvergrchest
+  health: 1500
+  width: 4
+  height: 2
+  drop_min: 3
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Coins
+    stack_min: 12
+    stack_max: 54
+    weight: 1
+  - item_name: Softtissue
+    stack_min: 1
+    stack_max: 8
+    weight: 1
+  - item_name: DvergrNeedle
+    stack_min: 1
+    stack_max: 3
+    weight: 1
+- target_prefab_name: TreasureChest_ashland_stone
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: MoltenCore
+    stack_min: 1
+    stack_max: 2
+    weight: 0.5
+  - item_name: CharredBone
+    stack_min: 3
+    stack_max: 12
+    weight: 0.5
+  - item_name: ArrowCarapace
+    stack_min: 3
+    stack_max: 12
+    weight: 0.5
+  - item_name: Coins
+    stack_min: 99
+    stack_max: 199
+    weight: 0.5
+  - item_name: Blackwood
+    stack_min: 1
+    stack_max: 2
+    weight: 0.5
+- target_prefab_name: TreasureChest_dvergrtown
+  name: $piece_dvergrchest
+  health: 1000
+  width: 4
+  height: 2
+  drop_min: 3
+  drop_max: 4
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: MeadHealthMinor
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: MeadStaminaMinor
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: MeadPoisonResist
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Sausages
+    stack_min: 3
+    stack_max: 6
+    weight: 1
+  - item_name: Tankard_dvergr
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+  - item_name: Coins
+    stack_min: 33
+    stack_max: 66
+    weight: 1
+- target_prefab_name: TreasureChest_heath
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Barley
+    stack_min: 2
+    stack_max: 4
+    weight: 0.5
+  - item_name: BlackMetalScrap
+    stack_min: 2
+    stack_max: 5
+    weight: 1
+  - item_name: Needle
+    stack_min: 2
+    stack_max: 5
+    weight: 1
+  - item_name: Coins
+    stack_min: 10
+    stack_max: 40
+    weight: 1
+  - item_name: SharpeningStone
+    stack_min: 1
+    stack_max: 1
+    weight: 0.1
+- target_prefab_name: TreasureChest_blackforest (1)
+  name: $piece_chestwood
+  health: 200
+  width: 5
+  height: 2
+  drop_min: 2
+  drop_max: 3
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Feathers
+    stack_min: 2
+    stack_max: 4
+    weight: 1
+  - item_name: ArrowFlint
+    stack_min: 5
+    stack_max: 10
+    weight: 1
+  - item_name: Coins
+    stack_min: 5
+    stack_max: 30
+    weight: 1
+  - item_name: Amber
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+- target_prefab_name: TreasureChest_trollcave (1)
+  name: $piece_chestwood
+  health: 200
+  width: 4
+  height: 2
+  drop_min: 3
+  drop_max: 5
+  drop_chance: 1
+  one_of_each: true
+  default_items:
+  - item_name: Wood
+    stack_min: 10
+    stack_max: 30
+    weight: 1
+  - item_name: Stone
+    stack_min: 10
+    stack_max: 30
+    weight: 1
+  - item_name: Ruby
+    stack_min: 1
+    stack_max: 2
+    weight: 1
+  - item_name: Coins
+    stack_min: 20
+    stack_max: 50
+    weight: 1
+  - item_name: DeerHide
+    stack_min: 2
+    stack_max: 4
+    weight: 1
+  - item_name: BoneFragments
+    stack_min: 10
+    stack_max: 15
+    weight: 1
+  - item_name: LeatherScraps
+    stack_min: 3
+    stack_max: 5
+    weight: 1

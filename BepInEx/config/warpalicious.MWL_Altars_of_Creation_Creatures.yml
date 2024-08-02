@@ -1,0 +1,14 @@
+MWL_RuinsCathedral1:
+  creatures:
+    - Skeleton
+    - Skeleton
+    - Skeleton_Poison
+    - Skeleton
+    - Skeleton
+    - Ghost
+    - Skeleton
+    - Skeleton_Poison
+    - Skeleton
+    - Skeleton_Poison
+    - Ghost
+  

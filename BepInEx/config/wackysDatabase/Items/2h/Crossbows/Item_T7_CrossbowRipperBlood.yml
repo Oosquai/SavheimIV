@@ -1,5 +1,5 @@
 name: CrossbowRipperBlood
-m_weight: 1.5
+m_weight: 8
 m_name: $item_crossbow_ripper_blood
 m_description: $item_crossbow_ripper_blood_description
 clonePrefabName: 
@@ -32,7 +32,7 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: true
   Reload_Animation: reload_crossbow
-  ReloadTimeMultiplier: 0.7
+  ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 1
   Bow_Draw: false
   Bow_Duration_Min: 0

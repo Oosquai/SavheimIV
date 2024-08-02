@@ -8,7 +8,7 @@ clonePrefabName:
 material: 
 damagedMaterial: 
 craftingStation: $piece_forge
-piecehammerCategory: Crafting
+piecehammerCategory: Furniture
 minStationLevel: 1
 amount: 1
 disabled: false

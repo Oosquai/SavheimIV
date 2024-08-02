@@ -1,5 +1,5 @@
 name: CWS_Crossbow_7
-m_weight: 1.5
+m_weight: 8
 m_name: Repeater
 m_description: This ingenious design splits each bolt into two projectiles as it fires.
 clonePrefabName: 
@@ -32,7 +32,7 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: true
   Reload_Animation: reload_crossbow
-  ReloadTimeMultiplier: 0.7
+  ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 1
   Bow_Draw: false
   Bow_Duration_Min: 0
