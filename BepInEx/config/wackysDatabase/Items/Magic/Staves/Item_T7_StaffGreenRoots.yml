@@ -62,7 +62,7 @@ Primary_Attack:
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: -5
+  Launch_Angle: -4
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false

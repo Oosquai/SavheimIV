@@ -1,7 +1,7 @@
 name: JC_Reaper_Sword
 m_weight: 0.8
 m_name: $jc_reaper_sword
-m_description: "A sword made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: A sword made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 10
+  m_attackStamina: 11
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 2.5
-  m_attackStamina: 20
+  m_attackStamina: 22
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -88,7 +88,7 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Bleed_Sword_T7
+  Attack_status_effect: SE_Savheim_Bleed_Sword_T8
   Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
@@ -129,8 +129,8 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 135
-  Spirit: 33
+  Slash: 155
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -141,8 +141,8 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 8
-  Spirit: 3
+  Slash: 9
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -153,7 +153,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 62
+  m_blockPower: 71
   m_blockPowerPerLevel: 4
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -179,7 +179,7 @@ m_skillType: Swords
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

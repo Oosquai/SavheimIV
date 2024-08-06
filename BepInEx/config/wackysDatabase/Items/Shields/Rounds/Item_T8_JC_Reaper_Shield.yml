@@ -1,7 +1,7 @@
 name: JC_Reaper_Shield
 m_weight: 4
 m_name: $jc_reaper_shield
-m_description: "A shield made from a mysterious, otherworldly material that upgrades more strongly than others.  This shield offers additional protection against frost and piercing attacks and has 10% increased block power against world bosses."
+m_description: A shield made from a mysterious, otherworldly material that supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -122,8 +122,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 124
-  m_blockPowerPerLevel: 11
+  m_blockPower: 141
+  m_blockPowerPerLevel: 13
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -148,7 +148,7 @@ m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
 m_toolTier: 0
-m_maxQuality: 3
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

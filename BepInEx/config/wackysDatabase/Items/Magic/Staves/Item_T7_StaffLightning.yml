@@ -33,7 +33,7 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: true
   Reload_Animation: recharge_lightningstaff
-  ReloadTime: 1.9
+  ReloadTime: 3
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
   Reload_Eitr_Drain: 25

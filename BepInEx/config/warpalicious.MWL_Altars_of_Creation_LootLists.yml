@@ -1,25 +1,27 @@
 MWL_RuinsCathedral1:
   interiorLootTier1:
-    - AmberPearl
+    - Ruby
+    - SilverNecklace
     - SurtlingCore
     - kg_EnchantScroll_Weapon_Blessed_F
     - kg_EnchantScroll_Armor_Blessed_F
     - Bezel_T1
   interiorLootTier2:
-    - Ruby
+    - SilverNecklace
     - SurtlingCore
     - kg_EnchantScroll_Weapon_Blessed_D
     - kg_EnchantScroll_Armor_Blessed_D
     - Bezel_T2
+    - DraumheimEssence
   interiorLootTier3:
-    - SilverNecklace
     - SurtlingCore
     - kg_EnchantScroll_Weapon_Blessed_C
     - kg_EnchantScroll_Armor_Blessed_C
     - Bezel_T3
     - DraumheimEssence
+    - MoltenCore
   exteriorLoot:
     - Feathers
     - BoneFragments
     - LeatherScraps
-    - Amber
+    - Ruby

@@ -2,151 +2,171 @@ Celestial Blessing:
   duration: default
   prizes:
     celestial bone pickaxe:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect spinel
-        - perfect sulfur
-        - perfect onyx
         - empty
-    frame of chaos:
-      chance: 0.2
+        - empty
+        - empty
+        - empty
+    celestial reaper:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
 Astral Serenity:
   duration: default
   prizes:
     celestial bone battleaxe:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect onyx
-        - perfect sulfur
-        - perfect ruby
+        - empty
+        - empty
+        - empty
         - empty
     celestial bone hammer:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect sapphire
-        - perfect spinel
+        - empty
+        - empty
+        - empty
         - empty
 Nebulous Aegis:
   duration: default
   prizes:
     celestial bone tower:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect onyx
-        - perfect sulfur
-        - perfect sapphire
+        - empty
+        - empty
+        - empty
         - empty
     celestial bone buckler:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect sapphire
-        - perfect spinel
+        - empty
+        - empty
+        - empty
         - empty
 Divine Intervention:
   duration: default
   prizes:
     celestial bone sword:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect emerald
-        - perfect sapphire
         - empty
-    blessed crystal mirror:
-      chance: 0.15
+        - empty
+        - empty
+        - empty
+    celestial berserkir axes:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
 Radiant Echoes:
   duration: default
   prizes:
     celestial bone shield:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect sapphire
-        - perfect sulfur
-        - perfect spinel
+        - empty
+        - empty
+        - empty
         - empty
     celestial bone dagger:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect onyx
-        - perfect sulfur
-        - perfect humite
+        - empty
+        - empty
+        - empty
         - empty
 Heavenly Dominance:
   duration: default
   prizes:
     celestial bone bow:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect spinel
-        - perfect emerald
         - empty
-    frame of chance:
-      chance: 0.2
+        - empty
+        - empty
+        - empty
+    celestial flesh rippers:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
 Luminescent Ascendancy:
   duration: default
   prizes:
     celestial bone great sword:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect sapphire
-        - perfect emerald
-        - perfect ruby
+        - empty
+        - empty
+        - empty
         - empty
     celestial bone spear:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect onyx
-        - perfect spinel
-        - perfect sulfur
+        - empty
+        - empty
+        - empty
         - empty
 Stellar Impact:
   duration: default
   prizes:
     celestial bone axe:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect spinel
-        - perfect sulfur
         - empty
-    celestial crystal mirror:
-      chance: 0.05
+        - empty
+        - empty
+        - empty
+    celestial atgeir:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
 Nebula Mirage:
   duration: default
   prizes:
     celestial bone shocker:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect sapphire
-        - perfect humite
+        - empty
+        - empty
+        - empty
         - empty
     celestial bone stinger:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect humite
-        - perfect spinel
-        - perfect sulfur
+        - empty
+        - empty
+        - empty
         - empty
 Empyrean Odyssey:
   duration: default
   prizes:
     celestial bone mace:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect ruby
-        - perfect sapphire
-        - perfect emerald
+        - empty
+        - empty
+        - empty
         - empty
     celestial bone crossbow:
-      chance: 0.1
+      chance: 0.02
       sockets:
-        - perfect humite
-        - perfect sapphire
-        - perfect sulfur
+        - empty
+        - empty
+        - empty
         - empty
       
 # You can create a global blacklist. Gems on the global blacklist cannot be obtained from any event.

@@ -1,7 +1,7 @@
 name: JC_Reaper_Knife
 m_weight: 0.3
 m_name: $jc_reaper_knife
-m_description: "A dagger made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: A knife made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 10
+  m_attackStamina: 11
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -63,7 +63,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 20
+  m_attackStamina: 22
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -109,10 +109,10 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 50
+  Pierce: 58
   Poison: 0
-  Slash: 51
-  Spirit: 25
+  Slash: 58
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -123,8 +123,8 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 3
   Poison: 0
-  Slash: 3
-  Spirit: 2
+  Slash: 4
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -135,7 +135,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 30
+  m_blockPower: 34
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 4
   m_deflectionForce: 0
@@ -161,7 +161,7 @@ m_skillType: Knives
 m_animationState: Unarmed
 m_itemType: OneHandedWeapon
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

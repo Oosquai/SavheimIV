@@ -2,34 +2,106 @@
   ints:
   - tamed, 1
 
-- name: infused_none
-  ints:
-  - CL&LC infusion, 0
+- name: allied_group_data
+  strings:
+  - Humanoid.m_group, allied_group_tag
 
-- name: infused_lightning
+- name: canswim
   ints:
-  - CL&LC infusion, 1
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
 
-- name: infused_fire
-  ints:
-  - CL&LC infusion, 2
+####################################
+# Monster Clothes!
+- name: clothes_skeleton
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, <none>, <none>, SwordBronze, Torch, KnifeCopper
 
-- name: infused_frost
-  ints:
-  - CL&LC infusion, 3
+- name: clothes_skeleton_poison
+  hashes:
+  - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
+  - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
+  - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern
 
-- name: infused_poison
-  ints:
-  - CL&LC infusion, 4
+- name: clothes_draugr
+#  ints:
+#  - HasFields, 1
+#  - HasFieldsHumanoid, 1
+#  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, draugr_axe
+#  floats:
+#  - Humanoid.m_speed, 100
+#  - MonsterAI.m_minAttackInterval, 5
+#  - RandomSkillFactor, 4
 
-- name: infused_chaos
-  ints:
-  - CL&LC infusion, 5
+- name: clothes_goblin
+  hashes:
+  - LeftItem, <none>, <none>, GoblinSword, ShieldIronBuckler, CWS_Dagger_2
 
-- name: infused_spirit
-  ints:
-  - CL&LC infusion, 6
+- name: clothes_goblin_brute
+  hashes:
+  - LeftItem, <none>, <none>, <none>, GoblinBrute_RageAttack
 
-- name: infused_any
-  ints:
-  - CL&LC infusion, 1;6
+- name: clothes_dverger_mage_allied_group
+  hashes:
+  - LeftItem, <none>, <none>, <none>, StaffSkeleton
+  strings:
+  - Humanoid.m_group, allied_group_tag
+
+- name: clothes_charred_mage
+  hashes:
+  - LeftItem, StaffRedTroll
+
+####################################
+# Monster modifications based on gear
+- name: gear_staff_skeleton
+  hashes:
+  - LeftItem, StaffSkeleton
+
+#- name: custom_star_1
+#  ints:
+#  - level, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3
+#
+#- name: swordfire
+#  hashes:
+#  - RightItem, SwordIronFire
+#
+#- name: normalweapon
+#  hashes:
+#  - RightItem, <none>
+
+#- name: infused_none
+#  ints:
+#  - CL&LC infusion, 0
+#
+#- name: infused_lightning
+#  ints:
+#  - CL&LC infusion, 1
+#
+#- name: infused_fire
+#  ints:
+#  - CL&LC infusion, 2
+#
+#- name: infused_frost
+#  ints:
+#  - CL&LC infusion, 3
+#
+#- name: infused_poison
+#  ints:
+#  - CL&LC infusion, 4
+#
+#- name: infused_chaos
+#  ints:
+#  - CL&LC infusion, 5
+#
+#- name: infused_spirit
+#  ints:
+#  - CL&LC infusion, 6
+#
+#- name: infused_any
+#  ints:
+#  - CL&LC infusion, 1;6

@@ -1,7 +1,7 @@
 name: JC_Shield_Buckler
 m_weight: 2
 m_name: $jc_shield_buckler
-m_description: "A shield made from a mysterious, otherworldly material that upgrades more strongly than others. This shield offers protection against frost and has 10% increased block power against world bosses."
+m_description: A buckler made from a mysterious, otherworldly material that supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -122,8 +122,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 68
-  m_blockPowerPerLevel: 6
+  m_blockPower: 78
+  m_blockPowerPerLevel: 7
   m_timedBlockBonus: 3
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -148,7 +148,7 @@ m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
 m_toolTier: 0
-m_maxQuality: 3
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

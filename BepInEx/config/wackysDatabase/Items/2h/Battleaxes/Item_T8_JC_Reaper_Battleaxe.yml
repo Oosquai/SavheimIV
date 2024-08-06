@@ -1,7 +1,7 @@
 name: JC_Reaper_Battleaxe
 m_weight: 4
 m_name: $jc_reaper_battleaxe
-m_description: "A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and tremendous damage to trees."
+m_description: A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1.25
-  m_attackStamina: 11
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -71,7 +71,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.3
-  m_attackStamina: 22
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -141,8 +141,8 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 162
-  Spirit: 40
+  Slash: 186
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 6
@@ -153,8 +153,8 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 10
-  Spirit: 4
+  Slash: 11
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -165,7 +165,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 79
+  m_blockPower: 90
   m_blockPowerPerLevel: 5
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -191,7 +191,7 @@ m_skillType: Axes
 m_animationState: TwoHandedAxe
 m_itemType: TwoHandedWeapon
 m_toolTier: 6
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

@@ -1,94 +1,111 @@
 MeadowsLoot1:
-  - Flint
-  - Feathers
-  - Raspberry
-  - Amber
+  - KnifeFlint
+  - BMR_WoodenStaff
+  - Uncut_Blue_Stone
+  - Uncut_Yellow_Stone
+  - Uncut_redish_Stone
 MeadowsLoot2:
-  - Flint
-  - Feathers
-  - LeatherScraps
-  - DeerHide
-  - Raspberry
-  - Amber
-MeadowsLoot3:
-  - FineWood
-  - AmberPearl
-  - Ruby
-  - DeerHide
+  - AxeFlint
   - MeadTasty
+  - Uncut_Red_Stone
+  - Uncut_Purple_Stone
+  - Uncut_blueish_Stone
+MeadowsLoot3:
+  - SpearFlint
+  - Uncut_Black_Stone
+  - Uncut_Green_Stone
+  - Uncut_Orange_Stone
+  - Uncut_Cyan_Stone
 BlackforestLoot1:
-  - Amber
-  - Ruby
-  - BoneFragments
-  - Blueberries
+  - BMR_EmberWand
+  - CWS_Crossbow_2
+  - Uncut_Blue_Stone
+  - Uncut_Yellow_Stone
+  - Uncut_redish_Stone
 BlackforestLoot2:
-  - Blueberries
+  - FistFenrirClawBronze
   - CarrotSeeds
-  - AmberPearl
-  - TinOre
-  - CopperOre
+  - Uncut_Red_Stone
+  - Uncut_Purple_Stone
+  - Uncut_blueish_Stone
 BlackforestLoot3:
-  - Bronze
-  - Copper
-  - AmberPearl
+  - THSwordBronze
   - SurtlingCore
-  - MeadHealthMinor
+  - Uncut_Black_Stone
+  - Uncut_Green_Stone
+  - Uncut_Orange_Stone
+  - Uncut_Cyan_Stone
 WoodTavernLoot1:
+  - MaceBronze
   - CarrotSeeds
-  - Blueberries
   - MinceMeatSauce
   - DeerStew
   - SilverNecklace
   - MeadTasty
+  - MeadHealthMinor
 SwampLoot1:
-  - WitheredBone
-  - SurtlingCore
-  - AmberPearl
-  - Ruby
-  - ElderBark
-  - ArrowPoison
+  - CWS_Bow_10
+  - SwordIron
+  - MeadHealthMinor
+  - Uncut_Blue_Stone
+  - Uncut_Yellow_Stone
+  - Uncut_redish_Stone
 SwampLoot2:
-  - WitheredBone
+  - CWS_Atgeir_7
   - SurtlingCore
-  - Chain
   - TurnipSeeds
-  - Guck
-  - Root
+  - Uncut_Red_Stone
+  - Uncut_Purple_Stone
+  - Uncut_blueish_Stone
 SwampLoot3:
+  - KnifeSkollAndHatiIron
   - Chain
-  - Guck
-  - IronScrap
-  - WitheredBone
   - ct_campfireinabottle
+  - Uncut_Black_Stone
+  - Uncut_Green_Stone
+  - Uncut_Orange_Stone
+  - Uncut_Cyan_Stone
 MountainsLoot1:
+  - CWS_TH_Axe_6
+  - BBP_SilverBow
   - OnionSeeds
   - SurtlingCore
   - MeadEitrMinor
-  - AmberPearl
-  - Crystal
-  - JuteRed
+  - Uncut_Red_Stone
+  - Uncut_Green_Stone
+  - Uncut_Blue_Stone
+  - Uncut_Orange_Stone
 PlainsLoot1:
-  - BlackMetalScrap
-  - LinenThread
-  - IronScrap
-  - SurtlingCore
+  - CWS_Sledge_1
+  - CWS_Bow_5
   - HoneyMeadSpeed
-PlainsLoot2:
   - CoralDelightCooked
-  - LoxPie
-  - FishWraps
+  - Uncut_Green_Stone
+  - Uncut_Orange_Stone
+  - Uncut_Cyan_Stone
+  - Uncut_Purple_Stone
+PlainsLoot2:
+  - AxeBerzerkrBlackMetal
+  - CWS_Crossbow_4
   - MeadHealthMedium
   - ct_bonfireinabottle
+  - Uncut_Blue_Stone
+  - Uncut_Yellow_Stone
+  - Uncut_Red_Stone
+  - Uncut_Black_Stone
 MistLoot1:
-  - MeadStaminaMedium
+  - CWS_Dagger_8
+  - T6_Reaper
+  - MeadEitrLingering
+  - MeadBaseHealthMajor
   - HoneyMeadDamage
-  - Softtissue
-  - JuteBlue
-  - IronScrap
-MistLoot2:
-  - BHP_PumpkinWine
   - Mandible
-  - Bilebag
-  - ScaleHide
-  - SilverNecklace
-  - MeadEitrMinor
+  - DraumheimEssence
+MistLoot2:
+  - SwordMistwalker
+  - CWS_Tower_Shield_2
+  - BHP_PumpkinWine
+  - HoneyMeadSpeed
+  - ct_livingroominabottle
+  - BlackCore
+  - DraumheimEssence

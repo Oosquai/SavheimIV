@@ -1,7 +1,7 @@
 name: JC_Reaper_Spear
 m_weight: 1.5
 m_name: $jc_reaper_spear
-m_description: "A spear made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: A spear made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 10
+  m_attackStamina: 11
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -79,7 +79,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 20
+  m_attackStamina: 22
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -127,10 +127,10 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 135
+  Pierce: 155
   Poison: 0
   Slash: 0
-  Spirit: 33
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -139,10 +139,10 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 8
+  Pierce: 9
   Poison: 0
   Slash: 0
-  Spirit: 3
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -153,7 +153,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 62
+  m_blockPower: 71
   m_blockPowerPerLevel: 4
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -179,7 +179,7 @@ m_skillType: Spears
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

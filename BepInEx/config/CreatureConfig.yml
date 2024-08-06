@@ -1,40 +1,69 @@
 # ----------------------------------------
-# Peaceful Meadows
+# Peaceful Meadows at lower World Levels
+Surtling:
+  Meadows:
+    amount:
+      0: 0
+      1: 1
+
 Fuling:
   Meadows:
-    amount: 0
-
-Seeker:
-  Meadows:
-    amount: 0
-
-Tick:
-  Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 1
 
 Seeker brood:
   Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 0
+      2: 1
 
-Surtling:
+Tick:
   Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 0
+      2: 1
+
+Seeker:
+  Meadows:
+    amount:
+      0: 0
+      1: 0
+      2: 1
 
 Charred Marksman:
   Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 0
+      2: 0
+      3: 1
 
 Charred Twitcher:
   Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 0
+      2: 0
+      3: 1
 
 Charred Warlock:
   Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 0
+      2: 0
+      3: 1
 
 Charred Warrior:
   Meadows:
-    amount: 0
+    amount:
+      0: 0
+      1: 0
+      2: 0
+      3: 1
 
 # ----------------------------------------
 # Creature Adjustments - Meadows
@@ -57,16 +86,16 @@ Charred Warrior:
 # ----------------------------------------
 # Creature Adjustments - Black Forest
 # Greydwarf base stats - HP: 40; dmg: 14; weak: Fire; resist: Poison; immune: Spirit
-#Greydwarf:
-#  health: 1
+Greydwarf:
+  health: 1.2
 
 # Greydwarf Brute base stats - HP: 150; dmg: 30; weak: Fire; resist: Poison; immune: Spirit
-#Greydwarf Brute:
-#  health: 1
+Greydwarf Brute:
+  health: 1.2
 
 # Greydwarf Shaman base stats - HP: 60; dmg: 30; weak: Fire; resist: Poison; immune: Spirit
-#Greydwarf Shaman:
-#  health: 1
+Greydwarf Shaman:
+  health: 1.2
 
 # Troll base stats - HP: 600; dmg: 70; weak: Pierce; resist: Blunt; immune: Spirit
 #Troll:
@@ -109,8 +138,8 @@ Abomination:
   health: 0.85
 
 # Blob base stats - HP: 50; dmg: 90; weak: Blunt, Frost, Lightning; resist: Fire, Pierce, Slash; immune: Poison, Stagger
-#Blob:
-#  health: 1
+Blob:
+  health: 1.2
 
 # Oozer base stats - HP: 150; dmg: 115 weak: Blunt, Frost, Lightning; resist: Fire, Pierce, Slash; immune: Poison, Stagger
 #Oozer:
@@ -118,7 +147,7 @@ Abomination:
 
 # Draugr base stats - HP: 100; dmg: 48; weak: -; resist: Fire; immune: Poison
 Draugr:
-  health: 1.2
+  health: 1.3
 
 # Draugr Elite base stats - HP: 200; dmg: 58; weak: -; resist: Fire; immune: Poison
 Draugr Elite:
@@ -133,8 +162,8 @@ Draugr Elite:
 #  health: 1
 
 # Wraith base stats - HP: 100; dmg: 60; weak: Fire, Spirit; resist: Blunt, Pierce, Slash; immune: Frost, Poison
-#Wraith:
-#  health: 1
+Wraith:
+  health: 1.2
 
 # Bonemass (BOSS) base stats - HP: 5000; dmg: 130; weak: Blunt, Frost; resist: Fire, Slash, Pierce; immune: Poison, Stagger
 Bonemass:
@@ -144,7 +173,7 @@ Bonemass:
 # Creature Adjustments - Mountains
 # Wolf base stats - HP: 80; dmg: 70; weak: -; resist: -; immune: Spirit
 Wolf:
-  health: 1.1
+  health: 1.2
 
 # Drake base stats - HP: 100; dmg: 90; weak: Fire; resist: -; immune: Frost, Spirit, Stagger
 #Drake:
@@ -163,8 +192,8 @@ Stone Golem:
 #  health: 1
 
 # Ulv base stats - HP: 50; dmg: 70; weak: Poison; resist: Fire; immune: -
-#Ulv:
-#  health: 1
+Ulv:
+  health: 1.25
 
 # Cultist base stats - HP: 200; dmg: 50; weak: Poison; resist: Fire; immune: -
 #Cultist:
@@ -190,7 +219,7 @@ Lox:
 
 # Fuling base stats - HP: 175; dmg: 85; weak: -; resist: -; immune: Spirit
 Fuling:
-  health: 1.2
+  health: 1.3
 
 # Fuling Berserker base stats - HP: 800; dmg: 130; weak: -; resist: -; immune: Spirit
 #Fuling Berserker:
@@ -219,15 +248,15 @@ Fuling:
 # ----------------------------------------
 # Creature Adjustments - Mistlands
 # Seeker base stats - HP: 200; dmg: 120; weak: -; resist: Physical; immune: Spirit
-#Seeker:
-#  health: 1
+Seeker:
+  health: 1.25
 
 # Seeker Soldier base stats - HP: 1500; dmg: 120; weak: -; resist: Physical; immune: Spirit
-#Seeker Soldier:
-#  health: 0.75
-#  effect:
-#    Armored: 0
-#    Regenerating: 0
+Seeker Soldier:
+  health: 0.8
+  effect:
+    Armored: 0
+    Regenerating: 0
 
 # Seeker Brood base stats - HP: 20; dmg: 60; weak: -; resist: Physical; immune: Spirit
 #Seeker Brood:
@@ -267,8 +296,8 @@ Gjall:
 #  health: 1
 
 # Bonemaw Serpent base stats - HP: 1100; dmg: 140; weak: Frost; resist: Poison; immune: Fire, Spirit
-#Bonemaw Serpent:
-#  health: 1
+Bonemaw Serpent:
+  health: 0.9
 
 # Charred Marksman base stats - HP: 200; dmg: 200; weak: Spirit; resist: Pierce; very resist: Fire; immune: Poison
 #Charred Marksman:
@@ -281,7 +310,7 @@ Gjall:
 # Charred Warlock base stats - HP: 600; dmg: 100; weak: Spirit; resist: Pierce, Frost; very resist: Fire, Stagger; immune: Poison
 #Charred Warlock:
 Charred Warlock:
-  health: 0.7
+  health: 0.5
 
 # Charred Warrior base stats - HP: 600; dmg: 160; weak: Spirit; resist: Pierce; very resist: Fire, immune: Poison
 #Charred Warrior:

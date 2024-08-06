@@ -176,7 +176,7 @@
 # Meadows - Weapon
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Meadows
   spawns:
@@ -187,7 +187,7 @@
 # Meadows - Armor
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Meadows
   spawns:
@@ -198,7 +198,7 @@
 # Black Forest - Weapon
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Blackforest
   spawns:
@@ -209,7 +209,7 @@
 # Black Forest - Armor
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Blackforest
   spawns:
@@ -220,7 +220,7 @@
 # Swamp, Ocean - Weapon
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Swamp, Ocean
   spawns:
@@ -231,7 +231,7 @@
 # Swamp, Ocean - Armor
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Swamp, Ocean
   spawns:
@@ -242,7 +242,7 @@
 # Mountain - Weapon
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Mountain
   spawns:
@@ -253,7 +253,7 @@
 # Mountain - Armor
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Mountain
   spawns:
@@ -264,7 +264,7 @@
 # Plains - Weapon
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Plains
   spawns:
@@ -275,7 +275,7 @@
 # Plains - Armor
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Plains
   spawns:
@@ -286,7 +286,7 @@
 # Mistlands, Ashlands - Weapon
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Mistlands, AshLands
   spawns:
@@ -297,7 +297,7 @@
 # Mistlands, Ashlands - Armor
 - prefab: creature
   type: destroy
-  weight: 100
+  weight: 1E30
   filter: int, level, 6
   biomes: Mistlands, AshLands
   spawns:
@@ -322,3 +322,109 @@
   remove: true
   objects:
   - staff_greenroots_tentaroot, 50
+
+#########################################
+# Random clothes for creatures
+- prefab: Skeleton
+  type: create
+  weight: 1E30
+  data: clothes_skeleton
+
+- prefab: Skeleton_Poison
+  type: create
+  weight: 1E30
+  data: clothes_skeleton_poison
+
+- prefab: Draugr
+  type: create
+  weight: 1E30
+  data: clothes_draugr
+
+- prefab: Goblin
+  type: create
+  weight: 1E30
+  data: clothes_goblin
+
+- prefab: GoblinBrute
+  type: create
+  weight: 1E30
+  data: clothes_goblin_brute
+
+- prefab: DvergerMage
+  type: create
+  weight: 1E30
+  data: clothes_dverger_mage_allied_group
+
+- prefab: Charred_Mage
+  type: create
+  weight: 1E30
+  data: clothes_charred_mage
+
+###############################################################
+# Modify creatures based on equipment
+- prefab: Dverger
+  type: create
+  weight: 1E30
+  data: allied_group_data
+
+- prefab: DvergerMage
+  type: state, *
+  filter: gear_staff_skeleton
+  weight: 0.4
+  spawn: Skeleton, allied_group_data
+
+#- prefab: creature
+#  type: state, *
+#  filter: gear_dual_wield
+#  data: buff_dual_wield
+
+###############################################################
+## More Rancid Remains
+#- prefab: Skeleton
+#  type: create
+#  weight: 0.1
+#  triggerRules: true
+#  spawn: Skeleton_Poison
+#
+## Give Rancid Remains custom star chances, for those spawned by this script (will also affect natural spawns - np!)
+#- prefab: Skeleton_Poison
+#  type: create
+#  minDistance: 0
+#  maxDistance: 3000
+#  data: custom_star_1
+
+##############################################################
+# All mobs can swim (Raaka) - UNTESTED.  Also, blocks other type: create, like clothing
+- prefab: creature
+  type: create
+  weight: 0.1
+  data: canswim
+
+##############################################################
+# Weapon damage scaling per zone
+#- prefab: CWS_Axe_6
+  
+
+###########################################
+## Player weapon animation - THIS IS CRASHING
+#- prefab: Player
+#  type: state, swing_axe0
+#  weight: 1e30
+##  spawnDelay: 1
+#  data: swordfire
+#
+#- prefab: Player
+#  type: state, swing_axe1
+#  weight: 1e30
+##  spawnDelay: 1
+#  data: normalweapon
+
+##########################################
+## Raaka - Turns everything admins say into broadcasts while the adminbroadcast global key is active.
+## setkey adminbroadcast
+## removekey adminbroadcast
+## doesn't work because of World Advancement Progression...
+#- prefab: Player
+#  type: command, *
+#  command: broadcast center <par>
+#  globalKeys: adminbroadcast

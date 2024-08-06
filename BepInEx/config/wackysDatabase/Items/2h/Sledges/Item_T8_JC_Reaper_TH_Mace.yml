@@ -1,7 +1,7 @@
 name: JC_Reaper_TH_Mace
 m_weight: 4
 m_name: $jc_reaper_th_mace
-m_description: "A giant sledge made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: A sledge made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 11
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -70,7 +70,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 22
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -162,7 +162,7 @@ Secondary_Attack:
       m_childTransform: ''
     Burst_Effect: []
 Damage:
-  Blunt: 162
+  Blunt: 186
   Chop: 0
   Damage: 0
   Fire: 0
@@ -172,9 +172,9 @@ Damage:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 40
+  Spirit: 0
 Damage_Per_Level:
-  Blunt: 10
+  Blunt: 11
   Chop: 0
   Damage: 0
   Fire: 0
@@ -184,7 +184,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 4
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -204,7 +204,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 79
+  m_blockPower: 90
   m_blockPowerPerLevel: 5
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -230,7 +230,7 @@ m_skillType: Clubs
 m_animationState: TwoHandedAxe
 m_itemType: TwoHandedWeapon
 m_toolTier: 5
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

@@ -1,7 +1,7 @@
 name: JC_Shield_Tower
 m_weight: 8
 m_name: $jc_shield_tower
-m_description: "A giant shield made from a mysterious, otherworldly material that upgrades more strongly than others.  This shield is a bulwark against the elements and has 10% increased block power against world bosses."
+m_description: A tower shield made from a mysterious, otherworldly material that supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -122,8 +122,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 216
-  m_blockPowerPerLevel: 19
+  m_blockPower: 245
+  m_blockPowerPerLevel: 22
   m_timedBlockBonus: 0
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -148,7 +148,7 @@ m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
 m_toolTier: 0
-m_maxQuality: 3
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

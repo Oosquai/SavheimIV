@@ -1,7 +1,7 @@
 name: JC_Reaper_Crossbow
 m_weight: 8
 m_name: $jc_reaper_crossbow
-m_description: "A crossbow made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses."
+m_description: A crossbow made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -129,10 +129,10 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 216
+  Pierce: 248
   Poison: 0
   Slash: 0
-  Spirit: 53
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -141,10 +141,10 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 13
+  Pierce: 15
   Poison: 0
   Slash: 0
-  Spirit: 5
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -164,7 +164,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 30
+  m_blockPower: 34
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
@@ -190,7 +190,7 @@ m_skillType: Crossbows
 m_animationState: Crossbow
 m_itemType: Bow
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

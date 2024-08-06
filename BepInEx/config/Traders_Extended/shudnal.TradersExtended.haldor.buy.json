@@ -2,7 +2,7 @@
   {
     "prefab": "MoltenCore",
     "stack": 1,
-    "price": 999,
+    "price": 777,
     "requiredGlobalKey": "defeated_eikthyr"
   },
   {
@@ -14,7 +14,7 @@
   {
     "prefab": "SurtlingCore",
     "stack": 1,
-    "price": 50,
+    "price": 60,
     "requiredGlobalKey": "defeated_bonemass"
   },
   {
