@@ -112,7 +112,7 @@ Damage:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 30
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 1
   Chop: 0
@@ -124,7 +124,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 3
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1

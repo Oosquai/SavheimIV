@@ -7,7 +7,7 @@ Savheim IV - Group commands: /invite [name]; /leave; /remove [name]; /promote [n
 Savheim IV - Press 'U' to open Guild panel.  This has been added to Savheim IV only to allow sharing semi-private portals.
 Savheim IV - There's a new type of portal you'll eventually discover that's harder for creatures to destroy, but portals in general are now harder to obtain and will default to Private on creation.  You will not be able to teleport metals.
 Savheim IV - All weapon classes have been majorly reworked in Savheim IV (again!) to give them unique and improved playstyles.  Give them all another swing, even if you decided against them last playthrough...  Wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
-Savheim IV - Block Armor = amount you can block.  [Block Armor * Parry Bonus] = amount you can parry.  Excess damage drains health.  Block Force does nothing.
+Savheim IV - Block Armor = amount you can block.  [Block Armor * Parry Bonus] = amount you can parry.  Excess damage drains health.  Block Force does nothing.  Magical barriers confer infinite parry stats while active.
 Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical: attack a staggered enemy.  Parry: perfectly-timed block.
 Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
 Savheim IV - Harpoons now have a basic secondary attack.  Primary attack tethers, and then the Use key reels the tether in if it's lighter than you.  If it's heavier than you, well, with great power comes great responsibility...  seriously, try harpooning a distant tree and then pressing E.

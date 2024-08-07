@@ -1,34 +1,45 @@
 MeadowsLoot1:
+  - Amber
+  - MeadTasty
   - KnifeFlint
   - BMR_WoodenStaff
   - Uncut_Blue_Stone
   - Uncut_Yellow_Stone
   - Uncut_redish_Stone
 MeadowsLoot2:
-  - AxeFlint
+  - Amber
   - MeadTasty
+  - AxeFlint
   - Uncut_Red_Stone
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
 MeadowsLoot3:
+  - Amber
+  - MeadTasty
   - SpearFlint
   - Uncut_Black_Stone
   - Uncut_Green_Stone
   - Uncut_Orange_Stone
   - Uncut_Cyan_Stone
 BlackforestLoot1:
+  - AmberPearl
+  - MeadHealthMinor
   - BMR_EmberWand
   - CWS_Crossbow_2
   - Uncut_Blue_Stone
   - Uncut_Yellow_Stone
   - Uncut_redish_Stone
 BlackforestLoot2:
+  - AmberPearl
+  - MeadHealthMinor
   - FistFenrirClawBronze
   - CarrotSeeds
   - Uncut_Red_Stone
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
 BlackforestLoot3:
+  - AmberPearl
+  - MeadHealthMinor
   - THSwordBronze
   - SurtlingCore
   - Uncut_Black_Stone
@@ -36,6 +47,7 @@ BlackforestLoot3:
   - Uncut_Orange_Stone
   - Uncut_Cyan_Stone
 WoodTavernLoot1:
+  - AmberPearl
   - MaceBronze
   - CarrotSeeds
   - MinceMeatSauce
@@ -44,13 +56,16 @@ WoodTavernLoot1:
   - MeadTasty
   - MeadHealthMinor
 SwampLoot1:
+  - ct_campfireinabottle
+  - MeadStaminaMinor
   - CWS_Bow_10
   - SwordIron
-  - MeadHealthMinor
   - Uncut_Blue_Stone
   - Uncut_Yellow_Stone
   - Uncut_redish_Stone
 SwampLoot2:
+  - ct_campfireinabottle
+  - MeadStaminaMinor
   - CWS_Atgeir_7
   - SurtlingCore
   - TurnipSeeds
@@ -58,9 +73,10 @@ SwampLoot2:
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
 SwampLoot3:
+  - ct_campfireinabottle
+  - MeadStaminaMinor
   - KnifeSkollAndHatiIron
   - Chain
-  - ct_campfireinabottle
   - Uncut_Black_Stone
   - Uncut_Green_Stone
   - Uncut_Orange_Stone
@@ -94,18 +110,20 @@ PlainsLoot2:
   - Uncut_Red_Stone
   - Uncut_Black_Stone
 MistLoot1:
+  - MeadEitrLingering
+  - MeadHealthMajor
+  - HoneyMeadDamage
+  - BarleyWine
   - CWS_Dagger_8
   - T6_Reaper
-  - MeadEitrLingering
-  - MeadBaseHealthMajor
-  - HoneyMeadDamage
   - Mandible
   - DraumheimEssence
 MistLoot2:
-  - SwordMistwalker
-  - CWS_Tower_Shield_2
+  - MeadStaminaMedium
   - BHP_PumpkinWine
   - HoneyMeadSpeed
-  - ct_livingroominabottle
+  - ct_bonfireinabottle
+  - SwordMistwalker
+  - CWS_Tower_Shield_2
   - BlackCore
   - DraumheimEssence
