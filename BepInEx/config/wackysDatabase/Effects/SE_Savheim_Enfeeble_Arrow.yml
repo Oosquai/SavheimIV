@@ -18,7 +18,7 @@ TimeToLive: 12
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS: 
-- name: vfx_Smoked
+- name: vfx_Freezing
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -79,7 +79,7 @@ SeData:
   m_skillLevelModifier2: 0
   m_mods: []
   m_modifyAttackSkill: All
-  m_damageModifier: 0.85
+  m_damageModifier: 0.8
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0

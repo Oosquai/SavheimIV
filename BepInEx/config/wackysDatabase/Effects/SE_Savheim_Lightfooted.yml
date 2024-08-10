@@ -29,8 +29,8 @@ SeData:
   m_staminaOverTime: 0
   m_staminaOverTimeDuration: 0
   m_staminaDrainPerSec: 0
-  m_runStaminaDrainModifier: -0.05
-  m_jumpStaminaUseModifier: -0.05
+  m_runStaminaDrainModifier: -0.07
+  m_jumpStaminaUseModifier: -0.07
   m_eitrOverTime: 0
   m_eitrOverTimeDuration: 0
   m_healthRegenMultiplier: 1
@@ -48,7 +48,7 @@ SeData:
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
-  m_speedModifier: 0.05
+  m_speedModifier: 0.07
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0

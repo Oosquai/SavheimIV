@@ -286,7 +286,7 @@ groups:
     - FistFenrirClawFlametal
     - KnifeSkollAndHatiIron
     - KnifeSkollAndHatiSilver
-    - KnifeSkollAndHatiBlackSilver
+    - KnifeSkollAndHatiEbonsteel
     - KnifeSkollAndHatiFlametal
     - THSwordBronze
     - THSwordSilver
@@ -299,6 +299,11 @@ groups:
     - T3_StaffLightning
     - StaffShield_T4
     - T5_StaffLightning
+    - T8_Reaper
+    - AxeBerzerkrCelestial
+    - FistFenrirClawCelestial
+    - CWS_Atgeir_2_SH
+    - KnifeSkollAndHatiCelestial
 
   OneHandedWeapon:
     - AxeBlackMetal
@@ -419,6 +424,7 @@ groups:
     - CWS_Sword_12
     - CWS_Sword_13
     - CWS_Sword_14
+    - CWS_Sword_12_SH
 
   Shield:
     - ShieldBanded

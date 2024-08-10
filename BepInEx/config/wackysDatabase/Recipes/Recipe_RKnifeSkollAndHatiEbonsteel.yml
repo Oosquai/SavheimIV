@@ -1,0 +1,15 @@
+name: RKnifeSkollAndHatiEbonsteel
+clonePrefabName: KnifeSkollAndHatiEbonsteel
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- YggdrasilWood:2:1:True
+- LoxPelt:4:2:True
+- BlackMetal:14:7:True
+- BlackMarble:14:7:True

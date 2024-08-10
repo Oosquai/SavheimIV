@@ -107,7 +107,7 @@ Skeleton:
 
 # Rancid Remains base stats - HP: 100; dmg: 30; weak: Blunt, Fire; resist: Pierce; immune: Poison
 Rancid Remains:
-  health: 1.5
+  health: 1.25
 
 # Ghost base stats - HP: 60; dmg: 25; weak: Spirit, Fire; resist: Physical; immune: Poison
 #Ghost:
@@ -146,12 +146,12 @@ Blob:
 #  health: 1
 
 # Draugr base stats - HP: 100; dmg: 48; weak: -; resist: Fire; immune: Poison
-Draugr:
-  health: 1.3
+#Draugr:
+#  health: 1.3
 
 # Draugr Elite base stats - HP: 200; dmg: 58; weak: -; resist: Fire; immune: Poison
-Draugr Elite:
-  health: 1.5
+#Draugr Elite:
+#  health: 1.5
 
 # Leech base stats - HP: 60; dmg: 70; weak: -; resist: Poison; immune: Fire, Spirit, Stagger
 #Leech:
@@ -218,8 +218,8 @@ Lox:
   health: 0.9
 
 # Fuling base stats - HP: 175; dmg: 85; weak: -; resist: -; immune: Spirit
-Fuling:
-  health: 1.3
+#Fuling:
+#  health: 1.3
 
 # Fuling Berserker base stats - HP: 800; dmg: 130; weak: -; resist: -; immune: Spirit
 #Fuling Berserker:
@@ -308,7 +308,6 @@ Bonemaw Serpent:
 #  health: 1
 
 # Charred Warlock base stats - HP: 600; dmg: 100; weak: Spirit; resist: Pierce, Frost; very resist: Fire, Stagger; immune: Poison
-#Charred Warlock:
 Charred Warlock:
   health: 0.5
 

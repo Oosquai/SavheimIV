@@ -5,7 +5,7 @@ m_description: More axes means more damage.  These weapons will chew through you
 clonePrefabName: AxeBerzerkr
 mockName: 
 customIcon: 
-material: eldner_mat
+material: berzerkr_mat_t3
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true

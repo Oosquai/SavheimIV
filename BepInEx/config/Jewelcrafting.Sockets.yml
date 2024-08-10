@@ -99,7 +99,7 @@ thunderclap:
 # Magic Weapons
 
 magical bargain:
-  slot: elementalmagic
+  slot: [weapon, elementalmagic]
   gem: orange
   power: [8, 16, 24]
 

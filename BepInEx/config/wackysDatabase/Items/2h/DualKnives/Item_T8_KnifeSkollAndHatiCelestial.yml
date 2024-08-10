@@ -1,12 +1,14 @@
-name: KnifeSkollAndHati
+name: KnifeSkollAndHatiCelestial
 m_weight: 0.3
-m_name: $item_knife_skollandhati
-m_description: $item_knife_skollandhati_description  Dual knives allow the wielder to dodge more effectively, pounce on distant enemies, and viciously slice and stab their foes to ribbons.  They sometimes twist and tear their victim's guts after penetrating their armor with both blades.
-clonePrefabName: 
+m_name: Celestial Knife and Sickle
+m_description: A knife and sickle made from a mysterious, otherworldly material that supports an additional upgrade and socket.
+clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 
-material: 
+material: SkollAndHati_mat_T8
 customVisual: 
+snapshotRotation: 
+snapshotOnMaterialChange: true
 sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
@@ -16,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 10
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -30,7 +32,7 @@ Primary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
-  ReloadTime: 2
+  ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
   Bow_Draw: false
   Bow_Duration_Min: 0
@@ -43,19 +45,28 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1
-  Attack_status_effect: SE_Savheim_Gut_Twist_Double_T6
+  Attack_status_effect: SE_Savheim_Gut_Twist_Double_T8
   Attack_status_effect_chance: 0.13
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
   Projectiles: 1
-  AEffects:
-    Hit_Effects: 
-    Hit_Terrain_Effects: 
-    Start_Effect: 
-    Trigger_Effect: 
-    Trail_Effect: 
-    Burst_Effect: 
+  Skill_Accuracy: false
+  Launch_Angle: 0
+  Projectile_Burst: 1
+  Burst_Interval: 0
+  Destory_Previous_Projectile: false
+  PerBurst_Resourse_usage: false
+  Looping_Attack: false
+  Consume_Item: false
+  AEffects: 
+  AEffectsPLUS:
+    Hit_Effects: []
+    Hit_Terrain_Effects: []
+    Start_Effect: []
+    Trigger_Effect: []
+    Trail_Effect: []
+    Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
   Attack_Animation: dual_knives_secondary
@@ -63,7 +74,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 20
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -77,7 +88,7 @@ Secondary_Attack:
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
-  ReloadTime: 2
+  ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
   Bow_Draw: false
   Bow_Duration_Min: 0
@@ -94,13 +105,22 @@ Secondary_Attack:
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
   Projectiles: 1
-  AEffects:
-    Hit_Effects: 
-    Hit_Terrain_Effects: 
-    Start_Effect: 
-    Trigger_Effect: 
-    Trail_Effect: 
-    Burst_Effect: 
+  Skill_Accuracy: false
+  Launch_Angle: 0
+  Projectile_Burst: 1
+  Burst_Interval: 0
+  Destory_Previous_Projectile: false
+  PerBurst_Resourse_usage: false
+  Looping_Attack: false
+  Consume_Item: false
+  AEffects: 
+  AEffectsPLUS:
+    Hit_Effects: []
+    Hit_Terrain_Effects: []
+    Start_Effect: []
+    Trigger_Effect: []
+    Trail_Effect: []
+    Burst_Effect: []
 Damage:
   Blunt: 0
   Chop: 0
@@ -109,9 +129,9 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 43
+  Pierce: 58
   Poison: 0
-  Slash: 43
+  Slash: 58
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -121,9 +141,9 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 2
+  Pierce: 3
   Poison: 0
-  Slash: 3
+  Slash: 4
   Spirit: 0
 Armor:
   armor: 20
@@ -132,10 +152,19 @@ FoodStats:
 Moddifiers:
   m_movementModifier: 0
   m_EitrRegen: 0
+  m_homeItemsStaminaModifier: 0
+  m_heatResistanceModifier: 0
+  m_jumpStaminaModifier: 0
+  m_attackStaminaModifier: 0
+  m_blockStaminaModifier: 0
+  m_dodgeStaminaModifier: 0
+  m_swimStaminaModifier: 0
+  m_sneakStaminaModifier: 0
+  m_runStaminaModifier: 0
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 26
+  m_blockPower: 34
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 4
   m_deflectionForce: 0
@@ -161,7 +190,7 @@ m_skillType: Knives
 m_animationState: Knives
 m_itemType: TwoHandedWeapon
 m_toolTier: 4
-m_maxQuality: 4
+m_maxQuality: 5
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

@@ -27,7 +27,7 @@ Savheim IV - Check your Valheim Compendium (inventory -> raven icon) for useful 
 Savheim IV - Comfort and Rested are easier to obtain, but teleporting long distances will now reduce your Rested duration.  The radius of the map is worth about 90 minutes of Rested.  F6 toggles a list of comforting pieces while in shelter.  Rest in groups for extra duration!
 Savheim IV - Waypoints offer safety from monsters, warmth, and a way to pick up a Rested buff in the field if you sit near it during favorable weather.
 Savheim IV - Zone progression:  Meadows -> Black Forest -> Swamp -> Mountains -> Plains -> Mistlands -> Ashlands -> Deep North.  They all hold surprises since Savheim III!
-Savheim IV - Most outdoor camps, resources, and dungeons will respawn slowly at varying rates, but only if players haven't built anything near them.
+Savheim IV - Most outdoor camps, resources, and dungeons will respawn slowly at varying rates, but only if players haven't built anything near them (anything made with a Hammer counts as "built").
 Savheim IV - Steps have been taken to ensure we can all coexist in the same world despite playing at different speeds.  Relax and enjoy the journey.
 Savheim IV - Sell precious stones, trophies, extra keys, and wishbones to the traders.  Split stacks in your inventory to control quantities you want to sell.  Double-click items you want to buy to specify quantities.
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
@@ -38,7 +38,7 @@ Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever s
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
 Savheim IV - Gems and jewelry have been completely reworked.  Craft a Jeweler's Box at the Gemcutter's table to conveniently take jewelry options with you on adventures.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  They're scary.  Bring a tower shield and block them until you learn their timing.
-Savheim IV - Each boss now has a small chance to drop a variety of weapons unique to that boss.  These weapons trade upgradeable stats for powerful special effects.  You'll have opportunities to find endgame versions of each.
+Savheim IV - Each boss now has a small chance to drop a variety of weapons unique to that boss.  These weapons trade upgradeable stats for unique special effects.  You'll have opportunities to find endgame versions of each.
 Savheim IV - You'll now earn catch-up experience for skills working back toward all-time highs, as well as alternate weapon skills compared to your most experienced weapon skill.
 Savheim IV - Most bows and crossbows now have a small chance their projectiles will leave behind reusable fletchings.  Wood arrows and bolts can now be crafted from inventory, but they do less damage.
 Savheim IV - All players can now create a marketplace for other players to buy from.  Please help make the economy interesting by setting what you think are competitive prices.  Please don't spoil the game for others by setting minimum prices.
@@ -51,3 +51,4 @@ Savheim IV - Level 50 blacksmiths can repair from inventory.  Level 50 builders 
 Savheim IV - Most weapon types now offer some form of debuff or secondary damage.  Different creatures are susceptible to these in unique ways.  Experiment to find viable strategies for applying these new tools.
 Savheim IV - The more stars a creature has, the better the loot.  At three stars and up you'll start to see increasingly precious components.  Infused creatures are rare and have coveted treasures.
 Savheim IV - Meadows on the starting continent will always be a safe place.  The same cannot be said for anywhere else in the world.
+Savheim IV - Some creatures have learned to dual wield for increased offense, use shields for improved defense, or use magic for ... magic.

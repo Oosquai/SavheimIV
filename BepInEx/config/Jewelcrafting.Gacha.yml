@@ -168,6 +168,23 @@ Empyrean Odyssey:
         - empty
         - empty
         - empty
+Divine Intervention:
+  duration: default
+  prizes:
+    celestial sanctis:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
+    celestial knife and sickle:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
       
 # You can create a global blacklist. Gems on the global blacklist cannot be obtained from any event.
 #global blacklist:

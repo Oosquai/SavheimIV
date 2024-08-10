@@ -1,7 +1,7 @@
 name: KnifeSkollAndHati
 clonePrefabName: 
-craftingStation: $piece_blackforge
-minStationLevel: 1
+craftingStation: $piece_forge
+minStationLevel: 4
 maxStationLevelCap: 
 repairStation: 
 amount: 1
@@ -9,6 +9,6 @@ disabled: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- YggdrasilWood:2:1:True
+- FineWood:2:1:True
 - LoxPelt:6:3:True
 - BlackMetal:20:10:True

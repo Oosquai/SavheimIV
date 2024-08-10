@@ -55,7 +55,7 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.161
+  m_tickInterval: 0.188
   m_healthPerTickMinHealthPercentage: 0
   m_healthPerTick: -3
   m_healthOverTime: 0

@@ -10,7 +10,6 @@
   - AxeBerzerkrBlood
   - AxeBerzerkrLightning
   - AxeBerzerkrNature
-  - KnifeSkollAndHati
   - PickaxeBlackMetal
   - SledgeDemolisher
   - StaffClusterbomb
@@ -36,6 +35,7 @@
   - AxeBerzerkrCelestial
   - FistFenrirClawCelestial
   - CWS_Atgeir_2_SH
+  - KnifeSkollAndHatiCelestial
   - BMR_ElvenStaff
   - BMR_FlametalStaff
   - CWS_Atgeir_6
@@ -47,6 +47,7 @@
   - FistFenrirClawCarapace
   - FistFenrirClawFlametal
   - KnifeSkollAndHatiFlametal
+  - KnifeSkollAndHatiEbonsteel
   - T6_Reaper
   - T7_Reaper
   - AxeJotunBane
@@ -62,10 +63,13 @@
   - SpearSplitner_Nature
   - SwordDyrnwyn
   - SwordMistwalker
+  - CWS_Sword_4
   - SwordNiedhogg
   - SwordNiedhoggBlood
   - SwordNiedhoggLightning
   - SwordNiedhoggNature
+  - CWS_Sword_13
+  - CWS_Sword_12_SH
   - JC_Reaper_Axe
   - JC_Reaper_Sword
   - JC_Reaper_Spear
@@ -150,7 +154,7 @@
   - BMR_VoodooStaff
   - AxeBerzerkrBlackMetal
   - FistFenrirClawBlackmetal
-  - KnifeSkollAndHatiBlackSilver
+  - KnifeSkollAndHati
   - T5_Reaper
   - T5_StaffLightning
   - CWS_Atgeir_5
@@ -161,6 +165,7 @@
   - KnifeBlackMetal
   - MaceNeedle
   - SwordBlackmetal
+  - CWS_Sword_10
   - BMR_CursedWand
   - CWS_Spear_1
   - ShieldBlackmetal
@@ -212,6 +217,7 @@
   - KnifeSilver
   - MaceSilver
   - SwordSilver
+  - CWS_Sword_11
   - BMR_CrystalWand
   - CWS_Axe_7
   - ShieldSerpentscale
@@ -266,6 +272,7 @@
   - SpearChitin
   - SpearElderbark
   - SwordIron
+  - CWS_Sword_14
   - BMR_RootWand
   - ShieldBanded
   - ShieldIronBuckler
@@ -313,6 +320,7 @@
   - MaceBronze
   - SpearBronze
   - SwordBronze
+  - CWS_Sword_2
   - BMR_EmberWand
   - ShieldBoneTower
   - ShieldBronzeBuckler

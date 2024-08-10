@@ -1,11 +1,11 @@
 name: AxeBerzerkrSilver
 m_weight: 2
-m_name: Obsidian Berserkir Axes
+m_name: Silver Berserkir Axes
 m_description: More axes means more damage.  These weapons will chew through your enemies, especially after you tear pieces of their armor away.
 clonePrefabName: AxeBerzerkr
 mockName: 
 customIcon: 
-material: ObsidianRock_mat
+material: berzerkr_mat_t4
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true

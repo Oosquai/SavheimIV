@@ -27,16 +27,12 @@
   - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern
 
 - name: clothes_draugr
-#  ints:
-#  - HasFields, 1
-#  - HasFieldsHumanoid, 1
-#  - HasFieldsMonsterAI, 1
   hashes:
   - LeftItem, <none>, draugr_axe
-#  floats:
-#  - Humanoid.m_speed, 100
-#  - MonsterAI.m_minAttackInterval, 5
-#  - RandomSkillFactor, 4
+
+- name: clothes_draugr_elite
+  hashes:
+  - LeftItem, <none>, <none>, ShieldIronTower
 
 - name: clothes_goblin
   hashes:
@@ -54,14 +50,72 @@
 
 - name: clothes_charred_mage
   hashes:
-  - LeftItem, StaffRedTroll
+  - LeftItem, <none>, StaffShield
+
+- name: clothes_charred_melee
+  hashes:
+  - LeftItem, <none>, <none>, <none>, SwordNiedhogg, ShieldFlametalTower
 
 ####################################
-# Monster modifications based on gear
+# Creature modifications based on gear
 - name: gear_staff_skeleton
   hashes:
   - LeftItem, StaffSkeleton
 
+- name: gear_staff_shield
+  hashes:
+  - LeftItem, StaffShield
+
+- name: gear_shield
+  hashes:
+  - LeftItem, ShieldWood, ShieldBronzeBuckler, ShieldBanded, CWS_Round_Shield_6, ShieldIronTower, ShieldIronBuckler, ShieldFlametalTower
+
+- name: gear_dual_wield
+  hashes:
+  - LeftItem, SwordBronze, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, GoblinBrute_RageAttack, SwordNiedhogg
+
+- name: hp_130percent
+  floats:
+  - max_health, <par1>*1.3
+  - health, <par1>*1.301
+
+- name: dmg_130percent
+  floats:
+  - RandomSkillFactor, 1.3
+
+####################################
+# Sanctis
+- name: gear_sanctis_t2
+  hashes:
+  - RightItem, CWS_Sword_2
+
+- name: gear_sanctis_t3
+  hashes:
+  - RightItem, CWS_Sword_14
+
+- name: gear_sanctis_t4
+  hashes:
+  - RightItem, CWS_Sword_11
+
+- name: gear_sanctis_t5
+  hashes:
+  - RightItem, CWS_Sword_10
+
+- name: gear_sanctis_t6
+  hashes:
+  - RightItem, CWS_Sword_4
+
+- name: gear_sanctis_t7
+  hashes:
+  - RightItem, CWS_Sword_13
+
+- name: gear_sanctis_t8
+  hashes:
+  - RightItem, CWS_Sword_12_SH
+
+
+##############################################################
+##############################################################
 #- name: custom_star_1
 #  ints:
 #  - level, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3

@@ -14,7 +14,7 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 6
+TimeToLive: 8
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
@@ -55,9 +55,9 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.281
+  m_tickInterval: 0.25
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -6
+  m_healthPerTick: -3
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

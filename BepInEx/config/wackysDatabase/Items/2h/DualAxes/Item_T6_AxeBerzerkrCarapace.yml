@@ -1,11 +1,11 @@
 name: AxeBerzerkrCarapace
 m_weight: 2
-m_name: Marbled Berserkir Axes
+m_name: Ebonsteel Berserkir Axes
 m_description: More axes means more damage.  These weapons will chew through your enemies, especially after you tear pieces of their armor away.
 clonePrefabName: AxeBerzerkr
 mockName: 
 customIcon: 
-material: blackmarble_item
+material: berzerkr_mat_t6
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true

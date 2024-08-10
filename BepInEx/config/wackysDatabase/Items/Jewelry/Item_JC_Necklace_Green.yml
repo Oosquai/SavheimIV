@@ -1,7 +1,7 @@
 name: JC_Necklace_Green
 m_weight: 0.1
 m_name: $jc_necklace_green
-m_description: $jc_necklace_green_description
+m_description: $jc_necklace_green_description  The aura also confers a small amount of additional armor.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 1
+  armor: 5
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
