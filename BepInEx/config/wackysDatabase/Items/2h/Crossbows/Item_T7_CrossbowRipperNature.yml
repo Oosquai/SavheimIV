@@ -1,7 +1,7 @@
 name: CrossbowRipperNature
 m_weight: 8
 m_name: $item_crossbow_ripper_nature
-m_description: $item_crossbow_ripper_nature_description
+m_description: $item_crossbow_ripper_nature_description  Crossbows stay loaded when stowed, offering an on-demand burst of damage at any time and at any range.
 clonePrefabName: 
 mockName: 
 customIcon: 

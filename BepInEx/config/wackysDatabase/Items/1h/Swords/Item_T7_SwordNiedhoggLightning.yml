@@ -1,7 +1,7 @@
 name: SwordNiedhoggLightning
 m_weight: 0.8
 m_name: $item_sword_niedhogg_lightning
-m_description: $item_sword_niedhogg_lightning_description
+m_description: $item_sword_niedhogg_lightning_description  Swords have a thrust as a secondary attack that leaves targets bleeding.
 clonePrefabName: 
 mockName: 
 customIcon: 

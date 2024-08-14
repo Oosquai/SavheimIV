@@ -1,7 +1,7 @@
 name: ShieldFlametalTower
 m_weight: 8
 m_name: $item_shield_flametal_tower
-m_description: $item_shield_flametal_tower_description
+m_description: $item_shield_flametal_tower_description  Tower shields grant increased health regeneration when blocking attacks.
 clonePrefabName: 
 mockName: 
 customIcon: 

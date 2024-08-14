@@ -1,7 +1,7 @@
 name: CWS_Atgeir_10
 m_weight: 2.5
 m_name: Silver Atgeir
-m_description: A beautifully crafted silver atgeir.  Atgeirs control opponents by hamstringing them with their secondary spin attack.
+m_description: A beautifully crafted silver atgeir.  Atgeirs are nimble weapons with good reach, and they hamstring foes with their secondary spin attack.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -17,7 +17,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
+  Custom_AttackSpeed: 1.15
   m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0

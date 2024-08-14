@@ -1,7 +1,7 @@
 name: CWS_Bow_5
 m_weight: 1.5
 m_name: Black Shrike Longbow
-m_description: It hungers.  Longbows are harder to draw than shortbows, but their shots travel faster and further, hit harder, and may stagger weaker foes.
+m_description: It hungers.  Longbows reach far and hit hard when fired from the ground, or they can fire a quick shot while jumping.
 clonePrefabName: 
 mockName: 
 customIcon: 

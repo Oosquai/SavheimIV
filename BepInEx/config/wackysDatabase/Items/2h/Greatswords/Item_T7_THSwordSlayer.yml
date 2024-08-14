@@ -1,7 +1,7 @@
 name: THSwordSlayer
 m_weight: 4
 m_name: $item_sword_slayer
-m_description: $item_sword_slayer_description  Greatswords have a balanced moveset and reliable parry, designed to overpower, outmaneuver, and bleed your foes.
+m_description: $item_sword_slayer_description  Greatswords have a balanced moveset, a reliable parry, and the ability to bleed foes with their secondary thrust.
 clonePrefabName: 
 mockName: 
 customIcon: 

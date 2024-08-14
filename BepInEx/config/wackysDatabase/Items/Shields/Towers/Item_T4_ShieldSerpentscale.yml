@@ -1,7 +1,7 @@
 name: ShieldSerpentscale
 m_weight: 8
 m_name: $item_shield_serpentscale
-m_description: "A sturdy shield of overlapping scales that excels at stopping piercing attacks, like that of a Deathsquito."
+m_description: A sturdy shield of overlapping scales.  Tower shields grant increased health regeneration when blocking attacks.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: CWS_Sword_12_SH
 m_weight: 0.8
 m_name: Celestial Sanctis
-m_description: Imbued with Odin's might, Sanctis harness eitr to conjure protective wards and vanquish the undead.
+m_description: Imbued with Odin's might, Sanctir harness eitr to conjure protective wards and vanquish the undead.  These weapons scale with Elemental Magic.
 clonePrefabName: CWS_Sword_12
 mockName: 
 customIcon: 
@@ -19,7 +19,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 11
+  m_attackStamina: 7
   m_eitrCost: 11
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -128,7 +128,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: false
   Custom_AttackSpeed: 2
-  m_attackStamina: 22
+  m_attackStamina: 14
   m_eitrCost: 22
   AttackHealthCost: 0
   m_attackHealthPercentage: 0

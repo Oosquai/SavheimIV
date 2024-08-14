@@ -12,47 +12,87 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
 
+- name: savCheck
+  longs:
+  - playerID, 4157069897
+
 ####################################
 # Monster Clothes!
 - name: clothes_skeleton
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
   - LeftItem, <none>, <none>, SwordBronze, Torch, KnifeCopper
 
 - name: clothes_skeleton_poison
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
   - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
   - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern
 
 - name: clothes_draugr
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, draugr_axe
 
 - name: clothes_draugr_elite
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, <none>, ShieldIronTower
 
 - name: clothes_goblin
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, <none>, GoblinSword, ShieldIronBuckler, CWS_Dagger_2
 
 - name: clothes_goblin_brute
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, <none>, <none>, GoblinBrute_RageAttack
 
 - name: clothes_dverger_mage_allied_group
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, <none>, <none>, StaffSkeleton
   strings:
   - Humanoid.m_group, allied_group_tag
 
 - name: clothes_charred_mage
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, StaffShield
 
 - name: clothes_charred_melee
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, <none>, <none>, <none>, SwordNiedhogg, ShieldFlametalTower
 
@@ -80,8 +120,12 @@
   - health, <par1>*1.301
 
 - name: dmg_130percent
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 0
   floats:
   - RandomSkillFactor, 1.3
+  - MonsterAI.m_circleTargetDuration, 0
+  - MonsterAI.m_circleTargetInterval, 1E+30
 
 ####################################
 # Sanctis
@@ -113,6 +157,41 @@
   hashes:
   - RightItem, CWS_Sword_12_SH
 
+####################################
+# Aegis - refund eitr on parry
+- name: aegisShieldList
+  hashes:
+  - LeftItem, CWS_Round_Shield_5, CWS_Round_Shield_4, CWS_Round_Shield_3, CWS_Round_Shield_1, CWS_Heater_Shield_4, CWS_Heater_Shield_2, CWS_Heater_Shield_3
+
+####################################
+# Round shields - refund stamina on parry
+- name: roundShieldList
+  hashes:
+  - LeftItem, CWS_Round_Shield_2, ShieldBanded, ShieldSilver, ShieldBlackmetal, ShieldCarapace, ShieldFlametal, JC_Reaper_Shield
+
+####################################
+# Bucklers - give movespeed on parry
+- name: bucklerShieldList
+  hashes:
+  - LeftItem, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7, CWS_Buckler_Shield_1, ShieldCarapaceBuckler, CWS_Buckler_Shield_2, JC_Shield_Buckler
+
+####################################
+# Tower Shields - give hp regen when blocking stance
+- name: towerShieldList
+  hashes:
+  - LeftItem, ShieldBoneTower, CWS_Tower_Shield_1, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2, ShieldFlametalTower, JC_Shield_Tower
+
+####################################
+# Shortbows - jump ninja roll
+- name: shortBowList
+  hashes:
+  - LeftItem, CWS_Bow_8, CWS_Bow_10, CWS_Bow_3, CWS_Bow_1, CWS_Bow_2, CWS_Bow_6, JC_Reaper_Bow, CWS_Bow_11, BBP_BoneBow
+
+####################################
+# Longbows - levitate while drawing bow
+- name: longBowList
+  hashes:
+  - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow, CWS_Bow_7, CWS_Bow_4_SH
 
 ##############################################################
 ##############################################################

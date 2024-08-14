@@ -1,7 +1,7 @@
 name: BowSpineSnap
 m_weight: 1.5
 m_name: Spinesnap Longbow
-m_description: $item_bow_snipesnap_description  Longbows are harder to draw than shortbows, but their shots travel faster and further, hit harder, and may stagger weaker foes.
+m_description: $item_bow_snipesnap_description  Longbows reach far and hit hard when fired from the ground, or they can fire a quick shot while jumping.
 clonePrefabName: 
 mockName: 
 customIcon: 

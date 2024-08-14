@@ -1,7 +1,7 @@
 name: CWS_Buckler_Shield_2
 m_weight: 2
 m_name: Flametal Buckler
-m_description: An elegant flametal buckler.
+m_description: An elegant flametal buckler.  Bucklers grant a burst of speed after a successful parry.
 clonePrefabName: 
 mockName: 
 customIcon: 

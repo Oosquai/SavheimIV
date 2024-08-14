@@ -59,11 +59,55 @@ Primary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects: []
+    Hit_Effects: 
+    - name: vfx_clubhit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_battleaxe_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: fx_swing_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
-    Trail_Effect: []
+    Trail_Effect: 
+    - name: sfx_battleaxe_swing_wosh
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Area
@@ -161,18 +205,7 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
-    Trail_Effect:
-    - name: sfx_sledge_swing
-      m_enabled: false
-      m_variant: -1
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Trail_Effect: []
     Burst_Effect: []
 Damage:
   Blunt: 22
@@ -249,42 +282,20 @@ ConsumableStatusEffect:
 damageModifiers: []
 GEffects: 
 GEffectsPLUS:
-  Hit_Effects:
-  - name: vfx_clubhit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: sfx_battleaxe_hit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: fx_swing_camshake
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Hit_Effects: []
   Hit_Terrain_Effects: []
-  Start_Effect: []
+  Start_Effect: 
+  - name: sfx_sledge_swing
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
@@ -298,9 +309,31 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
+  - name: vfx_sledge_iron_hit
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_sledge_iron_hit
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
   Trail_Effect:
-  - name: sfx_battleaxe_swing_wosh
-    m_enabled: true
+  - name: sfx_sledge_swing
+    m_enabled: false
     m_variant: -1
     m_attach: false
     m_follow: false

@@ -1,7 +1,7 @@
 name: T5_Reaper
 m_weight: 4
 m_name: Black Metal Reaper
-m_description: Reapers demand blood instead of stamina to fuel increasingly devastating attacks as the wielder's health decreases.  Primary attacks can destroy armor, providing a brief window for an extremely high-damage secondary attack.  Reapers synergize well with certain gems.
+m_description: Reapers demand blood to fuel increasingly devastating attacks as the wielder's health decreases.  Primary attacks can destroy armor, providing a brief window for an extremely high-damage secondary attack.  Reapers synergize well with certain gems and scale with Blood Magic.
 clonePrefabName: THSwordSlayerBlood
 mockName: 
 customIcon: 
@@ -19,8 +19,8 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 0
-  m_eitrCost: 9
+  m_attackStamina: 4
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 9
   SpeedFactor: 0.6
@@ -95,8 +95,8 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 0
-  m_eitrCost: 18
+  m_attackStamina: 8
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 18
   SpeedFactor: 0.6

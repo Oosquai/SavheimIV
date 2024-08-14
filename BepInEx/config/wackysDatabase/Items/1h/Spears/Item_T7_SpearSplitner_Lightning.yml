@@ -1,7 +1,7 @@
 name: SpearSplitner_Lightning
 m_weight: 1.5
 m_name: $item_spear_splitner_lightning
-m_description: $item_spear_splitner_lightning_description
+m_description: $item_spear_splitner_lightning_description  When thrown, spears have a chance to pin their target.
 clonePrefabName: 
 mockName: 
 customIcon: 

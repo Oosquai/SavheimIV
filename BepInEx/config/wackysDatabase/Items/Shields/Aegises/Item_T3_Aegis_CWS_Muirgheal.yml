@@ -1,7 +1,7 @@
 name: CWS_Round_Shield_4
 m_weight: 5
 m_name: Scaled Aegis
-m_description: Aegises offer excellent protection from the elements when actively blocking.
+m_description: Aegises offer excellent protection from the elements when actively blocking, and they grant increased eitr regen after a successful parry.  They consume more stamina when blocking though.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -166,7 +166,7 @@ Moddifiers:
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0
   m_attackStaminaModifier: 0
-  m_blockStaminaModifier: 0
+  m_blockStaminaModifier: 1
   m_dodgeStaminaModifier: 0
   m_swimStaminaModifier: 0
   m_sneakStaminaModifier: 0

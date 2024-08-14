@@ -1,6 +1,6 @@
 name: BMR_FlametalStaff
 m_weight: 0.3
-m_name: Hexing Staff
+m_name: $bmr_flametalstaff
 m_description: $bmr_flametalstaff_description
 clonePrefabName: 
 mockName: 

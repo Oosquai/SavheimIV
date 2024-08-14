@@ -1,4 +1,12 @@
 ##############################################################
+# Debug - print player state
+#- prefab: Player
+#  type: state, *
+#  commands: 
+#  - s <par>
+#  - broadcast center <par>
+
+##############################################################
 # Infused creatures drop bezels per zone.
 - prefab: creature
   type: destroy
@@ -332,7 +340,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: Skeleton_Poison
@@ -342,7 +350,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: Draugr
@@ -352,7 +360,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: Draugr_Elite
@@ -362,7 +370,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: Goblin
@@ -372,7 +380,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: GoblinBrute
@@ -382,18 +390,13 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: DvergerMage
   type: create
   weight: 1E30
   data: clothes_dverger_mage_allied_group
-  poke:
-  - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.01
-    maxDistance: 0.1
 
 - prefab: Charred_Melee
   type: create
@@ -402,18 +405,13 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.01
+    delay: 0.02
     maxDistance: 0.1
 
 - prefab: Charred_Mage
   type: create
   weight: 1E30
   data: clothes_charred_mage
-  poke:
-  - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.01
-    maxDistance: 0.1
 
 ###############################################################
 # Any creature with a shield gets 30% more hp.
@@ -463,100 +461,107 @@
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t2
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 20
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t3
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 30
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t4
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 40
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t5
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 50
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t6
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 60
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t7
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 70
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 - prefab: Player
   type: state, staff_summon
   filter: gear_sanctis_t8
-  spawn: fx_guardstone_permitted_removed
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
   poke:
   - prefab: creature
     parameter: spiritAE 80
-    maxDistance: 2.75
+    maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
-    delay: 0.4
+    delay: 0.3
 
 # spirit AE
 - prefab: creature
@@ -572,6 +577,118 @@
   type: create
   weight: 0.1
   data: canswim
+  fallback: true
+
+##############################################################
+# Prevent radiation from Eitr Refinery (credit to Raaka!)
+- prefab: radiation
+  type: create
+  remove: true
+  objects:
+    - eitrrefinery, 10
+
+##############################################################
+# Prevent Lava Rocks close to player, which are stupid frustrating in Ashlands jumping puzzles
+- prefab: LavaRock
+  type: create
+  remove: true
+  objects:
+    - Player, 5
+
+##############################################################
+# Exotic player states
+#####################
+# Parry
+- prefab: sfx_perfectblock
+  type: create
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerParry
+
+#####################
+# Block
+- prefab: vfx_blocked
+  type: create
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerBlock
+
+#####################
+# Bow draw
+- prefab: sfx_bow_draw
+  type: create
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerBowDraw
+
+##############################################################
+# Results of exotic player states
+#####################
+# Aegis parry
+- prefab: Player
+  type: poke, PlayerParry
+  filter: aegisShieldList
+  spawn: fx_DvergerMage_Mistile_die
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_Aegis_Eitr_Regen
+
+#####################
+# Buckler parry
+- prefab: Player
+  type: poke, PlayerParry
+  filter: bucklerShieldList
+#  spawn: fx_redlightning_burst
+  spawns:
+  - sfx_start_buff_2
+  - vfx_ColdBall_launch
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_BucklerShield_Speed_Burst
+
+#####################
+# Round parry
+- prefab: Player
+  type: poke, PlayerParry
+  filter: roundShieldList
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_RoundShield_Stam_Regen
+
+#####################
+# Tower block
+- prefab: Player
+  type: poke, PlayerBlock
+  filter: towerShieldList
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_TowerShield_HP_Regen
+
+#####################
+# Shortbow acrobatics
+- prefab: Player
+  type: state, jump
+  filter: shortBowList
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, dodge
+    delay: 0.15
+
+#####################
+# Longbow jump shot
+- prefab: Player
+  type: state, jump
+  filter: longBowList
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_LongbowSkill
 
 ##############################################################
 ##############################################################

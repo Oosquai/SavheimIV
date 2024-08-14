@@ -1,7 +1,7 @@
 name: ShieldBanded
 m_weight: 4
 m_name: $item_shield_banded
-m_description: $item_shield_banded_description
+m_description: $item_shield_banded_description  Round shields grant a burst of stamina regeneration after a successful parry.
 clonePrefabName: 
 mockName: 
 customIcon: 

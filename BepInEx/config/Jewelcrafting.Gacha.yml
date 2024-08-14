@@ -185,6 +185,23 @@ Divine Intervention:
         - empty
         - empty
         - empty
+Shifting Serenity:
+  duration: default
+  prizes:
+    celestial aegis:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
+    celestial longbow:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
       
 # You can create a global blacklist. Gems on the global blacklist cannot be obtained from any event.
 #global blacklist:

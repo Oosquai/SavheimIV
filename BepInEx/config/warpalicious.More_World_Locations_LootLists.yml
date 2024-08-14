@@ -1,4 +1,5 @@
 MeadowsLoot1:
+  - Coins
   - Amber
   - MeadTasty
   - KnifeFlint
@@ -7,13 +8,16 @@ MeadowsLoot1:
   - Uncut_Yellow_Stone
   - Uncut_redish_Stone
 MeadowsLoot2:
+  - Coins
   - Amber
   - MeadTasty
+  - Bow
   - AxeFlint
   - Uncut_Red_Stone
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
 MeadowsLoot3:
+  - Coins
   - Amber
   - MeadTasty
   - SpearFlint
@@ -22,6 +26,7 @@ MeadowsLoot3:
   - Uncut_Orange_Stone
   - Uncut_Cyan_Stone
 BlackforestLoot1:
+  - Amber
   - AmberPearl
   - MeadHealthMinor
   - BMR_EmberWand
@@ -30,6 +35,7 @@ BlackforestLoot1:
   - Uncut_Yellow_Stone
   - Uncut_redish_Stone
 BlackforestLoot2:
+  - Amber
   - AmberPearl
   - MeadHealthMinor
   - FistFenrirClawBronze
@@ -38,8 +44,9 @@ BlackforestLoot2:
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
 BlackforestLoot3:
+  - Amber
   - AmberPearl
-  - MeadHealthMinor
+  - CWS_Sword_2
   - THSwordBronze
   - SurtlingCore
   - Uncut_Black_Stone
@@ -47,6 +54,7 @@ BlackforestLoot3:
   - Uncut_Orange_Stone
   - Uncut_Cyan_Stone
 WoodTavernLoot1:
+  - Coins
   - AmberPearl
   - MaceBronze
   - CarrotSeeds
@@ -56,14 +64,19 @@ WoodTavernLoot1:
   - MeadTasty
   - MeadHealthMinor
 SwampLoot1:
+  - AmberPearl
+  - Ruby
   - ct_campfireinabottle
   - MeadStaminaMinor
   - CWS_Bow_10
   - SwordIron
+  - Chain
   - Uncut_Blue_Stone
   - Uncut_Yellow_Stone
   - Uncut_redish_Stone
 SwampLoot2:
+  - AmberPearl
+  - Ruby
   - ct_campfireinabottle
   - MeadStaminaMinor
   - CWS_Atgeir_7
@@ -73,8 +86,10 @@ SwampLoot2:
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
 SwampLoot3:
+  - AmberPearl
+  - Ruby
   - ct_campfireinabottle
-  - MeadStaminaMinor
+  - T3_Reaper
   - KnifeSkollAndHatiIron
   - Chain
   - Uncut_Black_Stone
@@ -82,6 +97,8 @@ SwampLoot3:
   - Uncut_Orange_Stone
   - Uncut_Cyan_Stone
 MountainsLoot1:
+  - AmberPearl
+  - SilverNecklace
   - CWS_TH_Axe_6
   - BBP_SilverBow
   - OnionSeeds
@@ -92,6 +109,7 @@ MountainsLoot1:
   - Uncut_Blue_Stone
   - Uncut_Orange_Stone
 PlainsLoot1:
+  - Ruby
   - CWS_Sledge_1
   - CWS_Bow_5
   - HoneyMeadSpeed
@@ -101,6 +119,7 @@ PlainsLoot1:
   - Uncut_Cyan_Stone
   - Uncut_Purple_Stone
 PlainsLoot2:
+  - Ruby
   - AxeBerzerkrBlackMetal
   - CWS_Crossbow_4
   - MeadHealthMedium
@@ -110,15 +129,17 @@ PlainsLoot2:
   - Uncut_Red_Stone
   - Uncut_Black_Stone
 MistLoot1:
+  - SilverNecklace
   - MeadEitrLingering
   - MeadHealthMajor
   - HoneyMeadDamage
   - BarleyWine
   - CWS_Dagger_8
-  - T6_Reaper
+  - Lantern
   - Mandible
   - DraumheimEssence
 MistLoot2:
+  - SilverNecklace
   - MeadStaminaMedium
   - BHP_PumpkinWine
   - HoneyMeadSpeed

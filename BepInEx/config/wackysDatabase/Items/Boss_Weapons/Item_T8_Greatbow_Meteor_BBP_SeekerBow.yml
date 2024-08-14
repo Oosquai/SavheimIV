@@ -25,7 +25,7 @@ Primary_Attack:
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.3
+  StaggerMultiplier: 1.5
   RecoilMultiplier: 0
   AttackRange: 1
   AttackHeight: 1.5
@@ -248,6 +248,17 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   - name: sfx_bow_fire
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_buffed
     m_enabled: true
     m_variant: -1
     m_attach: false

@@ -464,6 +464,7 @@ groups:
     - CWS_Tower_Shield_3
     - CWS_Tower_Shield_4
     - CWS_Tower_Shield_5
+    - CWS_Heater_Shield_2_SH
     - LanternSoulcatcher
 
   Bow:
@@ -509,6 +510,7 @@ groups:
     - CWS_Crossbow_7
     - CWS_Crossbow_8
     - CWS_Crossbow_9
+    - CWS_Bow_4_SH
 
   Tool:
     - Cultivator
