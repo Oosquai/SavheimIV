@@ -15,7 +15,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.2
+  Custom_AttackSpeed: 1.1
   m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -70,7 +70,7 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.3
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -97,7 +97,7 @@ Secondary_Attack:
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
-  Last_Chain_Dmg_Multiplier: 4
+  Last_Chain_Dmg_Multiplier: 2
   Attack_status_effect: SE_Savheim_Rend_2H
   Attack_status_effect_chance: 1
   Attack_Projectile: 

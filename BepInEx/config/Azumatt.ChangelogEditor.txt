@@ -1,5 +1,7 @@
 - <color=#FF6F00>MUST CHANGE Controls</color>:  <color=#00FFFF>Toggle Walk</color> & <color=#00FFFF>Sit</color>.  Recommended:  <color=#00FFFF>-</color> & <color=#00FFFF>=</color>
-- Move windows: click & drag (some need Left-Alt). Esc for cursor.
+- New keys:  L-Alt: dodge.  T, G: use boss powers.  ~: swap hotbars.
+   F: cycle ammo.  Z: compare item.  Left-ctrl: crafting tracker +/-.
+- Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 7/1/24</color>
 - TBD
