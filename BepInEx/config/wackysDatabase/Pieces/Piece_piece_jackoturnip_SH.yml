@@ -8,7 +8,7 @@ clonePrefabName: piece_jackoturnip
 material: 
 damagedMaterial: 
 craftingStation: $piece_workbench
-piecehammerCategory: Furniture
+piecehammerCategory: Decorative
 minStationLevel: 1
 amount: 1
 disabled: false

@@ -1,7 +1,7 @@
 name: CWS_Dagger_8
 m_weight: 0.3
 m_name: Mandible Knife
-m_description: A razor sharp mandible with a smooth grip.  Knives allow the wielder to attack, dodge, and move faster than other weapons, and they sometimes twist and tear their victim's guts after penetrating their armor.
+m_description: A razor sharp mandible with a smooth grip.  Knives are quiet killers that allow the wielder to attack, dodge, and move faster than other weapons, and they sometimes twist and tear their victim's guts after penetrating their armor.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -162,6 +162,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
+  EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 26

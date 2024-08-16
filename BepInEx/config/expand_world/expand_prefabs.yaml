@@ -617,16 +617,6 @@
     maxDistance: 1
     parameter: PlayerBlock
 
-#####################
-# Bow draw
-- prefab: sfx_bow_draw
-  type: create
-  poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 1
-    parameter: PlayerBowDraw
-
 ##############################################################
 # Results of exotic player states
 #####################

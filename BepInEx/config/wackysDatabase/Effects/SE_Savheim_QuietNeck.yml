@@ -1,11 +1,11 @@
-Name: SE_Savheim_Gut_Twist_T6
-Status_m_name: Gut Twist
+Name: SE_Savheim_QuietNeck
+Status_m_name: Very Quiet
 Category: ''
 IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Penetrate their armor, then violently twist and yank your blade back out of your victim's gut."
+Tooltip: Enemies have a much harder time hearing you.
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,39 +14,15 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0.5
+TimeToLive: 0
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS: 
-- name: fx_morgen_hit
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: sfx_spear_flint_hit
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.5
+  m_tickInterval: 0
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -60
+  m_healthPerTick: 0
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0
@@ -69,7 +45,7 @@ SeData:
   m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
-  m_noiseModifier: 0
+  m_noiseModifier: -0.4
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
   m_speedModifier: 0

@@ -12,10 +12,6 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
 
-- name: savCheck
-  longs:
-  - playerID, 4157069897
-
 ####################################
 # Monster Clothes!
 - name: clothes_skeleton
@@ -52,7 +48,7 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   hashes:
-  - LeftItem, <none>, <none>, ShieldIronTower
+  - LeftItem, <none>, <none>, <none>, ShieldIronTower
 
 - name: clothes_goblin
   ints:

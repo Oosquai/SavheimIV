@@ -133,6 +133,7 @@ Moddifiers:
   m_movementModifier: 0
   m_EitrRegen: 0
 SE_Equip: 
+  EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 34

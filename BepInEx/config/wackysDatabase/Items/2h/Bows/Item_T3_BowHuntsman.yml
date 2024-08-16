@@ -129,7 +129,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 35
+  Pierce: 42
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -141,7 +141,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 2
+  Pierce: 3
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -235,6 +235,17 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   - name: sfx_bow_fire
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_battleaxe_swing_wosh
     m_enabled: true
     m_variant: -1
     m_attach: false

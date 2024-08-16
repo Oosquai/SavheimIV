@@ -1,7 +1,7 @@
 name: CWS_Bow_3
 m_weight: 1
 m_name: Engraved Shortbow
-m_description: Shortbows offer rapid shots and agile leaps.
+m_description: Shortbows offer rapid shots and agile leaps, and they make less noise than other weapons.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -129,7 +129,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 36
+  Pierce: 42
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -162,6 +162,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
+  EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 17

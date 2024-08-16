@@ -71,26 +71,26 @@ SwampCreatures4:
 MountainsCreatures1:
   - Skeleton
   - Skeleton
-  - Skeleton
+  - Skeleton_Poison
   - Skeleton
   - Skeleton_Poison
   - Skeleton
-  - Skeleton
+  - Ghost
   - Skeleton
 MountainsCreatures2:
   - Draugr
   - Draugr
-  - Draugr
-  - Draugr
-  - Draugr_Elite
-  - Draugr
-  - Draugr
-  - Draugr
-  - Draugr
+  - Wraith
   - Draugr
   - Draugr_Elite
   - Draugr
+  - Ghost
   - Draugr
+  - Wraith
+  - Draugr
+  - Draugr_Elite
+  - Draugr
+  - Draugr_Elite
 MountainsCreatures3:
   - StoneGolem
   - StoneGolem
@@ -101,7 +101,7 @@ MountainsCreatures4:
   - Ulv
   - Fenring
   - Ulv
-  - Ulv
+  - Fenring_Cultist
   - Ulv
   - Fenring_Cultist
   - Ulv
