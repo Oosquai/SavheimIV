@@ -1,8 +1,8 @@
 name: StaffIceShards
 clonePrefabName: 
-craftingStation: $piece_magetable
+craftingStation: $bmr_spell_table
 minStationLevel: 1
-maxStationLevelCap: 
+maxStationLevelCap: 3
 repairStation: 
 amount: 1
 disabled: true
@@ -10,6 +10,4 @@ disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- YggdrasilWood:20:10:True
-- FreezeGland:4:2:True
-- Eitr:16:8:True
+- BlackMetal:20:10:True

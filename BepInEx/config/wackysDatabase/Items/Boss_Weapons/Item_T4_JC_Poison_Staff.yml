@@ -1,7 +1,7 @@
 name: JC_Poison_Staff
 m_weight: 0.3
-m_name: $jc_poison_staff
-m_description: A poison staff made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.  The special attack is a wild melee swing that can send foes flying, giving the poison time to do its work.
+m_name: Staff of Myrkr
+m_description: This staff smells foul, and so will its victims.  Its special attack is a wild melee swing that can send foes flying, giving the poison time to do its work.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -17,7 +17,7 @@ Primary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 35
+  m_eitrCost: 16
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
@@ -62,11 +62,11 @@ Secondary_Attack:
   Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 24
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.1
+  SpeedFactor: 0.5
   DmgMultiplier: 0
   ForceMultiplier: 500
   StaggerMultiplier: 0
@@ -89,6 +89,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  Attack_status_effect: SE_Savheim_Hamstring_Greatbow
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 20
   Projectile_Accuraccy: 0
@@ -98,6 +100,7 @@ Secondary_Attack:
     - vfx_clubhit
     - sfx_battleaxe_hit
     - fx_hit_camshake
+    - vfx_poisonarrow_hit
     Hit_Terrain_Effects: 
     Start_Effect: 
     Trigger_Effect: 
@@ -112,7 +115,7 @@ Damage:
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
-  Poison: 154
+  Poison: 117
   Slash: 1
   Spirit: 0
 Damage_Per_Level:
@@ -124,7 +127,7 @@ Damage_Per_Level:
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
-  Poison: 9
+  Poison: 6
   Slash: 0
   Spirit: 0
 Armor:
@@ -163,7 +166,7 @@ m_skillType: ElementalMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 5
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

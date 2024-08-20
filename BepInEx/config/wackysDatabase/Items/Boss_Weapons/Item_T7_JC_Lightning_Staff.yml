@@ -1,7 +1,7 @@
 name: JC_Lightning_Staff
 m_weight: 0.3
-m_name: $jc_lightning_staff
-m_description: A lightning staff made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.  The special attack can stagger almost any foe.
+m_name: Staff of Storms
+m_description: A lightning staff with a shockingly effective secondary attack that will stagger almost any foe in melee range.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -17,7 +17,7 @@ Primary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 35
+  m_eitrCost: 28
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
@@ -61,9 +61,9 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 3
+  Custom_AttackSpeed: 2
   m_attackStamina: 0
-  m_eitrCost: 70
+  m_eitrCost: 56
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
@@ -83,7 +83,7 @@ Secondary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 4
+  Attack_Ray_Width: 1
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -96,25 +96,26 @@ Secondary_Attack:
   AEffects:
     Hit_Effects: 
     - FX_Lightning_Staff_Explosion
+    - fx_chainlightning_hit
     Hit_Terrain_Effects: 
     Start_Effect:
     Trigger_Effect:
     Trail_Effect: 
     Burst_Effect: 
 Damage:
-  Blunt: 15
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
   Frost: 0
-  Lightning: 140
+  Lightning: 136
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 0
+  Slash: 23
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 1
+  Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
@@ -123,7 +124,7 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 0
+  Slash: 1
   Spirit: 0
 Armor:
   armor: 15
@@ -161,7 +162,7 @@ m_skillType: ElementalMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 5
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

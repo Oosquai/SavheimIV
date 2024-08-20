@@ -173,7 +173,6 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
-  EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 23

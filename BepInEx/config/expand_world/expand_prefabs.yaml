@@ -6,6 +6,31 @@
 #  - s <par>
 #  - broadcast center <par>
 
+# Debug - Raaka state poker for creatures
+#- prefab: MonsterAI
+#  type: state, *
+#  poke:
+#  - prefab: Player
+#    limit: 1
+#    maxDistance: 10000
+#    parameter: statechecker <par>
+#
+#- prefab: Player
+#  type: poke, statechecker
+#  objectRpc:
+#  - name: Message
+#    1: enum_message, 2
+#    2: string, <par1>
+#    3: int, 0
+
+# Fix Ashlands?  (Thanks, Raaka!)
+- prefab: MonsterAI
+  biomes: AshLands
+  type: create
+  weight: 0.2
+  data: deaf_canswim
+  fallback: true
+
 ##############################################################
 # Infused creatures drop bezels per zone.
 - prefab: creature
@@ -336,11 +361,23 @@
 - prefab: Skeleton
   type: create
   weight: 1E30
+  biomes: Mountain, Plains, Mistlands, AshLands, DeepNorth
+  data: clothes_skeleton_mountain
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_max_health>
+    delay: 0.05
+    maxDistance: 0.1
+
+- prefab: Skeleton
+  type: create
+  weight: 1E30
+  biomes: Meadows, Blackforest, Swamp, Ocean
   data: clothes_skeleton
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: Skeleton_Poison
@@ -350,7 +387,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: Draugr
@@ -360,7 +397,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: Draugr_Elite
@@ -370,7 +407,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: Goblin
@@ -380,7 +417,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: GoblinBrute
@@ -390,7 +427,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: DvergerMage
@@ -405,7 +442,7 @@
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health>
-    delay: 0.02
+    delay: 0.05
     maxDistance: 0.1
 
 - prefab: Charred_Mage
@@ -414,20 +451,39 @@
   data: clothes_charred_mage
 
 ###############################################################
-# Any creature with a shield gets 30% more hp.
-# Scales with CLLC stars.
+# Any creature with a shield has increased hp and behaves like a tank.
+# HP scales with CLLC stars.
 - prefab: creature
   type: poke, gear_buff
   filter: gear_shield
-  data: hp_130percent
+  data: gear_shield_buff
 
-###############################################################
-# Any creature with an offhand weapon deals 30% more dmg.
-# Scales with CLLC stars.
+#############################
+# Any creature with an offhand weapon deals increased dmg and behaves like a combat rogue
+# Dmg scales with CLLC stars.
 - prefab: creature
   type: poke, gear_buff
   filter: gear_dual_wield
-  data: dmg_130percent
+  data: gear_dw_buff
+
+#############################
+# Any creature with an offhand elemental staff casts novas, so slow their attacks
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_staff_ice_shards
+  data: gear_staff_novas_buff
+
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_staff_fireball
+  data: gear_staff_novas_buff
+
+#############################
+# Any creature with a torch or lantern has increased alert range
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_alert_left
+  data: gear_alert_buff
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.
@@ -441,6 +497,7 @@
   type: state, *
   filter: gear_staff_skeleton
   weight: 0.4
+  triggerRules: true
   spawn: Skeleton, allied_group_data
 
 ###############################################################
@@ -453,6 +510,45 @@
   - name: RPC_Damage
     1: hit, status=Staff_shield level=1 skill=-39
     delay: 2
+
+###############################################################
+# Skeleton with offhand StaffIceShards cast frost nova
+- prefab: Skeleton
+  type: state, *
+  filter: gear_staff_ice_shards
+  spawns:
+  - sfx_icestaff_start
+  - fx_DvergerMage_Nova_ring
+  poke:
+  - prefab: Player
+    parameter: Creature_Frost_Nova
+    maxDistance: 4
+    delay: 0.8
+
+- prefab: Player
+  type: poke, Creature_Frost_Nova
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=30 dodge=true block=true
+
+###############################################################
+# Goblins with offhand StaffFireballMini cast fire nova
+- prefab: Goblin
+  type: state, *
+  filter: gear_staff_fireball
+  spawn: fx_fireball_staff_explosion
+  spawnDelay: 0.7
+  poke:
+  - prefab: Player
+    parameter: Creature_Fire_Nova
+    maxDistance: 3
+    delay: 0.7
+
+- prefab: Player
+  type: poke, Creature_Fire_Nova
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=57 dodge=true block=true
 
 ###############################################################
 # Players shield themselves on secondary attack of any Sanctis.
@@ -670,6 +766,15 @@
     target: all
     1: name, dodge
     delay: 0.15
+
+#####################
+# Shortbow speed burst
+- prefab: Player
+  type: state, bow_fire
+  filter: shortBowList
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_Shortbow_Speed_Burst
 
 #####################
 # Longbow jump shot

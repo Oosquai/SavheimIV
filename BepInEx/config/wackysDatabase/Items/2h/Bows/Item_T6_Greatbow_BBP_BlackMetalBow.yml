@@ -1,7 +1,7 @@
 name: BBP_BlackMetalBow
 m_weight: 3
 m_name: Enchanted Greatbow
-m_description: An enchanted greatbow that takes tremendous strength to draw but launches arrows at incredible speeds, dealing massive damage and sending foes flying.
+m_description: An enchanted greatbow that takes tremendous strength to draw but launches arrows at incredible speeds.  Shots from this bow deal massive damage, have impressive stopping power, and send foes flying.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -49,6 +49,8 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: Feathers
   SpawnOnHit_Chance: 0.05
+  Attack_status_effect: SE_Savheim_Hamstring_Greatbow
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 100
   Projectile_Accuraccy: 0
@@ -198,7 +200,7 @@ m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-Attach_Override: None
+Attach_Override: Shield
 m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow

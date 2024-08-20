@@ -1,8 +1,8 @@
 name: StaffFireball
 clonePrefabName: 
-craftingStation: $piece_magetable
+craftingStation: $bmr_spell_table
 minStationLevel: 1
-maxStationLevelCap: 
+maxStationLevelCap: 3
 repairStation: 
 amount: 1
 disabled: true

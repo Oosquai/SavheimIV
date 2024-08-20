@@ -12,6 +12,15 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
 
+- name: deaf_canswim
+  ints:
+  - HasFields, 1
+  - HasFieldsMonsterAI, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_canSwim, 1
+  floats:
+  - MonsterAI.m_hearRange, 50
+
 ####################################
 # Monster Clothes!
 - name: clothes_skeleton
@@ -23,6 +32,16 @@
   - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
   - LeftItem, <none>, <none>, SwordBronze, Torch, KnifeCopper
+
+- name: clothes_skeleton_mountain
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, <none>, SwordBronze, Torch, KnifeCopper, StaffIceShards
 
 - name: clothes_skeleton_poison
   ints:
@@ -56,7 +75,7 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   hashes:
-  - LeftItem, <none>, <none>, GoblinSword, ShieldIronBuckler, CWS_Dagger_2
+  - LeftItem, <none>, <none>, GoblinSword, CWS_Dagger_2, Torch, StaffFireballMini
 
 - name: clothes_goblin_brute
   ints:
@@ -81,16 +100,22 @@
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
   hashes:
   - LeftItem, <none>, StaffShield
+  floats:
+  - MonsterAI.m_hearRange, 50
 
 - name: clothes_charred_melee
   ints:
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
   hashes:
   - LeftItem, <none>, <none>, <none>, SwordNiedhogg, ShieldFlametalTower
+  floats:
+  - MonsterAI.m_hearRange, 50
 
 ####################################
 # Creature modifications based on gear
@@ -102,26 +127,65 @@
   hashes:
   - LeftItem, StaffShield
 
+- name: gear_staff_ice_shards
+  hashes:
+  - LeftItem, StaffIceShards
+
+- name: gear_staff_fireball
+  hashes:
+  - LeftItem, StaffFireballMini
+
 - name: gear_shield
   hashes:
-  - LeftItem, ShieldWood, ShieldBronzeBuckler, ShieldBanded, CWS_Round_Shield_6, ShieldIronTower, ShieldIronBuckler, ShieldFlametalTower
+  - LeftItem, ShieldWood, ShieldBronzeBuckler, ShieldBanded, CWS_Round_Shield_6, ShieldIronTower, ShieldFlametalTower
 
 - name: gear_dual_wield
   hashes:
   - LeftItem, SwordBronze, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, GoblinBrute_RageAttack, SwordNiedhogg
 
-- name: hp_130percent
-  floats:
-  - max_health, <par1>*1.3
-  - health, <par1>*1.301
+- name: gear_alert_left
+  hashes:
+  - LeftItem, Torch, Lantern
 
-- name: dmg_130percent
+# enemies with shields have more health, don't circle, and move slower.
+- name: gear_shield_buff
+  ints:
+  # whether to circle while waiting for minAttackInterval
+  - MonsterAI.m_circulateWhileCharging, 0
+  floats:
+  - max_health, <par1>*1.4
+  - health, <par1>*1.401
+  # how long to circle.  goblin default = 6?
+  - MonsterAI.m_circleTargetDuration, 0
+  # how often to circle.  goblin default = 8?
+  - MonsterAI.m_circleTargetInterval, 1E+30
+  # minimum time between attacks.  lowering doesn't seem to do anything, but higher slows attacks down.
+#  - MonsterAI.m_minAttackInterval, <par2>
+  # movespeed while running (combat).  default for goblin seems to be 5?
+  - Humanoid.m_runSpeed, 4
+
+# enemes with second weapon do more damage, run faster, and and only do quick, tight circles that tend to put them behind the player.
+- name: gear_dw_buff
   ints:
   - MonsterAI.m_circulateWhileCharging, 0
   floats:
   - RandomSkillFactor, 1.3
-  - MonsterAI.m_circleTargetDuration, 0
-  - MonsterAI.m_circleTargetInterval, 1E+30
+  - MonsterAI.m_circleTargetDuration, 3
+  - MonsterAI.m_randomCircleInterval, 4
+  - MonsterAI.m_circleTargetDistance, 3
+  - Humanoid.m_runSpeed, 7
+
+# enemies with torch or lantern have greater alert range (default=30) and circle a lot more.
+- name: gear_alert_buff
+  floats:
+  - MonsterAI.m_alertRange, 60
+
+# enemies with a nova staff circle a lot, so they're not constantly nova'ing
+- name: gear_staff_novas_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_minAttackInterval, 9
 
 ####################################
 # Sanctis

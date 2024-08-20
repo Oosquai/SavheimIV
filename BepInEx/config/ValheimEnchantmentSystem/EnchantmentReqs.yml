@@ -15,7 +15,6 @@
   - StaffClusterbomb
   - StaffFireball
   - StaffGreenRoots
-  - StaffIceShards
   - StaffLightning
   - StaffRedTroll
   - StaffShield
@@ -30,7 +29,6 @@
   - JC_Reaper_TH_Mace
   - JC_Reaper_TH_Sword
   - JC_Lightning_Staff
-  - JC_Poison_Staff
   - T8_Reaper
   - AxeBerzerkrCelestial
   - FistFenrirClawCelestial
@@ -116,6 +114,9 @@
   - CWS_Bow_7
   - CWS_Crossbow_8
   - BBP_SeekerBow
+  - BowCelestialGreatbow
+  - StaffCelestial_SH
+  - WandCelestial_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_S
     amount: 1
@@ -180,6 +181,7 @@
   - CWS_Mace_9
   - BBP_BoneBow
   - CWS_Sword_7
+  - StaffIceShards
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_A
     amount: 1
@@ -231,6 +233,7 @@
   - CWS_Bow_3
   - CWS_Crossbow_5
   - CWS_TH_Sword_9
+  - JC_Poison_Staff
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_B
     amount: 1

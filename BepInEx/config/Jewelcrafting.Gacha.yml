@@ -134,23 +134,23 @@ Stellar Impact:
         - empty
         - empty
         - empty
-Nebula Mirage:
-  duration: default
-  prizes:
-    celestial bone shocker:
-      chance: 0.02
-      sockets:
-        - empty
-        - empty
-        - empty
-        - empty
-    celestial bone stinger:
-      chance: 0.02
-      sockets:
-        - empty
-        - empty
-        - empty
-        - empty
+#Nebula Mirage:
+#  duration: default
+#  prizes:
+#    celestial bone shocker:
+#      chance: 0.02
+#      sockets:
+#        - empty
+#        - empty
+#        - empty
+#        - empty
+#    celestial bone stinger:
+#      chance: 0.02
+#      sockets:
+#        - empty
+#        - empty
+#        - empty
+#        - empty
 Empyrean Odyssey:
   duration: default
   prizes:
@@ -168,7 +168,7 @@ Empyrean Odyssey:
         - empty
         - empty
         - empty
-Divine Intervention:
+Cosmic Dilemma:
   duration: default
   prizes:
     celestial sanctis:
@@ -196,6 +196,40 @@ Shifting Serenity:
         - empty
         - empty
     celestial longbow:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
+Journey of Jayk:
+  duration: default
+  prizes:
+    celestial greatbow:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
+    celestial staff:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
+Pulsing Paradox:
+  duration: default
+  prizes:
+    celestial wand:
+      chance: 0.02
+      sockets:
+        - empty
+        - empty
+        - empty
+        - empty
+    staff of fracturing:
       chance: 0.02
       sockets:
         - empty

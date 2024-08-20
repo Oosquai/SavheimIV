@@ -304,6 +304,9 @@ groups:
     - FistFenrirClawCelestial
     - CWS_Atgeir_2_SH
     - KnifeSkollAndHatiCelestial
+    - StaffCelestial_SH
+    - WandCelestial_SH
+    - BowCelestialGreatbow
 
   OneHandedWeapon:
     - AxeBlackMetal
@@ -785,12 +788,12 @@ groups:
     - Consumables
     - Spells
 
-  DontSink:
-    - SerpentScale
-    - TrophySerpent
+#  DontSink:
+#    - SerpentScale
+#    - TrophySerpent
 
 NoLossOnDeath:
   loss: no
 
-DontSink:
-  floating: yes
+#DontSink:
+#  floating: yes

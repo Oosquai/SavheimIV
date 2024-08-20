@@ -49,6 +49,8 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: projectile_ashlandmeteor2
   SpawnOnHit_Chance: 0.666
+  Attack_status_effect: SE_Savheim_Hamstring_Greatbow
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 100
   Projectile_Accuraccy: 0
@@ -202,7 +204,7 @@ Attach_Override: Shield
 m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
-m_toolTier: 3
+m_toolTier: 0
 m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
