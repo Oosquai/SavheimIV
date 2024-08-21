@@ -1,0 +1,17 @@
+name: RCWS_TH_Axe_9_SH
+clonePrefabName: CWS_TH_Axe_9_SH
+craftingStation: $piece_blackforge
+minStationLevel: 3
+maxStationLevelCap: 6
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- SwordCheat:1:0:True
+- TrophyFader:1:0:True
+- FlametalNew:1:4:True
+- JC_Gacha_Coins:0:5:True
+- Coins:0:500:True

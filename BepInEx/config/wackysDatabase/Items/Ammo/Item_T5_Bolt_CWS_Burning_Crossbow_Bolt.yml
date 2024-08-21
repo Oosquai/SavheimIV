@@ -1,8 +1,8 @@
-name: CWS_Arrow_3
+name: CWS_Arrow_3_SH
 m_weight: 0.01
-m_name: $cws_arrow_3
+m_name: Burning Crossbow Bolt
 m_description: $cws_arrow_3_description
-clonePrefabName: 
+clonePrefabName: CWS_Arrow_3
 mockName: 
 customIcon: 
 material: 

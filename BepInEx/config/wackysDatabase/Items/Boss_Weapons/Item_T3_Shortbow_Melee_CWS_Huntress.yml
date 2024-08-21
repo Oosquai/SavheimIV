@@ -1,8 +1,8 @@
-name: CWS_Bow_11
+name: CWS_Bow_11_SH
 m_weight: 1
-m_name: $cws_bow_11
+m_name: The Huntress
 m_description: Keep your enemies close, and your ammo reserves even closer.  This autofire shortbow has a melee secondary attack and can block as well as a melee weapon.  The enchanted melee attack recyles an arrow if the attack lands.
-clonePrefabName: 
+clonePrefabName: CWS_Bow_11
 mockName: 
 customIcon: 
 material: 
@@ -300,7 +300,7 @@ m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
 m_toolTier: 3
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

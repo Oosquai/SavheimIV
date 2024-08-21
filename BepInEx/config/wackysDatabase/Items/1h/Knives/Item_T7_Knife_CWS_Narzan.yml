@@ -1,8 +1,8 @@
-name: CWS_Dagger_10
+name: CWS_Dagger_10_SH
 m_weight: 0.3
 m_name: Flametal Knife
 m_description: A deadly flametal knife, curved for bloodletting.  Knives are quiet killers that allow the wielder to attack, dodge, and move faster than other weapons, and they sometimes twist and tear their victim's guts after penetrating their armor.
-clonePrefabName: 
+clonePrefabName: CWS_Dagger_10
 mockName: 
 customIcon: 
 material: 

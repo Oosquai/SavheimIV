@@ -1,7 +1,7 @@
 name: JC_Reaper_Pickaxe
 m_weight: 2
 m_name: $jc_reaper_pickaxe
-m_description: A pickaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.  This pickaxe demolishes rocks.
+m_description: A pickaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional socket.  This pickaxe demolishes rocks.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -193,7 +193,7 @@ m_skillType: Pickaxes
 m_animationState: TwoHandedClub
 m_itemType: TwoHandedWeapon
 m_toolTier: 3
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

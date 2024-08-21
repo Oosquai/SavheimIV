@@ -1,8 +1,8 @@
-name: CWS_Crossbow_8
+name: CWS_Crossbow_8_SH
 m_weight: 8
 m_name: Scorpion
 m_description: Get over here!
-clonePrefabName: 
+clonePrefabName: CWS_Crossbow_8
 mockName: 
 customIcon: 
 material: 
@@ -188,7 +188,7 @@ m_skillType: Crossbows
 m_animationState: Crossbow
 m_itemType: Bow
 m_toolTier: 0
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

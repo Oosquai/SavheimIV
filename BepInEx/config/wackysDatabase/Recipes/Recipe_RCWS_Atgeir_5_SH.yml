@@ -1,0 +1,15 @@
+name: RCWS_Atgeir_5_SH
+clonePrefabName: CWS_Atgeir_5_SH
+craftingStation: $piece_forge
+minStationLevel: 4
+maxStationLevelCap: 7
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- FineWood:10:5:True
+- BlackMetal:30:15:True
+- LinenThread:5:5:True

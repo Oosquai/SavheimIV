@@ -1,8 +1,8 @@
-name: BBP_SeekerBow
+name: BBP_SeekerBow_SH
 m_weight: 4
 m_name: Annihilation
 m_description: A greatbow from the end-times.  This bow's destructive force takes a toll on durability.
-clonePrefabName: 
+clonePrefabName: BBP_SeekerBow
 mockName: 
 customIcon: 
 material: 
@@ -205,7 +205,7 @@ m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
 m_toolTier: 0
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

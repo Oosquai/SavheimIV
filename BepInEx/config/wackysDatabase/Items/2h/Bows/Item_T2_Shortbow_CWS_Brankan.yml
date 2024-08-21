@@ -1,8 +1,8 @@
-name: CWS_Bow_8
+name: CWS_Bow_8_SH
 m_weight: 1
 m_name: Resinwood Shortbow
 m_description: Shortbows specialize in mid to close range combat, offering rapid shots, agile leaps, and evasive bursts of speed after firing.
-clonePrefabName: 
+clonePrefabName: CWS_Bow_8
 mockName: 
 customIcon: 
 material: 

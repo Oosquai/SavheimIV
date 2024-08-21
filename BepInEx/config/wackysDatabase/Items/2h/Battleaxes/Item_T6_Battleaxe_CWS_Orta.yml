@@ -1,8 +1,8 @@
-name: CWS_TH_Axe_7
+name: CWS_TH_Axe_7_SH
 m_weight: 2.5
 m_name: Runed Battleaxe
 m_description: The runes on this elegant battleaxe seem to hum as it slices through air and flesh with equal ease.  Battleaxes cleave a wide area with their primary attacks, and they tear armor off victims with their secondary attack.
-clonePrefabName: 
+clonePrefabName: CWS_TH_Axe_7
 mockName: 
 customIcon: 
 material: 

@@ -1,0 +1,16 @@
+name: RCWS_Mace_10_SH
+clonePrefabName: CWS_Mace_10_SH
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- YggdrasilWood:6:3:True
+- BlackMetal:32:16:True
+- ScaleHide:4:2:True
+- Carapace:8:4:True

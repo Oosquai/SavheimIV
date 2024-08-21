@@ -1,8 +1,8 @@
-name: CWS_Round_Shield_7
+name: CWS_Round_Shield_7_SH
 m_weight: 2
 m_name: Silver Buckler
 m_description: A sturdy buckler reinforced with silver.  Bucklers grant a burst of speed after a successful parry.
-clonePrefabName: 
+clonePrefabName: CWS_Round_Shield_7
 mockName: 
 customIcon: 
 material: 

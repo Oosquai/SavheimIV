@@ -1,8 +1,8 @@
-name: CWS_Spear_1
+name: CWS_Spear_1_SH
 m_weight: 1.5
 m_name: Black Metal Spear
 m_description: A sleek black metal spear.  When thrown, spears have a chance to pin their target.
-clonePrefabName: 
+clonePrefabName: CWS_Spear_1
 mockName: 
 customIcon: 
 material: 

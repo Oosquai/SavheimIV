@@ -1,8 +1,8 @@
-name: CWS_Arrow_2
+name: CWS_Arrow_2_SH
 m_weight: 0.01
-m_name: $cws_arrow_2
+m_name: Shocking Crossbow Bolt
 m_description: $cws_arrow_2_description
-clonePrefabName: 
+clonePrefabName: CWS_Arrow_2
 mockName: 
 customIcon: 
 material: 

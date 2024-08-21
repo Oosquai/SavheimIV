@@ -1,0 +1,15 @@
+name: RCWS_TH_Axe_5_SH
+clonePrefabName: CWS_TH_Axe_5_SH
+craftingStation: $piece_forge
+minStationLevel: 4
+maxStationLevelCap: 7
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- FineWood:12:6:True
+- BlackMetal:32:16:True
+- LoxPelt:6:3:True

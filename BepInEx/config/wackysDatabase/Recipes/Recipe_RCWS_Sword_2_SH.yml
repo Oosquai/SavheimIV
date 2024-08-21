@@ -1,0 +1,16 @@
+name: RCWS_Sword_2_SH
+clonePrefabName: CWS_Sword_2_SH
+craftingStation: $piece_forge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Bronze:8:4:True
+- BoneFragments:8:4:True
+- TrollHide:8:4:True
+- TrophySkeletonPoison:1:0:True

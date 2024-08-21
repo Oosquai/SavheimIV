@@ -1,8 +1,8 @@
-name: CWS_Bow_5
+name: CWS_Bow_5_SH
 m_weight: 1.5
 m_name: Black Shrike Longbow
 m_description: It hungers.  Longbows reach far and hit hard when fired from the ground, or they can fire a quick shot while jumping.
-clonePrefabName: 
+clonePrefabName: CWS_Bow_5
 mockName: 
 customIcon: 
 material: 

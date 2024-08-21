@@ -1,7 +1,7 @@
 name: T8_Reaper
 m_weight: 4
 m_name: Celestial Reaper
-m_description: A reaper made from a mysterious, otherworldly material that support an additional upgrade and socket.
+m_description: A reaper made from a mysterious, otherworldly material that support an additional socket.
 clonePrefabName: THSwordSlayerBlood
 mockName: 
 customIcon: 
@@ -235,7 +235,7 @@ m_skillType: BloodMagic
 m_animationState: Greatsword
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

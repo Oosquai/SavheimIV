@@ -1,8 +1,8 @@
-name: CWS_Buckler_Shield_1
+name: CWS_Buckler_Shield_1_SH
 m_weight: 2
 m_name: Black Metal Buckler
 m_description: A disc of black metal fashioned into a buckler.  Bucklers grant a burst of speed after a successful parry.
-clonePrefabName: 
+clonePrefabName: CWS_Buckler_Shield_1
 mockName: 
 customIcon: 
 material: 

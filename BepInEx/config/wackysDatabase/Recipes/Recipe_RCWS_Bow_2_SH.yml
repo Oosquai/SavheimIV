@@ -1,0 +1,16 @@
+name: RCWS_Bow_2_SH
+clonePrefabName: CWS_Bow_2_SH
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- YggdrasilWood:10:5:True
+- Carapace:6:3:True
+- ScaleHide:2:1:True
+- Mandible:2:1:True

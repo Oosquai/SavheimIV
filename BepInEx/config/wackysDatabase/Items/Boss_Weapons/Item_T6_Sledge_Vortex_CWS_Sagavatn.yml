@@ -1,8 +1,8 @@
-name: CWS_Sledge_7
+name: CWS_Sledge_7_SH
 m_weight: 4
-m_name: $cws_sledge_7
+m_name: Gjallarbrun
 m_description: All who venture near shall be consumed into the void.
-clonePrefabName: 
+clonePrefabName: CWS_Sledge_7
 mockName: 
 customIcon: 
 material: 
@@ -243,7 +243,7 @@ m_skillType: Clubs
 m_animationState: TwoHandedAxe
 m_itemType: TwoHandedWeapon
 m_toolTier: 3
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

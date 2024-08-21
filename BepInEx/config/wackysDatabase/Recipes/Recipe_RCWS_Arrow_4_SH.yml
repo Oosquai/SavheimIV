@@ -1,0 +1,15 @@
+name: RCWS_Arrow_4_SH
+clonePrefabName: CWS_Arrow_4_SH
+craftingStation: $piece_workbench
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Ooze:4:0:True
+- Wood:8:0:True
+- Feathers:2:0:True

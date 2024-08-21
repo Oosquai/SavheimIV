@@ -1,0 +1,16 @@
+name: RCWS_Bow_10_SH
+clonePrefabName: CWS_Bow_10_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- ElderBark:12:6:True
+- DeerHide:2:1:True
+- AncientSeed:2:1:True
+- Guck:2:1:True

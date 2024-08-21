@@ -1,0 +1,17 @@
+name: RCWS_Bow_11_SH
+clonePrefabName: CWS_Bow_11_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- SwordCheat:1:0:True
+- TrophyTheElder:1:0:True
+- TrophyAbomination:0:1:True
+- Iron:1:4:True
+- ElderBark:0:8:True

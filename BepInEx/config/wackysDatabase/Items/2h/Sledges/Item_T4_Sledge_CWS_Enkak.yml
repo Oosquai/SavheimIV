@@ -1,8 +1,8 @@
-name: CWS_Sledge_5
+name: CWS_Sledge_5_SH
 m_weight: 4
 m_name: Silver Sledge
 m_description: A spiked silver sledge.  Sledges excel at staggering foes and have an earth-shattering ground slam.
-clonePrefabName: 
+clonePrefabName: CWS_Sledge_5
 mockName: 
 customIcon: 
 material: 

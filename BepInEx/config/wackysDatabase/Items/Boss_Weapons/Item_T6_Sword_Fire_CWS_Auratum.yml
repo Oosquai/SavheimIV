@@ -1,8 +1,8 @@
-name: CWS_Sword_6
+name: CWS_Sword_6_SH
 m_weight: 0.8
-m_name: $cws_sword_6
+m_name: Eldbrandr
 m_description: A blade made almost entirely of flame.  This is a mage's weapon.
-clonePrefabName: 
+clonePrefabName: CWS_Sword_6
 mockName: 
 customIcon: 
 material: 
@@ -201,7 +201,7 @@ m_skillType: ElementalMagic
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 3
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

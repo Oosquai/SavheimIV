@@ -1,0 +1,16 @@
+name: RCWS_Axe_4_SH
+clonePrefabName: CWS_Axe_4_SH
+craftingStation: $piece_blackforge
+minStationLevel: 3
+maxStationLevelCap: 6
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Blackwood:4:2:True
+- CharredBone:8:4:True
+- FlametalNew:16:8:True
+- AskHide:2:1:True

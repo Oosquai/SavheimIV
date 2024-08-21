@@ -79,7 +79,7 @@ SeData:
   m_skillLevelModifier2: 0
   m_mods: []
   m_modifyAttackSkill: All
-  m_damageModifier: 0.8
+  m_damageModifier: 0.75
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0

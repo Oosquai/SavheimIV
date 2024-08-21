@@ -1,8 +1,8 @@
-name: CWS_TH_Axe_2
+name: CWS_TH_Axe_2_SH
 m_weight: 2.5
 m_name: Copper Battleaxe
 m_description: A heavy axe made of copper.  Battleaxes cleave a wide area with their primary attacks, and they tear armor off victims with their secondary attack.
-clonePrefabName: 
+clonePrefabName: CWS_TH_Axe_2
 mockName: 
 customIcon: 
 material: 

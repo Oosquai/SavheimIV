@@ -1,7 +1,7 @@
 name: CWS_Heater_Shield_2_SH
 m_weight: 5
 m_name: Celestial Aegis
-m_description: An aegis made from a mysterious, otherworldly material that supports an additional upgrade and socket.
+m_description: An aegis made from a mysterious, otherworldly material that supports an additional socket.
 clonePrefabName: CWS_Heater_Shield_2
 mockName: 
 customIcon: 
@@ -174,8 +174,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 120
-  m_blockPowerPerLevel: 11
+  m_blockPower: 141
+  m_blockPowerPerLevel: 13
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -202,7 +202,7 @@ m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: 

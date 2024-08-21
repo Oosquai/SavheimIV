@@ -1,7 +1,7 @@
 name: KnifeSkollAndHatiCelestial
 m_weight: 0.3
 m_name: Celestial Knife and Sickle
-m_description: A knife and sickle made from a mysterious, otherworldly material that supports an additional upgrade and socket.
+m_description: A knife and sickle made from a mysterious, otherworldly material that supports an additional socket.
 clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 
@@ -191,7 +191,7 @@ m_skillType: Knives
 m_animationState: Knives
 m_itemType: TwoHandedWeapon
 m_toolTier: 4
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

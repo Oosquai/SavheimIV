@@ -1,8 +1,8 @@
-name: CWS_Axe_6
+name: CWS_Axe_6_SH
 m_weight: 1
 m_name: Odin's Ethereal Axe
 m_description: A mighty but fleeting gift from Odin.  This weapon will scale to match any zone it's taken to, and it can be used by even the most inexperienced Vikings.  It can't be modified in any way though, including repairs.
-clonePrefabName: 
+clonePrefabName: CWS_Axe_6
 mockName: 
 customIcon: 
 material: dragontear_inner

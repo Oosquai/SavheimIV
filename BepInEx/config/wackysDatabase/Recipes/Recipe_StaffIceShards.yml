@@ -2,12 +2,16 @@ name: StaffIceShards
 clonePrefabName: 
 craftingStation: $bmr_spell_table
 minStationLevel: 1
-maxStationLevelCap: 3
+maxStationLevelCap: 2
 repairStation: 
 amount: 1
-disabled: true
+disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- BlackMetal:20:10:True
+- SwordCheat:1:0:True
+- TrophyDragonQueen:1:0:True
+- TrophyGoblinShaman:0:1:True
+- BlackMetal:1:4:True
+- FineWood:0:8:True

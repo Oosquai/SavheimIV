@@ -1,8 +1,8 @@
-name: CWS_Arrow_5
+name: CWS_Arrow_5_SH
 m_weight: 0.01
-m_name: $cws_arrow_5
+m_name: Frozen Crossbow Bolt
 m_description: $cws_arrow_5_description
-clonePrefabName: 
+clonePrefabName: CWS_Arrow_5
 mockName: 
 customIcon: 
 material: 

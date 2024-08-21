@@ -1,0 +1,15 @@
+name: RCWS_Atgeir_7_SH
+clonePrefabName: CWS_Atgeir_7_SH
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Wood:10:5:True
+- Iron:30:15:True
+- LeatherScraps:2:1:True

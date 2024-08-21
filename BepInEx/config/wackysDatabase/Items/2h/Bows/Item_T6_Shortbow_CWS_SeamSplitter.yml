@@ -1,8 +1,8 @@
-name: CWS_Bow_2
+name: CWS_Bow_2_SH
 m_weight: 1
 m_name: Seeker Shortbow
 m_description: Shortbows specialize in mid to close range combat, offering rapid shots, agile leaps, and evasive bursts of speed after firing.
-clonePrefabName: 
+clonePrefabName: CWS_Bow_2
 mockName: 
 customIcon: 
 material: 

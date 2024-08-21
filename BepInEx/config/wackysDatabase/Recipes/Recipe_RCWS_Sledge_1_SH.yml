@@ -1,0 +1,16 @@
+name: RCWS_Sledge_1_SH
+clonePrefabName: CWS_Sledge_1_SH
+craftingStation: $piece_forge
+minStationLevel: 4
+maxStationLevelCap: 7
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- FineWood:10:5:True
+- BlackMetal:30:15:True
+- YmirRemains:4:2:True
+- TrophyGoblinBrute:1:0:True

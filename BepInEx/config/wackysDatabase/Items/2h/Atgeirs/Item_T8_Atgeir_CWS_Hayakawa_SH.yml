@@ -1,7 +1,7 @@
 name: CWS_Atgeir_2_SH
 m_weight: 2.5
 m_name: Celestial Atgeir
-m_description: An atgeir made from a mysterious, otherworldly material that supports an additional upgrade and socket.
+m_description: An atgeir made from a mysterious, otherworldly material that supports an additional socket.
 clonePrefabName: CWS_Atgeir_2
 mockName: 
 customIcon: 
@@ -217,7 +217,7 @@ m_skillType: Polearms
 m_animationState: Atgeir
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

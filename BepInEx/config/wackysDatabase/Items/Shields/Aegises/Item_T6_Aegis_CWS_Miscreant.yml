@@ -1,8 +1,8 @@
-name: CWS_Round_Shield_3
+name: CWS_Round_Shield_3_SH
 m_weight: 5
 m_name: Haunted Aegis
 m_description: Aegises offer excellent protection from the elements when actively blocking, and they grant increased eitr regen after a successful parry.  They consume more stamina when blocking though.
-clonePrefabName: 
+clonePrefabName: CWS_Round_Shield_3
 mockName: 
 customIcon: 
 material: 
@@ -174,8 +174,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 91
-  m_blockPowerPerLevel: 8
+  m_blockPower: 107
+  m_blockPowerPerLevel: 10
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

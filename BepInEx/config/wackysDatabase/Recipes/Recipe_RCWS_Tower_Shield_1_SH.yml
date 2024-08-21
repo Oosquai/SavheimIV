@@ -1,0 +1,14 @@
+name: RCWS_Tower_Shield_1_SH
+clonePrefabName: CWS_Tower_Shield_1_SH
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- FineWood:15:10:True
+- Iron:10:5:True

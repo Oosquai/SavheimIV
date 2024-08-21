@@ -1,7 +1,7 @@
 name: JC_Reaper_Battleaxe
 m_weight: 4
 m_name: $jc_reaper_battleaxe
-m_description: A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
+m_description: A battleaxe made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -191,7 +191,7 @@ m_skillType: Axes
 m_animationState: TwoHandedAxe
 m_itemType: TwoHandedWeapon
 m_toolTier: 6
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

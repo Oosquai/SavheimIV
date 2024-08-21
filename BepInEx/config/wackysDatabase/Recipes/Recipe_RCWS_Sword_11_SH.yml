@@ -1,0 +1,16 @@
+name: RCWS_Sword_11_SH
+clonePrefabName: CWS_Sword_11_SH
+craftingStation: $piece_forge
+minStationLevel: 3
+maxStationLevelCap: 6
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- TrophySGolem:1:0:True
+- Silver:30:15:True
+- LeatherScraps:3:2:True
+- WolfHairBundle:12:6:True

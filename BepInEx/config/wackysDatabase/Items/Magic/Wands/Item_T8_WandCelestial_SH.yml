@@ -1,7 +1,7 @@
 name: WandCelestial_SH
 m_weight: 0.5
 m_name: Celestial Wand
-m_description: A wand made from a mysterious, otherworldly material that support an additional upgrade and socket.
+m_description: A wand made from a mysterious, otherworldly material that support an additional socket.
 clonePrefabName: BMR_AncientWand
 mockName: 
 customIcon: 
@@ -205,7 +205,7 @@ m_skillType: ElementalMagic
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 6
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

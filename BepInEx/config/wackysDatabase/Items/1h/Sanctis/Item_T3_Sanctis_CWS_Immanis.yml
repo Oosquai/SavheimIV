@@ -1,8 +1,8 @@
-name: CWS_Sword_14
+name: CWS_Sword_14_SH
 m_weight: 0.8
 m_name: Iron Sanctis
 m_description: Imbued with Odin's might, Sanctir harness eitr to conjure protective wards and vanquish the undead.  These weapons scale with Elemental Magic.
-clonePrefabName: 
+clonePrefabName: CWS_Sword_14
 mockName: 
 customIcon: 
 material: 

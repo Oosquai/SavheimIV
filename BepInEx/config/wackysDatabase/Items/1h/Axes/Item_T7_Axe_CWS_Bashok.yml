@@ -1,8 +1,8 @@
-name: CWS_Axe_4
+name: CWS_Axe_4_SH
 m_weight: 2
 m_name: Flametal Axe
 m_description: An elegant, well-balanced flametal axe.  Axes emphasize damage, and their secondary attack rends the target's armor for a brief duration.
-clonePrefabName: 
+clonePrefabName: CWS_Axe_4
 mockName: 
 customIcon: 
 material: 

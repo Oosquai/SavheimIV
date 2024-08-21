@@ -1,0 +1,16 @@
+name: RCWS_Sword_10_SH
+clonePrefabName: CWS_Sword_10_SH
+craftingStation: $piece_forge
+minStationLevel: 4
+maxStationLevelCap: 7
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- TrophyGoblinShaman:1:0:True
+- BlackMetal:20:10:True
+- LinenThread:5:5:True
+- LoxPelt:8:4:True

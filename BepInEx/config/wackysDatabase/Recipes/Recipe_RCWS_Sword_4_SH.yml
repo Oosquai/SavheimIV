@@ -1,0 +1,16 @@
+name: RCWS_Sword_4_SH
+clonePrefabName: CWS_Sword_4_SH
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- TrophyDvergr:1:0:True
+- BlackMetal:16:8:True
+- Eitr:10:3:True
+- Bilebag:4:2:True

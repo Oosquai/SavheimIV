@@ -1,7 +1,7 @@
 name: ShieldBoneTower
 clonePrefabName: 
 craftingStation: $piece_workbench
-minStationLevel: 3
+minStationLevel: 2
 maxStationLevelCap: 
 repairStation: 
 amount: 1

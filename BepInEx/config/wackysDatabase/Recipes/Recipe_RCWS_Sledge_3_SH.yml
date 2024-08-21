@@ -1,0 +1,16 @@
+name: RCWS_Sledge_3_SH
+clonePrefabName: CWS_Sledge_3_SH
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- ElderBark:10:5:True
+- Iron:30:15:True
+- YmirRemains:4:2:True
+- TrophyDraugrElite:1:0:True

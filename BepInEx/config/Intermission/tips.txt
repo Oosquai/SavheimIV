@@ -5,7 +5,7 @@ Savheim IV - Recommended game settings II:  Please try Settings/Accessibility/Ca
 Savheim IV - The game takes a while to load with so many mods installed.  Please go get a tankard of ale and use the Viking potty.
 Savheim IV - Group commands: /invite [name]; /leave; /remove [name]; /promote [name].  Group benefits:  shared exp, group gem effects, draggable user interface, group chat (/p), colored names, group ping (LeftAlt), and bonus comfort while resting together.  Try combining two boss gems...
 Savheim IV - Press 'U' to open Guild panel.  This has been added to Savheim IV only to allow sharing semi-private portals.
-Savheim IV - There's a new type of portal you'll eventually discover that's harder for creatures to destroy, and all portals will default to Private on creation now.  Portals are now harder to obtain though, and you will never be able to teleport metals.  P toggles portal display on the map.
+Savheim IV - All portals will default to Private on creation now.  Portals are now harder to obtain though, and you will never be able to teleport metals.  P toggles portal display on the map.
 Savheim IV - All weapon classes have been majorly reworked in Savheim IV (again!) to give them unique and improved playstyles.  Give them all another swing, even if you decided against them last playthrough...  Wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
 Savheim IV - Block Armor = amount you can block.  [Block Armor * Parry Bonus] = amount you can parry.  Excess damage drains health.  Block Force does nothing.  Magical barriers confer infinite parry stats while active.
 Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical: attack a staggered enemy.  Parry: perfectly-timed block.
@@ -33,7 +33,7 @@ Savheim IV - Sell precious stones, trophies, extra keys, and wishbones to the tr
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and to all the creative modders out there for so many incredible additions!
 Savheim IV - Thank you to some very talented modders:  Azumatt, blaxxun, wackymole, Jere, Raaka, DhakhaR, KG, OrianaVenture, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, and more!
-*Savheim IV - Thank you to Woody and Matt for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for TotinoTunes!
+Savheim IV - Thank you to Woody and Matt for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
 Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>
 Savheim IV - Gems and jewelry have been completely reworked.  Craft a Jeweler's Box at the Gemcutter's table to conveniently take jewelry options with you on adventures.

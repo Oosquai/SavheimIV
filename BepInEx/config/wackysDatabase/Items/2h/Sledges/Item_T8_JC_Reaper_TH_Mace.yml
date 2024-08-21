@@ -1,7 +1,7 @@
 name: JC_Reaper_TH_Mace
 m_weight: 4
 m_name: $jc_reaper_th_mace
-m_description: A sledge made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional upgrade and socket.
+m_description: A sledge made from a mysterious, otherworldly material that deals 10% bonus damage to world bosses and supports an additional socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -263,7 +263,7 @@ m_skillType: Clubs
 m_animationState: TwoHandedAxe
 m_itemType: TwoHandedWeapon
 m_toolTier: 5
-m_maxQuality: 5
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

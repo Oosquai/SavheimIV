@@ -1,8 +1,8 @@
-name: CWS_TH_Sword_9
+name: CWS_TH_Sword_9_SH
 m_weight: 4
 m_name: Abyss Greatsword
 m_description: This sword is tainted by the Abyss, and now its strength reflects its wielder's humanity.
-clonePrefabName: 
+clonePrefabName: CWS_TH_Sword_9
 mockName: 
 customIcon: 
 material: 
@@ -243,7 +243,7 @@ m_skillType: Swords
 m_animationState: Greatsword
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

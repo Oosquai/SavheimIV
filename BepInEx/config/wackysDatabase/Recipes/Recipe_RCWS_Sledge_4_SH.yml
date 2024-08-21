@@ -1,0 +1,15 @@
+name: RCWS_Sledge_4_SH
+clonePrefabName: CWS_Sledge_4_SH
+craftingStation: $piece_forge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- Wood:24:12:True
+- LeatherScraps:4:2:True
+- HardAntler:1:0:True

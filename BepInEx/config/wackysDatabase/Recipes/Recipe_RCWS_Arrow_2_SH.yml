@@ -1,0 +1,16 @@
+name: RCWS_Arrow_2_SH
+clonePrefabName: CWS_Arrow_2_SH
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- BlackMarble:1:0:True
+- YggdrasilWood:8:0:True
+- Feathers:2:0:True
+- Eitr:1:0:True

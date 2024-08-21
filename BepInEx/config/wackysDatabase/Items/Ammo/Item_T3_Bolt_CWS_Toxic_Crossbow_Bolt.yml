@@ -1,8 +1,8 @@
-name: CWS_Arrow_4
+name: CWS_Arrow_4_SH
 m_weight: 0.01
-m_name: $cws_arrow_4
+m_name: Toxic Crossbow Bolt
 m_description: $cws_arrow_4_description
-clonePrefabName: 
+clonePrefabName: CWS_Arrow_4
 mockName: 
 customIcon: 
 material: 

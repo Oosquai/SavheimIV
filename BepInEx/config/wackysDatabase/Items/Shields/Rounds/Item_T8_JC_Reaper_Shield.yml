@@ -1,7 +1,7 @@
 name: JC_Reaper_Shield
 m_weight: 4
 m_name: $jc_reaper_shield
-m_description: A shield made from a mysterious, otherworldly material that supports an additional upgrade and socket.
+m_description: A shield made from a mysterious, otherworldly material that supports an additional socket.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -148,7 +148,7 @@ m_skillType: Blocking
 m_animationState: Shield
 m_itemType: Shield
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

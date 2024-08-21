@@ -1,8 +1,8 @@
-name: CWS_Crossbow_5
+name: CWS_Crossbow_5_SH
 m_weight: 8
 m_name: Silver Crossbow
 m_description: A heavy but powerful weapon.  Crossbows stay loaded when stowed, offering an on-demand burst of damage at any time and at any range.
-clonePrefabName: 
+clonePrefabName: CWS_Crossbow_5
 mockName: 
 customIcon: 
 material: 

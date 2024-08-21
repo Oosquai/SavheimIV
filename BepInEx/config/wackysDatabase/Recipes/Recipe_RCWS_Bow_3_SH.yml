@@ -1,0 +1,15 @@
+name: RCWS_Bow_3_SH
+clonePrefabName: CWS_Bow_3_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- FineWood:14:7:True
+- Silver:10:5:True
+- WolfPelt:2:1:True

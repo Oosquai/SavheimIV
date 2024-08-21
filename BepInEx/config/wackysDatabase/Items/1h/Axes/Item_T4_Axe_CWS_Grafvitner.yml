@@ -1,8 +1,8 @@
-name: CWS_Axe_7
+name: CWS_Axe_7_SH
 m_weight: 2
 m_name: Frosted Axe
 m_description: A rugged axe for mountainous regions.  Axes emphasize damage, and their secondary attack rends the target's armor for a brief duration.
-clonePrefabName: 
+clonePrefabName: CWS_Axe_7
 mockName: 
 customIcon: 
 material: 

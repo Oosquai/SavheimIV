@@ -1,0 +1,15 @@
+name: RCWS_TH_Axe_2_SH
+clonePrefabName: CWS_TH_Axe_2_SH
+craftingStation: $piece_forge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- Wood:12:6:True
+- Copper:30:15:True
+- LeatherScraps:6:3:True

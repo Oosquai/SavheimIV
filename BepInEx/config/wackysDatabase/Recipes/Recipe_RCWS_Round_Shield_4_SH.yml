@@ -1,0 +1,15 @@
+name: RCWS_Round_Shield_4_SH
+clonePrefabName: CWS_Round_Shield_4_SH
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- SerpentScale:8:4:True
+- ElderBark:8:4:True
+- TrophyTheElder:1:0:True

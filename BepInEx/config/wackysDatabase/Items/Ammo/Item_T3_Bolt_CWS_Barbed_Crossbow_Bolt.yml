@@ -1,8 +1,8 @@
-name: CWS_Arrow_1
+name: CWS_Arrow_1_SH
 m_weight: 0.01
-m_name: $cws_arrow_1
+m_name: Barbed Crossbow Bolt
 m_description: $cws_arrow_1_description
-clonePrefabName: 
+clonePrefabName: CWS_Arrow_1
 mockName: 
 customIcon: 
 material: 

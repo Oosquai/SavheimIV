@@ -1,8 +1,8 @@
-name: CWS_TH_Axe_8
+name: CWS_TH_Axe_8_SH
 m_weight: 2.5
 m_name: Flametal Battleaxe
 m_description: Wrought from flaming steel, this battleaxe hungers for blood.  Battleaxes cleave a wide area with their primary attacks, and they tear armor off victims with their secondary attack.
-clonePrefabName: 
+clonePrefabName: CWS_TH_Axe_8
 mockName: 
 customIcon: 
 material: 

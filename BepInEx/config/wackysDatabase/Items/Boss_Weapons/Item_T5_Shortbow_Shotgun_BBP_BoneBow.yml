@@ -1,8 +1,8 @@
-name: BBP_BoneBow
+name: BBP_BoneBow_SH
 m_weight: 1
 m_name: Scatterwood
 m_description: Even corpses can feel pain.  This shortbow sprays a cloud of arrows, staggering close range targets or shredding multiple targets.
-clonePrefabName: 
+clonePrefabName: BBP_BoneBow
 mockName: 
 customIcon: 
 material: 
@@ -202,7 +202,7 @@ m_skillType: Bows
 m_animationState: Bow
 m_itemType: Bow
 m_toolTier: 3
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

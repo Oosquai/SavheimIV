@@ -1,0 +1,15 @@
+name: RCWS_TH_Sword_1_SH
+clonePrefabName: CWS_TH_Sword_1_SH
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- ElderBark:8:4:True
+- Iron:30:15:True
+- LeatherScraps:4:2:True

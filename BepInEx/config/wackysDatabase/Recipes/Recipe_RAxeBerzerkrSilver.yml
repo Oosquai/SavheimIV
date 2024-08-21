@@ -1,7 +1,7 @@
 name: RAxeBerzerkrSilver
 clonePrefabName: AxeBerzerkrSilver
 craftingStation: $piece_forge
-minStationLevel: 2
+minStationLevel: 3
 maxStationLevelCap: 
 repairStation: 
 amount: 1

@@ -1,8 +1,8 @@
-name: CWS_TH_Axe_9
+name: CWS_TH_Axe_9_SH
 m_weight: 2.5
-m_name: Judgement by Fire
+m_name: Elddomr
 m_description: Demacia burned to the ground.  Now we know why.
-clonePrefabName: 
+clonePrefabName: CWS_TH_Axe_9
 mockName: 
 customIcon: 
 material: 
@@ -214,7 +214,7 @@ m_skillType: Axes
 m_animationState: TwoHandedAxe
 m_itemType: TwoHandedWeapon
 m_toolTier: 6
-m_maxQuality: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

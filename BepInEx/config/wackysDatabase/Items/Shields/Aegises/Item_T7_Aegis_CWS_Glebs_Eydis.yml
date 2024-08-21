@@ -1,8 +1,8 @@
-name: CWS_Heater_Shield_3
+name: CWS_Heater_Shield_3_SH
 m_weight: 5
 m_name: Hellfire Aegis
 m_description: Aegises offer excellent protection from the elements when actively blocking, and they grant increased eitr regen after a successful parry.  They consume more stamina when blocking though.
-clonePrefabName: 
+clonePrefabName: CWS_Heater_Shield_3
 mockName: 
 customIcon: 
 material: 
@@ -174,8 +174,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 105
-  m_blockPowerPerLevel: 9
+  m_blockPower: 124
+  m_blockPowerPerLevel: 11
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
