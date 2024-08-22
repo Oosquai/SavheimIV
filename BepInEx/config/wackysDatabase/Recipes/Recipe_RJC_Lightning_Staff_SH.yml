@@ -1,8 +1,8 @@
-name: JC_Poison_Staff
-clonePrefabName: 
+name: RJC_Lightning_Staff_SH
+clonePrefabName: JC_Lightning_Staff_SH
 craftingStation: $bmr_spell_table
 minStationLevel: 1
-maxStationLevelCap: 2
+maxStationLevelCap: 3
 repairStation: 
 amount: 1
 disabled: false
@@ -11,7 +11,7 @@ requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
 - SwordCheat:1:0:True
-- TrophyBonemass:1:0:True
-- TrophySGolem:0:1:True
-- Silver:1:20:True
-- Guck:0:4:True
+- TrophySeekerQueen:1:0:True
+- TrophyMorgen:0:1:True
+- FlametalNew:1:9:True
+- Blackwood:0:9:True

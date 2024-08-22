@@ -224,8 +224,8 @@ groups:
     - JC_Reaper_Battleaxe
     - JC_Reaper_TH_Mace
     - JC_Reaper_TH_Sword
-    - JC_Lightning_Staff
-    - JC_Poison_Staff
+    - JC_Lightning_Staff_SH
+    - JC_Poison_Staff_SH
     - BMR_WoodenStaff
     - BMR_EmberStaff
     - BMR_AncientStaff
@@ -533,9 +533,9 @@ groups:
     - ArrowPoison
     - ArrowSilver
     - ArrowWood
-    - BBP_ExplodingArrow_Fire
-    - BBP_ExplodingArrow_Frost
-    - BBP_ExplodingArrow_Poison
+    - BBP_ExplodingArrow_Fire_SH
+    - BBP_ExplodingArrow_Frost_SH
+    - BBP_ExplodingArrow_Poison_SH
     - JC_Crystal_Arrow_Black
     - JC_Crystal_Arrow_Blue
     - JC_Crystal_Arrow_Green
@@ -549,11 +549,11 @@ groups:
     - BoltCharred
     - BoltIron
     - BBP_Bolt_Bronze
-    - BBP_Bolt_Flint
-    - BBP_Bolt_Wood
-    - BBP_ExplodingBolt_Fire
-    - BBP_ExplodingBolt_Frost
-    - BBP_ExplodingBolt_Poison
+    - BBP_Bolt_Chitin_SH
+    - BBP_Bolt_Crude_SH
+    - BBP_ExplodingBolt_Fire_SH
+    - BBP_ExplodingBolt_Frost_SH
+    - BBP_ExplodingBolt_Poison_SH
     - CWS_Arrow_1_SH
     - CWS_Arrow_2_SH
     - CWS_Arrow_3_SH

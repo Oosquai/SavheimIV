@@ -28,7 +28,7 @@
   - JC_Reaper_Battleaxe
   - JC_Reaper_TH_Mace
   - JC_Reaper_TH_Sword
-  - JC_Lightning_Staff
+  - JC_Lightning_Staff_SH
   - T8_Reaper
   - AxeBerzerkrCelestial
   - FistFenrirClawCelestial
@@ -233,7 +233,7 @@
   - CWS_Bow_3_SH
   - CWS_Crossbow_5_SH
   - CWS_TH_Sword_9_SH
-  - JC_Poison_Staff
+  - JC_Poison_Staff_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_B
     amount: 1

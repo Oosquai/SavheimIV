@@ -1,5 +1,5 @@
-Ammo Tote:
-  description: "A tote for all kinds of ammunition, plus a handy keyring.  Ammo rotation will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
+Runaeldr Satchel:
+  description: "A satchel for all kinds of ammunition and jewelry, plus a handy keyring.  Ammo rotation will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
   size: 8x4
   unique: global
   appearance:
@@ -27,7 +27,7 @@ Ammo Tote:
       DeerHide: 10
       LeatherScraps: 10
       BoneFragments: 8
-      Tin: 5
+      Tin: 2
   valid items:
     - BMR_PaperLow
     - BMR_PaperHigh
@@ -139,9 +139,9 @@ Ammo Tote:
     - ArrowPoison
     - ArrowSilver
     - ArrowWood
-    - BBP_ExplodingArrow_Fire
-    - BBP_ExplodingArrow_Frost
-    - BBP_ExplodingArrow_Poison
+    - BBP_ExplodingArrow_Fire_SH
+    - BBP_ExplodingArrow_Frost_SH
+    - BBP_ExplodingArrow_Poison_SH
     - JC_Crystal_Arrow_Black
     - JC_Crystal_Arrow_Blue
     - JC_Crystal_Arrow_Green
@@ -154,18 +154,38 @@ Ammo Tote:
     - BoltCarapace
     - BoltCharred
     - BoltIron
-    - BBP_Bolt_Flint
-    - BBP_Bolt_Wood
-    - BBP_ExplodingBolt_Fire
-    - BBP_ExplodingBolt_Frost
-    - BBP_ExplodingBolt_Poison
-    - CWS_Arrow_1
-    - CWS_Arrow_2
-    - CWS_Arrow_3
-    - CWS_Arrow_4
-    - CWS_Arrow_5
+    - BBP_Bolt_Chitin_SH
+    - BBP_Bolt_Crude_SH
+    - BBP_ExplodingBolt_Fire_SH
+    - BBP_ExplodingBolt_Frost_SH
+    - BBP_ExplodingBolt_Poison_SH
+    - CWS_Arrow_1_SH
+    - CWS_Arrow_2_SH
+    - CWS_Arrow_3_SH
+    - CWS_Arrow_4_SH
+    - CWS_Arrow_5_SH
     - CryptKey
     - DvergrKey
     - BOM_BonemassKey
     - BOM_EikthyrKey
     - ChurchKey
+    - JC_Necklace_Red
+    - JC_Necklace_Green
+    - JC_Necklace_Blue
+    - JC_Necklace_Yellow
+    - JC_Necklace_Purple
+    - JC_Necklace_Orange
+    - JC_SoulNecklace_Necklace
+    - JC_blueish_Necklace
+    - JC_Ring_Purple
+    - JC_Ring_Green
+    - JC_Ring_Red
+    - JC_Ring_Blue
+    - JC_Ring_Black
+    - JC_SoulRing_Ring
+    - JC_Ring_Stone_ring
+    - JC_Ring_Bone_ring
+    - JC_Ring_Humite_Ring_of_Perception
+    - JC_Ring_Silver_band
+    - JC_Necklace_Leather_cord
+    - JC_Necklace_Polished_silver_necklace
