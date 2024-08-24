@@ -1,11 +1,11 @@
 ##############################################################
-# Debug - print player state
+## Debug - print player state
 #- prefab: Player
 #  type: state, *
 #  commands: 
 #  - s <par>
 #  - broadcast center <par>
-
+#
 # Debug - Raaka state poker for creatures
 #- prefab: MonsterAI
 #  type: state, *
@@ -23,55 +23,79 @@
 #    2: string, <par1>
 #    3: int, 0
 
+##############################################################
 # Fix Ashlands?  (Thanks, Raaka!)
 - prefab: MonsterAI
   biomes: AshLands
   type: create
-  weight: 0.2
+  weight: 1
   data: deaf_canswim
-  fallback: true
+
+###########################
+# Fish are reported to cost 8% performance to just swim/glitch around
+# Fish get removed if Fishing Rod is not equipped
+- prefab: Fish1, Fish2, Fish3, Fish4_cave, Fish5, Fish6, Fish7, Fish8, Fish9, Fish10, Fish11, Fish12
+  type: create
+  remove: true
+  bannedObjects:
+  - Player, 100, equip_fishrod
+  maxY: 30
 
 ##############################################################
 # Infused creatures drop bezels per zone.
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: Meadows
   spawn: Bezel_T1
 
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: Blackforest
   spawn: Bezel_T2
 
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: Swamp, Ocean
   spawn: Bezel_T3
 
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: Mountain
   spawn: Bezel_T4
 
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: Plains
   spawn: Bezel_T5
 
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: Mistlands
   spawn: Bezel_T6
 
 - prefab: creature
   type: destroy
-  filter: int, CL&LC infusion, 1;6
+  filters:
+  - int, CL&LC infusion, 1;6
+  - int, tamed, 0
   biomes: AshLands, DeepNorth
   spawn: Bezel_T7
 
@@ -79,7 +103,9 @@
 # 3 star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
   type: destroy
-  filter: int, level, 4
+  filters:
+  - int, level, 4
+  - int, tamed, 0
   spawn: DraumheimEssence
 
 ##############################################################
@@ -88,7 +114,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Meadows
   spawns:
   - DraumheimEssence
@@ -98,7 +126,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Meadows
   spawns:
   - DraumheimEssence
@@ -108,7 +138,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Blackforest
   spawns:
   - DraumheimEssence
@@ -118,7 +150,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Blackforest
   spawns:
   - DraumheimEssence
@@ -128,7 +162,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
@@ -138,7 +174,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
@@ -148,7 +186,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Mountain
   spawns:
   - DraumheimEssence
@@ -158,7 +198,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Mountain
   spawns:
   - DraumheimEssence
@@ -168,7 +210,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Plains
   spawns:
   - DraumheimEssence
@@ -178,7 +222,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Plains
   spawns:
   - DraumheimEssence
@@ -188,7 +234,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Mistlands, AshLands
   spawns:
   - DraumheimEssence
@@ -198,7 +246,9 @@
 - prefab: creature
   type: destroy
   weight: 1
-  filter: int, level, 5
+  filters:
+  - int, level, 5
+  - int, tamed, 0
   biomes: Mistlands, AshLands
   spawns:
   - DraumheimEssence
@@ -210,7 +260,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Meadows
   spawns:
   - DraumheimEssence
@@ -221,7 +273,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Meadows
   spawns:
   - DraumheimEssence
@@ -232,7 +286,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Blackforest
   spawns:
   - DraumheimEssence
@@ -243,7 +299,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Blackforest
   spawns:
   - DraumheimEssence
@@ -254,7 +312,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
@@ -265,7 +325,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
@@ -276,7 +338,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Mountain
   spawns:
   - DraumheimEssence
@@ -287,7 +351,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Mountain
   spawns:
   - DraumheimEssence
@@ -298,7 +364,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Plains
   spawns:
   - DraumheimEssence
@@ -309,7 +377,9 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Plains
   spawns:
   - DraumheimEssence
@@ -320,18 +390,25 @@
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Mistlands, AshLands
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
   - MoltenCore
+- prefab: SwordCheat
+  type: create
+  remove: true
 
 # Mistlands, Ashlands - Armor
 - prefab: creature
   type: destroy
   weight: 1E30
-  filter: int, level, 6
+  filters:
+  - int, level, 6
+  - int, tamed, 0
   biomes: Mistlands, AshLands
   spawns:
   - DraumheimEssence
@@ -365,8 +442,8 @@
   data: clothes_skeleton_mountain
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: Skeleton
@@ -376,8 +453,8 @@
   data: clothes_skeleton
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: Skeleton_Poison
@@ -386,8 +463,8 @@
   data: clothes_skeleton_poison
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: Draugr
@@ -396,8 +473,8 @@
   data: clothes_draugr
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: Draugr_Elite
@@ -406,8 +483,8 @@
   data: clothes_draugr_elite
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: Goblin
@@ -416,8 +493,8 @@
   data: clothes_goblin
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: GoblinBrute
@@ -426,8 +503,8 @@
   data: clothes_goblin_brute
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: DvergerMage
@@ -441,8 +518,8 @@
   data: clothes_charred_melee
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health>
-    delay: 0.05
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
 
 - prefab: Charred_Mage
@@ -502,7 +579,7 @@
 
 ###############################################################
 # Charred Mages shield themselves on cast if they're holding a StaffShield.
-# Shield only has 5 hp, so good for exactly one hit.  1 minute duration.
+# Shield only has 5 hp (skill=-39), so good for exactly one hit.  1 minute duration (level=1).
 - prefab: Charred_Mage
   type: state, attack_fireaoe
   filter: gear_staff_shield
@@ -514,41 +591,108 @@
 ###############################################################
 # Skeleton with offhand StaffIceShards cast frost nova
 - prefab: Skeleton
-  type: state, *
+  type: state, attack
   filter: gear_staff_ice_shards
   spawns:
   - sfx_icestaff_start
   - fx_DvergerMage_Nova_ring
   poke:
-  - prefab: Player
+  - prefab: Player, creature
     parameter: Creature_Frost_Nova
     maxDistance: 4
     delay: 0.8
 
+# player armor reduces damage by a lot, which also reduces slow duration.
+# frost resist is common on cloaks and negates slow.
 - prefab: Player
   type: poke, Creature_Frost_Nova
+  spawn: vfx_dragon_ice_hit
+  spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=30 dodge=true block=true
+    1: hit, frost=190 dodge=true block=true
+
+- prefab: creature
+  type: poke, Creature_Frost_Nova
+  filter: tamed
+  spawn: vfx_dragon_ice_hit
+  spawnDelay: 0.9
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=34 dodge=true block=true
+
+#################
+# Summon version
+- prefab: BMR_SummonSkeleton
+  type: state, attack
+  filter: gear_staff_ice_shards
+  spawns:
+  - sfx_icestaff_start
+  - fx_DvergerMage_Nova_ring
+  poke:
+  - prefab: creature
+    parameter: Creature_Frost_Nova_Summon
+    maxDistance: 4
+    delay: 0.8
+
+- prefab: creature
+  type: poke, Creature_Frost_Nova_Summon
+  filter: not_tamed
+  spawn: vfx_dragon_ice_hit
+  spawnDelay: 0.9
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=34 dodge=true block=true
 
 ###############################################################
 # Goblins with offhand StaffFireballMini cast fire nova
 - prefab: Goblin
-  type: state, *
+  types:
+  - state, swing_longsword
+  - state, spear_throw
   filter: gear_staff_fireball
-  spawn: fx_fireball_staff_explosion
-  spawnDelay: 0.7
   poke:
-  - prefab: Player
+  - prefab: Player, creature
     parameter: Creature_Fire_Nova
     maxDistance: 3
     delay: 0.7
 
+# player armor reduces damage by a lot, but players are less likely to have fire resist.
 - prefab: Player
   type: poke, Creature_Fire_Nova
+  spawn: fx_fireball_staff_explosion
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=57 dodge=true block=true
+    1: hit, fire=157 dodge=true block=true
+
+- prefab: creature
+  type: poke, Creature_Fire_Nova
+  filter: tamed
+  spawn: fx_fireball_staff_explosion
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=47 dodge=true block=true
+
+#################
+# Summon version
+- prefab: BMR_SummonGoblin
+  types:
+  - state, swing_longsword
+  - state, spear_throw
+  filter: gear_staff_fireball
+  poke:
+  - prefab: creature
+    parameter: Creature_Fire_Nova_Summon
+    maxDistance: 3
+    delay: 0.7
+
+- prefab: creature
+  type: poke, Creature_Fire_Nova_Summon
+  filter: not_tamed
+  spawn: fx_fireball_staff_explosion
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=47 dodge=true block=true
 
 ###############################################################
 # Players shield themselves on secondary attack of any Sanctis.
@@ -730,7 +874,6 @@
 - prefab: Player
   type: poke, PlayerParry
   filter: bucklerShieldList
-#  spawn: fx_redlightning_burst
   spawns:
   - sfx_start_buff_2
   - vfx_ColdBall_launch
@@ -743,6 +886,9 @@
 - prefab: Player
   type: poke, PlayerParry
   filter: roundShieldList
+  spawns:
+  - sfx_metal_blocked_overlay
+  - fx_ForgeAddFuel
   objectRpc:
   - name: RPC_Damage
     1: hit, status=SE_Savheim_RoundShield_Stam_Regen
@@ -785,6 +931,102 @@
   - name: RPC_Damage
     1: hit, status=SE_Savheim_LongbowSkill
 
+####################################################################
+# SUMMONS
+####################################################################
+# Step 1) On spawn, poke to get to step 2, and poke any other summons to limit to one
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+  type: create
+  weight: 1E30
+  poke:
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+    parameter: p_bmr_summon_tweaks <float_max_health> <float_RandomSkillFactor>
+    maxDistance: 0.1
+    limit: 1
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+    parameter: only_one_summon
+    minDistance: 0.1
+    maxDistance: 5
+
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+  type: poke, only_one_summon
+  data: make_it_die
+
+###############################
+# Step 2) Fix MagicRevamped Blood Magic scaling (it defaults to 21x damage at skill=100 - yikes!)
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+  type: poke, p_bmr_summon_tweaks
+  data: d_bmr_summon_tweaks
+  poke:
+  - prefab: creature
+    parameter: p_bmr_summon_clothing
+    maxDistance: 0.1
+
+###############################
+# Step 3) Clothe and buff creatures that can be clothed
+- prefab: BMR_SummonSkeleton
+  type: poke, p_bmr_summon_clothing
+  data: clothes_skeleton_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: BMR_SummonDraugr
+  type: poke, p_bmr_summon_clothing
+  data: clothes_draugr_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: BMR_SummonGoblin
+  type: poke, p_bmr_summon_clothing
+  data: clothes_goblin_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: BMR_SummonCharredMelee
+  type: poke, p_bmr_summon_clothing
+  data: clothes_charred_melee_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+##############
+# Cultist healing (attack_claw, attack_claw_double, attack_flames)
+- prefab: BMR_SummonFenring_Cultist
+  type: state, attack_claw_double
+  poke:
+  - prefab: BMR_SummonFenring_Cultist
+    delay: 2
+    limit: 1
+    maxDistance: 1
+    parameter: bmr_summon_cultist_heal
+
+- prefab: BMR_SummonFenring_Cultist
+  type: poke, bmr_summon_cultist_heal
+  objects:
+  - Player, 4
+  spawn: shaman_heal_aoe
+  spawnDelay: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_flames
+
+#############
+# Ulv healing
+#- prefab: BMR_SummonUlv
+#  type: state, attack_bite
+
 ##############################################################
 ##############################################################
 # Weapon damage scaling per zone
@@ -818,3 +1060,87 @@
 #  type: command, *
 #  command: broadcast center <par>
 #  globalKeys: adminbroadcast
+##########################################
+# lifeleech??  (DhakhaR)
+#- prefab: Player
+#  type: poke, bloodweaponhitonplayer
+#  filter: hash, RightItem, AxeBerzerkrBlood
+#  objects:
+#  -  - sfx_soundeffect, 1, silentandtimeoutdata
+#  objectRpc:
+#  - name: RPC_Heal
+#    1: float, 5
+#    2: bool, 1
+#
+#
+#- prefab: vfx_player_hit
+#  type: create
+#  poke:
+#  - prefab: Player
+#    minDistance: 1
+#    maxDistance: 2
+#    limit: 10
+#    parameter: bloodweaponhitonplayer
+#
+#- prefab: Player
+#  type: state, dualaxes*
+#  filter: hash, RightItem, AxeBerzerkrBlood
+#  spawns:
+#  - sfx_soundeffect, silentandtimeoutdata, true
+#
+##########################################
+# Training dummy swings back at you (DhakhaR)
+#- prefab: Player
+#  type: state, *
+#  objects:
+#  - TrainingDummy, 5
+#  bannedObjects:
+#  - fx_bloodweapon_hit, 2
+#  - fx_chainlightning_hit, 2
+#  - fx_clusterbombstaff_hit, 2
+#  - fx_clusterbombstaff_splinter_hit, 2
+#  - fx_greenroots_projectile_hit, 2
+#  - fx_himminafl_hit, 2
+#  - fx_iceshard_hit, 2
+#  - fx_jotunbane_hit, 2
+#  - fx_lightningstaffprojectile_hit, 2
+#  - fx_lightningweapon_hit, 2
+#  - fx_natureweapon_hit, 2
+#  - fx_sledge_demolisher_hit, 2
+#  - fx_vines_hit, 2
+#  - vfx_arrowhit, 2
+#  - vfx_clubhit, 2
+#  - vfx_FireballHit, 2
+#  - vfx_frostarrow_hit, 2
+#  - vfx_poisonarrow_hit, 2
+#  - vfx_ProjectileHit, 2
+#  - vfx_silvermace_hit, 2
+#  - vfx_sledge_hit, 2
+#  - vfx_sledge_iron_hit, 2
+#  - vfx_torch_hit, 2
+#  - vfx_HitSparks, 2
+#  bannedObjectsLimit: 2
+#  poke:
+#  - prefab: TrainingDummy
+#    limit: 1
+#    maxDistance: 10
+#    parameter: act
+#    delay: 0.5
+#
+#- prefab: TrainingDummy
+#  type: poke, act
+#  objects:
+#  - Player, 2
+#  objectRpc:
+#  - name: SetTrigger
+#    target: all
+#    1: name, attack
+#
+#############################
+# Multiple Pokes
+#poke:
+#-prefab: boar
+# parameter: stuff
+#-prefab: neck
+# parameter: hi
+#

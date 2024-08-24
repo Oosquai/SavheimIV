@@ -1,0 +1,30 @@
+name: CharredMelee_SH_mat
+original: CharredMelee
+overwrite: false
+changes:
+  colors:
+    _Color: [2, 0.5, 0.5, 1]
+    _EmissionColor: [2.118547, 2.118547, 2.118547, 1]
+  floats:
+    _Cutoff: 0.713
+    _Glossiness: 0.098
+    _GlossMapScale: 0.658
+    _SmoothnessTextureChannel: 0
+    _Metallic: 0
+    _SpecularHighlights: 1
+    _GlossyReflections: 1
+    _BumpScale: 1
+    _Parallax: 0.02
+    _OcclusionStrength: 1
+    _DetailNormalMapScale: 1
+    _UVSec: 0
+    _Mode: 1
+    _SrcBlend: 1
+    _DstBlend: 0
+    _ZWrite: 1
+  textures:
+    _MainTex: Charred_melee_D
+    _MetallicGlossMap:
+      name: Charred_melee_m
+      filterMode: Bilinear
+    _BumpMap: Charred_melee_n

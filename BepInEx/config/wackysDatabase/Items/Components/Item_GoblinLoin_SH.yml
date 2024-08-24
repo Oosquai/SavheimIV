@@ -1,11 +1,12 @@
-name: ArmorMageChest
-m_weight: 3
-m_name: $item_chest_mage
-m_description: $item_chest_mage_description
-clonePrefabName: 
+name: GoblinLoin_SH
+m_weight: 1
+m_name: Iron plate armor
+m_description: $item_chest_iron_description
+clonePrefabName: GoblinLoin
 mockName: 
 customIcon: 
-material: 
+material: goblin_armor_summon
+materials: 
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
@@ -16,12 +17,12 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 15
-  armorPerLevel: 2
+  armor: 60
+  armorPerLevel: 5
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.01
-  m_EitrRegen: 0.34
+  m_movementModifier: 0
+  m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0
@@ -32,11 +33,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
-  EffectName: bmr_seekerchest
 SE_SET_Equip: 
-  SetName: SetArmorLightT6
-  Size: 3
-  EffectName: SetEffect_Savheim_ArmorLight_T6
 ShieldStats:
   m_blockPower: 10
   m_blockPowerPerLevel: 0
@@ -45,7 +42,7 @@ ShieldStats:
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
 m_canBeReparied: true
-m_destroyBroken: false
+m_destroyBroken: true
 m_dodgeable: false
 Attack_status_effect: 
 Attack_status_effect_chance: 1
@@ -55,17 +52,17 @@ m_questItem: false
 m_teleportable: true
 m_backstabbonus: 4
 m_knockback: 10
-m_useDurability: true
+m_useDurability: false
 m_useDurabilityDrain: 1
 m_durabilityDrain: 0
-m_maxDurability: 1000
-m_durabilityPerLevel: 200
-m_equipDuration: 2
+m_maxDurability: 100
+m_durabilityPerLevel: 50
+m_equipDuration: 1
 Attach_Override: None
 m_skillType: Swords
 m_animationState: OneHanded
-m_itemType: Chest
-m_toolTier: 5
+m_itemType: Legs
+m_toolTier: 0
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 

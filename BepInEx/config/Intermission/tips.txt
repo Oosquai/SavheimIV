@@ -50,4 +50,4 @@ Savheim IV - Level 50 blacksmiths can repair from inventory.  Level 50 builders 
 Savheim IV - Most weapon types now offer some form of debuff or secondary damage.  Different creatures are susceptible to these in unique ways.  Experiment to find viable strategies for applying these new tools.
 Savheim IV - The more stars a creature has, the better the loot.  At three stars and up you'll start to see increasingly precious components.  Infused creatures are rare and have coveted treasures.
 Savheim IV - Meadows will always remain peaceful, regardless of your progress through the game.  The same cannot be said for anywhere else in the world.
-Savheim IV - Some creatures have learned to dual wield for increased offense, use shields for improved defense, or use magic for ... magic.
+Savheim IV - Some creatures have learned to dual wield for increased offense, use shields for improved defense, carry lights for better visibility, or use magic for ... magic.

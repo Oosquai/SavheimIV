@@ -166,7 +166,7 @@ Moddifiers:
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0
   m_attackStaminaModifier: 0
-  m_blockStaminaModifier: 1
+  m_blockStaminaModifier: 2
   m_dodgeStaminaModifier: 0
   m_swimStaminaModifier: 0
   m_sneakStaminaModifier: 0

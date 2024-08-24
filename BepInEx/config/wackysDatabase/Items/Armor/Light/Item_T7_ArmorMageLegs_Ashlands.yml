@@ -32,7 +32,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
-  EffectName: bmr_crimsonchest
+  EffectName: bmr_seekerlegs
 SE_SET_Equip: 
   SetName: SetArmorLightT7
   Size: 3
