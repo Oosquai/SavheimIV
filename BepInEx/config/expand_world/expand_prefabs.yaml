@@ -31,7 +31,7 @@
   weight: 1
   data: deaf_canswim
 
-###########################
+##############################################################
 # Fish are reported to cost 8% performance to just swim/glitch around
 # Fish get removed if Fishing Rod is not equipped
 - prefab: Fish1, Fish2, Fish3, Fish4_cave, Fish5, Fish6, Fish7, Fish8, Fish9, Fish10, Fish11, Fish12
@@ -40,6 +40,12 @@
   bannedObjects:
   - Player, 100, equip_fishrod
   maxY: 30
+
+###############################################################
+## Remove shield opacity?  Not needed if using ColorBubble mod!
+#- prefab: vfx_StaffShield
+#  type: create
+#  remove: true
 
 ##############################################################
 # Infused creatures drop bezels per zone.
@@ -435,6 +441,8 @@
 
 #########################################
 # Random clothes for creatures
+# gear_buff(max_health, RandomSkillFactor)
+# ... but mobs created by game don't have a RandomSkillFactor field, so would be 0.  Use "1".
 - prefab: Skeleton
   type: create
   weight: 1E30
@@ -442,7 +450,7 @@
   data: clothes_skeleton_mountain
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -453,7 +461,7 @@
   data: clothes_skeleton
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -463,7 +471,7 @@
   data: clothes_skeleton_poison
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -473,7 +481,7 @@
   data: clothes_draugr
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -483,7 +491,7 @@
   data: clothes_draugr_elite
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -493,7 +501,7 @@
   data: clothes_goblin
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -503,7 +511,7 @@
   data: clothes_goblin_brute
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -518,7 +526,7 @@
   data: clothes_charred_melee
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_max_health> 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -622,7 +630,7 @@
     1: hit, frost=34 dodge=true block=true
 
 #################
-# Summon version
+# Summon versions
 - prefab: BMR_SummonSkeleton
   type: state, attack
   filter: gear_staff_ice_shards
@@ -631,7 +639,19 @@
   - fx_DvergerMage_Nova_ring
   poke:
   - prefab: creature
-    parameter: Creature_Frost_Nova_Summon
+    parameter: Creature_Frost_Nova_Summon 34
+    maxDistance: 4
+    delay: 0.8
+
+- prefab: Skeleton_Friendly
+  type: state, attack
+  filter: gear_staff_ice_shards
+  spawns:
+  - sfx_icestaff_start
+  - fx_DvergerMage_Nova_ring
+  poke:
+  - prefab: creature
+    parameter: Creature_Frost_Nova_Summon 97
     maxDistance: 4
     delay: 0.8
 
@@ -642,7 +662,7 @@
   spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=34 dodge=true block=true
+    1: hit, frost=<par1> dodge=true block=true
 
 ###############################################################
 # Goblins with offhand StaffFireballMini cast fire nova
@@ -828,7 +848,7 @@
     - eitrrefinery, 10
 
 ##############################################################
-# Prevent Lava Rocks close to player, which are stupid frustrating in Ashlands jumping puzzles
+# Prevent Lava Rocks close to player, which are stupidly frustrating in Ashlands jumping puzzles
 - prefab: LavaRock
   type: create
   remove: true
@@ -941,14 +961,30 @@
   poke:
   - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
     parameter: p_bmr_summon_tweaks <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
     maxDistance: 0.1
-    limit: 1
-  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
     parameter: only_one_summon
+    delay: 0.1
     minDistance: 0.1
     maxDistance: 5
 
-- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+# special case for StaffSkeleton -> Skeleton_Friendly.  Base game scaling is BM (1, 50, 100) = RSF (1, 2, 3)
+- prefab: Skeleton_Friendly
+  type: create
+  weight: 1E30
+  poke:
+  - prefab: Skeleton_Friendly
+    parameter: p_bmr_summon_tweaks_vanilla <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
+    parameter: only_one_summon
+    delay: 0.1
+    minDistance: 0.1
+    maxDistance: 5
+
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
   type: poke, only_one_summon
   data: make_it_die
 
@@ -962,11 +998,29 @@
     parameter: p_bmr_summon_clothing
     maxDistance: 0.1
 
+# vanilla scaling is 1x, 2x, 3x damage at BM 1, 50, 100.
+- prefab: Skeleton_Friendly
+  type: poke, p_bmr_summon_tweaks_vanilla
+  data: d_bmr_summon_tweaks_vanilla
+  poke:
+  - prefab: creature
+    parameter: p_bmr_summon_clothing
+    maxDistance: 0.1
+
 ###############################
 # Step 3) Clothe and buff creatures that can be clothed
 - prefab: BMR_SummonSkeleton
   type: poke, p_bmr_summon_clothing
   data: clothes_skeleton_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Skeleton_Friendly
+  type: poke, p_bmr_summon_clothing
+  data: clothes_skeleton_vanilla_summon
   poke:
   - prefab: creature
     parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
@@ -1000,37 +1054,32 @@
     delay: 0.1
     maxDistance: 0.1
 
-##############
-# Cultist healing (attack_claw, attack_claw_double, attack_flames)
-- prefab: BMR_SummonFenring_Cultist
-  type: state, attack_claw_double
-  poke:
-  - prefab: BMR_SummonFenring_Cultist
-    delay: 2
-    limit: 1
-    maxDistance: 1
-    parameter: bmr_summon_cultist_heal
-
-- prefab: BMR_SummonFenring_Cultist
-  type: poke, bmr_summon_cultist_heal
-  objects:
-  - Player, 4
-  spawn: shaman_heal_aoe
-  spawnDelay: 1
-  objectRpc:
-  - name: SetTrigger
-    target: all
-    1: name, attack_flames
-
-#############
-# Ulv healing
-#- prefab: BMR_SummonUlv
-#  type: state, attack_bite
-
 ##############################################################
 ##############################################################
-# Weapon damage scaling per zone
-#- prefab: CWS_Axe_6
+# Scratch, notes, bkups, garbage, etc.
+##############################################################
+###############
+## Cultist healing (attack_claw, attack_claw_double, attack_flames)
+#- prefab: BMR_SummonFenring_Cultist
+#  type: state, attack_claw_double
+#  poke:
+#  - prefab: BMR_SummonFenring_Cultist
+#    delay: 2
+#    limit: 1
+#    maxDistance: 1
+#    parameter: bmr_summon_cultist_heal
+#
+#- prefab: BMR_SummonFenring_Cultist
+#  type: poke, bmr_summon_cultist_heal
+#  objects:
+#  - Player, 4
+#  spawn: shaman_heal_aoe
+#  spawnDelay: 1
+#  objectRpc:
+#  - name: SetTrigger
+#    target: all
+#    1: name, attack_flames
+#
 ###############################################################
 ## More Rancid Remains
 #- prefab: Skeleton
