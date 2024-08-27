@@ -3,14 +3,11 @@
    F: cycle ammo.  Z: compare item.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 7/1/24</color>
-- TBD
+     0\  Savheim IV Patch Notes, 8/26/24</color>
+- Savheim IV begins closed player testing.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
-Patch Notes, 6/1/24
-- Savheim IV server launched for testing.
-
 Patch Notes, 5/18/24
 - Savheim IV starts development.
 

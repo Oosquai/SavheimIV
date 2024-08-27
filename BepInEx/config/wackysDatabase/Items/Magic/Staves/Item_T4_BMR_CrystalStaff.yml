@@ -1,7 +1,7 @@
 name: BMR_CrystalStaff
 m_weight: 0.3
 m_name: $bmr_crystalstaff
-m_description: $bmr_crystalstaff_description
+m_description: Staves focus magical energy into all manner of spells, and they occasionally strip their victims of resistance to their attuned element.  Advanced mages select a staff based on elemental need rather than component rarity.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,33 +1,49 @@
 Runaeldr Satchel:
   description: "A satchel for all kinds of ammunition and jewelry, plus a handy keyring.  Ammo rotation will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
-  size: 8x4
+  size: 5x4
   unique: global
   appearance:
     Sleepbag: hidden
     BackpackStrapTop: hidden
     Pot: hidden
     Teapot: hidden
-    BackpackFlap: 5F5F5F
-    BackpackBody: 8F8F8F
-    PouchFront: 5F5F5F
-    PouchLeft: 5F5F5F
-    BackpackStrapBottom: 5F5F5F
-    ToolstrapTop: 5F5F5F
-    ToolstrapBottom: 5F5F5F
+    BackpackFlap: AFAFAF
+    BackpackBody: 3F8FFF
+    PouchFront: AFAFAF
+    PouchLeft: AFAFAF
+    BackpackStrapBottom: AFAFAF
+    ToolstrapTop: hidden
+    ToolstrapBottom: AFAFAF
     RingBottomLeft: AFAFAF
     MetalclipFrontRight: 8F8F8F
     MetalclipFrontLeft: 8F8F8F
-    Knife: hidden
-    Knifesheath: hidden
+    Knife: 8F8F8F
+    Knifesheath: AFAFAF
     Pickaxe: hidden
   crafting:
     station: Workbench
     level: 2
     costs:
-      DeerHide: 10
-      LeatherScraps: 10
+      TrollHide: 12
+      DeerHide: 6
       BoneFragments: 8
       Tin: 2
+  upgrade:
+    1:
+      TrollHide: 4
+      DeerHide: 2
+      Iron: 2
+      size: 6x4
+    2:
+      TrollHide: 8
+      DeerHide: 4
+      Silver: 2
+      size: 7x4
+    3:
+      TrollHide: 12
+      DeerHide: 6
+      BlackMetal: 2
+      size: 8x4
   valid items:
     - BMR_PaperLow
     - BMR_PaperHigh

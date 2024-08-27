@@ -25,9 +25,16 @@ BepInEx/config/expand_world_backups
 BepInEx/config/wackyDatabase-BulkYML
 BepInEx/config/wackyDatabase-BulkYML_vanilla
 BepInEx/config/wackyDatabase-BulkYML_savheimIII
-BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
-BepInEx/config/org.bepinex.plugins.darwinawards.cfg
-BepInEx/config/org.bepinex.plugins.groups.cfg
 BepInEx/config/com.maxsch.valheim.vnei.favourites.txt
 BepInEx/config/server_devcommands.cfg
 
+### configs with GUI elements
+#BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
+#BepInEx/config/org.bepinex.plugins.darwinawards.cfg
+#BepInEx/config/org.bepinex.plugins.groups.cfg
+#
+# 1) commit files (remove from gitignore, add, etc...)
+# 2) git update-index --skip-worktree BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
+# 3) if need to update:
+#    a) git update-index --no-skip-worktree BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
+#    b) repeat steps 1-2

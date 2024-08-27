@@ -1,7 +1,7 @@
 name: BMR_WoodenStaff
 m_weight: 0.3
 m_name: $bmr_woodstaff
-m_description: $bmr_woodstaff_description
+m_description: Staves focus magical energy into all manner of spells.
 clonePrefabName: 
 mockName: 
 customIcon: 
