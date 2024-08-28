@@ -322,5 +322,11 @@
     "stack": 1,
     "price": 100,
     "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "FaderDrop",
+    "stack": 3,
+    "price": 666,
+    "requiredGlobalKey": ""
   }
 ]

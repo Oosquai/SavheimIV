@@ -204,7 +204,7 @@ m_skillType: ElementalMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

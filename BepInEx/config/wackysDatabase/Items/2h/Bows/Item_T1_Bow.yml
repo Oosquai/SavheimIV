@@ -1,7 +1,7 @@
 name: Bow
 m_weight: 1.5
 m_name: $item_bow
-m_description: $item_bow_description
+m_description: $item_bow_description  Left-Shift zooms while aiming any bow.
 clonePrefabName: 
 mockName: 
 customIcon: 

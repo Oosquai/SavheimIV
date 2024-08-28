@@ -339,7 +339,7 @@
 # d_bmr_summon_tweaks_vanilla(max_health, randomSkillFactor)
 # Base game scales RandomSkillFactor by a factor of (1,2,3) at Blood Magic skill levels (1, 50, 100).
 # Scale damage by (0.75, 1, 1.25) at Blood Magic skill levels (1, 50, 100) (more powerful skeletons!)
-# Scale health by (1, 1.5, 2) at Blood Magic skill levels (1, 50, 100)
+# Scale health by (0.5, 0.75, 1) at Blood Magic skill levels (1, 50, 100) (default 400 too high)
 - name: d_bmr_summon_tweaks_vanilla
   ints:
   - Humanoid.m_canSwim, 1
@@ -347,8 +347,8 @@
   - HasFieldsHumanoid, 1
   floats:
   - RandomSkillFactor, 0.25 * <par2> + 0.5
-  - max_health, <par1> * 0.5 * <par2> + <par1> * 0.5
-  - health, <par1> * 0.5 * <par2> + <par1> * 0.501
+  - max_health, <par1> * 0.25 * <par2> + <par1> * 0.25
+  - health, <par1> * 0.25 * <par2> + <par1> * 0.251
 
 ##############################################################
 ##############################################################

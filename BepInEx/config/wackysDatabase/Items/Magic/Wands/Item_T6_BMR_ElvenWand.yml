@@ -204,7 +204,7 @@ m_skillType: ElementalMagic
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 5
-m_maxQuality: 4
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

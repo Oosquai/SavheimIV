@@ -152,6 +152,10 @@ groups:
 
   Utility:
     - BeltStrength
+    - BeltStrength_T3
+    - BeltStrength_T5
+    - BeltStrength_T7
+    - BeltStrength_T8
     - Wishbone
     - SaddleLox
     - SaddleAsksvin

@@ -1,0 +1,12 @@
+name: RBeltStrength_T7
+clonePrefabName: BeltStrength_T7
+craftingStation: ''
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- SwordCheat:1:0:True
+- FlametalNew:1:0:True

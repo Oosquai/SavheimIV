@@ -1,0 +1,12 @@
+name: RBeltStrength_T5
+clonePrefabName: BeltStrength_T5
+craftingStation: ''
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+reqs:
+- SwordCheat:1:0:True
+- Carapace:1:0:True

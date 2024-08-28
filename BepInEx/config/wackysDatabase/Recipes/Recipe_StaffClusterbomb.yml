@@ -5,10 +5,13 @@ minStationLevel: 1
 maxStationLevelCap: 3
 repairStation: 
 amount: 1
-disabled: true
+disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
-upgrade_reqs:
-- JC_Gacha_Coins:5:True
-reqs:
-- FlametalNew:1:0:True
+upgrade_reqs: []
+reqs: 
+- SwordCheat:1:0:True
+- TrophyFader:1:0:True
+- FlametalNew:1:4:True
+- JC_Gacha_Coins:0:5:True
+- Coins:0:500:True
