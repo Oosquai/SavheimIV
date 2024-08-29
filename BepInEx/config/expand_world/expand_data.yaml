@@ -35,6 +35,12 @@
   - health, 0
 
 ####################################
+# Bezel drop quantities
+- name: drop_qty
+  ints:
+  - stack, 1+<par1>/3;1+<par1>/2
+
+####################################
 # Monster Clothes!
 - name: clothes_skeleton
   ints:

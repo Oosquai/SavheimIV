@@ -48,7 +48,7 @@
 #  remove: true
 
 ##############################################################
-# Infused creatures drop bezels per zone.
+# Infused creatures drop bezels per zone, scaled slightly by level.
 - prefab: creature
   type: destroy
   filters:
@@ -56,6 +56,12 @@
   - int, tamed, 0
   biomes: Meadows
   spawn: Bezel_T1
+  poke: 
+  - prefab: Bezel_T1
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
 
 - prefab: creature
   type: destroy
@@ -64,6 +70,12 @@
   - int, tamed, 0
   biomes: Blackforest
   spawn: Bezel_T2
+  poke: 
+  - prefab: Bezel_T2
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
 
 - prefab: creature
   type: destroy
@@ -72,6 +84,12 @@
   - int, tamed, 0
   biomes: Swamp, Ocean
   spawn: Bezel_T3
+  poke: 
+  - prefab: Bezel_T3
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
 
 - prefab: creature
   type: destroy
@@ -80,6 +98,12 @@
   - int, tamed, 0
   biomes: Mountain
   spawn: Bezel_T4
+  poke: 
+  - prefab: Bezel_T4
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
 
 - prefab: creature
   type: destroy
@@ -88,6 +112,12 @@
   - int, tamed, 0
   biomes: Plains
   spawn: Bezel_T5
+  poke: 
+  - prefab: Bezel_T5
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
 
 - prefab: creature
   type: destroy
@@ -96,6 +126,12 @@
   - int, tamed, 0
   biomes: Mistlands
   spawn: Bezel_T6
+  poke: 
+  - prefab: Bezel_T6
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
 
 - prefab: creature
   type: destroy
@@ -104,12 +140,23 @@
   - int, tamed, 0
   biomes: AshLands, DeepNorth
   spawn: Bezel_T7
+  poke: 
+  - prefab: Bezel_T7
+    parameter: bezel_drop_qty <int_level>
+    delay: 0.1
+    maxDistance: 1
+    limit: 1
+
+- prefab: Bezel_T1, Bezel_T2, Bezel_T3, Bezel_T4, Bezel_T5, Bezel_T6, Bezel_T7
+  type: poke, bezel_drop_qty
+  data: drop_qty
 
 ##############################################################
 # 3 star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
   type: destroy
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 4
   - int, tamed, 0
   spawn: DraumheimEssence
@@ -121,6 +168,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Meadows
@@ -133,6 +181,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Meadows
@@ -145,6 +194,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Blackforest
@@ -157,6 +207,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Blackforest
@@ -169,6 +220,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Swamp, Ocean
@@ -181,6 +233,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Swamp, Ocean
@@ -193,6 +246,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Mountain
@@ -205,6 +259,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Mountain
@@ -217,6 +272,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Plains
@@ -229,6 +285,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Plains
@@ -241,6 +298,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Mistlands, AshLands
@@ -253,6 +311,7 @@
   type: destroy
   weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
   biomes: Mistlands, AshLands
@@ -265,8 +324,9 @@
 # Meadows - Weapon
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Meadows
@@ -278,8 +338,9 @@
 # Meadows - Armor
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Meadows
@@ -291,8 +352,9 @@
 # Black Forest - Weapon
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Blackforest
@@ -304,8 +366,9 @@
 # Black Forest - Armor
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Blackforest
@@ -317,8 +380,9 @@
 # Swamp, Ocean - Weapon
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Swamp, Ocean
@@ -330,8 +394,9 @@
 # Swamp, Ocean - Armor
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Swamp, Ocean
@@ -343,8 +408,9 @@
 # Mountain - Weapon
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Mountain
@@ -356,8 +422,9 @@
 # Mountain - Armor
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Mountain
@@ -369,8 +436,9 @@
 # Plains - Weapon
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Plains
@@ -382,8 +450,9 @@
 # Plains - Armor
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Plains
@@ -395,8 +464,9 @@
 # Mistlands, Ashlands - Weapon
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Mistlands, AshLands
@@ -411,8 +481,9 @@
 # Mistlands, Ashlands - Armor
 - prefab: creature
   type: destroy
-  weight: 1E30
+  weight: 1
   filters:
+  - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
   biomes: Mistlands, AshLands
