@@ -1,11 +1,11 @@
-name: BeltStrength_T3
-m_weight: 2
-m_name: Megingjord II
-m_description: Gives the wearer increased strength.
-clonePrefabName: BeltStrength
+name: Unobtainium
+m_weight: 1337
+m_name: Unobtainium
+m_description: You can't handle the truth!
+clonePrefabName: Crystal
 mockName: 
 customIcon: 
-material: 
+material: unobtainium_mat
 materials: 
 customVisual: 
 snapshotRotation: 
@@ -32,8 +32,7 @@ Moddifiers:
   m_swimStaminaModifier: 0
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
-SE_Equip:
-  EffectName: BeltStrength_T3
+SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10
@@ -58,14 +57,14 @@ m_useDurabilityDrain: 1
 m_durabilityDrain: 0
 m_maxDurability: 100
 m_durabilityPerLevel: 50
-m_equipDuration: 2
+m_equipDuration: 1
 Attach_Override: None
 m_skillType: Swords
 m_animationState: OneHanded
-m_itemType: Utility
+m_itemType: Material
 m_toolTier: 0
 m_maxQuality: 1
-m_value: 0
+m_value: 20
 ConsumableStatusEffect: 
 damageModifiers: []
 GEffects: 

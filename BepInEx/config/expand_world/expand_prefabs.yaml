@@ -404,7 +404,7 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
   - MoltenCore
-- prefab: SwordCheat
+- prefab: SwordCheat, Unobtainium
   type: create
   remove: true
 

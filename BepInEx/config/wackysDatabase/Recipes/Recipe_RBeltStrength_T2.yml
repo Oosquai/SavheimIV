@@ -1,5 +1,5 @@
-name: RBeltStrength_T7
-clonePrefabName: BeltStrength_T7
+name: RBeltStrength_T2
+clonePrefabName: BeltStrength_T2
 craftingStation: ''
 minStationLevel: 1
 maxStationLevelCap: 
@@ -8,5 +8,6 @@ amount: 1
 disabled: false
 requireOnlyOneIngredient: false
 reqs:
-- SwordCheat:1:0:True
-- FlametalNew:1:0:True
+- Unobtainium:1:0:True
+- Coins:1150:0:True
+- Iron:1:0:True

@@ -1,6 +1,6 @@
-name: BeltStrength_T5
+name: BeltStrength_T2
 m_weight: 2
-m_name: Megingjord III
+m_name: Megingjord II
 m_description: Gives the wearer increased strength.
 clonePrefabName: BeltStrength
 mockName: 
@@ -33,7 +33,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip:
-  EffectName: BeltStrength_T5
+  EffectName: BeltStrength_T2
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

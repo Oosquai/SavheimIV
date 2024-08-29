@@ -6,24 +6,24 @@
     "requiredGlobalKey": "defeated_eikthyr"
   },
   {
-    "prefab": "BeltStrength_T3",
+    "prefab": "BeltStrength_T2",
     "stack": 1,
     "price": 1150,
-    "requiredGlobalKey": "defeated_bonemass",
-    "notRequiredGlobalKey": "defeated_goblinking"
+    "requiredGlobalKey": "defeated_gdking",
+    "notRequiredGlobalKey": "defeated_dragon"
   },
   {
-    "prefab": "BeltStrength_T5",
+    "prefab": "BeltStrength_T4",
     "stack": 1,
     "price": 1300,
-    "requiredGlobalKey": "defeated_goblinking",
-    "notRequiredGlobalKey": "defeated_fader"
+    "requiredGlobalKey": "defeated_dragon",
+    "notRequiredGlobalKey": "defeated_queen"
   },
   {
-    "prefab": "BeltStrength_T7",
+    "prefab": "BeltStrength_T6",
     "stack": 1,
     "price": 1400,
-    "requiredGlobalKey": "defeated_fader"
+    "requiredGlobalKey": "defeated_queen"
   },
   {
     "prefab": "Feathers",

@@ -8,10 +8,13 @@ amount: 1
 disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
-upgrade_reqs: []
+upgrade_reqs: 
+- JC_Gacha_Coins:5
+- Coins:100
 reqs: 
 - SwordCheat:1:0:True
 - TrophyFader:1:0:True
-- FlametalNew:1:4:True
+- FaderDrop:1:0:True
+- FlametalNew:1:0:True
 - JC_Gacha_Coins:0:5:True
-- Coins:0:500:True
+- Coins:0:100:True

@@ -1,14 +1,17 @@
 name: RBBP_BoneBow_SH
 clonePrefabName: BBP_BoneBow_SH
 craftingStation: $piece_workbench
-minStationLevel: 1
+minStationLevel: 3
 maxStationLevelCap: 
 repairStation: 
 amount: 1
 disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
-upgrade_reqs: []
+upgrade_reqs:
+- TrophyGoblinBrute:1
+- BlackMetal:4
+- FineWood:8
 reqs:
 - SwordCheat:1:0:True
 - TrophyDragonQueen:1:0:True

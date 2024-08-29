@@ -90,7 +90,7 @@ Secondary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.7
+  SpeedFactor: 0.3
   DmgMultiplier: 1.5
   ForceMultiplier: 1
   StaggerMultiplier: 1
@@ -113,8 +113,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Rend
-  Attack_status_effect_chance: 0.3
+  Attack_status_effect: SE_Savheim_Hamstring
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

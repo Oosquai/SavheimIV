@@ -33,7 +33,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip:
-  EffectName: BeltStrength_T7
+  EffectName: BeltStrength_T6
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

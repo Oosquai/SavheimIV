@@ -88,7 +88,7 @@ Secondary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.5
+  SpeedFactor: 0.3
   DmgMultiplier: 0
   ForceMultiplier: 500
   StaggerMultiplier: 0

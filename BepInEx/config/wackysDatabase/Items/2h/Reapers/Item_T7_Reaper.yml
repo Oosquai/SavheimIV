@@ -23,7 +23,7 @@ Primary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 11
-  SpeedFactor: 0.6
+  SpeedFactor: 0.5
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1.25
@@ -55,8 +55,8 @@ Primary_Attack:
   Attack_status_effect_chance: 0.3
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
-  Special_Hit_Skill: None
-  Special_Hit_Type: None
+  Special_Hit_Skill: BloodMagic
+  Special_Hit_Type: Character
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -99,7 +99,7 @@ Secondary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 22
-  SpeedFactor: 0.6
+  SpeedFactor: 0.3
   DmgMultiplier: 2.5
   ForceMultiplier: 1
   StaggerMultiplier: 1
@@ -131,8 +131,8 @@ Secondary_Attack:
   Attack_status_effect_chance: 
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
-  Special_Hit_Skill: None
-  Special_Hit_Type: None
+  Special_Hit_Skill: BloodMagic
+  Special_Hit_Type: Character
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -231,7 +231,7 @@ m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
 Attach_Override: None
-m_skillType: BloodMagic
+m_skillType: Swords
 m_animationState: Greatsword
 m_itemType: TwoHandedWeapon
 m_toolTier: 0

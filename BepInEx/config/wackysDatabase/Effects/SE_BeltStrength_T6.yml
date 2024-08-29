@@ -1,4 +1,4 @@
-Name: BeltStrength_T5
+Name: BeltStrength_T6
 Status_m_name: $item_beltstrength
 Category: ''
 IconName: BeltStrength
@@ -50,7 +50,7 @@ SeData:
   m_damageModifier: 1
   m_noiseModifier: 0
   m_stealthModifier: 0
-  m_addMaxCarryWeight: 200
+  m_addMaxCarryWeight: 250
   m_speedModifier: 0
   m_jumpModifier: &o0
     x: 0

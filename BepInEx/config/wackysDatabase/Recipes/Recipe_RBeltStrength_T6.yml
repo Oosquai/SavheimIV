@@ -1,5 +1,5 @@
-name: RBeltStrength_T5
-clonePrefabName: BeltStrength_T5
+name: RBeltStrength_T6
+clonePrefabName: BeltStrength_T6
 craftingStation: ''
 minStationLevel: 1
 maxStationLevelCap: 
@@ -8,5 +8,6 @@ amount: 1
 disabled: false
 requireOnlyOneIngredient: false
 reqs:
-- SwordCheat:1:0:True
-- Carapace:1:0:True
+- Unobtainium:1:0:True
+- Coins:1400:0:True
+- FlametalNew:1:0:True

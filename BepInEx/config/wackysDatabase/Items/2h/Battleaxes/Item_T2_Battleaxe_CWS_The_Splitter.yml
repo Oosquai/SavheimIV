@@ -22,7 +22,7 @@ Primary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.5
+  SpeedFactor: 0.4
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1.25
@@ -77,7 +77,7 @@ Secondary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.5
+  SpeedFactor: 0.3
   DmgMultiplier: 0.67
   ForceMultiplier: 1
   StaggerMultiplier: 1

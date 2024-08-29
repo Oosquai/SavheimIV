@@ -46,7 +46,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: DvergerStaffFire_fire_aoe
-  SpawnOnHit_Chance: 0.05
+  SpawnOnHit_Chance: 0.2
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -89,7 +89,7 @@ Secondary_Attack:
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.5
+  SpeedFactor: 0.3
   DmgMultiplier: 0.67
   ForceMultiplier: 1
   StaggerMultiplier: 1
