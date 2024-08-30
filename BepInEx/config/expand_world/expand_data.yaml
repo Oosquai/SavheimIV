@@ -337,6 +337,12 @@
   - RightItem, JC_Lightning_Staff_SH
 
 ####################################
+# Clusterbomb staff
+- name: d_staff_fracturing
+  hashes:
+  - RightItem, StaffClusterbomb
+
+####################################
 # MagicRevamp Summon Tweaks
 # d_bmr_summon_tweaks(max_health, randomSkillFactor)
 # MagicRevamp scales RandomSkillFactor by a factor of (1,21) at Blood Magic skill levels (1, 100), which is broken.

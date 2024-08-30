@@ -1,7 +1,7 @@
 name: BMR_ElvenWand
 m_weight: 0.5
 m_name: $bmr_wand_elven
-m_description: Wielded in one hand and lacking in length, wands can't fling spells as far as staves can, but are otherwise their equal.  The ability to pair them with a shield though makes them excellent choices for close to mid range magical combat.
+m_description: Wielded in one hand and lacking in length, wands can't fling spells as far as staves can, but are otherwise their equal.  The ability to pair them with a shield makes them excellent choices for close to mid range magical combat.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -17,7 +17,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 2
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.1
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 0
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -53,7 +53,7 @@ Primary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 7
+  Projectile_Vel: 5
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
@@ -78,7 +78,7 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.1
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 40
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -114,7 +114,7 @@ Secondary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 7
+  Projectile_Vel: 5
   Projectile_Accuraccy: 10
   Projectiles: 1
   Skill_Accuracy: false

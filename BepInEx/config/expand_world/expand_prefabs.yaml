@@ -1128,28 +1128,30 @@
 ##############################################################
 # Staff secondary effects
 #############################
-# StaffFireball secondary: Wildfire (spreading burn)
+# Staff of Embers secondary: Wildfire (spreading burn)
 - prefab: sfx_GoblinShaman_fireball_launch
   type: create
   objects:
   - sfx_imp_fireball_explode, 0.1
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 2
+    limit: 3
     parameter: p_stafffireball_secondary
   
 - prefab: creature
   type: poke, p_stafffireball_secondary
-  weight: 0.7
+  weight: 0.75
   spawns:
-  - fx_DvergerMage_Fire_hit
+  - fx_batteringram_fire
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=11
+    1: hit, fire=9
   poke:
   - prefab: creature
     delay: 1
     maxDistance: 4
+    limit: 2
     parameter: p_stafffireball_secondary
 
 #############################
@@ -1166,15 +1168,19 @@
   poke:
   - prefab: creature
     maxDistance: 5
+    limit: 5
     parameter: p_staff_vomit_infect
 
-# creatures in range of other vomitting creatures have a % chance to become infected
+# uneffected creatures in range of other vomitting creatures have a % chance to become infected
 - prefab: creature
   type: poke, p_staff_vomit_expose
-  weight: 0.33
+  weight: 0.67
+  bannedObjects:
+  - vfx_Poison, 0.1
   poke:
   - prefab: creature
     maxDistance: 1
+    limit: 1
     parameter: p_staff_vomit_infect
 
 # infected!  separate process for vfx
@@ -1186,6 +1192,7 @@
   poke:
   - prefab: creature
     maxDistance: 1
+    limit: 1
     delay: 2
     parameter: p_staff_vomit_1
 
@@ -1198,11 +1205,13 @@
   poke:
   - prefab: creature
     maxDistance: 1
+    limit: 1
     delay: 10
     parameter: p_staff_vomit_2
   - prefab: creature
     minDistance: 0.1
-    maxDistance: 3
+    maxDistance: 5
+    limit: 2
     parameter: p_staff_vomit_expose
 
 # vomite stage 2 of 2, exposes others
@@ -1214,7 +1223,8 @@
   poke:
   - prefab: creature
     minDistance: 0.1
-    maxDistance: 3
+    maxDistance: 5
+    limit: 2
     parameter: p_staff_vomit_expose
 
 #############################
@@ -1228,20 +1238,19 @@
   poke:
   - prefab: creature
     delay: 0.5
-    maxDistance: 3
-    limit: 1
+    maxDistance: 4
+    limit: 2
     parameter: p_staff_lightning <vec>
 
 - prefab: creature
   type: poke, p_staff_lightning
   bannedObjects:
-  - fx_Lightning, 0.5
+  - sfx_StaffLightning_fire, 0.3
+  - fx_chainlightning_hit, 0.3
   bannedObjectsLimit: 1
   spawns:
   - fx_chainlightning_hit
   objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=13
   - name: RPC_Damage
     1: hit, status=Lightning_SH
   - name: RPC_Stagger
@@ -1251,8 +1260,49 @@
     delay: 0.5
     minDistance: 0.1
     maxDistance: 10
-    limit: 1
+    limit: 2
     parameter: p_staff_lightning <vec>
+
+#############################
+# Staff of Fracturing: spawn explosion that leaves a timed curse that respawns explosion on death
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_staff_fracturing
+  delay: 0.5
+  spawns:
+  - fx_siegebomb_explosion
+  poke:
+  - prefab: creature
+    delay: 0.5
+    maxDistance: 5
+    limit: 3
+    parameter: p_staff_clusterbomb_afflict
+
+- prefab: creature
+  type: poke, p_staff_clusterbomb_afflict
+  spawns:
+  - sfx_gjall_idle_shiver
+  - fx_clusterbombstaff_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, blunt=29 fire=29
+  poke:
+  - prefab: creature
+    delay: 5.6
+    maxDistance: 0.1
+    limit: 1
+    parameter: p_staff_clusterbomb_expire
+
+- prefab: creature
+  type: poke, p_staff_clusterbomb_expire
+  spawns:
+  - fx_siegebomb_explosion
+  poke:
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 8
+    limit: 2
+    parameter: p_staff_clusterbomb_afflict
 
 ##############################################################
 ##############################################################

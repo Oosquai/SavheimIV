@@ -18,7 +18,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 2
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.1
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 0
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -54,7 +54,7 @@ Primary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 7
+  Projectile_Vel: 5
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
@@ -79,7 +79,7 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.1
+  Custom_AttackSpeed: 1.2
   m_attackStamina: 40
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -115,7 +115,7 @@ Secondary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 7
+  Projectile_Vel: 5
   Projectile_Accuraccy: 10
   Projectiles: 1
   Skill_Accuracy: false

@@ -1,7 +1,7 @@
 name: BMR_VoodooStaff
 m_weight: 0.3
 m_name: $bmr_voodoostaff
-m_description: Staves focus magical energy into all manner of spells, and they occasionally strip their victims of resistance to their attuned element.  Advanced mages select a staff based on elemental need rather than component rarity.
+m_description: Staves focus magical energy into all manner of spells, and they occasionally strip their victims of resistance to their attuned element.  Wise mages select a staff based on elemental need rather than component rarity.
 clonePrefabName: 
 mockName: 
 customIcon: 
