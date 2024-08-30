@@ -1,7 +1,7 @@
 name: StaffFireball
 m_weight: 0.3
 m_name: Staff of Embers
-m_description: $item_stafffireball_description  The secondary attack touches the embers of the staff to your foe, igniting them for massive damage at close range.
+m_description: $item_stafffireball_description  The secondary attack ignites wildfire in your enemy, which can spread back and forth between nearby foes with terrifying speed.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -83,13 +83,13 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
+  Custom_AttackSpeed: 1.6
   m_attackStamina: 0
   m_eitrCost: 48
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.2
-  DmgMultiplier: 4
+  DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
@@ -107,7 +107,7 @@ Secondary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 20
-  Attack_Ray_Width: 0.3
+  Attack_Ray_Width: 0.5
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -148,7 +148,7 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
-    - name: vfx_FireballHit
+    - name: sfx_imp_fireball_explode
       m_enabled: true
       m_variant: -1
       m_attach: false

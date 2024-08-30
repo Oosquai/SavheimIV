@@ -1,7 +1,7 @@
 name: StaffIceShards
 m_weight: 0.3
 m_name: Staff of Skadi
-m_description: $item_stafficeshards_description  This staff has a frost nova secondary attack.
+m_description: $item_stafficeshards_description  This staff's secondary attack is a frost nova that can damage and slow surrounding foes.
 clonePrefabName: 
 mockName: 
 customIcon: 

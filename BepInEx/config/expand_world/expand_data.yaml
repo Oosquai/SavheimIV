@@ -325,6 +325,18 @@
   - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5_SH, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow_SH, CWS_Bow_7_SH, CWS_Bow_4_SH_SH
 
 ####################################
+# Poison staff
+- name: d_staff_poison
+  hashes:
+  - RightItem, JC_Poison_Staff_SH
+
+####################################
+# Lightning staff
+- name: d_staff_lightning
+  hashes:
+  - RightItem, JC_Lightning_Staff_SH
+
+####################################
 # MagicRevamp Summon Tweaks
 # d_bmr_summon_tweaks(max_health, randomSkillFactor)
 # MagicRevamp scales RandomSkillFactor by a factor of (1,21) at Blood Magic skill levels (1, 100), which is broken.

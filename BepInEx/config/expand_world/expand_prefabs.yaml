@@ -1126,6 +1126,135 @@
     maxDistance: 0.1
 
 ##############################################################
+# Staff secondary effects
+#############################
+# StaffFireball secondary: Wildfire (spreading burn)
+- prefab: sfx_GoblinShaman_fireball_launch
+  type: create
+  objects:
+  - sfx_imp_fireball_explode, 0.1
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    parameter: p_stafffireball_secondary
+  
+- prefab: creature
+  type: poke, p_stafffireball_secondary
+  weight: 0.7
+  spawns:
+  - fx_DvergerMage_Fire_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=11
+  poke:
+  - prefab: creature
+    delay: 1
+    maxDistance: 4
+    parameter: p_stafffireball_secondary
+
+#############################
+# Staff of Myrkyr secondary:  outbreak (spreading vomit)
+# player cast infects all creatures in range
+- prefab: Player
+  type: state, staff_shield
+  filter: d_staff_poison
+  spawns:
+  - Elder_VFX2
+  - sfx_draugrpile_hit
+  - sfx_hit
+  delay: 0.85
+  poke:
+  - prefab: creature
+    maxDistance: 5
+    parameter: p_staff_vomit_infect
+
+# creatures in range of other vomitting creatures have a % chance to become infected
+- prefab: creature
+  type: poke, p_staff_vomit_expose
+  weight: 0.33
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    parameter: p_staff_vomit_infect
+
+# infected!  separate process for vfx
+- prefab: creature
+  type: poke, p_staff_vomit_infect
+  spawns:
+  - vfx_GuckSackHit
+  spawnDelay: 1
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    delay: 2
+    parameter: p_staff_vomit_1
+
+# vomit stage 1 of 2, exposes others
+- prefab: creature
+  type: poke, p_staff_vomit_1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Puke_SH
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    delay: 10
+    parameter: p_staff_vomit_2
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 3
+    parameter: p_staff_vomit_expose
+
+# vomite stage 2 of 2, exposes others
+- prefab: creature
+  type: poke, p_staff_vomit_2
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Puke_SH
+  poke:
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 3
+    parameter: p_staff_vomit_expose
+
+#############################
+# Staff of Storms secondary: chain lightning strikes
+- prefab: Player
+  type: state, swing_sledge
+  filter: d_staff_lightning
+  delay: 0.5
+  spawns:
+  - FX_Lightning_Staff_Explosion
+  poke:
+  - prefab: creature
+    delay: 0.5
+    maxDistance: 3
+    limit: 1
+    parameter: p_staff_lightning <vec>
+
+- prefab: creature
+  type: poke, p_staff_lightning
+  bannedObjects:
+  - fx_Lightning, 0.5
+  bannedObjectsLimit: 1
+  spawns:
+  - fx_chainlightning_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=13
+  - name: RPC_Damage
+    1: hit, status=Lightning_SH
+  - name: RPC_Stagger
+    1: vec, <par1>
+  poke:
+  - prefab: creature
+    delay: 0.5
+    minDistance: 0.1
+    maxDistance: 10
+    limit: 1
+    parameter: p_staff_lightning <vec>
+
+##############################################################
 ##############################################################
 # Scratch, notes, bkups, garbage, etc.
 ##############################################################

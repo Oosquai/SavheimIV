@@ -89,9 +89,9 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 0.2
+  DmgMultiplier: 0
   ForceMultiplier: 1
-  StaggerMultiplier: 40
+  StaggerMultiplier: 0
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 0
@@ -136,29 +136,7 @@ Secondary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects:
-    - name: FX_Lightning_Staff_Explosion
-      m_enabled: true
-      m_variant: -1
-      m_attach: false
-      m_follow: true
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
-    - name: fx_chainlightning_hit
-      m_enabled: true
-      m_variant: -1
-      m_attach: false
-      m_follow: true
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Hit_Effects: []
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
