@@ -682,14 +682,14 @@
     delay: 0.8
 
 # player armor reduces damage by a lot, which also reduces slow duration.
-# frost resist is common on cloaks and negates slow.
+# frost resist is common on cloaks and negates slow, so add an SE to ensure slow if not dodged.
 - prefab: Player
   type: poke, Creature_Frost_Nova
   spawn: vfx_dragon_ice_hit
   spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=190 dodge=true block=true
+    1: hit, frost=190 dodge=true block=true status=SE_Savheim_Slowed
 
 - prefab: creature
   type: poke, Creature_Frost_Nova
@@ -1305,9 +1305,105 @@
     parameter: p_staff_clusterbomb_afflict
 
 ##############################################################
+# Spawn portals near key locations
+# Starting Stones
+- prefab: BossStone_DragonQueen
+  type: create
+  spawns:
+  - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
+  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece
+#  poke:
+#  - prefab: portal_wood
+#    maxDistance: 10
+#    limit: 1
+#    delay: 1
+#    parameter: p_no_interact
+
+# Haldor
+- prefab: Haldor
+  type: create
+  spawns:
+  - portal_wood, 1.9,6.8,-0.2, 0,0,0, d_portal_haldor
+
+# Hildir
+- prefab: Hildir
+  type: create
+  spawns:
+  - portal_wood, 3.3,12.6,-0.2, 209,0,0, d_portal_hildir
+
+# JC Gacha location - use delayed poke & objects filter to limit to middle chest, since 5 chests spawn.
+- prefab: Jewelcrafting_Chest
+  type: create
+  poke:
+  - prefab: Jewelcrafting_Chest
+    maxDistance: 1
+    limit: 1
+    delay: 1
+    parameter: p_jc_chest_portal
+- prefab: Jewelcrafting_Chest
+  type: poke, p_jc_chest_portal
+  objects:
+  - Jewelcrafting_Chest, 3
+  objectsLimit: 4
+  spawns:
+  - portal_wood, 2.1,-2,-0.2, 160,0,0, d_portal_jc_gacha
+
+## This fails.  It targets the BossStone instead of the portal!
+#- prefab: portal_wood
+#  type: poke, p_no_interact
+#  command: tweak_object interact=false
+
+##############################################################
 ##############################################################
 # Scratch, notes, bkups, garbage, etc.
 ##############################################################
+## DEBUG - DELETE!
+#- prefab: Player
+#  type: state, *
+#  spawns:
+#  - portal_wood,  0, 1, -0.2,  0, 0, 0, d_portal_sacrificial_stones
+## DEBUG - DELETE!
+#- prefab: Player
+#  type: state, *
+#  poke:
+#  - prefab: Hildir
+#    limit: 1
+#    maxDistance: 10
+#    parameter: test_portal
+#- prefab: Hildir
+#  type: poke, test_portal
+#  spawns:
+##  - portal_wood,  3.25, 12.4, -0.2,  210, 0, 0
+##  - portal_wood,  3.25, 12.6, -0.2,  210, 0, 0
+##  - portal_wood,  3.25, 12.6, -0.2,  208, 0, 0
+#  - portal_wood,  3.3, 12.6, -0.2,  209, 0, 0
+## DEBUG - DELETE!
+#- prefab: Player
+#  type: state, *
+#  poke:
+#  - prefab: Jewelcrafting_Chest
+#    maxDistance: 1
+#    limit: 5
+#    parameter: fake_jc_chest_create
+#- prefab: Jewelcrafting_Chest
+#  type: poke, fake_jc_chest_create
+#  commands: 
+#  - s step2
+#  poke:
+#  - prefab: Jewelcrafting_Chest
+#    maxDistance: 1
+#    limit: 1
+#    delay: 1
+#    parameter: p_jc_chest_portal
+#- prefab: Jewelcrafting_Chest
+#  type: poke, p_jc_chest_portal
+#  commands: 
+#  - s step3
+#  objects:
+#  - Jewelcrafting_Chest, 3
+#  objectsLimit: 4
+#  spawns:
+#  - portal_wood,  2.1, -2, -0.2,  160, 0, 0
 ###############
 ## Cultist healing (attack_claw, attack_claw_double, attack_flames)
 #- prefab: BMR_SummonFenring_Cultist

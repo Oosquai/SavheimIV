@@ -374,6 +374,89 @@
   - max_health, <par1> * 0.25 * <par2> + <par1> * 0.25
   - health, <par1> * 0.25 * <par2> + <par1> * 0.251
 
+####################################
+# Auto-spawned piece data - immune, etc.
+- name: d_perma_piece
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+
+- name: d_portal_sacrificial_stones
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  longs:
+  - creator, 1234567890
+  ints:
+  - TargetPortal PortalMode, 0
+  strings:
+  - tagauthor, Steam_12345678901234567
+  - TargetPortal PortalOwnerId, 12345678901234567
+  - TargetPortal PortalOwnerName, Oodin
+  - tag, SavheimIV
+
+- name: d_portal_haldor
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  longs:
+  - creator, 1234567890
+  ints:
+  - TargetPortal PortalMode, 0
+  strings:
+  - tagauthor, Steam_12345678901234567
+  - TargetPortal PortalOwnerId, 12345678901234567
+  - TargetPortal PortalOwnerName, Oodin
+  - tag, Haldor
+
+- name: d_portal_hildir
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  longs:
+  - creator, 1234567890
+  ints:
+  - TargetPortal PortalMode, 0
+  strings:
+  - tagauthor, Steam_12345678901234567
+  - TargetPortal PortalOwnerId, 12345678901234567
+  - TargetPortal PortalOwnerName, Oodin
+  - tag, Hildir
+
+- name: d_portal_jc_gacha
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  longs:
+  - creator, 1234567890
+  ints:
+  - TargetPortal PortalMode, 0
+  strings:
+  - tagauthor, Steam_12345678901234567
+  - TargetPortal PortalOwnerId, 12345678901234567
+  - TargetPortal PortalOwnerName, Oodin
+  - tag, Celestial
+
 ##############################################################
 ##############################################################
 #- name: custom_star_1

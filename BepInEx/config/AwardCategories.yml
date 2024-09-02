@@ -41,14 +41,10 @@ death by poison:
   - "{player} did not check the expiration dates."
 
 death by frost:
+  - "{player} chose to freeze instead of crafting a Torch."
   - "{player} got turned into an icicle."
-  - "{player} will never complain about being hot again."
-  - "{player} needs a fur coat."
   - "{player} needs more fires."
   - "{player} is now a frozen caveman."
-  - "{player} realized that they forgot their jacket."
-  - "{player} spent too much time in an ice bath."
-  - "{player} tried Sav's new shower gel (Brrrrr)."
 
 death by lightning:
   - "{player} is now thunderstruck."
@@ -57,7 +53,6 @@ death by lightning:
   - "{player} took too much Wattage."
   - "{player} forgot to unplug the cord."
   - "{player} went literally into the light."
-  - "{player} states, Watt the F$%K!"
 
 death by elemental:
   - "{player} challenged the elements and lost."
