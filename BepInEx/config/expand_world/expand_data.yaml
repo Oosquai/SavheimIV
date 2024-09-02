@@ -397,6 +397,7 @@
   - creator, 1234567890
   ints:
   - TargetPortal PortalMode, 0
+  - override_interact, 1
   strings:
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
@@ -415,6 +416,7 @@
   - creator, 1234567890
   ints:
   - TargetPortal PortalMode, 0
+  - override_interact, 1
   strings:
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
@@ -433,6 +435,7 @@
   - creator, 1234567890
   ints:
   - TargetPortal PortalMode, 0
+  - override_interact, 1
   strings:
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
@@ -451,6 +454,7 @@
   - creator, 1234567890
   ints:
   - TargetPortal PortalMode, 0
+  - override_interact, 1
   strings:
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567

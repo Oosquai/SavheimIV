@@ -1,4 +1,4 @@
-Savheim IV - Lots of important information has been added to item tooltips.  Pay close attention to weapon tooltips, check your Hammer tooltip for new ways to build, and much more!
+Savheim IV - Lots of important information has been added to item tooltips.  Pay close attention to weapon tooltips, check your Hammer tooltip for new ways to build, take a close look at wards, and much more!
 Savheim IV - You can reposition some GUI windows by clicking & dragging, or Left-Alt and then click & drag.  Press Esc to get a cursor.
 Savheim IV - Recommended game settings I:  Disable Depth of Field, Chromatic Aberration, and Motion Blur.  You can also disable Key Hints and Raven hints if you like.
 Savheim IV - Recommended game settings II:  Please try Settings/Accessibility/Camera Shake = ON.  Iron Gate swapped Mouse 2 and 3 for Secondary Attack and Block - swap them back if you prefer.

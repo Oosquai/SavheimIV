@@ -1,0 +1,56 @@
+name: stone_marker_savheim
+piecehammer: Hammer
+m_name: $piece_stonewall1x1
+sizeMultiplier: 0.1
+m_description: ''
+customIcon: 
+clonePrefabName: stone_wall_1x1
+material: 
+damagedMaterial: 
+craftingStation: $piece_stonecutter
+piecehammerCategory: BuildingStonecutter
+minStationLevel: 1
+amount: 1
+disabled: true
+adminonly: false
+comfort: 
+groundPiece: false
+ground: false
+waterPiece: false
+noInWater: false
+notOnFloor: false
+onlyinTeleportArea: false
+allowedInDungeons: false
+canBeRemoved: true
+notOnWood: false
+wearNTearData:
+  health: 1500
+  damageModifiers:
+    m_blunt: Normal
+    m_slash: Normal
+    m_pierce: Normal
+    m_chop: Normal
+    m_pickaxe: Weak
+    m_fire: Resistant
+    m_frost: Resistant
+    m_lightning: Normal
+    m_poison: Immune
+    m_spirit: Immune
+  noRoofWear: false
+  noSupportWear: true
+  supports: true
+  triggerPrivateArea: true
+craftingStationData: 
+cSExtensionData: 
+contData: 
+smelterData: 
+cookingStationData: 
+beehiveData: 
+fermStationData: 
+sapData: 
+incineratorData: 
+fireplaceData: 
+teleportWorldData: 
+plantData: 
+build:
+- Stone:3:1:True

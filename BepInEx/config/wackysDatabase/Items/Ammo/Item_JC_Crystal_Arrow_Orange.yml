@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Orange
 m_weight: 0.01
-m_name: $JC_Crystal_Arrow_Orange (Leesh)
-m_description: $JC_Crystal_Arrow_Orange_Description that will leesh your target.
+m_name: $JC_Crystal_Arrow_Orange (Illuminate)
+m_description: $JC_Crystal_Arrow_Orange_Description that will cast warm light over an area for a time.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -123,7 +123,7 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 0
+  Fire: 22
   Frost: 0
   Lightning: 0
   Pickaxe: 0
@@ -160,7 +160,7 @@ m_maxStackSize: 100
 m_canBeReparied: true
 m_destroyBroken: true
 m_dodgeable: true
-Attack_status_effect: Harpooned
+Attack_status_effect: 
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

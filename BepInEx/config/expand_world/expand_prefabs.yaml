@@ -1312,12 +1312,6 @@
   spawns:
   - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
   - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece
-#  poke:
-#  - prefab: portal_wood
-#    maxDistance: 10
-#    limit: 1
-#    delay: 1
-#    parameter: p_no_interact
 
 # Haldor
 - prefab: Haldor
@@ -1348,10 +1342,110 @@
   spawns:
   - portal_wood, 2.1,-2,-0.2, 160,0,0, d_portal_jc_gacha
 
-## This fails.  It targets the BossStone instead of the portal!
-#- prefab: portal_wood
-#  type: poke, p_no_interact
-#  command: tweak_object interact=false
+##############################################################
+# Orange Crystal Arrow - Torch arrow!
+- prefab: sfx_jc_arrow_hit
+  type: create
+  objects:
+  - JC_Projectile_Orange, 1
+  spawns:
+  - CL_Raw_Orange_arrow, d_perma_piece
+  poke:
+  - prefab: CL_Raw_Orange_arrow
+    maxDistance: 1
+    limit: 1
+    delay: 120
+    parameter: p_remove_light
+
+- prefab: CL_Raw_Orange_arrow
+  type: poke, p_remove_light
+  remove: true
+
+##############################################################
+# Wards prevent fall damage
+- prefab: Player
+  type: state, *
+  objects:
+  - guard_stone, 32
+  bannedObjects:
+  - stone_marker_savheim, 32
+  poke:
+  - prefab: guard_stone
+    maxDistance: 32
+    limit: 1
+    parameter: p_ward_no_fall_dmg_start
+
+- prefab: guard_stone
+  type: poke, p_ward_no_fall_dmg_start
+  spawns:
+  - stone_marker_savheim, d_perma_piece
+  poke:
+  - prefab: guard_stone
+    maxDistance: 1
+    limit: 1
+    parameter: p_ward_no_fall_dmg_loop
+
+- prefab: guard_stone
+  type: poke, p_ward_no_fall_dmg_loop
+  filter: int, enabled, 1
+  objects:
+  - Player, 32
+  poke:
+  - prefab: Player
+    maxDistance: 32
+    parameter: p_ward_no_fall_dmg_se
+  - prefab: guard_stone
+    maxDistance: 1
+    limit: 1
+    delay: 3
+    parameter: p_ward_no_fall_dmg_loop
+
+- prefab: guard_stone
+  type: poke, p_ward_no_fall_dmg_loop
+  poke:
+  - prefab: stone_marker_savheim
+    maxDistance: 1
+    limit: 1
+    parameter: p_remove_marker
+  fallback: true
+
+- prefab: Player
+  type: poke, p_ward_no_fall_dmg_se
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_Ward_No_Fall_Dmg  
+
+- prefab: stone_marker_savheim
+  type: poke, p_remove_marker
+  remove: true
+
+###############################################################
+## Wards damage aggressive creatures
+## DISABLED.  Players should use turrets, traps, tames, etc.
+#- prefab: creature
+#  type: state, *
+#  filter: int, tamed, 0
+#  objects:
+#  - guard_stone, 32
+#  poke:
+#  - prefab: guard_stone
+#    maxDistance: 32
+#    limit: 1
+#    parameter: p_ward_scarecrow
+#
+#- prefab: guard_stone
+#  type: poke, p_ward_scarecrow
+#  filter: int, enabled, 1
+#  poke:
+#  - prefab: creature
+#    maxDistance: 32
+#    parameter: p_ward_scarecrow_dmg
+#
+#- prefab: creature
+#  type: poke, p_ward_scarecrow_dmg
+#  objectRpc:
+#  - name: RPC_Damage
+#    1: hit, damage=9
 
 ##############################################################
 ##############################################################
