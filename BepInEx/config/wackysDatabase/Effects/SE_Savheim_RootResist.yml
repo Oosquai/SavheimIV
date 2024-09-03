@@ -1,5 +1,5 @@
-Name: SE_Savheim_ImmobilizedAshlands_Arrow
-Status_m_name: $se_immobilized
+Name: SE_Savheim_RootResist
+Status_m_name: Root Resist
 Category: ''
 IconName: immobilized
 CustomIcon: 
@@ -14,43 +14,10 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 12
+TimeToLive: 1
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS:
-- name: fx_RootAshlands
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: sfx_weapons_nature_root
-  m_enabled: true
-  m_variant: -1
-  m_attach: false
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: false
-  m_childTransform: ''
-- name: vfx_Smoked
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
+StartEffect_PLUS: []
 StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
@@ -83,7 +50,7 @@ SeData:
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
-  m_speedModifier: -0.75
+  m_speedModifier: 0.75
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0

@@ -402,7 +402,7 @@
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
   - TargetPortal PortalOwnerName, Oodin
-  - tag, SavheimIV
+  - tag, Savheim IV
 
 - name: d_portal_haldor
   bools:

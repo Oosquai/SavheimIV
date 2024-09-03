@@ -6,7 +6,8 @@
 #  - s <par>
 #  - broadcast center <par>
 #
-# Debug - Raaka state poker for creatures
+##############################################################
+## Debug - Raaka state poker for creatures
 #- prefab: MonsterAI
 #  type: state, *
 #  poke:
@@ -34,6 +35,7 @@
 ##############################################################
 # Fish are reported to cost 8% performance to just swim/glitch around
 # Fish get removed if Fishing Rod is not equipped
+# credit:  onnan (and I know DhakhaR hates fish too)
 - prefab: Fish1, Fish2, Fish3, Fish4_cave, Fish5, Fish6, Fish7, Fish8, Fish9, Fish10, Fish11, Fish12
   type: create
   remove: true
@@ -499,13 +501,13 @@
 # even chance of no additional spawn or tamed Tenta Root (weaker).
 - prefab: staff_greenroots_tentaroot
   type: create
-  weight: 1
+  weight: 1E30
   swap: TentaRoot, tamed
   objects:
   - staff_greenroots_tentaroot, 50
 - prefab: staff_greenroots_tentaroot
   type: create
-  weight: 1
+  weight: 1E30
   remove: true
   objects:
   - staff_greenroots_tentaroot, 50
@@ -912,6 +914,7 @@
 
 ##############################################################
 # Prevent radiation from Eitr Refinery (credit to Raaka!)
+# limit to near refinery, in case we want to do weird stuff with radiation later...
 - prefab: radiation
   type: create
   remove: true
@@ -994,7 +997,7 @@
     1: hit, status=SE_Savheim_TowerShield_HP_Regen
 
 #####################
-# Shortbow acrobatics
+# Shortbow acrobatics - thanks DhakhaR!
 - prefab: Player
   type: state, jump
   filter: shortBowList
@@ -1156,7 +1159,7 @@
 
 #############################
 # Staff of Myrkyr secondary:  outbreak (spreading vomit)
-# player cast infects all creatures in range
+# player cast infects up to 5 creatures in range
 - prefab: Player
   type: state, staff_shield
   filter: d_staff_poison
@@ -1264,7 +1267,7 @@
     parameter: p_staff_lightning <vec>
 
 #############################
-# Staff of Fracturing: spawn explosion that leaves a timed curse that respawns explosion on death
+# Staff of Fracturing: spawn contagious explosions
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_staff_fracturing
@@ -1374,6 +1377,7 @@
     maxDistance: 32
     limit: 1
     parameter: p_ward_no_fall_dmg_start
+  fallback: true
 
 - prefab: guard_stone
   type: poke, p_ward_no_fall_dmg_start
@@ -1397,7 +1401,7 @@
   - prefab: guard_stone
     maxDistance: 1
     limit: 1
-    delay: 3
+    delay: 3.1
     parameter: p_ward_no_fall_dmg_loop
 
 - prefab: guard_stone
@@ -1412,12 +1416,40 @@
 - prefab: Player
   type: poke, p_ward_no_fall_dmg_se
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_Ward_No_Fall_Dmg  
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Ward_No_Fall_Dmg
+    2: bool, 0
+    3: int, 1
+    4: float, 1
 
 - prefab: stone_marker_savheim
   type: poke, p_remove_marker
   remove: true
+
+###############################################################
+# No root effect on Bosses, mini bosses, elites, flying, or swimming creatures.
+- prefab: fx_RootAshlands
+  type: create
+  poke:
+  - prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen
+    maxDistance: 1
+    limit: 1
+    parameter: p_creature_root_resist
+
+# Immune to root so long as vfx_Smoked persists (handles reapplications, since SE won't trigger fx_RootAshlands again until it falls off)
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen
+  type: poke, p_creature_root_resist
+  objects:
+  - vfx_Smoked, 0.1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_RootResist
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1
+    parameter: p_creature_root_resist
 
 ###############################################################
 ## Wards damage aggressive creatures

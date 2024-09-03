@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Green
 m_weight: 0.01
 m_name: $JC_Crystal_Arrow_Green (Root)
-m_description: $JC_Crystal_Arrow_Green_Description that will bind and slow your target.
+m_description: $JC_Crystal_Arrow_Green_Description that will snare non-elite, land-based foes.
 clonePrefabName: 
 mockName: 
 customIcon: 
