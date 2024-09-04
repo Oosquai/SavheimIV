@@ -7,7 +7,7 @@ customIcon:
 clonePrefabName: stone_wall_1x1
 material: 
 damagedMaterial: 
-craftingStation: $piece_stonecutter
+craftingStation: ''
 piecehammerCategory: BuildingStonecutter
 minStationLevel: 1
 amount: 1
@@ -53,4 +53,4 @@ fireplaceData:
 teleportWorldData: 
 plantData: 
 build:
-- Stone:3:1:True
+- Stone:3:1:False

@@ -1,7 +1,7 @@
 name: CWS_Sword_10_SH
 m_weight: 0.8
 m_name: Black Metal Sanctis
-m_description: Imbued with Odin's might, Sanctir harness eitr to conjure protective wards and vanquish the undead.  These weapons scale with Elemental Magic.
+m_description: Imbued with Odin's might, Sanctir harness eitr to conjure protective wards and vanquish the undead.
 clonePrefabName: CWS_Sword_10
 mockName: 
 customIcon: 
@@ -55,8 +55,8 @@ Primary_Attack:
   Attack_status_effect_chance: 
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
-  Special_Hit_Skill: ElementalMagic
-  Special_Hit_Type: Character
+  Special_Hit_Skill: None
+  Special_Hit_Type: None
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

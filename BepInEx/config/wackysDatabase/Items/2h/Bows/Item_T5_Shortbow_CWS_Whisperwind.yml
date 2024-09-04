@@ -36,7 +36,7 @@ Primary_Attack:
   Reload_Stamina_Drain: 0
   Bow_Draw: true
   Bow_Duration_Min: 1.5
-  Bow_Stamina_Drain: 19
+  Bow_Stamina_Drain: 17
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
   Attack_Ray_Width: 0

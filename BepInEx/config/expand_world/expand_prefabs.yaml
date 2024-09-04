@@ -802,8 +802,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 - prefab: Player
@@ -817,8 +820,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 - prefab: Player
@@ -832,8 +838,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 - prefab: Player
@@ -847,8 +856,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 - prefab: Player
@@ -862,8 +874,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 - prefab: Player
@@ -877,8 +892,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 - prefab: Player
@@ -892,8 +910,11 @@
     maxDistance: 4
     delay: 0.4
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Staff_shield level=1 skill=-39
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, 1
+    3: int, 1
+    4: float, -39
     delay: 0.3
 
 # spirit AE
@@ -960,8 +981,11 @@
   filter: aegisShieldList
   spawn: fx_DvergerMage_Mistile_die
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_Aegis_Eitr_Regen
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Aegis_Eitr_Regen
+    2: bool, 1
+    3: int, 1
+    4: float, 1
 
 #####################
 # Buckler parry
@@ -972,8 +996,11 @@
   - sfx_start_buff_2
   - vfx_ColdBall_launch
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_BucklerShield_Speed_Burst
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_BucklerShield_Speed_Burst
+    2: bool, 1
+    3: int, 1
+    4: float, 1
 
 #####################
 # Round parry
@@ -984,8 +1011,11 @@
   - sfx_metal_blocked_overlay
   - fx_ForgeAddFuel
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_RoundShield_Stam_Regen
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_RoundShield_Stam_Regen
+    2: bool, 1
+    3: int, 1
+    4: float, 1
 
 #####################
 # Tower block
@@ -993,8 +1023,11 @@
   type: poke, PlayerBlock
   filter: towerShieldList
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_TowerShield_HP_Regen
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_TowerShield_HP_Regen
+    2: bool, 1
+    3: int, 1
+    4: float, 1
 
 #####################
 # Shortbow acrobatics - thanks DhakhaR!
@@ -1013,8 +1046,11 @@
   type: state, bow_fire
   filter: shortBowList
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_Shortbow_Speed_Burst
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shortbow_Speed_Burst
+    2: bool, 1
+    3: int, 1
+    4: float, 1
 
 #####################
 # Longbow jump shot
@@ -1022,8 +1058,11 @@
   type: state, jump
   filter: longBowList
   objectRpc:
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_LongbowSkill
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_LongbowSkill
+    2: bool, 1
+    3: int, 1
+    4: float, 1
 
 ####################################################################
 # SUMMONS
@@ -1255,7 +1294,7 @@
   - fx_chainlightning_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, status=Lightning_SH
+    1: hit, damage=7 status=Lightning_SH
   - name: RPC_Stagger
     1: vec, <par1>
   poke:
@@ -1352,20 +1391,47 @@
   objects:
   - JC_Projectile_Orange, 1
   spawns:
-  - CL_Raw_Orange_arrow, d_perma_piece
+  - CL_Raw_Orange_arrow
+  - vfx_Smoked
   poke:
   - prefab: CL_Raw_Orange_arrow
     maxDistance: 1
     limit: 1
     delay: 120
     parameter: p_remove_light
+  - prefab: vfx_Smoked
+    maxDistance: 1
+    limit: 1
+    delay: 120
+    parameter: p_remove_light
 
-- prefab: CL_Raw_Orange_arrow
+- prefab: CL_Raw_Orange_arrow, vfx_Smoked
   type: poke, p_remove_light
   remove: true
 
+# failsafe
+- prefab: Player
+  type: state, *
+  objects:
+  - CL_Raw_Orange_arrow, 32
+  bannedObjects:
+  - vfx_Smoked, 32
+  poke:
+  - prefab: CL_Raw_Orange_arrow
+    maxDistance: 32
+    parameter: p_remove_light
+  fallback: true
+
 ##############################################################
 # Wards prevent fall damage
+# Wacky's Database used to clone stone_wall_1x1 to "stone_marker_savheim".
+# Recommended settings for stone_marker_savheim:
+#    sizeMultiplier: 0.1
+#    craftingStation: ''
+#    build:
+#    - Stone:3:1:False
+
+# Within ward radius (default 32), any player action starts poke loop.  fallback to lower priorit vs. other processes.
 - prefab: Player
   type: state, *
   objects:
@@ -1379,16 +1445,19 @@
     parameter: p_ward_no_fall_dmg_start
   fallback: true
 
+# initial poke creates stone_marker_savheim, then enters main loop.
+# stone_marker_savheim used to avoid every player action triggering more loops.
 - prefab: guard_stone
   type: poke, p_ward_no_fall_dmg_start
   spawns:
-  - stone_marker_savheim, d_perma_piece
+  - stone_marker_savheim
   poke:
   - prefab: guard_stone
     maxDistance: 1
     limit: 1
     parameter: p_ward_no_fall_dmg_loop
 
+# check if ward enabled and player in range, then set SE on player and self-poke (loop)
 - prefab: guard_stone
   type: poke, p_ward_no_fall_dmg_loop
   filter: int, enabled, 1
@@ -1404,6 +1473,7 @@
     delay: 3.1
     parameter: p_ward_no_fall_dmg_loop
 
+# fallback process that removes stone_marker_savheim if ward disabled or no player in range
 - prefab: guard_stone
   type: poke, p_ward_no_fall_dmg_loop
   poke:
@@ -1413,19 +1483,41 @@
     parameter: p_remove_marker
   fallback: true
 
+# put Status Effect (SE) on player to give fall damage immunity.
+# important to use RPC_AddStatusEffect instead of RPC_Damage to avoid pinging magical barriers
 - prefab: Player
   type: poke, p_ward_no_fall_dmg_se
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Ward_No_Fall_Dmg
-    2: bool, 0
+    2: bool, 1
     3: int, 1
     4: float, 1
 
+# process to remove stone_marker_savheim
 - prefab: stone_marker_savheim
   type: poke, p_remove_marker
   remove: true
 
+# failsafes to try harder to remove stone_marker_savheim, in case something went weird.
+- prefab: guard_stone
+  type: destroy
+  poke:
+  - prefab: stone_marker_savheim
+    maxDistance: 32
+    parameter: p_remove_marker
+- prefab: Player
+  type: state, *
+  objects:
+  - stone_marker_savheim, 32
+  bannedObjects:
+  - guard_stone, 32
+  poke:
+  - prefab: stone_marker_savheim
+    maxDistance: 32
+    parameter: p_remove_marker
+  fallback: true
+  
 ###############################################################
 # No root effect on Bosses, mini bosses, elites, flying, or swimming creatures.
 - prefab: fx_RootAshlands
