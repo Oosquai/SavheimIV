@@ -1,7 +1,7 @@
 name: ShieldBoneTower
 m_weight: 7
 m_name: $item_shield_bonetower
-m_description: The bones of dead warriors make for good protection.  Tower shields grant increased health regeneration when blocking attacks.
+m_description: Tower shields grant increased health regeneration when blocking attacks.
 clonePrefabName: 
 mockName: 
 customIcon: 

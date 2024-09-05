@@ -11,7 +11,7 @@ Savheim IV - Block Armor = amount you can block.  [Block Armor * Parry Bonus] = 
 Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical: attack a staggered enemy.  Parry: perfectly-timed block.
 Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
 Savheim IV - Harpoons now have a basic secondary attack.  Primary attacks tether, and then the Use key reels the tether in if it's lighter than you.  If it's heavier than you, well, with great power comes great responsibility...  seriously, try harpooning a distant tree and then pressing E.
-Savheim IV - Sneaking no longer consumes stamina, levels faster, and now gains movement speed instead of stamina benefits from leveling.
+Savheim IV - Sneaking no longer consumes stamina, levels faster, and now gains movement speed instead of stamina benefits from leveling.  Backstabs will now do increased damage based on Sneak skill, and backstabs reward bonus Sneak experience.
 Savheim IV - Torches are more useful now!  They protect from Cold in a small radius, last longer, and can be upgraded at the workbench for greater duration.  They also now function normally in all biomes.
 Savheim IV - Most gear can support a maximum of three sockets, though you'll need to hunt rare materials for the third socket.  Jewelry cannot be socketed.
 Savheim IV - Try to unlock as many recipes as you can...  Bronze Nails?  What do I need those for?  Craft them and see!
@@ -52,3 +52,4 @@ Savheim IV - The more stars a creature has, the better the loot.  At three stars
 Savheim IV - Meadows will always remain relatively peaceful, regardless of your progress through the game.  The same cannot be said for anywhere else in the world.  Bring a Torch for the Winter.
 Savheim IV - Some creatures have learned to dual wield for increased offense, use shields for improved defense, carry lights for better visibility, or use magic for ... magic.
 Savheim IV - Haldor and Hildir sell valuable items.  Their inventories will grow as you slay bosses, so check back from time to time...  Hey, hey, do you wanna buy a funnel cake?
+Savheim IV - All attack skills now gain 2x experience until they've caught up to your highest attack skill.  Try a new weapon!

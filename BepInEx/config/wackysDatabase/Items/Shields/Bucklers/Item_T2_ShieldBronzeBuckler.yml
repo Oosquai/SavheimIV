@@ -1,7 +1,7 @@
 name: ShieldBronzeBuckler
 m_weight: 2
 m_name: $item_shield_bronzebuckler
-m_description: $item_shield_bronzebuckler_description  Bucklers grant a burst of speed after a successful parry.
+m_description: Bucklers grant a burst of speed after a successful parry.
 clonePrefabName: 
 mockName: 
 customIcon: 

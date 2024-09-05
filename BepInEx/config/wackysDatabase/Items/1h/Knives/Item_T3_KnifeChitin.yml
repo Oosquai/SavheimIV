@@ -1,7 +1,7 @@
 name: KnifeChitin
 m_weight: 0.3
 m_name: $item_knife_chitin
-m_description: $item_knife_chitin_description  Knives are quiet killers that allow the wielder to attack, dodge, and move faster than other weapons, and they sometimes twist and tear their victim's guts after penetrating their armor.
+m_description: Knives are quiet killers that allow the wielder to attack, dodge, and move faster than other weapons, and they sometimes twist and tear their victim's guts after penetrating their armor.
 clonePrefabName: 
 mockName: 
 customIcon: 

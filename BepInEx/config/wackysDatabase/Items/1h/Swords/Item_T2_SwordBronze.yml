@@ -1,7 +1,7 @@
 name: SwordBronze
 m_weight: 0.8
 m_name: $item_sword_bronze
-m_description: $item_sword_bronze_description  Swords have a thrust as a secondary attack that leaves targets bleeding.
+m_description: Swords have a thrust as a secondary attack that leaves targets bleeding.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: AxeIron
 m_weight: 2
 m_name: $item_axe_iron
-m_description: $item_axe_iron_description  Axes emphasize damage, and their secondary attack rends the target's armor for a brief duration.
+m_description: Axes emphasize damage, and their secondary attack rends the target's armor for a brief duration.
 clonePrefabName: 
 mockName: 
 customIcon: 

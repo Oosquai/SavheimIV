@@ -1,7 +1,7 @@
 name: CWS_Sledge_4_SH
 m_weight: 4
 m_name: Stagbreaker
-m_description: $item_stagbreaker_description  Sledges excel at staggering foes and have an earth-shattering ground slam.
+m_description: Sledges excel at staggering foes and have an earth-shattering ground slam.
 clonePrefabName: CWS_Sledge_4
 mockName: 
 customIcon: 

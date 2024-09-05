@@ -1,7 +1,7 @@
 name: PickaxeBronze
 m_weight: 2
 m_name: $item_pickaxe_bronze
-m_description: $item_pickaxe_bronze_description
+m_description: Pickaxes have a powerful but draining horizontal cleave as a secondary attack.
 clonePrefabName: 
 mockName: 
 customIcon: 

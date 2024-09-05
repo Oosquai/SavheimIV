@@ -1,7 +1,7 @@
 name: MaceBronze
 m_weight: 2
 m_name: $item_mace_bronze
-m_description: $item_mace_bronze_description  Maces have a staggering secondary attack.
+m_description: Maces have a staggering secondary attack.
 clonePrefabName: 
 mockName: 
 customIcon: 
