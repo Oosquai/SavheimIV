@@ -111,12 +111,21 @@
   - CWS_Sledge_7_SH
   - CWS_Sword_6_SH
   - CWS_TH_Axe_9_SH
-  - CWS_Bow_7_SH
   - CWS_Crossbow_8_SH
   - BBP_SeekerBow_SH
   - BowCelestialGreatbow
   - StaffCelestial_SH
   - WandCelestial_SH
+  - KnifeSkollAndHati_Boss_SH
+  - CWS_Tower_Shield_4_SH
+  - CWS_TH_Sword_6_SH
+  - CWS_Sword_5_SH
+  - CWS_Dagger_1_SH
+  - AxeBerzerkr_Boss_SH
+  - CWS_TH_Sword_8_SH
+  - CWS_TH_Axe_10_SH
+  - CWS_Sword_8_SH
+  - CWS_Dagger_6_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_S
     amount: 1
@@ -168,6 +177,7 @@
   - KnifeBlackMetal
   - MaceNeedle
   - SwordBlackmetal
+  - CWS_TH_Sword_9_SH
   - CWS_Sword_10_SH
   - BMR_CursedWand
   - CWS_Spear_1_SH
@@ -178,10 +188,11 @@
   - CWS_Bow_5_SH
   - CWS_Bow_1_SH
   - CWS_Crossbow_4_SH
-  - CWS_Mace_9_SH
   - BBP_BoneBow_SH
-  - CWS_Sword_7_SH
   - StaffIceShards
+  - CWS_TH_Sword_11_SH
+  - CWS_Spear_6_SH
+  - CWS_Axe_5_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_A
     amount: 1
@@ -222,6 +233,7 @@
   - MaceSilver
   - SwordSilver
   - CWS_Sword_11_SH
+  - CWS_Bow_7_SH
   - BMR_CrystalWand
   - CWS_Axe_7_SH
   - ShieldSerpentscale
@@ -232,8 +244,11 @@
   - BBP_SilverBow_SH
   - CWS_Bow_3_SH
   - CWS_Crossbow_5_SH
-  - CWS_TH_Sword_9_SH
   - JC_Poison_Staff_SH
+  - CWS_Sledge_8_SH
+  - CWS_Mace_6_SH
+  - CWS_Mace_5_SH
+  - CWS_Atgeir_9_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_B
     amount: 1
@@ -271,6 +286,7 @@
   - CWS_TH_Axe_3_SH
   - CWS_TH_Sword_1_SH
   - CWS_Sledge_3_SH
+  - CWS_Mace_9_SH
   - AxeIron
   - KnifeChitin
   - MaceIron
@@ -288,6 +304,9 @@
   - CWS_Crossbow_3_SH
   - CWS_Crossbow_7_SH
   - CWS_Bow_11_SH
+  - CWS_Tower_Shield_3_SH
+  - CWS_Sword_9_SH
+  - CWS_Atgeir_8_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_C
     amount: 1
@@ -336,6 +355,10 @@
   - CWS_Bow_8_SH
   - CWS_Crossbow_2_SH
   - BBP_ElvenBow_SH
+  - FistFenrirClaw_Boss_SH
+  - CWS_Spear_5_SH
+  - CWS_Dagger_5_SH
+  - CWS_Axe_8_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_D
     amount: 1

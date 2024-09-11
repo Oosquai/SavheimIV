@@ -1,7 +1,7 @@
 name: JC_Poison_Staff_SH
 m_weight: 0.3
 m_name: Staff of Myrkr
-m_description: This staff smells foul, and so will its victims.  The secondary attack triggers an outbreak that can spread and incapacitate crowds.
+m_description: This staff smells foul, and so will its victims.  The secondary attack triggers a contagious, crippling outbreak.
 clonePrefabName: JC_Poison_Staff
 mockName: 
 customIcon: 

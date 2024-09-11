@@ -1,0 +1,20 @@
+name: RKnifeSkollAndHati_Boss_SH
+clonePrefabName: KnifeSkollAndHati_Boss_SH
+craftingStation: $piece_blackforge
+minStationLevel: 3
+maxStationLevelCap: 6
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: 
+- JC_Gacha_Coins:5
+- Coins:100
+reqs: 
+- SwordCheat:1:0:True
+- TrophyFader:1:0:True
+- FaderDrop:1:0:True
+- FlametalNew:1:0:True
+- JC_Gacha_Coins:0:5:True
+- Coins:0:100:True

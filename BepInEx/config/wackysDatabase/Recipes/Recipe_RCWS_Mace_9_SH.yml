@@ -1,20 +1,20 @@
 name: RCWS_Mace_9_SH
 clonePrefabName: CWS_Mace_9_SH
 craftingStation: $piece_forge
-minStationLevel: 4
-maxStationLevelCap: 7
+minStationLevel: 2
+maxStationLevelCap: 5
 repairStation: 
 amount: 1
 disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs:
-- TrophyGoblinBrute:1
-- BlackMetal:8
-- FineWood:4
+- TrophyAbomination:1
+- Iron:8
+- ElderBark:4
 reqs: 
 - SwordCheat:1:0:True
-- TrophyDragonQueen:1:0:True
-- TrophyGoblinBrute:0:1:True
-- BlackMetal:1:8:True
-- FineWood:0:4:True
+- TrophyTheElder:1:0:True
+- TrophyAbomination:0:1:True
+- Iron:1:8:True
+- ElderBark:0:4:True

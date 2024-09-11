@@ -1,8 +1,8 @@
-name: CWS_Sword_7_SH
-m_weight: 0.8
-m_name: Skadi's Razor
-m_description: An enchanted shard of razor sharp ice.  This is a mage's weapon.
-clonePrefabName: CWS_Sword_7
+name: CWS_TH_Sword_9_SH
+m_weight: 4
+m_name: Abyss Greatsword
+m_description: This sword is tainted by the Abyss, and now its strength reflects its wielder's humanity.
+clonePrefabName: CWS_TH_Sword_9
 mockName: 
 customIcon: 
 material: 
@@ -13,21 +13,21 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Horizontal
-  Attack_Animation: swing_longsword
+  Attack_Animation: battleaxe_attack
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
-  m_attackStamina: 0
-  m_eitrCost: 8
+  Custom_AttackSpeed: 1.5
+  m_attackStamina: 9
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.7
+  SpeedFactor: 0.5
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 1.25
   RecoilMultiplier: 0
-  AttackRange: 2.4
+  AttackRange: 2.6
   AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -67,21 +67,21 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: sword_secondary
+  Attack_Animation: knife_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 2.5
-  m_attackStamina: 0
-  m_eitrCost: 16
+  Custom_AttackSpeed: 1.5
+  m_attackStamina: 18
+  m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.7
-  DmgMultiplier: 1
+  SpeedFactor: 0.3
+  DmgMultiplier: 1.5
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 1.5
   RecoilMultiplier: 0
-  AttackRange: 2.7
+  AttackRange: 3
   AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -92,15 +92,13 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 10
-  Attack_Ray_Width: 0.7
+  Attack_Angle: 90
+  Attack_Ray_Width: 0.5
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Bleed_Sword_T5
-  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -115,10 +113,54 @@ Secondary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects: []
+    Hit_Effects:
+    - name: fx_hit_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_goblinbrute_clubhit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: fx_charred_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_seeker_brute_groundslam_impact
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
-    Start_Effect:
-    - name: sfx_axe_swing
+    Start_Effect: 
+    - name: sfx_battleaxe_swing_wosh
       m_enabled: true
       m_variant: -1
       m_attach: false
@@ -137,31 +179,31 @@ Damage:
   Chop: 0
   Damage: 0
   Fire: 0
-  Frost: 75
+  Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 26
+  Slash: 114
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
   Fire: 0
-  Frost: 4
+  Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 2
+  Slash: 7
   Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.03
+  m_movementModifier: -0.06
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -175,9 +217,9 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 48
+  m_blockPower: 54
   m_blockPowerPerLevel: 3
-  m_timedBlockBonus: 2
+  m_timedBlockBonus: 2.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -197,10 +239,10 @@ m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-m_skillType: ElementalMagic
-m_animationState: OneHanded
-m_itemType: OneHandedWeapon
-m_toolTier: 3
+m_skillType: Swords
+m_animationState: Greatsword
+m_itemType: TwoHandedWeapon
+m_toolTier: 0
 m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
@@ -241,44 +283,11 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: vfx_ice_hit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
   Hit_Terrain_Effects: []
-  Start_Effect:
-  - name: sfx_sword_swing
-    m_enabled: false
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Start_Effect: []
   Hold_Start_Effects: []
   Trigger_Effect:
   - name: fx_swing_camshake
-    m_enabled: false
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: true
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: sfx_sword_swing
     m_enabled: false
     m_variant: -1
     m_attach: false
@@ -290,10 +299,10 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Trail_Effect:
-  - name: sfx_sword_swing
+  - name: sfx_kromsword_swing
     m_enabled: true
     m_variant: -1
-    m_attach: true
+    m_attach: false
     m_follow: false
     m_inheritParentRotation: false
     m_inheritParentScale: false

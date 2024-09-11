@@ -1,18 +1,18 @@
-name: RCWS_Sword_7_SH
-clonePrefabName: CWS_Sword_7_SH
+name: RCWS_Spear_6_SH
+clonePrefabName: CWS_Spear_6_SH
 craftingStation: $piece_forge
 minStationLevel: 4
 maxStationLevelCap: 7
 repairStation: 
 amount: 1
-disabled: false
+disabled: true
 disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs:
 - TrophyGoblinBrute:1
 - BlackMetal:8
 - FineWood:4
-reqs: 
+reqs:
 - SwordCheat:1:0:True
 - TrophyDragonQueen:1:0:True
 - TrophyGoblinBrute:0:1:True

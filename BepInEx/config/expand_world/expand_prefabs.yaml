@@ -476,7 +476,7 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
   - MoltenCore
-- prefab: SwordCheat, Unobtainium
+- prefab: SwordCheat, SledgeCheat, Unobtainium
   type: create
   remove: true
 
@@ -1229,7 +1229,7 @@
 - prefab: creature
   type: poke, p_staff_vomit_infect
   spawns:
-  - vfx_GuckSackHit
+  - vfx_GuckSackHit, 0,0,1
   spawnDelay: 1
   poke:
   - prefab: creature
@@ -1544,6 +1544,268 @@
     parameter: p_creature_root_resist
 
 ###############################################################
+# Unique Weapon Effects
+###############################################################
+# Tower block - unique poison resist shield
+- prefab: Player
+  type: poke, PlayerBlock
+  filter: towerShieldListPoison
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Resistant_Poison_Timed
+    2: bool, 1
+    3: int, 1
+    4: float, 1
+
+######################
+# Mace Torch
+- prefab: fx_fireball_staff_explosion
+  type: create
+  objects:
+  - Player, 3, d_mace_torch
+  - sfx_club_hit, 0.5
+  poke:
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 3
+    limit: 2
+    delay: 0.4
+    parameter: p_mace_torch_explosions
+  - prefab: creature
+    maxDistance: 0.1
+    limit: 1
+    parameter: p_mace_torch_extra_fire
+
+- prefab: creature
+  type: poke, p_mace_torch_explosions
+  filters:
+  - int, tamed, 0
+  spawn: sfx_GoblinShaman_fireball_launch
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=12
+
+- prefab: creature
+  type: poke, p_mace_torch_extra_fire
+  filters:
+  - int, tamed, 0
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=16
+
+######################
+# Poison Atgeir
+- prefab: vfx_GuckSackHit
+  type: create
+  objects:
+  - Player, 3, d_poison_atgeir
+  - sfx_spear_hit, 0.5
+  poke:
+  - prefab: creature
+    maxDistance: 0.1
+    limit: 1
+    parameter: p_poison_atgeir_puke
+
+- prefab: creature
+  type: poke, p_poison_atgeir_puke
+  filters:
+  - int, tamed, 0
+  spawn: vfx_poisonarrow_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Poison_Atgeir_Puke_SH
+  poke:
+  - prefab: creature
+    maxDistance: 0.1
+    limit: 1
+    delay: 4
+    parameter: p_poison_atgeir_haze
+
+- prefab: creature
+  type: poke, p_poison_atgeir_haze
+  filters:
+  - int, tamed, 0
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Poison_Atgeir_Haze_SH
+  poke:
+  - prefab: creature
+    maxDistance: 0.1
+    limit: 1
+    delay: 1.6
+    parameter: p_poison_atgeir_burst
+
+- prefab: creature
+  type: poke, p_poison_atgeir_burst
+  filters:
+  - int, tamed, 0
+  spawns:
+  - sfx_wraith_hit, 0,0,0, 0,0,0, d_empty_data, 0.2
+#  - vfx_poisonarrow_hit, 0,0,0, 0,0,0, d_empty_data, 0.4
+  - vfx_GuckSackHit, 0,0,1, 0,0,0, d_empty_data, 0.4
+  - sfx_troll_hit, 0,0,0, 0,0,0, d_empty_data, 0.4
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=27
+    delay: 0.4
+
+######################
+# Skybreaker sledge  (huge help from DhakhaR)
+- prefab: Player
+  type: state, swing_sledge
+  filter: d_skybreaker_sledge
+  poke:
+  - prefab: Wraith, Hatchling, Bat, Deathsquito, FallenValkyrie, Volture, Seeker, Seagal, Crow, AshCrow
+#    data: flyingEnemy
+    maxDistance: 15
+    parameter: groundedflyer
+    delay: 1
+
+- prefab: MonsterAI
+  type: poke, groundedflyer
+  filter: flyingEnemy
+  spawn: fx_crit
+  data: noFlying
+  poke:
+  - prefab: MonsterAI
+    data: noFlying
+    maxDistance: 1
+    limit: 1
+    parameter: enabledflyer
+    delay: 3
+
+- prefab: Seagal, Crow, AshCrow
+  type: poke, groundedflyer
+  spawn: fx_crit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=9
+
+- prefab: MonsterAI
+  type: poke, enabledflyer
+  filter: noFlying
+  data: againFlying
+  poke:
+  - prefab: MonsterAI
+    data: againFlying
+    maxDistance: 0.1
+    limit: 1
+    parameter: immunityEnd
+    delay: 7
+
+- prefab: MonsterAI
+  type: poke, immunityEnd
+  filter: againFlying
+  data: groundedImmunityEnd
+
+######################
+# Sanguino (Reaper)
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - Player, 3, d_sanguino_reaper
+  - fx_clusterbombstaff_splinter_hit, 0.5
+  spawn: Bat, tamed_reduced_dmg
+  poke:
+  - prefab: Bat
+    limit: 1
+    maxDistance: 0.1
+    delay: 30
+    data: tamed
+    parameter: p_sanguino_bat_despawn
+
+- prefab: Bat
+  type: poke, p_sanguino_bat_despawn
+  filters:
+  - int, tamed, 1
+  spawns:
+  - fx_ashvine_destruction
+  - sfx_bat_alerted
+  remove: true
+
+######################
+# Skelfang (Crit stagger knife)
+- prefab: fx_crit
+  type: create
+  objects:
+  - Player, 2, d_skelfang_knife
+  poke:
+  - prefab: creature
+    minDistance: 1
+    maxDistance: 3
+    limit: 2
+    data: not_tamed
+    parameter: p_skelfang_stagger <vec>
+
+- prefab: creature
+  type: poke, p_skelfang_stagger
+  spawn: sfx_wraith_hit
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+######################
+# Vali's Light (heal sword)
+- prefab: Player
+  type: state, staff_summon
+  filter: d_valis_light
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    data: not_tamed
+    parameter: d_valis_light_creature_randomDelay
+
+- prefab: creature
+  type: poke, d_valis_light_creature_randomDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 0.3
+    parameter: d_valis_light_creature
+
+- prefab: creature
+  type: poke, d_valis_light_creature_randomDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 0.6
+    parameter: d_valis_light_creature
+
+- prefab: creature
+  type: poke, d_valis_light_creature_randomDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 0.9
+    parameter: d_valis_light_creature
+
+- prefab: creature
+  type: poke, d_valis_light_creature
+  spawns:
+  - fx_natureweapon_hit, 0,0,0.5
+  - fx_natureweapon_hit, 0,0,1, 0,0,0, d_empty_data, 0.2
+  - fx_natureweapon_hit, 0,0,1.5, 0,0,0, d_empty_data, 0.3
+  poke:
+  - prefab: Player
+    maxDistance: 8
+    delay: 0.35
+    parameter: d_valis_light_player <float_max_health>
+
+- prefab: Player
+  type: poke, d_valis_light_player
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.5
+  - sfx_skeleton_rise, 0,0,0, 0,0,0, valis_light_heal_pitch
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>*0.05
+    2: bool, 1
+
+
+###############################################################
 ## Wards damage aggressive creatures
 ## DISABLED.  Players should use turrets, traps, tames, etc.
 #- prefab: creature
@@ -1757,3 +2019,23 @@
 #-prefab: neck
 # parameter: hi
 #
+## Randoms with valuegroups (DhakhaR)
+#- prefab: Player
+#  type: say, vgtest
+#  poke:
+#  - prefab: Player
+#    limit: 1
+#    maxDistance: 1
+#    parameter: workaround <torches>
+#
+#- prefab: Player
+#  type: poke, workaround
+#  spawns:
+#  - <par1>, 0,3,0
+#
+## data
+#- valueGroup: torches
+#  values:
+#  - piece_groundtorch
+#  - piece_groundtorch_green
+#  - piece_groundtorch_blue

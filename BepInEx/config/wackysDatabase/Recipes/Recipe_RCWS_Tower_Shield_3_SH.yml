@@ -1,0 +1,20 @@
+name: RCWS_Tower_Shield_3_SH
+clonePrefabName: CWS_Tower_Shield_3_SH
+craftingStation: $piece_forge
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs:
+- TrophyAbomination:1
+- Iron:8
+- ElderBark:4
+reqs: 
+- SwordCheat:1:0:True
+- TrophyTheElder:1:0:True
+- TrophyAbomination:0:1:True
+- Iron:1:8:True
+- ElderBark:0:4:True

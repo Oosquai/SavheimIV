@@ -142,7 +142,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 83
+  Pierce: 79
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -177,7 +177,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 32
+  m_blockPower: 34
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0

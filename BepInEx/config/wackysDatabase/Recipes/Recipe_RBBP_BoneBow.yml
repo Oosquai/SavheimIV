@@ -2,7 +2,7 @@ name: RBBP_BoneBow_SH
 clonePrefabName: BBP_BoneBow_SH
 craftingStation: $piece_workbench
 minStationLevel: 3
-maxStationLevelCap: 
+maxStationLevelCap: 5
 repairStation: 
 amount: 1
 disabled: false

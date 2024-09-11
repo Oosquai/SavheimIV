@@ -136,8 +136,8 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
-  SpawnOnHit: 
-  SpawnOnHit_Chance: 0
+  SpawnOnHit: vfx_dragon_ice_hit
+  SpawnOnHit_Chance: 1
   Attack_status_effect: 
   Attack_status_effect_chance: 
   Raise_Skill_Amount: 1

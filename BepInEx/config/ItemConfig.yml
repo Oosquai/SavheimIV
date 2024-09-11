@@ -311,6 +311,9 @@ groups:
     - StaffCelestial_SH
     - WandCelestial_SH
     - BowCelestialGreatbow
+    - FistFenrirClaw_Boss_SH
+    - AxeBerzerkr_Boss_SH
+    - KnifeSkollAndHati_Boss_SH
 
   OneHandedWeapon:
     - AxeBlackMetal
