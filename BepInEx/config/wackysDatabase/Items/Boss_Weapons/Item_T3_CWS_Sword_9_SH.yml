@@ -92,7 +92,7 @@ Secondary_Attack:
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1
-  RecoilMultiplier: 45
+  RecoilMultiplier: 50
   AttackRange: 2.4
   AttackHeight: 1
   Spawn_On_Trigger: 

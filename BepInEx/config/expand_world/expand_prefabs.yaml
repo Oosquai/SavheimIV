@@ -624,6 +624,256 @@
   filter: gear_dual_wield
   data: gear_dw_buff
 
+###################
+# Dual wield creatures attack twice
+# Enemies and summons need separate processes for the "objects" filter to ensure they're near enough a valid target.
+# Clear flag to make sure only one guaranteed extra attack
+- prefab: creature
+  type: poke, p_dw_extra_attack_clr
+  data: dw_second_attack_cd0
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_dw_extra_attack
+
+# perform second attack.  animations are gated by creature, so only those able to do "swing_longsword" will match.
+- prefab: creature
+  type: poke, p_dw_extra_attack
+  objects:
+  - Player, 2.5
+  - creature, 2.5, tamed
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, swing_longsword
+  - name: SetTrigger
+    target: all
+    1: name, attack0
+  - name: SetTrigger
+    target: all
+    1: name, attack_thrust
+
+# summons version - clear flag, then call summon version of extra attack
+- prefab: creature
+  type: poke, p_dw_extra_attack_clr_summon
+  data: dw_second_attack_cd0
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_dw_extra_attack_summon
+
+# summons version - checks for enemy near enough to hit instead of {player, tame}
+- prefab: creature
+  type: poke, p_dw_extra_attack_summon
+  objects:
+  - creature, 2.5, not_tamed
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, swing_longsword
+  - name: SetTrigger
+    target: all
+    1: name, attack0
+  - name: SetTrigger
+    target: all
+    1: name, attack_thrust
+
+# creature-specific attack animations and timings
+- prefab: Skeleton
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr
+
+# summon versions of skeleton
+- prefab: BMR_SummonSkeleton, Skeleton_Friendly
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr_summon
+
+- prefab: Draugr
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 2
+    parameter: p_dw_extra_attack_clr
+
+- prefab: BMR_SummonDraugr
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 2
+    parameter: p_dw_extra_attack_clr_summon
+
+- prefab: Goblin
+  type: state, swing_longsword
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr
+
+- prefab: BMR_SummonGoblin
+  type: state, swing_longsword
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr_summon
+
+- prefab: GoblinBrute
+  type: state, attack1
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.7
+    parameter: p_dw_extra_attack_clr
+
+- prefab: Charred_Melee
+  types:
+  - state, attack_swing
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr
+
+- prefab: BMR_SummonCharredMelee
+  types:
+  - state, attack_swing
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr_summon
+
+##################
+# Creatures who can't dual wield, but give them a % chance for a quick follow-up attack.
+# keep chances below 50%, then no need for flag to prevent infinite attacks - random instead!
+- prefab: creature
+  type: poke, p_extra_attack
+  objects:
+  - Player, 2.5
+  - creature, 2.5, tamed
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, attack_mace
+  - name: SetTrigger
+    target: all
+    1: name, attack_claw1
+
+# creature-specific attack animations and timings.
+- prefab: Greydwarf_Elite
+  type: state, attack
+  weight: 0.35
+  poke:
+  - prefab: Greydwarf_Elite
+    delay: 1.8
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Skeleton_Hildir
+  type: state, attack
+  weight: 0.45
+  poke:
+  - prefab: Skeleton_Hildir
+    delay: 1.8
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Draugr_Elite
+  type: state, attack
+  weight: 0.4
+  poke:
+  - prefab: Draugr_Elite
+    delay: 2
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Skeleton_Poison
+  type: state, attack_mace
+  weight: 0.35
+  poke:
+  - prefab: Skeleton_Poison
+    delay: 2.5
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Fenring
+  types:
+  - state, attack_claw0
+  weight: 0.4
+  poke:
+  - prefab: Fenring
+    delay: 1.5
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+
 #############################
 # Any creature with an offhand elemental staff casts novas, so slow their attacks
 - prefab: creature
@@ -804,7 +1054,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -822,7 +1072,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -840,7 +1090,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -858,7 +1108,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -876,7 +1126,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -894,7 +1144,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -912,7 +1162,25 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, Staff_shield
-    2: bool, 1
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_flame
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: fireAE
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
     3: int, 1
     4: float, -39
     delay: 0.3
@@ -924,6 +1192,45 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, spirit=<par1>
+
+# fire AE
+- prefab: creature
+  type: poke, fireAE
+  spawn: fx_clusterbombstaff_splinter_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, blunt=14 fire=46
+  poke:
+  - prefab: creature
+    parameter: fireAE_spread_randDelay
+    minDistance: 0.1
+    maxDistance: 4
+    limit: 3
+
+- prefab: creature
+  type: poke, fireAE_spread_randDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 0.4
+    parameter: fireAE_spread
+
+- prefab: creature
+  type: poke, fireAE_spread_randDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 0.8
+    parameter: fireAE_spread
+
+- prefab: creature
+  type: poke, fireAE_spread
+  spawn: fx_clusterbombstaff_splinter_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, blunt=7 fire=23
 
 ##############################################################
 # All mobs can swim (Raaka) - UNTESTED.  Also, blocks other type: create, like clothing, hence weight: 0.1
@@ -983,7 +1290,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Aegis_Eitr_Regen
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -998,7 +1305,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_BucklerShield_Speed_Burst
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -1013,7 +1320,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_RoundShield_Stam_Regen
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -1025,7 +1332,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_TowerShield_HP_Regen
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -1048,7 +1355,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Shortbow_Speed_Burst
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -1060,7 +1367,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_LongbowSkill
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -1099,7 +1406,8 @@
 
 - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
   type: poke, only_one_summon
-  data: make_it_die
+  spawn: vfx_corpse_destruction_small
+  remove: true
 
 ###############################
 # Step 2) Fix MagicRevamped Blood Magic scaling (it defaults to 21x damage at skill=100 - yikes!)
@@ -1490,7 +1798,7 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Ward_No_Fall_Dmg
-    2: bool, 1
+    2: bool, true
     3: int, 1
     4: float, 1
 
@@ -1552,10 +1860,39 @@
   filter: towerShieldListPoison
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, SE_Savheim_Resistant_Poison_Timed
-    2: bool, 1
+    1: hash, SE_Savheim_TowerShield_HP_Regen
+    2: bool, true
     3: int, 1
     4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Resistant_Poison_Timed
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+# Tower block - unique fire shield
+- prefab: Player
+  type: poke, PlayerBlock
+  filter: towerShieldListFire
+  spawns:
+  - vfx_kiln_addore
+  - sfx_kiln_addore, 0,0,0, 0,0,0, runefang_eitr_pitch
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_TowerShield_HP_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - prefab: creature
+    maxDistance: 3
+    parameter: p_shield_tower_fire
+
+- prefab: creature
+  type: poke, p_shield_tower_fire
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=21
 
 ######################
 # Mace Torch
@@ -1725,10 +2062,11 @@
 
 ######################
 # Skelfang (Crit stagger knife)
-- prefab: fx_crit
+- prefab: fx_crit, fx_backstab
   type: create
   objects:
   - Player, 2, d_skelfang_knife
+  - vfx_ghost_hit, 1
   poke:
   - prefab: creature
     minDistance: 1
@@ -1739,7 +2077,9 @@
 
 - prefab: creature
   type: poke, p_skelfang_stagger
-  spawn: sfx_wraith_hit
+  spawns:
+  - sfx_wraith_hit
+  - sfx_wraith_hit, 0,0,0, 0,0,0, skelfang_lower_pitch
   objectRpc:
   - name: RPC_Stagger
     1: vec, <par1>
@@ -1804,6 +2144,233 @@
     1: float, <par1>*0.05
     2: bool, 1
 
+######################
+# Hel's Reaver (purple battleaxe)
+- prefab: Ragdoll
+  type: create
+  objects:
+  - Player, 3, d_purple_battleaxe
+  - vfx_wraith_hit, 1
+  spawns:
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
+  poke:
+  - prefab: creature
+    maxDistance: 10
+    data: not_tamed
+    parameter: p_soulcleave_randomDelay
+
+- prefab: creature
+  type: poke, p_soulcleave_randomDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 0.75
+    parameter: d_soulcleave_creature <vec>
+
+- prefab: creature
+  type: poke, p_soulcleave_randomDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: d_soulcleave_creature <vec>
+
+- prefab: creature
+  type: poke, p_soulcleave_randomDelay
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 2.25
+    parameter: d_soulcleave_creature <vec>
+
+- prefab: creature
+  type: poke, d_soulcleave_creature
+  spawns:
+  - sfx_wraith_alerted
+  - vfx_puff_small, 0,0,1
+  - Ulv_VFX, 0,0,1, 0,0,0, purple_axe_low_pitch
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=13
+  - name: RPC_Stagger
+    1: vec, <par1>
+  poke:
+  - prefab: Player
+    maxDistance: 20
+    data: d_purple_battleaxe
+    limit: 1
+    delay: 0.3
+    parameter: d_soulcleave_player <float_max_health>
+
+- prefab: Player
+  type: poke, d_soulcleave_player
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.5
+  - sfx_wraith_idle
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>*0.05
+    2: bool, 1
+
+######################
+# Runefang (Crit eitr knife)
+- prefab: fx_crit, fx_backstab
+  type: create
+  objects:
+  - Player, 2, d_runefang_knife
+  - sfx_jc_arrow_hit, 1
+  poke:
+  - prefab: Player
+    maxDistance: 3
+    limit: 1
+    delay: 0.3
+    data: d_runefang_knife
+    parameter: p_runefang_eitr
+
+- prefab: Player
+  type: poke, p_runefang_eitr
+  spawns:
+  - fx_GoblinShieldHit, 0,0,1, 0,0,0, runefang_eitr_pitch
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Runefang_Eitr_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+#####################
+# Greatsword AE parry
+- prefab: Player
+  type: poke, PlayerParry
+  filter: d_greatsword_parry
+  spawns:
+  - sfx_metal_blocked, 0,0,0, 0,0,0, greatsword_parry_pitch
+  poke:
+  - prefab: creature
+    maxDistance: 3
+    data: not_tamed
+    parameter: p_greatsword_parry <vec>
+
+- prefab: creature
+  type: poke, p_greatsword_parry
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+#####################
+# Dual axes lightning
+- prefab: fx_lightningweapon_hit
+  type: create
+  objects:
+  - fx_lightningstaffprojectile_hit, 1
+  - Player, 2, d_dual_axes_lightning
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    limit: 1
+    parameter: p_dual_axes_lightning
+
+- prefab: creature
+  type: poke, p_dual_axes_lightning
+  data: dual_axe_lightning_debuff1
+  injectData: true
+
+- prefab: creature
+  type: state, *
+  filter: dual_axe_lightning_debuff1
+  data: dual_axe_lightning_debuff0
+  injectData: true
+  spawn: fx_chainlightning_hit
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <x>,<z>,<y>
+    delay: 0.3
+
+###############################################################
+# Boss Drops
+- prefab: Eikthyr
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 11
+    parameter: p_boss_loot <bossDropsEikthyr>
+
+- prefab: gd_king
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 12
+    parameter: p_boss_loot <bossDropsElder>
+
+- prefab: Bonemass
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 5
+    parameter: p_boss_loot <bossDropsBonemass>
+
+- prefab: Dragon
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 8
+    parameter: p_boss_loot <bossDropsDragon>
+
+- prefab: GoblinKing
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 10
+    parameter: p_boss_loot <bossDropsYagluth>
+
+- prefab: SeekerQueen
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 6
+    parameter: p_boss_loot <bossDropsQueen>
+
+- prefab: Fader
+  type: destroy
+  weight: 1E30
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    limit: 1
+    delay: 14
+    parameter: p_boss_loot <bossDropsFader>
+
+- prefab: Player
+  type: poke, p_boss_loot
+  spawns:
+  - <par1>, 0,0,1, 0,0,0, d_empty_data, 0
+  - fx_chainlightning_hit, 0,0,1, 0,0,0, d_empty_data, 0
+  - fx_lightningweapon_hit, 0,0,1, 0,0,0, d_empty_data, 0.2
+  - vfx_coin_pile_destroyed, 0,0,1, 0,0,0, d_empty_data, 0.35
+  - sfx_coins_destroyed, 0,0,1, 0,0,0, d_empty_data, 0.35
 
 ###############################################################
 ## Wards damage aggressive creatures
