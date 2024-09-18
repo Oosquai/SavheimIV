@@ -12,9 +12,11 @@ upgrade_reqs:
 - TrophyAbomination:1
 - Iron:4
 - ElderBark:4
+- Coins:30
 reqs: 
 - SwordCheat:1:0:True
 - TrophyTheElder:1:0:True
 - TrophyAbomination:0:1:True
 - Iron:1:4:True
 - ElderBark:0:4:True
+- Coins:0:30:True

@@ -211,6 +211,7 @@
   - ArmorNomadLegs_SH
   - CapeLinen
   - CapeLox
+  - Cape_Stam_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Weapon_B
     amount: 1
@@ -265,6 +266,7 @@
   - ArmorWolfLegs
   - BMR_PolarWolfLegs
   - CapeWolf
+  - Cape_Eitr_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Weapon_C
     amount: 1
@@ -374,6 +376,7 @@
   - ArmorBronzeLegs
   - ArmorTrollLeatherLegs
   - CapeTrollHide
+  - Cape_Fire_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Weapon_F
     amount: 1

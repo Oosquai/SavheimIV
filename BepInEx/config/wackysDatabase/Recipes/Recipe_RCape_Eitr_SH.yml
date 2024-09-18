@@ -1,8 +1,8 @@
-name: RCWS_Atgeir_9_SH
-clonePrefabName: CWS_Atgeir_9_SH
-craftingStation: $piece_forge
-minStationLevel: 3
-maxStationLevelCap: 6
+name: RCape_Eitr_SH
+clonePrefabName: Cape_Eitr_SH
+craftingStation: $piece_workbench
+minStationLevel: 1
+maxStationLevelCap: 
 repairStation: 
 amount: 1
 disabled: false
@@ -15,7 +15,7 @@ upgrade_reqs:
 - Coins:40
 reqs:
 - SwordCheat:1:0:True
-- TrophyBonemass:1:0:True
+- TrophyCultist_Hildir:1:0:True
 - TrophySGolem:0:1:True
 - Silver:1:14:True
 - WolfPelt:0:2:True

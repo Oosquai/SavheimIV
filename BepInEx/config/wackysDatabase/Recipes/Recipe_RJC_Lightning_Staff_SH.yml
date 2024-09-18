@@ -12,9 +12,11 @@ upgrade_reqs:
 - TrophyMorgen:1
 - FlametalNew:9
 - Blackwood:9
+- Coins:70
 reqs:
 - SwordCheat:1:0:True
 - TrophySeekerQueen:1:0:True
 - TrophyMorgen:0:1:True
 - FlametalNew:1:9:True
 - Blackwood:0:9:True
+- Coins:0:70:True

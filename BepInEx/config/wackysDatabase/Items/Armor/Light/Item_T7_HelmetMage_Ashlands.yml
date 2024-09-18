@@ -151,8 +151,8 @@ Damage:
   Spirit: 0
 Damage_Per_Level: 
 Armor:
-  armor: 18
-  armorPerLevel: 2
+  armor: 12
+  armorPerLevel: 1
 FoodStats: 
 Moddifiers:
   m_movementModifier: -0.01

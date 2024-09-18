@@ -1,22 +1,22 @@
-name: StaffIceShards
-clonePrefabName: 
-craftingStation: $bmr_spell_table
+name: RCape_Stam_SH
+clonePrefabName: Cape_Stam_SH
+craftingStation: $piece_workbench
 minStationLevel: 1
-maxStationLevelCap: 2
+maxStationLevelCap: 
 repairStation: 
 amount: 1
 disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs:
-- TrophyGoblinShaman:1
+- TrophyGoblinBrute:1
 - BlackMetal:4
 - FineWood:8
 - Coins:50
 reqs:
 - SwordCheat:1:0:True
-- TrophyDragonQueen:1:0:True
-- TrophyGoblinShaman:0:1:True
+- TrophyGoblinBruteBrosShaman:1:0:True
+- TrophyGoblinBrute:0:1:True
 - BlackMetal:1:4:True
 - FineWood:0:8:True
 - Coins:0:50:True

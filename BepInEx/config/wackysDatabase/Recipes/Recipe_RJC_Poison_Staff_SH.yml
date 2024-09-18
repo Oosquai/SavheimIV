@@ -12,9 +12,11 @@ upgrade_reqs:
 - TrophySGolem:1
 - Silver:20
 - Guck:4
+- Coins:40
 reqs:
 - SwordCheat:1:0:True
 - TrophyBonemass:1:0:True
 - TrophySGolem:0:1:True
 - Silver:1:20:True
 - Guck:0:4:True
+- Coins:0:40:True

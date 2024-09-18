@@ -149,6 +149,9 @@ groups:
     - CapeWolf
     - BOH_HuntersLapinCape
     - CapeOil
+    - Cape_Fire_SH
+    - Cape_Eitr_SH
+    - Cape_Stam_SH
 
   Utility:
     - BeltStrength
@@ -474,7 +477,6 @@ groups:
     - CWS_Tower_Shield_3_SH
     - CWS_Tower_Shield_4_SH
     - CWS_Tower_Shield_5_SH
-    - CWS_Heater_Shield_2_SH
     - LanternSoulcatcher
 
   Bow:

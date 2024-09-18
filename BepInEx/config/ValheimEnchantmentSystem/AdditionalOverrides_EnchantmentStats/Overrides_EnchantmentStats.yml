@@ -394,3 +394,99 @@
       max_stamina: 20
       hp_regen: 4
       stamina_regen: 1
+
+- Items:
+    - ShieldBanded
+    - ShieldBlackmetal
+    - ShieldBlackmetalTower
+    - ShieldBoneTower
+    - ShieldBronzeBuckler
+    - ShieldCarapace
+    - ShieldCarapaceBuckler
+    - ShieldFlametal
+    - ShieldFlametalTower
+    - ShieldIronBuckler
+    - ShieldIronTower
+    - ShieldSerpentscale
+    - ShieldSilver
+    - ShieldWood
+    - ShieldWoodTower
+    - JC_Reaper_Shield
+    - JC_Shield_Buckler
+    - JC_Shield_Tower
+    - CWS_Buckler_Shield_1_SH
+    - CWS_Buckler_Shield_2_SH
+    - CWS_Round_Shield_1_SH
+    - CWS_Round_Shield_2_SH
+    - CWS_Round_Shield_3_SH
+    - CWS_Round_Shield_4_SH
+    - CWS_Round_Shield_5_SH
+    - CWS_Round_Shield_6_SH
+    - CWS_Round_Shield_7_SH
+    - CWS_Heater_Shield_1_SH
+    - CWS_Heater_Shield_2_SH
+    - CWS_Heater_Shield_3_SH
+    - CWS_Heater_Shield_4_SH
+    - CWS_Heater_Shield_5_SH
+    - CWS_Tower_Shield_1_SH
+    - CWS_Tower_Shield_2_SH
+    - CWS_Tower_Shield_3_SH
+    - CWS_Tower_Shield_4_SH
+    - CWS_Tower_Shield_5_SH
+  Stats:
+    1:
+      armor_percentage: 1
+    2:
+      armor_percentage: 2
+    3:
+      armor_percentage: 3
+    4:
+      armor_percentage: 4
+    5:
+      armor_percentage: 5
+      stamina_regen: 0.25
+    6:
+      armor_percentage: 6
+      stamina_regen: 0.25
+    7:
+      armor_percentage: 7
+      stamina_regen: 0.25
+    8:
+      armor_percentage: 8
+      stamina_regen: 0.25
+    9:
+      armor_percentage: 9
+      stamina_regen: 0.25
+    10:
+      armor_percentage: 10
+      stamina_regen: 0.5
+    11:
+      armor_percentage: 11
+      stamina_regen: 0.5
+    12:
+      armor_percentage: 12
+      stamina_regen: 0.5
+    13:
+      armor_percentage: 13
+      stamina_regen: 0.5
+    14:
+      armor_percentage: 14
+      stamina_regen: 0.5
+    15:
+      armor_percentage: 15
+      stamina_regen: 0.75
+    16:
+      armor_percentage: 16
+      stamina_regen: 0.75
+    17:
+      armor_percentage: 17
+      stamina_regen: 0.75
+    18:
+      armor_percentage: 18
+      stamina_regen: 0.75
+    19:
+      armor_percentage: 19
+      stamina_regen: 0.75
+    20:
+      armor_percentage: 20
+      stamina_regen: 1

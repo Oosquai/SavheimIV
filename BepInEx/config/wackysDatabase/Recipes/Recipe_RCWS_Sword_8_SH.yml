@@ -12,9 +12,11 @@ upgrade_reqs:
 - TrophyGjall:1
 - BlackMetal:10
 - BlackMarble:10
+- Coins:60
 reqs: 
 - SwordCheat:1:0:True
 - TrophyGoblinKing:1:0:True
 - TrophyGjall:0:1:True
 - BlackMetal:0:10:True
 - BlackMarble:1:10:True
+- Coins:0:60:True

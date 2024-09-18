@@ -12,9 +12,11 @@ upgrade_reqs:
 - TrophyFrostTroll:1
 - Bronze:8
 - RoundLog:4
+- Coins:20
 reqs:
 - SwordCheat:1:0:True
 - TrophyEikthyr:1:0:True
 - TrophyFrostTroll:0:1:True
 - Bronze:1:8:True
 - RoundLog:0:4:True
+- Coins:0:20:True

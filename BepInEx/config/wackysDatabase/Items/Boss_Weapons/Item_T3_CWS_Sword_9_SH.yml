@@ -182,7 +182,7 @@ m_skillType: Swords
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 2
-m_maxQuality: 4
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

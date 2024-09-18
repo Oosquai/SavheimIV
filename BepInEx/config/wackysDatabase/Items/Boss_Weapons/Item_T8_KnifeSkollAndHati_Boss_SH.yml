@@ -103,7 +103,7 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: projectile_ashlandmeteor2
-  SpawnOnHit_Chance: 0.5
+  SpawnOnHit_Chance: 0.67
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -194,7 +194,7 @@ m_skillType: Knives
 m_animationState: Knives
 m_itemType: TwoHandedWeapon
 m_toolTier: 4
-m_maxQuality: 4
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

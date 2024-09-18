@@ -1,11 +1,12 @@
-name: BMR_PolarWolfLegs
-m_weight: 3
-m_name: $bmr_polarwolf_legs
-m_description: $bmr_polarwolf_legs_description
-clonePrefabName: 
+name: Cape_Stam_SH
+m_weight: 4
+m_name: Cape of the Wind
+m_description: Wearing this cape makes you feel as free as the wind sweeping through the tall grass.
+clonePrefabName: BMR_CrimsonCape
 mockName: 
 customIcon: 
 material: 
+materials: 
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
@@ -16,12 +17,12 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 6
-  armorPerLevel: 1
+  armor: 1
+  armorPerLevel: 2
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.01
-  m_EitrRegen: 0.24
+  m_movementModifier: 0.07
+  m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
   m_jumpStaminaModifier: 0
@@ -30,13 +31,10 @@ Moddifiers:
   m_dodgeStaminaModifier: 0
   m_swimStaminaModifier: 0
   m_sneakStaminaModifier: 0
-  m_runStaminaModifier: 0
-SE_Equip:
-  EffectName: bmr_polarwolflegs
+  m_runStaminaModifier: -0.14
+SE_Equip: 
+  EffectName: delete
 SE_SET_Equip: 
-  SetName: SetArmorLightT4
-  Size: 3
-  EffectName: SetEffect_Savheim_ArmorLight_T4
 ShieldStats:
   m_blockPower: 10
   m_blockPowerPerLevel: 0
@@ -58,18 +56,19 @@ m_knockback: 10
 m_useDurability: true
 m_useDurabilityDrain: 1
 m_durabilityDrain: 0
-m_maxDurability: 1000
-m_durabilityPerLevel: 200
+m_maxDurability: 1500
+m_durabilityPerLevel: 50
 m_equipDuration: 2
 Attach_Override: None
 m_skillType: Swords
 m_animationState: OneHanded
-m_itemType: Legs
-m_toolTier: 5
-m_maxQuality: 4
+m_itemType: Shoulder
+m_toolTier: 1
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
-damageModifiers: []
+damageModifiers:
+- Frost:Resistant
 GEffects: 
 GEffectsPLUS:
   Hit_Effects: []

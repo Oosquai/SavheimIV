@@ -12,9 +12,11 @@ upgrade_reqs:
 - TrophySGolem:1
 - Silver:14
 - WolfPelt:2
+- Coins:40
 reqs:
 - SwordCheat:1:0:True
 - TrophyBonemass:1:0:True
 - TrophySGolem:0:1:True
 - Silver:1:14:True
 - WolfPelt:0:2:True
+- Coins:0:40:True
