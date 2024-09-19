@@ -37,7 +37,7 @@ Primary_Attack:
   Reload_Stamina_Drain: 0
   Reload_Eitr_Drain: 0
   Bow_Draw: true
-  Bow_Duration_Min: 2.5
+  Bow_Duration_Min: 1.5
   Bow_Stamina_Drain: 14
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
@@ -49,7 +49,7 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
   SpawnOnHit: Crow
-  SpawnOnHit_Chance: 0.01
+  SpawnOnHit_Chance: 0.05
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -145,7 +145,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 52
+  Pierce: 42
   Poison: 0
   Slash: 0
   Spirit: 0

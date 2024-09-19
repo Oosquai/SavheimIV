@@ -48,7 +48,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: bmr_lightningscroll34_projectile
-  SpawnOnHit_Chance: 0.1
+  SpawnOnHit_Chance: 0.15
   Attack_Projectile: 
   Projectile_Vel: 60
   Projectile_Accuraccy: 0

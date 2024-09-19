@@ -1,7 +1,7 @@
 name: CWS_Axe_8_SH
 m_weight: 2
 m_name: Deadwood
-m_description: This ethereal axe isn't very threatening to most creatures, but its legend is feared among undead and tree-folk.
+m_description: This ethereal axe isn't very threatening to most creatures, but its legend is feared among undead and tree-folk.  The secondary attack lowers spirit resistance.
 clonePrefabName: CWS_Axe_8
 mockName: 
 customIcon: 

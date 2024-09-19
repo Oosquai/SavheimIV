@@ -1,7 +1,7 @@
 name: JC_Lightning_Staff_SH
 m_weight: 0.3
 m_name: Staff of Storms
-m_description: A lightning staff that generates forked lightning with its secondary attack.  Forked lightning doesn't deal damage, but it will randomly chain to and stagger multiple foes within range.
+m_description: A lightning staff that generates forked lightning with its secondary attack.  Forked lightning deals very little damage, but it will randomly chain to and stagger multiple foes within range.
 clonePrefabName: JC_Lightning_Staff
 mockName: 
 customIcon: 

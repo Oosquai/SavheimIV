@@ -1905,6 +1905,25 @@
 ###############################################################
 # Unique Weapon Effects
 ###############################################################
+######################
+# Stormpiercer Spear
+- prefab: CWS_Spear_5_SH
+  type: create
+  objects:
+  - fx_chainlightning_hit, 1
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_stormpiercer_spear <vec>
+
+- prefab: creature
+  type: poke, p_stormpiercer_spear
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+######################
 # Tower block - unique poison resist shield
 - prefab: Player
   type: poke, PlayerBlock
