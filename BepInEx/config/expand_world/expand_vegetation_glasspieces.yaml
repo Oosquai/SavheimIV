@@ -1,0 +1,9 @@
+- prefab: BGP_SilicaVein
+  enabled: true
+  max: 2
+  chanceToUseGroundTilt: 1
+  biome: Plains
+  minAltitude: -0.5
+  maxAltitude: 1000
+  maxTerrainDelta: 2
+  groupRadius: 80

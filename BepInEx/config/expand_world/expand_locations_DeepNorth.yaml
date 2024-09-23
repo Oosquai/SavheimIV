@@ -1,0 +1,153 @@
+- prefab: BWS_Mountains
+  enabled: true
+  biome: DeepNorth
+  quantity: 8
+  minAltitude: 10
+  maxAltitude: 150
+  group: BWS_Mountains
+  minDistanceFromSimilar: 250
+  randomRotation: true
+  snapToWater: true
+  maxTerrainDelta: 40
+  inForest: true
+  forestTresholdMax: 2
+  exteriorRadius: 20
+  clearArea: true
+
+###################################################
+# Deep North structures
+- prefab: brokkr-the-belmont
+  enabled: true
+  unique: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 500
+  clearArea: true
+  groundOffset: -1
+  minAltitude: 12
+  maxTerrainDelta: 5
+  iconPlaced: StartTemple
+  levelArea: true
+  levelRadius: 100
+  levelBorder: 100
+
+- prefab: brokkr-the-execution
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 500
+  clearArea: true
+  groundOffset: -1
+  minAltitude: 12
+  maxTerrainDelta: 5
+  iconPlaced: StartTemple
+
+- prefab: brokkr-the-flabellum
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 500
+  clearArea: true
+  groundOffset: -1
+  minAltitude: 12
+  maxTerrainDelta: 5
+  iconPlaced: StartTemple
+
+- prefab: brokkr-the-medusa
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 500
+  clearArea: true
+  groundOffset: -1.5
+  minAltitude: 12
+  maxTerrainDelta: 5
+  iconPlaced: StartTemple
+
+###################################################
+# Deep North bridges
+- prefab: brokkr-broken-bridge-1-short
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthBridges
+  minDistanceFromSimilar: 200
+  groundOffset: -4.5
+  levelArea: false
+  minAltitude: -5
+  maxAltitude: -2
+  maxTerrainDelta: 5
+
+- prefab: brokkr-broken-bridge-1
+  enabled: true
+  biome: DeepNorth
+  quantity: 6
+  prioritized: true
+  group: DeepNorthBridges
+  minDistanceFromSimilar: 200
+  groundOffset: -4.5
+  levelArea: false
+  minAltitude: -5
+  maxAltitude: -2
+  maxTerrainDelta: 5
+
+- prefab: brokkr-broken-bridge-2-short
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthBridges
+  minDistanceFromSimilar: 200
+  groundOffset: -4.5
+  levelArea: false
+  minAltitude: -5
+  maxAltitude: -2
+  maxTerrainDelta: 5
+
+- prefab: brokkr-broken-bridge-2
+  enabled: true
+  biome: DeepNorth
+  quantity: 6
+  prioritized: true
+  group: DeepNorthBridges
+  minDistanceFromSimilar: 200
+  groundOffset: -4.5
+  levelArea: false
+  minAltitude: -5
+  maxAltitude: -2
+  maxTerrainDelta: 5
+
+- prefab: brokkr-broken-bridge-3-short
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthBridges
+  minDistanceFromSimilar: 200
+  groundOffset: -4.5
+  levelArea: false
+  minAltitude: -5
+  maxAltitude: -2
+  maxTerrainDelta: 5
+
+- prefab: brokkr-broken-bridge-3
+  enabled: true
+  biome: DeepNorth
+  quantity: 6
+  prioritized: true
+  group: DeepNorthBridges
+  minDistanceFromSimilar: 200
+  groundOffset: -4.5
+  levelArea: false
+  minAltitude: -5
+  maxAltitude: -2
+  maxTerrainDelta: 5
