@@ -52,6 +52,33 @@
     a: 1
   musicDay: swamp
   musicNight: swamp
+- biome: DeepNorth
+  environments:
+  - environment: Twilight_SnowStorm
+    weight: 0.5
+    requiredGlobalKeys: ''
+    forbiddenGlobalKeys: ''
+    requiredPlayerKeys: ''
+    forbiddenPlayerKeys: ''
+  - environment: Twilight_Snow
+    requiredGlobalKeys: ''
+    forbiddenGlobalKeys: ''
+    requiredPlayerKeys: ''
+    forbiddenPlayerKeys: ''
+  - environment: Twilight_Clear
+    requiredGlobalKeys: ''
+    forbiddenGlobalKeys: ''
+    requiredPlayerKeys: ''
+    forbiddenPlayerKeys: ''
+  color:
+    g: 1
+  mapColor:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
+#  altitudeMultiplier: 1.3
+#  maximumAltitude: 500
 - biome: Mountain
   environments:
   - environment: SnowStorm
@@ -176,32 +203,6 @@
   musicDay: ashlands
   musicNight: ashlands
   lava: true
-- biome: DeepNorth
-  environments:
-  - environment: Twilight_SnowStorm
-    weight: 0.5
-    requiredGlobalKeys: ''
-    forbiddenGlobalKeys: ''
-    requiredPlayerKeys: ''
-    forbiddenPlayerKeys: ''
-  - environment: Twilight_Snow
-    requiredGlobalKeys: ''
-    forbiddenGlobalKeys: ''
-    requiredPlayerKeys: ''
-    forbiddenPlayerKeys: ''
-  - environment: Twilight_Clear
-    requiredGlobalKeys: ''
-    forbiddenGlobalKeys: ''
-    requiredPlayerKeys: ''
-    forbiddenPlayerKeys: ''
-  color:
-    g: 1
-  mapColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  altitudeMultiplier: 1.3
 - biome: Ocean
   environments:
   - environment: Rain

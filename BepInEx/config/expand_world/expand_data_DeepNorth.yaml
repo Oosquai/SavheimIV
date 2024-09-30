@@ -1,0 +1,410 @@
+####################################
+# Deep North Data
+# Player variables and controls
+- name: d_player_roguelite_on
+  ints:
+  - i_player_roguelite_on, 1
+
+- name: d_player_roguelite_off
+  ints:
+  - i_player_roguelite_on, 0
+
+- name: d_player_roguelite_start
+  ints:
+  - i_player_roguelite_on, 1
+  - i_player_roguelite_kills, 0
+  - i_player_roguelite_boss_kills, 0
+  - i_player_roguelite_subtier, 0
+  - i_player_roguelite_tier, 2
+  - i_player_roguelite_wave, 0
+
+- name: d_player_roguelite_clear
+  ints:
+  - i_player_roguelite_on, 0
+  - i_player_roguelite_kills, 0
+  - i_player_roguelite_boss_kills, 0
+  - i_player_roguelite_subtier, 0
+  - i_player_roguelite_tier, 2
+  - i_player_roguelite_wave, 0
+
+- name: d_player_roguelite_wave_inc
+  ints:
+  - i_player_roguelite_wave, <int_i_player_roguelite_wave> + 1
+
+- name: d_player_roguelite_kills_inc
+  ints:
+  - i_player_roguelite_kills, <int_i_player_roguelite_kills> + 1
+
+- name: d_player_roguelite_boss_kills_inc
+  ints:
+  - i_player_roguelite_boss_kills, <int_i_player_roguelite_boss_kills> + 1
+
+- name: d_player_roguelite_subtier_inc
+  ints:
+  - i_player_roguelite_subtier, <int_i_player_roguelite_subtier> + 1
+
+- name: d_player_roguelite_tier_inc
+  ints:
+  - i_player_roguelite_tier, <int_i_player_roguelite_tier> + 1
+  - i_player_roguelite_subtier, 0
+
+- name: d_player_roguelite_tier_2
+  ints:
+  - i_player_roguelite_tier, 2
+
+- name: d_player_roguelite_tier_3
+  ints:
+  - i_player_roguelite_tier, 3
+
+- name: d_player_roguelite_tier_4
+  ints:
+  - i_player_roguelite_tier, 4
+
+- name: d_player_roguelite_tier_5
+  ints:
+  - i_player_roguelite_tier, 5
+
+- name: d_player_roguelite_tier_6
+  ints:
+  - i_player_roguelite_tier, 6
+
+- name: d_player_roguelite_tier_7
+  ints:
+  - i_player_roguelite_tier, 7
+
+- name: d_player_roguelite_tier_8
+  ints:
+  - i_player_roguelite_tier, 8
+
+- name: d_player_roguelite_tier_9
+  ints:
+  - i_player_roguelite_tier, 9
+
+- name: d_player_roguelite_tier_10
+  ints:
+  - i_player_roguelite_tier, 10
+
+- name: d_player_roguelite_tier_11
+  ints:
+  - i_player_roguelite_tier, 11
+
+- name: d_player_roguelite_tier_12
+  ints:
+  - i_player_roguelite_tier, 12
+
+- name: d_player_roguelite_tier_13
+  ints:
+  - i_player_roguelite_tier, 13
+
+- name: d_player_roguelite_tier_14
+  ints:
+  - i_player_roguelite_tier, 14
+
+- name: d_player_roguelite_tier_15
+  ints:
+  - i_player_roguelite_tier, 15
+
+###########################################
+# Odin data
+- name: d_odin_closer
+  floats:
+  - Odin.m_despawnCloseDistance, 0
+
+# Mob alterations
+- name: dn_deer
+  ints:
+  - level, 0
+  - CL&LC infusion, 0
+  strings:
+  - Character.m_name, Spirit of the Forest
+  - Humanoid.m_group, dn_mobs
+
+- name: dn_mob_group
+  strings:
+  - Humanoid.m_group, dn_mobs
+
+- name: dn_mob_group_roguelite
+  ints:
+  - i_creature_roguelite, 1
+  strings:
+  - Humanoid.m_group, dn_mobs
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000  # Raaka's trick for removing loot!  Thanks!
+
+- name: dn_eikthyr
+  ints:
+  - level, 0
+  floats:
+  - max_health, 1600
+  - health, 1601
+  - MonsterAI.m_circleTargetDuration, 0
+  - MonsterAI.m_circleTargetInterval, 1E30
+  - Humanoid.m_runSpeed, 16
+  - MonsterAI.m_minAttackInterval, 1
+  strings:
+  - Humanoid.m_name, Spirit of Eikthyr
+  - Humanoid.m_group, dn_mobs
+#  bools:
+#  - Humanoid.m_boss, false
+
+- valueGroup: dnEikthyrDmgPlayer
+  values:
+  - 125
+  - 126
+  - 127
+  - 128
+  - 129
+  - 130
+  - 131
+  - 132
+  - 133
+  - 134
+
+- valueGroup: dnEikthyrDmgTame
+  values:
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+
+# DeepNorth roguelite trash mob tiers, matched to zone tiers.  Some need multiples for independent random rolls.
+- valueGroup: dnTrashMobsT2
+  values:
+  - Skeleton_Poison
+  - Greydwarf_Elite
+  - Greydwarf_Shaman
+  - Ghost
+  - Troll
+  - Surtling
+  - Skeleton
+  - Bat
+
+- valueGroup: dnTrashMobsT2v2
+  values:
+  - Skeleton_Poison
+  - Greydwarf_Elite
+  - Greydwarf_Shaman
+  - Ghost
+  - Troll
+  - Surtling
+  - Skeleton
+  - Bat
+
+- valueGroup: dnTrashMobsT2v3
+  values:
+  - Skeleton_Poison
+  - Greydwarf_Elite
+  - Greydwarf_Shaman
+  - Ghost
+  - Troll
+  - Surtling
+  - Skeleton
+  - Bat
+
+- valueGroup: dnTrashMobsT2v4
+  values:
+  - Skeleton_Poison
+  - Greydwarf_Elite
+  - Greydwarf_Shaman
+  - Ghost
+  - Troll
+  - Surtling
+  - Skeleton
+  - Bat
+
+- valueGroup: dnTrashMobsT3
+  values:
+  - Wraith
+  - BlobElite
+  - Draugr_Elite
+  - Abomination
+
+- valueGroup: dnTrashMobsT4
+  values:
+  - Fenring
+  - Fenring_Cultist
+  - Ulv
+  - Hatchling
+  - StoneGolem
+
+- valueGroup: dnTrashMobsT5
+  values:
+  - Goblin
+  - GoblinBrute
+  - GoblinShaman
+  - Lox
+  - BlobTar
+
+- valueGroup: dnTrashMobsT6
+  values:
+  - Seeker
+  - Seeker
+  - Seeker
+  - SeekerBrute
+  - SeekerBrute
+  - Gjall
+
+- valueGroup: dnTrashMobsT6v2
+  values:
+  - Seeker
+  - Seeker
+  - Seeker
+  - SeekerBrute
+  - SeekerBrute
+  - Gjall
+
+- valueGroup: dnTrashMobsT6v3
+  values:
+  - Seeker
+  - Seeker
+  - Seeker
+  - SeekerBrute
+  - SeekerBrute
+  - Gjall
+
+- valueGroup: dnTrashMobsT7
+  values:
+  - Charred_Melee
+  - Charred_Mage
+  - Charred_Archer
+  - BlobLava
+  - piece_Charred_Balista
+  - FallenValkyrie
+  - Morgen
+
+- valueGroup: dnTrashMobsT7v2
+  values:
+  - Charred_Melee
+  - Charred_Mage
+  - Charred_Archer
+  - BlobLava
+  - piece_Charred_Balista
+  - FallenValkyrie
+  - Morgen
+
+- valueGroup: dnTrashMobsT7v3
+  values:
+  - Charred_Melee
+  - Charred_Mage
+  - Charred_Archer
+  - BlobLava
+  - piece_Charred_Balista
+  - FallenValkyrie
+  - Morgen
+
+- valueGroup: dnTrashMobsT7v4
+  values:
+  - Charred_Melee
+  - Charred_Mage
+  - Charred_Archer
+  - BlobLava
+  - piece_Charred_Balista
+  - FallenValkyrie
+  - Morgen
+
+# Deep North roguelite boss mob probabilities for final tiers when bosses spawn randomly as trash
+- valueGroup: dnBossMobs
+  values:
+  - Eikthyr
+  - Eikthyr
+  - Eikthyr
+  - Eikthyr
+  - Eikthyr
+  - Eikthyr
+  - Eikthyr
+  - gd_king
+  - gd_king
+  - gd_king
+  - gd_king
+  - gd_king
+  - gd_king
+  - Bonemass
+  - Bonemass
+  - Bonemass
+  - Bonemass
+  - Bonemass
+  - Dragon
+  - Dragon
+  - Dragon
+  - Dragon
+  - GoblinKing
+  - GoblinKing
+  - GoblinKing
+  - SeekerQueen
+  - SeekerQueen
+  - Fader
+
+# Loot tables
+- valueGroup: bossDropsEikthyrDnRoguelite
+  values:
+  - BBP_ElvenBow_SH_DNRL
+  - SpectaculureRod_DNRL
+  - CWS_Axe_8_SH_DNRL
+  - CWS_Dagger_5_SH_DNRL
+  - FistFenrirClaw_Boss_SH_DNRL
+  - CWS_Spear_5_SH_DNRL
+
+- valueGroup: bossDropsElderDnRoguelite
+  values:
+  - CWS_Crossbow_7_SH_DNRL
+  - CWS_Bow_11_SH_DNRL
+  - CWS_Mace_9_SH_DNRL
+  - CWS_Tower_Shield_3_SH_DNRL
+  - CWS_Atgeir_8_SH_DNRL
+  - CWS_Sword_9_SH_DNRL
+
+- valueGroup: bossDropsBonemassDnRoguelite
+  values:
+  - JC_Poison_Staff_SH_DNRL
+  - CWS_Bow_7_SH_DNRL
+  - CWS_Mace_6_SH_DNRL
+  - CWS_Atgeir_9_SH_DNRL
+  - CWS_Mace_5_SH_DNRL
+  - CWS_Sledge_8_SH_DNRL
+
+- valueGroup: bossDropsDragonDnRoguelite
+  values:
+  - BBP_BoneBow_SH_DNRL
+  - StaffIceShards_DNRL
+  - CWS_TH_Sword_9_SH_DNRL
+  - CWS_Spear_6_SH_DNRL
+  - CWS_TH_Sword_11_SH_DNRL
+  - CWS_Axe_5_SH_DNRL
+
+- valueGroup: bossDropsYagluthDnRoguelite
+  values:
+  - CWS_Sledge_7_SH_DNRL
+  - StaffFireball_DNRL
+  - CWS_Sword_8_SH_DNRL
+  - CWS_TH_Sword_8_SH_DNRL
+  - CWS_TH_Axe_10_SH_DNRL
+  - CWS_Dagger_6_SH_DNRL
+
+- valueGroup: bossDropsQueenDnRoguelite
+  values:
+  - CWS_Crossbow_8_SH_DNRL
+  - JC_Lightning_Staff_SH_DNRL
+  - CWS_Dagger_1_SH_DNRL
+  - CWS_TH_Sword_6_SH_DNRL
+  - CWS_Sword_5_SH_DNRL
+  - AxeBerzerkr_Boss_SH_DNRL
+
+- valueGroup: bossDropsFaderDnRoguelite
+  values:
+  - CWS_TH_Axe_9_SH_DNRL
+  - BBP_SeekerBow_SH_DNRL
+  - StaffClusterbomb_DNRL
+  - CWS_Sword_6_SH_DNRL
+  - CWS_Tower_Shield_4_SH_DNRL
+  - KnifeSkollAndHati_Boss_SH_DNRL
+
+- valueGroup: rogueliteLoot
+  values:
+  - CWS_Sword_1_SH_DNRL
+  - CWS_TH_Sword_5_SH_DNRL

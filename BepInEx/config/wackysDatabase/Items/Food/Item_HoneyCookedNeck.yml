@@ -1,7 +1,7 @@
 name: HoneyCookedNeck
 m_weight: 0.5
 m_name: $custom_item_honeycookedneck
-m_description: Cooked neck meat brushed with honey.
+m_description: Cooked neck meat brushed with honey.  This food gives eitr.
 clonePrefabName: 
 mockName: 
 customIcon: 

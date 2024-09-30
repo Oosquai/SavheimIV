@@ -265,43 +265,57 @@ piece_cookingstation_iron:
     - All
 
 piece_oven:
-  exclude: []
+  exclude:
+    - All
 
 bonfire:
-  exclude: []
+  exclude:
+    - All
 
 CastleKit_groundtorch_unlit:
-  exclude: []
+  exclude:
+    - All
 
 fire_pit:
-  exclude: []
+  exclude:
+    - All
 
 hearth:
-  exclude: []
+  exclude:
+    - All
 
 piece_brazierceiling01:
-  exclude: []
+  exclude:
+    - All
 
 piece_brazierfloor01:
-  exclude: []
+  exclude:
+    - All
 
 piece_groundtorch:
-  exclude: []
+  exclude:
+    - All
 
 piece_groundtorch_blue:
-  exclude: []
+  exclude:
+    - All
 
 piece_groundtorch_green:
-  exclude: []
+  exclude:
+    - All
 
 piece_groundtorch_mist:
-  exclude: []
+  exclude:
+    - All
 
 piece_groundtorch_wood:
-  exclude: []
+  exclude:
+    - All
 
 piece_jackoturnip:
-  exclude: []
+  exclude:
+    - All
 
 piece_walltorch:
-  exclude: []
+  exclude:
+    - All

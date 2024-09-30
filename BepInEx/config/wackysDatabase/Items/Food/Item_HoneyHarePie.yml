@@ -1,7 +1,7 @@
 name: HoneyHarePie
 m_weight: 1
 m_name: $custom_item_honeyharepie
-m_description: $custom_item_honeyharepie_description
+m_description: $custom_item_honeyharepie_description  This food gives eitr.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -35,6 +35,16 @@
   floats:
   - MonsterAI.m_hearRange, 100
 
+# From Raaka - infinite fuel for all fireplaces, plus CampFire (Warm) effect (flashes, buggy, commented out)
+- name: fueler
+  ints:
+  - HasFields, 1
+  - HasFieldsFireplace, 1
+  - HasFieldsEffectArea, 1
+  - Fireplace.m_infiniteFuel, 1
+#  strings:
+#  - EffectArea.m_statusEffect, CampFire
+
 # Fishing rod equipped
 - name: equip_fishrod
   hashes:
@@ -105,6 +115,13 @@
   floats:
   - ZSFX.m_minPitch, 0.3
   - ZSFX.m_maxPitch, 0.4
+
+- name: d_sfx_silent
+  ints:
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
 
 ####################################
 # Bezel drop quantities
@@ -307,7 +324,7 @@
   # how long to circle.  goblin default = 6?
   - MonsterAI.m_circleTargetDuration, 0
   # how often to circle.  goblin default = 8?
-  - MonsterAI.m_circleTargetInterval, 1E+30
+  - MonsterAI.m_circleTargetInterval, 1E30
   # minimum time between attacks.  lowering doesn't seem to do anything, but higher slows attacks down.
 #  - MonsterAI.m_minAttackInterval, <par2>
   # movespeed while running (combat).  default for goblin seems to be 5?
@@ -688,6 +705,11 @@
 - valueGroup: bossDropsZil
   values:
   - Cape_Stam_SH
+
+##############################################################
+- name: TentaRootMover
+  floats:
+  - Humanoid.m_runSpeed, 1
 
 ##############################################################
 ##############################################################

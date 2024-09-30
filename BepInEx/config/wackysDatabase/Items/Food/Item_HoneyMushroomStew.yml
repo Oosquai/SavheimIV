@@ -1,7 +1,7 @@
 name: HoneyMushroomStew
 m_weight: 1
 m_name: Cloudberry Stew
-m_description: $custom_item_honeymushroomstew_description
+m_description: $custom_item_honeymushroomstew_description  This food gives eitr.
 clonePrefabName: 
 mockName: 
 customIcon: 

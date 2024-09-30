@@ -1,7 +1,7 @@
 name: BlackSoup
 m_weight: 1
 m_name: $item_blacksoup
-m_description: $item_blacksoup_description
+m_description: $item_blacksoup_description  This food gives eitr.
 clonePrefabName: 
 mockName: 
 customIcon: 

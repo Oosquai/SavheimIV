@@ -89,7 +89,7 @@
   forestTresholdMin: 0.2
   forestTresholdMax: 1.15
 
-- prefab: rock4_ashlands_frac
+- prefab: rock2_heath
   enabled: true
   max: 0.7
   scaleMin: 0.5
@@ -100,7 +100,7 @@
   minTilt: 0
   maxTilt: 25
 
-- prefab: rock3_mountain
+- prefab: rock3_ice
   enabled: true
   min: 8
   max: 36

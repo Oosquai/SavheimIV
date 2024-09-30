@@ -44,6 +44,12 @@
   maxY: 30
 
 ###############################################################
+# Infinite fuel for fireplaces, plus Warm (thanks, Raaka!)  (Warm flashes, feels buggy, commented out of data)
+- prefab: Fireplace, piece_bathtub
+  type: create
+  data: fueler
+
+###############################################################
 ## Remove shield opacity?  Not needed if using ColorBubble mod!
 #- prefab: vfx_StaffShield
 #  type: create
@@ -140,7 +146,7 @@
   filters:
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
-  biomes: AshLands, DeepNorth
+  biomes: AshLands
   spawn: Bezel_T7
   poke: 
   - prefab: Bezel_T7
@@ -157,6 +163,7 @@
 # 3 star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   filters:
   - int, CL&LC infusion, 0
   - int, level, 4
@@ -873,7 +880,6 @@
     limit: 1
     parameter: p_extra_attack
 
-
 #############################
 # Any creature with an offhand elemental staff casts novas, so slow their attacks
 - prefab: creature
@@ -1247,7 +1253,7 @@
   type: create
   remove: true
   objects:
-    - eitrrefinery, 10
+  - eitrrefinery, 10
 
 ##############################################################
 # Prevent Lava Rocks close to player, which are stupidly frustrating in Ashlands jumping puzzles
@@ -1255,7 +1261,7 @@
   type: create
   remove: true
   objects:
-    - Player, 5
+  - Player, 5
 
 ##############################################################
 # Exotic player states
@@ -1316,7 +1322,7 @@
   filter: roundShieldList
   spawns:
   - sfx_metal_blocked_overlay
-  - fx_ForgeAddFuel
+  - vfx_ForgeAddFuel
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_RoundShield_Stam_Regen
@@ -2088,7 +2094,7 @@
   type: state, swing_sledge
   filter: d_skybreaker_sledge
   poke:
-  - prefab: Wraith, Hatchling, Bat, Deathsquito, FallenValkyrie, Volture, Seeker, Seagal, Crow, AshCrow
+  - prefab: Wraith, Hatchling, Bat, Deathsquito, Gjall, FallenValkyrie, Volture, Seeker, Seagal, Crow, AshCrow
     maxDistance: 15
     parameter: groundedflyer
     delay: 1
@@ -2390,6 +2396,7 @@
 # Boss Drops
 - prefab: Eikthyr
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2400,6 +2407,7 @@
 
 - prefab: gd_king
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2410,6 +2418,7 @@
 
 - prefab: Bonemass
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2420,6 +2429,7 @@
 
 - prefab: Dragon
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2430,6 +2440,7 @@
 
 - prefab: GoblinKing
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2440,6 +2451,7 @@
 
 - prefab: SeekerQueen
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2450,6 +2462,7 @@
 
 - prefab: Fader
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2460,6 +2473,7 @@
 
 - prefab: Skeleton_Hildir
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2470,6 +2484,7 @@
 
 - prefab: Fenring_Cultist_Hildir
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2480,6 +2495,7 @@
 
 - prefab: GoblinShaman_Hildir
   type: destroy
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
   poke:
   - prefab: Player
@@ -2491,11 +2507,20 @@
 - prefab: Player
   type: poke, p_boss_loot
   spawns:
-  - <par1>, 0,0,1, 0,0,0, d_empty_data, 0
-  - fx_chainlightning_hit, 0,0,1, 0,0,0, d_empty_data, 0
-  - fx_lightningweapon_hit, 0,0,1, 0,0,0, d_empty_data, 0.2
-  - vfx_coin_pile_destroyed, 0,0,1, 0,0,0, d_empty_data, 0.35
-  - sfx_coins_destroyed, 0,0,1, 0,0,0, d_empty_data, 0.35
+  - <par1>, 0,0,snap, 0,0,0, d_empty_data, 0
+  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data, 0
+  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data, 0.2
+  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data, 0.35
+  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data, 0.35
+
+###############################################################
+# Boss tweaks
+# Elder Tentaroots move around - creepy!  (Thanks, Raaka!)
+- prefab: TentaRoot
+  type: create
+  objects:
+  - gd_king, 100
+  data: TentaRootMover
 
 ###############################################################
 ## Wards damage aggressive creatures
@@ -2731,3 +2756,31 @@
 #  - piece_groundtorch
 #  - piece_groundtorch_green
 #  - piece_groundtorch_blue
+##################################################
+# Force Reset Protection (thanks, JPValheim!)
+#- prefab: fire_pit,forge,piece_stonecutter,piece_workbench,piece_chest,piece_chest_private,piece_chest_wood,wood_door,portal_wood,piece_chair02,piece_bench01,piece_logbench01,piece_throne01,piece_blackmarble_throne,piece_barber,bed,piece_bed02,piece_bathtub,piece_chair,piece_blackmarble_bench,piece_throne02
+#  type: create
+#  spawns:
+#  - sfx_goblin_idle
+#  - vfx_Place_stone_floor
+#  remove: true
+#  locations: SunkenCrypt4
+#  locationDistance: 10
+#  command: say You should not build near Sunken Crypts <pname>...
+#  weight: 1e30
+#
+#- prefab: fire_pit,forge,piece_stonecutter,piece_workbench,piece_chest,piece_chest_private,piece_chest_wood,wood_door,portal_wood,piece_chair02,piece_chair03,piece_bench01,piece_logbench01,piece_throne01,piece_blackmarble_throne,piece_barber,bed,piece_bed02,piece_bathtub,piece_chair,piece_blackmarble_bench,piece_throne02
+#  type: create
+#  spawns:
+#  - sfx_goblin_idle
+#  - vfx_Place_stone_floor
+#  remove: true
+#  locations: Crypt2,Crypt3,Crypt4
+#  locationDistance: 21
+#  command: say You should not build near these tombs <pname>...
+#  weight: 1e30
+###############################
+# Creature sizes
+# setkey enemyspeedsize 200
+# removekey enemyspeedsize (default = 100)
+# scales ALL mobs
