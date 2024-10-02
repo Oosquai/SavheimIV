@@ -1,7 +1,7 @@
 name: BMR_WarlocksVest
 m_weight: 3
 m_name: $bmr_warlocks_vest
-m_description: $bmr_warlocks_vest_description
+m_description: A robe for a proper Viking mage.
 clonePrefabName: 
 mockName: 
 customIcon: 

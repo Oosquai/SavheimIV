@@ -1,7 +1,7 @@
 name: ArmorBronzeLegs
 m_weight: 10
 m_name: $item_legs_bronze
-m_description: $item_legs_bronze_description
+m_description: $item_legs_bronze_description  It's a little harder to move around in these, but they'll protect your legs from blows.
 clonePrefabName: 
 mockName: 
 customIcon: 

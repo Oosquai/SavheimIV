@@ -1,7 +1,7 @@
 name: BMR_SorcerersHat
 m_weight: 1
 m_name: $bmr_sorcerers_hat
-m_description: $bmr_sorcerers_hat_description
+m_description: A pointy, soft hat for a young mage.
 clonePrefabName: 
 mockName: 
 customIcon: 

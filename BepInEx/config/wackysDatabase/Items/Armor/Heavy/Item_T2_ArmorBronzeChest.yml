@@ -1,7 +1,7 @@
 name: ArmorBronzeChest
 m_weight: 10
 m_name: $item_chest_bronze
-m_description: $item_chest_bronze_description
+m_description: $item_chest_bronze_description  It's heavy, but it offers excellent protection for those who prefer to face their enemies directly.
 clonePrefabName: 
 mockName: 
 customIcon: 

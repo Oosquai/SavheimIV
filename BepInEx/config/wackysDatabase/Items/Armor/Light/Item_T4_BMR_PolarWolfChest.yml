@@ -1,7 +1,7 @@
 name: BMR_PolarWolfChest
 m_weight: 3
 m_name: $bmr_polarwolf_chest
-m_description: $bmr_polarwolf_chest_description
+m_description: It looks intimidating, but it won't do much to turn a blade.
 clonePrefabName: 
 mockName: 
 customIcon: 

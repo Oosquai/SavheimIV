@@ -1,7 +1,7 @@
 name: BMR_PolarWolfLegs
 m_weight: 3
 m_name: $bmr_polarwolf_legs
-m_description: $bmr_polarwolf_legs_description
+m_description: Slightly less comfortable than pajamas, but nice and warm.
 clonePrefabName: 
 mockName: 
 customIcon: 

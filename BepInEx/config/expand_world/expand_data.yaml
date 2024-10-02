@@ -139,7 +139,7 @@
   hashes:
   - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
-  - LeftItem, <none>, SwordBronze, SwordBronze, Torch, KnifeCopper
+  - LeftItem, <none>, skeleton_sword, skeleton_sword, Torch, KnifeCopper
 
 - name: clothes_skeleton_mountain
   ints:
@@ -149,7 +149,7 @@
   hashes:
   - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
-  - LeftItem, SwordBronze, Torch, KnifeCopper, StaffIceShards
+  - LeftItem, skeleton_sword, Torch, KnifeCopper, StaffIceShards
 
 - name: clothes_skeleton_bmr_summon
   ints:
@@ -159,7 +159,7 @@
   hashes:
   - ShoulderItem, CapeTrollHideRed_SH
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
-  - LeftItem, SwordBronze, Torch, StaffIceShards
+  - LeftItem, skeleton_sword, Torch, StaffIceShards
 
 - name: clothes_skeleton_vanilla_summon
   ints:
@@ -301,11 +301,11 @@
 
 - name: gear_dual_wield
   hashes:
-  - LeftItem, SwordBronze, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
+  - LeftItem, skeleton_sword, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
 
 - name: gear_dual_wield_cd0
   hashes:
-  - LeftItem, SwordBronze, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
+  - LeftItem, skeleton_sword, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
   ints:
   - dw_second_attack_cd, 0
 
@@ -319,8 +319,8 @@
   # whether to circle while waiting for minAttackInterval
   - MonsterAI.m_circulateWhileCharging, 0
   floats:
-  - max_health, <par1>*1.5
-  - health, <par1>*1.501
+  - max_health, <float_max_health>*1.5
+  - health, <float_max_health>*1.501
   # how long to circle.  goblin default = 6?
   - MonsterAI.m_circleTargetDuration, 0
   # how often to circle.  goblin default = 8?
@@ -335,7 +335,7 @@
   ints:
   - MonsterAI.m_circulateWhileCharging, 0
   floats:
-  - RandomSkillFactor, <par2> * 1.1
+  - RandomSkillFactor, <par1> * 1.1
   - MonsterAI.m_circleTargetDuration, 3
   - MonsterAI.m_randomCircleInterval, 4
   - MonsterAI.m_circleTargetDistance, 3
@@ -381,7 +381,7 @@
 
 - name: gear_sanctis_t8
   hashes:
-  - RightItem, CWS_Sword_12_SH_SH
+  - RightItem, CWS_Sword_12_SH
 
 - name: gear_sanctis_flame
   hashes:

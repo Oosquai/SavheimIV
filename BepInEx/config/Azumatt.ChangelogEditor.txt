@@ -3,11 +3,22 @@
    F: cycle ammo.  Z: compare item.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 8/26/24</color>
-- Savheim IV begins closed player testing.
+     0\  Savheim IV Patch Notes, 10/1/24</color>
+- Cleaned up skeleton dual wielding a bit.
+- Improved code for gear-based AI modifications.
+- Elder's Tenta Roots can now move slowly.  Creepy!
+- Added features to customize longboats in awesome ways.
+- Fixed (shortened) tooltips on light armor.
+- Clarified tooltips on low-tier light, medium, and heavy armor to better indicate intended playstyles for each.
+- Fixed graphics on summoned skeleton cloaks.
+- Added custom banners.
+- Lots of changes in the Deep North.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+Patch Notes, 8/26/24
+- Savheim IV begins closed player testing.
+
 Patch Notes, 5/18/24
 - Savheim IV starts development.
 

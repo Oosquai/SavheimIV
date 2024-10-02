@@ -27,5 +27,5 @@ changes:
     _NoiseGlowSize: 3
     _NoiseGlowEdge: 0
   textures:
-    _MainTex: C:\Program Files (x86)\Steam\steamapps\common\Valheim\BepInEx\config\Seasonality\Armors\Troll\summer_cape.png
+    _MainTex: troll_diffuse
     _BumpMap: troll_n

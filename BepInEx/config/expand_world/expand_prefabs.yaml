@@ -49,12 +49,6 @@
   type: create
   data: fueler
 
-###############################################################
-## Remove shield opacity?  Not needed if using ColorBubble mod!
-#- prefab: vfx_StaffShield
-#  type: create
-#  remove: true
-
 ##############################################################
 # Infused creatures drop bezels per zone, scaled slightly by level.
 - prefab: creature
@@ -521,7 +515,7 @@
 
 #########################################
 # Random clothes for creatures
-# gear_buff(max_health, RandomSkillFactor)
+# gear_buff(RandomSkillFactor)
 # ... but mobs created by game don't have a RandomSkillFactor field, so would be 0.  Use "1".
 - prefab: Skeleton
   type: create
@@ -530,7 +524,7 @@
   data: clothes_skeleton_mountain
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -541,7 +535,7 @@
   data: clothes_skeleton
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -551,7 +545,7 @@
   data: clothes_skeleton_poison
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -561,7 +555,7 @@
   data: clothes_draugr
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -571,7 +565,7 @@
   data: clothes_draugr_elite
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -581,7 +575,7 @@
   data: clothes_goblin
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -591,7 +585,7 @@
   data: clothes_goblin_brute
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -606,7 +600,7 @@
   data: clothes_charred_melee
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> 1
+    parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
 
@@ -622,6 +616,7 @@
   type: poke, gear_buff
   filter: gear_shield
   data: gear_shield_buff
+  injectData: true
 
 #############################
 # Any creature with an offhand weapon deals increased dmg and behaves like a combat rogue
@@ -630,6 +625,7 @@
   type: poke, gear_buff
   filter: gear_dual_wield
   data: gear_dw_buff
+  injectData: true
 
 ###################
 # Dual wield creatures attack twice
@@ -886,11 +882,13 @@
   type: poke, gear_buff
   filter: gear_staff_ice_shards
   data: gear_staff_novas_buff
+  injectData: true
 
 - prefab: creature
   type: poke, gear_buff
   filter: gear_staff_fireball
   data: gear_staff_novas_buff
+  injectData: true
 
 #############################
 # Any creature with a torch or lantern has increased alert range
@@ -898,6 +896,7 @@
   type: poke, gear_buff
   filter: gear_alert_left
   data: gear_alert_buff
+  injectData: true
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.
@@ -905,6 +904,7 @@
   type: create
   weight: 1E30
   data: allied_group_data
+  injectData: true
 
 # Mages with StaffSkeleton randomly summon skeleton allies.  Skeletons will die to AE.  Oh well.
 - prefab: DvergerMage
@@ -1391,7 +1391,6 @@
     maxDistance: 0.1
   - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
     parameter: only_one_summon
-    delay: 0.1
     minDistance: 0.1
     maxDistance: 5
 
@@ -1406,7 +1405,6 @@
     maxDistance: 0.1
   - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
     parameter: only_one_summon
-    delay: 0.1
     minDistance: 0.1
     maxDistance: 5
 
@@ -1441,7 +1439,7 @@
   data: clothes_skeleton_bmr_summon
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
 
@@ -1450,7 +1448,7 @@
   data: clothes_skeleton_vanilla_summon
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
 
@@ -1459,7 +1457,7 @@
   data: clothes_draugr_bmr_summon
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
 
@@ -1468,7 +1466,7 @@
   data: clothes_goblin_bmr_summon
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
 
@@ -1477,7 +1475,7 @@
   data: clothes_charred_melee_bmr_summon
   poke:
   - prefab: creature
-    parameter: gear_buff <float_max_health> <float_RandomSkillFactor>
+    parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
 
@@ -2518,6 +2516,7 @@
 # Elder Tentaroots move around - creepy!  (Thanks, Raaka!)
 - prefab: TentaRoot
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   objects:
   - gd_king, 100
   data: TentaRootMover
@@ -2784,3 +2783,8 @@
 # setkey enemyspeedsize 200
 # removekey enemyspeedsize (default = 100)
 # scales ALL mobs
+###############################################################
+## Remove shield opacity?  Not needed if using ColorBubble mod!
+#- prefab: vfx_StaffShield
+#  type: create
+#  remove: true
