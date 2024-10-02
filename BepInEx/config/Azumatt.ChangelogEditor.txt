@@ -13,6 +13,7 @@
 - Fixed graphics on summoned skeleton cloaks.
 - Added custom banners.
 - Lots of changes in the Deep North.
+- Creatures with offhand torches now have increased alert range.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

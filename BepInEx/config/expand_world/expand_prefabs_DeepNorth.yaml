@@ -19,22 +19,36 @@
 #  data: d_player_roguelite_start
 #  injectData: true
 #  command: s roguelite status ON
-#
 #- prefab: Player
 #  type: say, clear_rl
 #  data: d_player_roguelite_clear
 #  injectData: true
 #  command: s roguelite status OFF
+#- prefab: Player
+#  type: say, rl_stats
+#  command: s Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
+#- prefab: Player
+#  type: say, rl_spawn
+#  spawn: Skeleton, dn_mob_group_roguelite
+#- prefab: Player
+#  type: say, rl_win
+#  poke:
+#  - prefab: Player
+#    parameter: p_dn_roguelite_win_sequence
+#- prefab: Player
+#  type: say, rl_t8
+#  data: d_player_roguelite_tier_8
+#  injectData: true
 
 ########################################################################
 # Deep North
 ########################################################################
-# Killing a deer in Deep North starts the Roguelite minigame.
+# Killing an untamed deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
 # Killing mobs has a percent chance to increment Subtier.
 # Subtier = 7 increases Tier if conditions are satisfied (enough bosses killed).
 # Mobs get harder per tier.  Mini-bosses and bosses spawn at specific tiers.
-# Get to Tier 16 and clear all mobs to win!  Get loot from mini-bosses and bosses along the way.
+# Get to Tier 8 and clear all mobs to win!  Get loot from mini-bosses and bosses along the way.
 # Die or leave to clear status.  Mobs despawn if no flagged players nearby.
 # Normal loot tables removed.
 #
@@ -48,11 +62,13 @@
 #    6 | elder, bonemass, or dragon
 #    7 | yagluth, queen, or fader
 #    8 | Victory once all mobs cleared
+#    9 | max tier, spawns stop, victory condition still valid
 
 # Don't murder the deer!
 - prefab: Deer
   type: destroy
   biomes: DeepNorth
+  filter: not_tamed                # ahem, no breeding for on-demand events allowed!
   weight: 1E30
   poke:
   - prefab: Player
@@ -131,11 +147,10 @@
   biomes: DeepNorth                     # only process if in Deep North
   filters:
   - int, i_player_roguelite_on, 1       # roguelite mode must be active for player
-  - int, i_player_roguelite_tier, 0;7   # Spawns stop at tier 8.  Must clear all mobs to win.
+  - int, i_player_roguelite_tier, 0;8   # Spawns stop at tier 9.  Must reach tier 8 and clear all mobs to win.
   data: d_player_roguelite_wave_inc     # increment wave counter
   injectData: true
-  command: s Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
-#  command: s BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> Specials <int_i_player_roguelite_special_spawns>  # DEBUG
+#  command: s Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
   spawns:
   - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
   - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
@@ -194,6 +209,12 @@
     delay: 30
     data: d_player_roguelite_tier_7
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT5v3> <dnTrashMobsT4v2>
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    delay: 30
+    data: d_player_roguelite_tier_8
+    parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT5v3> <dnTrashMobsT4v2>
 ####################################
 ########################################################################
 
@@ -224,7 +245,14 @@
     maxDistance: 200
     limit: 1                             # only nearest player poked for win check, to avoid multiple Odin / reward spawns
     data: d_player_roguelite_on          # check for player has roguelite active
+    delay: 1                             # ensure time for mob to no longer register
     parameter: p_dn_roguelite_win_check
+
+# No-op with high weight - TentaRoots don't count as kills!
+- prefab: TentaRoot
+  type: destroy
+  biomes: DeepNorth
+  weight: 1E30
 
 - prefab: Player
   type: poke, p_dn_roguelite_mob_kill
@@ -295,7 +323,7 @@
   - int, i_player_roguelite_on, 1
   - int, i_player_roguelite_subtier, 7;999
   - int, i_player_roguelite_boss_kills, 2;999  # Need to kill Queen or Fader, then 2 other bosses ...
-  - int, i_player_roguelite_tier, 3;7          # ... to advance to victory!  (if you clear all mobs)
+  - int, i_player_roguelite_tier, 3;8          # ... to advance to victory!  (if you clear all mobs)
   data: d_player_roguelite_tier_inc
   injectData: true
 
@@ -755,13 +783,13 @@
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: 16
+    delay: 15
     parameter: p_dn_roguelite_win_sequence <rogueliteLoot>  # You win!
 
 - prefab: Player
   type: poke, p_dn_roguelite_win_sequence
   biomes: DeepNorth                         # only process if in Deep North
-  command: broadcast center <string_playerName> has triumphed over the fury of the Deep North!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.  Odin honors this worthy champion!
+  command: broadcast center Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
   data: d_player_roguelite_clear
   injectData: true
   spawns:
@@ -787,20 +815,16 @@
   - sfx_coins_destroyed, 0,6,snap, 0,0,0, d_empty_data, 16.35
   - <par1>, 0,6,snap, 0,0,0, d_empty_data, 16
   - MoltenCore, 0,6,snap, 0,0,0, d_empty_data, 16
-  - JC_Gacha_Coins, 0,6,snap, 0,0,0, d_empty_data, 16
-  - JC_Gacha_Coins, 0,6,snap, 0,0,0, d_empty_data, 16
-  - JC_Gacha_Coins, 0,6,snap, 0,0,0, d_empty_data, 16
   - sfx_haldor_greet, 0,8,snap, d_empty_data, 19
   poke:
-  - prefab: Odin     # Odin prevented from leaving during reward sequence
-    delay: 24        # let him leave once it concludes
+  - prefab: Odin              # Odin prevented from leaving during reward sequence
+    delay: 16.3               # injectData doesn't seem to work for this, so hide his flicker in other effects
     maxDistance: 50
-    parameter: p_odin_closer
+    parameter: p_odin_closer  # let him leave once it concludes
 
 - prefab: Odin
   type: poke, p_odin_closer
   data: d_odin_closer
-  injectData: true
 
 ########################################################################
 # Clean up player state and mobs, broadcast results
@@ -810,8 +834,8 @@
   biomes: DeepNorth
   filter: d_player_roguelite_on
   commands:
-  - broadcast center <string_playerName> has been consumed by the wrath of the Deep North!  They survived <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures before meeting their end.
-  - s <string_playerName> has been consumed by the wrath of the Deep North!  They survived <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures before meeting their end.
+  - broadcast center <string_playerName> was consumed by the Deep North!  They survived <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  - s <string_playerName> was consumed by the Deep North!  They survived <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
   data: d_player_roguelite_clear
   injectData: true
 
@@ -838,8 +862,8 @@
   data: d_player_roguelite_clear
   injectData: true
   commands:
-  - broadcast center <string_playerName> has fled the wrath of the Deep North!  They braved <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures before running away.
-  - s <string_playerName> has fled the wrath of the Deep North!  They braved <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures before running away.
+  - broadcast center <string_playerName> has fled the Deep North!  They braved <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  - s <string_playerName> has fled the Deep North!  They braved <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
 
 # roguelite_remove_failsafe - any action when not in Deep North clears roguelite state
 - prefab: Player

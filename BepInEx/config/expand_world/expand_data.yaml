@@ -344,7 +344,7 @@
 # enemies with torch or lantern have greater alert range (default=30) and circle a lot more.
 - name: gear_alert_buff
   floats:
-  - MonsterAI.m_alertRange, 60
+  - MonsterAI.m_alertRange, 80
 
 # enemies with a nova staff circle a lot, so they're not constantly nova'ing
 - name: gear_staff_novas_buff

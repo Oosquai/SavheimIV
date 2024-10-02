@@ -273,7 +273,6 @@
   - Charred_Mage
   - Charred_Archer
   - BlobLava
-  - piece_Charred_Balista
 
 - valueGroup: dnTrashMobsT5v2
   values:
@@ -281,7 +280,6 @@
   - Charred_Mage
   - Charred_Archer
   - BlobLava
-  - piece_Charred_Balista
   - FallenValkyrie
 
 - valueGroup: dnTrashMobsT5v3
@@ -290,7 +288,6 @@
   - Charred_Mage
   - Charred_Archer
   - BlobLava
-  - piece_Charred_Balista
   - FallenValkyrie
   - Morgen
 
