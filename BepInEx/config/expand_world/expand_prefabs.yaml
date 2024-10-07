@@ -520,7 +520,7 @@
 - prefab: Skeleton
   type: create
   weight: 1E30
-  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
+  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: clothes_skeleton_mountain
   poke:
   - prefab: creature
@@ -1716,7 +1716,7 @@
   type: create
   spawns:
   - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
-  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece
+  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece_fireplace
 
 # Haldor
 - prefab: Haldor
@@ -2247,6 +2247,7 @@
 # Hel's Reaver (purple battleaxe)
 - prefab: Ragdoll
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   objects:
   - Player, 3, d_purple_battleaxe
   - vfx_wraith_hit, 1

@@ -17,7 +17,7 @@
   - i_player_roguelite_boss_spawns, 0
   - i_player_roguelite_eikthyr_spawn, 0
   - i_player_roguelite_brenna_spawn, 0
-  - i_player_roguelite_geirrhafa_spawn, 1
+  - i_player_roguelite_geirrhafa_spawn, 0
   - i_player_roguelite_subtier, 0
   - i_player_roguelite_tier, 0
   - i_player_roguelite_wave, 0
@@ -30,7 +30,7 @@
   - i_player_roguelite_boss_spawns, 0
   - i_player_roguelite_eikthyr_spawn, 0
   - i_player_roguelite_brenna_spawn, 0
-  - i_player_roguelite_geirrhafa_spawn, 1
+  - i_player_roguelite_geirrhafa_spawn, 0
   - i_player_roguelite_subtier, 0
   - i_player_roguelite_tier, 0
   - i_player_roguelite_wave, 0
@@ -128,19 +128,30 @@
   - Humanoid.m_group, dn_mobs
 
 - name: dn_mob_group
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   strings:
   - Humanoid.m_group, dn_mobs
 
 - name: dn_mob_group_roguelite
   ints:
   - i_creature_roguelite, 1
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000  # Raaka's trick for removing loot!  Thanks!
 
-- name: dn_eikthyr
+- name: dn_mob_group_roguelite_eikthyr
   ints:
+  - i_creature_roguelite, 1
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
   - level, 0
   floats:
   - max_health, 1000
@@ -150,10 +161,46 @@
   - Humanoid.m_runSpeed, 16
   - MonsterAI.m_minAttackInterval, 1
   strings:
-  - Humanoid.m_name, Spirit of Eikthyr
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_name, Spirit of Eikthyr
   bools:
   - Humanoid.m_boss, false
+
+- name: dn_mob_group_roguelite_brenna
+  ints:
+  - i_creature_roguelite, 1
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  strings:
+  - Humanoid.m_group, dn_mobs
+  - Humanoid.m_name, Brenna
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000  # Raaka's trick for removing loot!  Thanks!
+
+- name: dn_mob_group_roguelite_geirrhafa
+  ints:
+  - i_creature_roguelite, 1
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  strings:
+  - Humanoid.m_group, dn_mobs
+  - Humanoid.m_name, Geirrhafa
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000  # Raaka's trick for removing loot!  Thanks!
+
+- name: clothes_skeleton_dn
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, skeleton_sword, Torch, KnifeCopper, StaffIceShards
+  strings:
+  - Humanoid.m_group, dn_mobs
 
 - valueGroup: dnEikthyrDmgPlayer
   values:
@@ -188,6 +235,25 @@
   - Humanoid.m_group, dn_mobs
   floats:
   - Humanoid.m_runSpeed, 1
+
+# Deep North Roguelite Cleanup Datas
+# special deer ragdoll that lasts 4 hours and has a flag to differentiate it from naturally-spawned ones
+# times for 4 hours so that this isn't a race against the clock, but also will trigger a cleanup of itself eventually
+- name: dn_deer_ragdoll
+  ints:
+  - HasFields, 1
+  - HasFieldsRagdoll, 1
+  - i_dn_deer_ragdoll, 1
+  floats:
+  - Ragdoll.m_ttl, 14400  # 60*60*4 = 14400 = 4 hours
+
+- name: d_dnrl_cnt_inc
+  ints:
+  - i_dnrl_cnt, <int_i_dnrl_cnt> + 1
+
+- name: d_dnrl_cnt_rst
+  ints:
+  - i_dnrl_cnt, 0
 
 # DeepNorth roguelite trash mob tiers.  Some need multiples for independent random rolls, with gradually increasing difficulty.
 - valueGroup: dnTrashMobsT0
@@ -263,7 +329,6 @@
   - Seeker
   - Seeker
   - Seeker
-  - SeekerBrute
   - SeekerBrute
   - Gjall
 

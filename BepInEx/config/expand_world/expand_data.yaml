@@ -40,7 +40,7 @@
   ints:
   - HasFields, 1
   - HasFieldsFireplace, 1
-  - HasFieldsEffectArea, 1
+#  - HasFieldsEffectArea, 1
   - Fireplace.m_infiniteFuel, 1
 #  strings:
 #  - EffectArea.m_statusEffect, CampFire
@@ -545,6 +545,19 @@
 ####################################
 # Auto-spawned piece data - immune, etc.
 - name: d_perma_piece
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+
+- name: d_perma_piece_fireplace
+  ints:
+  - HasFields, 1
+  - HasFieldsFireplace, 1
+  - Fireplace.m_infiniteFuel, 1
   bools:
   - Piece.m_canBeRemoved, false
   - Piece.m_primaryTarget, false

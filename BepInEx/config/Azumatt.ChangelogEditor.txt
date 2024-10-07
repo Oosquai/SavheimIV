@@ -1,9 +1,16 @@
 - <color=#FF6F00>MUST CHANGE Controls</color>:  <color=#00FFFF>Toggle Walk</color> & <color=#00FFFF>Sit</color>.  Recommended:  <color=#00FFFF>-</color> & <color=#00FFFF>=</color>
-- New keys:  L-Alt: dodge.  T, G: use boss powers.  ~: swap hotbars.
-   F: cycle ammo.  Z: compare item.  Left-ctrl: crafting tracker +/-.
+- New keys:  L-Alt: dodge.  ~: swap hotbars.  F: cycle ammo.
+   T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/1/24</color>
+     0\  Savheim IV Patch Notes, 10/7/24</color>
+- Experimental changes to bronze tier weapons... more to come.
+- Cooking and skills menus are now sorted.
+- Added lost of shiny new clutter pieces to build.  Will sort tabs soon...
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+Patch Notes, 10/1/24
 - Cleaned up skeleton dual wielding a bit.
 - Improved code for gear-based AI modifications.
 - Elder's Tenta Roots can now move slowly.  Creepy!
@@ -15,8 +22,6 @@
 - Lots of changes in the Deep North.
 - Creatures with offhand torches now have increased alert range.
 
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 Patch Notes, 8/26/24
 - Savheim IV begins closed player testing.
 

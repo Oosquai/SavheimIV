@@ -1,6 +1,6 @@
 name: HoneyCookedNeck
 clonePrefabName: 
-craftingStation: ''
+craftingStation: $piece_cauldron
 minStationLevel: 1
 maxStationLevelCap: 
 repairStation: 

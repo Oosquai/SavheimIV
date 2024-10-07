@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1.15
-  m_attackStamina: 6
+  m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 12
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -110,7 +110,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 42
+  Pierce: 30
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -122,7 +122,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 3
+  Pierce: 2
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -136,7 +136,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 22
+  m_blockPower: 14
   m_blockPowerPerLevel: 1
   m_timedBlockBonus: 2
   m_deflectionForce: 0

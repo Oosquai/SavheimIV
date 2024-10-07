@@ -1,0 +1,27 @@
+{
+	"$item_battleaxe": "Iron Battleaxe",
+	"$item_shield_banded": "Iron Banded Shield",
+
+	"$item_bolt_blackmetal": "Black Metal Bolt",
+
+	"$item_barleywinebase": "Fermenting Base: Fire Resistance",
+	"$item_meadbasefrostresist": "Fermenting Base: Frost Resistance",
+	"$item_meadbasepoisonresist": "Fermenting Base: Poison Resistance",
+
+	"$item_meadbaseeitr": "Fermenting Base: Minor Eitr",
+	"$item_meadbaseeitr_lingering": "Fermenting Base: Lingering Eitr",
+	"$item_meadbaseeitr_major": "Fermenting Base: Major Eitr",
+	"$item_meadbaseeitr_medium": "Fermenting Base: Medium Eitr",
+	
+	"$item_meadbasehealth": "Fermenting Base: Minor Healing",
+	"$item_meadbasehealth_lingering": "Fermenting Base: Lingering Healing",
+	"$item_meadbasehealth_major": "Fermenting Base: Major Healing",
+	"$item_meadbasehealth_medium": "Fermenting Base: Medium Healing",
+	
+	"$item_meadbasestamina": "Fermenting Base: Minor Stamina",
+	"$item_meadbasestamina_lingering": "Fermenting Base: Lingering Stamina",
+	"$item_meadbasestamina_major": "Fermenting Base: Major Stamina",
+	"$item_meadbasestamina_medium": "Fermenting Base: Medium Stamina",
+	
+	"$item_meadbasetasty": "Fermenting Base: Tasty"
+}

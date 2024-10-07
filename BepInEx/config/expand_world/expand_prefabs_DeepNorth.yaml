@@ -1,49 +1,7 @@
-# Need to add roaming guardians, inquisitors, and deer!  Hearing range 100 for patrols.
-#   God weapon:  secondary casts shield, value scales with Swords.  if shielded, secondary is skybreaker + blackhole + FX.  if FX, primary applies VeryWeak Slash + Slow.  Uses eitr + stam.  fast attack 1h or 2h sword versions.  CWS_Sword_1 / CWS_TH_Sword_5 (recolor green or blue?)?
-#   Odin's gifts throughout previous zones are temporal/ethereal versions of them.
-#   Purity, Serenity, Tranquility?  synonyms...
-#   Bind on Equip??
-# Make ancient loot, including buff weapons, odin weapons.
-# Finish loot tables for mini-bosses.
-
-# some loot still dropping - blood clots?  gjall maybe?
-
-# Multiplayer Testing
-# 1) Difficulty (should have trash per player, but same number of bosses)
-# 2) Resurrect does not clear roguelite state, nor trigger end broadcast?
-# 3) Loot per player?  Except final reward gear...  coins per player?
-
-## debug
-#- prefab: Player
-#  type: say, set_rl
-#  data: d_player_roguelite_start
-#  injectData: true
-#  command: s roguelite status ON
-#- prefab: Player
-#  type: say, clear_rl
-#  data: d_player_roguelite_clear
-#  injectData: true
-#  command: s roguelite status OFF
-#- prefab: Player
-#  type: say, rl_stats
-#  command: s Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
-#- prefab: Player
-#  type: say, rl_spawn
-#  spawn: Skeleton, dn_mob_group_roguelite
-#- prefab: Player
-#  type: say, rl_win
-#  poke:
-#  - prefab: Player
-#    parameter: p_dn_roguelite_win_sequence
-#- prefab: Player
-#  type: say, rl_t8
-#  data: d_player_roguelite_tier_8
-#  injectData: true
-
 ########################################################################
 # Deep North
 ########################################################################
-# Killing an untamed deer in Deep North starts the Roguelite minigame.
+# Killing a deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
 # Killing mobs has a percent chance to increment Subtier.
 # Subtier = 7 increases Tier if conditions are satisfied (enough bosses killed).
@@ -51,6 +9,9 @@
 # Get to Tier 8 and clear all mobs to win!  Get loot from mini-bosses and bosses along the way.
 # Die or leave to clear status.  Mobs despawn if no flagged players nearby.
 # Normal loot tables removed.
+# Multiplayer spawns more trash, but with limits.  You can intentionally overpower this event by bringing enough players.
+# If using CLLC, more players will also cause mobs to have more health and do more damage.
+# Loot quantities are fixed though, so bringing more players means sharing!
 #
 # TIER | SPAWNS (* indicates must kill boss before passing.  i.e. must kill Elder/Bonemass before you can advance to tier 3.)
 #    0 | chance of eikthyr
@@ -60,22 +21,48 @@
 #  * 4 | chance of Geirrhafa (if too slow killing previous boss!)
 #  * 5 | queen or fader
 #    6 | elder, bonemass, or dragon
-#    7 | yagluth, queen, or fader
+#    7 | yagluth, queen, or fader (tiers 6 & 7 = two bosses at once!)
 #    8 | Victory once all mobs cleared
 #    9 | max tier, spawns stop, victory condition still valid
 
+####################################
 # Don't murder the deer!
-- prefab: Deer
-  type: destroy
+# If no other dnrl-flagged deer nearby already, spawn a persistent, dnrl-flagged ragdoll for this event, and start the event!
+- prefab: deer_ragdoll
+  type: create
   biomes: DeepNorth
-  filter: not_tamed                # ahem, no breeding for on-demand events allowed!
+  bannedObjects:
+  - deer_ragdoll, 100, dn_deer_ragdoll
   weight: 1E30
+  remove: true
+  spawn: deer_ragdoll, dn_deer_ragdoll, false
   poke:
-  - prefab: Player
-    maxDistance: 200
-    delay: 5
+  - prefab: Player                      # start main spawn sequence and loop
+    maxDistance: 100
+    delay: 3
     parameter: p_deer_murder
+  - prefab: Player                      # start player cleanup loops for all nearby players
+    maxDistance: 100
+    delay: 4                            # must wait long enough for d_player_roguelite_on to be set by p_deer_murder process
+    parameter: p_dnrl_cleanup_player_loop
+  - prefab: deer_ragdoll                # start deer_ragdoll cleanup loop
+    maxDistance: 1
+    limit: 1
+    delay: 5
+    parameter: p_dnrl_cleanup_deer_ragdoll_loop
 
+# If there's already a dnrl-flagged deer nearby, spawn a ragdoll that will disappear normally
+- prefab: deer_ragdoll
+  type: create
+  biomes: DeepNorth
+  objects:
+  - deer_ragdoll, 100, dn_deer_ragdoll
+  weight: 1E30
+  remove: true
+  spawn: deer_ragdoll, false
+
+####################################
+# ... you murdered the deer.  :(
 - prefab: Player
   type: poke, p_deer_murder
   biomes: DeepNorth                # only in Deep North
@@ -104,11 +91,6 @@
     maxDistance: 1
     limit: 1
     parameter: dn_roguelite_spawn_dly
-  - prefab: Player   # check for player leaving Deep North
-    maxDistance: 1
-    limit: 1
-    delay: 3
-    parameter: dn_roguelite_flee_check
 
 ####################################
 # Randomized delay, for multiplayer, so different players have uniquely timed spawn loops
@@ -147,7 +129,7 @@
   biomes: DeepNorth                     # only process if in Deep North
   filters:
   - int, i_player_roguelite_on, 1       # roguelite mode must be active for player
-  - int, i_player_roguelite_tier, 0;8   # Spawns stop at tier 9.  Must reach tier 8 and clear all mobs to win.
+  - int, i_player_roguelite_tier, 0;8   # Spawns stop after tier 9.  Must reach tier 8 and clear all mobs to win.
   data: d_player_roguelite_wave_inc     # increment wave counter
   injectData: true
 #  command: s Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
@@ -157,10 +139,6 @@
   - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
   - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
   poke:
-  - prefab: creature                   # remove creatures if player leaves
-    maxDistance: 200
-    delay: 3
-    parameter: dn_roguelite_despawn_check
   - prefab: Player                     # self-looping spawners!
     maxDistance: 1
     limit: 1
@@ -220,11 +198,12 @@
 
 ####################################
 # Limit to one of each boss & miniboss at a time.  Don't spawn GoblinBruteBros, since I'm too lazy to script checking for the shaman to avoid respawning the pair!
-- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir
+# Also limit to one of elites.  This helps balance multiplayer especially, as it creates a cap to spawns per tier, and some RNG since some waves will spawn fewer creatures.
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, Troll, Abomination, StoneGolem, GoblinBrute, SeekerBrute, Gjall, FallenValkyrie, Morgen
   type: create
   biomes: DeepNorth
   objects:
-  - <prefab>, 200
+  - <prefab>, 100
   weight: 1E30
   remove: true
 
@@ -236,15 +215,19 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite         # make sure it's a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on   # make sure there's a player nearby with roguelite mode on
+  - Player, 100, d_player_roguelite_on   # make sure there's a player nearby with roguelite mode on
   poke:
   - prefab: Player
-    maxDistance: 200
-    parameter: p_dn_roguelite_mob_kill   # all nearby players poked for kill, subtier, and boss checks
+    maxDistance: 100
+    parameter: p_dn_roguelite_mob_kill   # all nearby players poked for kill and subtier checks
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
+    limit: 1                             # only nearest player poked to spawn a boss
+    delay: 3
+    parameter: p_dn_roguelite_boss_check # every kill = check for boss spawn conditions
+  - prefab: Player
+    maxDistance: 100
     limit: 1                             # only nearest player poked for win check, to avoid multiple Odin / reward spawns
-    data: d_player_roguelite_on          # check for player has roguelite active
     delay: 1                             # ensure time for mob to no longer register
     parameter: p_dn_roguelite_win_check
 
@@ -265,11 +248,6 @@
     maxDistance: 1
     limit: 1
     parameter: p_dn_roguelite_subtier_check  # every kill = % chance to advance subtier
-  - prefab: Player
-    maxDistance: 1
-    limit: 1
-    delay: 3
-    parameter: p_dn_roguelite_boss_check     # every kill = check for boss spawn conditions
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_kill
@@ -284,7 +262,7 @@
   biomes: DeepNorth
   filter: d_player_roguelite_on
   weight: 0.85                            # percent chance to increment subtier counter
-  data: d_player_roguelite_subtier_inc    # increment subtier counter
+  data: d_player_roguelite_subtier_inc
   injectData: true
   poke:
   - prefab: Player
@@ -299,9 +277,9 @@
   biomes: DeepNorth
   filters:
   - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 7;999  # should trigger at 7, but just in case someone kills a bunch of mobs in one hit somehow...
-  - int, i_player_roguelite_boss_kills, 0   # Need to kill Elder or Bonemass ...
-  - int, i_player_roguelite_tier, 0;1       # ... to advance as high as tier X+1 = 2
+  - int, i_player_roguelite_subtier, 7;9999 # should trigger at 7, but will go higher if waiting for a boss kill
+  - int, i_player_roguelite_boss_kills, 0   # Haven't killed any bosses ...
+  - int, i_player_roguelite_tier, 0;1       # ... so max tier is X+1 = 2
   data: d_player_roguelite_tier_inc         # If all requirements met, increment tier counter (also resets subtier counter)
   injectData: true
 
@@ -310,9 +288,9 @@
   biomes: DeepNorth
   filters:
   - int, i_player_roguelite_on, 1
-  - int, i_player_roguelite_subtier, 7;999
-  - int, i_player_roguelite_boss_kills, 1   # Need to kill Moder or Yagluth ...
-  - int, i_player_roguelite_tier, 1;3       # ... to advance as high as tier X+1 = 4
+  - int, i_player_roguelite_subtier, 7;9999
+  - int, i_player_roguelite_boss_kills, 1   # Killed Elder or Bonemass ...
+  - int, i_player_roguelite_tier, 1;3       # ... so max tier is X+1 = 4
   data: d_player_roguelite_tier_inc
   injectData: true
 
@@ -321,9 +299,31 @@
   biomes: DeepNorth
   filters:
   - int, i_player_roguelite_on, 1
-  - int, i_player_roguelite_subtier, 7;999
-  - int, i_player_roguelite_boss_kills, 2;999  # Need to kill Queen or Fader, then 2 other bosses ...
-  - int, i_player_roguelite_tier, 3;8          # ... to advance to victory!  (if you clear all mobs)
+  - int, i_player_roguelite_subtier, 7;9999
+  - int, i_player_roguelite_boss_kills, 2   # Killed Moder or Yagluth ...
+  - int, i_player_roguelite_tier, 3;4       # ... so max tier is X+1 = 5
+  data: d_player_roguelite_tier_inc
+  injectData: true
+
+- prefab: Player
+  type: poke, p_dn_roguelite_tier_check
+  biomes: DeepNorth
+  filters:
+  - int, i_player_roguelite_on, 1
+  - int, i_player_roguelite_subtier, 7;9999
+  - int, i_player_roguelite_boss_kills, 3   # Killed Queen or Fader ...
+  - int, i_player_roguelite_tier, 4;7       # ... so max tier is X+1 = 8
+  data: d_player_roguelite_tier_inc
+  injectData: true
+
+- prefab: Player
+  type: poke, p_dn_roguelite_tier_check
+  biomes: DeepNorth
+  filters:
+  - int, i_player_roguelite_on, 1
+  - int, i_player_roguelite_subtier, 7;9999
+  - int, i_player_roguelite_boss_kills, 4;999  # Killed one additional boss (likely one other still up) ...
+  - int, i_player_roguelite_tier, 7;999        # ... so max tier is unlocked
   data: d_player_roguelite_tier_inc
   injectData: true
 
@@ -333,16 +333,16 @@
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
   biomes: DeepNorth                            # only process if in Deep North
-  weight: 0.1                                  # % chance per kill to spawn.  about 10 kills per tier, but starting halfway through this tier...  so about 50%.
+  weight: 0.25                                 # % chance per kill to spawn
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 0            # check tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_eikthyr_spawn, 0   # check that one hasn't spawned yet for this tier
   data: d_player_roguelite_eikthyr_spawn       # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Eikthyr, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Eikthyr, 0,12,snap, 180,0,0, dn_mob_group_roguelite_eikthyr, 0, true
 
 ### Tier 1 - Elder or Bonemass
 - prefab: Player
@@ -351,7 +351,7 @@
   weight: 1                                    # 50% chance of this or the other boss this tier, not both.
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 1;2          # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_boss_spawns, 0     # CHECK that one hasn't spawned yet for this tier
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
@@ -365,7 +365,7 @@
   weight: 1                                    # 50% chance of this or the other boss this tier, not both.
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 1;2          # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_boss_spawns, 0     # CHECK that one hasn't spawned yet for this tier
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
@@ -377,16 +377,16 @@
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
   biomes: DeepNorth                            # only process if in Deep North
-  weight: 0.1                                  # % chance per kill to spawn.  about 10 kills per tier, but starting halfway through this tier...  so about 50%.
+  weight: 0.1                                  # % chance per kill to spawn
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 2            # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_brenna_spawn, 0    # check that one hasn't spawned yet for this tier
   data: d_player_roguelite_brenna_spawn        # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Skeleton_Hildir, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Skeleton_Hildir, 0,12,snap, 180,0,0, dn_mob_group_roguelite_brenna, 0, true
 
 ### Tier 3 - Moder or Yagluth
 - prefab: Player
@@ -395,7 +395,7 @@
   weight: 1                                    # 50% chance of this or the other boss this tier, not both.
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 3;4          # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_boss_spawns, 1     # CHECK that one hasn't spawned yet for this tier
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
@@ -409,7 +409,7 @@
   weight: 1                                    # 50% chance of this or the other boss this tier, not both.
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 3;4          # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_boss_spawns, 1     # CHECK that one hasn't spawned yet for this tier
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
@@ -421,16 +421,16 @@
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
   biomes: DeepNorth                            # only process if in Deep North
-  weight: 0.1                                  # % chance per kill to spawn.  about 10 kills per tier, but starting halfway through this tier...  so about 50%.
+  weight: 0.1                                  # % chance per kill to spawn
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
   - int, i_player_roguelite_tier, 4            # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_geirrhafa_spawn, 0 # check that one hasn't spawned yet for this tier
   data: d_player_roguelite_geirrhafa_spawn     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Fenring_Cultist_Hildir, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Fenring_Cultist_Hildir, 0,12,snap, 180,0,0, dn_mob_group_roguelite_geirrhafa, 0, true
 
 ### Tier 5 - Queen or Fader
 - prefab: Player
@@ -439,8 +439,8 @@
   weight: 1                                    # 50% chance of this or the other boss this tier, not both.
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
-  - int, i_player_roguelite_tier, 5;6          # CHECK tier to determine which mini-boss or boss to spawn
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
+  - int, i_player_roguelite_tier, 5            # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_boss_spawns, 2     # CHECK that one hasn't spawned yet for this tier
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
@@ -453,8 +453,8 @@
   weight: 1                                    # 50% chance of this or the other boss this tier, not both.
   filters:
   - int, i_player_roguelite_on, 1              # roguelite mode must be active for player
-  - int, i_player_roguelite_subtier, 3;999     # wait until about halfway through subtier
-  - int, i_player_roguelite_tier, 5;6          # CHECK tier to determine which mini-boss or boss to spawn
+  - int, i_player_roguelite_subtier, 3;9999    # wait until about halfway through subtier
+  - int, i_player_roguelite_tier, 5            # CHECK tier to determine which mini-boss or boss to spawn
   - int, i_player_roguelite_boss_spawns, 2     # CHECK that one hasn't spawned yet for this tier
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
@@ -544,7 +544,7 @@
 ########################################################################
 # Loot!
 # Raaka's trick for removing loot, used here with mobs spawned by roguelite - thanks, Raaka!
-# Any itemdrop created above 9000y altitude is instantly removed.    
+# Any itemdrop created above 9000 altitude is instantly removed.    
 - prefab: ItemDrop
   type: create
   biomes: DeepNorth
@@ -553,12 +553,55 @@
 
 # The altitude trick doesn't help with creatures who leave ragdolls though, so another Raaka trick!
 # Swap ragdolls, causing them to abandon their loot tables
-#- prefab: Abomination_ragdoll, Charred_Melee_Ragdoll, Draugr_elite_ragdoll, eikthyr_ragdoll, Fenring_cultist_ragdoll, Fenring_ragdoll, gdking_Ragdoll, GoblinBrute_ragdoll, GoblinKing_ragdoll, GoblinShaman_ragdoll, Greydwarf_elite_ragdoll, Greydwarf_Shaman_ragdoll, Hatchling_ragdoll, lox_ragdoll, Stonegolem_ragdoll, Troll_ragdoll, Ulv_Ragdoll
+# Need special processes to duplicate behavior of unique battleaxe, for roguelite ON and OFF.
+### Battleaxe, roguelite OFF
 - prefab: Ragdoll
   type: create
   biomes: DeepNorth
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 3, d_purple_battleaxe
+  - vfx_wraith_hit, 1
+  bannedObjects:
+  - Player, 100, d_player_roguelite_on
+  spawns:
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
+  poke:
+  - prefab: creature
+    maxDistance: 10
+    data: not_tamed
+    parameter: p_soulcleave_randomDelay
+
+### Battleaxe, roguelite ON
+- prefab: Ragdoll
+  type: create
+  biomes: DeepNorth
+  objects:
+  - Player, 100, d_player_roguelite_on
+  - Player, 3, d_purple_battleaxe
+  - vfx_wraith_hit, 1
+  weight: 1E30      # ensure always triggers vs. no battleaxe version below
+  spawns:
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
+  poke:
+  - prefab: creature
+    maxDistance: 10
+    data: not_tamed
+    parameter: p_soulcleave_randomDelay
+  remove: true
+  spawn:
+  - prefab: <prefab>
+    triggerRules: false
+
+### No battleaxe, roguelite ON (no further action needed for neither battleaxe nor roguelite)
+- prefab: Ragdoll
+  type: create
+  biomes: DeepNorth
+  objects:
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   remove: true
   spawn:
   - prefab: <prefab>
@@ -569,25 +612,26 @@
   type: create
   biomes: DeepNorth
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   remove: true
 
 # If a boss was killed, special counter incremented in addition to everything else, plus loot!
+# Note, we're treating Eikthyr as trash, but he still has a loot table.  He only has a random chance to spawn.
 - prefab: Eikthyr
   type: destroy
   weight: 1E30                             # force this to trigger instead of "creature" process above
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
-    parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
+    maxDistance: 100
+    parameter: p_dn_roguelite_mob_kill     # increment kill counter (Eikthyr only counts as a kill)
   - prefab: Player
     maxDistance: 100
     limit: 1
-    delay: 11
+    delay: 11                              # timed relative to ragdoll despawn timing
     parameter: p_boss_loot_dn_roguelite_no_coin <bossDropsEikthyrDnRoguelite>
 
 - prefab: gd_king
@@ -596,13 +640,13 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_boss_kill    # also increment boss kill counter
   - prefab: Player
     maxDistance: 100
@@ -616,13 +660,13 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_boss_kill    # also increment boss kill counter
   - prefab: Player
     maxDistance: 100
@@ -636,13 +680,13 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_boss_kill    # also increment boss kill counter
   - prefab: Player
     maxDistance: 100
@@ -656,13 +700,13 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_boss_kill    # also increment boss kill counter
   - prefab: Player
     maxDistance: 100
@@ -676,13 +720,13 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_boss_kill    # also increment boss kill counter
   - prefab: Player
     maxDistance: 100
@@ -696,13 +740,13 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (bosses count as a kill)
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_boss_kill    # also increment boss kill counter
   - prefab: Player
     maxDistance: 100
@@ -717,10 +761,10 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (mini-bosses count as a kill)
   - prefab: Player
     maxDistance: 100
@@ -735,10 +779,10 @@
   biomes: DeepNorth
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
-  - Player, 200, d_player_roguelite_on     # must be a nearby player with roguelite active
+  - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   poke:
   - prefab: Player
-    maxDistance: 200
+    maxDistance: 100
     parameter: p_dn_roguelite_mob_kill     # increment kill counter (mini-bosses count as a kill)
   - prefab: Player
     maxDistance: 100
@@ -749,6 +793,9 @@
 # Boss Loot.  No coins from Eikthyr or mini-bosses.
 - prefab: Player
   type: poke, p_boss_loot_dn_roguelite_no_coin
+  biomes: DeepNorth                         # only process if in Deep North
+  filters:
+  - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
   spawns:
   - <par1>, 0,0,snap, 0,0,0, d_empty_data, 0
   - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data, 0
@@ -759,6 +806,9 @@
 
 - prefab: Player
   type: poke, p_boss_loot_dn_roguelite
+  biomes: DeepNorth                         # only process if in Deep North
+  filters:
+  - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
   spawns:
   - <par1>, 0,0,snap, 0,0,0, d_empty_data, 0
   - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data, 0
@@ -770,7 +820,7 @@
 
 ########################################################################
 # Roguelite Win Conditions
-# Must have made it to tier 16 (spawns stopped) and cleared all nearby roguelite mobs
+# Must have made it to tier 8 and cleared all nearby roguelite mobs
 - prefab: Player
   type: poke, p_dn_roguelite_win_check
   biomes: DeepNorth                         # only process if in Deep North
@@ -778,7 +828,7 @@
   - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
   - int, i_player_roguelite_tier, 8;9999    # Player must be at least tier 8
   bannedObjects:
-  - creature, 200, dn_mob_group_roguelite   # no nearby creatures tagged as roguelite mob
+  - creature, 100, dn_mob_group_roguelite   # no nearby creatures tagged as roguelite mob
   poke:
   - prefab: Player
     maxDistance: 1
@@ -827,75 +877,175 @@
   data: d_odin_closer
 
 ########################################################################
-# Clean up player state and mobs, broadcast results
-# Clear state if player dies and releases (getting resurrected shouldn't trigger this)
+# Clean up player state and mobs, broadcast failure results
+########################################################################
+# Main cleanup loops are pokes back and forth between deer_ragdoll and players.
+# Players and deer_ragdoll are all attempting to count up from 0.
+# They each poke eachother to reset the counts though.
+# If either doesn't find the other nearby, the count is allowed to get higher.
+# If count exceeds 1, deer ragdoll despawns itself and all nearby roguelite mobs, and players clear their state.
+# Loops every 3 secs, increment at 0s, reset at 1s.  All prefabs count and poke for resets independently.
+# Filter DeepNorth for deer, but not for player, since we want player to still remove state if they teleport away.
+####################################
+# Player main cleanup loop
+- prefab: Player
+  type: poke, p_dnrl_cleanup_player_loop
+  filter: d_player_roguelite_on  # only process if player has roguelite active
+  command: s <int_i_dnrl_cnt>
+  poke:
+  - prefab: Player               # self loop
+    maxDistance: 1
+    limit: 1
+    delay: 3
+    parameter: p_dnrl_cleanup_player_loop
+  - prefab: Player               # increment counter
+    maxDistance: 1
+    limit: 1
+    parameter: p_dnrl_cnt_inc    # also checks for count too high, then triggers cleanup
+  - prefab: deer_ragdoll         # reset counter if deer_ragdoll with dnrl flag nearby
+    maxDistance: 100
+    delay: 1.2                   # delay so the increment happens first
+    parameter: p_dnrl_cleanup_cnt_rst_req_deer_ragdoll
+
+# Count increment.  Only triggers if count is 0 (true when uninitialized too).
+- prefab: Player
+  type: poke, p_dnrl_cnt_inc
+  filters:
+  - int, i_player_roguelite_on, 1
+  - int, i_dnrl_cnt, 0
+  data: d_dnrl_cnt_inc
+  injectData: true
+
+# Count increment, but instead triggers cleanup if count > 0, meaning reset never occurred.
+- prefab: Player
+  type: poke, p_dnrl_cnt_inc
+  filters:
+  - int, i_player_roguelite_on, 1
+  - int, i_dnrl_cnt, 1;9999
+  data: d_player_roguelite_clear
+  injectData: true
+  commands:
+  - broadcast center <string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+  - s <string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+
+# reset player count if deer ragdoll poked back
+- prefab: Player
+  type: poke, p_dnrl_cleanup_cnt_rst_player
+  data: d_dnrl_cnt_rst
+  injectData: true
+
+# reset request from deer_ragdoll to player, which pokes back with reset
+- prefab: Player
+  type: poke, p_dnrl_cleanup_cnt_rst_req_player
+  filters:
+  - int, i_player_roguelite_on, 1
+  poke:
+  - prefab: deer_ragdoll
+    maxDistance: 100
+    parameter: p_dnrl_cleanup_cnt_rst_deer_ragdoll
+
+####################################
+# Deer ragdoll main cleanup loop
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_cleanup_deer_ragdoll_loop
+  biomes: DeepNorth
+  filter: dn_deer_ragdoll        # only process if ragdoll has dnrl flag
+  poke:
+  - prefab: deer_ragdoll         # self loop
+    maxDistance: 1
+    limit: 1
+    delay: 3
+    parameter: p_dnrl_cleanup_deer_ragdoll_loop
+  - prefab: deer_ragdoll         # increment counter
+    maxDistance: 1
+    limit: 1
+    parameter: p_dnrl_cnt_inc    # also checks for count too high, then triggers cleanup
+  - prefab: Player               # reset counter if player with roguelite on nearby
+    maxDistance: 100
+    limit: 1                     # only need 1 player to poke back
+    data: d_player_roguelite_on  # but make sure the player selected is flagged dnrl
+    delay: 1.3                   # delay so the increment happens first
+    parameter: p_dnrl_cleanup_cnt_rst_req_player
+
+# Count increment.  Only triggers if count is 0 (true when uninitialized too).
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_cnt_inc
+  biomes: DeepNorth
+  filters:
+  - int, i_dn_deer_ragdoll, 1
+  - int, i_dnrl_cnt, 0
+  data: d_dnrl_cnt_inc
+
+# Count increment, but instead triggers cleanup if count > 0, meaning reset never occurred.
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_cnt_inc
+  biomes: DeepNorth
+  filters:
+  - int, i_dn_deer_ragdoll, 1
+  - int, i_dnrl_cnt, 1;9999
+  remove: true
+  poke:
+  - prefab: creature                    # removes any nearby roguelite creatures as well
+    maxDistance: 150                    # wider range in case people trying to cheese by kiting - mobs will despawn
+    parameter: p_dnrl_remove_creature
+
+# reset deer_ragdoll count if player poked back
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_cleanup_cnt_rst_deer_ragdoll
+  biomes: DeepNorth
+  data: d_dnrl_cnt_rst
+
+# reset request from player to deer_ragdoll, which pokes back with reset
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_cleanup_cnt_rst_req_deer_ragdoll
+  biomes: DeepNorth
+  filters:
+  - int, i_dn_deer_ragdoll, 1
+  poke:
+  - prefab: Player
+    maxDistance: 100
+    parameter: p_dnrl_cleanup_cnt_rst_player
+
+# remove roguelite creatures
+- prefab: creature
+  type: poke, p_dnrl_remove_creature
+  biomes: DeepNorth
+  filter: dn_mob_group_roguelite
+  remove: true
+
+####################################
+# Clear state if player dies and releases.
+# Getting resurrected shouldn't trigger this.
+# This should trigger before the Player Fled processes above, and this will remove roguelite state to avoid those triggering.
 - prefab: Player
   type: destroy
   biomes: DeepNorth
   filter: d_player_roguelite_on
   commands:
-  - broadcast center <string_playerName> was consumed by the Deep North!  They survived <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
-  - s <string_playerName> was consumed by the Deep North!  They survived <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  - broadcast center <string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+  - s <string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
   data: d_player_roguelite_clear
   injectData: true
+#  poke:
+#  - prefab: deer_ragdoll  # Need this in case players respawn within 100 distance.
+#    maxDistance: 100
+#    limit: 1
+#    parameter: p_dn_deer_ragdoll_remove
 
-# Clear state if player leaves Deep North
-- prefab: Player
-  type: poke, dn_roguelite_flee_check
-  filter: d_player_roguelite_on        # check if roguelite active
-  poke:
-  - prefab: Player                     # self-loop for repeated checks as long as roguelite active
-    maxDistance: 1
-    limit: 1
-    delay: 3
-    parameter: dn_roguelite_flee_check
-  - prefab: Player                     # try to remove roguelite mode
-    maxDistance: 1
-    limit: 1
-    data: d_player_roguelite_on
-    parameter: dn_roguelite_flee_remove
+- prefab: deer_ragdoll
+  type: poke, p_dn_deer_ragdoll_remove
+  biomes: DeepNorth
+  remove: true
 
-- prefab: Player
-  type: poke, dn_roguelite_flee_remove
-  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
-  filter: d_player_roguelite_on        # check if roguelite active in zone other than Deep North
-  data: d_player_roguelite_clear
-  injectData: true
-  commands:
-  - broadcast center <string_playerName> has fled the Deep North!  They braved <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
-  - s <string_playerName> has fled the Deep North!  They braved <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
-
-# roguelite_remove_failsafe - any action when not in Deep North clears roguelite state
+# roguelite_remove_failsafe - any player action when not near dnrl-flagged deer_ragdoll clears roguelite state
 - prefab: Player
   type: state, *
-  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   filter: d_player_roguelite_on
+  bannedObjects:
+  - deer_ragdoll, 200, dn_deer_ragdoll   # wider range so this doesn't trigger before normal Player Fled process
   data: d_player_roguelite_clear
   injectData: true
   command: s DEBUG - triggered roguelite_remove_failsafe
-
-# Remove mobs if no player nearby
-- prefab: creature
-  type: poke, dn_roguelite_despawn_check
-  biomes: DeepNorth
-  poke:
-  - prefab: creature                   # self-loop for stragglers on all mobs
-    maxDistance: 1
-    limit: 1
-    delay: 3
-    parameter: dn_roguelite_despawn_check
-  - prefab: creature                   # try to remove roguelite mobs
-    maxDistance: 200
-    data: dn_mob_group_roguelite
-    parameter: dn_roguelite_despawn
-  
-- prefab: creature
-  type: poke, dn_roguelite_despawn
-  biomes: DeepNorth
-  bannedObjects:
-  - Player, 200, d_player_roguelite_on  # only remove if no players with roguelite active nearby
-  filter: dn_mob_group_roguelite        # only remove mobs associated with roguelite
-  remove: true
 
 ########################################################################
 # Spawn data and specific creature data
@@ -906,10 +1056,22 @@
   biomes: DeepNorth
   data: dn_deer
 
-- prefab: Eikthyr
+# for creatures spawned by other creatures
+- prefab: Blob, SeekerBrood, Charred_Twitcher, Tick
   type: create
   biomes: DeepNorth
-  data: dn_eikthyr
+  data: dn_mob_group
+
+# for Bonemass spawns
+- prefab: Skeleton
+  type: create
+  biomes: DeepNorth
+  data: clothes_skeleton_dn
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
 
 ####################################
 # Eikthyr
@@ -989,7 +1151,7 @@
   type: create
   biomes: DeepNorth
   objects:
-  - gd_king, 200
+  - gd_king, 100
   data: TentaRootMover_dnrl
 
 # tentaroots slime nearby players when they attack.  (Thanks, Raaka!)
@@ -1050,3 +1212,52 @@
 #- prefab: Player
 #  type: poke, testVG
 #  command: s <par1> <par2> <par3>
+#
+## debug
+#- prefab: Player
+#  type: say, rl_set
+#  data: d_player_roguelite_start
+#  injectData: true
+#  command: s roguelite status ON
+- prefab: Player
+  type: say, rl_clear
+  data: d_player_roguelite_clear
+  injectData: true
+  command: s roguelite status OFF
+  poke:
+  - prefab: deer_ragdoll
+    maxDistance: 100
+    parameter: p_dn_deer_ragdoll_remove
+- prefab: Player
+  type: say, rl_stats
+  command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
+#- prefab: Player
+#  type: say, rl_spawn
+#  spawn: Skeleton, dn_mob_group_roguelite
+#- prefab: Player
+#  type: say, rl_win
+#  poke:
+#  - prefab: Player
+#    parameter: p_dn_roguelite_win_sequence
+#- prefab: Player
+#  type: say, rl_t8
+#  data: d_player_roguelite_tier_8
+#  injectData: true
+
+##############################
+# NOTES
+# Need to add roaming guardians, inquisitors, and deer!  Hearing range 100 for patrols.
+#   God weapon:  secondary casts shield, value scales with Swords.  if shielded, secondary is skybreaker + blackhole + FX.  if FX, primary applies VeryWeak Slash + Slow.  Uses eitr + stam.  fast attack 1h or 2h sword versions.  CWS_Sword_1 / CWS_TH_Sword_5 (recolor green or blue?)?
+#   Odin's gifts throughout previous zones are temporal/ethereal versions of them.
+#   Purity, Serenity, Tranquility?  synonyms...
+#   Bind on Equip??
+# Make ancient loot, including buff weapons, odin weapons.
+# Finish loot tables for mini-bosses.
+# Test unique battleaxe that siphons souls
+
+# Multiplayer Testing
+# 1) Difficulty (should have trash per player, but same number of bosses)
+# 2) Resurrect does not clear roguelite state, nor trigger end broadcast?
+# 3) Loot for only one player?
+# 4) players entering late should get tagged with roguelite, to prevent cheesing
+# 5) At startup, only broadcast goes to all.  RPC_Message goes only to local player.
