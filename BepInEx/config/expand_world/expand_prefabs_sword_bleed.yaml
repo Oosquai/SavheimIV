@@ -6,7 +6,6 @@
 # Damage scales roughly with creature max hp, at about 1% total hp per tick, up to a cap.
 # 1h swords get 10 ticks, for 10% damage and 10 seconds to keep building stacks.
 # Greatswords get 13 ticks, for 13% damage and 13 seconds to keep building stacks.
-# Be sure to update your data for your personal list of 1h and 2h sword prefabs!
 
 # 2h sword attack
 - prefab: sfx_sword_hit
