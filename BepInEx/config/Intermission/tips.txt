@@ -34,7 +34,6 @@ Savheim IV - The world gets more dangerous the further from the center you trave
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and then for providing such deep hooks for the modding community!
 Savheim IV - Thank you to some very talented modders and builders:  Azumatt, blaxxun, wackymole, Jere, Raaka, DhakhaR, JPValheim, KG, OrianaVenture, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, Fustercluck, and more!
 Savheim IV - Thank you to Finn, Woody, Russ, Cody, Matt, Kris, and Tizz for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
-Savheim IV - I've intentionally left the BepInEx console enabled.  If you ever see RED error text, please drop your entire \Valheim\BepInEx\LogOutput.log file into the Discord/Savheim IV/bug-reports channel.
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>.  If searching the Catalog, use the search field at the bottom of the window instead of the top.
 Savheim IV - Gems and jewelry have been completely reworked.  Craft a Runaeldr Satchel to conveniently take jewelry options with you on adventures.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  They're scary.  Bring a tower shield and block them until you learn their timing.  Go well-prepared in general.  Ashlands is no joke.

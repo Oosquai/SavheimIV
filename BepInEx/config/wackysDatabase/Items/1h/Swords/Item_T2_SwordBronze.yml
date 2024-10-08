@@ -1,7 +1,7 @@
 name: SwordBronze
 m_weight: 0.8
 m_name: $item_sword_bronze
-m_description: Swords have a thrust as a secondary attack that leaves targets bleeding.
+m_description: Sword secondary attacks apply a stacking bleed to staggered enemies.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -66,7 +66,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1
+  DmgMultiplier: 0.5
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -88,7 +88,7 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Bleed_Sword_T2
+  Attack_status_effect: SE_Savheim_Sword_Bleed_FX
   Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
