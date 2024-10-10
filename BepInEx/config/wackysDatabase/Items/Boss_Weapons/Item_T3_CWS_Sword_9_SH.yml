@@ -24,7 +24,7 @@ Primary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1
+  DmgMultiplier: 0.9
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -60,7 +60,18 @@ Primary_Attack:
     Trail_Effect: 
     Burst_Effect: 
   AEffectsPLUS:
-    Hit_Effects: []
+    Hit_Effects:
+    - name: sfx_build_hoe
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect:
     - name: sfx_axe_swing

@@ -18,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1.1
-  m_attackStamina: 8
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -116,7 +116,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.1
-  m_attackStamina: 16
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -208,7 +208,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 90
+  Blunt: 82
   Chop: 0
   Damage: 0
   Fire: 0
@@ -218,9 +218,9 @@ Damage:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 36
+  Spirit: 0
 Damage_Per_Level:
-  Blunt: 5
+  Blunt: 4
   Chop: 0
   Damage: 0
   Fire: 0
@@ -230,7 +230,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 3
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -250,8 +250,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 46
-  m_blockPowerPerLevel: 3
+  m_blockPower: 29
+  m_blockPowerPerLevel: 2
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

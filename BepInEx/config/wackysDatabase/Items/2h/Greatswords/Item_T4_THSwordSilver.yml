@@ -18,7 +18,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 8
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -72,7 +72,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.4
-  m_attackStamina: 16
+  m_attackStamina: 24
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -99,8 +99,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Bleed_GSword_T4
-  Attack_status_effect_chance: 1
+  Attack_status_effect: 
+  Attack_status_effect_chance: 0
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -127,6 +127,17 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
+    - name: sfx_build_cultivator
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
@@ -142,8 +153,8 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 90
-  Spirit: 36
+  Slash: 82
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -154,8 +165,8 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 5
-  Spirit: 3
+  Slash: 4
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1
@@ -175,9 +186,9 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 43
-  m_blockPowerPerLevel: 3
-  m_timedBlockBonus: 2.5
+  m_blockPower: 29
+  m_blockPowerPerLevel: 2
+  m_timedBlockBonus: 3.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1

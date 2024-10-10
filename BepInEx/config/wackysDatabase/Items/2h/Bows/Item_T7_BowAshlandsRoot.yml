@@ -36,7 +36,7 @@ Primary_Attack:
   Reload_Stamina_Drain: 0
   Bow_Draw: true
   Bow_Duration_Min: 2.5
-  Bow_Stamina_Drain: 23
+  Bow_Stamina_Drain: 18
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
   Attack_Ray_Width: 0
@@ -142,7 +142,7 @@ Damage_Per_Level:
   Lightning: 0
   Pickaxe: 0
   Pierce: 4
-  Poison: 1
+  Poison: 0
   Slash: 0
   Spirit: 0
 Armor:
@@ -164,8 +164,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 30
-  m_blockPowerPerLevel: 2
+  m_blockPower: 21
+  m_blockPowerPerLevel: 1
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

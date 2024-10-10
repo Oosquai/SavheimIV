@@ -100,8 +100,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Bleed_GSword_T6
-  Attack_status_effect_chance: 1
+  Attack_status_effect: 
+  Attack_status_effect_chance: 0
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -118,6 +118,17 @@ Secondary_Attack:
   AEffectsPLUS:
     Hit_Effects:
     - name: fx_swing_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_build_cultivator
       m_enabled: true
       m_variant: -1
       m_attach: false

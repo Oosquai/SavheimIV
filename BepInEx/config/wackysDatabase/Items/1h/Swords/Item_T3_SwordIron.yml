@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 6
+  m_attackStamina: 10
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -60,8 +60,8 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 2.5
-  m_attackStamina: 12
+  Custom_AttackSpeed: 2
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -88,8 +88,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Bleed_Sword_T3
-  Attack_status_effect_chance: 1
+  Attack_status_effect:
+  Attack_status_effect_chance: 0
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -102,7 +102,18 @@ Secondary_Attack:
     Trail_Effect: 
     Burst_Effect: 
   AEffectsPLUS:
-    Hit_Effects: []
+    Hit_Effects:
+    - name: sfx_build_hoe
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect:
     - name: sfx_axe_swing
@@ -129,7 +140,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 55
+  Slash: 50
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -153,8 +164,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 27
-  m_blockPowerPerLevel: 2
+  m_blockPower: 18
+  m_blockPowerPerLevel: 1
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

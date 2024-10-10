@@ -61,7 +61,7 @@ Secondary_Attack:
   Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1.2
-  m_attackStamina: 16
+  m_attackStamina: 12
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -141,7 +141,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 33
-  Pierce: 30
+  Pierce: 29
   Poison: 0
   Slash: 0
   Spirit: 0

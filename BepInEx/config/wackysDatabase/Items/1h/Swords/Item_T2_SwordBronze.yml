@@ -66,7 +66,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 0.5
+  DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -140,7 +140,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 25
+  Slash: 32
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
