@@ -8,34 +8,30 @@
 # Greatswords get 13 ticks, for 13% damage and 13 seconds to keep building stacks.
 
 # 2h sword attack
-- prefab: sfx_sword_hit
+- prefab: sfx_build_cultivator      # Wacky's Database used to trigger this on secondary attack hit for 1h swords.
   type: create
-  objects:    # filters use a "key" of combined fx added to specific weapons with Wacky's Database.
-  - Player, 9, d_gear_sword_bleed_2h   # nearby player with 2h sword
-  - sfx_spear_hit, 9                   # Wacky's Database SE with 0.5s ttl used to trigger this on secondary attack hit.
-  - vfx_boar_hit, 9                    # Wacky's Database SE with 0.5s ttl used to trigger this on secondary attack hit.
-  - fx_crit, 1                         # Only trigger if creature staggered.
+  objects:
+  - sfx_sword_hit, 1
+  - sfx_perfectblock, 5             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 5
-    parameter: p_sword_bleed_hp 12     # par1 = total ticks minus 1
+    maxDistance: 9                  # big range for big creatures
+    parameter: p_sword_bleed_hp 12  # par1 = total ticks minus 1
 
 # 1h sword attack
-- prefab: sfx_sword_hit
+- prefab: sfx_build_hoe             # Wacky's Database used to trigger this on secondary attack hit for 1h swords.
   type: create
-  objects:    # filters use a "key" of combined fx added to specific weapons with Wacky's Database.
-  - Player, 9, d_gear_sword_bleed_1h   # nearby player with 1h sword
-  - sfx_spear_hit, 9                   # Wacky's Database SE with 0.5s ttl used to trigger this on secondary attack hit.
-  - vfx_boar_hit, 9                    # Wacky's Database SE with 0.5s ttl used to trigger this on secondary attack hit.
-  - fx_crit, 1                         # Only trigger if creature staggered.
+  objects:
+  - sfx_sword_hit, 1
+  - sfx_perfectblock, 5             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 5
-    parameter: p_sword_bleed_hp 9      # par1 = total ticks minus 1
+    maxDistance: 9                  # big range for big creatures
+    parameter: p_sword_bleed_hp 9   # par1 = total ticks minus 1
 
-# Check max hp of creature, set ticks to a bit over 1%, capping out at 9 dmg/tick
+# Check max hp of creature, set ticks to a bit over 1%, capping out at X dmg/tick
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 1;99
@@ -115,31 +111,121 @@
   - prefab: <prefab>
     limit: 1
     maxDistance: 1
-    parameter: p_sword_bleed_fx <par1> 9  # ticks, dmg per tick  MAX TICK
+    parameter: p_sword_bleed_fx <par1> 9  # ticks, dmg per tick
 
-# Bleed fx
 - prefab: creature
-  type: poke, p_sword_bleed_fx
-  data: d_bleed_tick_cnt_rst     # reset count any time a new stack is created
-  injectData: true
-  spawns:
-  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_sb, 0.07
-  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_sb, 0.14
-  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_sb, 0.21
-  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_sb, 0
-  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_sb, 0.5
-  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_sb, 1
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 900;999
   poke:
   - prefab: <prefab>
     limit: 1
     maxDistance: 1
-    parameter: p_sword_bleed_loop <par1> <par2>
+    parameter: p_sword_bleed_fx <par1> 10  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1000;1099
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 11  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1100;1199
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 12  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1200;1299
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 13  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1300;1399
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 14  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1400;1499
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 15  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1500;1599
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 16  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1600;1699
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 17  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1700;1799
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 18  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1800;99999    # MAX
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1> 19  # ticks, dmg per tick
+
+# Bleed fx
+- prefab: creature
+  type: poke, p_sword_bleed_fx
+  data: d_bleed_tick_rst_stack_inc     # reset tick count and increment stack count any time a new stack is created
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_sb, 0.06
+  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_sb, 0.12
+  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_sb, 0.18
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_sb, 0
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_sb, 0.4
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_sb, 0.8
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_loop <par1> <par2>+<par2>*<int_i_bleed_stack_cnt>
 
 # Main Bleed Loop.  Count to X, then exit.
 - prefab: creature
   type: poke, p_sword_bleed_loop
   filter: int, i_bleed_tick_cnt, 0;<par1>   # check tick count
-  data: d_bleed_tick_cnt_inc                # increment tick count
+  data: d_bleed_tick_cnt_inc                # increment tick count and clear i_bleed_stack_timeout flag
   injectData: true
   objectRpc:
   - name: RPC_Damage
@@ -154,16 +240,19 @@
 # once count exceeds limit, fallback process will clear all stacks
 - prefab: creature
   type: poke, p_sword_bleed_loop
+  data: d_bleed_stack_timeout_set  # attempt to clear all bleed state. will only succeed if no other poke loops still active.
+  injectData: true
   poke:
   - prefab: <prefab>
     limit: 1
     maxDistance: 1
-    delay: 1                 # need this delay to clear all stacks
+    delay: 1.1                     # need this delay to clear all stacks
     parameter: p_sword_bleed_clear
   fallback: true
 
 # clear bleed stacks
 - prefab: creature
   type: poke, p_sword_bleed_clear
-  data: d_bleed_tick_cnt_rst
+  filter: int, i_bleed_stack_timeout, 1
+  data: d_bleed_full_rst
   injectData: true

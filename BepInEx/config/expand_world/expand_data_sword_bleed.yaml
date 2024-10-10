@@ -4,18 +4,21 @@
   ints:
   - HasFields, 1
 
-- name: d_bleed_tick_cnt_rst
+- name: d_bleed_tick_rst_stack_inc
   ints:
   - i_bleed_tick_cnt, 0
+  - i_bleed_stack_cnt, <int_i_bleed_stack_cnt> + 1
+
+- name: d_bleed_full_rst
+  ints:
+  - i_bleed_tick_cnt, 0
+  - i_bleed_stack_cnt, 0
 
 - name: d_bleed_tick_cnt_inc
   ints:
   - i_bleed_tick_cnt, <int_i_bleed_tick_cnt> + 1
+  - i_bleed_stack_timeout, 0
 
-- name: d_gear_sword_bleed_1h
-  hashes:
-  - RightItem, SwordBronze, SwordIron, SwordSilver, SwordBlackmetal, SwordMistwalker, SwordNiedhogg, SwordNiedhoggBlood, SwordNiedhoggLightning, SwordNiedhoggNature, JC_Reaper_Sword, SwordDyrnwyn
-
-- name: d_gear_sword_bleed_2h
-  hashes:
-  - RightItem, THSwordBronze, CWS_TH_Sword_1_SH, THSwordSilver, CWS_TH_Sword_7_SH, CWS_TH_Sword_10_SH, THSwordSlayer, THSwordSlayerLightning, THSwordSlayerNature, JC_Reaper_TH_Sword
+- name: d_bleed_stack_timeout_set
+  ints:
+  - i_bleed_stack_timeout, 1

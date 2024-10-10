@@ -388,6 +388,12 @@
   - RightItem, CWS_Sword_6_SH
 
 ####################################
+# Check for player actively blocking (thanks Raaka!)
+- name: PlayerBlocking
+  ints:
+  - IsBlocking, 1
+
+####################################
 # Aegis - refund eitr on parry
 - name: aegisShieldList
   hashes:
@@ -428,9 +434,20 @@
 
 ####################################
 # Longbows - levitate while drawing bow
-- name: longBowList
+- name: d_player_airborne_longbow
+  ints:
+  - $onGround, 0
+  - i_longbow_jump_shot_cd, 0
   hashes:
   - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5_SH, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow_SH, CWS_Bow_7_SH, CWS_Bow_4_SH_SH
+
+- name: d_longbow_jump_shot_cd_on
+  ints:
+  - i_longbow_jump_shot_cd, 1
+
+- name: d_longbow_jump_shot_cd_off
+  ints:
+  - i_longbow_jump_shot_cd, 0
 
 ####################################
 # Poison staff

@@ -25,6 +25,14 @@
 #    3: int, 0
 
 ##############################################################
+# No drops from (distant) monster kill
+- prefab: ItemDrop
+  type: create
+  bannedObjects:
+  - Player, 200
+  remove: true
+
+##############################################################
 # Fix Ashlands?  (Thanks, Raaka!)
 - prefab: MonsterAI
   biomes: AshLands
@@ -1271,9 +1279,19 @@
   type: create
   poke:
   - prefab: Player
+    data: PlayerBlocking
     limit: 1
     maxDistance: 1
     parameter: PlayerParry
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    delay: 3
+    parameter: p_sfx_perfectblock_cancel
+
+- prefab: sfx_perfectblock  # used in sword bleed logic
+  type: poke, p_sfx_perfectblock_cancel
+  remove: true
 
 #####################
 # Block
@@ -1281,6 +1299,7 @@
   type: create
   poke:
   - prefab: Player
+    data: PlayerBlocking
     limit: 1
     maxDistance: 1
     parameter: PlayerBlock
@@ -1367,15 +1386,45 @@
 
 #####################
 # Longbow jump shot
+- prefab: sfx_bow_draw
+  type: create
+  objects:
+  - Player, 1, d_player_airborne_longbow
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_airborne_longbow
+    parameter: p_longbow_jump_shot
+
 - prefab: Player
-  type: state, jump
-  filter: longBowList
+  type: poke, p_longbow_jump_shot
+  filter: d_player_airborne_longbow
+  data: d_longbow_jump_shot_cd_on
+  injectData: true
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_LongbowSkill
     2: bool, true
     3: int, 1
     4: float, 1
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    delay: 3
+    parameter: p_longbow_jump_cd_off
+
+- prefab: Player
+  type: poke, p_longbow_jump_cd_off
+  data: d_longbow_jump_shot_cd_off
+  injectData: true
+
+- prefab: Player
+  type: state, jump
+  filter: d_longbow_jump_shot_cd_on
+  data: d_longbow_jump_shot_cd_off
+  injectData: true
 
 ####################################################################
 # SUMMONS
