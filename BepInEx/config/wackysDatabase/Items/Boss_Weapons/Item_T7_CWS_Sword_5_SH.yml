@@ -1,7 +1,7 @@
 name: CWS_Sword_5_SH
 m_weight: 0.8
 m_name: Ryvers
-m_description: Every attack from this katana against staggered foes enforces a simple truth - if it can bleed, it can die.
+m_description: This stealthy katana enforces a simple truth - if it can bleed, it can die.  Primary attacks have a chance to bleed, and secondary attacks bleed staggered foes.
 clonePrefabName: CWS_Sword_5
 mockName: 
 customIcon: 
@@ -46,8 +46,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: 
-  Attack_status_effect_chance: 0
+  Attack_status_effect: SE_Savheim_Bleed_Claws_FX
+  Attack_status_effect_chance: 0.12
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -62,18 +62,7 @@ Primary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects:
-    - name: sfx_build_cultivator
-      m_enabled: true
-      m_variant: -1
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Hit_Effects: []
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
@@ -113,8 +102,8 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: 
-  Attack_status_effect_chance: 0
+  Attack_status_effect: SE_Savheim_Bleed_2h_Sword_FX
+  Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -129,18 +118,7 @@ Secondary_Attack:
   Consume_Item: false
   AEffects: 
   AEffectsPLUS:
-    Hit_Effects:
-    - name: sfx_build_cultivator
-      m_enabled: true
-      m_variant: -1
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Hit_Effects: []
     Hit_Terrain_Effects: []
     Start_Effect:
     - name: sfx_axe_swing

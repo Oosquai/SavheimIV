@@ -1,7 +1,7 @@
 name: CWS_Arrow_1_SH
 m_weight: 0.01
 m_name: Barbed Crossbow Bolt
-m_description: $cws_arrow_1_description
+m_description: $cws_arrow_1_description that will cause your target to bleed profusely.
 clonePrefabName: CWS_Arrow_1
 mockName: 
 customIcon: 
@@ -129,7 +129,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 11
+  Slash: 1
   Spirit: 0
 Damage_Per_Level: 
 Armor:
@@ -160,7 +160,8 @@ m_maxStackSize: 100
 m_canBeReparied: true
 m_destroyBroken: true
 m_dodgeable: true
-Attack_status_effect: SE_Savheim_Bleed_Arrow
+Attack_status_effect: SE_Savheim_Bleed_Arrow_FX
+Attack_status_effect_chance: 1
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

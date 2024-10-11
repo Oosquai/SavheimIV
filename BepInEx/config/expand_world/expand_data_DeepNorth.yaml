@@ -152,10 +152,8 @@
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
-  - level, 0
+  - level, 1
   floats:
-  - max_health, 1000
-  - health, 1001
   - MonsterAI.m_circleTargetDuration, 0
   - MonsterAI.m_circleTargetInterval, 1E30
   - Humanoid.m_runSpeed, 16
@@ -165,6 +163,11 @@
   - Humanoid.m_name, Spirit of Eikthyr
   bools:
   - Humanoid.m_boss, false
+
+- name: d_dn_eikthyr_hp
+  floats:
+  - max_health, <float_max_health>*2
+  - health, <float_max_health>*2.001
 
 - name: dn_mob_group_roguelite_brenna
   ints:

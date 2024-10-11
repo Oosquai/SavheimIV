@@ -3,16 +3,21 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/9/24</color>
+     0\  Savheim IV Patch Notes, 10/10/24</color>
+- Improved bleed mechanics so they now scale damage and duration with enemy max HP.
+- All swords, greatswords, claws, bleed arrows, and bleed bolts now use the new bleed mechanics.
+- Rend from axes, battleaxes, and reapers now lasts a bit longer.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/9/24
 - Balanced damage, blocking, and stamina on all melee and ranged weapons.
 - Balanced blocking on all shields.
 - Reduced attack speed on secondary attacks of axes, battleaxes, swords, and maces.
 - Fixed longbows so the float effect only occurs if you draw an arrow while airborne.
 - Redesigned bleeds on swords and greatswords.
 - Reapers and wands now have the quick dodge.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 10/7/24
 - Experimental changes to bronze tier weapons... more to come.

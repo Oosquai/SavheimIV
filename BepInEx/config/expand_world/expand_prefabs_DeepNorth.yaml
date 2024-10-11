@@ -1075,6 +1075,20 @@
 
 ####################################
 # Eikthyr
+- prefab: Eikthyr
+  type: create
+  biomes: DeepNorth
+  poke:
+  - prefab: <prefab>
+    maxDistance: 1
+    limit: 1
+    delay: 0.1
+    parameter: p_dn_eikthyr_hp
+
+- prefab: Eikthyr
+  type: poke, p_dn_eikthyr_hp
+  data: d_dn_eikthyr_hp
+
 # Extra attacks to give Eikthyr damage appropriate for Deep North
 - prefab: Eikthyr
   type: state, attack1
@@ -1233,7 +1247,8 @@
   command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
 #- prefab: Player
 #  type: say, rl_spawn
-#  spawn: Skeleton, dn_mob_group_roguelite
+#  spawns:
+#  - Eikthyr, 0,12,snap, 180,0,0, dn_mob_group_roguelite_eikthyr, 0, true
 #- prefab: Player
 #  type: say, rl_win
 #  poke:

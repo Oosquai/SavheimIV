@@ -48,8 +48,8 @@ Primary_Attack:
   Reset_Chain_If_hit: None
   SpawnOnHit: 
   SpawnOnHit_Chance: 0
-  Attack_status_effect: SE_Savheim_Hemorrhage_T2
-  Attack_status_effect_chance: 0.2
+  Attack_status_effect: SE_Savheim_Bleed_Claws_FX
+  Attack_status_effect_chance: 0.1
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None

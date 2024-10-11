@@ -1,7 +1,7 @@
 name: FistFenrirClaw_Boss_SH
 m_weight: 2
 m_name: Ravenclaws
-m_description: Claws attack in a frenzy that can cause massive bloodloss, and they rely on parries to keep them close to their victims.  These claws lunge and hamstring their victims.
+m_description: Claws attack in a frenzy that can cause massive bloodloss, and they rely on parries to keep them close to their victims.  These claws have a secondary attack that can inflict even greater bloodloss on staggered foes.
 clonePrefabName: FistFenrirClaw
 mockName: 
 customIcon: 
@@ -19,7 +19,7 @@ Primary_Attack:
   Chain_Attacks: 2
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 4
+  m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -49,8 +49,8 @@ Primary_Attack:
   Reset_Chain_If_hit: None
   SpawnOnHit: 
   SpawnOnHit_Chance: 0
-  Attack_status_effect: SE_Savheim_Hemorrhage_T2
-  Attack_status_effect_chance: 0.2
+  Attack_status_effect: SE_Savheim_Bleed_Claws_FX
+  Attack_status_effect_chance: 0.1
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -109,23 +109,23 @@ Primary_Attack:
       m_childTransform: ''
     Burst_Effect: []
 Secondary_Attack:
-  AttackType: Horizontal
-  Attack_Animation: dualaxes_secondary
+  AttackType: Vertical
+  Attack_Animation: mace_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.5
-  m_attackStamina: 8
+  Custom_AttackSpeed: 1.2
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 1.5
+  DmgMultiplier: 0.5
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 2.2
-  AttackHeight: 0.6
+  AttackRange: 2.5
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -135,14 +135,14 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 90
-  Attack_Ray_Width: 0
-  Lower_Dmg_Per_Hit: false
+  Attack_Angle: 30
+  Attack_Ray_Width: 0.3
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Hamstring
+  Attack_status_effect: SE_Savheim_Bleed_1h_Sword_FX
   Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 10
@@ -185,7 +185,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 26
+  Slash: 24
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -218,9 +218,9 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 8
-  m_blockPowerPerLevel: 0.5
-  m_timedBlockBonus: 6
+  m_blockPower: 12
+  m_blockPowerPerLevel: 1
+  m_timedBlockBonus: 4
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1

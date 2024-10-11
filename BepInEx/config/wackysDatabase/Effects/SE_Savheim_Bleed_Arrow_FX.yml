@@ -1,11 +1,11 @@
-Name: SE_Savheim_Bleed_Sword_T2
-Status_m_name: Puncture
+Name: SE_Savheim_Bleed_Arrow_FX
+Status_m_name: Bleeding
 Category: ''
 IconName: 
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: "Target suffers bloodloss, unmodified by armor or resistances."
+Tooltip: ''
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: ''
@@ -14,11 +14,11 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 8
+TimeToLive: 0.3
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
-- name: fx_bloodweapon_hit
+- name: sfx_rebirth
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -29,18 +29,7 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: sfx_staff_elder_root_hit
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: sfx_serpent_attack_hit
+- name: sfx_gui_craftitem
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -55,9 +44,9 @@ StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
-  m_tickInterval: 0.387
+  m_tickInterval: 0
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -3
+  m_healthPerTick: 0
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0
