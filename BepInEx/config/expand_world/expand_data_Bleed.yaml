@@ -1,5 +1,5 @@
 ##############################################################
-# Sword bleed
+# Bleed Mechanics - Data
 - name: d_empty_data_sb
   ints:
   - HasFields, 1
