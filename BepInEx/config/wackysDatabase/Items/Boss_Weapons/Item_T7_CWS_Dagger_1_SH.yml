@@ -1,7 +1,7 @@
 name: CWS_Dagger_1_SH
 m_weight: 0.3
 m_name: Runefang
-m_description: Critical strikes and backstabs with this weapon leech eitr from its victim.
+m_description: Critical strikes and backstabs with this weapon leech eitr from the victim.
 clonePrefabName: CWS_Dagger_1
 mockName: 
 customIcon: 
@@ -19,7 +19,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1.2
-  m_attackStamina: 10
+  m_attackStamina: 18
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -77,7 +77,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 20
+  m_attackStamina: 36
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -143,9 +143,9 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 50
+  Pierce: 46
   Poison: 0
-  Slash: 51
+  Slash: 46
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -155,9 +155,9 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 3
+  Pierce: 2
   Poison: 0
-  Slash: 3
+  Slash: 2
   Spirit: 0
 Armor:
   armor: 20
@@ -179,9 +179,9 @@ SE_Equip:
   EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 30
+  m_blockPower: 32
   m_blockPowerPerLevel: 2
-  m_timedBlockBonus: 4
+  m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1

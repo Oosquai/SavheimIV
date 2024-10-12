@@ -81,7 +81,7 @@ Secondary_Attack:
   ForceMultiplier: 160
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 3
+  AttackRange: 3.5
   AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -143,7 +143,7 @@ Damage:
   Pierce: 82
   Poison: 0
   Slash: 0
-  Spirit: 36
+  Spirit: 0
 Damage_Per_Level:
   Blunt: 0
   Chop: 0
@@ -155,7 +155,7 @@ Damage_Per_Level:
   Pierce: 4
   Poison: 0
   Slash: 0
-  Spirit: 3
+  Spirit: 0
 Armor:
   armor: 15
   armorPerLevel: 1

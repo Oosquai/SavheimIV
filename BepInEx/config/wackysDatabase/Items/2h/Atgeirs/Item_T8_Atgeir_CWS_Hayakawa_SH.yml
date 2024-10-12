@@ -93,7 +93,7 @@ Secondary_Attack:
   ForceMultiplier: 160
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 3
+  AttackRange: 3.5
   AttackHeight: 1
   Spawn_On_Trigger: 
   Requires_Reload: false

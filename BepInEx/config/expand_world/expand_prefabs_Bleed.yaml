@@ -56,7 +56,16 @@
     parameter: p_sword_bleed_hp 0   # on-demand bleed arrows have short duration, but can rapidly stack, especially against high hp enemies
 
 ##########################
+# Some creatures don't bleed
+# Intercept with no-op
+- prefab: Skeleton, Skeleton_Poison, Ghost, Wraith, StoneGolem, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen
+  type: poke, p_sword_bleed_hp
+  weight: 1E30
+
+##########################
 # Check max hp of creature to set tick damage and extra tick count
+# RPC_Damage wants an int, and no way to type convert...
+# Brute force Fibonacci to solve... obviously??
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 0;99         # victim health range

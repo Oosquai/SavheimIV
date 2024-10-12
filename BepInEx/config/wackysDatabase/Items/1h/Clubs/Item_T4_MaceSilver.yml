@@ -167,7 +167,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 2
+  Spirit: 0
 Armor:
   armor: 20
   armorPerLevel: 1

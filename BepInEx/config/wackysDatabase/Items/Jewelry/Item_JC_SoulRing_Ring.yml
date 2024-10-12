@@ -1,7 +1,7 @@
 name: JC_SoulRing_Ring
 m_weight: 0.1
 m_name: $jc_ring_soulring
-m_description: $jc_ring_soulring_description
+m_description: $jc_ring_soulring_description but won't fit into a Ring in a Box.
 clonePrefabName: 
 mockName: 
 customIcon: 
