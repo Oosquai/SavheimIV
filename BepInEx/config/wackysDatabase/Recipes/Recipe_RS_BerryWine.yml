@@ -1,0 +1,16 @@
+name: RS_BerryWine
+clonePrefabName: 
+craftingStation: $piece_rs_alchemytable
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 3
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- RS_AlchemicEssence:1:0:True
+- Carrot:9:0:True
+- Onion:9:0:True
+- Cloudberry:9:0:True

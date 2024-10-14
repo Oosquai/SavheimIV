@@ -1,0 +1,16 @@
+name: RS_Lantern
+clonePrefabName: 
+craftingStation: $piece_rs_alchemytable
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Iron:5:0:True
+- Honey:9:0:True
+- RS_AlchemicEssence:3:0:True
+- RS_ForsakenEssence:1:0:True

@@ -1,7 +1,7 @@
 name: ShieldIronBuckler
 m_weight: 2
 m_name: $item_shield_ironbuckler
-m_description: Bucklers grant a burst of speed after a successful parry.
+m_description: Bucklers grant a burst of speed after a successful parry.  Normal blocks with any shield enable a quick counterattack using any one-handed weapon, excluding knives.
 clonePrefabName: 
 mockName: 
 customIcon: 

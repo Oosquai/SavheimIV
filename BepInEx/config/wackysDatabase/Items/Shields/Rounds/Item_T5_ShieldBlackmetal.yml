@@ -1,7 +1,7 @@
 name: ShieldBlackmetal
 m_weight: 4
 m_name: $item_shield_blackmetal
-m_description: $item_shield_blackmetal_description  Round shields grant a burst of stamina regeneration after a successful parry.
+m_description: $item_shield_blackmetal_description  Round shields grant a burst of stamina regeneration after a successful parry.  Normal blocks with any shield enable a quick counterattack using any one-handed weapon, excluding knives.
 clonePrefabName: 
 mockName: 
 customIcon: 

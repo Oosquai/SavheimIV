@@ -1,0 +1,16 @@
+name: RS_WindPotion
+clonePrefabName: 
+craftingStation: $piece_rs_alchemytable
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- RS_AlchemicEssence:1:0:True
+- RS_ForsakenEssence:1:0:True
+- FreezeGland:5:0:True
+- SerpentScale:3:0:True

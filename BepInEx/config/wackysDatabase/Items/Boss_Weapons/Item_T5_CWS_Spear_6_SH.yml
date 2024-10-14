@@ -1,7 +1,7 @@
 name: CWS_Spear_6_SH
 m_weight: 1.5
 m_name: Ymir's Fang
-m_description: Pierce their hearts with cold.
+m_description: Pierce their hearts with cold and cease their futile attempts to move.
 clonePrefabName: CWS_Spear_6
 mockName: 
 customIcon: 
@@ -89,8 +89,8 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1.5
-  ForceMultiplier: 1.5
+  DmgMultiplier: 0.3
+  ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
   AttackRange: 1
@@ -113,8 +113,8 @@ Secondary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: fx_iceshard_hit
   SpawnOnHit_Chance: 1
-  Attack_status_effect: 
-  Attack_status_effect_chance: 0.2
+  Attack_status_effect: SE_Savheim_Pinned
+  Attack_status_effect_chance: 1
   Attack_Projectile: CWS_Spear_6_Projectile
   Projectile_Vel: 30
   Projectile_Accuraccy: 1

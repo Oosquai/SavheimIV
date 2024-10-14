@@ -24,7 +24,7 @@ Primary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1
+  DmgMultiplier: 0.8
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
@@ -47,7 +47,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_status_effect: SE_Savheim_Bleed_Claws_FX
-  Attack_status_effect_chance: 0.12
+  Attack_status_effect_chance: 0.15
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

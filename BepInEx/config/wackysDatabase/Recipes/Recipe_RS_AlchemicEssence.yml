@@ -1,0 +1,22 @@
+name: RS_AlchemicEssence
+clonePrefabName: 
+craftingStation: $piece_rs_alchemytable
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: true
+upgrade_reqs: []
+reqs:
+- TrophyFrostTroll:1:0:True
+- TrophyAbomination:1:0:True
+- TrophySGolem:1:0:True
+- TrophyGoblinBrute:1:0:True
+- TrophyGjall:1:0:True
+- TrophyFallenValkyrie:1:0:True
+- TrophySkeletonHildir:1:0:True
+- TrophyCultist_Hildir:1:0:True
+- TrophyGoblinBruteBrosBrute:1:0:True
+- TrophyGoblinBruteBrosShaman:1:0:True

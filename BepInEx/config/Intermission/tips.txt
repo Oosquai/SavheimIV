@@ -8,11 +8,11 @@ Savheim IV - Press 'U' to open Guild panel.  This has been added to Savheim IV o
 Savheim IV - All portals will default to Private on creation now.  Portals are now harder to obtain though, and you will never be able to teleport metals.  P toggles portal display on the map.
 Savheim IV - All weapon classes have been majorly reworked in Savheim IV (again!) to give them unique and improved playstyles.  Give them all another swing, even if you decided against them last playthrough...  Wait, are you reading online info about meta builds??  This. Is. SAVHEIM!!!
 Savheim IV - Block Armor = amount you can block.  [Block Armor * Parry Bonus] = amount you can parry.  Excess damage drains health.  Block Force does nothing.  Magical barriers confer infinite parry stats while active.
-Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical: attack a staggered enemy.  Parry: perfectly-timed block.
-Savheim IV - Slope combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
+Savheim IV - Backstab: sneaking, attack from behind, and enemy not in combat.  Critical: attack a staggered enemy.  Parry: perfectly-timed block.  Shield Counter: normal block (not parry) with any shield followed immediately by normal attack from any one-handed weapon, excluding knives.
+Savheim IV - Sloped combat works much better now, but you have to aim your crosshairs vertically as well as horizontally!
 Savheim IV - Harpoons now have a basic secondary attack.  Primary attacks tether, and then the Use key reels the tether in if it's lighter than you.  If it's heavier than you, well, with great power comes great responsibility...  seriously, try harpooning a distant tree and then pressing E.
-Savheim IV - Sneaking no longer consumes stamina, levels faster, and now gains movement speed instead of stamina benefits from leveling.  Backstabs will now do increased damage based on Sneak skill, and backstabs reward bonus Sneak experience.
-Savheim IV - Torches are more useful now!  They protect from Cold in a small radius, last longer, and can be upgraded at the workbench for greater duration.  They also now function normally in all biomes.
+Savheim IV - Sneaking no longer consumes stamina, levels faster, and now gains movement speed instead of stamina benefits from leveling.  Backstabs now reward bonus Sneak experience.
+Savheim IV - Torches are more useful now!  They protect from Cold in a small radius, last longer, and can be upgraded at the workbench for greater duration.  They also now function normally in all biomes.  Lanterns won't break and provide light even when hanging from your hip.
 Savheim IV - Most gear can support a maximum of three sockets, though you'll need to hunt rare materials for the third socket.  Jewelry cannot be socketed.
 Savheim IV - Try to unlock as many recipes as you can...  Bronze Nails?  What do I need those for?  Craft them and see!
 Savheim IV - Once you can craft them, it's a good idea to keep a Rune Focus and a Soulcatcher Lantern with you on adventures.  Use the Rune Focus on lore stones.  Use the lantern on souls of defeated enemies.
@@ -33,7 +33,7 @@ Savheim IV - Sell precious stones, trophies, extra keys, wishbones, and some oth
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and then for providing such deep hooks for the modding community!
 Savheim IV - Thank you to some very talented modders and builders:  Azumatt, blaxxun, wackymole, Jere, Raaka, DhakhaR, JPValheim, KG, OrianaVenture, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, Fustercluck, and more!
-Savheim IV - Thank you to Finn, Woody, Russ, Cody, Matt, Kris, and Tizz for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
+Savheim IV - Thank you to Matumryk, Woody, goatman, and Rusty for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>.  If searching the Catalog, use the search field at the bottom of the window instead of the top.
 Savheim IV - Gems and jewelry have been completely reworked.  Craft a Runaeldr Satchel to conveniently take jewelry options with you on adventures.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  They're scary.  Bring a tower shield and block them until you learn their timing.  Go well-prepared in general.  Ashlands is no joke.
@@ -45,12 +45,14 @@ Savheim IV - New keys:  L-Alt: dodge (double-click for normal roll).  T, G: use 
 Savheim IV - Items needed to summon bosses now have small chances to drop from elite creatures.  These same creatures will begin to hoarde these items after you've slain their master.
 Savheim IV - Fishing no longer requires stamina.  Fish chum helps attract fish.  Several new food recipes involving fish are now available, offering unique stat combinations.  For performance, fish only appear if you're holding a fishing rod.
 Savheim IV - You're not intended to achieve high enchanting levels on early-game gear.  It's Ok to not have a +20 Flint Knife.  Your Enchanting skill will increase with time as you fight creatures.  Chill, and get back to adventuring.
-Savheim IV - Level 50 blacksmiths can repair from inventory.  Level 50 builders sometimes save resources.  Level 50 farmers can ignore biome restrictions.  Level 30 foragers can see respawn times.  Level 50 miners have a chance to demolish entire rocks.  Ranchers can sense hunger at level 10, calm nearby creatures at level 25, and see pregnancy status at level 50.
+Savheim IV - Level 50 blacksmiths can repair from inventory.  Level 50 builders sometimes save resources.  Farmers can plant and harvest more plants at once at higher levels.  Level 30 foragers can see respawn times.  Level 50 miners have a chance to demolish entire rocks.  Ranchers can sense hunger at level 10, calm nearby creatures at level 25, and see pregnancy status at level 50.
 Savheim IV - Most weapon types now offer some form of debuff or secondary damage.  Different creatures are susceptible to these in unique ways.  Experiment to find viable strategies for applying these new tools.
 Savheim IV - The more stars a creature has, the better the loot.  At three stars and up you'll start to see increasingly precious components.  Infused creatures are rare and have coveted treasures.
-Savheim IV - Meadows will always remain relatively peaceful, regardless of your progress through the game.  The same cannot be said for anywhere else in the world.  Bring a Torch for the Winter.
+Savheim IV - Meadows will always remain relatively peaceful, regardless of your progress through the game.  The same cannot be said for anywhere else in the world.  Bring a Torch for Winter.
 Savheim IV - Some creatures have learned to dual wield for increased offense, use shields for improved defense, carry lights for better visibility, or use magic for ... magic.
 Savheim IV - Haldor and Hildir sell valuable items.  Their inventories will grow as you slay bosses, so check back from time to time...  Hey, hey, do you wanna buy a funnel cake?
-Savheim IV - All attack skills now gain 2x experience until they've caught up to your highest attack skill.  Try a new weapon!
+Savheim IV - All attack skills now gain double experience until they've caught up to your highest attack skill.  Try a new weapon!
 Savheim IV - The Deep North is scaled for endgame but can be visited at any level.  Be sure not to disturb the peace though, and beware The Inquisition.
-Savheim IV - Bleed effects do greater damage per tick and and last longer based on the victim's maximum health.  Bleeds can be stacked for increased damage per tick, but each additional stack will reduce the time your target bleeds. 
+Savheim IV - Bleed effects do greater damage per tick and and last longer based on the victim's maximum health.  Bleeds can be stacked for increased damage per tick, but each additional stack will reduce the time your target bleeds.  Some creatures don't bleed.
+Savheim IV - Resistance debuffs are ineffective against creatures that are naturally resistant to the damage type in question.
+Savheim IV - After absorbing an attack with any shield, you have a brief opportunity to perform a high-damage counterattack with any one-handed weapon, excluding knives.

@@ -1,7 +1,7 @@
 name: ShieldFlametalTower
 m_weight: 8
 m_name: $item_shield_flametal_tower
-m_description: $item_shield_flametal_tower_description  Tower shields grant increased health regeneration when blocking attacks.
+m_description: $item_shield_flametal_tower_description  Tower shields grant increased health regeneration when blocking attacks.  Normal blocks with any shield enable a quick counterattack using any one-handed weapon, excluding knives.
 clonePrefabName: 
 mockName: 
 customIcon: 

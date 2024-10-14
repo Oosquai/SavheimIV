@@ -56,7 +56,7 @@ m_useDurabilityDrain: 0
 m_durabilityDrain: 0
 m_maxDurability: 0
 m_durabilityPerLevel: 0
-m_equipDuration: 0.2
+m_equipDuration: 0
 m_skillType: Clubs
 m_animationState: Torch
 m_itemType: Torch

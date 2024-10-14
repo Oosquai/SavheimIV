@@ -1,7 +1,7 @@
 name: CWS_Spear_5_SH
 m_weight: 1.5
 m_name: Stormpiercer
-m_description: When thrown, this spear flies so swiftly as to beckon lightning to chase it.
+m_description: When thrown, this spear flies so swiftly as to beckon lightning to chase it.  Spear wielders manipulate movement.  Pin your targets in place with a thrown spear, then dash in for the kill.
 clonePrefabName: CWS_Spear_5
 mockName: 
 customIcon: 
@@ -87,8 +87,8 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
-  DmgMultiplier: 1.5
-  ForceMultiplier: 1.5
+  DmgMultiplier: 0.3
+  ForceMultiplier: 1
   StaggerMultiplier: 8
   RecoilMultiplier: 0
   AttackRange: 1
@@ -110,7 +110,7 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_status_effect: SE_Savheim_PinnedLightning
-  Attack_status_effect_chance: 0.25
+  Attack_status_effect_chance: 1
   Attack_Projectile: CWS_Spear_5_Projectile
   Projectile_Vel: 60
   Projectile_Accuraccy: 1

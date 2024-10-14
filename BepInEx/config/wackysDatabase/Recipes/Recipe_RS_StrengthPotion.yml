@@ -1,0 +1,16 @@
+name: RS_StrengthPotion
+clonePrefabName: 
+craftingStation: $piece_rs_alchemytable
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- RS_AlchemicEssence:1:0:True
+- RS_ForsakenEssence:1:0:True
+- Turnip:7:0:True
+- Onion:7:0:True

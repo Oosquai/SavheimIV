@@ -116,6 +116,16 @@
   - ZSFX.m_minPitch, 0.3
   - ZSFX.m_maxPitch, 0.4
 
+- name: shield_counter_attack_pitch_low
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 0.5
+
+- name: shield_counter_attack_pitch_high
+  floats:
+  - ZSFX.m_minPitch, 2
+  - ZSFX.m_maxPitch, 2.5
+
 - name: d_sfx_silent
   ints:
   - HasFieldsZSFX, 1
@@ -393,6 +403,18 @@
   ints:
   - IsBlocking, 1
 
+- name: PlayerBlockingShield
+  ints:
+  - IsBlocking, 1
+  hashes:
+  - LeftItem, CWS_Round_Shield_5_SH, CWS_Round_Shield_4_SH, CWS_Round_Shield_3_SH, CWS_Round_Shield_1_SH, CWS_Heater_Shield_4_SH, CWS_Heater_Shield_2_SH, CWS_Heater_Shield_3_SH, CWS_Round_Shield_2_SH, ShieldBanded, ShieldSilver, ShieldBlackmetal, ShieldCarapace, ShieldFlametal, JC_Reaper_Shield, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7_SH, CWS_Buckler_Shield_1_SH, ShieldCarapaceBuckler, CWS_Buckler_Shield_2_SH, JC_Shield_Buckler, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower, CWS_Tower_Shield_3_SH, CWS_Tower_Shield_4_SH
+
+- name: PlayerBlockingHuntressBow
+  ints:
+  - IsBlocking, 1
+  hashes:
+  - LeftItem, CWS_Bow_11_SH
+
 ####################################
 # Aegis - refund eitr on parry
 - name: aegisShieldList
@@ -570,19 +592,6 @@
   - WearNTear.m_health, -1
   - health, -1
 
-- name: d_perma_piece_fireplace
-  ints:
-  - HasFields, 1
-  - HasFieldsFireplace, 1
-  - Fireplace.m_infiniteFuel, 1
-  bools:
-  - Piece.m_canBeRemoved, false
-  - Piece.m_primaryTarget, false
-  - Piece.m_randomTarget, false
-  floats:
-  - WearNTear.m_health, -1
-  - health, -1
-
 - name: d_portal_sacrificial_stones
   bools:
   - Piece.m_canBeRemoved, false
@@ -740,6 +749,36 @@
 - name: TentaRootMover
   floats:
   - Humanoid.m_runSpeed, 1
+
+##############################################################
+# Shield Counter player datas
+- name: d_player_shield_counter_off
+  ints:
+  - i_player_shield_counter, 0
+
+- name: d_player_shield_counter_on
+  ints:
+  - i_player_shield_counter, 1
+
+- name: d_player_shield_counter_on_rikarr
+  ints:
+  - i_player_shield_counter, 1
+  hashes:
+  - RightItem, CWS_Sword_9_SH  
+
+###############################################################
+## Knives Vanish
+#- name: d_vanish_deaggro
+#  ints:
+##  - alert, 0
+##  - $alert, 0
+#  - haveTarget, 0
+##  floats:
+##  - MonsterAI.m_viewRange, 1
+#
+#- name: d_creature_viewRange_restore
+#  floats:
+#  - MonsterAI.m_viewRange, <par1>
 
 ##############################################################
 ##############################################################

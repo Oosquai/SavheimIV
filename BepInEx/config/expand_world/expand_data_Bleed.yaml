@@ -1,9 +1,5 @@
 ##############################################################
 # Bleed Mechanics - Data
-- name: d_empty_data_sb
-  ints:
-  - HasFields, 1
-
 - name: d_bleed_tick_rst_stack_inc
   ints:
   - i_bleed_tick_cnt, 0

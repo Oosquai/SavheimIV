@@ -1277,6 +1277,8 @@
 # Parry
 - prefab: sfx_perfectblock
   type: create
+  bannedObjects:
+  - Player, 1, PlayerBlockingHuntressBow
   poke:
   - prefab: Player
     data: PlayerBlocking
@@ -1303,6 +1305,71 @@
     limit: 1
     maxDistance: 1
     parameter: PlayerBlock
+  - prefab: Player
+    data: PlayerBlockingShield
+    limit: 1
+    maxDistance: 1
+    parameter: p_shield_counter_start
+
+# Shield Counter
+- prefab: Player
+  type: poke, p_shield_counter_start
+  bannedObjects:
+  - sfx_perfectblock, 1
+  data: d_player_shield_counter_on
+  injectData: true
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    delay: 0.2       # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
+    parameter: p_shield_counter_end
+
+- prefab: Player
+  type: poke, p_shield_counter_end
+  data: d_player_shield_counter_off
+  injectData: true
+
+- prefab: Player
+  types:
+  - state, swing_axe0
+  - state, swing_longsword0
+  - state, spear_poke
+  - state, unarmed_attack0
+  filter: d_player_shield_counter_on
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_shield_counter_on
+    parameter: p_shield_counter_fx
+
+# special process for Rikarr's rapier since it uses different attacks.  trigger off secondary slash.
+- prefab: Player
+  types:
+  - state, swing_longsword1
+  filter: d_player_shield_counter_on_rikarr
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_shield_counter_on
+    parameter: p_shield_counter_fx
+
+- prefab: Player
+  type: poke, p_shield_counter_fx
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data, 0.12
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.24
+  - vfx_crossbow_nature_fire, 0,0,1, 40,0,60, d_empty_data, 0.3
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter
+    2: bool, true
+    3: int, 1
+    4: float, 1
+    delay: 0.2  # set to just less than fastest possible wind-up of swords, axes, and spears.  Local testing showed spears 0.35 worked but 0.37 failed.  players can speed up attacks though.  0.3?
 
 ##############################################################
 # Results of exotic player states
@@ -1425,6 +1492,57 @@
   filter: d_longbow_jump_shot_cd_on
   data: d_longbow_jump_shot_cd_off
   injectData: true
+
+#####################
+# Spear speed burst after throw
+- prefab: Player
+  type: state, spear_throw
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Spear_Throw_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+######################
+## Vanish after knife kill
+#- prefab: Player
+#  type: state, knife_secondary
+#  spawns:
+#  - vfx_ghost_death, 0,0,0
+#  objectRpc:
+#  - name: RPC_AddStatusEffect
+#    1: hash, SE_Savheim_Vanish
+#    2: bool, true
+#    3: int, 1
+#    4: float, 1
+#  poke:
+#  - prefab: creature
+#    maxDistance: 4
+#    parameter: p_vanish_deaggro
+#
+#- prefab: creature
+#  type: poke, p_vanish_deaggro
+#  data: d_vanish_deaggro
+###  injectData: true
+##  poke:
+##  - prefab: Player
+##    limit: 1
+##    maxDistance: 4
+##    parameter: p_viewRange_restore_queue <float_MonsterAI.m_viewRange>
+##
+##- prefab: Player
+##  type: poke, p_viewRange_restore_queue
+##  poke:
+##  - prefab: creature
+##    maxDistance: 10
+##    delay: 3
+##    parameter: p_viewRange_restore <par1>
+##
+##- prefab: creature
+##  type: poke, p_viewRange_restore
+##  data: d_creature_viewRange_restore
+###  injectData: true
 
 ####################################################################
 # SUMMONS
@@ -1765,7 +1883,7 @@
   type: create
   spawns:
   - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
-  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece_fireplace
+  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece, true
 
 # Haldor
 - prefab: Haldor

@@ -1,0 +1,16 @@
+name: RS_HealthPotion_1
+clonePrefabName: 
+craftingStation: $piece_rs_alchemytable
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 3
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Ooze:9:0:True
+- AncientSeed:1:0:True
+- Honey:6:0:True
+- RS_AlchemicEssence:1:0:True

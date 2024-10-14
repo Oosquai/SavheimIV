@@ -90,7 +90,7 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1.5
   Attack_status_effect: SE_Savheim_Rend
-  Attack_status_effect_chance: 1
+  Attack_status_effect_chance: 0.5
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

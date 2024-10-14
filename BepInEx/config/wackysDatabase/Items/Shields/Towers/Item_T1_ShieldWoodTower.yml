@@ -1,7 +1,7 @@
 name: ShieldWoodTower
 m_weight: 6
 m_name: $item_shield_woodtower
-m_description: $item_shield_woodtower_description
+m_description: Blocking with any shield enables a quick counterattack using any one-handed weapon, excluding knives.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: ShieldSerpentscale
 m_weight: 8
 m_name: $item_shield_serpentscale
-m_description: A sturdy shield of overlapping scales.  Tower shields grant increased health regeneration when blocking attacks.
+m_description: A sturdy shield of overlapping scales.  Tower shields grant increased health regeneration when blocking attacks.  Normal blocks with any shield enable a quick counterattack using any one-handed weapon, excluding knives.
 clonePrefabName: 
 mockName: 
 customIcon: 
