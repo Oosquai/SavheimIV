@@ -6,19 +6,19 @@
      0\  Savheim IV Patch Notes, 10/14/24</color>
 - Added Shield Counter mechanic.  See tooltips on most round and tower shields.
 - Overhauled spear weapon class to give them a unique, mobile fighting style.
-- Reduced attack speed buffs from gems.
-- Organized new build pieces into appropriate Hammer tabs.
-- Removed Finewood Furniture.  Too much Ikea!
-- Overhauled Alchemy system for balance and progression.
-- High level Farmers can no longer ignore biomes when planting crops.
-- Longship configurations should now be locked to the player who created the ship.
-- Redesigned The Huntress unique bow.  No more janky melee bow!
-- The stone torch at the starting stones should always stay lit now, but only if you reroll your world.
 - Reduced number of bleed ticks from one-handed swords.
 - Increased duration of Rend debuff for axes, battleaxes, and reapers.
 - Axes now only have a 50% chance to apply Rend on secondary attack.
 - Backstabs no longer do bonus damage based on Sneak skill.  This might get reverted...
 - Knives are being redesigned...  Soon!
+- Reduced attack speed buffs from gems.
+- Redesigned The Huntress unique bow.  No more janky melee bow!
+- Overhauled Alchemy system for balance and progression.
+- Organized new build pieces into appropriate Hammer tabs.
+- Removed Finewood Furniture.  Too much Ikea!
+- High level Farmers can no longer ignore biomes when planting crops.
+- Longship configurations should now be locked to the player who created the ship.
+- The stone torch at the starting stones should always stay lit now, but only if you reroll your world.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
@@ -28,7 +28,7 @@ Patch Notes, 10/11/24
 - Atgeir secondary attacks have a slightly increased radius.
 - More rings now fit into the Ring in a Box.
 - Removed spirit damage from silver tier weapons.  It exists elsewhere.
-- Balanced all unique weapons.
+- Applied damage, blocking, and stamina balance adjustments to all unique weapons.
 
 Patch Notes, 10/10/24
 - Improved bleed mechanics so they now scale damage and duration with enemy max HP.
@@ -46,7 +46,7 @@ Patch Notes, 10/9/24
 Patch Notes, 10/7/24
 - Experimental changes to bronze tier weapons... more to come.
 - Cooking and skills menus are now sorted.
-- Added lost of shiny new clutter pieces to build.  Will sort tabs soon...
+- Added lots of shiny new clutter pieces to build.  Will sort tabs soon...
 
 Patch Notes, 10/1/24
 - Cleaned up skeleton dual wielding a bit.
