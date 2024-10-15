@@ -1,7 +1,7 @@
 name: KnifeSkollAndHatiEbonsteel
 m_weight: 0.3
 m_name: Ebonsteel Knife and Sickle
-m_description: Dual knives are quiet killers that allow the wielder to dodge more effectively, pounce on distant enemies, and viciously slice and stab their foes to ribbons.  They sometimes twist and tear their victim's guts after penetrating their armor with both blades.
+m_description: Silent, deadly, and fast, knife wielders can attempt to vanish immediately after a kill by performing a crouching leap attack.  Try to land behind surviving enemies, and be wary of crowds and ranged attackers.  The sickle can sometimes find a gap in armor to add a burst of true damage.
 clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 
@@ -43,7 +43,7 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1
-  Attack_status_effect: SE_Savheim_Gut_Twist_Double_T6
+  Attack_status_effect: SE_Savheim_Gut_Twist_T6
   Attack_status_effect_chance: 0.13
   Attack_Projectile: 
   Projectile_Vel: 10

@@ -65,7 +65,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: Meadows
-  spawn: Bezel_T1
+  spawns:
+  - Bezel_T1
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T1
     parameter: bezel_drop_qty <int_level>
@@ -79,7 +82,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: Blackforest
-  spawn: Bezel_T2
+  spawns:
+  - Bezel_T2
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T2
     parameter: bezel_drop_qty <int_level>
@@ -93,7 +99,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: Swamp, Ocean
-  spawn: Bezel_T3
+  spawns:
+  - Bezel_T3
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T3
     parameter: bezel_drop_qty <int_level>
@@ -107,7 +116,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: Mountain
-  spawn: Bezel_T4
+  spawns:
+  - Bezel_T4
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T4
     parameter: bezel_drop_qty <int_level>
@@ -121,7 +133,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: Plains
-  spawn: Bezel_T5
+  spawns:
+  - Bezel_T5
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T5
     parameter: bezel_drop_qty <int_level>
@@ -135,7 +150,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: Mistlands
-  spawn: Bezel_T6
+  spawns:
+  - Bezel_T6
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T6
     parameter: bezel_drop_qty <int_level>
@@ -149,7 +167,10 @@
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
   biomes: AshLands
-  spawn: Bezel_T7
+  spawns:
+  - Bezel_T7
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T7
     parameter: bezel_drop_qty <int_level>
@@ -170,7 +191,10 @@
   - int, CL&LC infusion, 0
   - int, level, 4
   - int, tamed, 0
-  spawn: DraumheimEssence
+  spawns:
+  - DraumheimEssence
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 ##############################################################
 # 4 star creatures drop Draumheim Essense and Blessed Scrolls per zone.
@@ -186,6 +210,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_F
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Meadows - Armor
 - prefab: creature
@@ -199,6 +225,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_F
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Weapon
 - prefab: creature
@@ -212,6 +240,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_D
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Armor
 - prefab: creature
@@ -225,6 +255,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_D
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Weapon
 - prefab: creature
@@ -238,6 +270,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_C
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Armor
 - prefab: creature
@@ -251,6 +285,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_C
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Weapon
 - prefab: creature
@@ -264,6 +300,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_B
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Armor
 - prefab: creature
@@ -277,6 +315,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_B
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Weapon
 - prefab: creature
@@ -290,6 +330,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_A
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Armor
 - prefab: creature
@@ -303,6 +345,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_A
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mistlands, Ashlands - Weapon
 - prefab: creature
@@ -316,6 +360,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mistlands, Ashlands - Armor
 - prefab: creature
@@ -329,6 +375,8 @@
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_S
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 ##############################################################
 # 5+ star creatures drop Draumheim Essense, Blessed Scrolls per zone, and a Molten Core.
@@ -345,6 +393,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_F
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Meadows - Armor
 - prefab: creature
@@ -359,6 +409,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_F
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Weapon
 - prefab: creature
@@ -373,6 +425,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_D
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Armor
 - prefab: creature
@@ -387,6 +441,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_D
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Weapon
 - prefab: creature
@@ -401,6 +457,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_C
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Armor
 - prefab: creature
@@ -415,6 +473,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_C
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Weapon
 - prefab: creature
@@ -429,6 +489,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_B
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Armor
 - prefab: creature
@@ -443,6 +505,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_B
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Weapon
 - prefab: creature
@@ -457,6 +521,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_A
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Armor
 - prefab: creature
@@ -471,6 +537,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_A
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mistlands, Ashlands - Weapon
 - prefab: creature
@@ -485,6 +553,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 - prefab: SwordCheat, SledgeCheat, Unobtainium
   type: create
   remove: true
@@ -502,6 +572,8 @@
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_S
   - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 ##############################################################
 # Limit Staff of the Wild summons
@@ -624,7 +696,6 @@
   type: poke, gear_buff
   filter: gear_shield
   data: gear_shield_buff
-  injectData: true
 
 #############################
 # Any creature with an offhand weapon deals increased dmg and behaves like a combat rogue
@@ -633,7 +704,6 @@
   type: poke, gear_buff
   filter: gear_dual_wield
   data: gear_dw_buff
-  injectData: true
 
 ###################
 # Dual wield creatures attack twice
@@ -890,13 +960,11 @@
   type: poke, gear_buff
   filter: gear_staff_ice_shards
   data: gear_staff_novas_buff
-  injectData: true
 
 - prefab: creature
   type: poke, gear_buff
   filter: gear_staff_fireball
   data: gear_staff_novas_buff
-  injectData: true
 
 #############################
 # Any creature with a torch or lantern has increased alert range
@@ -904,7 +972,6 @@
   type: poke, gear_buff
   filter: gear_alert_left
   data: gear_alert_buff
-  injectData: true
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.
@@ -912,7 +979,6 @@
   type: create
   weight: 1E30
   data: allied_group_data
-  injectData: true
 
 # Mages with StaffSkeleton randomly summon skeleton allies.  Skeletons will die to AE.  Oh well.
 - prefab: DvergerMage
@@ -1277,6 +1343,8 @@
 # Parry
 - prefab: sfx_perfectblock
   type: create
+  removeDelay: 3   # shorten duration for use as trigger in bleed logic
+  remove: true
   bannedObjects:
   - Player, 1, PlayerBlockingHuntressBow
   poke:
@@ -1285,15 +1353,6 @@
     limit: 1
     maxDistance: 1
     parameter: PlayerParry
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
-    delay: 3
-    parameter: p_sfx_perfectblock_cancel
-
-- prefab: sfx_perfectblock  # used in sword bleed logic
-  type: poke, p_sfx_perfectblock_cancel
-  remove: true
 
 #####################
 # Block
@@ -1504,45 +1563,50 @@
     3: int, 1
     4: float, 1
 
-######################
-## Vanish after knife kill
-#- prefab: Player
-#  type: state, knife_secondary
-#  spawns:
-#  - vfx_ghost_death, 0,0,0
-#  objectRpc:
-#  - name: RPC_AddStatusEffect
-#    1: hash, SE_Savheim_Vanish
-#    2: bool, true
-#    3: int, 1
-#    4: float, 1
-#  poke:
-#  - prefab: creature
-#    maxDistance: 4
-#    parameter: p_vanish_deaggro
-#
-#- prefab: creature
-#  type: poke, p_vanish_deaggro
-#  data: d_vanish_deaggro
-###  injectData: true
-##  poke:
-##  - prefab: Player
-##    limit: 1
-##    maxDistance: 4
-##    parameter: p_viewRange_restore_queue <float_MonsterAI.m_viewRange>
-##
-##- prefab: Player
-##  type: poke, p_viewRange_restore_queue
-##  poke:
-##  - prefab: creature
-##    maxDistance: 10
-##    delay: 3
-##    parameter: p_viewRange_restore <par1>
-##
-##- prefab: creature
-##  type: poke, p_viewRange_restore
-##  data: d_creature_viewRange_restore
-###  injectData: true
+#####################
+# Vanish after knife kill
+- prefab: creature
+  type: destroy
+  fallback: true
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+- prefab: sfx_build_table
+  type: create
+  removeDelay: 1   # reduce trigger window to enforce reaction time and prevent double leap
+  remove: true
+
+- prefab: Player
+  types:
+  - state, knife_secondary
+  - state, dual_knives_secondary
+  objects:
+  - sfx_arrow_hit, 6
+  - sfx_knife_swing, 6
+  - sfx_gui_craftitem_cauldron, 6
+  - sfx_build_table, 6
+  spawns:
+  - fx_DvergerMage_Mistile_die
+  - vfx_wraith_death
+  - vfx_ghost_death, 0,0,1, 0,0,0, d_empty_data, 0.2
+  - vfx_ghost_death, 0,0,2, 0,0,0, d_empty_data, 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Vanish
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    parameter: p_vanish_deaggro
+
+- prefab: creature
+  type: poke, p_vanish_deaggro
+  data: d_vanish_deaggro
+  injectData: true              # need inject to avoid respawn
+  owner: 0                      # need to remove ownership to force inject to recognize new data
 
 ####################################################################
 # SUMMONS
@@ -2564,6 +2628,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2575,6 +2642,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2586,6 +2656,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2597,6 +2670,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2608,6 +2684,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2619,6 +2698,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2630,6 +2712,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2641,6 +2726,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2652,6 +2740,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2663,6 +2754,9 @@
   type: destroy
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -2956,3 +3050,26 @@
 #- prefab: vfx_StaffShield
 #  type: create
 #  remove: true
+#
+#########################################
+# Sound duration test
+#- prefab: Player
+#  type: say, test
+#  spawns:
+#  - sfx_build_table
+#  poke:
+#  - prefab: Player
+#    delay: 1
+#    limit: 1
+#    parameter: p_snd_test
+#
+#- prefab: Player
+#  type: poke, p_snd_test
+#  objects:
+#  - sfx_build_table, 1
+#  command: s trig
+#  poke:
+#  - prefab: Player
+#    delay: 1
+#    limit: 1
+#    parameter: p_snd_test

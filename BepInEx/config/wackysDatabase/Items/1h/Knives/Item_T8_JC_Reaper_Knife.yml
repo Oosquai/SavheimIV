@@ -43,8 +43,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1
-  Attack_status_effect: SE_Savheim_Gut_Twist_T8
-  Attack_status_effect_chance: 0.15
+  Attack_status_effect: 
+  Attack_status_effect_chance: 0
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

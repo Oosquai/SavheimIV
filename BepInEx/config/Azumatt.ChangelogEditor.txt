@@ -3,7 +3,17 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/14/24</color>
+     0\  Savheim IV Patch Notes, 10/15/24</color>
+- Overhauled knife and dual knives weapon classes to enable a vanish mechanic after a kill.
+- Dual knives still have a chance to burst damage on hit that ignores armor.
+- Fixed monster AI not getting updated for some gear.
+- Dual-wielding enemies no longer stagger when parried.
+- Updated AI for several other gear types on enemies.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/14/24
 - Added Shield Counter mechanic.  See tooltips on most round and tower shields.
 - Overhauled spear weapon class to give them a unique, mobile fighting style.
 - Reduced number of bleed ticks from one-handed swords.
@@ -19,9 +29,6 @@
 - High level Farmers can no longer ignore biomes when planting crops.
 - Longship configurations should now be locked to the player who created the ship.
 - The stone torch at the starting stones should always stay lit now, but only if you reroll your world.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 10/11/24
 - Skeletal, ghostly, and stoney creatures can no longer bleed.

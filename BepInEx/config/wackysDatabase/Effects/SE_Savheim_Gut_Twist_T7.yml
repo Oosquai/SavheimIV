@@ -29,6 +29,17 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
+- name: vfx_player_death
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
 - name: sfx_spear_flint_hit
   m_enabled: true
   m_variant: -1
@@ -46,7 +57,7 @@ ActivationAnimation: gpower
 SeData:
   m_tickInterval: 0.5
   m_healthPerTickMinHealthPercentage: 0
-  m_healthPerTick: -70
+  m_healthPerTick: -69
   m_healthOverTime: 0
   m_healthOverTimeDuration: 0
   m_healthOverTimeInterval: 0

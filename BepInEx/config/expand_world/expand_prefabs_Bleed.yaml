@@ -58,6 +58,8 @@
 # unique melee bow - huntress.  bleeds on parry.
 - prefab: sfx_perfectblock
   type: create
+  removeDelay: 3   # shorten duration for use as trigger in bleed logic
+  remove: true
   objects:
   - Player, 1, PlayerBlockingHuntressBow
   weight: 0.6
@@ -66,16 +68,11 @@
     limit: 1
     maxDistance: 6
     parameter: p_sword_bleed_hp 3
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
-    delay: 3
-    parameter: p_sfx_perfectblock_cancel
 
 ##########################
 # Some creatures don't bleed
 # Intercept with no-op
-- prefab: Skeleton, Skeleton_Poison, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen
+- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen
   type: poke, p_sword_bleed_hp
   weight: 1E30
 

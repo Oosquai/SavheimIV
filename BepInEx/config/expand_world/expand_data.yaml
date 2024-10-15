@@ -336,25 +336,30 @@
   # how often to circle.  goblin default = 8?
   - MonsterAI.m_circleTargetInterval, 1E30
   # minimum time between attacks.  lowering doesn't seem to do anything, but higher slows attacks down.
-#  - MonsterAI.m_minAttackInterval, <par2>
+  - MonsterAI.m_minAttackInterval, 3.3
   # movespeed while running (combat).  default for goblin seems to be 5?
-  - Humanoid.m_runSpeed, 4
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>-1
 
 # enemes with second weapon do more damage, run faster, and and only do quick, tight circles that tend to put them behind the player.
 - name: gear_dw_buff
   ints:
   - MonsterAI.m_circulateWhileCharging, 0
+  - Humanoid.m_staggerWhenBlocked, 0
   floats:
   - RandomSkillFactor, <par1> * 1.1
   - MonsterAI.m_circleTargetDuration, 3
   - MonsterAI.m_randomCircleInterval, 4
   - MonsterAI.m_circleTargetDistance, 3
-  - Humanoid.m_runSpeed, 7
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>+1
 
-# enemies with torch or lantern have greater alert range (default=30) and circle a lot more.
+# enemies with torch or lantern will agro from further away
 - name: gear_alert_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
   floats:
-  - MonsterAI.m_alertRange, 80
+  - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*1.25
+  - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*1.25
+  - MonsterAI.m_minAttackInterval, 5
 
 # enemies with a nova staff circle a lot, so they're not constantly nova'ing
 - name: gear_staff_novas_buff
@@ -767,18 +772,12 @@
   - RightItem, CWS_Sword_9_SH  
 
 ###############################################################
-## Knives Vanish
-#- name: d_vanish_deaggro
-#  ints:
-##  - alert, 0
-##  - $alert, 0
-#  - haveTarget, 0
-##  floats:
-##  - MonsterAI.m_viewRange, 1
-#
-#- name: d_creature_viewRange_restore
-#  floats:
-#  - MonsterAI.m_viewRange, <par1>
+# Knives Vanish
+- name: d_vanish_deaggro
+  ints:
+  - alert, 0
+  - $alert, 0
+  - haveTarget, 0
 
 ##############################################################
 ##############################################################

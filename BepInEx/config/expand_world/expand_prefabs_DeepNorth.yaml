@@ -216,6 +216,9 @@
   filter: dn_mob_group_roguelite         # make sure it's a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on   # make sure there's a player nearby with roguelite mode on
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -236,6 +239,9 @@
   type: destroy
   biomes: DeepNorth
   weight: 1E30
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 - prefab: Player
   type: poke, p_dn_roguelite_mob_kill
@@ -624,6 +630,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -641,6 +650,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -661,6 +673,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -681,6 +696,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -701,6 +719,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -721,6 +742,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -741,6 +765,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -762,6 +789,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
@@ -780,6 +810,9 @@
   filter: dn_mob_group_roguelite           # must be a roguelite mob
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke:
   - prefab: Player
     maxDistance: 100
