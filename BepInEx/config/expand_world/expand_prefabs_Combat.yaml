@@ -1,0 +1,713 @@
+###############################################################
+# Savheim Combat Mechanics - prefabs
+###############################################################
+# Exotic player states
+# Parry
+- prefab: sfx_perfectblock
+  type: create
+  removeDelay: 3   # shorten duration for use as trigger in bleed logic
+  remove: true
+  bannedObjects:
+  - Player, 1, PlayerBlockingHuntressBow
+  poke:
+  - prefab: Player
+    data: PlayerBlocking
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerParry
+
+#####################
+# Block
+- prefab: vfx_blocked
+  type: create
+  poke:
+  - prefab: Player
+    data: PlayerBlocking
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerBlock
+  - prefab: Player
+    data: PlayerBlockingShield
+    limit: 1
+    maxDistance: 1
+    parameter: p_shield_counter_start
+
+###############################################################
+# Shield Counter
+- prefab: Player
+  type: poke, p_shield_counter_start
+  bannedObjects:
+  - sfx_perfectblock, 1
+  data: d_player_shield_counter_on
+  injectData: true
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    delay: 0.2       # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
+    parameter: p_shield_counter_end
+
+- prefab: Player
+  type: poke, p_shield_counter_end
+  data: d_player_shield_counter_off
+  injectData: true
+
+- prefab: Player
+  types:
+  - state, swing_axe0
+  - state, swing_longsword0
+  - state, spear_poke
+  - state, unarmed_attack0
+  filter: d_player_shield_counter_on
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_shield_counter_on
+    parameter: p_shield_counter_fx
+
+# special process for Rikarr's rapier since it uses different attacks.  trigger off secondary slash.
+- prefab: Player
+  types:
+  - state, swing_longsword1
+  filter: d_player_shield_counter_on_rikarr
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_shield_counter_on
+    parameter: p_shield_counter_fx
+
+# shield counter effects
+- prefab: Player
+  type: poke, p_shield_counter_fx
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.12
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.24
+  - vfx_crossbow_nature_fire, 0,0,1, 40,0,60, d_empty_data_combat, 0.3
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter
+    2: bool, true
+    3: int, 1
+    4: float, 1
+    delay: 0.2  # set to just less than fastest possible wind-up of swords, axes, and spears.  Local testing showed spears 0.35 worked but 0.37 failed.  players can speed up attacks though.  0.3?
+
+###############################################################
+# Results of exotic player states
+###############################################################
+# Aegis parry
+- prefab: Player
+  type: poke, PlayerParry
+  filter: aegisShieldList
+  spawn: fx_DvergerMage_Mistile_die
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Aegis_Eitr_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Buckler parry - speed burst
+- prefab: Player
+  type: poke, PlayerParry
+  filter: bucklerShieldList
+  spawns:
+  - sfx_start_buff_2
+  - vfx_ColdBall_launch
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_BucklerShield_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Round parry - stamina regen
+- prefab: Player
+  type: poke, PlayerParry
+  filter: roundShieldList
+  spawns:
+  - sfx_metal_blocked_overlay
+  - vfx_ForgeAddFuel
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_RoundShield_Stam_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Tower block - HP regen
+- prefab: Player
+  type: poke, PlayerBlock
+  filter: towerShieldList
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_TowerShield_HP_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Shortbow acrobatics - thanks DhakhaR!
+- prefab: Player
+  type: state, jump
+  filter: shortBowList
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, dodge
+    delay: 0.15
+
+#####################
+# Shortbow speed burst
+- prefab: Player
+  type: state, bow_fire
+  filter: shortBowList
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shortbow_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Longbow jump shot
+- prefab: sfx_bow_draw
+  type: create
+  objects:
+  - Player, 1, d_player_airborne_longbow
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_airborne_longbow
+    parameter: p_longbow_jump_shot
+
+- prefab: Player
+  type: poke, p_longbow_jump_shot
+  filter: d_player_airborne_longbow
+  data: d_longbow_jump_shot_cd_on
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_LongbowSkill
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    delay: 3
+    parameter: p_longbow_jump_cd_off
+
+- prefab: Player
+  type: poke, p_longbow_jump_cd_off
+  data: d_longbow_jump_shot_cd_off
+  injectData: true
+
+- prefab: Player
+  type: state, jump
+  filter: d_longbow_jump_shot_cd_on
+  data: d_longbow_jump_shot_cd_off
+  injectData: true
+
+###############################################################
+# Spear speed burst after throw
+- prefab: Player
+  type: state, spear_throw
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Spear_Throw_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Vanish after knife kill
+- prefab: creature
+  type: destroy
+  fallback: true
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_combat
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_combat
+
+- prefab: sfx_build_table
+  type: create
+  removeDelay: 1   # reduce trigger window to enforce reaction time and prevent double leap
+  remove: true
+
+- prefab: Player
+  types:
+  - state, knife_secondary
+  - state, dual_knives_secondary
+  objects:
+  - sfx_arrow_hit, 6
+  - sfx_knife_swing, 6
+  - sfx_gui_craftitem_cauldron, 6
+  - sfx_build_table, 6
+  spawns:
+  - fx_DvergerMage_Mistile_die
+  - vfx_wraith_death
+  - vfx_ghost_death, 0,0,1, 0,0,0, d_empty_data_combat, 0.2
+  - vfx_ghost_death, 0,0,2, 0,0,0, d_empty_data_combat, 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Vanish
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    parameter: p_vanish_deaggro
+
+- prefab: creature
+  type: poke, p_vanish_deaggro
+  data: d_vanish_deaggro
+  injectData: true              # need inject to avoid respawn
+  owner: 0                      # need to remove ownership to force inject to recognize new data
+
+###############################################################
+# Bleed Mechanics
+# Secondary attacks from swords and greatswords cause bleed against staggered enemies.
+# Greatswords get more ticks than 1h swords.
+# Claw primary attacks have a chance to trigger bleed, but with shorter duration.
+# Bleed arrows and bolts always bleed, but much shorter duration.
+# Reapplications reset count and add a second set of increased ticks, for stacking damage.
+# More stacks makes ticks faster too though, so can't stack infinitely.
+# Damage and tick count scales roughly with creature max hp.
+
+# 1h swords
+- prefab: sfx_rebirth               # Wacky's Database SE adds this, to ensure only occurs on hit.
+  type: create
+  objects:
+  - sfx_build_hoe, 1                # Wacky's Database SE sfx added to secondary attacks of 1h swords only
+  - sfx_perfectblock, 5             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6                  # big range for big creatures (troll 2.  bonemass 4.  8-star bonemass 6)
+    parameter: p_sword_bleed_hp 7   # par1 = base total ticks minus 1
+
+# 2h swords
+- prefab: sfx_rebirth
+  type: create
+  objects:
+  - sfx_build_cultivator, 1         # specific to greatswords
+  - sfx_perfectblock, 5
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 13
+
+# claws - chance to bleed on primary attacks.  this is also used with Ryvers (CWS_Sword_5_SH).
+# chance achieved with Wacky's Database chance to proc SE on attack
+- prefab: sfx_rebirth               # Wacky's Database SE adds this, to ensure only occurs on hit.
+  type: create
+  objects:
+  - sfx_gui_craftitem_end, 1        # specific to claws and Ryvers
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 1   # more frequent but shorter duration bleeds
+
+# bleed arrows and bolts
+- prefab: sfx_rebirth
+  type: create
+  objects:
+  - sfx_gui_craftitem, 1            # specific to bleed arrows and bolts
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 0   # on-demand bleed arrows have short duration, but can rapidly stack, especially against high hp enemies
+
+# unique melee bow - huntress.  bleeds on parry.
+- prefab: sfx_perfectblock
+  type: create
+  removeDelay: 3   # shorten duration for use as trigger in bleed logic
+  remove: true
+  objects:
+  - Player, 1, PlayerBlockingHuntressBow
+  weight: 0.6
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 3
+
+##########################
+# Some creatures don't bleed
+# Intercept with no-op
+- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen
+  type: poke, p_sword_bleed_hp
+  weight: 1E30
+
+##########################
+# Check max hp of creature to set tick damage and extra tick count
+# RPC_Damage wants an int, and no way to type convert...
+# Brute force Fibonacci to solve... obviously??
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 0;99         # victim health range
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+0 1  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 100;199
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+1 2
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 200;299
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+2 3
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 300;499
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+3 4
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 500;799
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+4 5
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 800;1299
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+5 6
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1300;2099
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+6 7
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 2100;3399
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+7 8
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 3400;5499
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+8 9
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 5500;8899
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+9 10
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 8900;14399
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+10 11
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 14400;23299
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+11 12
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 23300;37699
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+12 13
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 37700;60999
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+13 14
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 61000;98699
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+14 15
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 98700;999999
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_fx <par1>+15 16
+
+# Bleed fx
+- prefab: creature
+  type: poke, p_sword_bleed_fx
+  data: d_bleed_tick_rst_stack_inc     # reset tick count and increment stack count any time a new stack is created
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.06
+  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_combat, 0.12
+  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_combat, 0.18
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.4
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    parameter: p_sword_bleed_loop <par1> <par2>+<par2>*<int_i_bleed_stack_cnt>
+
+# Main Bleed Loop.  Count to X, then exit.
+- prefab: creature
+  type: poke, p_sword_bleed_loop
+  filter: int, i_bleed_tick_cnt, 0;<par1>   # check tick count
+  data: d_bleed_tick_cnt_inc                # increment tick count and clear i_bleed_stack_timeout flag
+  injectData: true
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=<par2>                   # apply tick damage
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    delay: 1
+    parameter: p_sword_bleed_loop <par1> <par2>  # self loop
+### DEBUG - COMMENT OUT ###
+#  command: s <int_i_bleed_tick_cnt>
+###########################
+
+# once count exceeds limit, fallback process will clear all stacks
+- prefab: creature
+  type: poke, p_sword_bleed_loop
+  data: d_bleed_stack_timeout_set  # attempt to clear all bleed state. will only succeed if no other poke loops still active.
+  injectData: true
+  poke:
+  - prefab: <prefab>
+    limit: 1
+    maxDistance: 1
+    delay: 1.1                     # need this delay to clear all stacks
+    parameter: p_sword_bleed_clear
+  fallback: true
+
+# clear bleed stacks
+- prefab: creature
+  type: poke, p_sword_bleed_clear
+  filter: int, i_bleed_stack_timeout, 1
+  data: d_bleed_full_rst
+  injectData: true
+
+################################################################
+# Sanctis - 1h sword class, eitr-based
+# Players shield themselves on secondary attack of any Sanctis.
+# Shield has 5 hp and lasts 1 minute.
+# Also spawns AE spirit damage.
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t2
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 20
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t3
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 30
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t4
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 40
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t5
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 50
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t6
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 60
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t7
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 70
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t8
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: spiritAE 80
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_flame
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    parameter: fireAE
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Staff_shield
+    2: bool, true
+    3: int, 1
+    4: float, -39
+    delay: 0.3
+
+# Sanctis spirit AE
+- prefab: creature
+  type: poke, spiritAE
+  spawn: fx_Fader_Roar_Projectile_Hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, spirit=<par1>

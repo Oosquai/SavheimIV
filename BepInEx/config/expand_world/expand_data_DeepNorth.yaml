@@ -1,5 +1,26 @@
+##############################################################
+# Savheim Deep North - Data
+##############################################################
+- name: d_empty_data_dn
+  ints:
+  - HasFields, 1
+
+- name: tamed_dn
+  ints:
+  - tamed, 1
+
+- name: not_tamed_dn
+  ints:
+  - tamed, 0
+
+- name: d_sfx_silent_dn
+  ints:
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+
 ####################################
-# Deep North Data
 # Player variables and controls
 - name: d_player_roguelite_on
   ints:

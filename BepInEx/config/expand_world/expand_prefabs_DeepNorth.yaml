@@ -1,5 +1,5 @@
 ########################################################################
-# Deep North
+# Savheim Deep North - prefabs
 ########################################################################
 # Killing a deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
@@ -70,10 +70,10 @@
   data: d_player_roguelite_start   # clear all state for a fresh start
   injectData: true
   spawns:
-  - sfx_reaper_idle, 0,0,0, 0,0,0, d_empty_data, 0
-  - sfx_gdking_idle, 0,0,0, 0,0,0, d_empty_data, 3
-  - sfx_gdking_scream, 0,0,0, 0,0,0, d_empty_data, 6.5
-  - sfx_dragon_scream, 0,0,0, 0,0,0, d_empty_data, 6.5
+  - sfx_reaper_idle, 0,0,0, 0,0,0, d_empty_data_dn, 0
+  - sfx_gdking_idle, 0,0,0, 0,0,0, d_empty_data_dn, 3
+  - sfx_gdking_scream, 0,0,0, 0,0,0, d_empty_data_dn, 6.5
+  - sfx_dragon_scream, 0,0,0, 0,0,0, d_empty_data_dn, 6.5
   command: broadcast center <string_playerName> has slain an innocent deer in the tranquil Deep North.
   objectRpc:
   - name: Message
@@ -217,8 +217,8 @@
   objects:
   - Player, 100, d_player_roguelite_on   # make sure there's a player nearby with roguelite mode on
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -240,8 +240,8 @@
   biomes: DeepNorth
   weight: 1E30
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
 
 - prefab: Player
   type: poke, p_dn_roguelite_mob_kill
@@ -570,13 +570,13 @@
   bannedObjects:
   - Player, 100, d_player_roguelite_on
   spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data, 0.5
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
   - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
   poke:
   - prefab: creature
     maxDistance: 10
-    data: not_tamed
+    data: not_tamed_dn
     parameter: p_soulcleave_randomDelay
 
 ### Battleaxe, roguelite ON
@@ -589,13 +589,13 @@
   - vfx_wraith_hit, 1
   weight: 1E30      # ensure always triggers vs. no battleaxe version below
   spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data, 0.5
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data, 0.5
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
   - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
   poke:
   - prefab: creature
     maxDistance: 10
-    data: not_tamed
+    data: not_tamed_dn
     parameter: p_soulcleave_randomDelay
   remove: true
   spawn:
@@ -631,8 +631,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -651,8 +651,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -674,8 +674,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -697,8 +697,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -720,8 +720,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -743,8 +743,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -766,8 +766,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -790,8 +790,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -811,8 +811,8 @@
   objects:
   - Player, 100, d_player_roguelite_on     # must be a nearby player with roguelite active
   spawns:
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_dn
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_dn
   poke:
   - prefab: Player
     maxDistance: 100
@@ -830,12 +830,12 @@
   filters:
   - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
   spawns:
-  - <par1>, 0,0,snap, 0,0,0, d_empty_data, 0
-  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data, 0
-  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data, 0.2
-  - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data, 0.2
-  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data, 0.35
-  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data, 0.35
+  - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
+  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
 
 - prefab: Player
   type: poke, p_boss_loot_dn_roguelite
@@ -843,13 +843,13 @@
   filters:
   - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
   spawns:
-  - <par1>, 0,0,snap, 0,0,0, d_empty_data, 0
-  - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data, 0
-  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data, 0
-  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data, 0.2
-  - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data, 0.2
-  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data, 0.35
-  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data, 0.35
+  - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
+  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
 
 ########################################################################
 # Roguelite Win Conditions
@@ -877,28 +877,28 @@
   injectData: true
   spawns:
   - Odin, 0,8,snap, 180,0,0, d_odin_persist, 0
-  - sfx_haldor_yea, 0,8,snap, d_empty_data, 1
-  - sfx_haldor_laugh, 0,8,snap, d_empty_data, 3
-  - vfx_FireWork_BlackCore, 0,12,2 0,0,0, d_empty_data, 3.2
-  - vfx_Firework_Rocket_Red, 12,11,-4 0,0,0, d_empty_data, 3.8
-  - sfx_firework_explode, 12,11,-4 0,0,0, d_empty_data, 3.8
-  - vfx_Firework_Rocket_Yellow, -23,12,snap 0,0,0, d_empty_data, 4.2
-  - sfx_firework_explode, -23,12,snap 0,0,0, d_empty_data, 4.2
-  - vfx_Firework_Rocket_Cyan, 1,6,12 0,0,0, d_empty_data, 4.7
-  - sfx_firework_explode, 1,6,12 0,0,0, d_empty_data, 4.7
-  - vfx_Firework_Rocket_Purple, -13,15,-9 0,0,0, d_empty_data, 5.1
-  - sfx_firework_explode, -13,15,-9 0,0,0, d_empty_data, 5.1
-  - vfx_Firework_Rocket_Green, 17,17,snap 0,0,0, d_empty_data, 5.4
-  - sfx_firework_explode, 17,17,snap 0,0,0, d_empty_data, 5.4
-  - fx_HildirChest_Unlock, 0,6,snap, 0,0,0, d_sfx_silent, 16
-  - fx_chainlightning_hit, 0,6,snap, 0,0,0, d_empty_data, 16
-  - fx_lightningweapon_hit, 0,6,snap, 0,0,0, d_empty_data, 16.2
-  - fx_DvergerMage_Mistile_die, 0,6,snap, 0,0,0, d_empty_data, 16.2
-  - vfx_coin_pile_destroyed, 0,6,snap, 0,0,0, d_empty_data, 16.35
-  - sfx_coins_destroyed, 0,6,snap, 0,0,0, d_empty_data, 16.35
-  - <par1>, 0,6,snap, 0,0,0, d_empty_data, 16
-  - MoltenCore, 0,6,snap, 0,0,0, d_empty_data, 16
-  - sfx_haldor_greet, 0,8,snap, d_empty_data, 19
+  - sfx_haldor_yea, 0,8,snap, d_empty_data_dn, 1
+  - sfx_haldor_laugh, 0,8,snap, d_empty_data_dn, 3
+  - vfx_FireWork_BlackCore, 0,12,2 0,0,0, d_empty_data_dn, 3.2
+  - vfx_Firework_Rocket_Red, 12,11,-4 0,0,0, d_empty_data_dn, 3.8
+  - sfx_firework_explode, 12,11,-4 0,0,0, d_empty_data_dn, 3.8
+  - vfx_Firework_Rocket_Yellow, -23,12,snap 0,0,0, d_empty_data_dn, 4.2
+  - sfx_firework_explode, -23,12,snap 0,0,0, d_empty_data_dn, 4.2
+  - vfx_Firework_Rocket_Cyan, 1,6,12 0,0,0, d_empty_data_dn, 4.7
+  - sfx_firework_explode, 1,6,12 0,0,0, d_empty_data_dn, 4.7
+  - vfx_Firework_Rocket_Purple, -13,15,-9 0,0,0, d_empty_data_dn, 5.1
+  - sfx_firework_explode, -13,15,-9 0,0,0, d_empty_data_dn, 5.1
+  - vfx_Firework_Rocket_Green, 17,17,snap 0,0,0, d_empty_data_dn, 5.4
+  - sfx_firework_explode, 17,17,snap 0,0,0, d_empty_data_dn, 5.4
+  - fx_HildirChest_Unlock, 0,6,snap, 0,0,0, d_sfx_silent_dn, 16
+  - fx_chainlightning_hit, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - fx_lightningweapon_hit, 0,6,snap, 0,0,0, d_empty_data_dn, 16.2
+  - fx_DvergerMage_Mistile_die, 0,6,snap, 0,0,0, d_empty_data_dn, 16.2
+  - vfx_coin_pile_destroyed, 0,6,snap, 0,0,0, d_empty_data_dn, 16.35
+  - sfx_coins_destroyed, 0,6,snap, 0,0,0, d_empty_data_dn, 16.35
+  - <par1>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - MoltenCore, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - sfx_haldor_greet, 0,8,snap, d_empty_data_dn, 19
   poke:
   - prefab: Odin              # Odin prevented from leaving during reward sequence
     delay: 16.3               # injectData doesn't seem to work for this, so hide his flicker in other effects
@@ -1158,7 +1158,7 @@
 
 - prefab: Creature
   type: poke, p_eikthyr_attack1
-  filter: tamed
+  filter: tamed_dn
   objectRpc:
   - name: RPC_Damage
     1: hit, slash=<par2> dodge=true block=true
@@ -1172,7 +1172,7 @@
 
 - prefab: Creature
   type: poke, p_eikthyr_attack2
-  filter: tamed
+  filter: tamed_dn
   spawn: fx_chainlightning_hit
   objectRpc:
   - name: RPC_Damage
@@ -1186,7 +1186,7 @@
 
 - prefab: Creature
   type: poke, p_eikthyr_attack_stomp
-  filter: tamed
+  filter: tamed_dn
   objectRpc:
   - name: RPC_Damage
     1: hit, lightning=<par2> dodge=true block=true
@@ -1220,7 +1220,7 @@
 
 - prefab: creature
   type: poke, tentarootslimed
-  filter: tamed
+  filter: tamed_dn
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Slimed dodge=true block=true
@@ -1247,7 +1247,7 @@
 #- prefab: eikthyr_ragdoll
 #  type: create
 #  remove: true
-#  spawn: <prefab>, 0,0,0, 0,0,0, d_empty_data, 0, true
+#  spawn: <prefab>, 0,0,0, 0,0,0, d_empty_data_dn, 0, true
 #
 ## debug
 #- prefab: Player

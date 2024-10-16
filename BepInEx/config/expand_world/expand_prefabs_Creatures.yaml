@@ -1,0 +1,681 @@
+##############################################################
+# Savheim Creature AI - prefabs
+##############################################################
+# Fix Ashlands?  (Thanks, Raaka!)
+- prefab: MonsterAI
+  biomes: AshLands
+  type: create
+  weight: 1
+  data: deaf_canswim
+  fallback: true
+
+##############################################################
+# All mobs can swim (Raaka) - UNTESTED.  Also, blocks other type: create, like clothing, hence weight: 0.1
+- prefab: creature
+  type: create
+  weight: 0.1
+  data: canswim
+  fallback: true
+
+###############################################################
+# Random clothes for creatures
+# gear_buff(RandomSkillFactor)
+# ... but mobs created by game don't have a RandomSkillFactor field, so would be 0.  Use "1".
+- prefab: Skeleton
+  type: create
+  weight: 1E30
+  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  data: clothes_skeleton_mountain
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Skeleton
+  type: create
+  weight: 1E30
+  biomes: Meadows, Blackforest
+  data: clothes_skeleton
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Skeleton_Poison
+  type: create
+  weight: 1E30
+  data: clothes_skeleton_poison
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Draugr
+  type: create
+  weight: 1E30
+  data: clothes_draugr
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Draugr_Elite
+  type: create
+  weight: 1E30
+  data: clothes_draugr_elite
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Goblin
+  type: create
+  weight: 1E30
+  data: clothes_goblin
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: GoblinBrute
+  type: create
+  weight: 1E30
+  data: clothes_goblin_brute
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: DvergerMage
+  type: create
+  weight: 1E30
+  data: clothes_dverger_mage_allied_group
+
+- prefab: Charred_Melee
+  type: create
+  weight: 1E30
+  data: clothes_charred_melee
+  poke:
+  - prefab: creature
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Charred_Mage
+  type: create
+  weight: 1E30
+  data: clothes_charred_mage
+
+###############################################################
+# Any creature with a shield has increased hp and behaves like a tank.
+# HP scales with CLLC stars.
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_shield
+  data: gear_shield_buff
+
+#############################
+# Any creature with an offhand weapon deals increased dmg and behaves like a combat rogue
+# Dmg scales with CLLC stars.
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_dual_wield
+  data: gear_dw_buff
+
+###################
+# Dual wield creatures attack twice
+# Enemies and summons need separate processes for the "objects" filter to ensure they're near enough a valid target.
+# Clear flag to make sure only one guaranteed extra attack
+- prefab: creature
+  type: poke, p_dw_extra_attack_clr
+  data: dw_second_attack_cd0
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_dw_extra_attack
+
+# perform second attack.  animations are gated by creature, so only those able to do "swing_longsword" will match.
+- prefab: creature
+  type: poke, p_dw_extra_attack
+  objects:
+  - Player, 2.5
+  - creature, 2.5, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, swing_longsword
+  - name: SetTrigger
+    target: all
+    1: name, attack0
+  - name: SetTrigger
+    target: all
+    1: name, attack_thrust
+
+# summons version - clear flag, then call summon version of extra attack
+- prefab: creature
+  type: poke, p_dw_extra_attack_clr_summon
+  data: dw_second_attack_cd0
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_dw_extra_attack_summon
+
+# summons version - checks for enemy near enough to hit instead of {player, tame}
+- prefab: creature
+  type: poke, p_dw_extra_attack_summon
+  objects:
+  - creature, 2.5, not_tamed_creatures
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, swing_longsword
+  - name: SetTrigger
+    target: all
+    1: name, attack0
+  - name: SetTrigger
+    target: all
+    1: name, attack_thrust
+
+# creature-specific attack animations and timings
+- prefab: Skeleton
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr
+
+# summon versions of skeleton
+- prefab: BMR_SummonSkeleton, Skeleton_Friendly
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr_summon
+
+- prefab: Draugr
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 2
+    parameter: p_dw_extra_attack_clr
+
+- prefab: BMR_SummonDraugr
+  type: state, attack
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 2
+    parameter: p_dw_extra_attack_clr_summon
+
+- prefab: Goblin
+  type: state, swing_longsword
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr
+
+- prefab: BMR_SummonGoblin
+  type: state, swing_longsword
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr_summon
+
+- prefab: GoblinBrute
+  type: state, attack1
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.7
+    parameter: p_dw_extra_attack_clr
+
+- prefab: Charred_Melee
+  types:
+  - state, attack_swing
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr
+
+- prefab: BMR_SummonCharredMelee
+  types:
+  - state, attack_swing
+  filter: gear_dual_wield_cd0
+  data: dw_second_attack_cd1
+  injectData: true
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1.5
+    parameter: p_dw_extra_attack_clr_summon
+
+##################
+# Creatures who can't dual wield, but give them a % chance for a quick follow-up attack.
+# keep chances below 50%, then no need for flag to prevent infinite attacks - random instead!
+- prefab: creature
+  type: poke, p_extra_attack
+  objects:
+  - Player, 2.5
+  - creature, 2.5, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, attack_mace
+  - name: SetTrigger
+    target: all
+    1: name, attack_claw1
+
+# creature-specific attack animations and timings.
+- prefab: Greydwarf_Elite
+  type: state, attack
+  weight: 0.35
+  poke:
+  - prefab: Greydwarf_Elite
+    delay: 1.8
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Skeleton_Hildir
+  type: state, attack
+  weight: 0.45
+  poke:
+  - prefab: Skeleton_Hildir
+    delay: 1.8
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Draugr_Elite
+  type: state, attack
+  weight: 0.4
+  poke:
+  - prefab: Draugr_Elite
+    delay: 2
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Skeleton_Poison
+  type: state, attack_mace
+  weight: 0.35
+  poke:
+  - prefab: Skeleton_Poison
+    delay: 2.5
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+- prefab: Fenring
+  types:
+  - state, attack_claw0
+  weight: 0.4
+  poke:
+  - prefab: Fenring
+    delay: 1.5
+    maxDistance: 1
+    limit: 1
+    parameter: p_extra_attack
+
+#############################
+# Any creature with an offhand elemental staff casts novas, so slow their attacks
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_staff_ice_shards
+  data: gear_staff_novas_buff
+
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_staff_fireball
+  data: gear_staff_novas_buff
+
+#############################
+# Any creature with a torch or lantern has increased alert range
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_alert_left
+  data: gear_alert_buff
+
+###############################################################
+# Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.
+- prefab: Dverger
+  type: create
+  weight: 1E30
+  data: allied_group_data
+
+# Mages with StaffSkeleton randomly summon skeleton allies.  Skeletons will die to AE.  Oh well.
+- prefab: DvergerMage
+  type: state, *
+  filter: gear_staff_skeleton
+  weight: 0.4
+  triggerRules: true
+  spawn: Skeleton, allied_group_data
+
+###############################################################
+# Charred Mages shield themselves on cast if they're holding a StaffShield.
+# Shield only has 5 hp (skill=-39), so good for exactly one hit.  1 minute duration (level=1).
+- prefab: Charred_Mage
+  type: state, attack_fireaoe
+  filter: gear_staff_shield
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Staff_shield level=1 skill=-39
+    delay: 2
+
+###############################################################
+# Skeleton with offhand StaffIceShards cast frost nova
+- prefab: Skeleton
+  type: state, attack
+  filter: gear_staff_ice_shards
+  spawns:
+  - sfx_icestaff_start
+  - fx_DvergerMage_Nova_ring
+  poke:
+  - prefab: Player, creature
+    parameter: Creature_Frost_Nova
+    maxDistance: 4
+    delay: 0.8
+
+# player armor reduces damage by a lot, which also reduces slow duration.
+# frost resist is common on cloaks and negates slow, so add an SE to ensure slow if not dodged.
+- prefab: Player
+  type: poke, Creature_Frost_Nova
+  spawn: vfx_dragon_ice_hit
+  spawnDelay: 0.9
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=190 dodge=true block=true status=SE_Savheim_Slowed
+
+- prefab: creature
+  type: poke, Creature_Frost_Nova
+  filter: tamed_creatures
+  spawn: vfx_dragon_ice_hit
+  spawnDelay: 0.9
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=34 dodge=true block=true
+
+#################
+# Summon versions
+- prefab: BMR_SummonSkeleton
+  type: state, attack
+  filter: gear_staff_ice_shards
+  spawns:
+  - sfx_icestaff_start
+  - fx_DvergerMage_Nova_ring
+  poke:
+  - prefab: creature
+    parameter: Creature_Frost_Nova_Summon 34
+    maxDistance: 4
+    delay: 0.8
+
+- prefab: Skeleton_Friendly
+  type: state, attack
+  filter: gear_staff_ice_shards
+  spawns:
+  - sfx_icestaff_start
+  - fx_DvergerMage_Nova_ring
+  poke:
+  - prefab: creature
+    parameter: Creature_Frost_Nova_Summon 97
+    maxDistance: 4
+    delay: 0.8
+
+- prefab: creature
+  type: poke, Creature_Frost_Nova_Summon
+  filter: not_tamed_creatures
+  spawn: vfx_dragon_ice_hit
+  spawnDelay: 0.9
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=<par1> dodge=true block=true
+
+###############################################################
+# Goblins with offhand StaffFireballMini cast fire nova
+- prefab: Goblin
+  types:
+  - state, swing_longsword
+  - state, spear_throw
+  filter: gear_staff_fireball
+  poke:
+  - prefab: Player, creature
+    parameter: Creature_Fire_Nova
+    maxDistance: 3
+    delay: 0.7
+
+# player armor reduces damage by a lot, but players are less likely to have fire resist.
+- prefab: Player
+  type: poke, Creature_Fire_Nova
+  spawn: fx_fireball_staff_explosion
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=157 dodge=true block=true
+
+- prefab: creature
+  type: poke, Creature_Fire_Nova
+  filter: tamed_creatures
+  spawn: fx_fireball_staff_explosion
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=47 dodge=true block=true
+
+#################
+# Summon version
+- prefab: BMR_SummonGoblin
+  types:
+  - state, swing_longsword
+  - state, spear_throw
+  filter: gear_staff_fireball
+  poke:
+  - prefab: creature
+    parameter: Creature_Fire_Nova_Summon
+    maxDistance: 3
+    delay: 0.7
+
+- prefab: creature
+  type: poke, Creature_Fire_Nova_Summon
+  filter: not_tamed_creatures
+  spawn: fx_fireball_staff_explosion
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=47 dodge=true block=true
+
+####################################################################
+# SUMMONS
+####################################################################
+# Step 1) On spawn, poke to get to step 2, and poke any other summons to limit to one
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+  type: create
+  weight: 1E30
+  poke:
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+    parameter: p_bmr_summon_tweaks <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
+    parameter: only_one_summon
+    minDistance: 0.1
+    maxDistance: 5
+
+# special case for StaffSkeleton -> Skeleton_Friendly.  Base game scaling is BM (1, 50, 100) = RSF (1, 2, 3)
+- prefab: Skeleton_Friendly
+  type: create
+  weight: 1E30
+  poke:
+  - prefab: Skeleton_Friendly
+    parameter: p_bmr_summon_tweaks_vanilla <float_max_health> <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+  - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
+    parameter: only_one_summon
+    minDistance: 0.1
+    maxDistance: 5
+
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
+  type: poke, only_one_summon
+  spawn: vfx_corpse_destruction_small
+  remove: true
+
+###############################
+# Step 2) Fix MagicRevamped Blood Magic scaling (it defaults to 21x damage at skill=100 - yikes!)
+- prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee
+  type: poke, p_bmr_summon_tweaks
+  data: d_bmr_summon_tweaks
+  poke:
+  - prefab: creature
+    parameter: p_bmr_summon_clothing
+    maxDistance: 0.1
+
+# vanilla scaling is 1x, 2x, 3x damage at BM 1, 50, 100.
+- prefab: Skeleton_Friendly
+  type: poke, p_bmr_summon_tweaks_vanilla
+  data: d_bmr_summon_tweaks_vanilla
+  poke:
+  - prefab: creature
+    parameter: p_bmr_summon_clothing
+    maxDistance: 0.1
+
+###############################
+# Step 3) Clothe and buff creatures that can be clothed
+- prefab: BMR_SummonSkeleton
+  type: poke, p_bmr_summon_clothing
+  data: clothes_skeleton_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Skeleton_Friendly
+  type: poke, p_bmr_summon_clothing
+  data: clothes_skeleton_vanilla_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: BMR_SummonDraugr
+  type: poke, p_bmr_summon_clothing
+  data: clothes_draugr_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: BMR_SummonGoblin
+  type: poke, p_bmr_summon_clothing
+  data: clothes_goblin_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: BMR_SummonCharredMelee
+  type: poke, p_bmr_summon_clothing
+  data: clothes_charred_melee_bmr_summon
+  poke:
+  - prefab: creature
+    parameter: gear_buff <float_RandomSkillFactor>
+    delay: 0.1
+    maxDistance: 0.1
+
+###############################################################
+# No root effect on Bosses, mini bosses, elites, flying, or swimming creatures.
+- prefab: fx_RootAshlands
+  type: create
+  poke:
+  - prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen
+    maxDistance: 1
+    limit: 1
+    parameter: p_creature_root_resist
+
+# Immune to root so long as vfx_Smoked persists (handles reapplications, since SE won't trigger fx_RootAshlands again until it falls off)
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen
+  type: poke, p_creature_root_resist
+  objects:
+  - vfx_Smoked, 0.1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_RootResist
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    delay: 1
+    parameter: p_creature_root_resist
+
+###############################################################
+# Boss tweaks
+#################
+# Elder
+# Elder Tentaroots move around - creepy!  (Thanks, Raaka!)
+- prefab: TentaRoot
+  type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  objects:
+  - gd_king, 100
+  data: TentaRootMover

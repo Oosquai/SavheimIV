@@ -1,0 +1,305 @@
+##############################################################
+# Savheim Creature AI - data
+##############################################################
+- name: tamed_creatures
+  ints:
+  - tamed, 1
+
+- name: not_tamed_creatures
+  ints:
+  - tamed, 0
+
+- name: allied_group_data
+  strings:
+  - Humanoid.m_group, allied_group_tag
+
+- name: canswim
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+
+- name: deaf_canswim
+  ints:
+  - HasFields, 1
+  - HasFieldsMonsterAI, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_canSwim, 1
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+####################################
+# Creature AI extra attacks
+- name: dw_second_attack_cd0
+  ints:
+  - dw_second_attack_cd, 0
+
+- name: dw_second_attack_cd1
+  ints:
+  - dw_second_attack_cd, 1
+
+####################################
+- name: TentaRootMover
+  floats:
+  - Humanoid.m_runSpeed, 1
+
+####################################
+# Monster Clothes!
+- name: clothes_skeleton
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, <none>, skeleton_sword, skeleton_sword, Torch, KnifeCopper
+
+- name: clothes_skeleton_mountain
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, skeleton_sword, Torch, KnifeCopper, StaffIceShards
+
+- name: clothes_skeleton_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, CapeTrollHideRed_SH
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, skeleton_sword, Torch, StaffIceShards
+
+- name: clothes_skeleton_vanilla_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, CapeAsksvinRed_SH
+  - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
+  - LeftItem, skeleton_sword2, Lantern, StaffIceShards, StaffIceShards
+
+- name: clothes_skeleton_poison
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
+  - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
+  - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern
+
+- name: clothes_draugr
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, draugr_axe
+
+- name: clothes_draugr_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, draugr_axe, ShieldBoneTower
+  - HelmetItem, VDS_AtlantianCrown
+
+- name: clothes_draugr_elite
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, ShieldIronTower, ShieldKnight
+
+- name: clothes_goblin
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, GoblinSword, CWS_Dagger_2, Torch, StaffFireballMini
+
+- name: clothes_goblin_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, GoblinSword, StaffFireballMini
+  - ChestItem, GoblinShoulders_SH
+  - LegItem, GoblinLoin_SH
+  - UtilityItem, GoblinLegband_SH
+
+- name: clothes_goblin_brute
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, <none>, GoblinBrute_RageAttack
+
+- name: clothes_dverger_mage_allied_group
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, <none>, StaffSkeleton
+  strings:
+  - Humanoid.m_group, allied_group_tag
+
+- name: clothes_charred_mage
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, StaffShield
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+- name: clothes_charred_melee
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, <none>, <none>, SwordNiedhogg, ShieldFlametalTower
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+- name: clothes_charred_melee_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, SwordNiedhogg, ShieldFlametalTower
+  - LegItem, Charred_HipCloth_SH
+  - ChestItem, Charred_Breastplate_SH
+  - HelmetItem, Charred_Helmet_SH
+
+####################################
+# Creature modifications based on gear
+- name: gear_staff_skeleton
+  hashes:
+  - LeftItem, StaffSkeleton
+
+- name: gear_staff_shield
+  hashes:
+  - LeftItem, StaffShield
+
+- name: gear_staff_ice_shards
+  hashes:
+  - LeftItem, StaffIceShards
+
+- name: gear_staff_fireball
+  hashes:
+  - LeftItem, StaffFireball, StaffFireballMini
+
+- name: gear_shield
+  hashes:
+  - LeftItem, ShieldWood, ShieldBronzeBuckler, ShieldBanded, CWS_Round_Shield_6, CWS_Round_Shield_6_SH, ShieldIronTower, ShieldFlametalTower, ShieldKnight, ShieldBoneTower
+
+- name: gear_dual_wield
+  hashes:
+  - LeftItem, skeleton_sword, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
+
+- name: gear_dual_wield_cd0
+  hashes:
+  - LeftItem, skeleton_sword, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
+  ints:
+  - dw_second_attack_cd, 0
+
+- name: gear_alert_left
+  hashes:
+  - LeftItem, Torch, Lantern
+
+# enemies with shields have more health, don't circle, and move slower.
+- name: gear_shield_buff
+  ints:
+  # whether to circle while waiting for minAttackInterval
+  - MonsterAI.m_circulateWhileCharging, 0
+  floats:
+  - max_health, <float_max_health>*1.5
+  - health, <float_max_health>*1.501
+  # how long to circle.  goblin default = 6?
+  - MonsterAI.m_circleTargetDuration, 0
+  # how often to circle.  goblin default = 8?
+  - MonsterAI.m_circleTargetInterval, 1E30
+  # minimum time between attacks.  lowering doesn't seem to do anything, but higher slows attacks down.
+#  - MonsterAI.m_minAttackInterval, 3.3
+  # movespeed while running (combat).  default for goblin seems to be 5?
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>-1
+
+# enemes with second weapon do more damage, run faster, and and only do quick, tight circles that tend to put them behind the player.
+- name: gear_dw_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 0
+  - Humanoid.m_staggerWhenBlocked, 0
+  floats:
+  - RandomSkillFactor, <par1> * 1.1
+  - MonsterAI.m_circleTargetDuration, 3
+  - MonsterAI.m_randomCircleInterval, 4
+  - MonsterAI.m_circleTargetDistance, 3
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>+1
+
+# enemies with torch or lantern will agro from further away
+- name: gear_alert_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*1.25
+  - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*1.25
+  - MonsterAI.m_minAttackInterval, 5
+
+# enemies with a nova staff circle a lot, so they're not constantly nova'ing
+- name: gear_staff_novas_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_minAttackInterval, 9
+
+####################################
+# MagicRevamp Summon Tweaks
+# d_bmr_summon_tweaks(max_health, randomSkillFactor)
+# MagicRevamp scales RandomSkillFactor by a factor of (1,21) at Blood Magic skill levels (1, 100), which is broken.
+# Scale damage by (0.3, 0.5, 0.7) at Blood Magic skill levels (1, 50, 100)
+# Scale health by (1, 1.5, 2) at Blood Magic skill levels (1, 50, 100)
+- name: d_bmr_summon_tweaks
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  floats:
+  - RandomSkillFactor, 0.02 * <par2> + 0.28
+  - max_health, <par1> * 0.05 * <par2> + <par1> * 0.95
+  - health, <par1> * 0.05 * <par2> + <par1> * 0.951
+
+####################################
+# Vanilla Summon Tweaks
+# d_bmr_summon_tweaks_vanilla(max_health, randomSkillFactor)
+# Base game scales RandomSkillFactor by a factor of (1,2,3) at Blood Magic skill levels (1, 50, 100).
+# Scale damage by (0.75, 1, 1.25) at Blood Magic skill levels (1, 50, 100) (more powerful skeletons!)
+# Scale health by (0.5, 0.75, 1) at Blood Magic skill levels (1, 50, 100) (default 400 too high)
+- name: d_bmr_summon_tweaks_vanilla
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  floats:
+  - RandomSkillFactor, 0.25 * <par2> + 0.5
+  - max_health, <par1> * 0.25 * <par2> + <par1> * 0.25
+  - health, <par1> * 0.25 * <par2> + <par1> * 0.251
