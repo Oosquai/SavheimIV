@@ -391,11 +391,40 @@
   data: gear_staff_novas_buff
 
 #############################
-# Any creature with a torch or lantern has increased alert range
+# Any creature with a torch or lantern has increased alert range and causes character to alert other creatures
 - prefab: creature
   type: poke, gear_buff
   filter: gear_alert_left
   data: gear_alert_buff
+
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_alert_right
+  data: gear_alert_buff
+
+- prefab: creature
+  type: state, *
+  filter: gear_alert_left
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 30
+    parameter: p_player_noise
+
+- prefab: creature
+  type: state, *
+  filter: gear_alert_right
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 30
+    parameter: p_player_noise
+
+- prefab: Player
+  type: poke, p_player_noise
+  objectRpc:
+  - name: RPC_AddNoise
+    1: float, <float_noise>*2
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.

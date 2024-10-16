@@ -227,6 +227,11 @@
   hashes:
   - LeftItem, Torch, Lantern
 
+- name: gear_alert_right
+  hashes:
+  - LeftItem, <none>   # prioritize tank AI if holding a shield
+  - RightItem, Torch
+
 # enemies with shields have more health, don't circle, and move slower.
 - name: gear_shield_buff
   ints:
@@ -264,6 +269,7 @@
   - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*1.25
   - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*1.25
   - MonsterAI.m_minAttackInterval, 5
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>+1
 
 # enemies with a nova staff circle a lot, so they're not constantly nova'ing
 - name: gear_staff_novas_buff

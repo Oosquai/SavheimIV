@@ -4,16 +4,20 @@
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 10/15/24</color>
+- Refactored scripts for organization and modularity.
+- Creatures with torches or lanterns can now help their allies detect you from further away.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/14/24
 - Overhauled knife and dual knives weapon classes to enable a vanish mechanic after a kill.
 - Dual knives still have a chance to burst damage on hit that ignores armor.
 - Fixed monster AI not getting updated for some gear.
 - Dual-wielding enemies no longer stagger when parried.
 - Updated AI for several other gear types on enemies.
 
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
-
-Patch Notes, 10/14/24
+Patch Notes, 10/13/24
 - Added Shield Counter mechanic.  See tooltips on most round and tower shields.
 - Overhauled spear weapon class to give them a unique, mobile fighting style.
 - Reduced number of bleed ticks from one-handed swords.
