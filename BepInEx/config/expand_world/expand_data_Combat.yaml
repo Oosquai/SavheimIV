@@ -5,6 +5,10 @@
   ints:
   - HasFields, 1
 
+- name: tamed_combat
+  ints:
+  - tamed, 1
+
 - name: not_tamed_combat
   ints:
   - tamed, 0
@@ -203,3 +207,58 @@
 - name: d_spirit_counter_on
   ints:
   - i_spirit_counter, 1
+
+####################################
+# Staff of the Wild
+- name: d_gear_staffgreenroots_t3
+  hashes:
+  - RightItem, StaffGreenRoots_T3
+
+- name: d_gear_staffgreenroots_t5
+  hashes:
+  - RightItem, StaffGreenRoots_T5
+
+- name: d_gear_staffgreenroots_t7
+  hashes:
+  - RightItem, StaffGreenRoots
+
+- name: d_gear_staffgreenroots_any
+  hashes:
+  - RightItem, StaffGreenRoots, StaffGreenRoots_T5, StaffGreenRoots_T3
+
+- name: d_tentaroot_t7
+  ints:
+  - tamed, 1
+  floats:
+  - RandomSkillFactor, 0.6
+  - max_health, 200
+  - health, 200.01
+
+- name: d_tentaroot_t5
+  ints:
+  - tamed, 1
+  floats:
+  - RandomSkillFactor, 0.4
+  - max_health, 120
+  - health, 120.01
+
+- name: d_tentaroot_t3
+  ints:
+  - tamed, 1
+  floats:
+  - RandomSkillFactor, 0.2
+  - max_health, 60
+  - health, 60.01
+
+- name: d_staffgreenroots_hot_tick_rst
+  ints:
+  - i_staffgreenroots_hot_tick, 0
+
+- name: d_staffgreenroots_hot_tick_inc
+  ints:
+  - i_staffgreenroots_hot_tick, <int_i_staffgreenroots_hot_tick> + 1
+
+- name: d_staffgreenroots_gong_pitch
+  floats:
+  - ZSFX.m_minPitch, 2
+  - ZSFX.m_maxPitch, 3

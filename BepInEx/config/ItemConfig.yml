@@ -217,6 +217,8 @@ groups:
     - StaffClusterbomb
     - StaffFireball
     - StaffGreenRoots
+    - StaffGreenRoots_T3
+    - StaffGreenRoots_T5
     - StaffIceShards
     - StaffLightning
     - StaffRedTroll

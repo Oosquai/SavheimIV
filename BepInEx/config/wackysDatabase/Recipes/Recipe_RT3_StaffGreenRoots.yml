@@ -1,0 +1,16 @@
+name: RT3_StaffGreenRoots
+clonePrefabName: StaffGreenRoots_T3
+craftingStation: $bmr_spell_table
+minStationLevel: 2
+maxStationLevelCap: 2
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- ElderBark:12:6:True
+- Iron:4:2:True
+- Guck:3:3:True
+- YmirRemains:1:1:True

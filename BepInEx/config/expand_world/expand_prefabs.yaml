@@ -176,24 +176,6 @@
   fallback: true
 
 ##############################################################
-# Limit Staff of the Wild summons
-# First green root always spawns.
-# After first, any additional cast within 50 meters has an
-# even chance of no additional spawn or tamed Tenta Root (weaker).
-- prefab: staff_greenroots_tentaroot
-  type: create
-  weight: 1E30
-  swap: TentaRoot, tamed
-  objects:
-  - staff_greenroots_tentaroot, 50
-- prefab: staff_greenroots_tentaroot
-  type: create
-  weight: 1E30
-  remove: true
-  objects:
-  - staff_greenroots_tentaroot, 50
-
-##############################################################
 # Orange Crystal Arrow - Torch arrow!
 - prefab: sfx_jc_arrow_hit
   type: create

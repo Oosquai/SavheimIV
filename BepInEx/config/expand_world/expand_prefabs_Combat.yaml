@@ -788,3 +788,256 @@
   objects:
   - sfx_UndeadBurn_Start, 1
   spawn: fx_Fader_Roar_Projectile_Hit
+
+##############################################################
+# Staff of the Wild
+# Multiplayer with mixed levels of staves will negotiate to strongest nearby equipped staff.
+- prefab: staff_greenroots_tentaroot
+  type: create
+  objects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  poke:
+  - self: true
+    parameter: p_greenroot_t7
+
+- prefab: staff_greenroots_tentaroot
+  type: create
+  objects:
+  - Player, 100, d_gear_staffgreenroots_t5
+  bannedObjects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  poke:
+  - self: true
+    parameter: p_greenroot_t5
+
+- prefab: staff_greenroots_tentaroot
+  type: create
+  objects:
+  - Player, 100, d_gear_staffgreenroots_t3
+  bannedObjects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  - Player, 100, d_gear_staffgreenroots_t5
+  poke:
+  - self: true
+    parameter: p_greenroot_t3
+
+### Tier 7 Staff:
+# First green root always spawns.
+# After first, any additional cast within 50 meters has a chance to fail or spawn a tamed Tenta Root (weaker).
+# Max 1 green + 3 tenta roots total.
+# If no green root nearby yet, no action - just let it spawn.
+# conditional swap
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - staff_greenroots_tentaroot, 50    # already a green root nearby
+  bannedObjects:
+  - TentaRoot, 50, tamed_combat
+  bannedObjectsLimit: 3               # < 3 TentaRoots nearby
+  weight: 0.67                        # 0.67 / (1 + 0.67) = 40% chance
+  swap: TentaRoot, d_tentaroot_t7
+
+# conditional remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - staff_greenroots_tentaroot, 50    # already a green root nearby
+  bannedObjects:
+  - TentaRoot, 50, tamed_combat
+  bannedObjectsLimit: 3               # < 3 TentaRoots nearby
+  remove: true
+
+# fallback remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - staff_greenroots_tentaroot, 50    # already a green root nearby
+  fallback: true
+  remove: true
+
+### Tier 5 Staff:
+# All green roots swapped for T5 TentaRoots.  Tentaroots have a chance to keep spawning after first.
+# Max 3.
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t5
+  bannedObjects:
+  - TentaRoot, 50, tamed_combat       # no TentaRoot nearby = guaranteed swap
+  swap: TentaRoot, d_tentaroot_t5
+
+# conditional swap
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t5
+  objects:
+  - TentaRoot, 50, tamed_combat       # TentaRoot nearby ...
+  bannedObjects:
+  - TentaRoot, 50, tamed_combat
+  bannedObjectsLimit: 3               # ... but < 3 TentaRoots nearby
+  weight: 0.67                        # 0.67 / (1 + 0.67) = 40% chance
+  swap: TentaRoot, d_tentaroot_t5
+
+# conditional remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t5
+  objects:
+  - TentaRoot, 50, tamed_combat       # TentaRoot nearby ...
+  bannedObjects:
+  - TentaRoot, 50, tamed_combat
+  bannedObjectsLimit: 3               # ... but < 3 TentaRoots nearby
+  remove: true
+
+# fallback remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t5
+  fallback: true
+  remove: true
+
+### Tier 3 Staff:
+# All green roots swapped for T3 TentaRoots.
+# Max 1.
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t3
+  bannedObjects:
+  - TentaRoot, 50, tamed_combat       # no TentaRoot nearby = guaranteed swap
+  swap: TentaRoot, d_tentaroot_t3
+
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t3
+  objects:
+  - TentaRoot, 50, tamed_combat       # already TentaRoot nearby = guaranteed remove
+  remove: true
+
+###########################
+# Nature Staff heals
+# Sacrifice roots to HOT nearby players
+# Green roots heal for more
+- prefab: Player
+  type: state, staff_shield
+  filter: d_gear_staffgreenroots_any
+  poke:
+  - self: true
+    parameter: p_staffgreenroots_secondary_fx
+  - prefab: staff_greenroots_tentaroot
+    limit: 1
+    maxDistance: 12                              # ROOT SACRIFICE RADIUS FROM CASTER
+    delay: 1.5
+    parameter: p_staffgreenroots_secondary <vec>
+  - prefab: TentaRoot
+    data: tamed_combat
+    limit: 3
+    maxDistance: 12                              # ROOT SACRIFICE RADIUS FROM CASTER
+    delay: 1.5
+    parameter: p_staffgreenroots_secondary <vec>
+
+# only play fx if there's at least one root nearby
+- prefab: Player
+  type: poke, p_staffgreenroots_secondary_fx
+  objects:
+  - staff_greenroots_tentaroot, 12               # ROOT SACRIFICE RADIUS FROM CASTER
+  - TentaRoot, 12                                # ROOT SACRIFICE RADIUS FROM CASTER
+  objectsLimit: 1
+  spawns:
+  - fx_Fader_Spin, 0,0,0, 0,0,0, d_empty_data_combat, 1.5
+  - sfx_fader_bell, 0,0,0, 0,0,0, d_staffgreenroots_gong_pitch, 1.5
+
+# pass heal tick value depending on type of root
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_staffgreenroots_secondary
+  poke:
+  - self: true
+    parameter: p_staffgreenroots_rndDly 7        # GREEN ROOT HoT TICK VALUE
+
+- prefab: TentaRoot
+  type: poke, p_staffgreenroots_secondary
+  filter: tamed_combat
+  poke:
+  - self: true
+    parameter: p_staffgreenroots_rndDly 3        # TENTA ROOT HoT TICK VALUE
+
+# random delays per root so they pop at random times
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_rndDly
+  poke:
+  - self: true
+    delay: 0.3
+    parameter: p_staffgreenroots_creature_heal <par1>
+  command: s 1 tick <par1>
+
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_rndDly
+  poke:
+  - self: true
+    delay: 0.6
+    parameter: p_staffgreenroots_creature_heal <par1>
+  command: s 1 tick <par1>
+
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_rndDly
+  poke:
+  - self: true
+    delay: 0.9
+    parameter: p_staffgreenroots_creature_heal <par1>
+  command: s 1 tick <par1>
+
+# remove root and poke players and tames near each root to start hot loop
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_creature_heal
+  spawns:
+  - fx_Fader_Roar
+  - fx_tentaroot_death
+  remove: true
+  poke:
+  - prefab: Player
+    maxDistance: 8                               # HEAL RADIUS HEALS FROM ROOT
+    parameter: p_staffgreenroots_heal_loop_init <par1>
+  - prefab: creature
+    data: tamed_combat
+    maxDistance: 8                               # HEAL RADIUS HEALS FROM ROOT
+    parameter: p_staffgreenroots_heal_loop_init <par1>
+  command: s 2 tick <par1>
+
+# intercept poke with no-op so we're not healing other tentaroots
+- prefab: TentaRoot
+  type: poke, p_staffgreenroots_heal_loop_init
+  weight: 1E30
+
+# heal loop init for players and creatures.  creatures filtered for tame in previous poke process
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop_init
+  data: d_staffgreenroots_hot_tick_rst
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,0.5
+  - fx_natureweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.2
+  - fx_natureweapon_hit, 0,0,1.5, 0,0,0, d_empty_data_combat, 0.3
+  poke:
+  - self: true
+    delay: 2.3                                   # TIME BETWEEN TICKS
+    parameter: p_staffgreenroots_heal_loop <par1>
+  command: s 3 tick <par1>
+
+# main hot loop
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop
+  filter: int, i_staffgreenroots_hot_tick, 0;9   # MAX TICKS - 1
+  data: d_staffgreenroots_hot_tick_inc
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.5
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>
+    2: bool, true
+  poke:
+  - self: true
+    delay: 2.3                                   # TIME BETWEEN TICKS
+    parameter: p_staffgreenroots_heal_loop <par1>
+  command: s 4 tick <par1> cnt <int_i_staffgreenroots_hot_tick>
+
+# end HoT, clear state
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop
+  fallback: true
+  data: d_staffgreenroots_hot_tick_rst
+  injectData: true
+
+# IMPLEMENT STACK COUNT LOGIC, similar to bleeds.

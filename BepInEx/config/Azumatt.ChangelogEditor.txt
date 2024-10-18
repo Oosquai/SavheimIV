@@ -15,6 +15,9 @@
 - Adjusted debuff chances on staves and wands.
 - Lightning crossbows now reload regardless of remaining eitr.
 - Adjusted recipe for Alchemic Essence to allow use of more trophies.
+- Added tier 3 and 5 equivalents to Staff of the Wild.
+- Implemented scaling root summon system for Staff of the Wild tiers.
+- Implemented Staff of the Wild Heal Over Time system.  Multiple stacks to be fixed soon...
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
