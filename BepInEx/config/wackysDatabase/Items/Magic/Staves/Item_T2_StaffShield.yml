@@ -1,7 +1,7 @@
 name: StaffShield_T2
 m_weight: 0.3
 m_name: Novice's Staff of Protection
-m_description: $item_staffshield_description
+m_description: $item_staffshield_description  If timed correctly, the secondary move performs a Spirit Counter that can repel any attack and is especially effective against the Undead.
 clonePrefabName: StaffShield
 mockName: 
 customIcon: 
@@ -51,8 +51,8 @@ Primary_Attack:
   Reset_Chain_If_hit: None
   SpawnOnHit: 
   SpawnOnHit_Chance: 0
-  Attack_status_effect: 
-  Attack_status_effect_chance: 
+  Attack_status_effect: SE_Savheim_StaffShield_SH
+  Attack_status_effect_chance: 1
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -90,19 +90,19 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: ''
+  Attack_Animation: swing_longsword1
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
-  m_attackStamina: 20
-  m_eitrCost: 0
+  Custom_AttackSpeed: 1.5
+  m_attackStamina: 0
+  m_eitrCost: 8
   AttackHealthCost: 0
-  m_attackHealthPercentage: 0
-  SpeedFactor: 0.2
-  DmgMultiplier: 1
-  ForceMultiplier: 1
-  StaggerMultiplier: 1
+  m_attackHealthPercentage: 8
+  SpeedFactor: 0.7
+  DmgMultiplier: 0
+  ForceMultiplier: 0
+  StaggerMultiplier: 0
   RecoilMultiplier: 0
   AttackRange: 1.5
   AttackHeight: 0.6
@@ -183,8 +183,8 @@ m_maxStackSize: 1
 m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: false
-Attack_status_effect: SE_Savheim_Staff_shield_T2
-Attack_status_effect_chance: 1
+Attack_status_effect: 
+Attack_status_effect_chance: 0
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false
@@ -202,7 +202,7 @@ m_skillType: BloodMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
 m_toolTier: 5
-m_maxQuality: 4
+m_maxQuality: 2
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

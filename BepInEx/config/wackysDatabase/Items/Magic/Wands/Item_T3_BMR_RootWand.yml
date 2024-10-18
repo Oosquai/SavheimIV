@@ -1,7 +1,7 @@
 name: BMR_RootWand
 m_weight: 0.5
 m_name: $bmr_wand_root
-m_description: Wielded in one hand and lacking in length, wands can't fling spells as far as staves can, but are otherwise their equal.  The ability to pair them with a shield makes them excellent choices for close to mid range magical combat.
+m_description: Wielded in one hand and lacking in length, wands can't fling spells as far or strip resistances as often as staves can, but are otherwise their equal.  Their reduced size allows for faster dodging and the use of shields though, making them excellent choices for close to mid range magical combat.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -57,7 +57,7 @@ Primary_Attack:
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
-  Launch_Angle: -8
+  Launch_Angle: -4
   Projectile_Burst: 1
   Burst_Interval: 0
   Destory_Previous_Projectile: false
@@ -186,7 +186,7 @@ m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: true
 Attack_status_effect: SE_Savheim_VeryWeakFrost
-Attack_status_effect_chance: 0.2
+Attack_status_effect_chance: 0.13
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

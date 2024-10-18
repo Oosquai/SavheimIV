@@ -95,6 +95,85 @@
     delay: 0.2  # set to just less than fastest possible wind-up of swords, axes, and spears.  Local testing showed spears 0.35 worked but 0.37 failed.  players can speed up attacks though.  0.3?
 
 ###############################################################
+# Spirit Counter
+- prefab: Player
+  type: state, swing_longsword1
+  filter: gear_staffshield_all
+  poke:
+  - self: true
+    parameter: p_spirit_counter
+
+- prefab: Player
+  type: poke, p_spirit_counter
+  data: d_spirit_counter_on
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Staff_shield_Spirit_Counter
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - self: true
+    delay: 0.3                      # must match TtL of SE_Savheim_Staff_shield_Spirit_Counter
+    parameter: p_spirit_counter_off
+
+- prefab: Player
+  type: poke, p_spirit_counter_off
+  data: d_spirit_counter_off
+  injectData: true
+
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, d_spirit_counter_t2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: p_spirit_counter_AE 24 <vec>  # higher than same tier sanctis, since this requires parry timing and sacrifices shield
+    maxDistance: 4
+
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, d_spirit_counter_t4
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: p_spirit_counter_AE 48 <vec>
+    maxDistance: 4
+
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, d_spirit_counter_t6
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: p_spirit_counter_AE 72 <vec>
+    maxDistance: 4
+
+# Spirit Counter Spirit & Stagger AE
+- prefab: creature
+  type: poke, p_spirit_counter_AE
+  filter: not_tamed_combat
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, spirit=<par1>
+  poke:
+  - self: true
+    parameter: p_spirit_counter_AE_fx <par2>
+
+- prefab: creature
+  type: poke, p_spirit_counter_AE_fx
+  objects:
+  - sfx_UndeadBurn_Start, 1
+  spawn: fx_Fader_Roar
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+###############################################################
 # Results of exotic player states
 ###############################################################
 # Aegis parry
@@ -567,15 +646,16 @@
   delay: 0.2
   poke:
   - prefab: creature
-    parameter: spiritAE 20
+    data: not_tamed_combat
+    parameter: spiritAE 18
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 - prefab: Player
@@ -585,15 +665,16 @@
   delay: 0.2
   poke:
   - prefab: creature
+    data: not_tamed_combat
     parameter: spiritAE 30
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 - prefab: Player
@@ -603,15 +684,16 @@
   delay: 0.2
   poke:
   - prefab: creature
-    parameter: spiritAE 40
+    data: not_tamed_combat
+    parameter: spiritAE 42
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 - prefab: Player
@@ -621,15 +703,16 @@
   delay: 0.2
   poke:
   - prefab: creature
-    parameter: spiritAE 50
+    data: not_tamed_combat
+    parameter: spiritAE 54
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 - prefab: Player
@@ -639,15 +722,16 @@
   delay: 0.2
   poke:
   - prefab: creature
-    parameter: spiritAE 60
+    data: not_tamed_combat
+    parameter: spiritAE 66
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 - prefab: Player
@@ -657,15 +741,16 @@
   delay: 0.2
   poke:
   - prefab: creature
-    parameter: spiritAE 70
+    data: not_tamed_combat
+    parameter: spiritAE 72
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 - prefab: Player
@@ -675,39 +760,31 @@
   delay: 0.2
   poke:
   - prefab: creature
-    parameter: spiritAE 80
+    data: not_tamed_combat
+    parameter: spiritAE 84
     maxDistance: 4
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
+    1: hash, SE_Savheim_StaffShield_SH
     2: bool, true
     3: int, 1
-    4: float, -39
-    delay: 0.3
-
-- prefab: Player
-  type: state, staff_summon
-  filter: gear_sanctis_flame
-  spawn: fx_DvergerMage_Mistile_attack
-  delay: 0.2
-  poke:
-  - prefab: creature
-    parameter: fireAE
-    maxDistance: 4
-    delay: 0.4
-  objectRpc:
-  - name: RPC_AddStatusEffect
-    1: hash, Staff_shield
-    2: bool, true
-    3: int, 1
-    4: float, -39
+    4: float, -9.8
     delay: 0.3
 
 # Sanctis spirit AE
 - prefab: creature
   type: poke, spiritAE
-  spawn: fx_Fader_Roar_Projectile_Hit
+  filter: not_tamed_combat
   objectRpc:
   - name: RPC_Damage
     1: hit, spirit=<par1>
+  poke:
+  - self: true
+    parameter: spiritAE_fx
+
+- prefab: creature
+  type: poke, spiritAE_fx
+  objects:
+  - sfx_UndeadBurn_Start, 1
+  spawn: fx_Fader_Roar_Projectile_Hit

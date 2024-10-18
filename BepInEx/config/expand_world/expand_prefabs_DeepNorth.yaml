@@ -1197,6 +1197,7 @@
 - prefab: TentaRoot
   type: create
   biomes: DeepNorth
+  filter: not_tamed_dn
   objects:
   - gd_king, 100
   data: TentaRootMover_dnrl

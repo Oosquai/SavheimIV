@@ -33,7 +33,7 @@ Savheim IV - Sell precious stones, trophies, extra keys, wishbones, and some oth
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and then for providing such deep hooks for the modding community!
 Savheim IV - Thank you to some very talented modders and builders:  Azumatt, blaxxun, wackymole, Jere, Raaka, DhakhaR, JPValheim, KG, OrianaVenture, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, Fustercluck, and more!
-Savheim IV - Thank you to Matumryk, Woody, goatman, and Rusty for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
+Savheim IV - Thank you to MetalMarshmallow, Woody, goatman, and Rusty for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>.  If searching the Catalog, use the search field at the bottom of the window instead of the top.
 Savheim IV - Gems and jewelry have been completely reworked.  Craft a Runaeldr Satchel to conveniently take jewelry options with you on adventures.
 Savheim IV - Iron Gate gave Ashlands enemies juke attack animations.  They're scary.  Bring a tower shield and block them until you learn their timing.  Go well-prepared in general.  Ashlands is no joke.
@@ -56,3 +56,4 @@ Savheim IV - The Deep North is scaled for endgame but can be visited at any leve
 Savheim IV - Bleed effects do greater damage per tick and and last longer based on the victim's maximum health.  Bleeds can be stacked for increased damage per tick, but each additional stack will reduce the time your target bleeds.  Some creatures don't bleed.
 Savheim IV - Resistance debuffs are ineffective against creatures that are naturally resistant to the damage type in question.
 Savheim IV - After absorbing an attack with any shield, you have a brief opportunity to perform a high-damage counterattack with any one-handed weapon, excluding knives.
+Savheim IV - Hold 'E' while opening a chest to automatically deposit items from your inventory into matching item stacks already present in the chest.

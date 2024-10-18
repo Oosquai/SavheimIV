@@ -18,7 +18,18 @@ TimeToLive: 3
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
-- name: fx_Potion_frostresist
+- name: vfx_poisonarrow_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_Potion_frostresist_Start
   m_enabled: true
   m_variant: -1
   m_attach: true

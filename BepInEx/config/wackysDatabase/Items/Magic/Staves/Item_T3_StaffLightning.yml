@@ -36,7 +36,7 @@ Primary_Attack:
   ReloadTime: 3
   ReloadTimeMultiplier: 1
   Reload_Stamina_Drain: 0
-  Reload_Eitr_Drain: 25
+  Reload_Eitr_Drain: 0
   Bow_Draw: false
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0

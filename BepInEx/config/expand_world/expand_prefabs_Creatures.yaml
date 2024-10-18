@@ -705,6 +705,7 @@
 - prefab: TentaRoot
   type: create
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  filter: not_tamed_creatures
   objects:
   - gd_king, 100
   data: TentaRootMover

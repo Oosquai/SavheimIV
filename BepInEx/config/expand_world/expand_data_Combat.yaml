@@ -1,9 +1,13 @@
 ##############################################################
-# Savheim Combat Mechanics - Data
+# Savheim Combat Mechanics - data
 ##############################################################
 - name: d_empty_data_combat
   ints:
   - HasFields, 1
+
+- name: not_tamed_combat
+  ints:
+  - tamed, 0
 
 - name: d_sfx_silent_combat
   ints:
@@ -167,3 +171,35 @@
 - name: gear_sanctis_flame
   hashes:
   - RightItem, CWS_Sword_6_SH
+
+####################################
+# Spirit Counter
+- name: gear_staffshield_all
+  hashes:
+  - RightItem, StaffShield_T2, StaffShield_T4, StaffShield
+
+- name: d_spirit_counter_t2
+  ints:
+  - i_spirit_counter, 1
+  hashes:
+  - RightItem, StaffShield_T2
+
+- name: d_spirit_counter_t4
+  ints:
+  - i_spirit_counter, 1
+  hashes:
+  - RightItem, StaffShield_T4
+
+- name: d_spirit_counter_t6
+  ints:
+  - i_spirit_counter, 1
+  hashes:
+  - RightItem, StaffShield
+
+- name: d_spirit_counter_off
+  ints:
+  - i_spirit_counter, 0
+
+- name: d_spirit_counter_on
+  ints:
+  - i_spirit_counter, 1

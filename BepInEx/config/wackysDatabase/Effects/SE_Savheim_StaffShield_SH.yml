@@ -1,4 +1,4 @@
-Name: SE_Savheim_Staff_shield_T4
+Name: SE_Savheim_StaffShield_SH
 Status_m_name: $se_shield
 Category: ''
 IconName: Staff_Shield
@@ -15,7 +15,7 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 240
+TimeToLive: 30
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
@@ -77,8 +77,8 @@ SeData:
   m_healthOverTimeTicks: 0
   m_healthOverTimeTickHP: 0
 SeShield:
-  AbsorbDmg: 120
-  AbsorbDmgWorldLevel: 180
+  AbsorbDmg: 50
+  AbsorbDmgWorldLevel: 60
   LevelUpSkillFactor: 1
-  TtlPerItemLevel: 48
-  AbsorbDmgPerSkill: 3
+  TtlPerItemLevel: 30
+  AbsorbDmgPerSkill: 5

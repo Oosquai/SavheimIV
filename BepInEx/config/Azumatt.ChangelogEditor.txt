@@ -3,12 +3,25 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/15/24</color>
-- Refactored scripts for organization and modularity.
-- Creatures with torches or lanterns can now help their allies detect you from further away.
+     0\  Savheim IV Patch Notes, 10/17/24</color>
+- Added Spirit Counter mechanic to Staves of Protection.
+- Fixed Staves of Protection stacking exploits.
+- Improved Sanctis code to restrict effects to those susceptible to spirit damage.
+- Adjusted Sanctis code to give a shield value of 1 instead of 5.
+- Winter will now always cause Cold.
+- Restricted a few decorative build pieces to rarer components.
+- Adjusted some trophy drop chances for those trophies needed for upgrades.
+- More refactoring to clean up scripts.
+- Adjusted debuff chances on staves and wands.
+- Lightning crossbows now reload regardless of remaining eitr.
+- Adjusted recipe for Alchemic Essence to allow use of more trophies.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/15/24
+- Refactored scripts for organization and modularity.
+- Creatures with torches or lanterns can now help their allies detect you from further away.
 
 Patch Notes, 10/14/24
 - Overhauled knife and dual knives weapon classes to enable a vanish mechanic after a kill.
@@ -32,7 +45,7 @@ Patch Notes, 10/13/24
 - Removed Finewood Furniture.  Too much Ikea!
 - High level Farmers can no longer ignore biomes when planting crops.
 - Longship configurations should now be locked to the player who created the ship.
-- The stone torch at the starting stones should always stay lit now, but only if you reroll your world.
+- The light post at the starting stones should always stay lit now, but only if you reroll your world.
 
 Patch Notes, 10/11/24
 - Skeletal, ghostly, and stoney creatures can no longer bleed.
