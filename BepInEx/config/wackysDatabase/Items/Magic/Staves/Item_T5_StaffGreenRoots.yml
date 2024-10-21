@@ -1,7 +1,7 @@
 name: StaffGreenRoots_T5
 m_weight: 0.3
 m_name: Staff of Nature
-m_description: Summon up to three roots to guard your back, or sacrifice them to spread their healing energies to your allies.
+m_description: Summon up to three roots to guard your back, or sacrifice them to spread up to three stacks of their healing energies to your allies.
 clonePrefabName: StaffGreenRoots
 mockName: 
 customIcon: 
@@ -20,9 +20,9 @@ Primary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 35
+  m_eitrCost: 19
   AttackHealthCost: 0
-  m_attackHealthPercentage: 0
+  m_attackHealthPercentage: 7
   SpeedFactor: 0.3
   Attack_Start_Noise: 0
   Attack_Hit_Noise: 0
@@ -92,9 +92,9 @@ Secondary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 70
+  m_eitrCost: 38
   AttackHealthCost: 0
-  m_attackHealthPercentage: 0
+  m_attackHealthPercentage: 14
   SpeedFactor: 0.2
   DmgMultiplier: 0
   ForceMultiplier: 0
@@ -153,7 +153,7 @@ Damage:
   Pierce: 0
   Poison: 13
   Slash: 0
-  Spirit: 0
+  Spirit: 13
 Damage_Per_Level:
   Blunt: 13
   Chop: 0
@@ -165,7 +165,7 @@ Damage_Per_Level:
   Pierce: 0
   Poison: 13
   Slash: 0
-  Spirit: 0
+  Spirit: 13
 Armor:
   armor: 15
   armorPerLevel: 1
@@ -185,7 +185,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 8
+  m_blockPower: 7
   m_blockPowerPerLevel: 0
   m_timedBlockBonus: 2
   m_deflectionForce: 0
@@ -205,15 +205,15 @@ m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 0.5
 m_durabilityDrain: 0
-m_maxDurability: 200
-m_durabilityPerLevel: 50
+m_maxDurability: 199
+m_durabilityPerLevel: 53
 m_equipDuration: 0
 Attach_Override: Bow
-m_skillType: ElementalMagic
+m_skillType: BloodMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
 m_toolTier: 5
-m_maxQuality: 4
+m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

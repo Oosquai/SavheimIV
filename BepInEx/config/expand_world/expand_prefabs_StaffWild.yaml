@@ -1,0 +1,386 @@
+###############################################################
+# Savheim Staff of the Wild modifications - prefabs
+###############################################################
+#
+##############################################################
+# Staff of the Wild
+# Reduce obscuring fx
+- prefab: fx_greenroots_projectile_hit
+  type: create
+  remove: true
+  removeDelay: 0.4
+
+# Detect tier of nearby staff or staves
+# Multiplayer with mixed levels of staves will negotiate to strongest nearby equipped staff.
+- prefab: staff_greenroots_tentaroot
+  type: create
+  objects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  poke:
+  - self: true
+    parameter: p_greenroot_t7
+
+- prefab: staff_greenroots_tentaroot
+  type: create
+  objects:
+  - Player, 100, d_gear_staffgreenroots_t5
+  bannedObjects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  poke:
+  - self: true
+    parameter: p_greenroot_t5
+
+- prefab: staff_greenroots_tentaroot
+  type: create
+  objects:
+  - Player, 100, d_gear_staffgreenroots_t3
+  bannedObjects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  - Player, 100, d_gear_staffgreenroots_t5
+  bannedObjectsLimit: 1
+  poke:
+  - self: true
+    parameter: p_greenroot_t3
+
+# If no player with staff nearby, no spawns!  (prevent unequip-after-attack hack!)
+- prefab: staff_greenroots_tentaroot
+  type: create
+  bannedObjects:
+  - Player, 100, d_gear_staffgreenroots_t7
+  - Player, 100, d_gear_staffgreenroots_t5
+  - Player, 100, d_gear_staffgreenroots_t3
+  bannedObjectsLimit: 1
+  remove: true
+
+### Tier 7 Staff:
+# Limited to 1 primal (green) root and 2 tenta roots, but 50% chance of either until primal achieved
+## Near Primals or Tentas: >= 3;  => max roots, so remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - staff_greenroots_tentaroot, 50
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 3-9
+  remove: true
+
+## Near Primals: 0;  Near Tentas: = 2;  => no-op to keep Primal
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 2-2
+  bannedObjects:
+  - staff_greenroots_tentaroot, 50
+  spawn: vfx_Place_digg, 0,0,snap
+  # no-op
+
+## Near Primals: 0;  Near Tentas: < 2;  => 50% chance to keep Primal (no-op) or swap to Tenta
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 0-1
+  bannedObjects:
+  - staff_greenroots_tentaroot, 50
+  spawn: vfx_Place_digg, 0,0,snap
+  # no-op
+
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 0-1
+  bannedObjects:
+  - staff_greenroots_tentaroot, 50
+  swap: TentaRoot, d_tentaroot_t7
+  spawn: vfx_Place_digg, 0,0,snap
+
+## Near Primals: 1;  Near Tentas: < 2;  => Swap to Tenta
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t7
+  objects:
+  - staff_greenroots_tentaroot, 50
+  bannedObjects:
+  - TentaRoot, 50, tamed_staffwild
+  bannedObjectsLimit: 2
+  swap: TentaRoot, d_tentaroot_t7
+  spawn: vfx_Place_digg, 0,0,snap
+
+### Tier 5 Staff:
+# Limit to 3 Tenta roots
+## Near Primals or Tentas: >= 3;  => max roots, so remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t5
+  objects:
+  - staff_greenroots_tentaroot, 50
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 3-9
+  remove: true
+
+## Near Tentas: < 3;  => swap
+# check Primals too, in case people are spawning them and then changing staves
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t5
+  objects:
+  - staff_greenroots_tentaroot, 50
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 0-2
+  swap: TentaRoot, d_tentaroot_t5
+  spawn: vfx_Place_digg, 0,0,snap
+
+### Tier 3 Staff:
+# Limit to 1 Tenta root
+## Near Roots: >= 1;  => remove
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t3
+  objects:
+  - staff_greenroots_tentaroot, 50
+  - TentaRoot, 50, tamed_staffwild
+  objectsLimit: 1-9
+  remove: true
+
+## Near Tentas: < 1;  => swap
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_greenroot_t3
+  bannedObjects:
+  - staff_greenroots_tentaroot, 50
+  - TentaRoot, 50, tamed_staffwild
+  bannedObjectsLimit: 1
+  swap: TentaRoot, d_tentaroot_t3
+  spawn: vfx_Place_digg, 0,0,snap
+
+###########################
+# Nature Staff heals
+# Sacrifice roots to HOT nearby players
+# Green roots heal for more
+- prefab: Player
+  type: state, staff_shield
+  filter: d_gear_staffgreenroots_any
+  poke:
+  - self: true
+    parameter: p_staffgreenroots_secondary_fx
+  - prefab: staff_greenroots_tentaroot
+    limit: 1
+    maxDistance: 12                              # ROOT SACRIFICE RADIUS FROM CASTER
+    delay: 1.5
+    parameter: p_staffgreenroots_secondary <vec>
+  - prefab: TentaRoot
+    data: tamed_staffwild
+    limit: 3
+    maxDistance: 12                              # ROOT SACRIFICE RADIUS FROM CASTER
+    delay: 1.5
+    parameter: p_staffgreenroots_secondary <vec>
+
+# only play fx if there's at least one root nearby
+- prefab: Player
+  type: poke, p_staffgreenroots_secondary_fx
+  objects:
+  - staff_greenroots_tentaroot, 12               # ROOT SACRIFICE RADIUS FROM CASTER
+  - TentaRoot, 12                                # ROOT SACRIFICE RADIUS FROM CASTER
+  objectsLimit: 1
+  spawns:
+  - fx_Fader_Spin, 0,0,0, 0,0,0, d_empty_data_staffwild, 1.5
+  - sfx_fader_bell, 0,0,0, 0,0,0, d_staffgreenroots_gong_pitch, 1.5
+
+# pass heal tick value depending on type of root
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_staffgreenroots_secondary
+  poke:
+  - self: true
+    parameter: p_staffgreenroots_rndDly 7        # GREEN ROOT HoT TICK VALUE
+
+- prefab: TentaRoot
+  type: poke, p_staffgreenroots_secondary
+  filter: tamed_staffwild
+  poke:
+  - self: true
+    parameter: p_staffgreenroots_rndDly 3        # TENTA ROOT HoT TICK VALUE
+
+# random delays per root so they pop at random times
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_rndDly
+  poke:
+  - self: true
+    delay: 0.4
+    parameter: p_staffgreenroots_creature_heal <par1>
+
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_rndDly
+  poke:
+  - self: true
+    delay: 0.5
+    parameter: p_staffgreenroots_creature_heal <par1>
+
+- prefab: staff_greenroots_tentaroot, TentaRoot
+  type: poke, p_staffgreenroots_rndDly
+  poke:
+  - self: true
+    delay: 0.6
+    parameter: p_staffgreenroots_creature_heal <par1>
+
+# remove root and poke players and tames near each root to start hot loop
+# primal root staggers nearby enemies (bosses and some elites are immune)
+- prefab: staff_greenroots_tentaroot
+  type: poke, p_staffgreenroots_creature_heal
+  spawns:
+  - fx_Fader_Roar
+  - fx_tentaroot_death
+  - fx_greenroots_projectile_hit, 0,0,0, 0,0,0, d_empty_data_staffwild, 0, true
+  remove: true
+  poke:
+  - prefab: Player
+    maxDistance: 8                               # HEAL RADIUS FROM ROOT
+    parameter: p_staffgreenroots_heal_loop_init <par1>
+  - prefab: creature
+    data: tamed_staffwild
+    maxDistance: 8                               # HEAL RADIUS FROM ROOT
+    parameter: p_staffgreenroots_heal_loop_init <par1>
+  - prefab: creature
+    data: not_tamed_staffwild
+    maxDistance: 3                               # STAGGER RADIUS FROM ROOT
+    parameter: p_staffgreenroots_stagger <vec>
+
+- prefab: TentaRoot
+  type: poke, p_staffgreenroots_creature_heal
+  spawns:
+  - fx_Fader_Roar
+  - fx_tentaroot_death
+  remove: true
+  poke:
+  - prefab: Player
+    maxDistance: 8                               # HEAL RADIUS FROM ROOT
+    parameter: p_staffgreenroots_heal_loop_init <par1>
+  - prefab: creature
+    data: tamed_staffwild
+    maxDistance: 8                               # HEAL RADIUS FROM ROOT
+    parameter: p_staffgreenroots_heal_loop_init <par1>
+
+# intercept poke with no-op so we're not healing other tentaroots
+- prefab: TentaRoot
+  type: poke, p_staffgreenroots_heal_loop_init
+  weight: 1E30
+  # no-op
+
+# stagger close enemies when primal root pops
+- prefab: creature
+  type: poke, p_staffgreenroots_stagger
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+###############################
+# Heal stacks and counters
+# Heal loop init for players and creatures.  creatures filtered for tame in previous poke process
+# Up to 3 counters per player, used round robin, and overwriting tick count at wrap around
+# Stacks determines which loop gets used.  This round robins and wraps after 0, 1, 2.
+# Stack ID ensures self-poke loops die if a loop is overwritten.
+# Ticks count heal ticks per loop.
+# Time between ticks intentionally diverges per stack count.  When tick frequency is about equal, they're about to end!
+## STACK INITS
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop_init
+  filter: int, i_staffgreenroots_hot_stacks, 0   # round robin stack count filter
+  data: d_staffgreenroots_hot_init0              # reset tick count. increment stack_id. and increment stack count
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,0.5
+  - fx_natureweapon_hit, 0,0,1, 0,0,0, d_empty_data_staffwild, 0.2
+  - fx_natureweapon_hit, 0,0,1.5, 0,0,0, d_empty_data_staffwild, 0.3
+  poke:
+  - self: true
+    delay: 2.4                                   # TIME BETWEEN TICKS. diverge per stack count
+    parameter: p_staffgreenroots_heal_loop0 <par1> <int_i_staffgreenroots_hot_stack0_id>+1
+
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop_init
+  filter: int, i_staffgreenroots_hot_stacks, 1   # round robin stack count filter
+  data: d_staffgreenroots_hot_init1              # reset tick count. increment stack_id. and increment stack count
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,0.5
+  - fx_natureweapon_hit, 0,0,1, 0,0,0, d_empty_data_staffwild, 0.2
+  - fx_natureweapon_hit, 0,0,1.5, 0,0,0, d_empty_data_staffwild, 0.3
+  poke:
+  - self: true
+    delay: 2.48                                  # TIME BETWEEN TICKS. diverge per stack count
+    parameter: p_staffgreenroots_heal_loop1 <par1> <int_i_staffgreenroots_hot_stack1_id>+1
+
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop_init
+  filter: int, i_staffgreenroots_hot_stacks, 2   # round robin stack count filter
+  data: d_staffgreenroots_hot_init2              # reset tick count. increment stack_id. and RESET stack count
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,0.5
+  - fx_natureweapon_hit, 0,0,1, 0,0,0, d_empty_data_staffwild, 0.2
+  - fx_natureweapon_hit, 0,0,1.5, 0,0,0, d_empty_data_staffwild, 0.3
+  poke:
+  - self: true
+    delay: 2.56                                  # TIME BETWEEN TICKS. diverge per stack count
+    parameter: p_staffgreenroots_heal_loop2 <par1> <int_i_staffgreenroots_hot_stack2_id>+1
+
+## MAIN HOT LOOPS
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop0
+  filters:
+  - int, i_staffgreenroots_hot_ticks0, 0;9       # MAX TICKS - 1
+  - int, i_staffgreenroots_hot_stack0_id, <par2> # check stack ID to ensure it hasn't changed else this loop dies.
+  data: d_staffgreenroots_hot_ticks0_inc
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.5
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>
+    2: bool, true
+  poke:
+  - self: true
+    delay: 2.4                                   # TIME BETWEEN TICKS. diverge per stack count
+    parameter: p_staffgreenroots_heal_loop0 <par1> <par2>
+  ### DEBUG ###
+  #command: s Stack 0 | Stack ID <int_i_staffgreenroots_hot_stack0_id> | Tick <int_i_staffgreenroots_hot_ticks0> | Heal <par1>
+  #############
+
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop1
+  filters:
+  - int, i_staffgreenroots_hot_ticks1, 0;9       # MAX TICKS - 1
+  - int, i_staffgreenroots_hot_stack1_id, <par2> # check stack ID to ensure it hasn't changed else this loop dies.
+  data: d_staffgreenroots_hot_ticks1_inc
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.5
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>
+    2: bool, true
+  poke:
+  - self: true
+    delay: 2.48                                  # TIME BETWEEN TICKS. diverge per stack count
+    parameter: p_staffgreenroots_heal_loop1 <par1> <par2>
+  ### DEBUG ###
+  #command: s Stack 1 | Stack ID <int_i_staffgreenroots_hot_stack1_id> | Tick <int_i_staffgreenroots_hot_ticks1> | Heal <par1>
+  #############
+
+- prefab: Player, creature
+  type: poke, p_staffgreenroots_heal_loop2
+  filters:
+  - int, i_staffgreenroots_hot_ticks2, 0;9       # MAX TICKS - 1
+  - int, i_staffgreenroots_hot_stack2_id, <par2> # check stack ID to ensure it hasn't changed else this loop dies.
+  data: d_staffgreenroots_hot_ticks2_inc
+  injectData: true
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.5
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>
+    2: bool, true
+  poke:
+  - self: true
+    delay: 2.56                                  # TIME BETWEEN TICKS. diverge per stack count
+    parameter: p_staffgreenroots_heal_loop2 <par1> <par2>
+  ### DEBUG ###
+  #command: s Stack 2 | Stack ID <int_i_staffgreenroots_hot_stack2_id> | Tick <int_i_staffgreenroots_hot_ticks2> | Heal <par1>
+  #############
+
+# No clean up!  Just let stacks round robin.  Ticks always reset in loop_init processes.

@@ -3,7 +3,16 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/17/24</color>
+     0\  Savheim IV Patch Notes, 10/20/24</color>
+- Alchemy health and stamina potions now have cooldowns.
+- Dvergr and Soul Lanterns can no longer be enchanted.
+- Staff of the Wild root HoT system cleaned up; multiple stacks work correctly now.
+- Improved effects for dual knives Gut Twist proc.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/17/24
 - Added Spirit Counter mechanic to Staves of Protection.
 - Fixed Staves of Protection stacking exploits.
 - Improved Sanctis code to restrict effects to those susceptible to spirit damage.
@@ -18,9 +27,6 @@
 - Added tier 3 and 5 equivalents to Staff of the Wild.
 - Implemented scaling root summon system for Staff of the Wild tiers.
 - Implemented Staff of the Wild Heal Over Time system.  Multiple stacks to be fixed soon...
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 10/15/24
 - Refactored scripts for organization and modularity.

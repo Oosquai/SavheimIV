@@ -10,7 +10,7 @@ disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- ElderBark:12:6:True
-- Iron:4:2:True
+- ElderBark:17:7:True
+- Iron:7:3:True
 - Guck:3:3:True
-- YmirRemains:1:1:True
+- YmirRemains:3:1:True
