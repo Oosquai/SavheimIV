@@ -741,3 +741,21 @@
   objects:
   - sfx_UndeadBurn_Start, 1
   spawn: fx_Fader_Roar_Projectile_Hit
+
+##############
+## Reapers
+## Secondary chained off first primary = bonus hit (battleaxe_attack1, 0.5)
+## Secondary chained off second primary = bonus damage (2.5x?)
+## Secondary chained off third primary = SE_Savheim_Rend_Reaper
+## Secondary damage 1.0.  Remove Rend SE.
+#- prefab: Player
+#  type: state, battleaxe_attack2
+#  objectRpc:
+#  - name: SetTrigger
+#    target: all
+#    1: name, battleaxe_attack1
+#    delay: 0.5
+##  - name: SetTrigger
+##    target: all
+##    1: name, atgeir_attack2
+##    delay: 1.2

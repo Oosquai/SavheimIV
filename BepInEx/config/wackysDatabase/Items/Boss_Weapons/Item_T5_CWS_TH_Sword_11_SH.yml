@@ -91,11 +91,11 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: greatsword_secondary
+  Attack_Animation: battleaxe_attack2
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.4
+  Custom_AttackSpeed: 0.9
   m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0

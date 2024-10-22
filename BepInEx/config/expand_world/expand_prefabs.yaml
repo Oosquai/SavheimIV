@@ -109,9 +109,7 @@
   spawns:
   - stone_marker_savheim
   poke:
-  - prefab: guard_stone
-    maxDistance: 1
-    limit: 1
+  - self: true
     parameter: p_ward_no_fall_dmg_loop
 
 # check if ward enabled and player in range, then set SE on player and self-poke (loop)
@@ -124,9 +122,7 @@
   - prefab: Player
     maxDistance: 32
     parameter: p_ward_no_fall_dmg_se
-  - prefab: guard_stone
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 3.1
     parameter: p_ward_no_fall_dmg_loop
 

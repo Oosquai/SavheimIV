@@ -71,9 +71,7 @@
   bannedObjects:
   - vfx_Poison, 0.1
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     parameter: p_staff_vomit_infect
 
 # infected!  separate process for vfx
@@ -83,9 +81,7 @@
   - vfx_GuckSackHit, 0,0,1.5
   spawnDelay: 1
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 2
     parameter: p_staff_vomit_1
 
@@ -96,9 +92,7 @@
   - vfx_GuckSackHit, 0,0,1.5
   spawnDelay: 1.3
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 2
     parameter: p_staff_vomit_1
 
@@ -109,9 +103,7 @@
   - name: RPC_Damage
     1: hit, status=Puke_SH
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 10
     parameter: p_staff_vomit_2
   - prefab: creature
@@ -272,18 +264,14 @@
 - prefab: creature
   type: poke, fireAE_spread_randDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 0.4
     parameter: fireAE_spread
 
 - prefab: creature
   type: poke, fireAE_spread_randDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 0.8
     parameter: fireAE_spread
 
@@ -582,27 +570,21 @@
 - prefab: creature
   type: poke, d_valis_light_creature_randomDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 0.3
     parameter: d_valis_light_creature
 
 - prefab: creature
   type: poke, d_valis_light_creature_randomDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 0.6
     parameter: d_valis_light_creature
 
 - prefab: creature
   type: poke, d_valis_light_creature_randomDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 0.9
     parameter: d_valis_light_creature
 
@@ -649,27 +631,21 @@
 - prefab: creature
   type: poke, p_soulcleave_randomDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 0.75
     parameter: d_soulcleave_creature <vec>
 
 - prefab: creature
   type: poke, p_soulcleave_randomDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: d_soulcleave_creature <vec>
 
 - prefab: creature
   type: poke, p_soulcleave_randomDelay
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 2.25
     parameter: d_soulcleave_creature <vec>
 

@@ -3,14 +3,22 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/20/24</color>
+     0\  Savheim IV Patch Notes, 10/21/24</color>
+- Sneak costs stamina again, but can negated by wearing medium armor.
+- Alchemy potion effect, recipe, and cooldown balancing.
+- Code cleanup for prefabs to use self-poking.
+- 1h axes have 100% Rend proc chance, but shorter duration and less debuff vs. battleaxes.
+- Improved animations for 1h axes and reaper secondaries.
+- Spirit resist debuff now lasts longer.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/20/24
 - Alchemy health and stamina potions now have cooldowns.
 - Dvergr and Soul Lanterns can no longer be enchanted.
 - Staff of the Wild root HoT system cleaned up; multiple stacks work correctly now.
 - Improved effects for dual knives Gut Twist proc.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 10/17/24
 - Added Spirit Counter mechanic to Staves of Protection.
