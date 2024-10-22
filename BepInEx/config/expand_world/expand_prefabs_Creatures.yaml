@@ -27,7 +27,7 @@
   biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: clothes_skeleton_mountain
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -38,7 +38,7 @@
   biomes: Meadows, Blackforest
   data: clothes_skeleton
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -48,7 +48,7 @@
   weight: 1E30
   data: clothes_skeleton_poison
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -58,7 +58,7 @@
   weight: 1E30
   data: clothes_draugr
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -68,7 +68,7 @@
   weight: 1E30
   data: clothes_draugr_elite
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -78,7 +78,7 @@
   weight: 1E30
   data: clothes_goblin
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -88,7 +88,7 @@
   weight: 1E30
   data: clothes_goblin_brute
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -103,7 +103,7 @@
   weight: 1E30
   data: clothes_charred_melee
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
@@ -138,9 +138,7 @@
   data: dw_second_attack_cd0
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     parameter: p_dw_extra_attack
 
 # perform second attack.  animations are gated by creature, so only those able to do "swing_longsword" will match.
@@ -170,9 +168,7 @@
   data: dw_second_attack_cd0
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     parameter: p_dw_extra_attack_summon
 
 # summons version - checks for enemy near enough to hit instead of {player, tame}
@@ -201,9 +197,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: p_dw_extra_attack_clr
 
@@ -214,9 +208,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: p_dw_extra_attack_clr_summon
 
@@ -226,9 +218,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 2
     parameter: p_dw_extra_attack_clr
 
@@ -238,9 +228,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 2
     parameter: p_dw_extra_attack_clr_summon
 
@@ -250,9 +238,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: p_dw_extra_attack_clr
 
@@ -262,9 +248,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: p_dw_extra_attack_clr_summon
 
@@ -274,9 +258,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.7
     parameter: p_dw_extra_attack_clr
 
@@ -287,9 +269,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: p_dw_extra_attack_clr
 
@@ -300,9 +280,7 @@
   data: dw_second_attack_cd1
   injectData: true
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1.5
     parameter: p_dw_extra_attack_clr_summon
 
@@ -331,40 +309,32 @@
   type: state, attack
   weight: 0.35
   poke:
-  - prefab: Greydwarf_Elite
-    delay: 1.8
-    maxDistance: 1
-    limit: 1
+  - self: true
+    delay: 1.7
     parameter: p_extra_attack
 
 - prefab: Skeleton_Hildir
   type: state, attack
   weight: 0.45
   poke:
-  - prefab: Skeleton_Hildir
+  - self: true
     delay: 1.8
-    maxDistance: 1
-    limit: 1
     parameter: p_extra_attack
 
 - prefab: Draugr_Elite
   type: state, attack
   weight: 0.4
   poke:
-  - prefab: Draugr_Elite
+  - self: true
     delay: 2
-    maxDistance: 1
-    limit: 1
     parameter: p_extra_attack
 
 - prefab: Skeleton_Poison
   type: state, attack_mace
   weight: 0.35
   poke:
-  - prefab: Skeleton_Poison
+  - self: true
     delay: 2.5
-    maxDistance: 1
-    limit: 1
     parameter: p_extra_attack
 
 - prefab: Fenring
@@ -372,10 +342,8 @@
   - state, attack_claw0
   weight: 0.4
   poke:
-  - prefab: Fenring
+  - self: true
     delay: 1.5
-    maxDistance: 1
-    limit: 1
     parameter: p_extra_attack
 
 #############################
@@ -612,7 +580,7 @@
   type: poke, p_bmr_summon_tweaks
   data: d_bmr_summon_tweaks
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: p_bmr_summon_clothing
     maxDistance: 0.1
 
@@ -621,7 +589,7 @@
   type: poke, p_bmr_summon_tweaks_vanilla
   data: d_bmr_summon_tweaks_vanilla
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: p_bmr_summon_clothing
     maxDistance: 0.1
 
@@ -631,7 +599,7 @@
   type: poke, p_bmr_summon_clothing
   data: clothes_skeleton_bmr_summon
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
@@ -640,7 +608,7 @@
   type: poke, p_bmr_summon_clothing
   data: clothes_skeleton_vanilla_summon
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
@@ -649,7 +617,7 @@
   type: poke, p_bmr_summon_clothing
   data: clothes_draugr_bmr_summon
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
@@ -658,7 +626,7 @@
   type: poke, p_bmr_summon_clothing
   data: clothes_goblin_bmr_summon
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
@@ -667,7 +635,7 @@
   type: poke, p_bmr_summon_clothing
   data: clothes_charred_melee_bmr_summon
   poke:
-  - prefab: creature
+  - prefab: <prefab>
     parameter: gear_buff <float_RandomSkillFactor>
     delay: 0.1
     maxDistance: 0.1
@@ -691,9 +659,7 @@
   - name: RPC_Damage
     1: hit, status=SE_Savheim_RootResist
   poke:
-  - prefab: creature
-    maxDistance: 1
-    limit: 1
+  - self: true
     delay: 1
     parameter: p_creature_root_resist
 

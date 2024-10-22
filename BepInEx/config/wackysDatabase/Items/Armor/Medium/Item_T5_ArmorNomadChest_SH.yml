@@ -29,7 +29,7 @@ Moddifiers:
   m_blockStaminaModifier: 0
   m_dodgeStaminaModifier: 0
   m_swimStaminaModifier: 0
-  m_sneakStaminaModifier: 0
+  m_sneakStaminaModifier: -0.33
   m_runStaminaModifier: 0
 SE_Equip: 
 SE_SET_Equip:
@@ -68,7 +68,7 @@ m_toolTier: 3
 m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
-damageModifiers: []
+damageModifiers: [delete]
 GEffects: 
 GEffectsPLUS:
   Hit_Effects: []

@@ -29,7 +29,7 @@ Moddifiers:
   m_blockStaminaModifier: 0
   m_dodgeStaminaModifier: 0
   m_swimStaminaModifier: 0
-  m_sneakStaminaModifier: 0
+  m_sneakStaminaModifier: -0.33
   m_runStaminaModifier: -0.04
 SE_Equip: 
 SE_SET_Equip: 

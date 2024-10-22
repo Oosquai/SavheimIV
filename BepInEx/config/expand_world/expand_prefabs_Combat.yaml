@@ -41,9 +41,7 @@
   data: d_player_shield_counter_on
   injectData: true
   poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 1
+  - self: true
     delay: 0.2       # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
     parameter: p_shield_counter_end
 
@@ -60,9 +58,7 @@
   - state, unarmed_attack0
   filter: d_player_shield_counter_on
   poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 1
+  - self: true
     data: d_player_shield_counter_on
     parameter: p_shield_counter_fx
 
@@ -72,9 +68,7 @@
   - state, swing_longsword1
   filter: d_player_shield_counter_on_rikarr
   poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 1
+  - self: true
     data: d_player_shield_counter_on
     parameter: p_shield_counter_fx
 
@@ -210,7 +204,6 @@
   filter: roundShieldList
   spawns:
   - sfx_metal_blocked_overlay
-  - vfx_ForgeAddFuel
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_RoundShield_Stam_Regen
@@ -278,9 +271,7 @@
     3: int, 1
     4: float, 1
   poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 1
+  - self: true
     delay: 3
     parameter: p_longbow_jump_cd_off
 
@@ -437,144 +428,112 @@
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 0;99         # victim health range
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+0 1  # ticks, dmg per tick
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 100;199
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+1 2
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 200;299
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+2 3
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 300;499
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+3 4
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 500;799
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+4 5
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 800;1299
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+5 6
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 1300;2099
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+6 7
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 2100;3399
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+7 8
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 3400;5499
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+8 9
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 5500;8899
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+9 10
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 8900;14399
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+10 11
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 14400;23299
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+11 12
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 23300;37699
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+12 13
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 37700;60999
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+13 14
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 61000;98699
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+14 15
 
 - prefab: creature
   type: poke, p_sword_bleed_hp
   filter: float, max_health, 98700;999999
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_fx <par1>+15 16
 
 # Bleed fx
@@ -590,9 +549,7 @@
   - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.4
   - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     parameter: p_sword_bleed_loop <par1> <par2>+<par2>*<int_i_bleed_stack_cnt>
 
 # Main Bleed Loop.  Count to X, then exit.
@@ -605,9 +562,7 @@
   - name: RPC_Damage
     1: hit, damage=<par2>                   # apply tick damage
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     delay: 1
     parameter: p_sword_bleed_loop <par1> <par2>  # self loop
 ### DEBUG - COMMENT OUT ###
@@ -620,9 +575,7 @@
   data: d_bleed_stack_timeout_set  # attempt to clear all bleed state. will only succeed if no other poke loops still active.
   injectData: true
   poke:
-  - prefab: <prefab>
-    limit: 1
-    maxDistance: 1
+  - self: true
     delay: 1.1                     # need this delay to clear all stacks
     parameter: p_sword_bleed_clear
   fallback: true
