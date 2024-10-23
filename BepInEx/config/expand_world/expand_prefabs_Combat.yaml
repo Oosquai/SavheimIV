@@ -742,12 +742,232 @@
   - sfx_UndeadBurn_Start, 1
   spawn: fx_Fader_Roar_Projectile_Hit
 
-##############
-## Reapers
-## Secondary chained off first primary = bonus hit (battleaxe_attack1, 0.5)
-## Secondary chained off second primary = bonus damage (2.5x?)
-## Secondary chained off third primary = SE_Savheim_Rend_Reaper
-## Secondary damage 1.0.  Remove Rend SE.
+#############
+# Reapers
+# Primary X -> Secondary attacks have effects if they connect
+# 1, 2 = Generate stacks on enemy
+# 1, 1, 2 = Pop stacks for heal
+# 1, 1, 1, 2 = Pop stacks for damage
+## set flags when player primary attacks with a reaper, distinguishing between 1st, 2nd, and 3rd animations
+- prefab: Player
+  type: state, greatsword0
+  filter: d_reaper_list
+  data: d_state_reaper0_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed for primary hit to land
+    parameter: p_state_reaper0_clr
+# clear flag after a delay
+- prefab: Player
+  type: poke, p_state_reaper0_clr
+  data: d_state_reaper0_clr
+  injectData: true
+
+- prefab: Player
+  type: state, greatsword1
+  filter: d_reaper_list
+  data: d_state_reaper1_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed for primary hit to land
+    parameter: p_state_reaper1_clr
+# clear flag after a delay
+- prefab: Player
+  type: poke, p_state_reaper1_clr
+  data: d_state_reaper1_clr
+  injectData: true
+
+- prefab: Player
+  type: state, greatsword2
+  filter: d_reaper_list
+  data: d_state_reaper2_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed for primary hit to land
+    parameter: p_state_reaper2_clr
+# clear flag after a delay
+- prefab: Player
+  type: poke, p_state_reaper2_clr
+  data: d_state_reaper2_clr
+  injectData: true
+
+## Detect reaper primary attack making contact, poke if animation flagged
+- prefab: sfx_cinder_rain_hit
+  type: create
+  objects:
+  - Player, 6, d_reaper_list
+  - sfx_sword_hit, 1
+  poke:
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_state_reaper0_filter                 # animation flag check
+    parameter: p_state_reaper0_latched
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_state_reaper1_filter
+    parameter: p_state_reaper1_latched
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_state_reaper2_filter
+    parameter: p_state_reaper2_latched
+
+## Latch state on player that a specific reaper attack made contact
+- prefab: Player
+  type: poke, p_state_reaper0_latched
+  data: d_state_reaper0_latched_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed to start secondary attack
+    parameter: p_state_reaper0_latched_clr
+# clear flag after a delay
+- prefab: Player
+  type: poke, p_state_reaper0_latched_clr
+  data: d_state_reaper0_latched_clr
+  injectData: true
+
+- prefab: Player
+  type: poke, p_state_reaper1_latched
+  data: d_state_reaper1_latched_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed to start secondary attack
+    parameter: p_state_reaper1_latched_clr
+# clear flag after a delay
+- prefab: Player
+  type: poke, p_state_reaper1_latched_clr
+  data: d_state_reaper1_latched_clr
+  injectData: true
+
+- prefab: Player
+  type: poke, p_state_reaper2_latched
+  data: d_state_reaper2_latched_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 1.1                                   # time needed to start secondary attack
+    parameter: p_state_reaper2_latched_clr
+# clear flag after a delay
+- prefab: Player
+  type: poke, p_state_reaper2_latched_clr
+  data: d_state_reaper2_latched_clr
+  injectData: true
+
+## Detect Reaper Secondary attack after 1st primary.  poke creatures to set up for hit fx.
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper0_latched_filter
+  poke:
+  - prefab: creature
+    maxDistance: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo0_pending
+  command: s primary secondary
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper1_latched_filter
+  poke:
+  - prefab: creature
+    maxDistance: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo1_pending
+  command: s primary primary secondary
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter
+  poke:
+  - prefab: creature
+    maxDistance: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending
+  command: s primary primary primary secondary
+
+## Poke creatures to queue flags and queue up flag clears
+- prefab: creature
+  type: poke, p_reaper_combo0_pending
+  data: d_reaper_combo0_pending_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time for reaper 2nd attack to land
+    parameter: p_reaper_combo0_pending_clr
+- prefab: creature
+  type: poke, p_reaper_combo0_pending_clr
+  data: d_reaper_combo0_pending_clr
+  injectData: true
+
+- prefab: creature
+  type: poke, p_reaper_combo1_pending
+  data: d_reaper_combo1_pending_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time for reaper 2nd attack to land
+    parameter: p_reaper_combo1_pending_clr
+- prefab: creature
+  type: poke, p_reaper_combo1_pending_clr
+  data: d_reaper_combo1_pending_clr
+  injectData: true
+
+- prefab: creature
+  type: poke, p_reaper_combo2_pending
+  data: d_reaper_combo2_pending_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time for reaper 2nd attack to land
+    parameter: p_reaper_combo2_pending_clr
+- prefab: creature
+  type: poke, p_reaper_combo2_pending_clr
+  data: d_reaper_combo2_pending_clr
+  injectData: true
+
+## Trigger on reaper 2nd hit fx, then poke creatures with comboX_pending filters
+- prefab: sfx_metal_blocked_overlay
+  type: create
+  objects:
+  - Player, 6, d_reaper_list
+  - sfx_sword_hit, 1
+  poke:
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    data: d_reaper_combo0_pending_set
+    parameter: p_reaper_combo0_hit
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    data: d_reaper_combo1_pending_set
+    parameter: p_reaper_combo1_hit
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    data: d_reaper_combo2_pending_set
+    parameter: p_reaper_combo2_hit
+
+## Primary-Secondary Combo = Create debuff stacks on creatures
+- prefab: creature
+  type: poke, p_reaper_combo0_hit
+  spawns:
+  - fx_bloodweapon_hit
+  - sfx_leech_hit
+  - sfx_gjall_idle_shiver
+
+
+#######
+# sfx_hit
+# sfx_axe_flint_hit
+# sfx_leech_hit
+# sfx_fallenvalkyrie_attack_spit_projectile
 #- prefab: Player
 #  type: state, battleaxe_attack2
 #  objectRpc:
@@ -755,7 +975,7 @@
 #    target: all
 #    1: name, battleaxe_attack1
 #    delay: 0.5
-##  - name: SetTrigger
-##    target: all
-##    1: name, atgeir_attack2
-##    delay: 1.2
+#  - name: SetTrigger
+#    target: all
+#    1: name, atgeir_attack2
+#    delay: 1.2

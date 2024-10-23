@@ -24,59 +24,62 @@
     1:
       armor_percentage: 1
     2:
-      armor_percentage: 2
+      armor_percentage: 1
+      max_stamina: 1
     3:
-      armor_percentage: 3
+      armor_percentage: 2
+      max_stamina: 1
     4:
-      armor_percentage: 4
+      armor_percentage: 2
+      max_stamina: 2
     5:
+      armor_percentage: 3
+      max_stamina: 2
+    6:
+      armor_percentage: 3
+      max_stamina: 3
+    7:
+      armor_percentage: 4
+      max_stamina: 3
+    8:
+      armor_percentage: 4
+      max_stamina: 4
+    9:
+      armor_percentage: 5
+      max_stamina: 4
+    10:
       armor_percentage: 5
       max_stamina: 5
-    6:
+    11:
       armor_percentage: 6
       max_stamina: 5
-    7:
+    12:
+      armor_percentage: 6
+      max_stamina: 6
+    13:
       armor_percentage: 7
-      max_stamina: 5
-    8:
+      max_stamina: 6
+    14:
+      armor_percentage: 7
+      max_stamina: 7
+    15:
       armor_percentage: 8
-      max_stamina: 5
-    9:
+      max_stamina: 7
+    16:
+      armor_percentage: 8
+      max_stamina: 8
+    17:
       armor_percentage: 9
-      max_stamina: 5
-    10:
+      max_stamina: 8
+    18:
+      armor_percentage: 9
+      max_stamina: 9
+    19:
+      armor_percentage: 10
+      max_stamina: 9
+    20:
       armor_percentage: 10
       max_stamina: 10
-    11:
-      armor_percentage: 11
-      max_stamina: 10
-    12:
-      armor_percentage: 12
-      max_stamina: 10
-    13:
-      armor_percentage: 13
-      max_stamina: 10
-    14:
-      armor_percentage: 14
-      max_stamina: 10
-    15:
-      armor_percentage: 15
-      max_stamina: 15
-    16:
-      armor_percentage: 16
-      max_stamina: 15
-    17:
-      armor_percentage: 17
-      max_stamina: 15
-    18:
-      armor_percentage: 18
-      max_stamina: 15
-    19:
-      armor_percentage: 19
-      max_stamina: 15
-    20:
-      armor_percentage: 20
-      max_stamina: 20
 
 - Items:
     - HelmetMage
@@ -91,60 +94,59 @@
     1:
       armor_percentage: 1
     2:
-      armor_percentage: 2
+      armor_percentage: 1
     3:
-      armor_percentage: 3
+      armor_percentage: 2
     4:
-      armor_percentage: 4
+      armor_percentage: 2
     5:
-      armor_percentage: 5
+      armor_percentage: 3
+      max_hp: 1
     6:
-      armor_percentage: 6
+      armor_percentage: 3
+      max_hp: 1
     7:
-      armor_percentage: 7
+      armor_percentage: 4
+      max_hp: 1
     8:
-      armor_percentage: 8
+      armor_percentage: 4
+      max_hp: 1
     9:
-      armor_percentage: 9
+      armor_percentage: 5
+      max_hp: 1
     10:
-      armor_percentage: 10
-      max_hp: 5
+      armor_percentage: 5
+      max_hp: 2
     11:
-      armor_percentage: 11
-      max_hp: 5
+      armor_percentage: 6
+      max_hp: 2
     12:
-      armor_percentage: 12
-      max_hp: 5
+      armor_percentage: 6
+      max_hp: 2
     13:
-      armor_percentage: 13
-      max_hp: 5
+      armor_percentage: 7
+      max_hp: 2
     14:
-      armor_percentage: 14
-      max_hp: 5
+      armor_percentage: 7
+      max_hp: 2
     15:
-      armor_percentage: 15
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 8
+      max_hp: 3
     16:
-      armor_percentage: 16
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 8
+      max_hp: 3
     17:
-      armor_percentage: 17
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 9
+      max_hp: 3
     18:
-      armor_percentage: 18
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 9
+      max_hp: 3
     19:
-      armor_percentage: 19
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 10
+      max_hp: 3
     20:
-      armor_percentage: 20
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 10
+      max_hp: 4
       resistance_poison: Resistant
 
 - Items:
@@ -160,60 +162,59 @@
     1:
       armor_percentage: 1
     2:
-      armor_percentage: 2
+      armor_percentage: 1
     3:
-      armor_percentage: 3
+      armor_percentage: 2
     4:
-      armor_percentage: 4
+      armor_percentage: 2
     5:
-      armor_percentage: 5
+      armor_percentage: 3
+      max_hp: 1
     6:
-      armor_percentage: 6
+      armor_percentage: 3
+      max_hp: 1
     7:
-      armor_percentage: 7
+      armor_percentage: 4
+      max_hp: 1
     8:
-      armor_percentage: 8
+      armor_percentage: 4
+      max_hp: 1
     9:
-      armor_percentage: 9
+      armor_percentage: 5
+      max_hp: 1
     10:
-      armor_percentage: 10
-      max_hp: 5
+      armor_percentage: 5
+      max_hp: 2
     11:
-      armor_percentage: 11
-      max_hp: 5
+      armor_percentage: 6
+      max_hp: 2
     12:
-      armor_percentage: 12
-      max_hp: 5
+      armor_percentage: 6
+      max_hp: 2
     13:
-      armor_percentage: 13
-      max_hp: 5
+      armor_percentage: 7
+      max_hp: 2
     14:
-      armor_percentage: 14
-      max_hp: 5
+      armor_percentage: 7
+      max_hp: 2
     15:
-      armor_percentage: 15
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 8
+      max_hp: 3
     16:
-      armor_percentage: 16
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 8
+      max_hp: 3
     17:
-      armor_percentage: 17
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 9
+      max_hp: 3
     18:
-      armor_percentage: 18
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 9
+      max_hp: 3
     19:
-      armor_percentage: 19
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 10
+      max_hp: 3
     20:
-      armor_percentage: 20
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 10
+      max_hp: 4
       resistance_fire: Resistant
 
 - Items:
@@ -229,60 +230,59 @@
     1:
       armor_percentage: 1
     2:
-      armor_percentage: 2
+      armor_percentage: 1
     3:
-      armor_percentage: 3
+      armor_percentage: 2
     4:
-      armor_percentage: 4
+      armor_percentage: 2
     5:
-      armor_percentage: 5
+      armor_percentage: 3
+      max_hp: 1
     6:
-      armor_percentage: 6
+      armor_percentage: 3
+      max_hp: 1
     7:
-      armor_percentage: 7
+      armor_percentage: 4
+      max_hp: 1
     8:
-      armor_percentage: 8
+      armor_percentage: 4
+      max_hp: 1
     9:
-      armor_percentage: 9
+      armor_percentage: 5
+      max_hp: 1
     10:
-      armor_percentage: 10
-      max_hp: 5
+      armor_percentage: 5
+      max_hp: 2
     11:
-      armor_percentage: 11
-      max_hp: 5
+      armor_percentage: 6
+      max_hp: 2
     12:
-      armor_percentage: 12
-      max_hp: 5
+      armor_percentage: 6
+      max_hp: 2
     13:
-      armor_percentage: 13
-      max_hp: 5
+      armor_percentage: 7
+      max_hp: 2
     14:
-      armor_percentage: 14
-      max_hp: 5
+      armor_percentage: 7
+      max_hp: 2
     15:
-      armor_percentage: 15
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 8
+      max_hp: 3
     16:
-      armor_percentage: 16
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 8
+      max_hp: 3
     17:
-      armor_percentage: 17
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 9
+      max_hp: 3
     18:
-      armor_percentage: 18
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 9
+      max_hp: 3
     19:
-      armor_percentage: 19
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 10
+      max_hp: 3
     20:
-      armor_percentage: 20
-      max_hp: 5
-      max_stamina: 5
+      armor_percentage: 10
+      max_hp: 4
       resistance_lightning: Resistant
 
 - Items:
@@ -309,91 +309,80 @@
   Stats:
     1:
       max_hp: 1
-      max_stamina: 1
     2:
+      max_hp: 1
+      max_stamina: 1
+    3:
+      max_hp: 2
+      max_stamina: 1
+    4:
       max_hp: 2
       max_stamina: 2
-    3:
+    5:
+      max_hp: 3
+      max_stamina: 2
+    6:
       max_hp: 3
       max_stamina: 3
-    4:
+    7:
+      max_hp: 4
+      max_stamina: 3
+    8:
       max_hp: 4
       max_stamina: 4
-    5:
+    9:
+      max_hp: 5
+      max_stamina: 4
+    10:
       max_hp: 5
       max_stamina: 5
       hp_regen: 1
-    6:
+    11:
+      max_hp: 6
+      max_stamina: 5
+      hp_regen: 1.1
+    12:
       max_hp: 6
       max_stamina: 6
-      hp_regen: 1
-    7:
+      hp_regen: 1.2
+    13:
+      max_hp: 7
+      max_stamina: 6
+      hp_regen: 1.3
+    14:
       max_hp: 7
       max_stamina: 7
-      hp_regen: 1
-    8:
+      hp_regen: 1.4
+    15:
+      max_hp: 8
+      max_stamina: 7
+      hp_regen: 1.5
+      stamina_regen: 0.25
+    16:
       max_hp: 8
       max_stamina: 8
-      hp_regen: 1
-    9:
+      hp_regen: 1.6
+      stamina_regen: 0.3
+    17:
+      max_hp: 9
+      max_stamina: 8
+      hp_regen: 1.7
+      stamina_regen: 0.35
+    18:
       max_hp: 9
       max_stamina: 9
-      hp_regen: 1
-    10:
+      hp_regen: 1.8
+      stamina_regen: 0.4
+    19:
+      max_hp: 10
+      max_stamina: 9
+      hp_regen: 1.9
+      stamina_regen: 0.45
+    20:
       max_hp: 10
       max_stamina: 10
       hp_regen: 2
       stamina_regen: 0.5
-    11:
-      max_hp: 11
-      max_stamina: 11
-      hp_regen: 2
-      stamina_regen: 0.5
-    12:
-      max_hp: 12
-      max_stamina: 12
-      hp_regen: 2
-      stamina_regen: 0.5
-    13:
-      max_hp: 13
-      max_stamina: 13
-      hp_regen: 2
-      stamina_regen: 0.5
-    14:
-      max_hp: 14
-      max_stamina: 14
-      hp_regen: 2
-      stamina_regen: 0.5
-    15:
-      max_hp: 15
-      max_stamina: 15
-      hp_regen: 3
-      stamina_regen: 0.5
-    16:
-      max_hp: 16
-      max_stamina: 16
-      hp_regen: 3
-      stamina_regen: 0.5
-    17:
-      max_hp: 17
-      max_stamina: 17
-      hp_regen: 3
-      stamina_regen: 0.5
-    18:
-      max_hp: 18
-      max_stamina: 18
-      hp_regen: 3
-      stamina_regen: 0.5
-    19:
-      max_hp: 19
-      max_stamina: 19
-      hp_regen: 3
-      stamina_regen: 0.5
-    20:
-      max_hp: 20
-      max_stamina: 20
-      hp_regen: 4
-      stamina_regen: 1
 
 - Items:
     - ShieldBanded
@@ -437,56 +426,59 @@
     1:
       armor_percentage: 1
     2:
-      armor_percentage: 2
+      armor_percentage: 1
+      durability_percentage: 1
     3:
-      armor_percentage: 3
+      armor_percentage: 2
+      durability_percentage: 1
     4:
-      armor_percentage: 4
+      armor_percentage: 2
+      durability_percentage: 2
     5:
-      armor_percentage: 5
-      stamina_regen: 0.25
+      armor_percentage: 3
+      durability_percentage: 2
     6:
-      armor_percentage: 6
-      stamina_regen: 0.25
+      armor_percentage: 3
+      durability_percentage: 3
     7:
-      armor_percentage: 7
-      stamina_regen: 0.25
+      armor_percentage: 4
+      durability_percentage: 3
     8:
-      armor_percentage: 8
-      stamina_regen: 0.25
+      armor_percentage: 4
+      durability_percentage: 4
     9:
-      armor_percentage: 9
-      stamina_regen: 0.25
+      armor_percentage: 5
+      durability_percentage: 4
     10:
-      armor_percentage: 10
-      stamina_regen: 0.5
+      armor_percentage: 5
+      durability_percentage: 5
     11:
-      armor_percentage: 11
-      stamina_regen: 0.5
+      armor_percentage: 6
+      durability_percentage: 5
     12:
-      armor_percentage: 12
-      stamina_regen: 0.5
+      armor_percentage: 6
+      durability_percentage: 6
     13:
-      armor_percentage: 13
-      stamina_regen: 0.5
+      armor_percentage: 7
+      durability_percentage: 6
     14:
-      armor_percentage: 14
-      stamina_regen: 0.5
+      armor_percentage: 7
+      durability_percentage: 7
     15:
-      armor_percentage: 15
-      stamina_regen: 0.75
+      armor_percentage: 8
+      durability_percentage: 7
     16:
-      armor_percentage: 16
-      stamina_regen: 0.75
+      armor_percentage: 8
+      durability_percentage: 8
     17:
-      armor_percentage: 17
-      stamina_regen: 0.75
+      armor_percentage: 9
+      durability_percentage: 8
     18:
-      armor_percentage: 18
-      stamina_regen: 0.75
+      armor_percentage: 9
+      durability_percentage: 9
     19:
-      armor_percentage: 19
-      stamina_regen: 0.75
+      armor_percentage: 10
+      durability_percentage: 9
     20:
-      armor_percentage: 20
-      stamina_regen: 1
+      armor_percentage: 10
+      durability_percentage: 10

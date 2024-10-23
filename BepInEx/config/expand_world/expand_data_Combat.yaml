@@ -177,6 +177,115 @@
   - RightItem, CWS_Sword_6_SH
 
 ####################################
+# Reapers
+- name: d_reaper_list
+  hashes:
+  - RightItem, T3_Reaper, T4_Reaper, T5_Reaper, T6_Reaper, T7_Reaper, T8_Reaper, CWS_TH_Sword_11_SH
+
+- name: d_state_reaper0_set
+  ints:
+  - i_state_reaper0, 1
+
+- name: d_state_reaper0_clr
+  ints:
+  - i_state_reaper0, 0
+
+- name: d_state_reaper1_set
+  ints:
+  - i_state_reaper1, 1
+
+- name: d_state_reaper1_clr
+  ints:
+  - i_state_reaper1, 0
+
+- name: d_state_reaper2_set
+  ints:
+  - i_state_reaper2, 1
+
+- name: d_state_reaper2_clr
+  ints:
+  - i_state_reaper2, 0
+
+- name: d_state_reaper0_filter
+  ints:
+  - i_state_reaper0, 1
+  - i_state_reaper1, 0
+
+- name: d_state_reaper1_filter
+  ints:
+  - i_state_reaper1, 1
+  - i_state_reaper2, 0
+
+- name: d_state_reaper2_filter
+  ints:
+  - i_state_reaper2, 1
+  - i_state_reaper0, 0
+
+- name: d_state_reaper0_latched_set
+  ints:
+  - i_state_reaper0_latched, 1
+
+- name: d_state_reaper0_latched_clr
+  ints:
+  - i_state_reaper0_latched, 0
+
+- name: d_state_reaper1_latched_set
+  ints:
+  - i_state_reaper1_latched, 1
+
+- name: d_state_reaper1_latched_clr
+  ints:
+  - i_state_reaper1_latched, 0
+
+- name: d_state_reaper2_latched_set
+  ints:
+  - i_state_reaper2_latched, 1
+
+- name: d_state_reaper2_latched_clr
+  ints:
+  - i_state_reaper2_latched, 0
+
+- name: d_state_reaper0_latched_filter
+  ints:
+  - i_state_reaper0_latched, 1
+  - i_state_reaper1_latched, 0
+  - i_state_reaper2_latched, 0
+
+- name: d_state_reaper1_latched_filter
+  ints:
+  - i_state_reaper1_latched, 1
+  - i_state_reaper2_latched, 0
+
+- name: d_state_reaper2_latched_filter
+  ints:
+  - i_state_reaper2_latched, 1
+
+- name: d_reaper_combo0_pending_set
+  ints:
+  - i_reaper_combo0_pending, 1
+
+- name: d_reaper_combo0_pending_clr
+  ints:
+  - i_reaper_combo0_pending, 0
+
+- name: d_reaper_combo1_pending_set
+  ints:
+  - i_reaper_combo1_pending, 1
+
+- name: d_reaper_combo1_pending_clr
+  ints:
+  - i_reaper_combo1_pending, 0
+
+- name: d_reaper_combo2_pending_set
+  ints:
+  - i_reaper_combo2_pending, 1
+
+- name: d_reaper_combo2_pending_clr
+  ints:
+  - i_reaper_combo2_pending, 0
+
+
+####################################
 # Spirit Counter
 - name: gear_staffshield_all
   hashes:

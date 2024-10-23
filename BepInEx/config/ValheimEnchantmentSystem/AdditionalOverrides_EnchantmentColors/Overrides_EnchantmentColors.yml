@@ -1,0 +1,79 @@
+- Items:
+    - ShieldBanded
+    - ShieldBlackmetal
+    - ShieldBlackmetalTower
+    - ShieldBoneTower
+    - ShieldBronzeBuckler
+    - ShieldCarapace
+    - ShieldCarapaceBuckler
+    - ShieldFlametal
+    - ShieldFlametalTower
+    - ShieldIronBuckler
+    - ShieldIronTower
+    - ShieldSerpentscale
+    - ShieldSilver
+    - ShieldWood
+    - ShieldWoodTower
+    - JC_Reaper_Shield
+    - JC_Shield_Buckler
+    - JC_Shield_Tower
+    - CWS_Buckler_Shield_1_SH
+    - CWS_Buckler_Shield_2_SH
+    - CWS_Round_Shield_1_SH
+    - CWS_Round_Shield_2_SH
+    - CWS_Round_Shield_3_SH
+    - CWS_Round_Shield_4_SH
+    - CWS_Round_Shield_5_SH
+    - CWS_Round_Shield_6_SH
+    - CWS_Round_Shield_7_SH
+    - CWS_Heater_Shield_1_SH
+    - CWS_Heater_Shield_2_SH
+    - CWS_Heater_Shield_3_SH
+    - CWS_Heater_Shield_4_SH
+    - CWS_Heater_Shield_5_SH
+    - CWS_Tower_Shield_1_SH
+    - CWS_Tower_Shield_2_SH
+    - CWS_Tower_Shield_3_SH
+    - CWS_Tower_Shield_4_SH
+    - CWS_Tower_Shield_5_SH
+  Colors:
+    1:
+      color: '#00000000'
+    2:
+      color: '#00000000'
+    3:
+      color: '#00000000'
+    4:
+      color: '#00000000'
+    5:
+      color: '#00000000'
+    6:
+      color: '#00000000'
+    7:
+      color: '#00000000'
+    8:
+      color: '#00000000'
+    9:
+      color: '#00000000'
+    10:
+      color: '#00000000'
+    11:
+      color: '#00000000'
+    12:
+      color: '#00000000'
+    13:
+      color: '#00000000'
+    14:
+      color: '#00000000'
+    15:
+      color: '#00000000'
+    16:
+      color: '#00000000'
+    17:
+      color: '#00000000'
+    18:
+      color: '#00000000'
+    19:
+      color: '#00000000'
+    20:
+      color: '#00000000'

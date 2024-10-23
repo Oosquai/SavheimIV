@@ -54,15 +54,15 @@ vampire:
 berserk:
   - slot: [weapon, magic]
     gem: purple
-    power: [3, 6, 9]
+    power: [2, 4, 6]
   - slot: tool
     gem: red
-    power: [3, 6, 9]
+    power: [2, 4, 6]
 
 acceleration:
   slot: [weapon, magic]
   gem: redish
-  power: [4, 8, 12]
+  power: [3, 6, 9]
 
 overexertion:
   slot: [weapon, magic, bow, crossbow, tool]

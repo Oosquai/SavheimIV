@@ -1,40 +1,40 @@
 1:
-  color: '#1E151C01'
+  color: '#00000000'
 2:
-  color: '#1E181F02'
+  color: '#00000000'
 3:
-  color: '#1E1A2A03'
+  color: '#00000000'
 4:
-  color: '#1E1E3AA6'
+  color: '#00000000'
 5:
-  color: '#1E1E4AB0'
+  color: '#01010101'
 6:
-  color: '#23415A9B'
+  color: '#01020101'
 7:
-  color: '#28577EA2'
+  color: '#00030001'
 8:
-  color: '#1E508EA9'
+  color: '#00030101'
 9:
-  color: '#14469EB0'
+  color: '#00030201'
 10:
-  color: '#0A3CAFB7'
+  color: '#00030301'
 11:
-  color: '#0038BFC0'
+  color: '#00020301'
 12:
-  color: '#0038BFC0'
+  color: '#00010301'
 13:
-  color: '#001CDBC4'
+  color: '#00000301'
 14:
-  color: '#001CDBDB'
+  color: '#01000301'
 15:
-  color: '#001CDFE2'
+  color: '#02000201'
 16:
-  color: '#A0140EE9'
+  color: '#03030001'
 17:
-  color: '#B40A0EF0'
+  color: '#03020001'
 18:
-  color: '#C8000EF7'
+  color: '#03010001'
 19:
-  color: '#D2000EFE'
+  color: '#03000101'
 20:
-  color: '#FF000EFF'
+  color: '#03000001'
