@@ -20,6 +20,36 @@
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
 
+- name: d_sfx_reaper_heal_pitch1
+  floats:
+  - ZSFX.m_minPitch, 1.1
+  - ZSFX.m_maxPitch, 1.1
+
+- name: d_sfx_reaper_heal_pitch2
+  floats:
+  - ZSFX.m_minPitch, 1.25
+  - ZSFX.m_maxPitch, 1.25
+
+- name: d_sfx_reaper_heal_pitch3
+  floats:
+  - ZSFX.m_minPitch, 1.4
+  - ZSFX.m_maxPitch, 1.4
+
+- name: d_sfx_reaper_dmg_pitch1
+  floats:
+  - ZSFX.m_minPitch, 0.9
+  - ZSFX.m_maxPitch, 0.9
+
+- name: d_sfx_reaper_dmg_pitch2
+  floats:
+  - ZSFX.m_minPitch, 0.7
+  - ZSFX.m_maxPitch, 0.7
+
+- name: d_sfx_reaper_dmg_pitch3
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 0.5
+
 ##############################################################
 # Bleed Mechanics
 - name: d_bleed_tick_rst_stack_inc
@@ -256,9 +286,41 @@
   - i_state_reaper1_latched, 1
   - i_state_reaper2_latched, 0
 
-- name: d_state_reaper2_latched_filter
+- name: d_state_reaper2_latched_filter_t3
   ints:
   - i_state_reaper2_latched, 1
+  hashes:
+  - RightItem, T3_Reaper
+
+- name: d_state_reaper2_latched_filter_t4
+  ints:
+  - i_state_reaper2_latched, 1
+  hashes:
+  - RightItem, T4_Reaper
+
+- name: d_state_reaper2_latched_filter_t5
+  ints:
+  - i_state_reaper2_latched, 1
+  hashes:
+  - RightItem, T5_Reaper, CWS_TH_Sword_11_SH
+
+- name: d_state_reaper2_latched_filter_t6
+  ints:
+  - i_state_reaper2_latched, 1
+  hashes:
+  - RightItem, T6_Reaper
+
+- name: d_state_reaper2_latched_filter_t7
+  ints:
+  - i_state_reaper2_latched, 1
+  hashes:
+  - RightItem, T7_Reaper
+
+- name: d_state_reaper2_latched_filter_t8
+  ints:
+  - i_state_reaper2_latched, 1
+  hashes:
+  - RightItem, T8_Reaper
 
 - name: d_reaper_combo0_pending_set
   ints:
@@ -280,10 +342,74 @@
   ints:
   - i_reaper_combo2_pending, 1
 
+- name: d_reaper_combo2_pending_set_and_save_dmg
+  ints:
+  - i_reaper_combo2_pending, 1
+  - i_reaper_dmg_mult, <par1>
+
 - name: d_reaper_combo2_pending_clr
   ints:
   - i_reaper_combo2_pending, 0
 
+- name: d_reaper_debuff_stack_1_clr
+  ints:
+  - i_reaper_debuff_stack_1, 0
+
+- name: d_reaper_debuff_stack_1_set
+  ints:
+  - i_reaper_debuff_stack_1, 1
+  
+- name: d_reaper_debuff_stack_2_clr
+  ints:
+  - i_reaper_debuff_stack_2, 0
+
+- name: d_reaper_debuff_stack_2_set
+  ints:
+  - i_reaper_debuff_stack_2, 1
+  
+- name: d_reaper_debuff_stack_3_clr
+  ints:
+  - i_reaper_debuff_stack_3, 0
+
+- name: d_reaper_debuff_stack_3_set
+  ints:
+  - i_reaper_debuff_stack_3, 1
+
+- name: d_reaper_debuff_stack_cnt_0
+  ints:
+  - i_reaper_debuff_stack_1, 0
+  - i_reaper_debuff_stack_2, 0
+  - i_reaper_debuff_stack_3, 0
+
+- name: d_reaper_debuff_stack_cnt_1
+  ints:
+  - i_reaper_debuff_stack_1, 1
+  - i_reaper_debuff_stack_2, 0
+  - i_reaper_debuff_stack_3, 0
+
+- name: d_reaper_debuff_stack_cnt_2
+  ints:
+  - i_reaper_debuff_stack_2, 1
+  - i_reaper_debuff_stack_3, 0
+
+- name: d_reaper_debuff_stack_cnt_3
+  ints:
+  - i_reaper_debuff_stack_3, 1
+
+- valueGroup: vReaperDmgRnd
+  values:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+- value: vReaperDmg1, 1*90+<vReaperDmgRnd>+1*<int_i_reaper_dmg_mult>*20
+- value: vReaperDmg2, 2*90+<vReaperDmgRnd>+2*<int_i_reaper_dmg_mult>*20
+- value: vReaperDmg3, 3*90+<vReaperDmgRnd>+3*<int_i_reaper_dmg_mult>*20
 
 ####################################
 # Spirit Counter

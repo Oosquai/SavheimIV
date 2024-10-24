@@ -170,7 +170,7 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
-    - name: sfx_metal_blocked_overlay
+    - name: sfx_axe_flint_hit
       m_enabled: true
       m_variant: -1
       m_attach: false
