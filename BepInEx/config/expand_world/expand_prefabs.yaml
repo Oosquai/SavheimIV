@@ -20,6 +20,22 @@
   maxY: 30
 
 ###############################################################
+# Leeches drain performance - remove them if distant.
+# Leech water ripples already disabled by ParticleControl mod.
+- prefab: Leech
+  type: create
+  poke:
+  - prefab: Leech
+    maxDistance: 240
+    parameter: p_leech_performance_optimize
+
+- prefab: Leech
+  type: poke, p_leech_performance_optimize
+  bannedObjects:
+  - Player, 80                                   # adjust for range to player at which to optimize leeches
+  remove: true
+
+###############################################################
 # Infinite fuel for fireplaces, plus Warm (thanks, Raaka!)  (Warm flashes, feels buggy, commented out of data)
 - prefab: Fireplace, piece_bathtub
   type: create

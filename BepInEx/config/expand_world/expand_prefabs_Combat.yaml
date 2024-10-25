@@ -742,6 +742,7 @@
   - sfx_UndeadBurn_Start, 1
   spawn: fx_Fader_Roar_Projectile_Hit
 
+################################################################
 #############
 # Reapers
 # Primary X -> Secondary attacks have effects if they connect
@@ -758,8 +759,8 @@
   - self: true
     delay: 0.7                                   # time needed for primary hit to land
     parameter: p_state_reaper0_clr
-# clear flag after a delay
-- prefab: Player
+
+- prefab: Player                                 # clear flag after a delay
   type: poke, p_state_reaper0_clr
   data: d_state_reaper0_clr
   injectData: true
@@ -773,7 +774,7 @@
   - self: true
     delay: 0.7                                   # time needed for primary hit to land
     parameter: p_state_reaper1_clr
-# clear flag after a delay
+
 - prefab: Player
   type: poke, p_state_reaper1_clr
   data: d_state_reaper1_clr
@@ -788,7 +789,7 @@
   - self: true
     delay: 0.7                                   # time needed for primary hit to land
     parameter: p_state_reaper2_clr
-# clear flag after a delay
+
 - prefab: Player
   type: poke, p_state_reaper2_clr
   data: d_state_reaper2_clr
@@ -826,8 +827,8 @@
   - self: true
     delay: 0.7                                   # time needed to start secondary attack
     parameter: p_state_reaper0_latched_clr
-# clear flag after a delay
-- prefab: Player
+
+- prefab: Player                                 # clear flag after a delay
   type: poke, p_state_reaper0_latched_clr
   data: d_state_reaper0_latched_clr
   injectData: true
@@ -840,7 +841,7 @@
   - self: true
     delay: 0.7                                   # time needed to start secondary attack
     parameter: p_state_reaper1_latched_clr
-# clear flag after a delay
+
 - prefab: Player
   type: poke, p_state_reaper1_latched_clr
   data: d_state_reaper1_latched_clr
@@ -854,7 +855,7 @@
   - self: true
     delay: 1.1                                   # time needed to start secondary attack
     parameter: p_state_reaper2_latched_clr
-# clear flag after a delay
+
 - prefab: Player
   type: poke, p_state_reaper2_latched_clr
   data: d_state_reaper2_latched_clr
@@ -993,17 +994,17 @@
   - sfx_sword_hit, 1
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: d_reaper_combo0_pending_set
     parameter: p_reaper_combo0_hit
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: d_reaper_combo1_pending_set
     parameter: p_reaper_combo1_hit
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: d_reaper_combo2_pending_set
     parameter: p_reaper_combo2_hit
@@ -1028,7 +1029,7 @@
   - sfx_gjall_idle_shiver
   poke:
   - self: true
-    delay: 13                                    # REAPER DEBUFF STACK TtL
+    delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_1_clr
 
 # set stack 2
@@ -1039,11 +1040,12 @@
   injectData: true
   spawns:
   - fx_bloodweapon_hit
+  - fx_radiation_hit, 0,0,1
   - sfx_leech_hit
   - sfx_gjall_idle_shiver
   poke:
   - self: true
-    delay: 13                                    # REAPER DEBUFF STACK TtL
+    delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_2_clr
   
 # set stack 3
@@ -1054,11 +1056,12 @@
   injectData: true
   spawns:
   - fx_bloodweapon_hit
+  - fx_jotunbane_hit, 0,0,1
   - sfx_leech_hit
   - sfx_gjall_idle_shiver
   poke:
   - self: true
-    delay: 13                                    # REAPER DEBUFF STACK TtL
+    delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_3_clr
 
 # clear stack 1
@@ -1141,7 +1144,7 @@
   - fx_natureweapon_hit, 0,0,1.2, 0,0,0, d_empty_data_combat, 0.2
   objectRpc:
   - name: RPC_Heal
-    1: float, <par1>*0.15*<float_max_health>     # PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
+    1: float, <par1>*0.2*<float_max_health>     # PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
     2: bool, 1
 
 ## Primary-Primary-Primary-Secondary Combo = Consume debuff stacks to burst dmg on target and spread stacks to nearby enemies
@@ -1213,121 +1216,3 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, slash=<par1>
-
-
-#- prefab: Player
-#  type: say, test1
-#  poke:
-#  - prefab: creature
-#    maxDistance: 10
-#    limit: 1
-#    parameter: test_poke1
-#- prefab: Player
-#  type: say, test2
-#  poke:
-#  - prefab: creature
-#    maxDistance: 10
-#    limit: 1
-#    parameter: test_poke2
-#- prefab: Player
-#  type: say, test3
-#  poke:
-#  - prefab: creature
-#    maxDistance: 10
-#    limit: 1
-#    parameter: test_poke3
-#
-#- prefab: creature
-#  type: poke, test_poke1
-#  spawns:
-#  - sfx_fallenvalkyrie_attack_spit_projectile
-#  - vfx_player_death, 0.5,0,1, 0,90,70
-#  - vfx_player_death, -0.5,0,1, 0,90,250
-#  - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
-#  - sfx_axe_flint_hit
-#- prefab: creature
-#  type: poke, test_poke2
-#  spawns:
-#  - sfx_fallenvalkyrie_attack_spit_projectile
-#  - vfx_player_death, 0.5,0,1, 0,90,70
-#  - vfx_player_death, -0.5,0,1, 0,90,250
-#  - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
-#  - vfx_player_death, 0,0,1, 0,90,250, d_empty_data_combat, 0.05
-#  - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
-#  - sfx_axe_flint_hit
-#
-#- prefab: creature
-#  type: poke, test_poke3
-#  spawns:
-#  - sfx_fallenvalkyrie_attack_spit_projectile
-#  - vfx_player_death, 0.5,0,1, 0,90,70
-#  - vfx_player_death, -0.5,0,1, 0,90,250
-#  - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
-#  - vfx_player_death, 0,0,1, 0,90,250, d_empty_data_combat, 0.05
-#  - vfx_player_death, -0.5,0,1, 0,90,70, d_empty_data_combat, 0.1
-#  - vfx_player_death, 0.5,0,1, 0,90,250, d_empty_data_combat, 0.1
-#  - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
-#  - sfx_axe_flint_hit
-#
-#
-#
-#  poke:
-#  - prefab: creature
-#    minDistance: 0.1
-#    maxDistance: 2
-#    limit: 3
-#    parameter: p_test_dmg2
-#  - prefab: creature
-#    minDistance: 0.1
-#    maxDistance: 3
-#    limit: 3
-#    parameter: p_test_dmg3
-#  - prefab: creature
-#    minDistance: 0.1
-#    maxDistance: 4
-#    limit: 3
-#    parameter: p_test_dmg4
-#  - prefab: creature
-#    minDistance: 0.1
-#    maxDistance: 5
-#    limit: 3
-#    parameter: p_test_dmg5
-#
-#- prefab: creature
-#  type: poke, p_test_dmg2
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, slash=2
-#- prefab: creature
-#  type: poke, p_test_dmg3
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, slash=3
-#- prefab: creature
-#  type: poke, p_test_dmg4
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, slash=4
-#- prefab: creature
-#  type: poke, p_test_dmg5
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, slash=5
-
-
-#######
-# sfx_hit
-# sfx_axe_flint_hit
-# sfx_leech_hit
-# sfx_fallenvalkyrie_attack_spit_projectile
-#- prefab: Player
-#  type: state, battleaxe_attack2
-#  objectRpc:
-#  - name: SetTrigger
-#    target: all
-#    1: name, battleaxe_attack1
-#    delay: 0.5
-#  - name: SetTrigger
-#    target: all
-#    1: name, atgeir_attack2
-#    delay: 1.2

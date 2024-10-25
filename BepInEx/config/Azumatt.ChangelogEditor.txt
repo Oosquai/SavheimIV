@@ -3,13 +3,19 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/22/24</color>
-- Balanced Enchanting system.  Reduced graphical effects on weapons.  Removed fx from shields and armor.
-- Reduced attack speed gems.
-- In process of redesigning reaper weapon class mechanics... to be finished soon!
+     0\  Savheim IV Patch Notes, 10/24/24</color>
+- Attempting to improve performance in Swamp by removing distant leeches.
+- Draugr Elites can now drop Bloodbags.
+- Finished redesigning the Reaper weapon class.
+- The Soul Lantern can no longer be socketed.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/22/24
+- Balanced Enchanting system.  Reduced graphical effects on weapons.  Removed fx from shields and armor.
+- Reduced attack speed gems.
+- In process of redesigning reaper weapon class mechanics... to be finished soon!
 
 Patch Notes, 10/21/24
 - Sneak costs stamina again, but can negated by wearing medium armor.

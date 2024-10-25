@@ -1,7 +1,7 @@
 name: T4_Reaper
 m_weight: 4
 m_name: Silversteel Reaper
-m_description: Reapers demand blood to fuel increasingly devastating attacks as the wielder's health decreases.  Primary attacks can destroy armor, providing a brief window for an extremely high-damage secondary attack.  Reapers synergize well with certain gems and scale with Blood Magic.
+m_description: Reapers weave their wielder's blood into precise attacks to curse foes. <color=orange>1</color> primary attack followed by a secondary stacks up to three curses. <color=orange>2</color> consumes the curses to heal the wielder. <color=orange>3</color> bursts and spreads the curse.
 clonePrefabName: THSwordSlayerBlood
 mockName: 
 customIcon: 
@@ -18,15 +18,15 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
-  m_attackStamina: 3
+  Custom_AttackSpeed: 1.15
+  m_attackStamina: 6
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 8
   SpeedFactor: 0.5
-  DmgMultiplier: 1
+  DmgMultiplier: 0.8
   ForceMultiplier: 1
-  StaggerMultiplier: 1.25
+  StaggerMultiplier: 1.56
   RecoilMultiplier: 0
   AttackRange: 2.6
   AttackHeight: 1
@@ -109,11 +109,11 @@ Secondary_Attack:
   m_attackStamina: 6
   m_eitrCost: 0
   AttackHealthCost: 0
-  m_attackHealthPercentage: 16
+  m_attackHealthPercentage: 8
   SpeedFactor: 0.3
   DmgMultiplier: 0.5
   ForceMultiplier: 1
-  StaggerMultiplier: 1.25
+  StaggerMultiplier: 2.5
   RecoilMultiplier: 0
   AttackRange: 3
   AttackHeight: 1

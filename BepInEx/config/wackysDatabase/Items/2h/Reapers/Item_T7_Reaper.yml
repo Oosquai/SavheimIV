@@ -1,7 +1,7 @@
 name: T7_Reaper
 m_weight: 4
 m_name: Flametal Reaper
-m_description: Reapers demand blood to fuel increasingly devastating attacks as the wielder's health decreases.  Primary attacks can destroy armor, providing a brief window for an extremely high-damage secondary attack.  Reapers synergize well with certain gems and scale with Blood Magic.
+m_description: Reapers weave their wielder's blood into precise attacks to curse foes. <color=orange>1</color> primary attack followed by a secondary stacks up to three curses. <color=orange>2</color> consumes the curses to heal the wielder. <color=orange>3</color> bursts and spreads the curse.
 clonePrefabName: THSwordSlayerBlood
 mockName: 
 customIcon: 
@@ -18,15 +18,15 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
-  m_attackStamina: 6
+  Custom_AttackSpeed: 1.15
+  m_attackStamina: 9
   m_eitrCost: 0
   AttackHealthCost: 0
-  m_attackHealthPercentage: 11
+  m_attackHealthPercentage: 8
   SpeedFactor: 0.5
-  DmgMultiplier: 1
+  DmgMultiplier: 0.8
   ForceMultiplier: 1
-  StaggerMultiplier: 1.25
+  StaggerMultiplier: 1.56
   RecoilMultiplier: 0
   AttackRange: 2.6
   AttackHeight: 1
@@ -51,8 +51,8 @@ Primary_Attack:
   Reset_Chain_If_hit: None
   SpawnOnHit: 
   SpawnOnHit_Chance: 0
-  Attack_status_effect: SE_Savheim_Rend_Reaper
-  Attack_status_effect_chance: 0.3
+  Attack_status_effect: 
+  Attack_status_effect_chance: 0
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -83,6 +83,17 @@ Primary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
+    - name: sfx_cinder_rain_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
@@ -95,14 +106,14 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 0.9
-  m_attackStamina: 12
+  m_attackStamina: 9
   m_eitrCost: 0
   AttackHealthCost: 0
-  m_attackHealthPercentage: 22
+  m_attackHealthPercentage: 8
   SpeedFactor: 0.3
-  DmgMultiplier: 2.5
+  DmgMultiplier: 0.5
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 2.5
   RecoilMultiplier: 0
   AttackRange: 3
   AttackHeight: 1
@@ -149,6 +160,17 @@ Secondary_Attack:
   AEffectsPLUS:
     Hit_Effects:
     - name: fx_swing_camshake
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
+    - name: sfx_axe_flint_hit
       m_enabled: true
       m_variant: -1
       m_attach: false

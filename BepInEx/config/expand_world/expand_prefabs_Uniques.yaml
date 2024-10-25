@@ -509,11 +509,12 @@
 
 ######################
 # Sanguino (Reaper)
-- prefab: fx_radiation_hit
+- prefab: sfx_spear_poke
   type: create
   objects:
-  - Player, 3, d_sanguino_reaper
-  - fx_clusterbombstaff_splinter_hit, 0.5
+  - Player, 6, d_sanguino_reaper
+  - sfx_fallenvalkyrie_attack_spit_projectile, 6
+  - vfx_player_death, 6
   spawn: Bat, tamed_reduced_dmg_uniques
   poke:
   - prefab: Bat
@@ -526,7 +527,7 @@
 - prefab: Bat
   type: poke, p_sanguino_bat_despawn
   filters:
-  - int, tamed_uniques, 1
+  - int, tamed, 1
   spawns:
   - fx_ashvine_destruction
   - sfx_bat_alerted
