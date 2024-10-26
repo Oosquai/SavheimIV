@@ -3,13 +3,19 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/25/24</color>
-- More weapon damage balancing.
-- Gems are now restricted to unique colors per item.
-- Buffed attack speed gems a bit now that colors are unique.
+     0\  Savheim IV Patch Notes, 10/26/24</color>
+- Soul gems are now restricted to unique types per item.
+- Balanced shield stats and some short and greatbow stats.
+- Scaled T8 uniques to be equivalent to T7.5.
+- Added some orange highlights to some tooltips.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/25/24
+- More weapon damage balancing.
+- Gems are now restricted to unique colors per item.
+- Buffed attack speed gems a bit now that colors are unique.
 
 Patch Notes, 10/24/24
 - Attempting to improve performance in Swamp by removing distant leeches.

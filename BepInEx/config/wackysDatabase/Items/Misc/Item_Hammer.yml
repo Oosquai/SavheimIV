@@ -1,7 +1,7 @@
 name: Hammer
 m_weight: 2
 m_name: $item_hammer
-m_description: "Let's build a happy little cloud.  -bross       Free rotate while building: Hold L, I, or K (rotate about X, Y, Z) and spin mouse wheel; Copy rotation - O; Perpendicular - P                            Advanced Build Mode: Enter - F1; Exit - F3; Move pieces - Arrow keys; Copy rotation - NP7; Apply rotation - NP8; Increase / Decrease movement & rotation - NP+ / NP-"
+m_description: "Free rotate while building: Hold <color=orange>L</color>, <color=orange>I</color>, or <color=orange>K</color> (rotate about X, Y, Z) and spin mouse wheel; Copy rotation - <color=orange>O</color>; Perpendicular - <color=orange>P</color>; Advanced Build Mode: Enter - <color=orange>F1</color>; Exit - <color=orange>F3</color>; Move pieces - <color=orange>arrow keys</color>; Copy rotation - <color=orange>NP7</color>; Apply rotation - <color=orange>NP8</color>; Increase / Decrease movement & rotation - <color=orange>NP+</color> / <color=orange>NP-</color>"
 clonePrefabName: 
 mockName: 
 customIcon: 

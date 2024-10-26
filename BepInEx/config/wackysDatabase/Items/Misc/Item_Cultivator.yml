@@ -1,7 +1,7 @@
 name: Cultivator
 m_weight: 2
 m_name: $item_cultivator
-m_description: "A farming tool for tilling soil.  Press Left-Ctrl to toggle grid mode.  With enough Farming skill, press Left-Shift to toggle mass planting mode."
+m_description: "A farming tool for tilling soil.  Press <color=orange>Left-Ctrl</color> to toggle grid mode.  With enough Farming skill, press <color=orange>Left-Shift</color> to toggle mass planting mode."
 clonePrefabName: 
 mockName: 
 customIcon: 

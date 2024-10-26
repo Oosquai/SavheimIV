@@ -1,7 +1,7 @@
 name: StaffGreenRoots
 m_weight: 0.3
 m_name: $item_staffgreenroots
-m_description: Summon a Primal Root and up to two additional roots to guard your back, or sacrifice them to spread up to three stacks of their healing energies to your allies.  Sacrificing a Primal Root emits a small blast that will stagger weaker foes.
+m_description: Summon <color=orange>1</color> Primal Root and up to <color=orange>2</color> additional roots to guard your back, or sacrifice them to spread up to three stacks of their healing energies to your allies.  Sacrificing a Primal Root emits a small blast that will stagger weaker foes.
 clonePrefabName: 
 mockName: 
 customIcon: 

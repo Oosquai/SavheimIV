@@ -132,9 +132,9 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 55
+  Pierce: 52
   Poison: 0
-  Slash: 55
+  Slash: 51
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -168,7 +168,7 @@ SE_Equip:
   EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 36
+  m_blockPower: 34
   m_blockPowerPerLevel: 2
   m_timedBlockBonus: 2
   m_deflectionForce: 0

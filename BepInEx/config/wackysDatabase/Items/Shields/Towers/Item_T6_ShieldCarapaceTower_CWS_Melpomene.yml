@@ -151,8 +151,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 173
-  m_blockPowerPerLevel: 16
+  m_blockPower: 162
+  m_blockPowerPerLevel: 5
   m_timedBlockBonus: 0
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
