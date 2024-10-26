@@ -3,14 +3,19 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 10/24/24</color>
+     0\  Savheim IV Patch Notes, 10/25/24</color>
+- More weapon damage balancing.
+- Gems are now restricted to unique colors per item.
+- Buffed attack speed gems a bit now that colors are unique.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 10/24/24
 - Attempting to improve performance in Swamp by removing distant leeches.
 - Draugr Elites can now drop Bloodbags.
 - Finished redesigning the Reaper weapon class.
 - The Soul Lantern can no longer be socketed.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 10/22/24
 - Balanced Enchanting system.  Reduced graphical effects on weapons.  Removed fx from shields and armor.

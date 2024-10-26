@@ -127,7 +127,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 104
+  Pierce: 103
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -139,7 +139,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 6
+  Pierce: 5
   Poison: 0
   Slash: 0
   Spirit: 0

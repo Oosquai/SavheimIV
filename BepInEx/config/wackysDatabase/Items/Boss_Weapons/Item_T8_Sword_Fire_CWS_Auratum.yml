@@ -201,13 +201,13 @@ Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 2
+  Fire: 1
   Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 6
+  Slash: 5
   Spirit: 0
 Armor:
   armor: 20

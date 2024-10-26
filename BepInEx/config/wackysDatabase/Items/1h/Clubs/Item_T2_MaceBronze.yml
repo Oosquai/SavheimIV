@@ -145,7 +145,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 32
+  Blunt: 29
   Chop: 0
   Damage: 0
   Fire: 0
@@ -157,7 +157,7 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 2
+  Blunt: 3
   Chop: 0
   Damage: 0
   Fire: 0

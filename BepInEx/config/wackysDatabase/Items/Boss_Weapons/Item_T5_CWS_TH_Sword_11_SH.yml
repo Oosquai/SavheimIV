@@ -1,7 +1,7 @@
 name: CWS_TH_Sword_11_SH
 m_weight: 4
 m_name: Sanguino
-m_description: Beckoned by the crimson tide, the night's creatures heed the call of this reaper to come forth and swarm your foes.
+m_description: Beckoned by the crimson tide, the night's creatures heed the call of this reaper to come forth and swarm your foes. <color=orange>1</color> primary attack followed by a secondary stacks up to three curses. <color=orange>2</color> consumes the curses to heal the wielder. <color=orange>3</color> bursts and spreads the curse.
 clonePrefabName: CWS_TH_Sword_11
 mockName: 
 customIcon: 

@@ -180,7 +180,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 104
+  Slash: 103
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -192,7 +192,7 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 6
+  Slash: 5
   Spirit: 0
 Armor:
   armor: 20

@@ -220,7 +220,7 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 82
+  Blunt: 76
   Chop: 0
   Damage: 0
   Fire: 0
