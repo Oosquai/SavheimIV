@@ -1,7 +1,7 @@
 name: Club
 m_weight: 2
 m_name: $item_club
-m_description: $item_club_description  Clubs have a staggering kick.
+m_description: $item_club_description  The club has a <color=yellow>staggering</color> kick.
 clonePrefabName: 
 mockName: 
 customIcon: 

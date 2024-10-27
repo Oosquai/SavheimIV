@@ -1,7 +1,7 @@
 name: SwordBronze
 m_weight: 0.8
 m_name: $item_sword_bronze
-m_description: Sword secondary attacks apply a stacking bleed to staggered enemies.
+m_description: Sword secondary attacks apply a stacking <color=red>bleed</color> to <color=yellow>staggered</color> enemies that scales in duration and potency with the victim's maximum health.
 clonePrefabName: 
 mockName: 
 customIcon: 

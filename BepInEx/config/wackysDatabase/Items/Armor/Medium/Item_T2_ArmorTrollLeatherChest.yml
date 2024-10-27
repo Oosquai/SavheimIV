@@ -1,7 +1,7 @@
 name: ArmorTrollLeatherChest
 m_weight: 5
 m_name: $item_chest_trollleather
-m_description: $item_chest_trollleather_description  This is the armor of choice for young archers and thieves.
+m_description: $item_chest_trollleather_description  This is the armor of choice for young <color=yellow>archers</color> and <color=yellow>thieves</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

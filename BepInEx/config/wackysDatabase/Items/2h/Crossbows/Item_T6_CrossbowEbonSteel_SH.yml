@@ -1,7 +1,7 @@
 name: CrossbowEbonSteel_SH
 m_weight: 8
 m_name: Ebonsteel Crossbow
-m_description: A heavy but powerful weapon.  Crossbows stay loaded when stowed, offering an on-demand burst of damage at any time and at any range.
+m_description: A heavy but powerful weapon.  Crossbows <color=yellow>stay loaded</color> when stowed, offering an on-demand burst of damage at any time and at any range.
 clonePrefabName: CrossbowArbalest
 mockName: 
 customIcon: 

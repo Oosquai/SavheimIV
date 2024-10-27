@@ -1,7 +1,7 @@
 name: StaffLightning
 m_weight: 1.5
 m_name: $item_staff_lightning
-m_description: Shockingly effective at melee range.  This weapon stays loaded when stowed.
+m_description: Shockingly effective at melee range.  This weapon <color=yellow>stays loaded</color> when stowed.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: BMR_FlametalStaff
 m_weight: 0.3
 m_name: $bmr_flametalstaff
-m_description: A staff worthy of an archmage, capable of exposing foes to all elements.
+m_description: A staff worthy of an archmage, capable of exposing foes to <color=yellow>all elements</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

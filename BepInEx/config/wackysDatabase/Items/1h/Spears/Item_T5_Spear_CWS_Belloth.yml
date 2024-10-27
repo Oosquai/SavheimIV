@@ -1,7 +1,7 @@
 name: CWS_Spear_1_SH
 m_weight: 1.5
 m_name: Black Metal Spear
-m_description: A sleek black metal spear.  Spear wielders manipulate movement.  Pin your targets in place with a thrown spear, then dash in for the kill.
+m_description: A sleek black metal spear.  Spear wielders manipulate movement.  <color=yellow>Pin</color> your targets in place with a thrown spear, then <color=yellow>dash</color> in for the kill.
 clonePrefabName: CWS_Spear_1
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: BMR_CrystalWand
 m_weight: 0.5
 m_name: $bmr_wand_crystal
-m_description: Wielded in one hand and lacking in length, wands can't fling spells as far or strip resistances as often as staves can, but are otherwise their equal.  Their reduced size allows for faster dodging and the use of shields though, making them excellent choices for close to mid range magical combat.
+m_description: Wielded in one hand and lacking in length, wands can't fling spells as far or <color=yellow>strip resistances</color> as often as staves can, but are otherwise their equal.  Their reduced size allows for <color=yellow>faster dodging</color> and the use of shields though, making them excellent choices for close to mid range magical combat.
 clonePrefabName: 
 mockName: 
 customIcon: 

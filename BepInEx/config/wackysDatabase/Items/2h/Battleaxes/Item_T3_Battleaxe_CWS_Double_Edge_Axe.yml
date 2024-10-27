@@ -1,7 +1,7 @@
 name: CWS_TH_Axe_3_SH
 m_weight: 2.5
 m_name: Iron Battleaxe
-m_description: Battleaxes cleave a wide area with their primary attacks, and they tear armor off victims with their secondary attack.
+m_description: Battleaxes <color=yellow>cleave</color> a wide area with their primary attacks, and they tear <color=yellow>armor</color> off victims with their secondary attack.
 clonePrefabName: CWS_TH_Axe_3
 mockName: 
 customIcon: 

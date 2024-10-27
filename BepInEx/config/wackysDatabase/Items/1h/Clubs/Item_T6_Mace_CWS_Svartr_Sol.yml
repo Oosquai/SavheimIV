@@ -1,7 +1,7 @@
 name: CWS_Mace_10_SH
 m_weight: 2
 m_name: Carapace Mace
-m_description: A lump of metal covered in carapace shards.  Maces have a staggering secondary attack.
+m_description: A lump of metal covered in carapace shards.  Maces have a <color=yellow>staggering</color> secondary attack.
 clonePrefabName: CWS_Mace_10
 mockName: 
 customIcon: 

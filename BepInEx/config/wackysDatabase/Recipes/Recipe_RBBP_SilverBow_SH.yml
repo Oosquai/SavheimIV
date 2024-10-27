@@ -1,0 +1,15 @@
+name: RBBP_SilverBow_SH
+clonePrefabName: BBP_SilverBow_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 5
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Silver:20:10:True
+- ElderBark:26:13:True
+- LeatherScraps:2:1:True

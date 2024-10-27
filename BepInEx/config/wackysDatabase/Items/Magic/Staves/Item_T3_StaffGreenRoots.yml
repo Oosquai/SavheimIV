@@ -1,7 +1,7 @@
 name: StaffGreenRoots_T3
 m_weight: 0.3
 m_name: Staff of Roots
-m_description: Summon <color=orange>1</color> root to guard your back, or sacrifice it to spread up to three stacks of its healing energies to your allies.
+m_description: Summon <color=orange>1</color> root to guard your back, or sacrifice it to spread up to three stacks of its <color=green>healing</color> energies to your allies.
 clonePrefabName: StaffGreenRoots
 mockName: 
 customIcon: 

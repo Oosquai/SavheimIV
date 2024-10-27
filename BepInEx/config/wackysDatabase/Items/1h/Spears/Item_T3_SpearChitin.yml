@@ -1,7 +1,7 @@
 name: SpearChitin
 m_weight: 1.5
 m_name: $item_spear_chitin
-m_description: The harpoon tethers with its primary and stabs with its secondary attacks.  Press E while tethered to drag your target to you if it can moved, or else you to it!
+m_description: The harpoon tethers with its primary and stabs with its secondary attacks.  Press <color=orange>E</color> while tethered to drag your target to you if it can moved, or else you to it!
 clonePrefabName: 
 mockName: 
 customIcon: 

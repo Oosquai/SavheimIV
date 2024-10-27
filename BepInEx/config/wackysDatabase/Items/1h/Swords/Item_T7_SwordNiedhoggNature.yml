@@ -1,7 +1,7 @@
 name: SwordNiedhoggNature
 m_weight: 0.8
 m_name: $item_sword_niedhogg_nature
-m_description: $item_sword_niedhogg_nature_description  Swords have a thrust as a secondary attack that leaves targets bleeding.
+m_description: $item_sword_niedhogg_nature_description  Sword secondary attacks apply a stacking <color=red>bleed</color> to <color=yellow>staggered</color> enemies that scales in duration and potency with the victim's maximum health.
 clonePrefabName: 
 mockName: 
 customIcon: 

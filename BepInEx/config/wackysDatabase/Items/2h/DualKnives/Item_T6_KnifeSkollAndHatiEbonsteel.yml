@@ -1,7 +1,7 @@
 name: KnifeSkollAndHatiEbonsteel
 m_weight: 0.3
 m_name: Ebonsteel Knife and Sickle
-m_description: Silent, deadly, and fast, knife wielders can attempt to vanish immediately after a kill by performing a crouching leap attack.  Try to land behind surviving enemies, and be wary of crowds and ranged attackers.  The sickle can sometimes find a gap in armor to add a burst of true damage.
+m_description: <color=yellow>Quiet</color>, <color=yellow>evasive</color>, and fast, knife wielders can attempt to <color=yellow>vanish</color> immediately after a kill by performing a crouching leap attack.  Try to land behind surviving enemies, and be wary of crowds and ranged attackers.  The sickle can sometimes find a gap in armor to add a <color=yellow>burst of true damage</color>.
 clonePrefabName: KnifeSkollAndHati
 mockName: 
 customIcon: 

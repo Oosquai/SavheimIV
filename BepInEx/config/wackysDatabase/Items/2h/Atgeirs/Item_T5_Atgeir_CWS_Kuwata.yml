@@ -1,7 +1,7 @@
 name: CWS_Atgeir_5_SH
 m_weight: 2.5
 m_name: Black Metal Atgeir
-m_description: $item_atgeir_blackmetal_description  Atgeirs are nimble weapons with good reach, and they hamstring foes with their secondary spin attack.
+m_description: $item_atgeir_blackmetal_description  Atgeirs are nimble weapons with good reach, and they <color=yellow>hamstring</color> foes with their secondary spin attack.
 clonePrefabName: CWS_Atgeir_5
 mockName: 
 customIcon: 

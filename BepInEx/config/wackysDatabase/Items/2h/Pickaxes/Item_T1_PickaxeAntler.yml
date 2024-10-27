@@ -1,7 +1,7 @@
 name: PickaxeAntler
 m_weight: 2
 m_name: $item_pickaxe_antler
-m_description: Pickaxes have a powerful but draining horizontal cleave as a secondary attack.
+m_description: Pickaxes have a powerful but draining <color=yellow>horizontal cleave</color> as a secondary attack.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: CWS_Sledge_1_SH
 m_weight: 4
 m_name: Black Metal Sledge
-m_description: A giant mass of black metal on a stick.  Sledges excel at staggering foes and have an earth-shattering ground slam.
+m_description: A giant mass of black metal on a stick.  Sledges excel at <color=yellow>staggering</color> foes and have an earth-shattering ground slam.
 clonePrefabName: CWS_Sledge_1
 mockName: 
 customIcon: 

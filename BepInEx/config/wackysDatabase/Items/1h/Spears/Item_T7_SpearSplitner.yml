@@ -1,7 +1,7 @@
 name: SpearSplitner
 m_weight: 1.5
 m_name: $item_spear_splitner
-m_description: $item_spear_splitner_description  Spear wielders manipulate movement.  Pin your targets in place with a thrown spear, then dash in for the kill.
+m_description: $item_spear_splitner_description  Spear wielders manipulate movement.  <color=yellow>Pin</color> your targets in place with a thrown spear, then <color=yellow>dash</color> in for the kill.
 clonePrefabName: 
 mockName: 
 customIcon: 

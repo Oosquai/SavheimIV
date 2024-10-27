@@ -1,7 +1,7 @@
 name: CWS_Crossbow_4_SH
 m_weight: 8
 m_name: Black Metal Crossbow
-m_description: A heavy but powerful weapon.  Crossbows stay loaded when stowed, offering an on-demand burst of damage at any time and at any range.
+m_description: A heavy but powerful weapon.  Crossbows <color=yellow>stay loaded</color> when stowed, offering an on-demand burst of damage at any time and at any range.
 clonePrefabName: CWS_Crossbow_4
 mockName: 
 customIcon: 

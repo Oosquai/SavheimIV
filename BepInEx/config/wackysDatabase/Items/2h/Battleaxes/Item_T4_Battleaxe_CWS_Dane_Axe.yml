@@ -1,7 +1,7 @@
 name: CWS_TH_Axe_6_SH
 m_weight: 2.5
 m_name: Bearded Battleaxe
-m_description: Engraved silver and gruesome fangs make this battleaxe terrifying to behold.  Battleaxes cleave a wide area with their primary attacks, and they tear armor off victims with their secondary attack.
+m_description: Engraved silver and gruesome fangs make this battleaxe terrifying to behold.  Battleaxes <color=yellow>cleave</color> a wide area with their primary attacks, and they tear <color=yellow>armor</color> off victims with their secondary attack.
 clonePrefabName: CWS_TH_Axe_6
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: CWS_Bow_6_SH
 m_weight: 1
 m_name: Flametal Shortbow
-m_description: Shortbows specialize in mid to close range combat, offering rapid shots, agile leaps, and evasive bursts of speed after firing.
+m_description: Shortbows specialize in mid to close range combat, offering rapid shots, agile leaps, and evasive <color=yellow>bursts of speed</color> after firing.  <color=orange>Left-Shift</color> <color=yellow>zooms</color> while aiming any bow.
 clonePrefabName: CWS_Bow_6
 mockName: 
 customIcon: 

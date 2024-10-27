@@ -2,7 +2,7 @@ name: Odins_Jewelry_Box
 piecehammer: Hammer
 m_name: $jc_jewelry_box
 sizeMultiplier: 1
-m_description: Improve your Gemcutters Table by crafting a box to store any ring other than a Soul Ring.
+m_description: Improve your Gemcutters Table by crafting a box to store any ring <color=yellow>other than a Soul Ring</color>.
 customIcon: 
 clonePrefabName: 
 material: 

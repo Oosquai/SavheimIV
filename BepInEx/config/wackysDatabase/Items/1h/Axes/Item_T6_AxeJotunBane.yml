@@ -1,7 +1,7 @@
 name: AxeJotunBane
 m_weight: 2
 m_name: $item_axe_jotunbane
-m_description: $item_axe_jotunbane_description  Axes emphasize damage, and their secondary attack can tear away some of the target's armor for a brief duration.
+m_description: $item_axe_jotunbane_description  Axes emphasize damage, and their secondary attack can tear away some of the target's <color=yellow>armor</color> for a brief duration.
 clonePrefabName: 
 mockName: 
 customIcon: 

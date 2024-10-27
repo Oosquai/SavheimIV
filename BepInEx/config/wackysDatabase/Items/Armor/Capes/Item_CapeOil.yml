@@ -1,7 +1,7 @@
 name: CapeOil
 m_weight: 4
 m_name: Oiled Cape
-m_description: Water runs right off this oily cape, keeping you dry unless you're completely submerged.
+m_description: Water runs right off this oily cape, keeping you <color=yellow>dry</color> unless you're completely submerged.
 clonePrefabName: CapeAsksvin
 mockName: 
 customIcon: 

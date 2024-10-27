@@ -1,7 +1,7 @@
 name: Demister
 m_weight: 0.1
 m_name: $item_demister
-m_description: "A bound wisp to guide you through the thickest of mists.  This is a gem that can be socketed into Utility items."
+m_description: "A bound wisp to guide you through the thickest of mists.  This is a <color=yellow>gem</color> that can be socketed into Utility items."
 clonePrefabName: 
 mockName: 
 customIcon: 

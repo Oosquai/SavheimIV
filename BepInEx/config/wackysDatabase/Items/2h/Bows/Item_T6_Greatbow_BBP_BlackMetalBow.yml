@@ -1,8 +1,8 @@
-name: BBP_BlackMetalBow
+name: BBP_BlackMetalBow_SH
 m_weight: 3
 m_name: Enchanted Greatbow
-m_description: An enchanted greatbow that takes tremendous strength to draw but launches arrows at incredible speeds.  Shots from this bow deal massive damage, have impressive stopping power, and send foes flying.
-clonePrefabName: 
+m_description: An enchanted greatbow that takes tremendous strength to draw but launches arrows at incredible speeds.  Shots from this bow deal massive damage, have impressive <color=yellow>stopping power</color>, and send foes flying.
+clonePrefabName: BBP_BlackMetalBow
 mockName: 
 customIcon: 
 material: 

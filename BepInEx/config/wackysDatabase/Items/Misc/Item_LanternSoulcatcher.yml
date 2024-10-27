@@ -1,7 +1,7 @@
 name: LanternSoulcatcher
 m_weight: 1
 m_name: $item_soulcatcher_lantern
-m_description: "Allows you to collect souls of defeated enemies.  Souls will only appear if you have this item with you."
+m_description: "Allows you to collect souls of defeated enemies.  <color=yellow>Souls will only appear if you have this item with you</color>."
 clonePrefabName: 
 mockName: 
 customIcon: 

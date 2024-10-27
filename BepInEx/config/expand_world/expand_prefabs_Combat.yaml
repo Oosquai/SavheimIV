@@ -743,7 +743,6 @@
   spawn: fx_Fader_Roar_Projectile_Hit
 
 ################################################################
-#############
 # Reapers
 # Primary X -> Secondary attacks have effects if they connect
 # 1, 2 = Generate stacks on enemy
@@ -1031,6 +1030,9 @@
   - self: true
     delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_1_clr
+  - self: true
+    delay: 3
+    parameter: p_reaper_debuff_stack_dot1
 
 # set stack 2
 - prefab: creature
@@ -1047,6 +1049,9 @@
   - self: true
     delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_2_clr
+  - self: true
+    delay: 3
+    parameter: p_reaper_debuff_stack_dot2
   
 # set stack 3
 - prefab: creature
@@ -1063,6 +1068,9 @@
   - self: true
     delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_3_clr
+  - self: true
+    delay: 3
+    parameter: p_reaper_debuff_stack_dot3
 
 # clear stack 1
 - prefab: creature
@@ -1082,6 +1090,40 @@
   data: d_reaper_debuff_stack_3_clr
   injectData: true
 
+### Debuff stacks have a small dot, mostly to help indicate they're there.  Good idea, Matt!
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_dot1
+  filter: d_reaper_debuff_stack_cnt_1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=1
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_reaper_debuff_stack_dot1
+  
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_dot2
+  filter: d_reaper_debuff_stack_cnt_2
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=2
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_reaper_debuff_stack_dot2
+  
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_dot3
+  filter: d_reaper_debuff_stack_cnt_3
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=3
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_reaper_debuff_stack_dot3
+  
 ## Primary-Primary-Secondary Combo = Consume debuff stacks to heal self.  Low damage.
 - prefab: creature
   type: poke, p_reaper_combo1_hit
@@ -1216,3 +1258,9 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, slash=<par1>
+
+####################################################
+## Atgeirs Momentum
+#- prefab: Player
+#  type: say, test
+#  command: s vel <vec_vel>

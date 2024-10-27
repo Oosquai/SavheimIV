@@ -1,0 +1,16 @@
+name: RBBP_BlackMetalBow_SH
+clonePrefabName: BBP_BlackMetalBow_SH
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 4
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- BlackMetal:28:14:True
+- YggdrasilWood:28:14:True
+- ScaleHide:12:6:True
+- Eitr:6:3:True

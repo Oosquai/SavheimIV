@@ -1,7 +1,7 @@
 name: CWS_Buckler_Shield_2_SH
 m_weight: 2
 m_name: Flametal Buckler
-m_description: An elegant flametal buckler.  Bucklers grant a burst of speed after a successful parry.
+m_description: An elegant flametal buckler.  Bucklers grant a <color=yellow>burst of speed</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
 clonePrefabName: CWS_Buckler_Shield_2
 mockName: 
 customIcon: 

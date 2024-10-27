@@ -1,7 +1,7 @@
 name: SwordSilver
 m_weight: 1
 m_name: $item_sword_silver
-m_description: $item_sword_silver_description  Swords have a thrust as a secondary attack that leaves targets bleeding.
+m_description: Sword secondary attacks apply a stacking <color=red>bleed</color> to <color=yellow>staggered</color> enemies that scales in duration and potency with the victim's maximum health.
 clonePrefabName: 
 mockName: 
 customIcon: 

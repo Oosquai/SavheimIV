@@ -1,7 +1,7 @@
 name: ArmorFenringChest
 m_weight: 5
 m_name: $item_chest_fenris
-m_description: $item_chest_fenris_description
+m_description: $item_chest_fenris_description  This is the armor of choice for adventurous <color=yellow>archers</color> and <color=yellow>thieves</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: CWS_Atgeir_6_SH
 m_weight: 2.5
 m_name: Flametal Atgeir
-m_description: A flaming pokey stick.  Atgeirs are nimble weapons with good reach, and they hamstring foes with their secondary spin attack.
+m_description: A flaming pokey stick.  Atgeirs are nimble weapons with good reach, and they <color=yellow>hamstring</color> foes with their secondary spin attack.
 clonePrefabName: CWS_Atgeir_6
 mockName: 
 customIcon: 

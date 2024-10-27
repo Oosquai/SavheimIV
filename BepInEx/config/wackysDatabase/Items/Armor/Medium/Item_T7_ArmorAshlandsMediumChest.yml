@@ -1,7 +1,7 @@
 name: ArmorAshlandsMediumChest
 m_weight: 5
 m_name: $item_chest_medium_ashlands
-m_description: $item_chest_medium_ashlands_description
+m_description: $item_chest_medium_ashlands_description  This is the armor of choice for master <color=yellow>archers</color> and <color=yellow>thieves</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

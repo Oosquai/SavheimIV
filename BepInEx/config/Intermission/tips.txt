@@ -55,5 +55,6 @@ Savheim IV - All attack skills now gain double experience until they've caught u
 Savheim IV - The Deep North is scaled for endgame but can be visited at any level.  Be sure not to disturb the peace though, and beware The Inquisition.
 Savheim IV - Bleed effects do greater damage per tick and and last longer based on the victim's maximum health.  Bleeds can be stacked for increased damage per tick, but each additional stack will reduce the time your target bleeds.  Some creatures don't bleed.
 Savheim IV - Resistance debuffs are ineffective against creatures that are naturally resistant to the damage type in question.
-Savheim IV - After absorbing an attack with any shield, you have a brief opportunity to perform a high-damage counterattack with any one-handed weapon, excluding knives.
+Savheim IV - After absorbing an attack with any shield, you have a brief opportunity to perform a high-damage Shield Counter with any one-handed weapon, excluding knives.
 Savheim IV - Hold 'E' while opening a chest to automatically deposit items from your inventory into matching item stacks already present in the chest.
+Savheim IV - This season of Savheim introduces a wide variety of combat mechanics.  Some are complex, some are simple.  You don't have to master it all to be successful.  Choose what works for you.

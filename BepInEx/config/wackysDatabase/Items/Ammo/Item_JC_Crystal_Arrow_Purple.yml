@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Purple
 m_weight: 0.01
 m_name: $JC_Crystal_Arrow_Purple (Enfeeble)
-m_description: $JC_Crystal_Arrow_Purple_Description that will reduce your target's damage.
+m_description: $JC_Crystal_Arrow_Purple_Description that will <color=yellow>reduce your target's damage</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

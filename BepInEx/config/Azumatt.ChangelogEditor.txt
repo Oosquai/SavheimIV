@@ -7,7 +7,8 @@
 - Soul gems are now restricted to unique types per item.
 - Balanced shield stats and some short and greatbow stats.
 - Scaled T8 uniques to be equivalent to T7.5.
-- Added some orange highlights to some tooltips.
+- Added color highlights to a lot of tooltips.
+- Reaper curse stacks now have a small dot to indicate they're there - thanks, Matt!
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

@@ -1,7 +1,7 @@
 name: FishingRod
 m_weight: 1
 m_name: $item_fishingrod
-m_description: $item_fishingrod_description
+m_description: $item_fishingrod_description  <color=yellow>Fish will only appear if you have a fishing rod equipped</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

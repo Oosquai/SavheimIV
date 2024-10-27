@@ -1,7 +1,7 @@
 name: CWS_Arrow_1_SH
 m_weight: 0.01
 m_name: Barbed Crossbow Bolt
-m_description: $cws_arrow_1_description that will cause your target to bleed profusely.
+m_description: $cws_arrow_1_description that will cause your target to <color=red>bleed</color>.  This bleed stacks and will scale with the victim's maximum health.
 clonePrefabName: CWS_Arrow_1
 mockName: 
 customIcon: 

@@ -2,7 +2,7 @@ name: portal_wood
 piecehammer: Hammer
 m_name: $piece_portal
 sizeMultiplier: 1
-m_description: Provides teleportation to any other portal.  Press 'P' while viewing the map to toggle display of portals.
+m_description: Provides teleportation to any other portal.  Press <color=orange>P</color> while viewing the map to toggle display of portals.
 customIcon: 
 clonePrefabName: 
 material: 

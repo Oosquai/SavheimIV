@@ -1,7 +1,7 @@
 name: StaffShield_T2
 m_weight: 0.3
 m_name: Novice's Staff of Protection
-m_description: $item_staffshield_description  When unprotected, the secondary move performs a Spirit Counter that can repel any attack and is especially effective against the Undead.
+m_description: $item_staffshield_description  When unprotected, the secondary move performs a <color=yellow>Spirit Counter</color> that can repel any attack and is especially effective against the undead.
 clonePrefabName: StaffShield
 mockName: 
 customIcon: 

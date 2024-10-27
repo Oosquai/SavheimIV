@@ -1,7 +1,7 @@
 name: T7_Reaper
 m_weight: 4
 m_name: Flametal Reaper
-m_description: Reapers weave their wielder's blood into precise attacks to curse foes. <color=orange>1</color> primary attack followed by a secondary stacks up to three curses. <color=orange>2</color> consumes the curses to heal the wielder. <color=orange>3</color> bursts and spreads the curse.
+m_description: Reapers weave their wielder's blood into precise attacks to curse foes. <color=orange>1</color> primary attack followed by a secondary attack stacks up to three curses, <color=orange>2</color> consumes the curses to <color=green>heal</color> the wielder, or <color=orange>3</color> <color=red>bursts and spreads</color> the curse.
 clonePrefabName: THSwordSlayerBlood
 mockName: 
 customIcon: 

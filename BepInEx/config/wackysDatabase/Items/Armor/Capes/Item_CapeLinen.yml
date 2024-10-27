@@ -1,7 +1,7 @@
 name: CapeLinen
 m_weight: 4
 m_name: $item_cape_linen
-m_description: This traveler's cape comes in many colors, all of which are treated with enchanted oils to keep you warm and dry in even the worst of weather.
+m_description: This traveler's cape comes in many colors, all of which are treated with enchanted oils to keep you <color=yellow>warm</color> and <color=yellow>dry</color> in even the worst of weather.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: CWS_Buckler_Shield_1_SH
 m_weight: 2
 m_name: Black Metal Buckler
-m_description: A disc of black metal fashioned into a buckler.  Bucklers grant a burst of speed after a successful parry.
+m_description: A disc of black metal fashioned into a buckler.  Bucklers grant a <color=yellow>burst of speed</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
 clonePrefabName: CWS_Buckler_Shield_1
 mockName: 
 customIcon: 

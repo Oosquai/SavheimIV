@@ -1,8 +1,8 @@
-name: BBP_SilverBow
+name: BBP_SilverBow_SH
 m_weight: 3
 m_name: Silver Bladed Greatbow
-m_description: A silver greatbow that takes tremendous strength to draw but launches arrows at incredible speeds.  Shots from this bow deal massive damage, have impressive stopping power, and send foes flying.
-clonePrefabName: 
+m_description: A silver greatbow that takes tremendous strength to draw but launches arrows at incredible speeds.  Shots from this bow deal massive damage, have impressive <color=yellow>stopping power</color>, and send foes flying.
+clonePrefabName: BBP_SilverBow
 mockName: 
 customIcon: 
 material: 

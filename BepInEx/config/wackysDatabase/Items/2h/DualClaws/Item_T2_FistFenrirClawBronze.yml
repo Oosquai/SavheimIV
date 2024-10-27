@@ -1,7 +1,7 @@
 name: FistFenrirClawBronze
 m_weight: 2
 m_name: Bronze Flesh Rippers
-m_description: Claws attack in a frenzy that can cause massive bloodloss, and they can weave in savage kicks to knock foes off balance.  They rely on parries to keep them close to their victims.
+m_description: Claws attack in a frenzy that can cause massive <color=red>bloodloss</color>, and they can weave in savage kicks to <color=yellow>stagger</color> foes.  They rely on <color=yellow>parries</color> to keep them close to their victims.
 clonePrefabName: FistFenrirClaw
 mockName: 
 customIcon: 
