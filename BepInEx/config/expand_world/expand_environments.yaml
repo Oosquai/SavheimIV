@@ -3302,3 +3302,92 @@
   lightIntensityDay: 1
   lightIntensityNight: 0.6
   sunAngle: 20
+
+- name: Ghosts
+  isCold: true
+  isColdAtNight: true
+  alwaysDark: true
+  windMax: 0
+  ambientVol: 0.5
+  ambientList: Crypt
+  musicMorning: '-'
+  musicEvening: '-'
+  musicDay: forestcrypt
+  musicNight: forestcrypt
+  ambColorDay:
+    r: 0.3137255
+    g: 0.3137255
+    b: 0.3137255
+    a: 1
+  ambColorNight:
+    r: 0.3137255
+    g: 0.3137255
+    b: 0.3137255
+    a: 1
+  sunColorMorning:
+    r: 0.9411765
+    g: 0.881995
+    b: 0.7266436
+    a: 1
+  sunColorDay:
+    r: 0.9491875
+    g: 0.9491875
+    b: 0.9491875
+    a: 1
+  sunColorEvening:
+    r: 1
+    g: 0.7426471
+    b: 0.7426471
+    a: 1
+  sunColorNight:
+    r: 0.4200909
+    g: 0.4405027
+    b: 0.5441177
+    a: 1
+  fogColorMorning:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogColorDay:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogColorEvening:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogColorNight:
+    r: 0.1762446
+    g: 0.1821751
+    b: 0.2156863
+    a: 1
+  fogColorSunMorning:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogColorSunDay:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogColorSunEvening:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogColorSunNight:
+    r: 0.1763485
+    g: 0.1802548
+    b: 0.2154269
+    a: 1
+  fogDensityMorning: 0.1
+  fogDensityDay: 0.1
+  fogDensityEvening: 0.1
+  fogDensityNight: 0.1
+  lightIntensityDay: 0.7
+  lightIntensityNight: 0.6
+  sunAngle: 45

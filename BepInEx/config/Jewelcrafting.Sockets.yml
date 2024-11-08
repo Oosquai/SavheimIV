@@ -66,19 +66,19 @@ berserk:
     unique: gem
     power: [3, 6, 9]
 
-acceleration:
-  slot: [weapon, magic]
-  gem: redish
-  unique: gem
-  power: [4, 8, 12]
+#acceleration:
+#  slot: [weapon, magic]
+#  gem: redish
+#  unique: gem
+#  power: [4, 8, 12]
 
-overexertion:
-  slot: [weapon, magic, bow, crossbow, tool]
-  gem: blueish
-  unique: gem
-  power:
-    damage increase: [6, 12, 18]
-    penalty: [1, 1, 1]
+#overexertion:
+#  slot: [weapon, magic, bow, crossbow, tool]
+#  gem: blueish
+#  unique: gem
+#  power:
+#    damage increase: [6, 12, 18]
+#    penalty: [1, 1, 1]
 
 # Specific Weapons
 
@@ -164,17 +164,17 @@ fade:
   # Optional Configs:
   # - damage threshold (default: 30)
 
-invigorated:
-  slot: [chest, shield, bow, tool]
-  gem: redish
-  unique: gem
-  power: [8, 16, 24]
+#invigorated:
+#  slot: [chest, shield, bow, tool]
+#  gem: redish
+#  unique: gem
+#  power: [8, 16, 24]
 
-relaxed:
-  slot: [utility, crossbow]
-  gem: redish
-  unique: gem
-  power: [10, 20, 30]
+#relaxed:
+#  slot: [utility, crossbow]
+#  gem: redish
+#  unique: gem
+#  power: [10, 20, 30]
 
 # Legs
 
@@ -220,11 +220,11 @@ momentum:
   unique: gem
   power: [25, 50, 75]
 
-restless legs:
-  slot: legs
-  gem: blueish
-  unique: gem
-  power: [15, 30, 45]
+#restless legs:
+#  slot: legs
+#  gem: blueish
+#  unique: gem
+#  power: [15, 30, 45]
 
 # Utility
 
@@ -317,11 +317,11 @@ eitr surge:
     unique: gem
     power: [5, 10, 15]
 
-refreshed mind:
-  slot: head
-  gem: blueish
-  unique: gem
-  power: [3, 6, 9]
+#refreshed mind:
+#  slot: head
+#  gem: blueish
+#  unique: gem
+#  power: [3, 6, 9]
 
 # Bow
 
@@ -432,13 +432,19 @@ turtle shell:
   unique: gem
   power: [8, 16, 24]
 
-nourishing:
-  slot: [cloak, utility]
-  gem: blueish
+air dried:
+  slot: cloak
+  gem: blue
   unique: gem
-  power:
-    health: [34, 67, 100]
-    comfort requirement: [1, 1, 1]
+  power: [20, 40, 60]
+
+#nourishing:
+#  slot: [cloak, utility]
+#  gem: blueish
+#  unique: gem
+#  power:
+#    health: [34, 67, 100]
+#    comfort requirement: [1, 1, 1]
 
 wind walk:
   slot: cloak

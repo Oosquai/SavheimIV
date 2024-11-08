@@ -1872,3 +1872,31 @@
   clearArea: true
   randomDamage: true
   maxVegetation: 0.5
+
+- prefab: DevGarden
+  biome: None
+  maxTerrainDelta: 2
+  exteriorRadius: 20
+  clearArea: true
+- prefab: DevForge
+  biome: None
+  maxTerrainDelta: 2
+  exteriorRadius: 15
+  clearArea: true
+- prefab: BogWitch_Camp
+  enabled: true
+  biome: Swamp
+  biomeArea: median
+  quantity: 10
+  minDistance: 0.3
+  maxDistance: 0.8
+  minAltitude: 1
+  prioritized: true
+  unique: true
+  minDistanceFromSimilar: 1000
+  iconPlaced: BogWitch_Camp
+  randomRotation: true
+  maxTerrainDelta: 2
+  exteriorRadius: 24
+  clearArea: true
+  noBuild: true
