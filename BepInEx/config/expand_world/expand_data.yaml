@@ -133,3 +133,10 @@
 - name: drop_qty
   ints:
   - stack, 1+<par1>/3;1+<par1>/2
+
+####################################
+# Friendly ballistas (thanks, Tyson!)
+- name: FriendlyBallista
+  ints:
+  - Turret.m_targetPlayers, 0
+  - Turret.m_targetTamed, 0

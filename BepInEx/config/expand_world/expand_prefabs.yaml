@@ -59,6 +59,12 @@
   - Player, 5
 
 ##############################################################
+# Friendly ballistas (thanks, Tyson!)
+- prefab: piece_turret
+  type: create
+  data: FriendlyBallista
+
+##############################################################
 # Spawn portals near key locations
 # Starting Stones
 - prefab: BossStone_DragonQueen
