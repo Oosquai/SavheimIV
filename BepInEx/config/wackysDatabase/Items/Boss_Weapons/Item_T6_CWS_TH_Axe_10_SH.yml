@@ -1,7 +1,7 @@
 name: CWS_TH_Axe_10_SH
 m_weight: 2.5
 m_name: Hel's Reaver
-m_description: The goddess of death corrupted this massive weapon, allowing it to harvest the corpses it creates and siphon life from those near their fallen allies.
+m_description: The goddess of death corrupted this massive weapon, allowing it to harvest the <color=yellow>corpses</color> it creates and siphon <color=green>life</color> from those near their fallen allies.
 clonePrefabName: CWS_TH_Axe_10
 mockName: 
 customIcon: 

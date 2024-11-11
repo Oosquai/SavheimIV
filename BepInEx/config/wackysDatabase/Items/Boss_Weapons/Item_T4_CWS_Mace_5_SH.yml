@@ -1,7 +1,7 @@
 name: CWS_Mace_5_SH
 m_weight: 2
 m_name: Embyr
-m_description: This demonic mace yearns to set the world aflame.  It also keeps you warm in cold weather.
+m_description: This demonic mace yearns to set the world aflame.  It also keeps you <color=#00FFFF>warm</color> in cold weather.
 clonePrefabName: CWS_Mace_5
 mockName: 
 customIcon: 

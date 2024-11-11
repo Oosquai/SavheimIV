@@ -85,6 +85,12 @@
   spawns:
   - portal_wood, 3.3,12.6,-0.2, 209,0,0, d_portal_hildir
 
+# Bog Witch
+- prefab: BogWitch
+  type: create
+  spawns:
+  - portal_wood, -0.5,-2.5,-0.2, 163,0,0, d_portal_bogwitch
+
 # JC Gacha location - use delayed poke & objects filter to limit to middle chest, since 5 chests spawn.
 - prefab: Jewelcrafting_Chest
   type: create

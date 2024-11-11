@@ -1,7 +1,7 @@
 name: CWS_Round_Shield_3_SH
 m_weight: 5
 m_name: Haunted Aegis
-m_description: Aegises offer excellent <color=yellow>protection from the elements</color> when actively blocking, and they grant increased <color=yellow>eitr regen</color> after a successful parry.  They consume more stamina when blocking though.  <color=yellow>Shield Counter</color> after a normal block using any one-handed weapon, excluding knives.
+m_description: Aegises offer excellent <color=yellow>protection from the elements</color> when actively blocking, and they grant increased <color=purple>eitr regen</color> after a successful parry.  They consume more stamina when blocking though.  <color=yellow>Shield Counter</color> after a normal block using any one-handed weapon, excluding knives.
 clonePrefabName: CWS_Round_Shield_3
 mockName: 
 customIcon: 

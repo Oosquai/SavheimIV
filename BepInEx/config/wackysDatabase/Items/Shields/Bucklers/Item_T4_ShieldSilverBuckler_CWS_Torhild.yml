@@ -1,7 +1,7 @@
 name: CWS_Round_Shield_7_SH
 m_weight: 2
 m_name: Silver Buckler
-m_description: A sturdy buckler reinforced with silver.  Bucklers grant a <color=yellow>burst of speed</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
+m_description: A sturdy buckler reinforced with silver.  Bucklers grant a <color=#00FFFF>burst of speed</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
 clonePrefabName: CWS_Round_Shield_7
 mockName: 
 customIcon: 

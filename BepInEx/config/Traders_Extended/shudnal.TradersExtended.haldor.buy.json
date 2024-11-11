@@ -30,17 +30,5 @@
     "stack": 1,
     "price": 5,
     "requiredGlobalKey": ""
-  },
-  {
-    "prefab": "SurtlingCore",
-    "stack": 1,
-    "price": 60,
-    "requiredGlobalKey": "defeated_bonemass"
-  },
-  {
-    "prefab": "Chain",
-    "stack": 1,
-    "price": 50,
-    "requiredGlobalKey": "defeated_bonemass"
   }
 ]

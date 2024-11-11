@@ -1,7 +1,7 @@
 name: FistFenrirClaw_Boss_SH
 m_weight: 2
 m_name: Ravenclaws
-m_description: Claws attack in a frenzy that can cause massive bloodloss, and they rely on parries to keep them close to their victims.  These claws have a secondary attack that can inflict even greater bloodloss on staggered foes.
+m_description: Claws attack in a frenzy that can cause massive <color=red>bloodloss</color>, and they rely on <color=yellow>parries</color> to keep them close to their victims.  These claws have a secondary attack that can inflict even greater <color=red>bloodloss</color> on <color=yellow>staggered</color> foes.
 clonePrefabName: FistFenrirClaw
 mockName: 
 customIcon: 

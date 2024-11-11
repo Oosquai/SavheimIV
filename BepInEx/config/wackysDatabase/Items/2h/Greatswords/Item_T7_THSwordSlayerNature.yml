@@ -1,7 +1,7 @@
 name: THSwordSlayerNature
 m_weight: 4
 m_name: $item_sword_slayer_nature
-m_description: $item_sword_slayer_nature_description  Greatswords have a reliable <color=yellow>parry</color>, and they're able to stack long-lasting <color=red>bleeds</color> on <color=yellow>staggered</color> enemies that scale in duration and potency with the victim's maximum health.
+m_description: $item_sword_slayer_nature_description  Greatswords have a reliable <color=yellow>parry</color>, and they're able to stack <color=red>long-lasting bleeds</color> on <color=yellow>staggered</color> enemies that scale in duration and potency with the victim's maximum health.
 clonePrefabName: 
 mockName: 
 customIcon: 

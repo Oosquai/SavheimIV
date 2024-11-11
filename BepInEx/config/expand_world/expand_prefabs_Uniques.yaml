@@ -753,6 +753,32 @@
     1: vec, <x>,<z>,<y>
     delay: 0.3
 
+#####################
+# Ymir's Fang, frost spear
+- prefab: CWS_Spear_6_Projectile
+  type: create
+  poke:
+  - self: true
+    parameter: p_ymir_fang_loop
+
+- prefab: CWS_Spear_6_Projectile
+  type: poke, p_ymir_fang_loop
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_ymir_fang_loop
+  - prefab: creature
+    maxDistance: 2
+    data: not_tamed_uniques
+    parameter: p_ymir_fang_dmg
+
+- prefab: creature
+  type: poke, p_ymir_fang_dmg
+  spawn: fx_iceshard_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=13
+
 ##############################################################
 # Boss Drops
 - prefab: Eikthyr

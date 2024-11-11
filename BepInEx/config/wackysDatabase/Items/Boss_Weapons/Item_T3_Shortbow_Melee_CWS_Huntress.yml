@@ -1,7 +1,7 @@
 name: CWS_Bow_11_SH
 m_weight: 1
 m_name: The Huntress
-m_description: The blades protruding from this shortbow make for effective and sometimes bloody parries against melee attackers.
+m_description: The blades protruding from this shortbow make for effective and sometimes <color=red>bloody</color> parries against melee attackers.
 clonePrefabName: CWS_Bow_11
 mockName: 
 customIcon: 

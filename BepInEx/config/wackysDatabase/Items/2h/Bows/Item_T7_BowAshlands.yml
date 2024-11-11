@@ -1,7 +1,7 @@
 name: BowAshlands
 m_weight: 1.5
 m_name: Ash Fang Longbow
-m_description: $item_bow_ashlands_description  Longbows reach far and hit hard when fired from the ground, or they can fire a quick <color=yellow>jump shot</color>.  <color=orange>Left-Shift</color> <color=yellow>zooms</color> while aiming any bow.
+m_description: $item_bow_ashlands_description  Longbows reach far and hit hard when fired from the ground, or they can fire a quick <color=#00FFFF>jump shot</color>.  <color=orange>Left-Shift</color> <color=yellow>zooms</color> while aiming any bow.
 clonePrefabName: 
 mockName: 
 customIcon: 

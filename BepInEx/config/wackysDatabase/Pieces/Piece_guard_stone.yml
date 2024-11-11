@@ -2,7 +2,7 @@ name: guard_stone
 piecehammer: Hammer
 m_name: $piece_guardstone
 sizeMultiplier: 1
-m_description: $piece_guardstone_description  Also <color=yellow>prevents falling damage</color> within the seal.
+m_description: $piece_guardstone_description  Also <color=#00FFFF>prevents falling damage</color> within the seal.
 customIcon: 
 clonePrefabName: 
 material: 

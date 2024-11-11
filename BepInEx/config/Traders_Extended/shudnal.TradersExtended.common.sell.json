@@ -6,6 +6,12 @@
     "requiredGlobalKey": ""
   },
   {
+    "prefab": "HardAntler",
+    "stack": 1,
+    "price": 5,
+    "requiredGlobalKey": ""
+  },
+  {
     "prefab": "CryptKey",
     "stack": 1,
     "price": 5,

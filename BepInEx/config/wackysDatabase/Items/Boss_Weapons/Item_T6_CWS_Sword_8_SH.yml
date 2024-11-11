@@ -1,7 +1,7 @@
 name: CWS_Sword_8_SH
 m_weight: 0.8
 m_name: Vali's Light
-m_description: Vali, known equally for vengeance and renewal, bestowed this blade with a duality reflecting his own nature.  Its blessing heals allies, but only in proportion to the vitality of nearby foes.
+m_description: Vali, known equally for vengeance and renewal, bestowed this blade with a duality reflecting his own nature.  Its blessing <color=green>heals</color> allies, but only in proportion to the vitality of nearby foes.
 clonePrefabName: CWS_Sword_8
 mockName: 
 customIcon: 

@@ -50,7 +50,7 @@ Savheim IV - Most weapon types now offer some form of debuff or secondary damage
 Savheim IV - The more stars a creature has, the better the loot.  At three stars and up you'll start to see increasingly precious components.  Infused creatures are rare and have coveted treasures.
 Savheim IV - Meadows will always remain relatively peaceful, regardless of your progress through the game.  The same cannot be said for anywhere else in the world.  Bring a Torch for Winter.
 Savheim IV - Some creatures have learned to dual wield for increased offense, use shields for improved defense, carry light sources for better visibility, or use magic for ... magic.
-Savheim IV - Haldor and Hildir sell valuable items.  Their inventories will grow as you slay bosses, so check back from time to time...  Hey, hey, do you wanna buy a funnel cake?
+Savheim IV - Haldor, Hildir, and the Bog Witch sell valuable items.  Their inventories will grow as you slay bosses, so check back from time to time...  Hey, hey, do you wanna buy a funnel cake?
 Savheim IV - All attack skills now gain double experience until they've caught up to your highest attack skill.  Try a new weapon!
 Savheim IV - The Deep North is scaled for endgame but can be visited at any level.  Be sure not to disturb the peace though, and beware The Inquisition.
 Savheim IV - Bleed effects do greater damage per tick and and last longer based on the victim's maximum health.  Bleeds can be stacked for increased damage per tick, but each additional stack will reduce the time your target bleeds.  Some creatures don't bleed.

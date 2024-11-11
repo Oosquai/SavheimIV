@@ -1,7 +1,7 @@
 name: CWS_Sledge_8_SH
 m_weight: 4
 m_name: Skybreaker
-m_description: Rams can't fly.  Neither should anything else.
+m_description: Rams can't <color=yellow>fly</color>.  Neither should anything else.
 clonePrefabName: CWS_Sledge_8
 mockName: 
 customIcon: 

@@ -109,6 +109,25 @@
   - TargetPortal PortalOwnerName, Oodin
   - tag, Hildir
 
+- name: d_portal_bogwitch
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  longs:
+  - creator, 1234567890
+  ints:
+  - TargetPortal PortalMode, 0
+  - override_interact, 1
+  strings:
+  - tagauthor, Steam_12345678901234567
+  - TargetPortal PortalOwnerId, 12345678901234567
+  - TargetPortal PortalOwnerName, Oodin
+  - tag, Bog Witch
+
 - name: d_portal_jc_gacha
   bools:
   - Piece.m_canBeRemoved, false

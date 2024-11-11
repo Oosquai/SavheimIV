@@ -1,7 +1,7 @@
 name: CWS_Spear_5_SH
 m_weight: 1.5
 m_name: Stormpiercer
-m_description: When thrown, this spear flies so swiftly as to beckon lightning to chase it.  Spear wielders manipulate movement.  Pin your targets in place with a thrown spear, then dash in for the kill.
+m_description: When thrown, this spear flies so swiftly as to beckon lightning to chase it.  Spear wielders manipulate movement.  <color=yellow>Pin</color> your targets in place with a thrown spear, then <color=#00FFFF>dash</color> in for the kill.
 clonePrefabName: CWS_Spear_5
 mockName: 
 customIcon: 

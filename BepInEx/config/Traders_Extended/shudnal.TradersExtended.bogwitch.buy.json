@@ -1,0 +1,20 @@
+[
+  {
+    "prefab": "Chain",
+    "stack": 1,
+    "price": 50,
+    "requiredGlobalKey": "defeated_bonemass"
+  },
+  {
+    "prefab": "SurtlingCore",
+    "stack": 1,
+    "price": 60,
+    "requiredGlobalKey": "defeated_bonemass"
+  },
+  {
+    "prefab": "BlackCore",
+    "stack": 1,
+    "price": 999,
+    "requiredGlobalKey": "defeated_queen"
+  }
+]

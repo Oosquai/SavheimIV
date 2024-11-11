@@ -1,7 +1,7 @@
 name: CWS_Sword_14_SH
 m_weight: 0.8
 m_name: Iron Sanctis
-m_description: Imbued with Odin's might, Sanctir harness eitr to conjure <color=yellow>protective wards</color> and vanquish <color=yellow>the undead</color>.
+m_description: Imbued with Odin's might, Sanctir harness eitr to conjure <color=#00FFFF>protective wards</color> and vanquish <color=yellow>the undead</color>.
 clonePrefabName: CWS_Sword_14
 mockName: 
 customIcon: 

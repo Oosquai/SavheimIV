@@ -1,7 +1,7 @@
 name: CWS_Dagger_1_SH
 m_weight: 0.3
 m_name: Runefang
-m_description: Critical strikes and backstabs with this weapon leech eitr from the victim.
+m_description: <color=yellow>Critical strikes</color> and <color=yellow>backstabs</color> with this weapon leech <color=purple>eitr</color> from the victim.
 clonePrefabName: CWS_Dagger_1
 mockName: 
 customIcon: 

@@ -799,12 +799,13 @@ groups:
     - Consumables
     - Spells
 
-#  DontSink:
-#    - SerpentScale
-#    - TrophySerpent
+  DontSink:
+    - SerpentScale
+    - TrophySerpent
+    - TrophyBonemawSerpent
 
 NoLossOnDeath:
   loss: no
 
-#DontSink:
-#  floating: yes
+DontSink:
+  floating: yes

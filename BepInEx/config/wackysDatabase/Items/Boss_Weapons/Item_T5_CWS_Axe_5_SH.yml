@@ -1,7 +1,7 @@
 name: CWS_Axe_5_SH
 m_weight: 2
 m_name: Guardian's Grasp
-m_description: Keep your friends close and safe, and your enemies closer and safer.  Primary attacks trap and secondary attacks reduce damage of foes.
+m_description: Keep your friends close and safe, and your enemies closer and safer.  Primary attacks <color=yellow>trap</color> and secondary attacks <color=yellow>reduce damage</color> of foes.
 clonePrefabName: CWS_Axe_5
 mockName: 
 customIcon: 

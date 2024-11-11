@@ -1,7 +1,7 @@
 name: Cape_Eitr_SH
 m_weight: 4
 m_name: Eitrweave Cape
-m_description: An enchanted cloak to keep you warm and energized.
+m_description: An enchanted cloak to keep you <color=#00FFFF>warm</color> and <color=purple>energized</color>.
 clonePrefabName: CapeAsksvin
 mockName: 
 customIcon: 

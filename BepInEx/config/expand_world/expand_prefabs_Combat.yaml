@@ -1031,7 +1031,7 @@
     delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_1_clr
   - self: true
-    delay: 3
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot1
 
 # set stack 2
@@ -1050,7 +1050,7 @@
     delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_2_clr
   - self: true
-    delay: 3
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot2
   
 # set stack 3
@@ -1069,7 +1069,7 @@
     delay: 60                                    # REAPER DEBUFF STACK TtL
     parameter: p_reaper_debuff_stack_3_clr
   - self: true
-    delay: 3
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot3
 
 # clear stack 1
@@ -1099,7 +1099,7 @@
     1: hit, damage=1
   poke:
   - self: true
-    delay: 3
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot1
   
 - prefab: creature
@@ -1110,7 +1110,7 @@
     1: hit, damage=2
   poke:
   - self: true
-    delay: 3
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot2
   
 - prefab: creature
@@ -1121,7 +1121,7 @@
     1: hit, damage=3
   poke:
   - self: true
-    delay: 3
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot3
   
 ## Primary-Primary-Secondary Combo = Consume debuff stacks to heal self.  Low damage.

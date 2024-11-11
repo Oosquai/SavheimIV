@@ -436,7 +436,7 @@ air dried:
   slot: cloak
   gem: blue
   unique: gem
-  power: [20, 40, 60]
+  power: [24, 42, 60]
 
 #nourishing:
 #  slot: [cloak, utility]
