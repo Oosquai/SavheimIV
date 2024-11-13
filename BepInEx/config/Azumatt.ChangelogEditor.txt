@@ -3,12 +3,18 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/10/24</color>
-- Lots of updates for Bog Witch DLC.  Things should be stable again.
-- Tooltip color highlighting updates.
+     0\  Savheim IV Patch Notes, 11/13/24</color>
+- Removed FishChum, OdinsHares, OreMines, SmoothSave, and MistrootTamer mods for performance and stability.
+- Balanced food stats.  Added foods with hp, stam, and eitr.  Added foods with high health regen.
+- Moved some vendor items to Bog Witch.
+- Added portal at Bog Witch hut.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/10/24
+- Lots of updates for Bog Witch DLC.  Things should be stable again.
+- Tooltip color highlighting updates.
 
 Patch Notes, 10/26/24
 - Soul gems are now restricted to unique types per item.

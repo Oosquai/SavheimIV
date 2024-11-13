@@ -20,11 +20,11 @@ Armor:
   armor: 10
   armorPerLevel: 1
 FoodStats:
-  m_foodHealth: 60
-  m_foodStamina: 14
+  m_foodHealth: 33
+  m_foodStamina: 33
   m_foodRegen: 3
   m_foodBurnTime: 1800
-  m_FoodEitr: 50
+  m_FoodEitr: 33
 Moddifiers:
   m_movementModifier: 0
   m_EitrRegen: 0

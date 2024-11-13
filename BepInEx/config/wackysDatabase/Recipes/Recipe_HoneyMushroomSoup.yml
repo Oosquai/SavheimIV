@@ -4,12 +4,13 @@ craftingStation: $piece_cauldron
 minStationLevel: 2
 maxStationLevelCap: 
 repairStation: 
-amount: 2
-disabled: true
+amount: 4
+disabled: false
 disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- Mushroom:4:0:False
-- MushroomYellow:4:0:False
-- Honey:4:0:False
+- Mushroom:2:0:False
+- MushroomYellow:2:0:False
+- Honey:2:0:False
+- CookedMeat:2:0:False

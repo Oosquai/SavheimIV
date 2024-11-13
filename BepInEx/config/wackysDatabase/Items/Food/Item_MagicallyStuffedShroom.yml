@@ -23,7 +23,7 @@ FoodStats:
   m_foodHealth: 25
   m_foodStamina: 12
   m_foodRegen: 3
-  m_foodBurnTime: 1500
+  m_foodBurnTime: 1800
   m_FoodEitr: 75
 Moddifiers:
   m_movementModifier: 0
