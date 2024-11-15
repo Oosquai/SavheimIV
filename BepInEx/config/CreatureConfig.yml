@@ -1,58 +1,16 @@
 # ----------------------------------------
-# Peaceful Meadows at lower World Levels
-Surtling:
-  Meadows:
-    amount: 0
-
-Fuling:
-  Meadows:
-    amount: 0
-
-Goblin:
-  Meadows:
-    amount: 0
-
-Seeker brood:
-  Meadows:
-    amount: 0
-
-Tick:
-  Meadows:
-    amount: 0
-
-Seeker:
-  Meadows:
-    amount: 0
-
-Charred Marksman:
-  Meadows:
-    amount: 0
-
-Charred Twitcher:
-  Meadows:
-    amount: 0
-
-Charred Warlock:
-  Meadows:
-    amount: 0
-
-Charred Warrior:
-  Meadows:
-    amount: 0
-
-# ----------------------------------------
 # Creature Adjustments - Meadows
 # Boar base stats - HP: 10; dmg: 10; weak: -; resist: -; immune: Spirit
-#Boar:
-#  health: 1
+Boar:
+  health: 1.2
 
 # Neck base stats - HP: 5; dmg: 6; weak: Fire; resist: Poison; immune: Spirit
-#Neck:
-#  health: 1
+Neck:
+  health: 1.2
 
 # Greyling base stats - HP: 20; dmg: 5; weak: Fire; resist: Poison; immune: Spirit
-#Greyling:
-#  health: 1
+Greyling:
+  health: 1.2
 
 # Eikthyr (BOSS) base stats - HP: 500; dmg: 20; weak: -; resist: -; immune: Stagger
 #Eikthyr:
@@ -82,7 +40,7 @@ Skeleton:
 
 # Rancid Remains base stats - HP: 100; dmg: 30; weak: Blunt, Fire; resist: Pierce; immune: Poison
 Rancid Remains:
-  health: 1.25
+  health: 1.5
 
 # Ghost base stats - HP: 60; dmg: 25; weak: Spirit, Fire; resist: Physical; immune: Poison
 #Ghost:
@@ -121,16 +79,16 @@ Blob:
 #  health: 1
 
 # Draugr base stats - HP: 100; dmg: 48; weak: -; resist: Fire; immune: Poison
-#Draugr:
-#  health: 1.3
+Draugr:
+  health: 1.2
 
 # Draugr Elite base stats - HP: 200; dmg: 58; weak: -; resist: Fire; immune: Poison
-#Draugr Elite:
-#  health: 1.5
+Draugr Elite:
+  health: 1.3
 
 # Leech base stats - HP: 60; dmg: 70; weak: -; resist: Poison; immune: Fire, Spirit, Stagger
-#Leech:
-#  health: 1
+Leech:
+  health: 1.2
 
 # Surtling base stats - HP: 20; dmg: 40; weak: Frost; resist: -; immune: Fire, Spirit
 #Surtling:
@@ -151,8 +109,8 @@ Wolf:
   health: 1.2
 
 # Drake base stats - HP: 100; dmg: 90; weak: Fire; resist: -; immune: Frost, Spirit, Stagger
-#Drake:
-#  health: 1
+Drake:
+  health: 1.2
 
 # Fenring base stats - HP: 300; dmg: 95; weak: Fire; resist: -; immune: -
 #Fenring:
@@ -168,11 +126,11 @@ Stone Golem:
 
 # Ulv base stats - HP: 50; dmg: 70; weak: Poison; resist: Fire; immune: -
 Ulv:
-  health: 1.25
+  health: 1.3
 
 # Cultist base stats - HP: 200; dmg: 50; weak: Poison; resist: Fire; immune: -
-#Cultist:
-#  health: 1
+Cultist:
+  health: 1.2
 
 # Geirrhafa (Miniboss) base stats - HP: 3700; dmg: 90; weak: Fire; resist: -; immune: Frost
 #Geirrhafa:
@@ -193,16 +151,16 @@ Lox:
   health: 0.9
 
 # Fuling base stats - HP: 175; dmg: 85; weak: -; resist: -; immune: Spirit
-#Fuling:
-#  health: 1.3
+Fuling:
+  health: 1.2
 
 # Fuling Berserker base stats - HP: 800; dmg: 130; weak: -; resist: -; immune: Spirit
 #Fuling Berserker:
 #  health: 1
 
 # Fuling Shaman base stats - HP: 100; dmg: 100; weak: -; resist: -; immune: Spirit
-#Fuling Shaman:
-#  health: 1
+Fuling Shaman:
+  health: 1.5
 
 # Growth base stats - HP: 100; dmg: 50; weak: Blunt, Fire; resist: Frost, Pierce, Slash; immune: Poison, Stagger
 #Growth:

@@ -1,7 +1,7 @@
 name: AtgeirHimminAfl
 m_weight: 2.5
 m_name: $item_atgeir_himminafl
-m_description: $item_atgeir_himminafl_description  Atgeirs are nimble weapons with good reach, and they <color=yellow>hamstring</color> foes with their secondary spin attack.
+m_description: $item_atgeir_himminafl_description  Atgeirs are nimble weapons with good reach, and they <color=yellow>hamstring</color> foes with their secondary spin attack.  Charge your foe and connect with the blade to <color=yellow>impale</color> them for increased damage based on speed.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -183,6 +183,17 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   - name: sfx_spear_hit
+    m_enabled: true
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: sfx_sword_hit
     m_enabled: true
     m_variant: -1
     m_attach: false

@@ -1260,7 +1260,176 @@
     1: hit, slash=<par1>
 
 ####################################################
-## Atgeirs Momentum
-#- prefab: Player
-#  type: say, test
-#  command: s vel <vec_vel>
+# Atgeirs Impale
+# The first primary attack with an atgeir impales the target for bonus dmg based on player momentum.
+# Bonus damage scales linearly with atgeir base damage and exponentially with player forward speed at time of attack.
+# Filters set such that most loadouts require a player to be sprinting to trigger impale.
+# minDistance set to prevent triggers if player right up against a mob.  Must be far enough to hit with the blade instead of the shaft.
+# Atgeir base dmg per tier (tiers 2-8):  39, 56, 76, 93, 113, 130, 150
+#################
+# Atgeir Tier 2
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t2              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 39*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+# Atgeir Tier 3
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t3              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 56*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+# Atgeir Tier 4
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t4              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 76*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+# Atgeir Tier 5
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t5              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 93*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+# Atgeir Tier 6
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t6              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 113*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+# Atgeir Tier 7
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t7              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 130*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+# Atgeir Tier 8
+- prefab: Player
+  type: state, atgeir_attack0
+  filter: gear_atgeir_t8              ### checks atgeir tier for dmg & checks momentum for sprinting
+  data: d_impaling_player_set         ### flag player to align bloodspray in multiplayer
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
+    parameter: p_impaling_player_rst
+  - prefab: creature
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    maxDistance: 9
+    data: not_tamed_combat
+    parameter: p_impale_save_dmg 150*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+
+#################
+# Save damage and flag(s) to nearby creatures.  Only the one hit will trigger.
+- prefab: creature
+  type: poke, p_impale_save_dmg
+  data: d_impale_save_dmg             ### save impale dmg to creature & save valid flag that lasts long enough for hit to land
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.5                        ### time between start of attack and attack landing.  0.35 min.  0.85 max
+    parameter: p_impale_disable
+
+- prefab: creature
+  type: poke, p_impale_disable
+  data: d_impale_disable              ### disable valid flag to prevent atgeir_attack1 from triggering
+  injectData: true
+
+#################
+# Check for hit connecting with creature
+- prefab: sfx_spear_hit
+  type: create
+  objects:
+  - sfx_sword_hit, 1
+  poke:
+  - prefab: creature
+    maxDistance: 9
+    limit: 1
+    data: d_impale_vld                ### check that creature has a valid impale window flag
+    parameter: p_impale_apply_dmg
+
+#################
+# Do damage!  And FX!
+- prefab: creature
+  type: poke, p_impale_apply_dmg
+  spawns:
+  - sfx_troll_attack_hit
+  - sfx_troll_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, pierce=<float_f_impale_dmg>
+  poke:
+  - prefab: Player
+    limit: 1
+    data: d_impaling_player_set
+    parameter: p_impale_blood_vfx
+
+- prefab: Player
+  type: poke, p_impale_blood_vfx      ### spray blood in direction of impale
+  spawns:
+  - vfx_player_death, 0,4,1, 0,90,340
+
+- prefab: Player
+  type: poke, p_impaling_player_rst
+  data: d_impaling_player_rst
+  injectData: true

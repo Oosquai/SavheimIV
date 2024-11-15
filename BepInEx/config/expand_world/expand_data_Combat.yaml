@@ -442,3 +442,76 @@
 - name: d_spirit_counter_on
   ints:
   - i_spirit_counter, 1
+
+####################################
+# Atgeirs Impale
+- name: gear_atgeir_t2
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, AtgeirBronze
+
+- name: gear_atgeir_t3
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, CWS_Atgeir_7_SH, CWS_Atgeir_8_SH
+
+- name: gear_atgeir_t4
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, CWS_Atgeir_10_SH, CWS_Atgeir_9_SH
+
+- name: gear_atgeir_t5
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, CWS_Atgeir_5_SH
+
+- name: gear_atgeir_t6
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, AtgeirHimminAfl
+
+- name: gear_atgeir_t7
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, CWS_Atgeir_6_SH
+
+- name: gear_atgeir_t8
+  floats:
+  - $forward_speed, 5;999
+  hashes:
+  - RightItem, CWS_Atgeir_2_SH
+
+- name: d_impale_save_dmg
+  ints:
+  - i_impale_dmg_vld, 1
+  floats:
+  - f_impale_dmg, <par1>
+
+- name: d_impale_vld
+  ints:
+  - i_impale_dmg_vld, 1
+
+- name: d_impale_disable
+  ints:
+  - i_impale_dmg_vld, 0
+
+- name: d_impaling_player_set
+  ints:
+  - i_impaling_player, 1
+
+- name: d_impaling_player_rst
+  ints:
+  - i_impaling_player, 0
+
+- valueGroup: vImpaleDmgRnd
+  values:
+  - 0
+  - 1
+  - 2
+  - 3

@@ -3,14 +3,24 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag (some need Left-Alt).  Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/13/24</color>
+     0\  Savheim IV Patch Notes, 11/14/24</color>
+- Implemented Impale mechanic for Atgeirs.  Damage not applying yet - will fix!
+- Gems can no longer be combined.
+- Balanced some gem stats.
+- Increased base health of many creatures.
+- Updated Comfort Tweaks mod.
+- Fixed enchantment stats for staves and wands.
+- Adjusted raw fish drops.
+- Reimplemented prevention of nighttime raids in Meadows using EWP instead of CLLC.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/13/24
 - Removed FishChum, OdinsHares, OreMines, SmoothSave, and MistrootTamer mods for performance and stability.
 - Balanced food stats.  Added foods with hp, stam, and eitr.  Added foods with high health regen.
 - Moved some vendor items to Bog Witch.
 - Added portal at Bog Witch hut.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/10/24
 - Lots of updates for Bog Witch DLC.  Things should be stable again.

@@ -1,6 +1,12 @@
 ##############################################################
 # Savheim Creature AI - prefabs
 ##############################################################
+# Prevent night time spawns in Meadows
+- prefab: Goblin, SeekerBrood, Tick, Seeker, Charred_Melee, Charred_Archer, Charred_Twitcher, Charred_Mage
+  type: create
+  biomes: Meadows
+  remove: true
+
 # Fix Ashlands?  (Thanks, Raaka!)
 - prefab: MonsterAI
   biomes: AshLands
@@ -75,6 +81,7 @@
 
 - prefab: Goblin
   type: create
+  biomes: Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   weight: 1E30
   data: clothes_goblin
   poke:
@@ -100,6 +107,7 @@
 
 - prefab: Charred_Melee
   type: create
+  biomes: Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   weight: 1E30
   data: clothes_charred_melee
   poke:
@@ -110,6 +118,7 @@
 
 - prefab: Charred_Mage
   type: create
+  biomes: Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   weight: 1E30
   data: clothes_charred_mage
 
