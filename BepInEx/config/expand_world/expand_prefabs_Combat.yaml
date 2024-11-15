@@ -1278,7 +1278,7 @@
     delay: 0.5                        ### keep this equal to delay in p_impale_save_dmg
     parameter: p_impaling_player_rst
   - prefab: creature
-    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
+    minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.  also prevents running in place while faceplanted in the mob.
     maxDistance: 9
     data: not_tamed_combat
     parameter: p_impale_save_dmg 39*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.

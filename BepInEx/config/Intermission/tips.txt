@@ -1,5 +1,5 @@
 Savheim IV - Lots of important information has been added to item tooltips.  Pay close attention to weapon tooltips, check your Hammer tooltip for new ways to build, take a close look at wards, and much more!
-Savheim IV - You can reposition some GUI windows by clicking & dragging, or Left-Alt and then click & drag.  Press Esc to get a cursor.
+Savheim IV - You can reposition some GUI windows by clicking & dragging, or Left-Alt / Left-Ctrl and then click & drag.  Press Esc to get a cursor.
 Savheim IV - Recommended game settings I:  Disable Depth of Field, Chromatic Aberration, and Motion Blur.  You can also disable Key Hints and Raven hints if you like.
 Savheim IV - Recommended game settings II:  Please try Settings/Accessibility/Camera Shake = ON.  Iron Gate swapped Mouse 2 and 3 for Secondary Attack and Block - swap them back if you prefer.
 Savheim IV - The game takes a while to load with so many mods installed.  Please go get a tankard of ale and use the Viking potty.
@@ -32,7 +32,7 @@ Savheim IV - Steps have been taken to ensure we can all coexist in the same worl
 Savheim IV - Sell precious stones, trophies, extra keys, wishbones, and some other boss loot to the traders.  Split stacks in your inventory to control quantities you want to sell.  Double-click items you want to buy to specify quantities.
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and then for providing such deep hooks for the modding community!
-Savheim IV - Thank you to some very talented modders and builders:  Azumatt, blaxxun, wackymole, Jere, Raaka, DhakhaR, JPValheim, KG, OrianaVenture, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, Fustercluck, and more!
+Savheim IV - Thank you to some very talented modders, scripters, and builders:  Azumatt, blaxxun, wackymole, Jere, Raaka, DhakhaR, JPValheim, KG, OrianaVenture, Blacks7ar, ASharpPen, Rusty, Searica, MSchmoecker, shudnal, Alcan, Fustercluck, and more!
 Savheim IV - Thank you to MetalMarshmallow, Woody, goatman, Tizz, and Rusty for playtesting Savheim IV and helping resolve lots of issues before launch!  Thanks to Matt for updated TotinoTunes!
 Savheim IV - There's now a search feature in the hammer build menu.  Advanced search options:  @<modname>, !<characteristic or resource>.  If searching the Catalog, use the search field at the bottom of the window instead of the top.
 Savheim IV - Gems and jewelry have been completely reworked.  Craft a Runaeldr Satchel to conveniently take jewelry options with you on adventures.
@@ -44,7 +44,7 @@ Savheim IV - Pick an ammo type to be your top of the order, put it on your hotba
 Savheim IV - New keys:  L-Alt: dodge (double-click for normal roll).  T, G: use boss powers.  F: cycle ammo.  Left-Shift: Zoom bow.  ~: swap hotbars.  Z, X, C: mini-hotbar.  P: toggle map portal display.  U: Guilds interface.  Left-ctrl: Change + to - for crafting resource tracker.  Shift+Ctrl+Alt+U: Unsummon.  F6: Toggle comfort list.
 Savheim IV - Items needed to summon bosses now have small chances to drop from elite creatures.  These same creatures will begin to hoarde these items after you've slain their master.
 Savheim IV - Fishing no longer requires stamina.  For performance, fish only appear if you're holding a fishing rod.  Some creatures have been given a chance to drop parts of raw fish that can be used for cooking. 
-Savheim IV - You're not intended to achieve high enchanting levels on early-game gear.  It's Ok to not have a +20 Flint Knife.  Your Enchanting skill will increase with time as you fight creatures.  Chill, and get back to adventuring.
+Savheim IV - You're not intended to achieve high enchanting levels on early-game gear.  It's Ok to not have a +20 Flint Knife.  Your Enchanting skill will increase with time as you fight creatures.  Chill, and get back to adventuring.  Though unlisted in the enchanting interface, weapons and shields gain durability through enchanting.
 Savheim IV - Level 50 blacksmiths can repair from inventory.  Level 50 builders sometimes save resources.  Farmers can plant and harvest more plants at once at higher levels.  Level 30 foragers can see respawn times.  Level 50 miners have a chance to demolish entire rocks.  Ranchers can sense hunger at level 10, calm nearby creatures at level 25, and see pregnancy status at level 50.
 Savheim IV - Most weapon types now offer some form of debuff or secondary damage.  Different creatures are susceptible to these in unique ways.  Experiment to find viable strategies for applying these new tools.
 Savheim IV - The more stars a creature has, the better the loot.  At three stars and up you'll start to see increasingly precious components.  Infused creatures are rare and have coveted treasures.

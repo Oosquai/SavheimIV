@@ -1,20 +1,26 @@
 - <color=#FF6F00>MUST CHANGE Controls</color>:  <color=#00FFFF>Toggle Walk</color> & <color=#00FFFF>Sit</color>.  Recommended:  <color=#00FFFF>-</color> & <color=#00FFFF>=</color>
 - New keys:  L-Alt: dodge.  ~: swap hotbars.  F: cycle ammo.
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
-- Move windows: click & drag (some need Left-Alt).  Esc for cursor.
+- Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/14/24</color>
+     0\  Savheim IV Patch Notes, 11/15/24</color>
+- Impale mechanic for atgeirs now fully functional!
+- Fixed enchantment stats for bows and crossbows to gain durability instead of speed.
+- Increased speed of enchanting animation.
+- Increased creature health gain per star.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/14/24
 - Implemented Impale mechanic for Atgeirs.  Damage not applying yet - will fix!
 - Gems can no longer be combined.
 - Balanced some gem stats.
 - Increased base health of many creatures.
 - Updated Comfort Tweaks mod.
-- Fixed enchantment stats for staves and wands.
+- Fixed enchantment stats for staves and wands to gain speed instead of damage.
 - Adjusted raw fish drops.
 - Reimplemented prevention of nighttime raids in Meadows using EWP instead of CLLC.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/13/24
 - Removed FishChum, OdinsHares, OreMines, SmoothSave, and MistrootTamer mods for performance and stability.

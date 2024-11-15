@@ -565,3 +565,124 @@
     20:
       attack_speed: 10
       durability_percentage: 10
+
+- Items:
+    - Bow
+    - BowAshlands
+    - BowAshlandsBlood
+    - BowAshlandsRoot
+    - BowAshlandsStorm
+    - BowDraugrFang
+    - BowFineWood
+    - BowHuntsman
+    - BowSpineSnap
+    - CrossbowArbalest
+    - CrossbowEbonSteel_SH
+    - CrossbowRipper
+    - CrossbowRipperBlood
+    - CrossbowRipperLightning
+    - CrossbowRipperNature
+    - JC_Reaper_Bow
+    - JC_Reaper_Crossbow
+    - BBP_BoneBow_SH
+    - BBP_ElvenBow_SH
+    - BBP_SeekerBow_SH
+    - BBP_BlackMetalBow_SH
+    - BBP_SilverBow_SH
+    - CWS_Bow_1_SH
+    - CWS_Bow_2_SH
+    - CWS_Bow_3_SH
+    - CWS_Bow_4_SH
+    - CWS_Bow_5_SH
+    - CWS_Bow_6_SH
+    - CWS_Bow_7_SH
+    - CWS_Bow_8_SH
+    - CWS_Bow_9_SH
+    - CWS_Bow_10_SH
+    - CWS_Bow_11_SH
+    - CWS_Crossbow_1_SH
+    - CWS_Crossbow_2_SH
+    - CWS_Crossbow_3_SH
+    - CWS_Crossbow_4_SH
+    - CWS_Crossbow_5_SH
+    - CWS_Crossbow_6_SH
+    - CWS_Crossbow_7_SH
+    - CWS_Crossbow_8_SH
+    - CWS_Crossbow_9_SH
+  Stats:
+    1:
+      damage_percentage: 1
+      durability_percentage: 1
+    2:
+      damage_percentage: 1
+      durability_percentage: 1
+    3:
+      damage_percentage: 2
+      durability_percentage: 2
+    4:
+      damage_percentage: 2
+      durability_percentage: 2
+    5:
+      damage_percentage: 3
+      durability_percentage: 3
+      durability: 10
+    6:
+      damage_percentage: 3
+      durability_percentage: 3
+      durability: 10
+    7:
+      damage_percentage: 4
+      durability_percentage: 4
+      durability: 10
+    8:
+      damage_percentage: 4
+      durability_percentage: 4
+      durability: 10
+    9:
+      damage_percentage: 5
+      durability_percentage: 5
+      durability: 10
+    10:
+      damage_percentage: 5
+      durability_percentage: 5
+      durability: 20
+    11:
+      damage_percentage: 6
+      durability_percentage: 6
+      durability: 20
+    12:
+      damage_percentage: 6
+      durability_percentage: 6
+      durability: 20
+    13:
+      damage_percentage: 7
+      durability_percentage: 7
+      durability: 20
+    14:
+      damage_percentage: 7
+      durability_percentage: 7
+      durability: 20
+    15:
+      damage_percentage: 8
+      durability_percentage: 8
+      durability: 30
+    16:
+      damage_percentage: 8
+      durability_percentage: 8
+      durability: 30
+    17:
+      damage_percentage: 9
+      durability_percentage: 9
+      durability: 30
+    18:
+      damage_percentage: 9
+      durability_percentage: 9
+      durability: 30
+    19:
+      damage_percentage: 10
+      durability_percentage: 10
+      durability: 30
+    20:
+      damage_percentage: 10
+      durability_percentage: 10
+      durability: 40
