@@ -3,14 +3,22 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/15/24</color>
+     0\  Savheim IV Patch Notes, 11/16/24</color>
+- Quick dodge now has iframes again.
+- Removed Welcome, Blacksmithing, Building, Foraging, Lumberjacking, Mining, and Ranching mods.
+- Improved enemy scout AI.
+- Implemented enemy and summon healers with custom AI.
+- Added LocalizationCache mod to improve load times.  3.5 minutes to get in game vs. 5 now!
+- Reduced speed benefit from Sailing skill.  Slowed experience gains for Sailing skill.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/15/24
 - Impale mechanic for atgeirs now fully functional!
 - Fixed enchantment stats for bows and crossbows to gain durability instead of speed.
 - Increased speed of enchanting animation.
 - Increased creature health gain per star.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/14/24
 - Implemented Impale mechanic for Atgeirs.  Damage not applying yet - will fix!

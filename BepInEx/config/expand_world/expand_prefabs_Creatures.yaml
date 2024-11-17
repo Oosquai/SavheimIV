@@ -31,7 +31,7 @@
   type: create
   weight: 1E30
   biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
-  data: clothes_skeleton_mountain
+  data: clothes_skeleton_icestaff
   poke:
   - prefab: <prefab>
     parameter: gear_buff 1
@@ -381,27 +381,82 @@
 
 - prefab: creature
   type: state, *
-  filter: gear_alert_left
+  filter: gear_alert_left_not_tamed
+  objects:
+  - Player, 15
   poke:
   - prefab: Player
     limit: 1
     maxDistance: 30
     parameter: p_player_noise
+  - self: true
+    delay: 2
+    parameter: p_scout_yell_loop
 
 - prefab: creature
   type: state, *
-  filter: gear_alert_right
+  filter: gear_alert_right_not_tamed
+  objects:
+  - Player, 15
   poke:
   - prefab: Player
     limit: 1
     maxDistance: 30
     parameter: p_player_noise
+  - self: true
+    delay: 2
+    parameter: p_scout_yell_loop
 
 - prefab: Player
   type: poke, p_player_noise
   objectRpc:
   - name: RPC_AddNoise
     1: float, <float_noise>*2
+
+- prefab: creature
+  type: poke, p_scout_yell_loop
+  objects:
+  - Player, 50
+  spawns:
+  - vfx_blocked, 0,0,1.3
+  - vfx_perfectblock, 0,0,1.3
+  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
+  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
+  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
+  poke:
+  - self: true
+    delay: 3.3
+    parameter: p_scout_yell_loop
+
+- prefab: creature
+  type: poke, p_scout_yell_loop
+  objects:
+  - Player, 50
+  spawns:
+  - vfx_blocked, 0,0,1.3
+  - vfx_perfectblock, 0,0,1.3
+  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
+  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
+  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
+  poke:
+  - self: true
+    delay: 3.7
+    parameter: p_scout_yell_loop
+
+- prefab: creature
+  type: poke, p_scout_yell_loop
+  objects:
+  - Player, 50
+  spawns:
+  - vfx_blocked, 0,0,1.3
+  - vfx_perfectblock, 0,0,1.3
+  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
+  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
+  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
+  poke:
+  - self: true
+    delay: 4.3
+    parameter: p_scout_yell_loop
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.
@@ -546,6 +601,160 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, fire=47 dodge=true block=true
+
+###############################################################
+# Creatures with offhand StaffGreenRoots heal nearby creatures
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_staffgreenroots_any
+  data: gear_greenroots_buff
+
+- prefab: Player, creature
+  type: state, *
+  weight: 0.1         ### low makes it occur randomly, and also prioritizes other processes
+  objects:
+  - creature, 30, gear_staffgreenroots_any       # healer nearby?
+  poke:
+  - prefab: creature
+    data: gear_staffgreenroots_t3
+    maxDistance: 30
+    limit: 1                                     # in case of multiple healers
+    parameter: p_greenroots_healer_select 11+<vGreenRootsTickRnd>  ### T3 heal tick value
+  - prefab: creature
+    data: gear_staffgreenroots_t5
+    maxDistance: 30
+    limit: 1
+    parameter: p_greenroots_healer_select 17+<vGreenRootsTickRnd>  ### T3 heal tick value
+  - prefab: creature
+    data: gear_staffgreenroots_t7
+    maxDistance: 30
+    limit: 1
+    parameter: p_greenroots_healer_select 25+<vGreenRootsTickRnd>  ### T3 heal tick value
+
+# select healer and set flag to put them on cooldown, then delay heal action
+- prefab: creature
+  type: poke, p_greenroots_healer_select
+  data: d_greenroots_healer_cooldown_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 3.7   ### arbitrary delay between triggering action and heal - just meant to make heal feel indepedent of action.
+    parameter: p_greenroots_healer <par1>
+
+# healer not tamed - poke untamed creatures nearby to start heal loops
+- prefab: creature
+  type: poke, p_greenroots_healer
+  filter: not_tamed_creatures
+  spawns:
+  - VFX_Buff_Green, 0.5,0,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - VFX_Buff_Green, -0.1,0.4,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - VFX_Buff_Green, -0.2,-0.3,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - fx_natureweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_creatures, 0.7
+  - fx_natureweapon_hit, 0,0,1.8, 0,0,0, d_empty_data_creatures, 0.8
+  - fx_natureweapon_hit, 0,0,2.0, 0,0,0, d_empty_data_creatures, 0.9
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_1, 0.65
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_2, 0.8
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_3, 0.95
+  objectRpc:
+  - name: SetTrigger             # each creature will only use the animation it knows
+    target: all
+    1: name, attack              # skeleton
+  - name: SetTrigger
+    target: all
+    1: name, attack_mace         # skeleton_poison
+  - name: SetTrigger
+    target: all
+    1: name, swing_longsword     # goblin
+  - name: SetTrigger
+    target: all
+    1: name, attack_fireaoe      # charred_mage
+  poke:
+  - prefab: creature
+    data: not_tamed_creatures
+    maxDistance: 12           ### distance from healer to be within heal range
+    delay: 1
+    parameter: p_greenroots_heal_loop_init <par1>
+  - self: true
+    delay: 10                 ### cooldown to trigger next heal
+    parameter: p_greenroots_healer_cooldown_rst
+
+# healer is tamed - poke players and tamed creatures nearby to start heal loops
+- prefab: creature
+  type: poke, p_greenroots_healer
+  filter: tamed_creatures
+  spawns:
+  - VFX_Buff_Green, 0.5,0,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - VFX_Buff_Green, -0.1,0.4,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - VFX_Buff_Green, -0.2,-0.3,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - fx_natureweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_creatures, 0.7
+  - fx_natureweapon_hit, 0,0,1.8, 0,0,0, d_empty_data_creatures, 0.8
+  - fx_natureweapon_hit, 0,0,2.0, 0,0,0, d_empty_data_creatures, 0.9
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_1, 0.65
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_2, 0.8
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_3, 0.95
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, attack_mace
+  - name: SetTrigger
+    target: all
+    1: name, swing_longsword
+  - name: SetTrigger
+    target: all
+    1: name, attack_fireaoe
+  poke:
+  - prefab: Player
+    maxDistance: 12           ### distance from healer to be within heal range
+    delay: 1
+    parameter: p_greenroots_heal_loop_init <par1>*0.3
+  - prefab: creature
+    data: tamed_creatures
+    maxDistance: 12           ### distance from healer to be within heal range
+    delay: 1
+    parameter: p_greenroots_heal_loop_init <par1>*0.3
+  - self: true
+    delay: 10                 ### cooldown to trigger next heal
+    parameter: p_greenroots_healer_cooldown_rst
+
+- prefab: creature
+  type: poke, p_greenroots_healer_cooldown_rst
+  data: d_greenroots_healer_cooldown_rst
+  injectData: true
+
+# heal loop init
+- prefab: Player, creature
+  type: poke, p_greenroots_heal_loop_init
+  filter: d_greenroots_heal_inactive             # only allow 1 loop at a time.  tick cnt must be 0 (uninitialized) or 7 (previous loop done).
+  data: d_greenroots_heal_tick_cnt_rst           # reset to 1 to prevent double application
+  injectData: true
+  spawns:
+  - VFX_Buff_Green, 0,0,1.5, 0,0,0, d_empty_data_creatures, 0.4
+  - fx_natureweapon_hit, 0,0,1.75, 0,0,0, d_empty_data_creatures, 0.7
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, greenroots_heal_pitch_2, 0.7
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_greenroots_heal_loop <par1>
+
+# main heal loop
+- prefab: Player, creature
+  type: poke, p_greenroots_heal_loop
+  filter: int, i_greenroots_heal_tick_cnt, 0;6   ### max 6 ticks
+  data: d_greenroots_heal_tick_cnt_inc
+  injectData: true
+  spawns:
+  - VFX_Buff_Green, 0,0,1.5, 0,0,0, d_empty_data_creatures, 0
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>
+    2: bool, true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_greenroots_heal_loop <par1>
 
 ####################################################################
 # SUMMONS

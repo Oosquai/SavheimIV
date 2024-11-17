@@ -1281,7 +1281,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.  also prevents running in place while faceplanted in the mob.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 39*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 39*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 3
 - prefab: Player
@@ -1297,7 +1297,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 56*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 56*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 4
 - prefab: Player
@@ -1313,7 +1313,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 76*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 76*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 5
 - prefab: Player
@@ -1329,7 +1329,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 93*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 93*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 6
 - prefab: Player
@@ -1345,7 +1345,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 113*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 113*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 7
 - prefab: Player
@@ -1361,7 +1361,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 130*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 130*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 8
 - prefab: Player
@@ -1377,7 +1377,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 150*<float_$forward_speed>*<float_$forward_speed>/50+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 150*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 #################
 # Save damage and flag(s) to nearby creatures.  Only the one hit will trigger.

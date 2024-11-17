@@ -1,6 +1,10 @@
 ##############################################################
 # Savheim Creature AI - data
 ##############################################################
+- name: d_empty_data_creatures
+  ints:
+  - HasFields, 1
+
 - name: tamed_creatures
   ints:
   - tamed, 1
@@ -27,6 +31,26 @@
   - Humanoid.m_canSwim, 1
   floats:
   - MonsterAI.m_hearRange, 100
+
+- name: d_sfx_scout_yell
+  floats:
+  - ZSFX.m_minPitch, 1.2
+  - ZSFX.m_maxPitch, 1.6
+
+- name: greenroots_heal_pitch_1
+  floats:
+  - ZSFX.m_minPitch, 1.1
+  - ZSFX.m_maxPitch, 1.3
+
+- name: greenroots_heal_pitch_2
+  floats:
+  - ZSFX.m_minPitch, 1.4
+  - ZSFX.m_maxPitch, 1.6
+
+- name: greenroots_heal_pitch_3
+  floats:
+  - ZSFX.m_minPitch, 1.7
+  - ZSFX.m_maxPitch, 1.9
 
 ####################################
 # Creature AI extra attacks
@@ -55,7 +79,7 @@
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
   - LeftItem, <none>, skeleton_sword, skeleton_sword, Torch, KnifeCopper
 
-- name: clothes_skeleton_mountain
+- name: clothes_skeleton_icestaff
   ints:
   - Humanoid.m_canSwim, 1
   - HasFields, 1
@@ -83,7 +107,7 @@
   hashes:
   - ShoulderItem, CapeAsksvinRed_SH
   - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
-  - LeftItem, skeleton_sword2, Lantern, StaffIceShards, StaffIceShards
+  - LeftItem, skeleton_sword2, Lantern, StaffIceShards, StaffGreenRoots
 
 - name: clothes_skeleton_poison
   ints:
@@ -93,7 +117,7 @@
   hashes:
   - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
   - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
-  - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern
+  - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern, StaffGreenRoots_T3
 
 - name: clothes_draugr
   ints:
@@ -126,7 +150,7 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   hashes:
-  - LeftItem, <none>, <none>, GoblinSword, CWS_Dagger_2, Torch, StaffFireballMini
+  - LeftItem, <none>, <none>, GoblinSword, CWS_Dagger_2, Torch, StaffFireballMini, StaffGreenRoots_T5
 
 - name: clothes_goblin_bmr_summon
   ints:
@@ -134,7 +158,7 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   hashes:
-  - LeftItem, GoblinSword, StaffFireballMini
+  - LeftItem, GoblinSword, StaffFireballMini, StaffGreenRoots_T5
   - ChestItem, GoblinShoulders_SH
   - LegItem, GoblinLoin_SH
   - UtilityItem, GoblinLegband_SH
@@ -164,7 +188,7 @@
   - HasFieldsHumanoid, 1
   - HasFieldsMonsterAI, 1
   hashes:
-  - LeftItem, <none>, StaffShield
+  - LeftItem, <none>, StaffShield, StaffGreenRoots
   floats:
   - MonsterAI.m_hearRange, 100
 
@@ -227,10 +251,71 @@
   hashes:
   - LeftItem, Torch, Lantern
 
+- name: gear_alert_left_not_tamed
+  ints:
+  - tamed, 0
+  hashes:
+  - LeftItem, Torch, Lantern
+
 - name: gear_alert_right
   hashes:
-  - LeftItem, <none>   # prioritize tank AI if holding a shield
+  - LeftItem, <none>   # prioritize tank AI if holding a shield (goblins with right hand torches)
   - RightItem, Torch
+
+- name: gear_alert_right_not_tamed
+  ints:
+  - tamed, 0
+  hashes:
+  - LeftItem, <none>   # prioritize tank AI if holding a shield (goblins with right hand torches)
+  - RightItem, Torch
+
+- name: gear_staffgreenroots_t3
+  ints:
+  - i_greenroots_healer_cooldown, 0
+  hashes:
+  - LeftItem, StaffGreenRoots_T3
+
+- name: gear_staffgreenroots_t5
+  ints:
+  - i_greenroots_healer_cooldown, 0
+  hashes:
+  - LeftItem, StaffGreenRoots_T5
+
+- name: gear_staffgreenroots_t7
+  ints:
+  - i_greenroots_healer_cooldown, 0
+  hashes:
+  - LeftItem, StaffGreenRoots
+
+- name: gear_staffgreenroots_any
+  hashes:
+  - LeftItem, StaffGreenRoots_T3, StaffGreenRoots_T5, StaffGreenRoots
+
+- valueGroup: vGreenRootsTickRnd
+  values:
+  - 0
+  - 1
+  - 2
+
+- name: d_greenroots_heal_tick_cnt_rst
+  ints:
+  - i_greenroots_heal_tick_cnt, 1
+
+- name: d_greenroots_heal_inactive
+  ints:
+  - i_greenroots_heal_tick_cnt, 0, 7
+
+- name: d_greenroots_heal_tick_cnt_inc
+  ints:
+  - i_greenroots_heal_tick_cnt, <int_i_greenroots_heal_tick_cnt>+1
+
+- name: d_greenroots_healer_cooldown_set
+  ints:
+  - i_greenroots_healer_cooldown, 1
+
+- name: d_greenroots_healer_cooldown_rst
+  ints:
+  - i_greenroots_healer_cooldown, 0
 
 # enemies with shields have more health, don't circle, and move slower.
 - name: gear_shield_buff
@@ -266,9 +351,17 @@
   ints:
   - MonsterAI.m_circulateWhileCharging, 1
   floats:
-  - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*1.25
-  - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*1.25
+  - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*1.5
+  - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*1.5
   - MonsterAI.m_minAttackInterval, 5
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>+1
+
+# enemies with healing staff run around and heal
+- name: gear_greenroots_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_minAttackInterval, 7
   - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>+1
 
 # enemies with a nova staff circle a lot, so they're not constantly nova'ing
