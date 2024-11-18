@@ -5,7 +5,7 @@
 - prefab: ItemDrop
   type: create
   bannedObjects:
-  - Player, 200
+  - Player, 100
   remove: true
 
 ##############################################################
@@ -32,7 +32,7 @@
 - prefab: Leech
   type: poke, p_leech_performance_optimize
   bannedObjects:
-  - Player, 80                                   # adjust for range to player at which to optimize leeches
+  - Player, 80   # adjust for range to player at which to optimize leeches.  80 is max spawn range from a given player.
   remove: true
 
 ###############################################################
@@ -56,7 +56,7 @@
   type: create
   remove: true
   objects:
-  - Player, 5
+  - Player, 10
 
 ##############################################################
 # Friendly ballistas (thanks, Tyson!)
@@ -107,6 +107,256 @@
   objectsLimit: 4
   spawns:
   - portal_wood, 2.1,-2,-0.2, 160,0,0, d_portal_jc_gacha
+
+#########################
+# Portal location checks - some portals spawn below ground because NPC Y coord is wrong at spawn.
+# Boss Stones Portal Y Check
+- prefab: Player
+  type: state, *
+  fallback: true
+  objects:
+  - BossStone_DragonQueen, 30
+  - portal_wood, 30, d_portal_sacrificial_stones
+  poke:
+  - prefab: BossStone_DragonQueen
+    limit: 1
+    parameter: p_bossstones_portal_check_bs
+
+- prefab: BossStone_DragonQueen
+  type: poke, p_bossstones_portal_check_bs
+  poke:
+  - prefab: portal_wood
+    data: d_portal_sacrificial_stones
+    limit: 1
+    parameter: p_bossstones_portal_check_portal_calc <y>
+
+- prefab: portal_wood
+  type: poke, p_bossstones_portal_check_portal_calc
+  data: d_portal_ycalc
+  injectData: true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_bossstones_portal_check_portal_eval
+
+- prefab: portal_wood   # pass!
+  type: poke, p_bossstones_portal_check_portal_eval
+  weight: 1E30
+  filter: float, f_y_diff, 0.2
+
+- prefab: portal_wood   # fail!
+  type: poke, p_bossstones_portal_check_portal_eval
+  fallback: true
+  remove: true
+  poke:
+  - prefab: BossStone_DragonQueen
+    limit: 1
+    delay: 0.2  # give time for fireplacems to despawn
+    parameter: p_portal_respawn_bossstones
+  - prefab: fireplacems
+    data: d_perma_piece
+    limit: 1
+    parameter: p_fireplace_bossstones_remove
+
+- prefab: fireplacems
+  type: poke, p_fireplace_bossstones_remove
+  remove: true
+
+- prefab: BossStone_DragonQueen
+  type: poke, p_portal_respawn_bossstones
+  spawns:
+  - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
+  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece, true
+
+# Haldor Portal Y Check
+- prefab: Player
+  type: state, *
+  fallback: true
+  objects:
+  - Haldor, 30
+  - portal_wood, 30, d_portal_haldor
+  poke:
+  - prefab: Haldor
+    limit: 1
+    parameter: p_haldor_portal_check_haldor
+
+- prefab: Haldor
+  type: poke, p_haldor_portal_check_haldor
+  poke:
+  - prefab: portal_wood
+    data: d_portal_haldor
+    limit: 1
+    parameter: p_haldor_portal_check_portal_calc <y>
+
+- prefab: portal_wood
+  type: poke, p_haldor_portal_check_portal_calc
+  data: d_portal_ycalc
+  injectData: true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_haldor_portal_check_portal_eval
+
+- prefab: portal_wood   # pass!
+  type: poke, p_haldor_portal_check_portal_eval
+  weight: 1E30
+  filter: float, f_y_diff, 0.2
+
+- prefab: portal_wood   # fail!
+  type: poke, p_haldor_portal_check_portal_eval
+  fallback: true
+  remove: true
+  poke:
+  - prefab: Haldor
+    limit: 1
+    parameter: p_portal_respawn_haldor
+
+- prefab: Haldor
+  type: poke, p_portal_respawn_haldor
+  spawns:
+  - portal_wood, 1.9,6.8,-0.2, 0,0,0, d_portal_haldor
+
+# Hildir Portal Y Check
+- prefab: Player
+  type: state, *
+  fallback: true
+  objects:
+  - Hildir, 30
+  - portal_wood, 30, d_portal_hildir
+  poke:
+  - prefab: Hildir
+    limit: 1
+    parameter: p_hildir_portal_check_hildir
+
+- prefab: Hildir
+  type: poke, p_hildir_portal_check_hildir
+  poke:
+  - prefab: portal_wood
+    data: d_portal_hildir
+    limit: 1
+    parameter: p_hildir_portal_check_portal_calc <y>
+
+- prefab: portal_wood
+  type: poke, p_hildir_portal_check_portal_calc
+  data: d_portal_ycalc
+  injectData: true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_hildir_portal_check_portal_eval
+
+- prefab: portal_wood   # pass!
+  type: poke, p_hildir_portal_check_portal_eval
+  weight: 1E30
+  filter: float, f_y_diff, 0.2
+
+- prefab: portal_wood   # fail!
+  type: poke, p_hildir_portal_check_portal_eval
+  fallback: true
+  remove: true
+  poke:
+  - prefab: Hildir
+    limit: 1
+    parameter: p_portal_respawn_hildir
+
+- prefab: Hildir
+  type: poke, p_portal_respawn_hildir
+  spawns:
+  - portal_wood, 3.3,12.6,-0.2, 209,0,0, d_portal_hildir
+
+# Bog Witch Portal Y Check
+- prefab: Player
+  type: state, *
+  fallback: true
+  objects:
+  - BogWitch, 30
+  - portal_wood, 30, d_portal_bogwitch
+  poke:
+  - prefab: BogWitch
+    limit: 1
+    parameter: p_bogwitch_portal_check_bw
+
+- prefab: BogWitch
+  type: poke, p_bogwitch_portal_check_bw
+  poke:
+  - prefab: portal_wood
+    data: d_portal_bogwitch
+    limit: 1
+    parameter: p_bogwitch_portal_check_portal_calc <y>
+
+- prefab: portal_wood
+  type: poke, p_bogwitch_portal_check_portal_calc
+  data: d_portal_ycalc
+  injectData: true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_bogwitch_portal_check_portal_eval
+
+- prefab: portal_wood   # pass!
+  type: poke, p_bogwitch_portal_check_portal_eval
+  weight: 1E30
+  filter: float, f_y_diff, 0.2
+
+- prefab: portal_wood   # fail!
+  type: poke, p_bogwitch_portal_check_portal_eval
+  fallback: true
+  remove: true
+  poke:
+  - prefab: BogWitch
+    limit: 1
+    parameter: p_portal_respawn_bogwitch
+
+- prefab: BogWitch
+  type: poke, p_portal_respawn_bogwitch
+  spawns:
+  - portal_wood, -0.5,-2.5,-0.2, 163,0,0, d_portal_bogwitch
+
+# JC Gacha Portal Y Check
+- prefab: Player
+  type: state, *
+  fallback: true
+  objects:
+  - Jewelcrafting_Chest, 30
+  - portal_wood, 30, d_portal_jc_gacha
+  poke:
+  - prefab: Jewelcrafting_Chest
+    limit: 5
+    parameter: p_jcg_portal_check_jcg
+
+- prefab: Jewelcrafting_Chest
+  type: poke, p_jcg_portal_check_jcg
+  objects:
+  - Jewelcrafting_Chest, 3
+  objectsLimit: 4   # only check middle chest
+  poke:
+  - prefab: portal_wood
+    data: d_portal_jc_gacha
+    limit: 1
+    parameter: p_jcg_portal_check_portal_calc <y>
+
+- prefab: portal_wood
+  type: poke, p_jcg_portal_check_portal_calc
+  data: d_portal_ycalc
+  injectData: true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_jcg_portal_check_portal_eval
+
+- prefab: portal_wood   # pass!
+  type: poke, p_jcg_portal_check_portal_eval
+  weight: 1E30
+  filter: float, f_y_diff, 0.2
+
+- prefab: portal_wood   # fail!
+  type: poke, p_jcg_portal_check_portal_eval
+  fallback: true
+  remove: true
+  poke:
+  - prefab: Jewelcrafting_Chest
+    limit: 5
+    parameter: p_jc_chest_portal
 
 ##############################################################
 # Wards prevent fall damage
@@ -763,320 +1013,3 @@
   - MoltenCore
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
   - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
-
-##############################################################
-##############################################################
-# Scratch, notes, bkups, garbage, etc.
-##############################################################
-##############################################################
-## Wards damage aggressive creatures
-## DISABLED.  Players should use turrets, traps, tames, etc.
-#- prefab: creature
-#  type: state, *
-#  filter: int, tamed, 0
-#  objects:
-#  - guard_stone, 32
-#  poke:
-#  - prefab: guard_stone
-#    maxDistance: 32
-#    limit: 1
-#    parameter: p_ward_scarecrow
-#
-#- prefab: guard_stone
-#  type: poke, p_ward_scarecrow
-#  filter: int, enabled, 1
-#  poke:
-#  - prefab: creature
-#    maxDistance: 32
-#    parameter: p_ward_scarecrow_dmg
-#
-#- prefab: creature
-#  type: poke, p_ward_scarecrow_dmg
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, damage=9
-#
-##############################################################
-## Debug - print player state
-#- prefab: Player
-#  type: state, *
-#  commands: 
-#  - s <par>
-#  - broadcast center <par>
-#
-##############################################################
-## Debug - Raaka state poker for creatures
-#- prefab: MonsterAI
-#  type: state, *
-#  poke:
-#  - prefab: Player
-#    limit: 1
-#    maxDistance: 10000
-#    parameter: statechecker <par>
-#
-#- prefab: Player
-#  type: poke, statechecker
-#  objectRpc:
-#  - name: Message
-#    1: enum_message, 2
-#    2: string, <par1>
-#    3: int, 0
-#################################
-## DEBUG - DELETE!
-#- prefab: Player
-#  type: state, *
-#  spawns:
-#  - portal_wood,  0, 1, -0.2,  0, 0, 0, d_portal_sacrificial_stones
-## DEBUG - DELETE!
-#- prefab: Player
-#  type: state, *
-#  poke:
-#  - prefab: Hildir
-#    limit: 1
-#    maxDistance: 10
-#    parameter: test_portal
-#- prefab: Hildir
-#  type: poke, test_portal
-#  spawns:
-##  - portal_wood,  3.25, 12.4, -0.2,  210, 0, 0
-##  - portal_wood,  3.25, 12.6, -0.2,  210, 0, 0
-##  - portal_wood,  3.25, 12.6, -0.2,  208, 0, 0
-#  - portal_wood,  3.3, 12.6, -0.2,  209, 0, 0
-## DEBUG - DELETE!
-#- prefab: Player
-#  type: state, *
-#  poke:
-#  - prefab: Jewelcrafting_Chest
-#    maxDistance: 1
-#    limit: 5
-#    parameter: fake_jc_chest_create
-#- prefab: Jewelcrafting_Chest
-#  type: poke, fake_jc_chest_create
-#  commands: 
-#  - s step2
-#  poke:
-#  - prefab: Jewelcrafting_Chest
-#    maxDistance: 1
-#    limit: 1
-#    delay: 1
-#    parameter: p_jc_chest_portal
-#- prefab: Jewelcrafting_Chest
-#  type: poke, p_jc_chest_portal
-#  commands: 
-#  - s step3
-#  objects:
-#  - Jewelcrafting_Chest, 3
-#  objectsLimit: 4
-#  spawns:
-#  - portal_wood,  2.1, -2, -0.2,  160, 0, 0
-###############
-## Cultist healing (attack_claw, attack_claw_double, attack_flames)
-#- prefab: BMR_SummonFenring_Cultist
-#  type: state, attack_claw_double
-#  poke:
-#  - prefab: BMR_SummonFenring_Cultist
-#    delay: 2
-#    limit: 1
-#    maxDistance: 1
-#    parameter: bmr_summon_cultist_heal
-#
-#- prefab: BMR_SummonFenring_Cultist
-#  type: poke, bmr_summon_cultist_heal
-#  objects:
-#  - Player, 4
-#  spawn: shaman_heal_aoe
-#  spawnDelay: 1
-#  objectRpc:
-#  - name: SetTrigger
-#    target: all
-#    1: name, attack_flames
-#
-###############################################################
-## More Rancid Remains
-#- prefab: Skeleton
-#  type: create
-#  weight: 0.1
-#  triggerRules: true
-#  spawn: Skeleton_Poison
-###########################################
-## Player weapon animation - THIS IS CRASHING
-#- prefab: Player
-#  type: state, swing_axe0
-#  weight: 1e30
-##  spawnDelay: 1
-#  data: swordfire
-#
-#- prefab: Player
-#  type: state, swing_axe1
-#  weight: 1e30
-##  spawnDelay: 1
-#  data: normalweapon
-##########################################
-## Raaka - Turns everything admins say into broadcasts while the adminbroadcast global key is active.
-## setkey adminbroadcast
-## removekey adminbroadcast
-## doesn't work because of World Advancement Progression blocking global keys...
-#- prefab: Player
-#  type: command, *
-#  command: broadcast center <par>
-#  globalKeys: adminbroadcast
-##########################################
-# lifeleech??  (DhakhaR)
-#- prefab: Player
-#  type: poke, bloodweaponhitonplayer
-#  filter: hash, RightItem, AxeBerzerkrBlood
-#  objects:
-#  -  - sfx_soundeffect, 1, silentandtimeoutdata
-#  objectRpc:
-#  - name: RPC_Heal
-#    1: float, 5
-#    2: bool, 1
-#
-#
-#- prefab: vfx_player_hit
-#  type: create
-#  poke:
-#  - prefab: Player
-#    minDistance: 1
-#    maxDistance: 2
-#    limit: 10
-#    parameter: bloodweaponhitonplayer
-#
-#- prefab: Player
-#  type: state, dualaxes*
-#  filter: hash, RightItem, AxeBerzerkrBlood
-#  spawns:
-#  - sfx_soundeffect, silentandtimeoutdata, true
-#
-##########################################
-# Training dummy swings back at you (DhakhaR)
-#- prefab: Player
-#  type: state, *
-#  objects:
-#  - TrainingDummy, 5
-#  bannedObjects:
-#  - fx_bloodweapon_hit, 2
-#  - fx_chainlightning_hit, 2
-#  - fx_clusterbombstaff_hit, 2
-#  - fx_clusterbombstaff_splinter_hit, 2
-#  - fx_greenroots_projectile_hit, 2
-#  - fx_himminafl_hit, 2
-#  - fx_iceshard_hit, 2
-#  - fx_jotunbane_hit, 2
-#  - fx_lightningstaffprojectile_hit, 2
-#  - fx_lightningweapon_hit, 2
-#  - fx_natureweapon_hit, 2
-#  - fx_sledge_demolisher_hit, 2
-#  - fx_vines_hit, 2
-#  - vfx_arrowhit, 2
-#  - vfx_clubhit, 2
-#  - vfx_FireballHit, 2
-#  - vfx_frostarrow_hit, 2
-#  - vfx_poisonarrow_hit, 2
-#  - vfx_ProjectileHit, 2
-#  - vfx_silvermace_hit, 2
-#  - vfx_sledge_hit, 2
-#  - vfx_sledge_iron_hit, 2
-#  - vfx_torch_hit, 2
-#  - vfx_HitSparks, 2
-#  bannedObjectsLimit: 2
-#  poke:
-#  - prefab: TrainingDummy
-#    limit: 1
-#    maxDistance: 10
-#    parameter: act
-#    delay: 0.5
-#
-#- prefab: TrainingDummy
-#  type: poke, act
-#  objects:
-#  - Player, 2
-#  objectRpc:
-#  - name: SetTrigger
-#    target: all
-#    1: name, attack
-#
-#############################
-# Multiple Pokes
-#poke:
-#-prefab: boar
-# parameter: stuff
-#-prefab: neck
-# parameter: hi
-#
-## Randoms with valuegroups (DhakhaR)
-#- prefab: Player
-#  type: say, vgtest
-#  poke:
-#  - prefab: Player
-#    limit: 1
-#    maxDistance: 1
-#    parameter: workaround <torches>
-#
-#- prefab: Player
-#  type: poke, workaround
-#  spawns:
-#  - <par1>, 0,3,0
-#
-## data
-#- valueGroup: torches
-#  values:
-#  - piece_groundtorch
-#  - piece_groundtorch_green
-#  - piece_groundtorch_blue
-##################################################
-# Force Reset Protection (thanks, JPValheim!)
-#- prefab: fire_pit,forge,piece_stonecutter,piece_workbench,piece_chest,piece_chest_private,piece_chest_wood,wood_door,portal_wood,piece_chair02,piece_bench01,piece_logbench01,piece_throne01,piece_blackmarble_throne,piece_barber,bed,piece_bed02,piece_bathtub,piece_chair,piece_blackmarble_bench,piece_throne02
-#  type: create
-#  spawns:
-#  - sfx_goblin_idle
-#  - vfx_Place_stone_floor
-#  remove: true
-#  locations: SunkenCrypt4
-#  locationDistance: 10
-#  command: say You should not build near Sunken Crypts <pname>...
-#  weight: 1e30
-#
-#- prefab: fire_pit,forge,piece_stonecutter,piece_workbench,piece_chest,piece_chest_private,piece_chest_wood,wood_door,portal_wood,piece_chair02,piece_chair03,piece_bench01,piece_logbench01,piece_throne01,piece_blackmarble_throne,piece_barber,bed,piece_bed02,piece_bathtub,piece_chair,piece_blackmarble_bench,piece_throne02
-#  type: create
-#  spawns:
-#  - sfx_goblin_idle
-#  - vfx_Place_stone_floor
-#  remove: true
-#  locations: Crypt2,Crypt3,Crypt4
-#  locationDistance: 21
-#  command: say You should not build near these tombs <pname>...
-#  weight: 1e30
-###############################
-# Creature sizes
-# setkey enemyspeedsize 200
-# removekey enemyspeedsize (default = 100)
-# scales ALL mobs
-###############################################################
-## Remove shield opacity?  Not needed if using ColorBubble mod!
-#- prefab: vfx_StaffShield
-#  type: create
-#  remove: true
-#
-#########################################
-# Sound duration test
-#- prefab: Player
-#  type: say, test
-#  spawns:
-#  - sfx_build_table
-#  poke:
-#  - prefab: Player
-#    delay: 1
-#    limit: 1
-#    parameter: p_snd_test
-#
-#- prefab: Player
-#  type: poke, p_snd_test
-#  objects:
-#  - sfx_build_table, 1
-#  command: s trig
-#  poke:
-#  - prefab: Player
-#    delay: 1
-#    limit: 1
-#    parameter: p_snd_test

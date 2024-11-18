@@ -13,7 +13,6 @@ MeadowsLoot2:
   - Uncut_Red_Stone
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
-  - FishChumMeadows
 MeadowsLoot3:
   - Coins
   - Amber
@@ -38,7 +37,6 @@ BlackforestLoot2:
   - Uncut_Red_Stone
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
-  - FishChumBlackforest
 BlackforestLoot3:
   - Amber
   - AmberPearl
@@ -76,7 +74,6 @@ SwampLoot2:
   - Uncut_Red_Stone
   - Uncut_Purple_Stone
   - Uncut_blueish_Stone
-  - FishChumSwamps
 SwampLoot3:
   - AmberPearl
   - Ruby
@@ -98,11 +95,9 @@ MountainsLoot1:
   - Uncut_Blue_Stone
   - Uncut_Orange_Stone
   - FishingBaitCave
-  - FishChumMountains
 PlainsLoot1:
   - Ruby
   - HoneyMeadSpeed
-  - CoralDelightCooked
   - Uncut_Green_Stone
   - Uncut_Orange_Stone
   - Uncut_Cyan_Stone
@@ -117,7 +112,6 @@ PlainsLoot2:
   - Uncut_Yellow_Stone
   - Uncut_Red_Stone
   - Uncut_Black_Stone
-  - FishChumPlains
 MistLoot1:
   - Ruby
   - SilverNecklace
@@ -139,4 +133,3 @@ MistLoot2:
   - CWS_Tower_Shield_2
   - BlackCore
   - DraumheimEssence
-  - FishChumMistlands

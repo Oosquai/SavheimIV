@@ -24,6 +24,12 @@
   fallback: true
 
 ###############################################################
+# Special enemies don't stagger when parried
+- prefab: Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, Gjall, BonemawSerpent, Morgen, Charred_Archer, Surtling
+  type: create
+  data: d_no_stagger
+
+###############################################################
 # Random clothes for creatures
 # gear_buff(RandomSkillFactor)
 # ... but mobs created by game don't have a RandomSkillFactor field, so would be 0.  Use "1".
@@ -129,6 +135,13 @@
   type: poke, gear_buff
   filter: gear_shield
   data: gear_shield_buff
+
+#############################
+# Skeleton and Draugr archers don't get staggered
+- prefab: creature
+  type: poke, gear_buff
+  filter: gear_bow
+  data: d_no_stagger
 
 #############################
 # Any creature with an offhand weapon deals increased dmg and behaves like a combat rogue

@@ -1198,6 +1198,7 @@
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
   - sfx_fallenvalkyrie_attack_spit_projectile
+  - sfx_troll_attack_hit
   - vfx_player_death, 0.5,0,1, 0,90,70
   - vfx_player_death, -0.5,0,1, 0,90,250
   poke:
@@ -1217,6 +1218,7 @@
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
   - sfx_fallenvalkyrie_attack_spit_projectile
+  - sfx_troll_attack_hit
   - vfx_player_death, 0.5,0,1, 0,90,70
   - vfx_player_death, -0.5,0,1, 0,90,250
   - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
@@ -1238,6 +1240,7 @@
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
   - sfx_fallenvalkyrie_attack_spit_projectile
+  - sfx_troll_attack_hit
   - vfx_player_death, 0.5,0,1, 0,90,70
   - vfx_player_death, -0.5,0,1, 0,90,250
   - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05

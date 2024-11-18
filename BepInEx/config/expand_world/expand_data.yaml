@@ -147,6 +147,10 @@
   - TargetPortal PortalOwnerName, Oodin
   - tag, Celestial
 
+- name: d_portal_ycalc
+  floats:
+  - f_y_diff, <par1>-<y>
+
 ####################################
 # Bezel drop quantities
 - name: drop_qty
