@@ -252,13 +252,13 @@
   - 33
   - 34
 
-- name: TentaRootMover_dnrl
-  ints:
-  - i_creature_roguelite, 1
-  strings:
-  - Humanoid.m_group, dn_mobs
-  floats:
-  - Humanoid.m_runSpeed, 1
+#- name: TentaRootMover_dnrl
+#  ints:
+#  - i_creature_roguelite, 1
+#  strings:
+#  - Humanoid.m_group, dn_mobs
+#  floats:
+#  - Humanoid.m_runSpeed, 1
 
 # Deep North Roguelite Cleanup Datas
 # special deer ragdoll that lasts 4 hours and has a flag to differentiate it from naturally-spawned ones

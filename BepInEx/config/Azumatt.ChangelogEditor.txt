@@ -3,16 +3,24 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/17/24</color>
+     0\  Savheim IV Patch Notes, 11/19/24</color>
+- Clarified tooltips on swords and greatswords to specify bleed after parry instead of stagger.
+- Improved effects for third combo of reapers.
+- Added a few more creature types to list of those who don't stagger when parried.
+- Added logic to make goblins who throw spears not stagger when parried.
+- Modified several aspects of Eikthyr, Elder, Bonemass, and Moder fights.
+- Moved Elder changes from Deep North files to Creatures files, but no in-game changes.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/17/24
 - Removed Farming and Sailing mods.  Will replace with other mechanics.
 - Some enemies no longer stagger when parried.
 - Fixed portal spawns near vendors.
 - Reapers' damage combo now has a camera shake effect.
 - Increased spawn rates for Rancid Remains when Skeletons are present.
 - Fixed a few files that were generating some errors.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/16/24
 - Quick dodge now has iframes again.

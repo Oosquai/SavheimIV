@@ -885,62 +885,97 @@
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t3
+  data: d_reaping_player_set
+  injectData: true
   poke:
   - prefab: creature
     maxDistance: 6
     limit: 3
     data: not_tamed_combat
     parameter: p_reaper_combo2_pending 1         # <par1> is dmg multiplier for final combo
+  - self: true
+    delay: 0.7
+    parameter: p_reaping_player_rst
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t4
+  data: d_reaping_player_set
+  injectData: true
   poke:
   - prefab: creature
     maxDistance: 6
     limit: 3
     data: not_tamed_combat
     parameter: p_reaper_combo2_pending 2
+  - self: true
+    delay: 0.7
+    parameter: p_reaping_player_rst
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t5
+  data: d_reaping_player_set
+  injectData: true
   poke:
   - prefab: creature
     maxDistance: 6
     limit: 3
     data: not_tamed_combat
     parameter: p_reaper_combo2_pending 3
+  - self: true
+    delay: 0.7
+    parameter: p_reaping_player_rst
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t6
+  data: d_reaping_player_set
+  injectData: true
   poke:
   - prefab: creature
     maxDistance: 6
     limit: 3
     data: not_tamed_combat
     parameter: p_reaper_combo2_pending 4
+  - self: true
+    delay: 0.7
+    parameter: p_reaping_player_rst
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t7
+  data: d_reaping_player_set
+  injectData: true
   poke:
   - prefab: creature
     maxDistance: 6
     limit: 3
     data: not_tamed_combat
     parameter: p_reaper_combo2_pending 5
+  - self: true
+    delay: 0.7
+    parameter: p_reaping_player_rst
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t8
+  data: d_reaping_player_set
+  injectData: true
   poke:
   - prefab: creature
     maxDistance: 6
     limit: 3
     data: not_tamed_combat
     parameter: p_reaper_combo2_pending 6
+  - self: true
+    delay: 0.7
+    parameter: p_reaping_player_rst
+
+- prefab: Player
+  type: poke, p_reaping_player_rst
+  data: d_reaping_player_rst
+  injectData: true
 
 ## Poke creatures to queue flags and queue up flag clears
 - prefab: creature
@@ -1199,16 +1234,18 @@
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
   - sfx_fallenvalkyrie_attack_spit_projectile
   - sfx_troll_attack_hit
-  - vfx_player_death, 0.5,0,1, 0,90,70
-  - vfx_player_death, -0.5,0,1, 0,90,250
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg1>
   - prefab: creature
     minDistance: 0.1
     maxDistance: 4
-    limit: 3
+    limit: 4
     parameter: p_reaper_combo0_hit
+  - prefab: Player
+    limit: 1
+    data: d_reaping_player_set
+    parameter: p_reaping_blood_vfx_cnt_1
 
 - prefab: creature
   type: poke, p_reaper_combo2_hit
@@ -1219,18 +1256,18 @@
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
   - sfx_fallenvalkyrie_attack_spit_projectile
   - sfx_troll_attack_hit
-  - vfx_player_death, 0.5,0,1, 0,90,70
-  - vfx_player_death, -0.5,0,1, 0,90,250
-  - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
-  - vfx_player_death, 0,0,1, 0,90,250, d_empty_data_combat, 0.05
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg2>
   - prefab: creature
     minDistance: 0.1
     maxDistance: 5
-    limit: 3
+    limit: 5
     parameter: p_reaper_combo0_hit
+  - prefab: Player
+    limit: 1
+    data: d_reaping_player_set
+    parameter: p_reaping_blood_vfx_cnt_2
 
 - prefab: creature
   type: poke, p_reaper_combo2_hit
@@ -1241,26 +1278,51 @@
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
   - sfx_fallenvalkyrie_attack_spit_projectile
   - sfx_troll_attack_hit
-  - vfx_player_death, 0.5,0,1, 0,90,70
-  - vfx_player_death, -0.5,0,1, 0,90,250
-  - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
-  - vfx_player_death, 0,0,1, 0,90,250, d_empty_data_combat, 0.05
-  - vfx_player_death, -0.5,0,1, 0,90,70, d_empty_data_combat, 0.1
-  - vfx_player_death, 0.5,0,1, 0,90,250, d_empty_data_combat, 0.1
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg3>
   - prefab: creature
     minDistance: 0.1
     maxDistance: 6
-    limit: 3
+    limit: 6
     parameter: p_reaper_combo0_hit
+  - prefab: Player
+    limit: 1
+    data: d_reaping_player_set
+    parameter: p_reaping_blood_vfx_cnt_3
 
 - prefab: creature
   type: poke, p_reaper_damage
   objectRpc:
   - name: RPC_Damage
     1: hit, slash=<par1>
+
+- prefab: Player
+  type: poke, p_reaping_blood_vfx_cnt_1
+  spawns:
+  - vfx_boar_hit, 0,1.5,1.8
+  - vfx_player_death, 0.5,1.5,1, 0,90,90, d_empty_data_combat, 0.05
+  - vfx_player_death, -0.5,1.5,1, 0,90,270, d_empty_data_combat, 0.05
+
+- prefab: Player
+  type: poke, p_reaping_blood_vfx_cnt_2
+  spawns:
+  - vfx_boar_hit, 0,1.5,1.8
+  - vfx_player_death, 0.5,1.5,1, 0,90,90, d_empty_data_combat, 0.05
+  - vfx_player_death, -0.5,1.5,1, 0,90,270, d_empty_data_combat, 0.05
+  - vfx_player_death, 0,1.5,1, 0,90,90, d_empty_data_combat, 0.1
+  - vfx_player_death, 0,1.5,1, 0,90,270, d_empty_data_combat, 0.1
+
+- prefab: Player
+  type: poke, p_reaping_blood_vfx_cnt_3
+  spawns:
+  - vfx_boar_hit, 0,1.5,1.8
+  - vfx_player_death, 0.5,1.5,1, 0,90,90, d_empty_data_combat, 0.05
+  - vfx_player_death, -0.5,1.5,1, 0,90,270, d_empty_data_combat, 0.05
+  - vfx_player_death, 0,1.5,1, 0,90,90, d_empty_data_combat, 0.1
+  - vfx_player_death, 0,1.5,1, 0,90,270, d_empty_data_combat, 0.1
+  - vfx_player_death, -0.5,1.5,1, 0,90,90, d_empty_data_combat, 0.15
+  - vfx_player_death, 0.5,1.5,1, 0,90,270, d_empty_data_combat, 0.15
 
 ####################################################
 # Atgeirs Impale

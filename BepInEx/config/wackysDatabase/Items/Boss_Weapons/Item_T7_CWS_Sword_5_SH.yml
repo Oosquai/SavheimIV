@@ -1,7 +1,7 @@
 name: CWS_Sword_5_SH
 m_weight: 0.8
 m_name: Ryvers
-m_description: This stealthy katana enforces a simple truth - if it can bleed, it can die.  Primary attacks have a chance to <color=red>bleed</color>, and secondary attacks <color=red>bleed</color> <color=yellow>staggered</color> foes.
+m_description: This stealthy katana enforces a simple truth - if it can bleed, it can die.  Primary attacks have a chance to <color=red>bleed</color>, and secondary attacks stack <color=red>long-lasting bleeds</color> after <color=yellow>parrying</color>.
 clonePrefabName: CWS_Sword_5
 mockName: 
 customIcon: 

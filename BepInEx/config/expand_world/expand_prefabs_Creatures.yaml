@@ -25,7 +25,7 @@
 
 ###############################################################
 # Special enemies don't stagger when parried
-- prefab: Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, Gjall, BonemawSerpent, Morgen, Charred_Archer, Surtling
+- prefab: Greydwarf_Elite, Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen, Charred_Archer, Surtling
   type: create
   data: d_no_stagger
 
@@ -95,6 +95,9 @@
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
+  - prefab: <prefab>
+    parameter: gear_buff_goblin_spear_no_stagger
+    delay: 0.2
 
 - prefab: GoblinBrute
   type: create
@@ -141,6 +144,11 @@
 - prefab: creature
   type: poke, gear_buff
   filter: gear_bow
+  data: d_no_stagger
+
+- prefab: Goblin
+  type: poke, gear_buff_goblin_spear_no_stagger
+  filter: gear_goblin_spear
   data: d_no_stagger
 
 #############################
@@ -897,12 +905,350 @@
 ###############################################################
 # Boss tweaks
 #################
-# Elder
-# Elder Tentaroots move around - creepy!  (Thanks, Raaka!)
-- prefab: TentaRoot
+# Eikthyr - more aggressive.  Deep North uses different data.
+- prefab: Eikthyr
   type: create
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  data: d_eikthyr_more_aggressive
+
+#################
+# Elder - Tentaroots move around - creepy!  (Thanks, Raaka!)
+- prefab: TentaRoot
+  type: create
   filter: not_tamed_creatures
   objects:
   - gd_king, 100
   data: TentaRootMover
+
+# Elder - tentaroots slime nearby players when they attack.  (Thanks, Raaka!)
+- prefab: TentaRoot
+  type: state, *
+  poke: 
+  - prefab: Player, creature
+    limit: 5
+    maxDistance: 4.1
+    delay: 1.45
+    parameter: tentarootslimed
+    
+- prefab: Player
+  type: poke, tentarootslimed
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Slimed dodge=true block=true
+
+- prefab: creature
+  type: poke, tentarootslimed
+  filter: tamed_creatures
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Slimed dodge=true block=true
+
+# Elder - Fewer Tentaroots in melee range, to make melee more viable
+- prefab: TentaRoot
+  type: create
+  weight: 3
+  objects:
+  - gd_king, 12
+  remove: true
+
+# Elder - extra attacks
+- prefab: gd_king
+  types:
+  - state, stomp0
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 1.9
+    parameter: p_extra_attack_elder_0
+
+- prefab: gd_king
+  types:
+  - state, stomp1
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 1.9
+    parameter: p_extra_attack_elder_1
+
+- prefab: gd_king
+  type: poke, p_extra_attack_elder_0
+  objects:
+  - Player, 5
+  - creature, 5, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, stomp1
+
+- prefab: gd_king
+  type: poke, p_extra_attack_elder_1
+  objects:
+  - Player, 5
+  - creature, 5, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, stomp0
+
+#################
+# Bonemass - extra attacks
+- prefab: Bonemass
+  types:
+  - state, punch0
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 1.9
+    parameter: p_extra_attack_bonemass_0
+
+- prefab: Bonemass
+  types:
+  - state, punch1
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 1.9
+    parameter: p_extra_attack_bonemass_1
+
+- prefab: Bonemass
+  type: poke, p_extra_attack_bonemass_0
+  objects:
+  - Player, 7
+  - creature, 7, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, punch1
+
+- prefab: Bonemass
+  type: poke, p_extra_attack_bonemass_1
+  objects:
+  - Player, 7
+  - creature, 7, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, punch0
+
+# Bonemass - chance to spawn Rancid Remains when spawning others
+- prefab: bonemass_throw_projectile
+  type: destroy
+  weight: 0.2
+  spawn: Skeleton_Poison
+  triggerRules: true
+
+# Bonemass - chance to spawn Surtlings when spawning others
+- prefab: bonemass_throw_projectile
+  type: destroy
+  weight: 0.2
+  spawn: Surtling
+  triggerRules: true
+
+# Bonemass AOE destroys nearby structures.  no more hiding in trees!
+- prefab: Bonemass
+  type: state, aoe
+  poke:
+  - prefab: Piece
+    maxDistance: 100
+    delay: 5
+    parameter: p_bonemass_acid_piece_init
+
+- prefab: Piece
+  type: poke, p_bonemass_acid_piece_init
+  poke:
+  - self: true
+    parameter: p_bonemass_acid_piece_dmg <randi_5_9> <randi_5_9> <randi_1_3>
+
+- prefab: Piece
+  type: poke, p_bonemass_acid_piece_dmg
+  objects:
+  - Bonemass, 100
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, chop=<par1> pickaxe=<par2>
+  poke:
+  - self: true
+    parameter: p_bonemass_acid_piece_vfx
+  - self: true
+    delay: <par3>
+    parameter: p_bonemass_acid_piece_dmg <randi_5_19> <randi_5_19> <randi_1_5>
+
+- prefab: Piece
+  type: poke, p_bonemass_acid_piece_vfx
+  weight: 0.05
+  spawn: vfx_poisonarrow_hit
+
+#- prefab: Player
+#  type: say, test
+#  poke:
+#  - prefab: Piece
+#    maxDistance: 20
+#    parameter: p_test <randi_3_6> <randi_3_6> <randf_1_2>
+#- prefab: Piece
+#  type: poke, p_test
+#  objectRpc:
+#  - name: RPC_Damage
+#    1: hit, chop=<par1> pickaxe=<par2>
+#  poke:
+#  - self: true
+#    delay: <par3>
+#    parameter: p_test <randi_3_6> <randi_3_6> <randf_1_2>
+
+
+#################
+# Moder - faster movement when grounded
+- prefab: Dragon
+  type: create
+  data: d_moder_faster
+
+# Moder - Ice Blocks have a chance to spawn an Ulv if not destroyed
+- prefab: IceBlocker
+  type: create
+  objects:
+  - Dragon, 100
+  poke:
+  - self: true
+    delay: 5            ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop
+
+- prefab: IceBlocker
+  type: poke, p_iceblock_spawn_ulv_loop
+  poke:
+  - self: true
+    delay: 2.3
+    parameter: p_iceblock_spawn_ulv_loop
+  - self: true
+    parameter: p_iceblock_spawn_ulv_spawn
+
+- prefab: IceBlocker
+  type: poke, p_iceblock_spawn_ulv_spawn
+  weight: 0.1
+  remove: true
+  spawns:
+  - Ulv, 0,0,0, 0,0,0, d_ulv_wakeup, 0.5
+  - vfx_iceblocker_destroyed
+  - sfx_ice_destroyed
+  - fx_iceshard_hit
+  - fx_HildirChest_Unlock, 0,0,0, 0,0,0, d_sfx_silent_creatures
+  - vfx_Potion_stamina_medium
+  triggerRules: true
+
+- prefab: Ulv
+  type: state, wakeup
+  objects:
+  - Dragon, 100
+  spawns:
+  - sfx_wolf_attack, 0,0,0, 0,0,0, d_ulv_howl_pitch
+
+# Moder - extra attacks
+- prefab: Dragon
+  types:
+  - state, attack_claw_left
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 2.2
+    parameter: p_extra_attack_moder_left
+
+- prefab: Dragon
+  types:
+  - state, attack_claw_right
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 2.2
+    parameter: p_extra_attack_moder_right
+
+- prefab: Dragon
+  type: poke, p_extra_attack_moder_left
+  objects:
+  - Player, 9
+  - creature, 9, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_claw_right
+
+- prefab: Dragon
+  type: poke, p_extra_attack_moder_right
+  objects:
+  - Player, 9
+  - creature, 9, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_claw_left
+
+# Moder taunt bursts all remaining IceBlockers for AE dmg & slow to any nearby players or tames
+- prefab: Dragon
+  types:
+  - state, attack_taunt
+  spawn: fx_DvergerMage_Mistile_attack, 0,5,2, 0,0,0, d_empty_data_creatures, 2.5
+  poke:
+  - prefab: IceBlocker
+    maxDistance: 100
+    delay: 3
+    parameter: p_iceblock_burst
+
+- prefab: IceBlocker
+  type: poke, p_iceblock_burst
+  spawns:
+  - vfx_iceblocker_destroyed
+  - sfx_ice_destroyed
+  - fx_iceshard_hit
+  - fx_DvergerMage_Mistile_attack
+  - fx_DvergerMage_Mistile_die
+  remove: true
+  poke:
+  - prefab: Player
+    maxDistance: 6
+    parameter: p_iceblock_burst_dmg 300+<vModerIceBlockerDmgRnd>
+  - prefab: creature
+    data: tamed_creatures
+    maxDistance: 6
+    parameter: p_iceblock_burst_dmg 45+<vModerIceBlockerDmgRnd>
+
+- prefab: Player
+  type: poke, p_iceblock_burst_dmg
+  spawns:
+  - fx_iceshard_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=<par1> dodge=true block=true status=SE_Savheim_Slowed
+
+- prefab: creature
+  type: poke, p_iceblock_burst_dmg
+  spawns:
+  - fx_iceshard_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=<par1> dodge=true block=true
+
+# Players or tames hit by frost breath cause an IceBlocker to spawn.
+- prefab: vfx_Frost
+  type: create
+  objects:
+  - Dragon, 100
+  - vfx_dragon_coldbreath, 20
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: p_iceblock_spawn
+  - prefab: creature
+    data: tamed_creatures
+    maxDistance: 1
+    limit: 1
+    parameter: p_iceblock_spawn
+
+- prefab: Player, creature
+  type: poke, p_iceblock_spawn
+  spawns:
+  - IceBlocker, 0,-1,0
+  triggerRules: true

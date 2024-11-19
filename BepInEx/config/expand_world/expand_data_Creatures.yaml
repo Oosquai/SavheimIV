@@ -63,6 +63,18 @@
   - Humanoid.m_canSwim, 1
   - Humanoid.m_staggerWhenBlocked, 0
 
+- name: d_ulv_howl_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.65
+  - ZSFX.m_maxPitch, 0.75
+
+- name: d_sfx_silent_creatures
+  ints:
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+
 ####################################
 # Creature AI extra attacks
 - name: dw_second_attack_cd0
@@ -74,9 +86,39 @@
   - dw_second_attack_cd, 1
 
 ####################################
+# Bosses
+- name: d_eikthyr_more_aggressive
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  floats:
+  - MonsterAI.m_circleTargetDuration, 6
+  - MonsterAI.m_circleTargetDistance, 9
+  - Humanoid.m_runSpeed, 10
+  - MonsterAI.m_minAttackInterval, 1
+
 - name: TentaRootMover
   floats:
   - Humanoid.m_runSpeed, 1
+
+- name: d_moder_faster
+  floats:
+  - Humanoid.m_speed, 6  # default is 4
+
+- name: d_ulv_wakeup
+  floats:
+  - MonsterAI.m_wakeupRange, 20
+
+- valueGroup: vModerIceBlockerDmgRnd
+  values:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
 
 ####################################
 # Monster Clothes!
@@ -331,6 +373,10 @@
 - name: gear_bow
   hashes:
   - LeftItem, skeleton_bow, draugr_bow
+
+- name: gear_goblin_spear
+  hashes:
+  - RightItem, GoblinSpear
 
 #######################################################################
 # Gear Buffs

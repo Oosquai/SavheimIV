@@ -411,6 +411,15 @@
 - value: vReaperDmg2, 2*90+<vReaperDmgRnd>+2*<int_i_reaper_dmg_mult>*20
 - value: vReaperDmg3, 3*90+<vReaperDmgRnd>+3*<int_i_reaper_dmg_mult>*20
 
+- name: d_reaping_player_set
+  ints:
+  - i_reaping_player, 1
+
+- name: d_reaping_player_rst
+  ints:
+  - i_reaping_player, 0
+
+
 ####################################
 # Spirit Counter
 - name: gear_staffshield_all
