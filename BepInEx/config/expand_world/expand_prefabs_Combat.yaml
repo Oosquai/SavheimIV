@@ -353,7 +353,7 @@
 # Damage and tick count scales roughly with creature max hp.
 
 # 1h swords
-- prefab: sfx_rebirth               # Wacky's Database SE adds this, to ensure only occurs on hit.
+- prefab: sfx_open_box              # Wacky's Database SE adds this, to ensure only occurs on hit.
   type: create
   objects:
   - sfx_build_hoe, 1                # Wacky's Database SE sfx added to secondary attacks of 1h swords only
@@ -365,7 +365,7 @@
     parameter: p_sword_bleed_hp 7   # par1 = base total ticks minus 1
 
 # 2h swords
-- prefab: sfx_rebirth
+- prefab: sfx_open_box
   type: create
   objects:
   - sfx_build_cultivator, 1         # specific to greatswords
@@ -378,7 +378,7 @@
 
 # claws - chance to bleed on primary attacks.  this is also used with Ryvers (CWS_Sword_5_SH).
 # chance achieved with Wacky's Database chance to proc SE on attack
-- prefab: sfx_rebirth               # Wacky's Database SE adds this, to ensure only occurs on hit.
+- prefab: sfx_open_box              # Wacky's Database SE adds this, to ensure only occurs on hit.
   type: create
   objects:
   - sfx_gui_craftitem_end, 1        # specific to claws and Ryvers
@@ -389,7 +389,7 @@
     parameter: p_sword_bleed_hp 1   # more frequent but shorter duration bleeds
 
 # bleed arrows and bolts
-- prefab: sfx_rebirth
+- prefab: sfx_open_box
   type: create
   objects:
   - sfx_gui_craftitem, 1            # specific to bleed arrows and bolts
@@ -542,9 +542,9 @@
   data: d_bleed_tick_rst_stack_inc     # reset tick count and increment stack count any time a new stack is created
   injectData: true
   spawns:
-  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.06
-  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_combat, 0.12
-  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_combat, 0.18
+  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.05
+  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_combat, 0.1
+  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_combat, 0.15
   - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0
   - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.4
   - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8

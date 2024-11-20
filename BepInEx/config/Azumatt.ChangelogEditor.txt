@@ -4,11 +4,16 @@
 - Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 11/19/24</color>
+- Modified several aspects of Eikthyr, Elder, Bonemass, and Moder fights.
+- Improved Brenna AI.
 - Clarified tooltips on swords and greatswords to specify bleed after parry instead of stagger.
-- Improved effects for third combo of reapers.
+- Improved sound and visual effects for third combo of reapers.
+- Improved bleed sound and visual effects.
+- Increased attack speed of primary attacks with Rikarr's Rapier.
 - Added a few more creature types to list of those who don't stagger when parried.
 - Added logic to make goblins who throw spears not stagger when parried.
-- Modified several aspects of Eikthyr, Elder, Bonemass, and Moder fights.
+- Increased durability gains from enchanting for all weapons and shields.
+- Reduced drop rates for boss summon items from elites after killing boss.
 - Moved Elder changes from Deep North files to Creatures files, but no in-game changes.
 
 <color=#FFA8A8>----------------------------------------------------------------------------

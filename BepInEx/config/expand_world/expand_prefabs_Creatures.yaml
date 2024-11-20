@@ -65,6 +65,11 @@
     delay: 0.1
     maxDistance: 0.1
 
+- prefab: Skeleton_Hildir
+  type: create
+  weight: 1E30
+  data: clothes_skeleton_hildir
+
 - prefab: Draugr
   type: create
   weight: 1E30
@@ -317,23 +322,6 @@
 ##################
 # Creatures who can't dual wield, but give them a % chance for a quick follow-up attack.
 # keep chances below 50%, then no need for flag to prevent infinite attacks - random instead!
-- prefab: creature
-  type: poke, p_extra_attack
-  objects:
-  - Player, 2.5
-  - creature, 2.5, tamed_creatures
-  objectsLimit: 1
-  objectRpc:
-  - name: SetTrigger
-    target: all
-    1: name, attack
-  - name: SetTrigger
-    target: all
-    1: name, attack_mace
-  - name: SetTrigger
-    target: all
-    1: name, attack_claw1
-
 # creature-specific attack animations and timings.
 - prefab: Greydwarf_Elite
   type: state, attack
@@ -349,7 +337,7 @@
   poke:
   - self: true
     delay: 1.8
-    parameter: p_extra_attack
+    parameter: p_extra_attack_brenna
 
 - prefab: Draugr_Elite
   type: state, attack
@@ -375,6 +363,34 @@
   - self: true
     delay: 1.5
     parameter: p_extra_attack
+
+- prefab: creature
+  type: poke, p_extra_attack
+  objects:
+  - Player, 2.5
+  - creature, 2.5, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
+  - name: SetTrigger
+    target: all
+    1: name, attack_mace
+  - name: SetTrigger
+    target: all
+    1: name, attack_claw1  # this triggers brenna, hence special case below
+
+- prefab: Skeleton_Hildir
+  type: poke, p_extra_attack_brenna
+  objects:
+  - Player, 2.5
+  - creature, 2.5, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack
 
 #############################
 # Any creature with an offhand elemental staff casts novas, so slow their attacks
@@ -909,7 +925,7 @@
 - prefab: Eikthyr
   type: create
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
-  data: d_eikthyr_more_aggressive
+  data: d_eikthyr_ai
 
 #################
 # Elder - Tentaroots move around - creepy!  (Thanks, Raaka!)
@@ -993,6 +1009,11 @@
     1: name, stomp0
 
 #################
+# Bonemass - faster move and turn speed
+- prefab: Bonemass
+  type: create
+  data: d_bonemass_ai
+
 # Bonemass - extra attacks
 - prefab: Bonemass
   types:
@@ -1057,6 +1078,12 @@
     delay: 5
     parameter: p_bonemass_acid_piece_init
 
+# except portals.  leave those alone.
+- prefab: portal_wood, portal_stone
+  type: poke, p_bonemass_acid_piece_init
+  weight: 1E30
+
+# everything else though... bye!
 - prefab: Piece
   type: poke, p_bonemass_acid_piece_init
   poke:
@@ -1082,45 +1109,91 @@
   weight: 0.05
   spawn: vfx_poisonarrow_hit
 
-#- prefab: Player
-#  type: say, test
-#  poke:
-#  - prefab: Piece
-#    maxDistance: 20
-#    parameter: p_test <randi_3_6> <randi_3_6> <randf_1_2>
-#- prefab: Piece
-#  type: poke, p_test
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, chop=<par1> pickaxe=<par2>
-#  poke:
-#  - self: true
-#    delay: <par3>
-#    parameter: p_test <randi_3_6> <randi_3_6> <randf_1_2>
-
-
 #################
 # Moder - faster movement when grounded
 - prefab: Dragon
   type: create
-  data: d_moder_faster
+  data: d_moder_ai
 
-# Moder - Ice Blocks have a chance to spawn an Ulv if not destroyed
+# Moder - Ice Blocks have a chance to spawn an Ulv if not destroyed.  more players makes them pop sooner.
+# 1 player present, so slowest ulv spawning
 - prefab: IceBlocker
   type: create
   objects:
   - Dragon, 100
+  - Player, 100
+  objectsLimit: 2
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 2
   poke:
   - self: true
-    delay: 5            ### time until IceBlockers can start popping Ulvs
-    parameter: p_iceblock_spawn_ulv_loop
+    delay: 4                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 2.3     ### time between chances to pop ulvs
+
+# 2 players present
+- prefab: IceBlocker
+  type: create
+  objects:
+  - Dragon, 100
+  - Player, 100
+  objectsLimit: 3
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 3
+  poke:
+  - self: true
+    delay: 3                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 1.8     ### time between chances to pop ulvs
+
+# 3 players present
+- prefab: IceBlocker
+  type: create
+  objects:
+  - Dragon, 100
+  - Player, 100
+  objectsLimit: 4
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 4
+  poke:
+  - self: true
+    delay: 2                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 1.3     ### time between chances to pop ulvs
+
+# 4 players present
+- prefab: IceBlocker
+  type: create
+  objects:
+  - Dragon, 100
+  - Player, 100
+  objectsLimit: 5
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 5
+  poke:
+  - self: true
+    delay: 1                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 0.8     ### time between chances to pop ulvs
+
+# 5+ players present
+- prefab: IceBlocker
+  type: create
+  objects:
+  - Dragon, 100
+  - Player, 100
+  objectsLimit: 6
+  poke:
+  - self: true
+    delay: 0                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 0.3     ### time between chances to pop ulvs
 
 - prefab: IceBlocker
   type: poke, p_iceblock_spawn_ulv_loop
   poke:
   - self: true
-    delay: 2.3
-    parameter: p_iceblock_spawn_ulv_loop
+    delay: <par1>
+    parameter: p_iceblock_spawn_ulv_loop <par1>
   - self: true
     parameter: p_iceblock_spawn_ulv_spawn
 
@@ -1194,6 +1267,19 @@
   - prefab: IceBlocker
     maxDistance: 100
     delay: 3
+    parameter: p_iceblock_burst_init
+
+- prefab: IceBlocker
+  type: poke, p_iceblock_burst_init
+  poke:
+  - self: true
+    parameter: p_iceblock_burst_rndDly <randf_0_0.7>
+
+- prefab: IceBlocker
+  type: poke, p_iceblock_burst_rndDly
+  poke:
+  - self: true
+    delay: <par1>
     parameter: p_iceblock_burst
 
 - prefab: IceBlocker
@@ -1207,12 +1293,12 @@
   remove: true
   poke:
   - prefab: Player
-    maxDistance: 6
-    parameter: p_iceblock_burst_dmg 300+<vModerIceBlockerDmgRnd>
+    maxDistance: 7
+    parameter: p_iceblock_burst_dmg 210+<vModerIceBlockerDmgRnd>
   - prefab: creature
     data: tamed_creatures
-    maxDistance: 6
-    parameter: p_iceblock_burst_dmg 45+<vModerIceBlockerDmgRnd>
+    maxDistance: 7
+    parameter: p_iceblock_burst_dmg 35+<vModerIceBlockerDmgRnd>
 
 - prefab: Player
   type: poke, p_iceblock_burst_dmg

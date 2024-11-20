@@ -1,7 +1,7 @@
 name: CWS_Sword_9_SH
 m_weight: 0.8
 m_name: Rikarr's Rapier
-m_description: Use this duelist's blade to perforate your foes, then dance away with a strong parting slash.
+m_description: Use this duelist's blade to perforate your foes, especially after a <color=yellow>parry</color>, then dance away with a strong parting slash.
 clonePrefabName: CWS_Sword_9
 mockName: 
 customIcon: 

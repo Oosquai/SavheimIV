@@ -178,6 +178,8 @@
   - MonsterAI.m_circleTargetDuration, 0
   - MonsterAI.m_circleTargetInterval, 1E30
   - Humanoid.m_runSpeed, 16
+  - Humanoid.m_turnSpeed, 150                    # 100
+  - Humanoid.m_runTurnSpeed, 150                 # 100
   - MonsterAI.m_minAttackInterval, 1
   strings:
   - Humanoid.m_group, dn_mobs

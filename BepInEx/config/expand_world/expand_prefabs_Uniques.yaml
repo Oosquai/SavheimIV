@@ -881,7 +881,7 @@
 
 - prefab: Skeleton_Hildir
   type: destroy
-  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  biomes: Meadows, Blackforest, Swamp, Ocean
   weight: 1E30
   spawns:
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_uniques

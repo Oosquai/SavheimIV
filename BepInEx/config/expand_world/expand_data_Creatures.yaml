@@ -87,24 +87,35 @@
 
 ####################################
 # Bosses
-- name: d_eikthyr_more_aggressive
-  ints:
-  - Humanoid.m_canSwim, 1
-  - HasFields, 1
-  - HasFieldsHumanoid, 1
+- name: d_eikthyr_ai
   floats:
-  - MonsterAI.m_circleTargetDuration, 6
-  - MonsterAI.m_circleTargetDistance, 9
-  - Humanoid.m_runSpeed, 10
-  - MonsterAI.m_minAttackInterval, 1
+  - Humanoid.m_runSpeed, 9                       # 8
+  - Humanoid.m_turnSpeed, 130                    # 100
+  - Humanoid.m_runTurnSpeed, 130                 # 100
+  - MonsterAI.m_circleTargetInterval, 9          # 0
+  - MonsterAI.m_circleTargetDuration, 4          # 15
+  - MonsterAI.m_circleTargetDistance, 12         # 15
+  - MonsterAI.m_randomCircleInterval, 0          # 4
+  - MonsterAI.m_randomMoveInterval, 0            # 10
+  - MonsterAI.m_randomMoveRange, 0               # 20
+  - MonsterAI.m_minAttackInterval, 1             # 2
+
+- name: d_bonemass_ai
+  floats:
+  - Humanoid.m_runSpeed, 6                       # 4
+  - Humanoid.m_turnSpeed, 90                     # 60
+  - Humanoid.m_runTurnSpeed, 120                 # 100
 
 - name: TentaRootMover
   floats:
-  - Humanoid.m_runSpeed, 1
+  - Humanoid.m_runSpeed, 1                       # 0
 
-- name: d_moder_faster
+- name: d_moder_ai
   floats:
-  - Humanoid.m_speed, 6  # default is 4
+  - Humanoid.m_runSpeed, 9                       # 6
+  - Humanoid.m_turnSpeed, 90                     # 60
+  - Humanoid.m_runTurnSpeed, 120                 # 80
+  - Humanoid.m_flyTurnSpeed, 120                 # 80
 
 - name: d_ulv_wakeup
   floats:
@@ -171,6 +182,18 @@
   - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
   - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
   - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern, StaffGreenRoots_T3
+
+- name: clothes_skeleton_hildir
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, Cape_Fire_SH
+  - LegItem, ArmorPaddedGreaves
+  - LeftItem, CWS_Round_Shield_5_SH
+  floats:
+  - Humanoid.m_runSpeed, 5                       # 4
 
 - name: clothes_draugr
   ints:
