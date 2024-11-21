@@ -110,6 +110,17 @@
   floats:
   - f_y_diff, <y>-<par1>
 
+- valueGroup: vBonemassElevQuotes
+  values:
+  - <#3FDF3F>Face me… in thaa muck… ye ssslippery foolsss!
+  - <#3FDF3F>Come… down… an' tasste the rot… of your doomsss, cowardsss!
+  - <#3FDF3F>Ye dare… hide above me? Come… prove your worth… in thaa mire!
+  - <#3FDF3F>Come… down…! Ssslither in the filth… like wormsss you are!
+  - <#3FDF3F>I… AM… thaa sswwaaamp! There… issss no… essscape!
+  - <#3FDF3F>You… call this… a fight? Come… sssink into thaa ssswamp… an' sssuffer!
+  - <#3FDF3F>Run… climb… but below issss… where you'll… ROT!
+  - <#3FDF3F>Hiding… won't… ssaaave you. Fight… meee in thaa sslluuudge!
+
 - name: TentaRootMover
   floats:
   - Humanoid.m_runSpeed, 1                       # 0

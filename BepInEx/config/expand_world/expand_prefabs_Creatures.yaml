@@ -1127,23 +1127,7 @@
   - name: Message
     target: <zdo>
     1: enum_message, Center
-    2: string, <#3FDF3F>Come down here an' taste tha rot o' yer doom, ye cowards!
-    3: int, 0
-- prefab: Player
-  type: poke, p_bonemass_elev_message
-  objectRpc:
-  - name: Message
-    target: <zdo>
-    1: enum_message, Center
-    2: string, <#3FDF3F>Ye dare skulk above me?  Prove yer strength in tha mire, ya wretches!
-    3: int, 0
-- prefab: Player
-  type: poke, p_bonemass_elev_message
-  objectRpc:
-  - name: Message
-    target: <zdo>
-    1: enum_message, Center
-    2: string, <#3FDF3F>Fleein' to the heights won't save ye.  Fight me in tha sludge, ye stinkin' gnats!
+    2: string, <vBonemassElevQuotes>
     3: int, 0
 
 # skip portals with a high-weight no-op.  they'll still break if all supports beneath them disappear!
