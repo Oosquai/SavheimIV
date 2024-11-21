@@ -357,7 +357,7 @@
   type: create
   objects:
   - sfx_build_hoe, 1                # Wacky's Database SE sfx added to secondary attacks of 1h swords only
-  - sfx_perfectblock, 5             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
+  - sfx_perfectblock, 7             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
   poke:
   - prefab: creature
     limit: 1
@@ -369,7 +369,7 @@
   type: create
   objects:
   - sfx_build_cultivator, 1         # specific to greatswords
-  - sfx_perfectblock, 5
+  - sfx_perfectblock, 7
   poke:
   - prefab: creature
     limit: 1
@@ -1232,12 +1232,13 @@
   injectData: true
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
-  - sfx_fallenvalkyrie_attack_spit_projectile
+  - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
   - sfx_troll_attack_hit
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg1>
   - prefab: creature
+    data: not_tamed_combat
     minDistance: 0.1
     maxDistance: 4
     limit: 4
@@ -1254,12 +1255,13 @@
   injectData: true
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
-  - sfx_fallenvalkyrie_attack_spit_projectile
+  - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
   - sfx_troll_attack_hit
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg2>
   - prefab: creature
+    data: not_tamed_combat
     minDistance: 0.1
     maxDistance: 5
     limit: 5
@@ -1276,12 +1278,13 @@
   injectData: true
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
-  - sfx_fallenvalkyrie_attack_spit_projectile
+  - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
   - sfx_troll_attack_hit
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg3>
   - prefab: creature
+    data: not_tamed_combat
     minDistance: 0.1
     maxDistance: 6
     limit: 6

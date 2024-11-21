@@ -509,12 +509,14 @@
 
 ######################
 # Sanguino (Reaper)
-- prefab: sfx_spear_poke
+- prefab: sfx_fallenvalkyrie_attack_spit_projectile
   type: create
   objects:
   - Player, 6, d_sanguino_reaper
-  - sfx_fallenvalkyrie_attack_spit_projectile, 6
-  - vfx_player_death, 6
+  - sfx_metal_blocked_overlay, 6, d_sfx_reaper_dmg_pitch1
+  - sfx_metal_blocked_overlay, 6, d_sfx_reaper_dmg_pitch2
+  - sfx_metal_blocked_overlay, 6, d_sfx_reaper_dmg_pitch3
+  objectsLimit: 2
   spawn: Bat, tamed_reduced_dmg_uniques
   poke:
   - prefab: Bat

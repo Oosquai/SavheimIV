@@ -1069,43 +1069,143 @@
   spawn: Surtling
   triggerRules: true
 
-# Bonemass AOE destroys nearby structures.  no more hiding in trees!
+###
+# Bonemass AOE and Spawn attacks check vertical location of players.
+# Anyone trying to cheese by staying above his reach gets AOE on their heads.
+# AOE spawned this way creates a loop each time it spawns on all players, tames, and pieces in range of AOE.
+# When loop active and AOE present, players and pieces take damage PER LOOP.
+# Portals are excluded from damage, but they'll break if everything beneath them breaks!
+# Testing shows player and bonemass have equal y-coord when standing on level ground.
+# Wood Ladder is just over 2 units of height.  Jumping at 100 Jump skill is about 3.  Bonemass altar skull is 7.  Bonemass is about 7.5 tall.
+# Use 5 as elevation difference criteria for cheese.
+# Bonemass AOE radius is about 15 units of distance.
 - prefab: Bonemass
-  type: state, aoe
+  types:
+  - state, aoe
+  - state, spawn
   poke:
-  - prefab: Piece
-    maxDistance: 100
-    delay: 5
-    parameter: p_bonemass_acid_piece_init
+  - prefab: Player
+    maxDistance: 80                              ### PLAYER RANGE TO CHECK HEIGHT
+    delay: 3
+    parameter: p_bonemass_elev <y>
 
-# except portals.  leave those alone.
+# calculate relative height of player - bonemass
+- prefab: Player
+  type: poke, p_bonemass_elev
+  data: d_bonemass_ycalc
+  injectData: true
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_bonemass_elev_eval
+
+# check if player too high, relative to bonemass.  spawn aoe animation and a sfx, then poke loops
+# each player cheesing will trigger!  it'll get ugly fast if there's a whole group in a tree!  suckers.
+- prefab: Player
+  type: poke, p_bonemass_elev_eval
+  filter: float, f_y_diff, 5;9999                ### RELATIVE HEIGHT CRITERIA
+  spawns:
+  - bonemass_aoe
+  - sfx_Bonemass_idle
+  poke:
+  - self: true
+    parameter: p_bonemass_elev_loop_init
+  - self: true
+    parameter: p_bonemass_elev_message
+  - prefab: creature
+    data: tamed_creatures
+    maxDistance: 15                              ### RANGE FROM EACH PLAYER TO TAMES TO BE DMG'ed
+    parameter: p_bonemass_elev_loop_init
+  - prefab: Piece
+    maxDistance: 15                              ### RANGE FROM EACH PLAYER TO PIECES TO BE DMG'ed
+    parameter: p_bonemass_elev_loop_init  
+
+# tell players they're bad!
+- prefab: Player
+  type: poke, p_bonemass_elev_message
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, Center
+    2: string, <#3FDF3F>Come down here an' taste tha rot o' yer doom, ye cowards!
+    3: int, 0
+- prefab: Player
+  type: poke, p_bonemass_elev_message
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, Center
+    2: string, <#3FDF3F>Ye dare skulk above me?  Prove yer strength in tha mire, ya wretches!
+    3: int, 0
+- prefab: Player
+  type: poke, p_bonemass_elev_message
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, Center
+    2: string, <#3FDF3F>Fleein' to the heights won't save ye.  Fight me in tha sludge, ye stinkin' gnats!
+    3: int, 0
+
+# skip portals with a high-weight no-op.  they'll still break if all supports beneath them disappear!
 - prefab: portal_wood, portal_stone
-  type: poke, p_bonemass_acid_piece_init
+  type: poke, p_bonemass_elev_loop_init
   weight: 1E30
 
-# everything else though... bye!
-- prefab: Piece
-  type: poke, p_bonemass_acid_piece_init
+# need init processes per poked prefab to get independently-rolled randoms
+- prefab: Player, creature, Piece
+  type: poke, p_bonemass_elev_loop_init
   poke:
   - self: true
-    parameter: p_bonemass_acid_piece_dmg <randi_5_9> <randi_5_9> <randi_1_3>
+    parameter: p_bonemass_elev_loop_main <randi_40_60> <randi_5_9> <randf_2.1_2.9>  ### PLAYER TICK DMG, TAME & PIECE TICK DMG, TICK PERIOD
 
-- prefab: Piece
-  type: poke, p_bonemass_acid_piece_dmg
+# main elevation cheese loop.
+# keeps going despite aoe, but will stop when no longer near bonemass.
+# stacks each time player caught cheesing!
+# dmg applied when AOE present.
+- prefab: Player, creature, Piece
+  type: poke, p_bonemass_elev_loop_main
   objects:
   - Bonemass, 100
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, chop=<par1> pickaxe=<par2>
   poke:
   - self: true
-    parameter: p_bonemass_acid_piece_vfx
+    delay: <par3>
+    parameter: p_bonemass_elev_loop_main <randi_40_60> <randi_5_9> <randf_2.1_2.9>  ### PLAYER TICK DMG, TAME & PIECE TICK DMG, TICK PERIOD
   - self: true
     delay: <par3>
-    parameter: p_bonemass_acid_piece_dmg <randi_5_19> <randi_5_19> <randi_1_5>
+    parameter: p_bonemass_elev_loop_dmg <par1> <par2>
+
+# players take split poison and true damage to ensure stacking consequences.  Bonemass AOE is 100 poison.
+- prefab: Player
+  type: poke, p_bonemass_elev_loop_dmg
+  objects:
+  - bonemass_aoe, 15
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, poison=<par1> damage=<par2>
+
+# tames take poison damage, but less than players (players have armor).  go easy on tames - they're expensive.
+- prefab: creature
+  type: poke, p_bonemass_elev_loop_dmg
+  objects:
+  - bonemass_aoe, 15
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, poison=<par2>
+
+# pieces take split chop and pickaxe damage, and they occasionally spawn a vfx
+- prefab: Piece
+  type: poke, p_bonemass_elev_loop_dmg
+  objects:
+  - bonemass_aoe, 15
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, chop=<par2> pickaxe=<par2>
+  poke:
+  - self: true
+    parameter: p_bonemass_piece_vfx
 
 - prefab: Piece
-  type: poke, p_bonemass_acid_piece_vfx
+  type: poke, p_bonemass_piece_vfx
   weight: 0.05
   spawn: vfx_poisonarrow_hit
 
@@ -1239,8 +1339,8 @@
 - prefab: Dragon
   type: poke, p_extra_attack_moder_left
   objects:
-  - Player, 9
-  - creature, 9, tamed_creatures
+  - Player, 12
+  - creature, 12, tamed_creatures
   objectsLimit: 1
   objectRpc:
   - name: SetTrigger
@@ -1250,8 +1350,8 @@
 - prefab: Dragon
   type: poke, p_extra_attack_moder_right
   objects:
-  - Player, 9
-  - creature, 9, tamed_creatures
+  - Player, 12
+  - creature, 12, tamed_creatures
   objectsLimit: 1
   objectRpc:
   - name: SetTrigger
@@ -1286,36 +1386,37 @@
   type: poke, p_iceblock_burst
   spawns:
   - vfx_iceblocker_destroyed
-  - sfx_ice_destroyed
-  - fx_iceshard_hit
   - fx_DvergerMage_Mistile_attack
   - fx_DvergerMage_Mistile_die
+  - sfx_troll_attack_hit
   remove: true
   poke:
   - prefab: Player
     maxDistance: 7
-    parameter: p_iceblock_burst_dmg 210+<vModerIceBlockerDmgRnd>
+    parameter: p_iceblock_burst_calc <x> <z> 210+<vModerIceBlockerDmgRnd>
   - prefab: creature
     data: tamed_creatures
     maxDistance: 7
-    parameter: p_iceblock_burst_dmg 35+<vModerIceBlockerDmgRnd>
+    parameter: p_iceblock_burst_calc <x> <z> 35+<vModerIceBlockerDmgRnd>
 
-- prefab: Player
+- prefab: Player, creature
+  type: poke, p_iceblock_burst_calc
+  data: d_force_away_calc
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_iceblock_burst_dmg <par3>
+
+- prefab: Player, creature
   type: poke, p_iceblock_burst_dmg
   spawns:
   - fx_iceshard_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<par1> dodge=true block=true status=SE_Savheim_Slowed
+    1: hit, frost=<par1> dodge=true block=true status=SE_Savheim_Slowed force=60 dir=<float_f_force_x>,<float_f_force_z>,<y>
 
-- prefab: creature
-  type: poke, p_iceblock_burst_dmg
-  spawns:
-  - fx_iceshard_hit
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, frost=<par1> dodge=true block=true
-
+######
 # Players or tames hit by frost breath cause an IceBlocker to spawn.
 - prefab: vfx_Frost
   type: create

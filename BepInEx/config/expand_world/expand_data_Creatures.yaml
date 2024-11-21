@@ -106,6 +106,10 @@
   - Humanoid.m_turnSpeed, 90                     # 60
   - Humanoid.m_runTurnSpeed, 120                 # 100
 
+- name: d_bonemass_ycalc
+  floats:
+  - f_y_diff, <y>-<par1>
+
 - name: TentaRootMover
   floats:
   - Humanoid.m_runSpeed, 1                       # 0
@@ -130,6 +134,16 @@
   - 5
   - 6
   - 7
+
+- name: d_force_toward_calc
+  floats:
+  - f_force_x, <par1>-<x>
+  - f_force_z, <par2>-<z>
+
+- name: d_force_away_calc
+  floats:
+  - f_force_x, <x>-<par1>
+  - f_force_z, <z>-<par2>
 
 ####################################
 # Monster Clothes!
