@@ -75,6 +75,14 @@
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
 
+- name: d_zero_health_creatures
+  floats:
+  - health, 0
+
+- name: d_fx_remove_early
+  ints:
+  - i_fx_remove_early, 1
+
 ####################################
 # Creature AI extra attacks
 - name: dw_second_attack_cd0
@@ -103,7 +111,7 @@
 - name: d_bonemass_ai
   floats:
   - Humanoid.m_runSpeed, 6                       # 4
-  - Humanoid.m_turnSpeed, 90                     # 60
+  - Humanoid.m_turnSpeed, 120                    # 60
   - Humanoid.m_runTurnSpeed, 120                 # 100
 
 - name: d_bonemass_ycalc
@@ -155,6 +163,97 @@
   floats:
   - f_force_x, <x>-<par1>
   - f_force_z, <z>-<par2>
+
+- name: d_yagluth_ai
+  floats:
+  - Humanoid.m_runSpeed, 6                       # 4
+  - Humanoid.m_turnSpeed, 120                    # 50
+  - Humanoid.m_runTurnSpeed, 120                 # 50
+
+- name: d_yagluth_add_fire
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, CapeFeather
+  - LeftItem, StaffFireball
+  - LegItem, ArmorFenringLegs
+  floats:
+  - Humanoid.m_runSpeed, 2.5                     # 4
+  - RandomSkillFactor, 2                         # 1
+  - max_health, 300
+  - health, 301
+  - MonsterAI.m_hearRange, 100                   # 30
+  strings:
+  - Humanoid.m_name, Blazing Wight
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000
+
+- name: d_yagluth_add_frost
+  ints:
+  - seed, -2003399168     # empty left hand, to be replaced by Ice Staff
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, Cape_Eitr_SH
+  - LegItem, ArmorFenringLegs
+  - LeftItem, StaffIceShards
+  floats:
+  - Humanoid.m_runSpeed, 2.5                     # 4
+  - RandomSkillFactor, 2                         # 1
+  - max_health, 300
+  - health, 301
+  - MonsterAI.m_hearRange, 100                   # 30
+  strings:
+  - Humanoid.m_name, Frigid Wight
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000
+
+- name: d_yagluth_add_nature
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, BMR_SeekerCape
+  - LegItem, ArmorFenringLegs
+  - LeftItem, StaffGreenRoots
+  floats:
+  - Humanoid.m_runSpeed, 2.5                     # 4
+  - RandomSkillFactor, 3                         # 1
+  - max_health, 300
+  - health, 301
+  - MonsterAI.m_hearRange, 100                   # 30
+  strings:
+  - Humanoid.m_name, Verdant Wight
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000
+
+- name: d_yagluth_boon_ttl_fire_start
+  ints:
+  - i_yagluth_boon_ttl_fire, 1
+
+- name: d_yagluth_boon_ttl_fire_end
+  ints:
+  - i_yagluth_boon_ttl_fire, 0
+
+- name: d_yagluth_boon_ttl_frost_start
+  ints:
+  - i_yagluth_boon_ttl_frost, 1
+
+- name: d_yagluth_boon_ttl_frost_end
+  ints:
+  - i_yagluth_boon_ttl_frost, 0
+
+- name: d_yagluth_boon_ttl_nature_start
+  ints:
+  - i_yagluth_boon_ttl_nature, 1
+
+- name: d_yagluth_boon_ttl_nature_end
+  ints:
+  - i_yagluth_boon_ttl_nature, 0
 
 ####################################
 # Monster Clothes!
@@ -484,7 +583,7 @@
 
 ####################################
 # MagicRevamp Summon Tweaks
-# d_bmr_summon_tweaks(max_health, randomSkillFactor)
+# d_bmr_summon_tweaks(max_health, RandomSkillFactor)
 # MagicRevamp scales RandomSkillFactor by a factor of (1,21) at Blood Magic skill levels (1, 100), which is broken.
 # Scale damage by (0.3, 0.5, 0.7) at Blood Magic skill levels (1, 50, 100)
 # Scale health by (1, 1.5, 2) at Blood Magic skill levels (1, 50, 100)
@@ -500,7 +599,7 @@
 
 ####################################
 # Vanilla Summon Tweaks
-# d_bmr_summon_tweaks_vanilla(max_health, randomSkillFactor)
+# d_bmr_summon_tweaks_vanilla(max_health, RandomSkillFactor)
 # Base game scales RandomSkillFactor by a factor of (1,2,3) at Blood Magic skill levels (1, 50, 100).
 # Scale damage by (0.75, 1, 1.25) at Blood Magic skill levels (1, 50, 100) (more powerful skeletons!)
 # Scale health by (0.5, 0.75, 1) at Blood Magic skill levels (1, 50, 100) (default 400 too high)

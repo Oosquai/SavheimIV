@@ -3,15 +3,20 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/20/24</color>
+     0\  Savheim IV Patch Notes, 11/23/24</color>
+- Modifications to Yagluth encounter.  More to come.
+- Fixed heal values and improved healing logic for Vali's Light.
+- Fixed crash condition with Staff of Embers secondary attack when dealing with fire-immune enemies.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/20/24
 - Further improvements to new mechanics in Bonemass and Moder fights.
 - Fixed range for triggering bleeds with 1h and 2h swords being too short against some large enemies.
 - Fixed reaper logic allowing curse spreading to tamed creatures.
 - Fixed Sanguio unique not triggering special features.
 - Updates to Warp's Locations mods.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/19/24
 - Modified several aspects of Eikthyr, Elder, Bonemass, and Moder fights.

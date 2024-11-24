@@ -14,38 +14,23 @@
   - prefab: creature
     maxDistance: 2
     limit: 3
-    parameter: p_stafffireball_secondary
+    parameter: p_stafffireball_secondary <randf_4_6> <randf_4_6> <randf_1_1.5>
   
 - prefab: creature
   type: poke, p_stafffireball_secondary
-  weight: 0.37
+  weight: 0.5
   spawns:
   - fx_batteringram_fire
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=9
+    1: hit, fire=<par1> damage=<par2>  # need true damage to avoid infinite loops on fire-immune enemies
   poke:
   - prefab: creature
-    delay: 0.9
-    maxDistance: 4
-    limit: 2
-    parameter: p_stafffireball_secondary
-
-# random delay, else identical
-- prefab: creature
-  type: poke, p_stafffireball_secondary
-  weight: 0.37
-  spawns:
-  - fx_batteringram_fire
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, fire=9
-  poke:
-  - prefab: creature
-    delay: 1.3
-    maxDistance: 4
-    limit: 2
-    parameter: p_stafffireball_secondary
+    delay: <par3>
+    minDistance: 0.1
+    maxDistance: 6
+    limit: 3
+    parameter: p_stafffireball_secondary <randf_4_6> <randf_4_6> <randf_1_1.5>
 
 #############################
 # Staff of Myrkyr secondary:  outbreak (spreading vomit)
@@ -566,7 +551,7 @@
   filter: d_valis_light
   poke:
   - prefab: creature
-    maxDistance: 4
+    maxDistance: 7
     data: not_tamed_uniques
     parameter: d_valis_light_creature_randomDelay
 
@@ -600,8 +585,14 @@
   poke:
   - prefab: Player
     maxDistance: 8
-    delay: 0.35
-    parameter: d_valis_light_player <float_max_health>
+    parameter: p_valis_light_heal_calc <pow_<float_max_health>_0.42>*<randf_0.9_1.1> <randf_0.2_0.5>
+
+- prefab: Player
+  type: poke, p_valis_light_heal_calc
+  poke:
+  - self: true
+    delay: <par2>
+    parameter: d_valis_light_player <round_<par1>>
 
 - prefab: Player
   type: poke, d_valis_light_player
@@ -610,8 +601,15 @@
   - sfx_skeleton_rise, 0,0,0, 0,0,0, valis_light_heal_pitch
   objectRpc:
   - name: RPC_Heal
-    1: float, <par1>*0.05
+    1: float, <par1>
     2: bool, 1
+  clientRpc:
+  - name: RPC_DamageText
+    packaged: true
+    1: enum_damagetext, Heal
+    2: vec, <x>,<z>,<y>+2
+    3: string, <par1>
+    4: bool, false
 
 ######################
 # Hel's Reaver (purple battleaxe)

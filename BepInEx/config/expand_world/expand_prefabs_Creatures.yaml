@@ -24,6 +24,15 @@
   fallback: true
 
 ###############################################################
+# Any itemdrop created above 9000 altitude is instantly removed.  Thanks, Raaka!
+# There's another version of this in Deep North code.
+- prefab: ItemDrop
+  type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  minY: 9000
+  remove: true
+
+###############################################################
 # Special enemies don't stagger when parried
 - prefab: Greydwarf_Elite, Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen, Charred_Archer, Surtling
   type: create
@@ -67,6 +76,8 @@
 
 - prefab: Skeleton_Hildir
   type: create
+  bannedObjects:
+  - GoblinKing, 100
   weight: 1E30
   data: clothes_skeleton_hildir
 
@@ -1346,6 +1357,8 @@
 - prefab: Dragon
   types:
   - state, attack_taunt
+  objects:
+  - IceBlocker, 100    # only show FX if there's an IceBlocker to pop
   spawn: fx_DvergerMage_Mistile_attack, 0,5,2, 0,0,0, d_empty_data_creatures, 2.5
   poke:
   - prefab: IceBlocker
@@ -1423,3 +1436,378 @@
   spawns:
   - IceBlocker, 0,-1,0
   triggerRules: true
+
+#################
+# Yagluth
+# move and turn faster
+- prefab: GoblinKing
+  type: create
+  data: d_yagluth_ai
+
+# Melee AOE shortened so a successful dodge lets you stay in melee
+- prefab: aoe_nova
+  type: create
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_yagluth_melee_aoe_truncate
+
+- prefab: aoe_nova
+  type: poke, p_yagluth_melee_aoe_truncate
+  remove: true
+
+# Yagluth - extra attacks
+- prefab: GoblinKing
+  types:
+  - state, nova
+  weight: 0.4
+  poke:
+  - self: true
+    delay: 4.5
+    parameter: p_extra_attack_yagluth_nova
+
+- prefab: GoblinKing
+  type: poke, p_extra_attack_yagluth_nova
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, nova
+
+# meteors have a chance to spawn a variety of skeletal adds
+- prefab: fx_goblinking_meteor_hit
+  type: create
+  weight: 0.1                                    ### SPAWN CHANCE PER METEOR
+  objects:
+  - GoblinKing, 100
+  poke:
+  - self: true
+    parameter: p_random_yagluth_meteor_spawn
+
+# fire skeleton.  high damage.
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn
+  bannedObjects:
+  - Skeleton_Hildir, 100, d_yagluth_add_fire
+  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT
+  spawn: Skeleton_Hildir, 0,0,0, 0,0,0, d_yagluth_add_fire
+  poke:
+  - prefab: Skeleton_Hildir
+    data: d_yagluth_add_fire
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+# frost skeleton.  medium damage, frost snares
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn
+  bannedObjects:
+  - Skeleton, 100, d_yagluth_add_frost
+  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT
+  spawn: Skeleton, 0,0,0, 0,0,0, d_yagluth_add_frost
+  poke:
+  - prefab: Skeleton
+    data: d_yagluth_add_frost
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+# nature skeleton.  low damage, heals self and allies
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn
+  bannedObjects:
+  - Skeleton_Poison, 100, d_yagluth_add_nature
+  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT
+  spawn: Skeleton_Poison, 0,0,0, 0,0,0, d_yagluth_add_nature
+  poke:
+  - prefab: Skeleton_Poison
+    data: d_yagluth_add_nature
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+### If adds get hit by beam, kill them and spawn boons to player
+- prefab: Skeleton_Hildir, Skeleton, Skeleton_Poison
+  type: poke, p_yagluth_add_beam_loop
+  fallback: true
+  poke:
+  - self: true
+    delay: 0.5
+    parameter: p_yagluth_add_beam_loop
+
+# fire boon = damage buff
+- prefab: Skeleton_Hildir
+  type: poke, p_yagluth_add_beam_loop
+  objects:
+  - projectile_beam, 3
+  data: d_zero_health_creatures
+  injectData: true
+  spawns:
+  - vfx_Potion_health_medium, 0,0,3, 0,0,0, d_empty_data_creatures, 0, true
+  - vfx_Potion_health_medium, 0,0,6, 0,0,0, d_fx_remove_early, 0.2, true  # true to trigger early removal
+  - vfx_Potion_health_medium, 0,0,9, 0,0,0, d_fx_remove_early, 0.4, true  # true to trigger early removal
+  - sfx_Potion_frostresist_Start
+  - fx_fireball_staff_explosion, 0,0,1.5
+  - fx_siegebomb_explosion, 0,0,1.5
+  - fx_HildirChest_Unlock, 0,0,0, 0,0,0, d_sfx_silent_creatures
+  poke:
+  - prefab: GoblinKing
+    maxDistance: 100
+    limit: 1
+    parameter: p_yagluth_add_beam_hit_fire
+
+# frost boon = speed boost
+- prefab: Skeleton
+  type: poke, p_yagluth_add_beam_loop
+  objects:
+  - projectile_beam, 3
+  data: d_zero_health_creatures
+  injectData: true
+  spawns:
+  - fx_Potion_frostresist, 0,0,3, 0,0,0, d_empty_data_creatures, 0, true
+  - fx_Potion_frostresist, 0,0,6, 0,0,0, d_sfx_silent_creatures, 0.2, false
+  - fx_Potion_frostresist, 0,0,9, 0,0,0, d_sfx_silent_creatures, 0.4, false
+  - fx_fireball_staff_explosion, 0,0,1.5
+  - fx_siegebomb_explosion, 0,0,1.5
+  - fx_HildirChest_Unlock, 0,0,0, 0,0,0, d_sfx_silent_creatures
+  poke:
+  - prefab: GoblinKing
+    maxDistance: 100
+    limit: 1
+    parameter: p_yagluth_add_beam_hit_frost
+
+# nature boon = HoT
+- prefab: Skeleton_Poison
+  type: poke, p_yagluth_add_beam_loop
+  objects:
+  - projectile_beam, 3
+  data: d_zero_health_creatures
+  injectData: true
+  spawns:
+  - vfx_Potion_stamina_medium, 0,0,3, 0,0,0, d_empty_data_creatures, 0, true
+  - vfx_Potion_stamina_medium, 0,0,6, 0,0,0, d_empty_data_creatures, 0.2, false
+  - vfx_Potion_stamina_medium, 0,0,9, 0,0,0, d_empty_data_creatures, 0.4, false
+  - sfx_Potion_frostresist_Start
+  - fx_fireball_staff_explosion, 0,0,1.5
+  - fx_siegebomb_explosion, 0,0,1.5
+  - fx_HildirChest_Unlock, 0,0,0, 0,0,0, d_sfx_silent_creatures
+  poke:
+  - prefab: GoblinKing
+    maxDistance: 100
+    limit: 1
+    parameter: p_yagluth_add_beam_hit_nature
+
+# use yag's taunt animation as a grieving stagger effect
+- prefab: GoblinKing
+  type: poke, p_yagluth_add_beam_hit_fire
+  data: d_yagluth_boon_ttl_fire_start
+  injectData: true
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, taunt
+  poke:
+  - self: true
+    delay: 12                                    ### FIRE BOON PUDDLE TTL
+    parameter: p_yagluth_boon_ttl_fire_end
+
+- prefab: GoblinKing
+  type: poke, p_yagluth_add_beam_hit_frost
+  data: d_yagluth_boon_ttl_frost_start
+  injectData: true
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, taunt
+  poke:
+  - self: true
+    delay: 12                                    ### FROST BOON PUDDLE TTL
+    parameter: p_yagluth_boon_ttl_frost_end
+
+- prefab: GoblinKing
+  type: poke, p_yagluth_add_beam_hit_nature
+  data: d_yagluth_boon_ttl_nature_start
+  injectData: true
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, taunt
+  poke:
+  - self: true
+    delay: 12                                    ### NATURE BOON PUDDLE TTL
+    parameter: p_yagluth_boon_ttl_nature_end
+
+- prefab: GoblinKing
+  type: poke, p_yagluth_boon_ttl_fire_end
+  data: d_yagluth_boon_ttl_fire_end
+  injectData: true
+
+- prefab: GoblinKing
+  type: poke, p_yagluth_boon_ttl_frost_end
+  data: d_yagluth_boon_ttl_frost_end
+  injectData: true
+
+- prefab: GoblinKing
+  type: poke, p_yagluth_boon_ttl_nature_end
+  data: d_yagluth_boon_ttl_nature_end
+  injectData: true
+
+# create boon puddles when wights killed by beams - Fire Boon Puddle
+- prefab: vfx_Potion_health_medium
+  type: create
+  filter: int, i_fx_remove_early, 0
+  objects:
+  - GoblinKing, 100, d_yagluth_boon_ttl_fire_start    # controls ttl. see p_yagluth_boon_ttl_X_rst
+  - fx_HildirChest_Unlock, 3                          # reduce accidental triggers
+  spawns:
+  - vfx_Potion_health_medium, 0,0,0, 0,0,0, d_empty_data_creatures, 3, true
+  - fx_HildirChest_Unlock, 0,0,-3, 0,0,0, d_sfx_silent_creatures, 3
+  poke:
+  - prefab: Player
+    limit: 5
+    maxDistance: 3
+    parameter: p_yagluth_boon_player_fire
+  - prefab: Player
+    limit: 5
+    maxDistance: 3
+    delay: 1.5   # final chance to get buff before potion vfx fades, plus quicker pokes as players run through
+    parameter: p_yagluth_boon_player_fire
+  - self: true
+    parameter: p_yagluth_boon_vfx_fire_remove_loop
+
+# clean up fire boon so it doesn't appear to last longer than intended
+- prefab: vfx_Potion_health_medium
+  type: create
+  objects:
+  - GoblinKing, 100, d_yagluth_boon_ttl_fire_end
+  remove: true
+
+- prefab: vfx_Potion_health_medium
+  type: poke, p_yagluth_boon_vfx_fire_remove_loop
+  poke:
+  - self: true
+    delay: 2
+    parameter: p_yagluth_boon_vfx_fire_remove_loop
+  - self: true
+    parameter: p_yagluth_boon_vfx_fire_remove_attempt
+
+- prefab: vfx_Potion_health_medium
+  type: poke, p_yagluth_boon_vfx_fire_remove_attempt
+  objects:
+  - GoblinKing, 100, d_yagluth_boon_ttl_fire_end
+  remove: true
+
+# Frost Boon Puddle
+- prefab: fx_Potion_frostresist
+  type: create
+  objects:
+  - GoblinKing, 100, d_yagluth_boon_ttl_frost_start   # controls ttl. see p_yagluth_boon_ttl_X_rst
+  - fx_HildirChest_Unlock, 3                          # reduce accidental triggers
+  spawns:
+  - fx_Potion_frostresist, 0,0,0, 0,0,0, d_sfx_silent_creatures, 1, false
+  - fx_Potion_frostresist, 0,0,0, 0,0,0, d_sfx_silent_creatures, 2, false
+  - fx_Potion_frostresist, 0,0,0, 0,0,0, d_sfx_silent_creatures, 3, true
+  - fx_HildirChest_Unlock, 0,0,-3, 0,0,0, d_sfx_silent_creatures, 3
+  poke:
+  - prefab: Player
+    limit: 5
+    maxDistance: 3
+    parameter: p_yagluth_boon_player_frost
+  - prefab: Player
+    limit: 5
+    maxDistance: 3
+    delay: 1.5   # final chance to get buff before potion vfx fades, plus quicker pokes as players run through
+    parameter: p_yagluth_boon_player_frost
+
+# Nature Boon Puddle
+- prefab: vfx_Potion_stamina_medium
+  type: create
+  objects:
+  - GoblinKing, 100, d_yagluth_boon_ttl_nature_start  # controls ttl. see p_yagluth_boon_ttl_X_rst
+  - fx_HildirChest_Unlock, 3                          # reduce accidental triggers
+  spawns:
+  - vfx_Potion_stamina_medium, 0,0,0, 0,0,0, d_empty_data_creatures, 1, false
+  - vfx_Potion_stamina_medium, 0,0,0, 0,0,0, d_empty_data_creatures, 2, false
+  - vfx_Potion_stamina_medium, 0,0,0, 0,0,0, d_empty_data_creatures, 3, true
+  - fx_HildirChest_Unlock, 0,0,-3, 0,0,0, d_sfx_silent_creatures, 3
+  poke:
+  - prefab: Player
+    limit: 5
+    maxDistance: 3
+    parameter: p_yagluth_boon_player_nature
+  - prefab: Player
+    limit: 5
+    maxDistance: 3
+    delay: 1.5   # final chance to get buff before potion vfx fades, plus quicker pokes as players run through
+    parameter: p_yagluth_boon_player_nature
+
+# health potion vfx lasts way too long for what i'm trying to do, so shorten the ones that are just there for visual effect (vs. poke functionlity)!
+# the spawns above are tagged with a custom data just to make sure we're only affecting the intended ones
+- prefab: vfx_Potion_health_medium
+  type: create
+  filter: d_fx_remove_early   # filter
+  remove: true
+  removeDelay: 1.95
+
+# apply boons to players who stand near boon puddle for up to 3 seconds
+- prefab: Player
+  type: poke, p_yagluth_boon_player_fire
+  command: s fire boon!
+
+- prefab: Player
+  type: poke, p_yagluth_boon_player_frost
+  command: s frost boon!
+
+- prefab: Player
+  type: poke, p_yagluth_boon_player_nature
+  command: s nature boon!
+
+
+###################################
+######## DEBUG ####################
+#- prefab: Player
+#  type: say, testf
+#  spawns:
+#  - Skeleton_Hildir
+#  - projectile_beam
+#  poke:
+#  - prefab: Skeleton_Hildir
+#    delay: 0.1
+#    parameter: p_yagluth_add_beam_loop
+#
+#- prefab: Player
+#  type: say, testi
+#  spawns:
+#  - Skeleton
+#  - projectile_beam
+#  poke:
+#  - prefab: Skeleton
+#    delay: 0.1
+#    parameter: p_yagluth_add_beam_loop
+#
+#- prefab: Player
+#  type: say, testn
+#  spawns:
+#  - Skeleton_Poison
+#  - projectile_beam
+#  poke:
+#  - prefab: Skeleton_Poison
+#    delay: 0.1
+#    parameter: p_yagluth_add_beam_loop
+#
+#- prefab: Player
+#  type: say, testfn
+#  spawns:
+#  - Skeleton_Hildir, 1,3,0
+#  - Skeleton_Poison, -1,3,0
+#  - projectile_beam, 0,3,0
+#  poke:
+#  - prefab: Skeleton_Hildir
+#    delay: 0.1
+#    parameter: p_yagluth_add_beam_loop
+#  - prefab: Skeleton_Poison
+#    delay: 0.1
+#    parameter: p_yagluth_add_beam_loop
