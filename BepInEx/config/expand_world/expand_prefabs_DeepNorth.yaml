@@ -574,17 +574,17 @@
   type: create
   biomes: DeepNorth
   objects:
-  - Player, 3, d_purple_battleaxe
-  - vfx_wraith_hit, 1
+  - Player, 6, d_purple_battleaxe
+  - vfx_wraith_hit, 6
   bannedObjects:
   - Player, 100, d_player_roguelite_on
   spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
   - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
   poke:
   - prefab: creature
-    maxDistance: 10
+    maxDistance: 12
     data: not_tamed_dn
     parameter: p_soulcleave_randomDelay
 
@@ -594,16 +594,16 @@
   biomes: DeepNorth
   objects:
   - Player, 100, d_player_roguelite_on
-  - Player, 3, d_purple_battleaxe
-  - vfx_wraith_hit, 1
+  - Player, 6, d_purple_battleaxe
+  - vfx_wraith_hit, 6
   weight: 1E30      # ensure always triggers vs. no battleaxe version below
   spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.5
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
   - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
   poke:
   - prefab: creature
-    maxDistance: 10
+    maxDistance: 12
     data: not_tamed_dn
     parameter: p_soulcleave_randomDelay
   remove: true

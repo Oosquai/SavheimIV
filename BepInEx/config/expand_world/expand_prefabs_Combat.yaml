@@ -1217,12 +1217,25 @@
 # Heal player
 - prefab: Player
   type: poke, p_reaper_player_heal
+  poke:
+  - self: true
+    parameter: p_reaper_player_heal_rpcs <par1>*0.2*<float_max_health>  ### PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
+
+- prefab: Player
+  type: poke, p_reaper_player_heal_rpcs
   spawns:
   - fx_natureweapon_hit, 0,0,1.2, 0,0,0, d_empty_data_combat, 0.2
   objectRpc:
   - name: RPC_Heal
-    1: float, <par1>*0.2*<float_max_health>     # PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
+    1: float, <par1>
     2: bool, 1
+  clientRpc:
+  - name: RPC_DamageText
+    packaged: true
+    1: enum_damagetext, Heal
+    2: vec, <x>,<z>,<y>+2
+    3: string, <par1>
+    4: bool, false
 
 ## Primary-Primary-Primary-Secondary Combo = Consume debuff stacks to burst dmg on target and spread stacks to nearby enemies
 - prefab: creature

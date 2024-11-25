@@ -617,15 +617,15 @@
   type: create
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   objects:
-  - Player, 3, d_purple_battleaxe
-  - vfx_wraith_hit, 1
+  - Player, 6, d_purple_battleaxe
+  - vfx_wraith_hit, 6
   spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_uniques, 0.5
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_uniques, 0.5
+  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_uniques, 0.3
+  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_uniques, 0.3
   - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
   poke:
   - prefab: creature
-    maxDistance: 10
+    maxDistance: 12
     data: not_tamed_uniques
     parameter: p_soulcleave_randomDelay
 
@@ -633,21 +633,21 @@
   type: poke, p_soulcleave_randomDelay
   poke:
   - self: true
-    delay: 0.75
+    delay: 0.5
     parameter: d_soulcleave_creature <vec>
 
 - prefab: creature
   type: poke, p_soulcleave_randomDelay
   poke:
   - self: true
-    delay: 1.5
+    delay: 0.7
     parameter: d_soulcleave_creature <vec>
 
 - prefab: creature
   type: poke, p_soulcleave_randomDelay
   poke:
   - self: true
-    delay: 2.25
+    delay: 0.9
     parameter: d_soulcleave_creature <vec>
 
 - prefab: creature
@@ -667,7 +667,7 @@
     data: d_purple_battleaxe
     limit: 1
     delay: 0.3
-    parameter: d_soulcleave_player <float_max_health>
+    parameter: d_soulcleave_player <round_<sqrt_<float_max_health>>>
 
 - prefab: Player
   type: poke, d_soulcleave_player
@@ -676,8 +676,15 @@
   - sfx_wraith_idle
   objectRpc:
   - name: RPC_Heal
-    1: float, <par1>*0.05
+    1: float, <par1>
     2: bool, 1
+  clientRpc:
+  - name: RPC_DamageText
+    packaged: true
+    1: enum_damagetext, Heal
+    2: vec, <x>,<z>,<y>+2
+    3: string, <par1>
+    4: bool, false
 
 ######################
 # Runefang (Crit eitr knife)

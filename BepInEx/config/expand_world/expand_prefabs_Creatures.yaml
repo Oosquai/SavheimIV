@@ -931,14 +931,14 @@
 
 ###############################################################
 # Boss tweaks
-#################
+###################################################
 # Eikthyr - more aggressive.  Deep North uses different data.
 - prefab: Eikthyr
   type: create
   biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: d_eikthyr_ai
 
-#################
+###################################################
 # Elder - Tentaroots move around - creepy!  (Thanks, Raaka!)
 - prefab: TentaRoot
   type: create
@@ -1019,7 +1019,7 @@
     target: all
     1: name, stomp0
 
-#################
+###################################################
 # Bonemass - faster move and turn speed
 - prefab: Bonemass
   type: create
@@ -1116,7 +1116,7 @@
   type: poke, p_bonemass_elev_eval
   filter: float, f_y_diff, 5;9999                ### RELATIVE HEIGHT CRITERIA
   spawns:
-  - bonemass_aoe
+  - bonemass_aoe, 0,0,0, 0,0,0, d_empty_data, 0, true
   - sfx_Bonemass_idle
   poke:
   - self: true
@@ -1151,7 +1151,7 @@
   type: poke, p_bonemass_elev_loop_init
   poke:
   - self: true
-    parameter: p_bonemass_elev_loop_main <randi_40_60> <randi_5_9> <randf_2.1_2.9>  ### PLAYER TICK DMG, TAME & PIECE TICK DMG, TICK PERIOD
+    parameter: p_bonemass_elev_loop_main <randi_40_60> <randi_1_9> <randf_2.1_2.9>  ### PLAYER TICK DMG, TAME & PIECE TICK DMG, TICK PERIOD
 
 # main elevation cheese loop.
 # keeps going despite aoe, but will stop when no longer near bonemass.
@@ -1164,7 +1164,7 @@
   poke:
   - self: true
     delay: <par3>
-    parameter: p_bonemass_elev_loop_main <randi_40_60> <randi_5_9> <randf_2.1_2.9>  ### PLAYER TICK DMG, TAME & PIECE TICK DMG, TICK PERIOD
+    parameter: p_bonemass_elev_loop_main <randi_40_60> <randi_1_9> <randf_2.1_2.9>  ### PLAYER TICK DMG, TAME & PIECE TICK DMG, TICK PERIOD
   - self: true
     delay: <par3>
     parameter: p_bonemass_elev_loop_dmg <par1> <par2>
@@ -1202,9 +1202,41 @@
 - prefab: Piece
   type: poke, p_bonemass_piece_vfx
   weight: 0.05
-  spawn: vfx_poisonarrow_hit
+  spawns:
+  - vfx_poisonarrow_hit
+  - sfx_wood_destroyed, 0,0,0, 0,0,0, d_wood_destroyed_pitch
 
-#################
+###
+# Bonemass AOE procs Slimed so it's a tad(pole?) less ignoreable.
+- prefab: bonemass_aoe
+  type: create
+  objects:
+  - Bonemass, 100
+  poke:
+  - self: true
+    delay: 3                                     # DELAYED STARTUP, so players can clear out
+    parameter: p_bonemass_aoe_slimed_loop
+
+- prefab: bonemass_aoe
+  type: poke, p_bonemass_aoe_slimed_loop
+  poke:
+  - self: true
+    delay: 1                                     ### SLIMED PROC PERIOD
+    parameter: p_bonemass_aoe_slimed_loop
+  - prefab: Player
+    maxDistance: 15
+    parameter: p_bonemass_aoe_slimed_se
+
+- prefab: Player
+  type: poke, p_bonemass_aoe_slimed_se
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Slimed
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###################################################
 # Moder - faster movement when grounded
 - prefab: Dragon
   type: create
@@ -1437,7 +1469,7 @@
   - IceBlocker, 0,-1,0
   triggerRules: true
 
-#################
+###################################################
 # Yagluth
 # move and turn faster
 - prefab: GoblinKing
@@ -1460,7 +1492,7 @@
 - prefab: GoblinKing
   types:
   - state, nova
-  weight: 0.4
+  weight: 0.35
   poke:
   - self: true
     delay: 4.5
@@ -1477,22 +1509,113 @@
     target: all
     1: name, nova
 
-# meteors have a chance to spawn a variety of skeletal adds
+###
+# meteors have a chance to spawn a variety of skeletal adds, based on number of players present
+# 1 player present
 - prefab: fx_goblinking_meteor_hit
   type: create
   weight: 0.1                                    ### SPAWN CHANCE PER METEOR
   objects:
   - GoblinKing, 100
+  - Player, 100
+  objectsLimit: 2
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 2
   poke:
   - self: true
-    parameter: p_random_yagluth_meteor_spawn
+    parameter: p_random_yagluth_meteor_spawn_max1
 
+# 2 players present
+- prefab: fx_goblinking_meteor_hit
+  type: create
+  weight: 0.1                                    ### SPAWN CHANCE PER METEOR
+  objects:
+  - GoblinKing, 100
+  - Player, 100
+  objectsLimit: 3
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 3
+  poke:
+  - self: true
+    parameter: p_random_yagluth_meteor_spawn_max2
+
+# 3 players present
+- prefab: fx_goblinking_meteor_hit
+  type: create
+  weight: 0.15                                   ### SPAWN CHANCE PER METEOR
+  objects:
+  - GoblinKing, 100
+  - Player, 100
+  objectsLimit: 4
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 4
+  poke:
+  - self: true
+    parameter: p_random_yagluth_meteor_spawn_max3
+
+# 4 players present
+- prefab: fx_goblinking_meteor_hit
+  type: create
+  weight: 0.2                                    ### SPAWN CHANCE PER METEOR
+  objects:
+  - GoblinKing, 100
+  - Player, 100
+  objectsLimit: 5
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 5
+  poke:
+  - self: true
+    parameter: p_random_yagluth_meteor_spawn_max3
+
+# 5+ players present
+- prefab: fx_goblinking_meteor_hit
+  type: create
+  weight: 0.25                                   ### SPAWN CHANCE PER METEOR
+  objects:
+  - GoblinKing, 100
+  - Player, 100
+  objectsLimit: 6
+  poke:
+  - self: true
+    parameter: p_random_yagluth_meteor_spawn_max3
+
+###
 # fire skeleton.  high damage.
 - prefab: fx_goblinking_meteor_hit
-  type: poke, p_random_yagluth_meteor_spawn
+  type: poke, p_random_yagluth_meteor_spawn_max1
   bannedObjects:
   - Skeleton_Hildir, 100, d_yagluth_add_fire
-  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT
+  bannedObjectsLimit: 1                          ### MAX SPAWN PER VARIANT, set by number of players present
+  spawn: Skeleton_Hildir, 0,0,0, 0,0,0, d_yagluth_add_fire
+  poke:
+  - prefab: Skeleton_Hildir
+    data: d_yagluth_add_fire
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn_max2
+  bannedObjects:
+  - Skeleton_Hildir, 100, d_yagluth_add_fire
+  bannedObjectsLimit: 2                          ### MAX SPAWN PER VARIANT, set by number of players present
+  spawn: Skeleton_Hildir, 0,0,0, 0,0,0, d_yagluth_add_fire
+  poke:
+  - prefab: Skeleton_Hildir
+    data: d_yagluth_add_fire
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn_max3
+  bannedObjects:
+  - Skeleton_Hildir, 100, d_yagluth_add_fire
+  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT, set by number of players present
   spawn: Skeleton_Hildir, 0,0,0, 0,0,0, d_yagluth_add_fire
   poke:
   - prefab: Skeleton_Hildir
@@ -1503,10 +1626,36 @@
 
 # frost skeleton.  medium damage, frost snares
 - prefab: fx_goblinking_meteor_hit
-  type: poke, p_random_yagluth_meteor_spawn
+  type: poke, p_random_yagluth_meteor_spawn_max1
   bannedObjects:
   - Skeleton, 100, d_yagluth_add_frost
-  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT
+  bannedObjectsLimit: 1                          ### MAX SPAWN PER VARIANT, set by number of players present
+  spawn: Skeleton, 0,0,0, 0,0,0, d_yagluth_add_frost
+  poke:
+  - prefab: Skeleton
+    data: d_yagluth_add_frost
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn_max2
+  bannedObjects:
+  - Skeleton, 100, d_yagluth_add_frost
+  bannedObjectsLimit: 2                          ### MAX SPAWN PER VARIANT, set by number of players present
+  spawn: Skeleton, 0,0,0, 0,0,0, d_yagluth_add_frost
+  poke:
+  - prefab: Skeleton
+    data: d_yagluth_add_frost
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn_max3
+  bannedObjects:
+  - Skeleton, 100, d_yagluth_add_frost
+  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT, set by number of players present
   spawn: Skeleton, 0,0,0, 0,0,0, d_yagluth_add_frost
   poke:
   - prefab: Skeleton
@@ -1517,10 +1666,36 @@
 
 # nature skeleton.  low damage, heals self and allies
 - prefab: fx_goblinking_meteor_hit
-  type: poke, p_random_yagluth_meteor_spawn
+  type: poke, p_random_yagluth_meteor_spawn_max1
   bannedObjects:
   - Skeleton_Poison, 100, d_yagluth_add_nature
-  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT
+  bannedObjectsLimit: 1                          ### MAX SPAWN PER VARIANT, set by number of players present
+  spawn: Skeleton_Poison, 0,0,0, 0,0,0, d_yagluth_add_nature
+  poke:
+  - prefab: Skeleton_Poison
+    data: d_yagluth_add_nature
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn_max2
+  bannedObjects:
+  - Skeleton_Poison, 100, d_yagluth_add_nature
+  bannedObjectsLimit: 2                          ### MAX SPAWN PER VARIANT, set by number of players present
+  spawn: Skeleton_Poison, 0,0,0, 0,0,0, d_yagluth_add_nature
+  poke:
+  - prefab: Skeleton_Poison
+    data: d_yagluth_add_nature
+    limit: 1
+    delay: 1                                     ### IMMUNITY TIME AFTER SPAWN
+    parameter: p_yagluth_add_beam_loop
+
+- prefab: fx_goblinking_meteor_hit
+  type: poke, p_random_yagluth_meteor_spawn_max3
+  bannedObjects:
+  - Skeleton_Poison, 100, d_yagluth_add_nature
+  bannedObjectsLimit: 3                          ### MAX SPAWN PER VARIANT, set by number of players present
   spawn: Skeleton_Poison, 0,0,0, 0,0,0, d_yagluth_add_nature
   poke:
   - prefab: Skeleton_Poison
@@ -1549,6 +1724,8 @@
   - vfx_Potion_health_medium, 0,0,3, 0,0,0, d_empty_data_creatures, 0, true
   - vfx_Potion_health_medium, 0,0,6, 0,0,0, d_fx_remove_early, 0.2, true  # true to trigger early removal
   - vfx_Potion_health_medium, 0,0,9, 0,0,0, d_fx_remove_early, 0.4, true  # true to trigger early removal
+  - vfx_Potion_health_medium, 0,0,6, 0,0,0, d_fx_remove_early, 1.2, true  # true to trigger early removal
+  - vfx_Potion_health_medium, 0,0,9, 0,0,0, d_fx_remove_early, 1.4, true  # true to trigger early removal
   - sfx_Potion_frostresist_Start
   - fx_fireball_staff_explosion, 0,0,1.5
   - fx_siegebomb_explosion, 0,0,1.5
@@ -1570,6 +1747,8 @@
   - fx_Potion_frostresist, 0,0,3, 0,0,0, d_empty_data_creatures, 0, true
   - fx_Potion_frostresist, 0,0,6, 0,0,0, d_sfx_silent_creatures, 0.2, false
   - fx_Potion_frostresist, 0,0,9, 0,0,0, d_sfx_silent_creatures, 0.4, false
+  - fx_Potion_frostresist, 0,0,6, 0,0,0, d_sfx_silent_creatures, 1.2, false
+  - fx_Potion_frostresist, 0,0,9, 0,0,0, d_sfx_silent_creatures, 1.4, false
   - fx_fireball_staff_explosion, 0,0,1.5
   - fx_siegebomb_explosion, 0,0,1.5
   - fx_HildirChest_Unlock, 0,0,0, 0,0,0, d_sfx_silent_creatures
@@ -1590,6 +1769,8 @@
   - vfx_Potion_stamina_medium, 0,0,3, 0,0,0, d_empty_data_creatures, 0, true
   - vfx_Potion_stamina_medium, 0,0,6, 0,0,0, d_empty_data_creatures, 0.2, false
   - vfx_Potion_stamina_medium, 0,0,9, 0,0,0, d_empty_data_creatures, 0.4, false
+  - vfx_Potion_stamina_medium, 0,0,6, 0,0,0, d_empty_data_creatures, 1.2, false
+  - vfx_Potion_stamina_medium, 0,0,9, 0,0,0, d_empty_data_creatures, 1.4, false
   - sfx_Potion_frostresist_Start
   - fx_fireball_staff_explosion, 0,0,1.5
   - fx_siegebomb_explosion, 0,0,1.5
@@ -1755,59 +1936,109 @@
 # apply boons to players who stand near boon puddle for up to 3 seconds
 - prefab: Player
   type: poke, p_yagluth_boon_player_fire
-  command: s fire boon!
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Yagluth_Boon_Fire
+    2: bool, true
+    3: int, 1
+    4: float, 1
 
 - prefab: Player
   type: poke, p_yagluth_boon_player_frost
-  command: s frost boon!
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Yagluth_Boon_Frost
+    2: bool, true
+    3: int, 1
+    4: float, 1
 
 - prefab: Player
   type: poke, p_yagluth_boon_player_nature
-  command: s nature boon!
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Yagluth_Boon_Nature
+    2: bool, true
+    3: int, 1
+    4: float, 1
 
+###################################################
+# The Queen
+# lower damage, staggerable when parried
+- prefab: SeekerQueen
+  type: create
+  data: d_queen_ai
 
-###################################
-######## DEBUG ####################
-#- prefab: Player
-#  type: say, testf
-#  spawns:
-#  - Skeleton_Hildir
-#  - projectile_beam
-#  poke:
-#  - prefab: Skeleton_Hildir
-#    delay: 0.1
-#    parameter: p_yagluth_add_beam_loop
-#
-#- prefab: Player
-#  type: say, testi
-#  spawns:
-#  - Skeleton
-#  - projectile_beam
-#  poke:
-#  - prefab: Skeleton
-#    delay: 0.1
-#    parameter: p_yagluth_add_beam_loop
-#
-#- prefab: Player
-#  type: say, testn
-#  spawns:
-#  - Skeleton_Poison
-#  - projectile_beam
-#  poke:
-#  - prefab: Skeleton_Poison
-#    delay: 0.1
-#    parameter: p_yagluth_add_beam_loop
-#
-#- prefab: Player
-#  type: say, testfn
-#  spawns:
-#  - Skeleton_Hildir, 1,3,0
-#  - Skeleton_Poison, -1,3,0
-#  - projectile_beam, 0,3,0
-#  poke:
-#  - prefab: Skeleton_Hildir
-#    delay: 0.1
-#    parameter: p_yagluth_add_beam_loop
-#  - prefab: Skeleton_Poison
-#    delay: 0.1
-#    parameter: p_yagluth_add_beam_loop
+# Reduce damage of multi-leg ground pierce
+- prefab: SeekerQueen
+  type: state, attack_pierce
+  data: d_queen_lower_damage
+  injectData: true
+  poke:
+  - self: true
+    delay: 2
+    parameter: p_queen_normal_damage
+
+- prefab: SeekerQueen
+  type: poke, p_queen_normal_damage
+  data: d_queen_normal_damage
+  injectData: true
+
+# Queen - extra attacks
+- prefab: SeekerQueen
+  types:
+  - state, attack_slash2
+  weight: 0.3
+  poke:
+  - self: true
+    delay: 1.6
+    parameter: p_extra_attack_queen_r
+
+- prefab: SeekerQueen
+  types:
+  - state, attack_slash1
+  - state, attack_slash3
+  weight: 0.5
+  poke:
+  - self: true
+    delay: 1.6
+    parameter: p_extra_attack_queen_l
+
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_r
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash1
+
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_r
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash3
+
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_l
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash2
+
+###################################################
+# Fader
+# faster
+- prefab: Fader
+  type: create
+  data: d_fader_ai

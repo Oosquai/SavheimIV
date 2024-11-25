@@ -83,6 +83,11 @@
   ints:
   - i_fx_remove_early, 1
 
+- name: d_wood_destroyed_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 3
+
 ####################################
 # Creature AI extra attacks
 - name: dw_second_attack_cd0
@@ -139,6 +144,7 @@
   - Humanoid.m_turnSpeed, 90                     # 60
   - Humanoid.m_runTurnSpeed, 120                 # 80
   - Humanoid.m_flyTurnSpeed, 120                 # 80
+  - Humanoid.m_flyFastSpeed, 30                  # 20
 
 - name: d_ulv_wakeup
   floats:
@@ -175,9 +181,10 @@
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  - Humanoid.m_staggerWhenBlocked, 0             # 1
   hashes:
   - ShoulderItem, CapeFeather
-  - LeftItem, StaffFireball
+  - LeftItem, CWS_Sword_10_SH
   - LegItem, ArmorFenringLegs
   floats:
   - Humanoid.m_runSpeed, 2.5                     # 4
@@ -254,6 +261,26 @@
 - name: d_yagluth_boon_ttl_nature_end
   ints:
   - i_yagluth_boon_ttl_nature, 0
+
+- name: d_queen_ai
+  ints:
+  - Humanoid.m_staggerWhenBlocked, 1             # 0
+  floats:
+  - Humanoid.m_turnSpeed, 120                    # 50
+
+- name: d_queen_lower_damage
+  floats:
+  - RandomSkillFactor, 0.85                      # 1
+
+- name: d_queen_normal_damage
+  floats:
+  - RandomSkillFactor, 1                         # 1
+
+- name: d_fader_ai
+  floats:
+  - Humanoid.m_runSpeed, 10                      # 8
+  - Humanoid.m_turnSpeed, 180                    # 120
+  - Humanoid.m_runTurnSpeed, 150                 # 120
 
 ####################################
 # Monster Clothes!
