@@ -5,6 +5,7 @@
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 11/24/24</color>
 - Finished Yagluth fight modifications.  Touched up Bonemass and Moder fights.
+- Adjusted Queen and Fader fights.
 - Added floating text to heals from reapers and unique battleaxe.
 - Fixed heal calculations for unique battleaxe.
 - Reduced duration of spirit debuff from staves and wands.
