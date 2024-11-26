@@ -719,7 +719,7 @@
   poke:
   - prefab: creature
     data: not_tamed_creatures
-    maxDistance: 12           ### distance from healer to be within heal range
+    maxDistance: 18           ### distance from healer to be within heal range
     delay: 1
     parameter: p_greenroots_heal_loop_init <par1>
   - self: true
@@ -1963,48 +1963,58 @@
 
 ###################################################
 # The Queen
-# lower damage, staggerable when parried
+# faster turn speed
 - prefab: SeekerQueen
   type: create
   data: d_queen_ai
 
-# Reduce damage of multi-leg ground pierce
+# Queen - extra attacks.  slash1: upper-left leg.  slash2:upper-right leg.  slash3: lower-left leg.
 - prefab: SeekerQueen
-  type: state, attack_pierce
-  data: d_queen_lower_damage
-  injectData: true
+  type: state, attack_pierce                     # all 4 legs pierce downward
   poke:
   - self: true
-    delay: 2
-    parameter: p_queen_normal_damage
+    delay: 1.6
+    parameter: p_extra_attack_queen_p
 
-- prefab: SeekerQueen
-  type: poke, p_queen_normal_damage
-  data: d_queen_normal_damage
-  injectData: true
-
-# Queen - extra attacks
 - prefab: SeekerQueen
   types:
-  - state, attack_slash2
+  - state, attack_slash1                         # upper-left leg slash
+  poke:
+  - self: true
+    delay: 1.6
+    parameter: p_extra_attack_queen_ul
+
+- prefab: SeekerQueen
+  types:
+  - state, attack_slash2                         # upper-right leg slash
+  poke:
+  - self: true
+    delay: 1.6
+    parameter: p_extra_attack_queen_ur
+
+- prefab: SeekerQueen
+  types:
+  - state, attack_slash3                         # lower-left leg slash.  CAN BE PARRIED!
+  poke:
+  - self: true                                   # special case - no delay here.  see below.
+    parameter: p_extra_attack_queen_ll <randf_0.3_0.5>     ### ANIMATION STUTTER DELAY
+
+# extra attack results - pierce:  100% chance of follow up.
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_p
+  weight: 0.1
+  objects:
+  - Player, 8                                # check range!  LSDJFLKJAEOFWILJIAESJF
+  - creature, 8, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_pierce
+
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_p
   weight: 0.3
-  poke:
-  - self: true
-    delay: 1.6
-    parameter: p_extra_attack_queen_r
-
-- prefab: SeekerQueen
-  types:
-  - state, attack_slash1
-  - state, attack_slash3
-  weight: 0.5
-  poke:
-  - self: true
-    delay: 1.6
-    parameter: p_extra_attack_queen_l
-
-- prefab: SeekerQueen
-  type: poke, p_extra_attack_queen_r
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
@@ -2015,18 +2025,8 @@
     1: name, attack_slash1
 
 - prefab: SeekerQueen
-  type: poke, p_extra_attack_queen_r
-  objects:
-  - Player, 12
-  - creature, 12, tamed_creatures
-  objectsLimit: 1
-  objectRpc:
-  - name: SetTrigger
-    target: all
-    1: name, attack_slash3
-
-- prefab: SeekerQueen
-  type: poke, p_extra_attack_queen_l
+  type: poke, p_extra_attack_queen_p
+  weight: 0.3
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
@@ -2036,9 +2036,215 @@
     target: all
     1: name, attack_slash2
 
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_p
+  weight: 0.3
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash3
+
+# extra attack results - slash1:  40% chance of follow up.
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_ul
+  weight: 0.4
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash2
+
+# extra attack results - slash2:  50% chance of follow up.
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_ur
+  weight: 0.25
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash1
+
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_ur
+  weight: 0.25
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_slash3
+
+# extra attack results - slash3
+# CAN BE PARRIED!
+# animation stutter and fx to queue player
+# lower damage on this swing only
+# no follow up attack
+- prefab: SeekerQueen
+  type: poke, p_extra_attack_queen_ll
+  poke:
+  - self: true
+    delay: <par1>
+    parameter: p_queen_slash3_stutter
+
+- prefab: SeekerQueen
+  type: poke, p_queen_slash3_stutter
+  data: d_queen_lower_damage
+  injectData: true
+  spawns:
+  - sfx_tick_attack_drain
+  - sfx_battleaxe_hit, d_sfx_queen_crunch_pitch
+  - vfx_draugrpile_hit, -2,0,3
+  - sfx_HiveQueen_rush, d_sfx_queen_scream_pitch, 0.15
+  - sfx_fallenvalkyrie_alert, d_sfx_queen_scream_pitch, 0.15
+  objectRpc:
+  - name: RPC_FreezeFrame
+    target: all
+    1: float, 0.3
+  poke:
+  - self: true
+    delay: 2
+    parameter: p_queen_normal_damage
+  - prefab: sfx_battleaxe_hit
+    data: d_sfx_queen_crunch_pitch
+    delay: 2
+    parameter: p_queen_sfx_battleaxe_hit_truncate
+
+- prefab: SeekerQueen
+  type: poke, p_queen_normal_damage
+  data: d_queen_normal_damage
+  injectData: true
+
+- prefab: sfx_battleaxe_hit
+  type: poke, p_queen_sfx_battleaxe_hit_truncate
+  remove: true
+
+# stagger queen and adds if her weakened swing is parried - hive mind!
+- prefab: vfx_perfectblock
+  type: create
+  objects:
+  - SeekerQueen, 12
+  - sfx_battleaxe_hit, 12, d_sfx_queen_crunch_pitch
+  poke:
+  - prefab: SeekerQueen
+    limit: 1
+    parameter: p_queen_stagger <vec>
+  - prefab: Seeker
+    maxDistance: 100
+    parameter: p_queen_stagger <vec>
+  - prefab: SeekerBrood
+    maxDistance: 100
+    parameter: p_queen_stagger <vec>
+  - prefab: SeekerBrute
+    maxDistance: 100
+    parameter: p_queen_stagger <vec>
+
+# SeekerBrute don't spawn from Queen, but in case some whacko makes a Deep North encounter or something...
+- prefab: SeekerQueen, Seeker, SeekerBrood, SeekerBrute
+  type: poke, p_queen_stagger
+  spawns:
+  - sfx_HiveQueen_rush, d_sfx_queen_scream_pitch
+  - sfx_fallenvalkyrie_alert, d_sfx_queen_scream_pitch
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_queen_stagger_extend <par1>
+
+# adds get staggered much longer
+- prefab: Seeker, SeekerBrood, SeekerBrute
+  type: poke, p_queen_stagger_extend
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+###
+# Fewer adds for solo and duo players in Mistlands encounter only
+# 1 player present
+- prefab: Seeker, SeekerBrood
+  type: create
+  biomes: Mistlands
+  objects:
+  - SeekerQueen, 100
+  - Player, 100
+  objectsLimit: 2
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 2
+  weight: 0.5
+  remove: true
+
+# 2 players present
+- prefab: Seeker, SeekerBrood
+  type: create
+  biomes: Mistlands
+  objects:
+  - SeekerQueen, 100
+  - Player, 100
+  objectsLimit: 3
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 3
+  weight: 0.25
+  remove: true
+
 ###################################################
 # Fader
 # faster
 - prefab: Fader
   type: create
   data: d_fader_ai
+
+# Fader - extra attacks.  attack_clawr, attack_clawl, attack_bite, attack_spin
+- prefab: Fader
+  type: state, attack_clawl
+  poke:
+  - self: true
+    delay: 2
+    parameter: p_extra_attack_fader_clawl
+
+- prefab: Fader
+  type: state, attack_clawr
+  poke:
+  - self: true
+    delay: 2
+    parameter: p_extra_attack_fader_clawr
+
+# extra attack reactions - clawl
+- prefab: Fader
+  type: poke, p_extra_attack_fader_clawl
+  weight: 0.2
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_bite
+
+# extra attack reactions - clawr
+- prefab: Fader
+  type: poke, p_extra_attack_fader_clawr
+  weight: 0.2
+  objects:
+  - Player, 12
+  - creature, 12, tamed_creatures
+  objectsLimit: 1
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, attack_bite

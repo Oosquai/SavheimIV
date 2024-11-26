@@ -3,15 +3,20 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/24/24</color>
+     0\  Savheim IV Patch Notes, 11/25/25</color>
+- Updates to The Queen and Fader fights.
+- New locations in Black Forest.
+- Increased range of enemy heals.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/24/24
 - Finished Yagluth fight modifications.  Touched up Bonemass and Moder fights.
 - Adjusted Queen and Fader fights.
 - Added floating text to heals from reapers and unique battleaxe.
 - Fixed heal calculations for unique battleaxe.
 - Reduced duration of spirit debuff from staves and wands.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/23/24
 - Modifications to Yagluth encounter.  More to come.

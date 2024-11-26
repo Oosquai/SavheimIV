@@ -88,6 +88,16 @@
   - ZSFX.m_minPitch, 0.5
   - ZSFX.m_maxPitch, 3
 
+- name: d_sfx_queen_crunch_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 0.7
+
+- name: d_sfx_queen_scream_pitch
+  floats:
+  - ZSFX.m_minPitch, 2
+  - ZSFX.m_maxPitch, 2.5
+
 ####################################
 # Creature AI extra attacks
 - name: dw_second_attack_cd0
@@ -263,18 +273,17 @@
   - i_yagluth_boon_ttl_nature, 0
 
 - name: d_queen_ai
-  ints:
-  - Humanoid.m_staggerWhenBlocked, 1             # 0
   floats:
   - Humanoid.m_turnSpeed, 120                    # 50
-
-- name: d_queen_lower_damage
-  floats:
-  - RandomSkillFactor, 0.85                      # 1
+  - RandomSkillFactor, 0.9                       # 1
 
 - name: d_queen_normal_damage
   floats:
-  - RandomSkillFactor, 1                         # 1
+  - RandomSkillFactor, 0.9                       # 1  MAKE THIS MATCH d_queen_ai!
+
+- name: d_queen_lower_damage
+  floats:
+  - RandomSkillFactor, 0.5                       # 1
 
 - name: d_fader_ai
   floats:
