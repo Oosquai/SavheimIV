@@ -163,3 +163,57 @@
   ints:
   - Turret.m_targetPlayers, 0
   - Turret.m_targetTamed, 0
+
+####################################
+# Sailing (and carts)                            # Valheim Defaults
+- value: vSailForceFactorRaft, 0.05              # 0.05
+- value: vSailForceFactorKarve, 0.05             # 0.03
+- value: vSailForceFactorLongship, 0.05          # 0.05
+- value: vSailForceFactorDrakkar, 0.085          # 0.085
+- value: vPlayerRangeRaft, 5                     ### ranges at which to consider players for ship speed increases per ship type
+- value: vPlayerRangeKarve, 6                    ### 5, 6, 12, 19 extend just barely beyond prow of each ship
+- value: vPlayerRangeLongship, 12
+- value: vPlayerRangeDrakkar, 19
+- value: vShipSpeedPercentPerPlayer, 0.25        ### 0.25 means 25% speed increase per extra player in ship
+
+- name: d_not_in_water
+  ints:
+  - $inWater, 0
+
+- name: d_ship_speed_compare
+  ints:
+  - i_ship_speed_players, <par2>
+
+- name: d_ship_speed_set
+  ints:
+  - i_ship_speed_players, <par2>
+  floats:
+  - Ship.m_sailForceFactor, <par1>
+
+- name: d_ship_tweaks_raft
+  floats:
+  - Ship.m_waterImpactDamage, 0                     # 10
+  - Ship.m_sailForceFactor, <vSailForceFactorRaft>  # 0.05
+  - ImpactEffect.m_minVelocity, 2                   # 1.5
+
+- name: d_ship_tweaks_karve
+  floats:
+  - Ship.m_waterImpactDamage, 0                      # 10
+  - Ship.m_sailForceFactor, <vSailForceFactorKarve>  # 0.03
+  - ImpactEffect.m_minVelocity, 4                    # 1.5
+
+- name: d_ship_tweaks_vikingship
+  floats:
+  - Ship.m_waterImpactDamage, 0                         # 10
+  - Ship.m_sailForceFactor, <vSailForceFactorLongship>  # 0.05
+  - ImpactEffect.m_minVelocity, 4                       # 1.5
+
+- name: d_ship_tweaks_vikingship_ashlands
+  floats:
+  - Ship.m_waterImpactDamage, 0                        # 10
+  - Ship.m_sailForceFactor, <vSailForceFactorDrakkar>  # 0.085
+  - ImpactEffect.m_minVelocity, 5                      # 1.5
+
+- name: d_cart_tweaks
+  floats:
+  - ImpactEffect.m_minVelocity, 4                # 3

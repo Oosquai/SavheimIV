@@ -487,6 +487,164 @@
     parameter: p_remove_light
   fallback: true
 
+##############################################################
+# Ships (and carts)
+# At creation, ships and carts spawn with a few tweaks to reduce impacts
+- prefab: Raft
+  type: create
+  data: d_ship_tweaks_raft
+  spawn: Neck
+  poke:
+  - prefab: Neck
+    maxDistance: 1
+    limit: 1
+    delay: 0.1
+    parameter: p_temp_neck_remove
+
+- prefab: Karve
+  type: create
+  data: d_ship_tweaks_karve
+  spawn: Neck
+  poke:
+  - prefab: Neck
+    maxDistance: 1
+    limit: 1
+    delay: 0.1
+    parameter: p_temp_neck_remove
+
+- prefab: VikingShip
+  type: create
+  data: d_ship_tweaks_vikingship
+  spawn: Neck
+  poke:
+  - prefab: Neck
+    maxDistance: 1
+    limit: 1
+    delay: 0.1
+    parameter: p_temp_neck_remove
+
+- prefab: VikingShip_Ashlands
+  type: create
+  data: d_ship_tweaks_vikingship_ashlands
+  spawn: Neck
+  poke:
+  - prefab: Neck
+    maxDistance: 1
+    limit: 1
+    delay: 0.1
+    parameter: p_temp_neck_remove
+
+- prefab: Cart
+  type: create
+  data: d_cart_tweaks
+
+# injectData doesn't seem to work on ships.  without it though, physics are suspended, so temp neck spawn to re-enable physics for boats.  weird.
+- prefab: Neck
+  type: poke, p_temp_neck_remove
+  remove: true
+
+###
+# More players on a ship makes it go faster!
+# Rafts get max speed with 2+ players.  Karves 3+, Longships 4+, Drakkar 5+.
+# Only players in the ship count!  (filtered by range and in_water)
+- prefab: Player
+  type: state, *
+  fallback: true
+  filter: d_not_in_water
+  objects:                      # Radii set based on size of each boat
+  - Raft, <vPlayerRangeRaft>
+  - Karve, <vPlayerRangeKarve>
+  - VikingShip, <vPlayerRangeLongship>
+  - VikingShip_Ashlands, <vPlayerRangeDrakkar>
+  objectsLimit: 1
+  poke:
+  - prefab: Raft
+    maxDistance: <vPlayerRangeRaft>
+    limit: 1
+    parameter: p_ship_speed_calc_players <vPlayerRangeRaft> <vSailForceFactorRaft> 2    ### player range per ship | base speed | number of players for max speed
+  - prefab: Karve
+    maxDistance: <vPlayerRangeKarve>
+    limit: 1
+    parameter: p_ship_speed_calc_players <vPlayerRangeKarve> <vSailForceFactorKarve> 3
+  - prefab: VikingShip
+    maxDistance: <vPlayerRangeLongship>
+    limit: 1
+    parameter: p_ship_speed_calc_players <vPlayerRangeLongship> <vSailForceFactorLongship> 4
+  - prefab: VikingShip_Ashlands
+    maxDistance: <vPlayerRangeDrakkar>
+    limit: 1
+    parameter: p_ship_speed_calc_players <vPlayerRangeDrakkar> <vSailForceFactorDrakkar> 5
+
+# Determine number of players within range and not in water, which usually means they're on the ship.
+# 1 player
+- prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
+  type: poke, p_ship_speed_calc_players
+  objects:
+  - Player, <par1>, d_not_in_water
+  objectsLimit: 1
+  bannedObjects:
+  - Player, <par1>, d_not_in_water
+  bannedObjectsLimit: 2
+  poke:
+  - self: true
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_0> 1
+
+# 2 players
+- prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
+  type: poke, p_ship_speed_calc_players
+  objects:
+  - Player, <par1>, d_not_in_water
+  objectsLimit: 2
+  bannedObjects:
+  - Player, <par1>, d_not_in_water
+  bannedObjectsLimit: 3
+  poke:
+  - self: true
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_1> 2
+
+# 3 players
+- prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
+  type: poke, p_ship_speed_calc_players
+  objects:
+  - Player, <par1>, d_not_in_water
+  objectsLimit: 3
+  bannedObjects:
+  - Player, <par1>, d_not_in_water
+  bannedObjectsLimit: 4
+  poke:
+  - self: true
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_2> 3
+
+# 4 players
+- prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
+  type: poke, p_ship_speed_calc_players
+  objects:
+  - Player, <par1>, d_not_in_water
+  objectsLimit: 4
+  bannedObjects:
+  - Player, <par1>, d_not_in_water
+  bannedObjectsLimit: 5
+  poke:
+  - self: true
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_3> 4
+
+# 5+ players
+- prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
+  type: poke, p_ship_speed_calc_players
+  objects:
+  - Player, <par1>, d_not_in_water
+  objectsLimit: 5
+  poke:
+  - self: true
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_4> 5
+
+# set speed!
+- prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
+  type: poke, p_ship_speed_set
+  bannedFilter: d_ship_speed_compare             # already equal to desired speed?
+  data: d_ship_speed_set                         # if not, set it
+#  command: s DBG <par2> players nearby - setting speed to <par1>
+
 #####################################################################
 # Savheim Loot
 ##############################################################
