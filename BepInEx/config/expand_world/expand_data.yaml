@@ -217,3 +217,9 @@
 - name: d_cart_tweaks
   floats:
   - ImpactEffect.m_minVelocity, 4                # 3
+
+####################
+# player deaths
+- name: d_player_deaths_inc
+  ints:
+  - i_player_deaths, <int_i_player_deaths>+1

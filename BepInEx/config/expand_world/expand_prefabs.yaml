@@ -1,6 +1,45 @@
 ##############################################################
 # Savheim General Modifications - prefabs
 ##############################################################
+# Player commands - random 100
+- prefab: Player
+  type: say, !roll
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_roll100
+
+- prefab: Player
+  type: say, !rolls
+  poke:
+  - prefab: Player
+    maxDistance: 20
+    delay: 0.1
+    parameter: p_player_roll100
+
+- prefab: Player
+  type: poke, p_player_roll100
+  command: s <pname> rolls <randi_1_100>.
+
+# Player commands - death counter
+- prefab: Player_ragdoll
+  type: create
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: p_player_deaths_inc
+
+- prefab: Player
+  type: poke, p_player_deaths_inc
+  data: d_player_deaths_inc
+  injectData: true
+
+- prefab: Player
+  type: say, !deaths
+  command: s <pname> has died <int_i_player_deaths> times.
+
+##############################################################
 # No drops from (distant) monster kill
 - prefab: ItemDrop
   type: create
@@ -643,7 +682,6 @@
   type: poke, p_ship_speed_set
   bannedFilter: d_ship_speed_compare             # already equal to desired speed?
   data: d_ship_speed_set                         # if not, set it
-#  command: s DBG <par2> players nearby - setting speed to <par1>
 
 #####################################################################
 # Savheim Loot

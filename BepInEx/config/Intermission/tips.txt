@@ -28,7 +28,7 @@ Savheim IV - Comfort and Rested are easier to obtain, but teleporting long dista
 Savheim IV - Waypoints offer safety from monsters, warmth, and a way to pick up a Rested buff in the field if you sit near it during favorable weather.
 Savheim IV - Zone progression:  Meadows -> Black Forest -> Swamp -> Mountains -> Plains -> Mistlands -> Ashlands -> Deep North.  They all hold surprises since Savheim III!
 Savheim IV - Most outdoor camps, resources, and dungeons will respawn slowly at varying rates, but only if players haven't built anything near them (anything made with a Hammer counts as "built").
-Savheim IV - Steps have been taken to ensure we can all coexist in the same world despite playing at different speeds.  Relax and enjoy the journey.
+Savheim IV - Steps have been taken to ensure we can all coexist in the same world despite playing at different speeds.  Relax and enjoy the journey.  Please do not pressure others to keep up with you.
 Savheim IV - Sell precious stones, trophies, extra keys, wishbones, and some other boss loot to the traders.  Split stacks in your inventory to control quantities you want to sell.  Double-click items you want to buy to specify quantities.
 Savheim IV - The world gets more dangerous the further from the center you travel.  Those who venture far return wealthy... if they return at all.
 Savheim IV - Thank you to Iron Gate Studio for making Valheim such an amazing game, and then for providing such deep hooks for the modding community!
@@ -58,3 +58,4 @@ Savheim IV - After absorbing an attack with any shield, you have a brief opportu
 Savheim IV - Hold 'E' while opening a chest to automatically deposit items from your inventory into matching item stacks already present in the chest.
 Savheim IV - This season of Savheim introduces a wide variety of combat mechanics.  Some are complex, some are simple.  You don't have to master it all to be successful.  Choose what works for you.
 Savheim IV - Sav put a lot of time and love into Savheim.  Help the dream!  1 - DO NOT RUSH OTHERS!  2 - Set real prices in your Marketplace rather than giving stuff away for 1 coin.  3 - Remove everything built with your Hammer before abandoning any point of interest.
+Savheim IV - Player commands:  Say !roll to roll a random number between 1 and 100.  Say !rolls to get everyone nearby to roll 1-100.  Say !deaths to see how many times your character has died.

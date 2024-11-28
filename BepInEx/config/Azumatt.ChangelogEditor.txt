@@ -3,12 +3,15 @@
    T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
 - Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/26/25</color>
-- Ships now sail faster with additional passengers.  Read each ship's tooltip.
-- Rafts can be dismantled with the Hammer.  Other ships cannot.
+     0\  Savheim IV Patch Notes, 11/27/25</color>
+- Added player commands:  !roll, !rolls, !deaths.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/26/24
+- Ships now sail faster with additional passengers.  Read each ship's tooltip.
+- Rafts can be dismantled with the Hammer.  Other ships cannot.
 
 Patch Notes, 11/25/24
 - Updates to The Queen and Fader fights.
