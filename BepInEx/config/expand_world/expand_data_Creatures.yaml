@@ -428,6 +428,18 @@
   floats:
   - MonsterAI.m_hearRange, 100
 
+- name: clothes_charred_twitcher
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LegItem, <none>, <none>, Charred_HipCloth
+  - ChestItem, <none>, <none>, Charred_MageCloths
+  floats:
+  - MonsterAI.m_hearRange, 100
+
 - name: clothes_charred_melee
   ints:
   - Humanoid.m_canSwim, 1

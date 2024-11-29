@@ -53,7 +53,7 @@ Primary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 5
+  Projectile_Vel: 10
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false

@@ -145,6 +145,18 @@ piece_chest_private:
   exclude:
     - All # Exclude everything
 
+Karve:
+  exclude:
+    - All
+
+VikingShip:
+  exclude:
+    - All
+
+VikingShip_Ashlands:
+  exclude:
+    - All
+
 #piece_chest_blackmetal:
 #  exclude:
 #    - Swords # Exclude all in group

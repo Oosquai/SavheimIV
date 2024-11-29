@@ -28,10 +28,11 @@ BepInEx/config/wackyDatabase-BulkYML_savheimIII
 BepInEx/config/com.maxsch.valheim.vnei.favourites.txt
 BepInEx/config/server_devcommands.cfg
 
-### configs with GUI elements
+### configs with GUI elements or key binds
 #BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
 #BepInEx/config/org.bepinex.plugins.darwinawards.cfg
 #BepInEx/config/org.bepinex.plugins.groups.cfg
+#BepInEx/config/Searica.Valheim.DodgeShortcut.cfg
 #
 # 1) commit files (remove from gitignore, add, etc...)
 # 2) git update-index --skip-worktree BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg

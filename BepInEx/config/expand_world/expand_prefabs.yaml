@@ -537,7 +537,6 @@
   - prefab: Neck
     maxDistance: 1
     limit: 1
-    delay: 0.1
     parameter: p_temp_neck_remove
 
 - prefab: Karve
@@ -548,7 +547,6 @@
   - prefab: Neck
     maxDistance: 1
     limit: 1
-    delay: 0.1
     parameter: p_temp_neck_remove
 
 - prefab: VikingShip
@@ -559,7 +557,6 @@
   - prefab: Neck
     maxDistance: 1
     limit: 1
-    delay: 0.1
     parameter: p_temp_neck_remove
 
 - prefab: VikingShip_Ashlands
@@ -570,17 +567,17 @@
   - prefab: Neck
     maxDistance: 1
     limit: 1
-    delay: 0.1
     parameter: p_temp_neck_remove
 
 - prefab: Cart
   type: create
   data: d_cart_tweaks
 
-# injectData doesn't seem to work on ships.  without it though, physics are suspended, so temp neck spawn to re-enable physics for boats.  weird.
+# injectData doesn't seem to work on ships.  without it though, physics are suspended, so temp neck spawn to re-enable physics for boats.  weird.  Thanks for the trick, Cryoshakespeare!
 - prefab: Neck
   type: poke, p_temp_neck_remove
   remove: true
+  removeDelay: 0.1
 
 ###
 # More players on a ship makes it go faster!
@@ -626,7 +623,7 @@
   bannedObjectsLimit: 2
   poke:
   - self: true
-    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_0> 1
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_0> <min_<par3>_1>
 
 # 2 players
 - prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
@@ -639,7 +636,7 @@
   bannedObjectsLimit: 3
   poke:
   - self: true
-    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_1> 2
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_1> <min_<par3>_2>
 
 # 3 players
 - prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
@@ -652,7 +649,7 @@
   bannedObjectsLimit: 4
   poke:
   - self: true
-    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_2> 3
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_2> <min_<par3>_3>
 
 # 4 players
 - prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
@@ -665,7 +662,7 @@
   bannedObjectsLimit: 5
   poke:
   - self: true
-    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_3> 4
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_3> <min_<par3>_4>
 
 # 5+ players
 - prefab: Raft, Karve, VikingShip, VikingShip_Ashlands
@@ -675,7 +672,7 @@
   objectsLimit: 5
   poke:
   - self: true
-    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_4> 5
+    parameter: p_ship_speed_set <par2>+<par2>*<vShipSpeedPercentPerPlayer>*<min_<par3>_4> <min_<par3>_5>
 
 # set speed!
 - prefab: Raft, Karve, VikingShip, VikingShip_Ashlands

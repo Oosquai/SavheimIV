@@ -1,5 +1,5 @@
 Runaeldr Satchel:
-  description: "A satchel for all kinds of ammunition and jewelry, plus a handy keyring.  Ammo rotation will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
+  description: "A satchel for all kinds of ammunition and jewelry, plus a handy keyring.  <color=yellow>Ammo rotation</color> will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
   size: 5x4
   unique: global
   appearance:

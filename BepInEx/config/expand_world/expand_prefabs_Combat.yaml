@@ -1514,3 +1514,67 @@
   type: poke, p_impaling_player_rst
   data: d_impaling_player_rst
   injectData: true
+
+####################################################
+# Heal spells do PBAOE Spirit damage
+# BMR_HealScroll1_AOE
+- prefab: BMR_HealScroll1_AOE
+  type: create
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    maxDistance: 4
+    delay: 0.4
+    parameter: p_heal_spell_spiritAE 6
+
+- prefab: BMR_HealScroll2_AOE
+  type: create
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    maxDistance: 4
+    delay: 0.4
+    parameter: p_heal_spell_spiritAE 18
+
+- prefab: BMR_HealScroll3_AOE
+  type: create
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    maxDistance: 4
+    delay: 0.4
+    parameter: p_heal_spell_spiritAE 30
+
+- prefab: BMR_HealScroll4_AOE
+  type: create
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    maxDistance: 4
+    delay: 0.4
+    parameter: p_heal_spell_spiritAE 42
+
+- prefab: BMR_HealScroll5_AOE
+  type: create
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    maxDistance: 4
+    delay: 0.4
+    parameter: p_heal_spell_spiritAE 54
+
+- prefab: BMR_HealScroll6_AOE
+  type: create
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    maxDistance: 4
+    delay: 0.4
+    parameter: p_heal_spell_spiritAE 66
+
+# Heal spell spirit AE
+- prefab: creature
+  type: poke, p_heal_spell_spiritAE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, spirit=<par1>

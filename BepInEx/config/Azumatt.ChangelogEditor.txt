@@ -1,13 +1,26 @@
-- <color=#FF6F00>MUST CHANGE Controls</color>:  <color=#00FFFF>Toggle Walk</color> & <color=#00FFFF>Sit</color>.  Recommended:  <color=#00FFFF>-</color> & <color=#00FFFF>=</color>
-- New keys:  L-Alt: dodge.  ~: swap hotbars.  F: cycle ammo.
-   T, G: use boss powers.  Left-ctrl: crafting tracker +/-.
-- Move windows: click & drag; some need Left-Alt/Ctrl. Esc for cursor.
+- <color=yellow>MUST CHANGE KEYS</color>:  <color=#00FFFF>Toggle Walk</color> & <color=#00FFFF>Sit</color>.  Recommended:  <color=orange>-</color> & <color=orange>=</color>
+- New keys:  <color=orange>L-Alt</color><color=#00FFFF>*</color>: dodge.  <color=orange>~</color>: swap hotbars.  <color=orange>F</color>: cycle ammo.
+   <color=orange>T</color>, <color=orange>G</color>: use boss powers.  <color=orange>Left-ctrl</color>: crafting tracker +/-.
+- Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
+<color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/27/25</color>
-- Added player commands:  !roll, !rolls, !deaths.
+     0\  Savheim IV Patch Notes, 11/28/25</color>
+- Made dodge keybind configurable.  See stickied bullets above.
+- Attempted fix for ships suspended in air at creation.
+- Attempted fix for errors at ship speed changes.
+- Improved logic of sailing speed per player to filter player caps per ship.
+- Refactored staves and wands elemental debuff system.
+- Improved wands projectile velocity.
+- Gave Charred Twitchers some clothes.
+- Heal spells now do PBAOE spirit damage.
+- Improved tooltip for Runaeldr Satchel.
+- Gave several comfort pieces a category instead of None.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/27/24
+- Added player commands:  !roll, !rolls, !deaths.
 
 Patch Notes, 11/26/24
 - Ships now sail faster with additional passengers.  Read each ship's tooltip.

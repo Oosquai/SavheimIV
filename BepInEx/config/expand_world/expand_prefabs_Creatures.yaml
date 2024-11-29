@@ -147,6 +147,12 @@
   weight: 1E30
   data: clothes_charred_mage
 
+- prefab: Charred_Twitcher
+  type: create
+  biomes: Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
+  weight: 1E30
+  data: clothes_charred_twitcher
+
 ###############################################################
 # Any creature with a shield has increased hp and behaves like a tank.
 # HP scales with CLLC stars.
