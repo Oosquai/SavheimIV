@@ -6,8 +6,8 @@
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 11/28/25</color>
 - Made dodge keybind configurable.  See stickied bullets above.
-- Attempted fix for ships suspended in air at creation.
-- Attempted fix for errors at ship speed changes.
+- Attempted fix for ships suspended in air at creation... again!
+- Fixed errors at ship speed changes.
 - Improved logic of sailing speed per player to filter player caps per ship.
 - Refactored staves and wands elemental debuff system.
 - Improved wands projectile velocity.
@@ -15,6 +15,10 @@
 - Heal spells now do PBAOE spirit damage.
 - Improved tooltip for Runaeldr Satchel.
 - Gave several comfort pieces a category instead of None.
+- Modified Winter weather.
+- Mostly suppressed misleading message when summoning magic allies.
+- Changed resurrection to cost 50 coins instead 1 Surtling Core.
+- Changed Cultivator mass planting mechanics.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

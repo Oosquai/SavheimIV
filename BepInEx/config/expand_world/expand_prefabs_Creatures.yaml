@@ -912,6 +912,74 @@
     delay: 0.1
     maxDistance: 0.1
 
+###############################
+# Step 4) Remove misleading message!
+- prefab: fx_summon_skeleton_spawn
+  type: create
+  poke:
+  - prefab: Player
+    limit: 1
+    parameter: p_summon_message_hide
+
+- prefab: Player
+  type: poke, p_summon_message_hide
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.55
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.575
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.6
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.625
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.65                 ### nominal
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.675
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.7
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.725
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, 
+    3: int, 0
+    delay: 2.75
+
+
 ###############################################################
 # No root effect on Bosses, mini bosses, elites, flying, or swimming creatures.
 - prefab: fx_RootAshlands

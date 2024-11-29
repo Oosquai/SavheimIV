@@ -1799,6 +1799,7 @@
   fogDensityNight: 0.2
   lightIntensityDay: 0
 - name: WarmSnow
+  isCold: true
   windMin: 0.1
   windMax: 0.6
   rainCloudAlpha: 0.1

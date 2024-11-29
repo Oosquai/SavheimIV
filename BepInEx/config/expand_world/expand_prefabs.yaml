@@ -577,7 +577,7 @@
 - prefab: Neck
   type: poke, p_temp_neck_remove
   remove: true
-  removeDelay: 0.1
+  removeDelay: 0.2
 
 ###
 # More players on a ship makes it go faster!
