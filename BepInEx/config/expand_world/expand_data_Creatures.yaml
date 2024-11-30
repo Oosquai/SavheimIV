@@ -170,12 +170,12 @@
   - 6
   - 7
 
-- name: d_force_toward_calc
+- name: d_force_toward_calc_creatures
   floats:
   - f_force_x, <par1>-<x>
   - f_force_z, <par2>-<z>
 
-- name: d_force_away_calc
+- name: d_force_away_calc_creatures
   floats:
   - f_force_x, <x>-<par1>
   - f_force_z, <z>-<par2>

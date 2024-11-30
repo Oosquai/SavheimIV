@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Purple
 m_weight: 0.01
-m_name: $JC_Crystal_Arrow_Purple (Enfeeble)
-m_description: $JC_Crystal_Arrow_Purple_Description that will <color=yellow>reduce your target's damage</color>.
+m_name: $JC_Crystal_Arrow_Purple (Vortex)
+m_description: $JC_Crystal_Arrow_Purple_Description that will create a <color=yellow>vortex</color> at its impact location, pulling nearby enemies toward it.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -160,7 +160,7 @@ m_maxStackSize: 100
 m_canBeReparied: true
 m_destroyBroken: true
 m_dodgeable: true
-Attack_status_effect: SE_Savheim_Enfeeble_Arrow
+Attack_status_effect: 
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false

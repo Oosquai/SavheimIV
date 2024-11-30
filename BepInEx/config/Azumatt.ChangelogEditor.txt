@@ -4,7 +4,17 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/28/25</color>
+     0\  Savheim IV Patch Notes, 11/29/25</color>
+- Attempted fix for ships suspended in air at creation... again! ... again!
+- Swapped enfeeble from purple to yellow crystal arrows.
+- Added vortex arrows as purple crystal arrows.
+- Changed blue gem effect for bows from Elemental Chaos to Nimble.
+- Slightly reduced Nimble gem effect values.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/28/24
 - Made dodge keybind configurable.  See stickied bullets above.
 - Attempted fix for ships suspended in air at creation... again!
 - Fixed errors at ship speed changes.
@@ -19,9 +29,6 @@
 - Mostly suppressed misleading message when summoning magic allies.
 - Changed resurrection to cost 50 coins instead 1 Surtling Core.
 - Changed Cultivator mass planting mechanics.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/27/24
 - Added player commands:  !roll, !rolls, !deaths.

@@ -191,10 +191,10 @@ ninja:
   power: [10, 15, 20]
 
 nimble:
-  slot: legs
+  slot: [bow, legs]
   gem: blue
   unique: gem
-  power: [10, 20, 30]
+  power: [8, 16, 24]
 
 marathon:
   slot: legs
@@ -401,7 +401,7 @@ ricochet:
   # - range (default: 15)
   
 elemental chaos:
-  slot: [bow, crossbow]
+  slot: crossbow
   gem: blue
   unique: gem
   power:

@@ -50,6 +50,16 @@
   - ZSFX.m_minPitch, 0.5
   - ZSFX.m_maxPitch, 0.5
 
+- name: d_force_toward_calc_combat
+  floats:
+  - f_force_x, <par1>-<x>
+  - f_force_z, <par2>-<z>
+
+- name: d_force_away_calc_combat
+  floats:
+  - f_force_x, <x>-<par1>
+  - f_force_z, <z>-<par2>
+
 ##############################################################
 # Bleed Mechanics
 - name: d_bleed_tick_rst_stack_inc

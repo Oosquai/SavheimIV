@@ -1504,7 +1504,7 @@
 
 - prefab: Player, creature
   type: poke, p_iceblock_burst_calc
-  data: d_force_away_calc
+  data: d_force_away_calc_creatures
   injectData: true
   poke:
   - self: true
