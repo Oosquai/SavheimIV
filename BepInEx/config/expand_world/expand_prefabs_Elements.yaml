@@ -1,3 +1,245 @@
-##############################################################
+###############################################################################
 # Savheim Elements - prefabs
-##############################################################
+###############################################################################
+# Wet + Lightning = stagger.
+#   - Bosses immune.
+#   - 6 second cooldown from start of effect to trigger again.
+#   - AE to those Wet?
+# Wet + Frost = frozen
+#   - Bosses immune
+#   - Independent durations for players, elites, and all others.
+#   - Freeze animations and movement.
+#   - Any change in health, including heals, breaks freeze.
+#   - Longest duration cooldown from time freeze breaks.
+# Tips:  tips.txt, Wet SE, Wet_Arrow SE
+
+###############################################################################
+# Creatures don't always get wet in weather that makes players wet.  Lame.
+- prefab: Player, creature
+  type: state, *
+  environments: Rain, LightRain, ThunderStorm, nofogts, SwampRain, Bonemass, Mistlands_rain, Mistlands_thunder
+  fallback: true
+  poke:
+  - prefab: creature
+    maxDistance: 20
+    parameter: p_make_me_wet
+
+- prefab: creature
+  type: poke, p_make_me_wet
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Wet
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################################
+# Wet + Lightning triggers
+- prefab: vfx_Wet
+  type: create
+  objects:
+  - fx_Lightning, 1
+  poke:
+  - prefab: Player
+    maxDistance: 6                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+  - prefab: creature
+    maxDistance: 6                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+
+- prefab: fx_Lightning
+  type: create
+  objects:
+  - vfx_Wet, 1
+  poke:
+  - prefab: Player
+    maxDistance: 6                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+  - prefab: creature
+    maxDistance: 6                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+
+#######################################
+# Wet + Frost triggers
+- prefab: vfx_Wet
+  type: create
+  objects:
+  - sfx_Frost_Start, 1
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_wet_frost
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_wet_frost
+
+- prefab: sfx_Frost_Start
+  type: create
+  objects:
+  - vfx_Wet, 1
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_wet_frost
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_wet_frost
+
+###############################################################################
+# Immunities - high-weight no-op
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  types:
+  - poke, p_elemental_wet_lightning
+  - poke, p_elemental_wet_frost
+  weight: 1E30  
+
+###############################################################################
+# Wet + Lightning Effects
+- prefab: Player, creature
+  type: poke, p_elemental_wet_lightning
+  filter: d_elemental_wet_lightning_cd_rst       # only apply if off cooldown
+  objects:
+  - vfx_Wet, 0.1                                 # only apply to those also wet.  needed for chain reaction logic
+  data: d_elemental_wet_lightning_cd_set         # set cooldown
+  injectData: true
+  spawns:
+  - fx_chainlightning_hit
+  - fx_chainlightning_spread, 0,0,0.5, 0,0,0, d_empty_data, 0.1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=1                          # causes this to chain react when everyone's wet
+    delay: <par2>                                # random delay to chain reactions
+  - name: RPC_Stagger
+    1: vec, <par1>
+    delay: 0.1                                   # so the hit that applies doesn't crit
+  poke:
+  - self: true
+    delay: 9                                     ### COOLDOWN
+    parameter: p_elemental_wet_lightning_cd_rst
+
+- prefab: Player, creature
+  type: poke, p_elemental_wet_lightning_cd_rst
+  data: d_elemental_wet_lightning_cd_rst
+  injectData: true
+
+###############################################################################
+# Wet + Frost Effects
+# Players
+- prefab: Player
+  type: poke, p_elemental_wet_frost
+  data: d_elemental_frozen_health_save           # init f_elemental_frozen_health
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1                                   # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init 5   ### PLAYER MAX FREEZE TIME
+
+# Elites
+- prefab: Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen
+  type: poke, p_elemental_wet_frost
+  data: d_elemental_frozen_health_save           # init f_elemental_frozen_health
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1                                   # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init 9   ### ELITE MAX FREEZE TIME
+
+# All other creatures
+- prefab: creature
+  type: poke, p_elemental_wet_frost
+  fallback: true                                 # any creature prefab not listed above under Elites
+  data: d_elemental_frozen_health_save           # init f_elemental_frozen_health
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1                                   # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
+
+# Init frozen loop
+- prefab: Player, creature
+  type: poke, p_elemental_wet_frozen_loop_init
+  filter: int, i_elemental_wet_frost_cd, 0       # off cooldown?
+  data: d_elemental_wet_frozen_and_cd_set        # set frozen and cd flags, and init i_elemental_frozen_health_delta
+  injectData: true
+  spawns:
+  - fx_iceshard_hit, 0,0,1
+  objectRpc:
+  - name: RPC_AddStatusEffect                    # stop movement ASAP
+    1: hash, SE_Savheim_ImmobilizedFrozen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - self: true
+    delay: <par1>
+    parameter: p_elemental_wet_frozen_rst
+  - self: true
+    delay: 0.5                                   # keep this equal to LOOP TIME
+    parameter: p_elemental_wet_frozen_loop
+
+### Main Frozen Loop
+- prefab: Player, creature
+  type: poke, p_elemental_wet_frozen_loop
+  filters:
+  - int, i_elemental_wet_frozen, 1               # end loop if no longer frozen
+  - int, i_elemental_frozen_health_delta, 0      # end loop if health changed since previous iteration
+  data: d_elemental_frozen_health_save           # update health and delta-health each iteration
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_ImmobilizedFrozen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - self: true
+    delay: 0.5                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
+    parameter: p_elemental_wet_frozen_loop
+
+# Shatter check - looking for change in health, including heals!
+- prefab: Player, creature
+  type: poke, p_elemental_wet_frozen_loop
+  filters:
+  - int, i_elemental_wet_frozen, 1               # only valid if still frozen
+  fallback: true
+  poke:
+  - self: true
+    parameter: p_elemental_wet_frozen_rst
+
+# Animation freeze only seems to stick if applied during an animation
+- prefab: Player, creature
+  type: state, *
+  filter: int, i_elemental_wet_frozen, 1
+  objectRpc:
+  - name: RPC_FreezeFrame
+    target: all
+    1: float, 24                                 # freeze for max time. let unfreeze process clear early
+    delay: 0.3                                   # slight delay so they pose dramatically!
+
+# Unfreeze after duration or when hit
+- prefab: Player, creature
+  type: poke, p_elemental_wet_frozen_rst
+  filter: int, i_elemental_wet_frozen, 1         # still frozen?
+  data: d_elemental_wet_frozen_rst               # unfreeze!
+  injectData: true
+  spawns:
+  - fx_crystal_destruction, 0,0,1
+  - sfx_ice_destroyed
+  objectRpc:
+  - name: RPC_FreezeFrame
+    target: <zdo>
+    1: float, 0.1                                # unfreeze!
+  poke:
+  - self: true
+    delay: 24                                    ### COOLDOWN AFTER UNFREEZING.  Keep equal to NORMAL MAX FREEZE TIME above.  Lasts max duration of all creatures (else shorter durations wouldn't be an advantage).
+    parameter: p_elemental_wet_frost_cd_rst
+
+# Clear cooldown
+- prefab: Player, creature
+  type: poke, p_elemental_wet_frost_cd_rst
+  data: d_elemental_wet_frost_cd_rst
+  injectData: true

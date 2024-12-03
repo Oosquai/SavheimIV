@@ -1,0 +1,14 @@
+name: RArrowStag
+clonePrefabName: ArrowStag
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- HardAntler:1:1:True
+- Feathers:2:1:True

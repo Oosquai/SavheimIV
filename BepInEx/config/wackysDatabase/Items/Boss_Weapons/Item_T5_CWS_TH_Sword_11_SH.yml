@@ -25,9 +25,9 @@ Primary_Attack:
   m_attackHealthPercentage: 8
   SpeedFactor: 0.5
   Dmg_Multiplier_Per_Missing_Health: 0.002
-  DmgMultiplier: 0.8
+  DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1.56
+  StaggerMultiplier: 1.25
   RecoilMultiplier: 0
   AttackRange: 2.6
   AttackHeight: 1
@@ -113,9 +113,9 @@ Secondary_Attack:
   m_attackHealthPercentage: 8
   SpeedFactor: 0.3
   Dmg_Multiplier_Per_Missing_Health: 0.002
-  DmgMultiplier: 0.5
+  DmgMultiplier: 0.3
   ForceMultiplier: 1
-  StaggerMultiplier: 2.5
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 3
   AttackHeight: 1

@@ -1,6 +1,35 @@
 ##############################################################
 # Savheim General Modifications - prefabs
 ##############################################################
+# Player commands - help
+- prefab: Player
+  type: say, !help
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_1
+
+- prefab: Player
+  type: poke, p_player_help_1
+  command: s !roll - Random 1 to 100.
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_2
+
+- prefab: Player
+  type: poke, p_player_help_2
+  command: s !rolls - Random 1 to 100, all players.
+
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_3
+
+- prefab: Player
+  type: poke, p_player_help_3
+  command: s !unstuck - Die (after confirmation).
+
 # Player commands - random 100
 - prefab: Player
   type: say, !roll
@@ -21,23 +50,34 @@
   type: poke, p_player_roll100
   command: s <pname> rolls <randi_1_100>.
 
-# Player commands - death counter
-- prefab: Player_ragdoll
-  type: create
-  poke:
-  - prefab: Player
-    maxDistance: 1
-    limit: 1
-    parameter: p_player_deaths_inc
-
+# Player commands - suicide (for stuck)
 - prefab: Player
-  type: poke, p_player_deaths_inc
-  data: d_player_deaths_inc
+  type: say, !unstuck
+  data: d_killme_confirm_set
   injectData: true
+  poke:
+  - self: true
+    delay: 10
+    parameter: p_killme_confirm_rst
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <#FF0000>You will die.  Say "please" within 10s to confirm.
+    3: int, 0
 
 - prefab: Player
-  type: say, !deaths
-  command: s <pname> has died <int_i_player_deaths> times.
+  type: say, please
+  filter: d_killme_confirm_set
+  command: die
+  spawns:
+  - fx_chainlightning_hit
+  - fx_chainlightning_spread, 0,0,0.5, 0,0,0, d_empty_data, 0.1
+
+- prefab: Player
+  type: poke, p_killme_confirm_rst
+  data: d_killme_confirm_rst
+  injectData: true
 
 ##############################################################
 # No drops from (distant) monster kill

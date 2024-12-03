@@ -205,6 +205,17 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
+    - name: fx_sledge_demolisher_hit
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: false
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Trail_Effect: []
     Burst_Effect: []
 Damage:

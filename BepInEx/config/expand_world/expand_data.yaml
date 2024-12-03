@@ -69,7 +69,7 @@
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
   - TargetPortal PortalOwnerName, Oodin
-  - tag, Savheim IV
+  - tag, <color=#AF7F7F>Savheim IV
 
 - name: d_portal_haldor
   bools:
@@ -88,7 +88,7 @@
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
   - TargetPortal PortalOwnerName, Oodin
-  - tag, Haldor
+  - tag, <color=#AF7F7F>Haldor
 
 - name: d_portal_hildir
   bools:
@@ -107,7 +107,7 @@
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
   - TargetPortal PortalOwnerName, Oodin
-  - tag, Hildir
+  - tag, <color=#AF7F7F>Hildir
 
 - name: d_portal_bogwitch
   bools:
@@ -126,7 +126,7 @@
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
   - TargetPortal PortalOwnerName, Oodin
-  - tag, Bog Witch
+  - tag, <color=#AF7F7F>Bog Witch
 
 - name: d_portal_jc_gacha
   bools:
@@ -145,7 +145,7 @@
   - tagauthor, Steam_12345678901234567
   - TargetPortal PortalOwnerId, 12345678901234567
   - TargetPortal PortalOwnerName, Oodin
-  - tag, Celestial
+  - tag, <color=#AF7F7F>Celestial
 
 - name: d_portal_ycalc
   floats:
@@ -169,7 +169,7 @@
 - value: vSailForceFactorRaft, 0.05              # 0.05
 - value: vSailForceFactorKarve, 0.05             # 0.03
 - value: vSailForceFactorLongship, 0.05          # 0.05
-- value: vSailForceFactorDrakkar, 0.085          # 0.085
+- value: vSailForceFactorDrakkar, 0.095          # 0.085
 - value: vPlayerRangeRaft, 5                     ### ranges at which to consider players for ship speed increases per ship type
 - value: vPlayerRangeKarve, 6                    ### 5, 6, 12, 19 extend just barely beyond prow of each ship
 - value: vPlayerRangeLongship, 12
@@ -219,7 +219,11 @@
   - ImpactEffect.m_minVelocity, 4                # 3
 
 ####################
-# player deaths
-- name: d_player_deaths_inc
+# player commands
+- name: d_killme_confirm_set
   ints:
-  - i_player_deaths, <int_i_player_deaths>+1
+  - i_killme_confirm, 1
+
+- name: d_killme_confirm_rst
+  ints:
+  - i_killme_confirm, 0

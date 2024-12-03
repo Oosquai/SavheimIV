@@ -1,7 +1,7 @@
 name: SurtlingCore
 m_weight: 5
 m_name: $item_surtlingcore
-m_description: $item_surtlingcore_description  Consume this to resurrect a fallen viking.
+m_description: $item_surtlingcore_description
 clonePrefabName: 
 mockName: 
 customIcon: 

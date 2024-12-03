@@ -4,15 +4,36 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 11/29/25</color>
+     0\  Savheim IV Patch Notes, 12/2/24</color>
+- Implemented interactions between Wet, Lightning, and Frost.
+- Improved logic and adjusted crafting costs for Vortex Arrows.
+- Added Stag Arrows.
+- Added Pine and Stag Arrows to list of items kept on death.
+- Lowered damage on Longbow jump shots.
+- Increased duration of Wet status from Wet Arrows.
+- Increased base damage on Bleed Arrows to match other crystal arrows.
+- Adjusted internal stats on Reaper primary and secondary attacks.
+- Adjusted audio/visual effects for secondary attack of unique sledge.
+- Bosses no longer drop Oosnexus on first kill.
+- Adjusted resurrection cost to 66 coins.
+- Clarified tooltips on Drakkar, Oosnexus, and Surtling Cores.
+- Colored names of world-spawned portals.
+- Portal names can be longer now, to accommodate colored text.
+- Added color highlights to loading screen tips.
+- Added !help player command to list all other player commands.
+- Cleaned up logic for !stuck player command.
+- Removed !deaths player command - not working.
+- Fixed erroneous crafting messages about two staves, one belt.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 11/29/24
 - Attempted fix for ships suspended in air at creation... again! ... again!
 - Swapped enfeeble from purple to yellow crystal arrows.
 - Added vortex arrows as purple crystal arrows.
 - Changed blue gem effect for bows from Elemental Chaos to Nimble.
 - Slightly reduced Nimble gem effect values.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/28/24
 - Made dodge keybind configurable.  See stickied bullets above.

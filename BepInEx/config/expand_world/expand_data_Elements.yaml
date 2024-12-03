@@ -1,3 +1,30 @@
 ##############################################################
 # Savheim Elements - data
 ##############################################################
+- name: d_elemental_wet_lightning_cd_rst
+  ints:
+  - i_elemental_wet_lightning_cd, 0
+
+- name: d_elemental_wet_lightning_cd_set
+  ints:
+  - i_elemental_wet_lightning_cd, 1
+
+- name: d_elemental_wet_frost_cd_rst
+  ints:
+  - i_elemental_wet_frost_cd, 0
+
+- name: d_elemental_wet_frozen_and_cd_set
+  ints:
+  - i_elemental_wet_frozen, 1
+  - i_elemental_wet_frost_cd, 1
+  - i_elemental_frozen_health_delta, <round_<abs_<sub_<float_health>_<float_f_elemental_frozen_health>>>>
+
+- name: d_elemental_wet_frozen_rst
+  ints:
+  - i_elemental_wet_frozen, 0
+
+- name: d_elemental_frozen_health_save
+  ints:
+  - i_elemental_frozen_health_delta, <round_<abs_<sub_<float_health>_<float_f_elemental_frozen_health>>>>
+  floats:
+  - f_elemental_frozen_health, <float_health>

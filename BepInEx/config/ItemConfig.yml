@@ -545,6 +545,8 @@ groups:
     - ArrowPoison
     - ArrowSilver
     - ArrowWood
+    - ArrowPine
+    - ArrowStag
     - BBP_ExplodingArrow_Fire_SH
     - BBP_ExplodingArrow_Frost_SH
     - BBP_ExplodingArrow_Poison_SH
