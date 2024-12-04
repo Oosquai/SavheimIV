@@ -1,7 +1,7 @@
 name: StaffCelestial_SH
 m_weight: 0.3
 m_name: Celestial Staff
-m_description: A staff made from a mysterious, otherworldly material that support an additional socket and occasionally strips its victims of <color=yellow>all resistances</color> for a brief duration.
+m_description: A staff made from a mysterious, otherworldly material that support an additional socket and occasionally strips its victims of <color=yellow>all magic resistances</color> for a brief duration.
 clonePrefabName: BMR_EmberStaff
 mockName: 
 customIcon: 

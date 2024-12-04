@@ -1,7 +1,7 @@
 name: BMR_FlametalStaff
 m_weight: 0.3
 m_name: $bmr_flametalstaff
-m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff occasionally strips its victims of <color=yellow>all resistances</color> for a brief duration.
+m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff occasionally strips its victims of <color=yellow>all magic resistances</color> for a brief duration.
 clonePrefabName: 
 mockName: 
 customIcon: 

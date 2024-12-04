@@ -4,7 +4,19 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/2/24</color>
+     0\  Savheim IV Patch Notes, 12/3/24</color>
+- Added tips to loading screens and the Wet arrow about Lightning and Frost interactions with Wet.
+- Performance optimizations for Deep North locations.
+- Removed noBuild restrictions from all Deep North locations.
+- Improved some logic on Wet + Lightning and Wet + Frozen interactions.
+- Update to CustomBanners that might help with Hammer vs. Rune Focus issues.
+- Oil Cape now makes you vulnerable to Fire.
+- Clarified tooltips on T7 and T8 staves.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/2/24
 - Implemented interactions between Wet, Lightning, and Frost.
 - Improved logic and adjusted crafting costs for Vortex Arrows.
 - Added Stag Arrows.
@@ -24,9 +36,6 @@
 - Cleaned up logic for !stuck player command.
 - Removed !deaths player command - not working.
 - Fixed erroneous crafting messages about two staves, one belt.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 11/29/24
 - Attempted fix for ships suspended in air at creation... again! ... again!

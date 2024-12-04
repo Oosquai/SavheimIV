@@ -1,0 +1,14 @@
+#Name:Wood Wall
+#Creator:Oosthirtyfour
+#Description:
+#Category:InfinityHammer
+#Center:
+#Coordinates:12733.11,-349.816,-398.671
+#Rotation:0,0,0
+#SnapPoints
+1;1;0
+-1;1;0
+1;-1;0
+-1;-1;0
+#Pieces
+woodwall;;0;0;0;0;0;0;1;;1;1;1;SwAAAAOt8M6uAACAv8wmXssAAIC/d65GJgAAyEIBBGB54AAAgD8AAIA/AACAPwaZmKC8AAAAAFcRf+0BAAAAO8vuHgAAAABB0FgnAQAAALzG1ksAAAAAZrPdfgEAAAABoh6DNASxQzQAAAAA

@@ -18,7 +18,7 @@
 
 # is this triggering nullreferenceexceptions with NoSmokeStayLit?  Yes.
 - prefab: brokkr-the-belmont
-  enabled: false
+  enabled: true
   biome: DeepNorth
   quantity: 9
   prioritized: true
@@ -33,7 +33,6 @@
 
 - prefab: brokkr-the-execution
   enabled: true
-  noBuild: true
   biome: DeepNorth
   quantity: 9
   prioritized: true
@@ -48,7 +47,6 @@
 
 - prefab: brokkr-the-flabellum
   enabled: true
-  noBuild: true
   biome: DeepNorth
   quantity: 9
   prioritized: true
@@ -63,7 +61,6 @@
 
 - prefab: brokkr-the-medusa
   enabled: true
-  noBuild: true
   biome: DeepNorth
   quantity: 9
   prioritized: true

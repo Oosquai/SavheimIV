@@ -41,11 +41,11 @@
   - fx_Lightning, 1
   poke:
   - prefab: Player
-    maxDistance: 6                               ### CHAIN REACTION RANGE
-    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+    maxDistance: 8                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.5_0.6>
   - prefab: creature
-    maxDistance: 6                               ### CHAIN REACTION RANGE
-    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+    maxDistance: 8                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.5_0.6>
 
 - prefab: fx_Lightning
   type: create
@@ -53,11 +53,11 @@
   - vfx_Wet, 1
   poke:
   - prefab: Player
-    maxDistance: 6                               ### CHAIN REACTION RANGE
-    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+    maxDistance: 8                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.5_0.6>
   - prefab: creature
-    maxDistance: 6                               ### CHAIN REACTION RANGE
-    parameter: p_elemental_wet_lightning <vec> <randf_0.4_0.6>
+    maxDistance: 8                               ### CHAIN REACTION RANGE
+    parameter: p_elemental_wet_lightning <vec> <randf_0.5_0.6>
 
 #######################################
 # Wet + Frost triggers
@@ -110,8 +110,11 @@
   - fx_chainlightning_hit
   - fx_chainlightning_spread, 0,0,0.5, 0,0,0, d_empty_data, 0.1
   objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=1                          # causes this to chain react when everyone's wet
+  - name: RPC_AddStatusEffect                    # stop movement ASAP
+    1: hash, Lightning                           # causes this to chain react when everyone's wet
+    2: bool, true
+    3: int, 1
+    4: float, 1
     delay: <par2>                                # random delay to chain reactions
   - name: RPC_Stagger
     1: vec, <par1>
@@ -178,7 +181,7 @@
     delay: <par1>
     parameter: p_elemental_wet_frozen_rst
   - self: true
-    delay: 0.5                                   # keep this equal to LOOP TIME
+    delay: 0.3                                   # keep this equal to LOOP TIME
     parameter: p_elemental_wet_frozen_loop
 
 ### Main Frozen Loop
@@ -197,7 +200,7 @@
     4: float, 1
   poke:
   - self: true
-    delay: 0.5                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
+    delay: 0.3                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
     parameter: p_elemental_wet_frozen_loop
 
 # Shatter check - looking for change in health, including heals!
