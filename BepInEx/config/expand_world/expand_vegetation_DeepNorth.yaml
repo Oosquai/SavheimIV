@@ -159,3 +159,21 @@
   inForest: true
   forestTresholdMin: 1
   forestTresholdMax: 1.15
+
+- prefab: Pickable_Thistle
+  enabled: true
+  min: 1
+  max: 2
+  scaleMin: 0.5
+  randTilt: 20
+  biome: DeepNorth
+  biomeArea: median
+  maxAltitude: 1000
+  maxTilt: 20
+  maxTerrainDelta: 2
+  groupSizeMin: 2
+  groupSizeMax: 5
+  groupRadius: 4
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15

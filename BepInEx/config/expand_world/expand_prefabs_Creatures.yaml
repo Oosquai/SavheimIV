@@ -439,13 +439,9 @@
   objects:
   - Player, 15
   poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 30
-    parameter: p_player_noise
   - self: true
     delay: 2
-    parameter: p_scout_yell_loop
+    parameter: p_scout_yell_loop <randf_3_6>
 
 - prefab: creature
   type: state, *
@@ -453,64 +449,35 @@
   objects:
   - Player, 15
   poke:
+  - self: true
+    delay: 2
+    parameter: p_scout_yell_loop <randf_3_6>
+
+- prefab: creature
+  type: poke, p_scout_yell_loop
+  objects:
+  - Player, 50
+  spawns:
+  - vfx_blocked, 0,0,1.3
+  - vfx_perfectblock, 0,0,1.3
+  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
+  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
+  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
+  poke:
+  - self: true
+    delay: <par1>
+    parameter: p_scout_yell_loop <randf_3_6>
   - prefab: Player
     limit: 1
     maxDistance: 30
     parameter: p_player_noise
-  - self: true
-    delay: 2
-    parameter: p_scout_yell_loop
 
 - prefab: Player
   type: poke, p_player_noise
+  filter: float, noise, 0;500
   objectRpc:
   - name: RPC_AddNoise
-    1: float, <float_noise>*2
-
-- prefab: creature
-  type: poke, p_scout_yell_loop
-  objects:
-  - Player, 50
-  spawns:
-  - vfx_blocked, 0,0,1.3
-  - vfx_perfectblock, 0,0,1.3
-  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
-  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
-  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
-  poke:
-  - self: true
-    delay: 3.3
-    parameter: p_scout_yell_loop
-
-- prefab: creature
-  type: poke, p_scout_yell_loop
-  objects:
-  - Player, 50
-  spawns:
-  - vfx_blocked, 0,0,1.3
-  - vfx_perfectblock, 0,0,1.3
-  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
-  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
-  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
-  poke:
-  - self: true
-    delay: 3.7
-    parameter: p_scout_yell_loop
-
-- prefab: creature
-  type: poke, p_scout_yell_loop
-  objects:
-  - Player, 50
-  spawns:
-  - vfx_blocked, 0,0,1.3
-  - vfx_perfectblock, 0,0,1.3
-  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
-  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
-  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
-  poke:
-  - self: true
-    delay: 4.3
-    parameter: p_scout_yell_loop
+    1: float, <float_noise>*1.5
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.

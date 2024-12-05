@@ -1,6 +1,11 @@
 ##############################################################
 # Savheim Elements - data
 ##############################################################
+- name: d_force_away_calc_elements
+  floats:
+  - f_force_x, <x>-<par1>
+  - f_force_z, <z>-<par2>
+
 - name: d_elemental_wet_lightning_cd_rst
   ints:
   - i_elemental_wet_lightning_cd, 0
@@ -28,3 +33,19 @@
   - i_elemental_frozen_health_delta, <round_<abs_<sub_<float_health>_<float_f_elemental_frozen_health>>>>
   floats:
   - f_elemental_frozen_health, <float_health>
+
+- name: d_elemental_fire_poison_cd1_rst
+  ints:
+  - i_elemental_fire_poison_cd1, 0
+
+- name: d_elemental_fire_poison_cd2_rst
+  ints:
+  - i_elemental_fire_poison_cd2, 0
+
+- name: d_elemental_fire_poison_cd1_set
+  ints:
+  - i_elemental_fire_poison_cd1, 1
+
+- name: d_elemental_fire_poison_cd2_set
+  ints:
+  - i_elemental_fire_poison_cd2, 1

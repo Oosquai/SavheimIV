@@ -11,7 +11,10 @@
 #   - Freeze animations and movement.
 #   - Any change in health, including heals, breaks freeze.
 #   - Longest duration cooldown from time freeze breaks.
-# Tips:  tips.txt, Wet SE, Wet_Arrow SE
+# Fire + Poison = explosion that tosses everyone away and sets vfx_Burning
+#   - Primary target staggered in place.
+#   - Nearby targets knocked away and briefly snared, but not staggered.
+#   - Bosses immune to stagger and knockback, but can be primary targets.
 
 ###############################################################################
 # Creatures don't always get wet in weather that makes players wet.  Lame.
@@ -89,33 +92,69 @@
     limit: 1
     parameter: p_elemental_wet_frost
 
-###############################################################################
-# Immunities - high-weight no-op
-- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
-  types:
-  - poke, p_elemental_wet_lightning
-  - poke, p_elemental_wet_frost
-  weight: 1E30  
+#######################################
+# Fire + Poison triggers
+- prefab: vfx_Burning
+  type: create
+  objects:
+  - vfx_Poison, 1
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_fire_poison
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_fire_poison
+
+- prefab: vfx_Poison
+  type: create
+  objects:
+  - vfx_Burning, 1
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_fire_poison
+  - prefab: creature
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_fire_poison
 
 ###############################################################################
 # Wet + Lightning Effects
+# This process looks for wet creatures and creates chain reactions off them to spread the effect
 - prefab: Player, creature
   type: poke, p_elemental_wet_lightning
-  filter: d_elemental_wet_lightning_cd_rst       # only apply if off cooldown
   objects:
   - vfx_Wet, 0.1                                 # only apply to those also wet.  needed for chain reaction logic
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Lightning                           # causes this to chain react when everyone's wet
+    2: bool, true
+    3: int, 1
+    4: float, 1
+    delay: <par2>                                # random delay to chain reactions
+  poke:
+  - self: true
+    parameter: p_elemental_wet_lightning_stagger <par1>
+
+# Bosses immune to stagger, but can still spread
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  type: poke, p_elemental_wet_lightning_stagger
+  weight: 1E30  
+
+# if not immune and off cooldown, do fx, stagger, and cooldown
+- prefab: Player, creature
+  type: poke, p_elemental_wet_lightning_stagger
+  filter: d_elemental_wet_lightning_cd_rst       # only apply if off cooldown
   data: d_elemental_wet_lightning_cd_set         # set cooldown
   injectData: true
   spawns:
   - fx_chainlightning_hit
   - fx_chainlightning_spread, 0,0,0.5, 0,0,0, d_empty_data, 0.1
   objectRpc:
-  - name: RPC_AddStatusEffect                    # stop movement ASAP
-    1: hash, Lightning                           # causes this to chain react when everyone's wet
-    2: bool, true
-    3: int, 1
-    4: float, 1
-    delay: <par2>                                # random delay to chain reactions
   - name: RPC_Stagger
     1: vec, <par1>
     delay: 0.1                                   # so the hit that applies doesn't crit
@@ -131,6 +170,11 @@
 
 ###############################################################################
 # Wet + Frost Effects
+# Bosses immune - high-weight no-op
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  type: poke, p_elemental_wet_frost
+  weight: 1E30
+
 # Players
 - prefab: Player
   type: poke, p_elemental_wet_frost
@@ -142,7 +186,7 @@
     parameter: p_elemental_wet_frozen_loop_init 5   ### PLAYER MAX FREEZE TIME
 
 # Elites
-- prefab: Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen
+- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen
   type: poke, p_elemental_wet_frost
   data: d_elemental_frozen_health_save           # init f_elemental_frozen_health
   injectData: true
@@ -162,6 +206,7 @@
     delay: 0.1                                   # give f_elemental_frozen_health time to save
     parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
 
+#####################
 # Init frozen loop
 - prefab: Player, creature
   type: poke, p_elemental_wet_frozen_loop_init
@@ -246,3 +291,102 @@
   type: poke, p_elemental_wet_frost_cd_rst
   data: d_elemental_wet_frost_cd_rst
   injectData: true
+
+###############################################################################
+# Fire + Poison Effects
+- prefab: Player, creature
+  type: poke, p_elemental_fire_poison
+  filter: int, i_elemental_fire_poison_cd1, 0    # off cooldown for being primary target?
+  data: d_elemental_fire_poison_cd1_set          # set cooldown for being primary target
+  injectData: true
+  spawns:
+  - fx_clusterbombstaff_hit
+  - fx_jotunbane_hit, 0,0,0.5
+  poke:
+  - self: true
+    delay: 0.1                                   # so the hit that applies doesn't crit
+    parameter: p_elemental_fire_poison_stagger <vec>
+  - self: true
+    delay: 27                                    ### COOLDOWN to be primary target.  Arbitrary.
+    parameter: p_elemental_fire_poison_cd1_rst
+  - prefab: Player
+    minDistance: 0.1
+    maxDistance: 3                               ### AE RANGE - close range high knockback
+    parameter: p_elemental_fire_poison_calc <x> <z> 200   ### x | z | KNOCKBACK FORCE
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 3                               ### AE RANGE - close range high knockback
+    parameter: p_elemental_fire_poison_calc <x> <z> 200   ### x | z | KNOCKBACK FORCE
+  - prefab: Player
+    minDistance: 3.01
+    maxDistance: 6                               ### AE RANGE - far range low knockback
+    parameter: p_elemental_fire_poison_calc <x> <z> 100   ### x | z | KNOCKBACK FORCE
+  - prefab: creature
+    minDistance: 3.01
+    maxDistance: 6                               ### AE RANGE - far range low knockback
+    parameter: p_elemental_fire_poison_calc <x> <z> 100   ### x | z | KNOCKBACK FORCE
+  - prefab: vfx_Burning
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_fire_poison_vfx_remove
+  - prefab: vfx_Poison
+    maxDistance: 1
+    limit: 1
+    parameter: p_elemental_fire_poison_vfx_remove
+
+# immunities to stagger and knockback
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  types:
+  - poke, p_elemental_fire_poison_stagger
+  - poke, p_elemental_fire_poison_calc
+  weight: 1E30
+
+# stagger primary target
+- prefab: Player, creature
+  type: poke, p_elemental_fire_poison_stagger
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+# calculate knockback vectors for secondary targets
+- prefab: Player, creature
+  type: poke, p_elemental_fire_poison_calc
+  data: d_force_away_calc_elements
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1                                   # time needed for data to settle
+    parameter: p_elemental_fire_poison_impact <par3>
+
+# apply knockbacks and cooldowns to secondary targets
+- prefab: Player, creature
+  type: poke, p_elemental_fire_poison_impact
+  filter: int, i_elemental_fire_poison_cd2, 0    # off cooldown for being secondary target?
+  data: d_elemental_fire_poison_cd2_set          # set cooldown for being secondary target
+  injectData: true
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_Elements_Fire_Poison_Smoked force=<par1> dir=<float_f_force_x>,<float_f_force_z>,<y>
+  - name: RPC_Damage
+    1: hit, status=SE_Savheim_Elements_Fire_Poison_Snared
+  poke:
+  - self: true
+    delay: 5                                     ### COOLDOWN to be secondary target.  Make equal to SE_Savheim_Elements_Fire_Poison_Smoked to visual indiciation of cd status.
+    parameter: p_elemental_fire_poison_cd2_rst
+
+# reset primary cooldown
+- prefab: Player, creature
+  type: poke, p_elemental_fire_poison_cd1_rst
+  data: d_elemental_fire_poison_cd1_rst
+  injectData: true
+
+# reset secondary cooldown
+- prefab: Player, creature
+  type: poke, p_elemental_fire_poison_cd2_rst
+  data: d_elemental_fire_poison_cd2_rst
+  injectData: true
+
+# clear vfx on primary target to paint them as a staggered and isolated target
+- prefab: vfx_Burning, vfx_Poison
+  type: poke, p_elemental_fire_poison_vfx_remove
+  remove: true

@@ -590,7 +590,7 @@
   # minimum time between attacks.  lowering doesn't seem to do anything, but higher slows attacks down.
 #  - MonsterAI.m_minAttackInterval, 3.3
   # movespeed while running (combat).  default for goblin seems to be 5?
-  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>-1
+  - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>-0.5
 
 # enemes with second weapon do more damage, run faster, and and only do quick, tight circles that tend to put them behind the player.
 - name: gear_dw_buff
@@ -609,8 +609,8 @@
   ints:
   - MonsterAI.m_circulateWhileCharging, 1
   floats:
-  - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*1.5
-  - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*1.5
+  - MonsterAI.m_alertRange, <float_MonsterAI.m_alertRange>*2
+  - MonsterAI.m_viewRange, <float_MonsterAI.m_viewRange>*2
   - MonsterAI.m_minAttackInterval, 5
   - Humanoid.m_runSpeed, <float_Humanoid.m_runSpeed>+1
 

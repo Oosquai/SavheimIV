@@ -1,7 +1,7 @@
 name: JC_Crystal_Arrow_Blue
 m_weight: 0.01
-m_name: $JC_Crystal_Arrow_Blue (Wet)
-m_description: $JC_Crystal_Arrow_Blue_Description that will <color=yellow>drench</color> your target.
+m_name: Drenching Arrow
+m_description: $JC_Crystal_Arrow_Blue_Description that will make your target <color=yellow>wet</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

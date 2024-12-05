@@ -1,6 +1,6 @@
 name: JC_Crystal_Arrow_Orange
 m_weight: 0.01
-m_name: $JC_Crystal_Arrow_Orange (Illuminate)
+m_name: Illuminating Arrow
 m_description: $JC_Crystal_Arrow_Orange_Description that will cast warm <color=yellow>light</color> over an area for a time.
 clonePrefabName: 
 mockName: 
