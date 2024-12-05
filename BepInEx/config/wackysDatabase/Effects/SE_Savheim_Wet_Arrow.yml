@@ -5,7 +5,7 @@ IconName: Wet
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: <color=yellow>Lightning</color> can chain between <color=yellow>Wet</color> players and creatures, staggering all.  <color=yellow>Frost</color> can freeze a single <color=yellow>Wet</color> player or creature, but this will shatter with any change in health, including <color=green>healing</color>.
+Tooltip: Some status effects might be dangerous when combined.
 Attributes: None
 StartMessageLoc: TopLeft
 StartMessage: $se_wet_start
