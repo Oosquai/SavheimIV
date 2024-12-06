@@ -29,6 +29,10 @@ BepInEx/config/com.maxsch.valheim.vnei.favourites.txt
 BepInEx/config/server_devcommands.cfg
 BepInEx/config/_shudnal.ConfigurationManager.cfg
 BepInEx/config/shudnal.ConfigurationManager.cfg
+BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
+BepInEx/config/org.bepinex.plugins.darwinawards.cfg
+BepInEx/config/org.bepinex.plugins.groups.cfg
+BepInEx/config/Searica.Valheim.DodgeShortcut.cfg
 
 ### configs with GUI elements or key binds
 #BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
@@ -42,12 +46,12 @@ BepInEx/config/shudnal.ConfigurationManager.cfg
 # NOT WORKING    a) git update-index --no-skip-worktree BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
 # NOT WORKING    b) repeat steps 1-2
 #
-# The above wasn't working.  ChatGPT to the rescue!
-# 1) Create .gitattributes file at root
-# 2) Apply "merge=ours" strategy to specific files within .gitattributes:
-#       BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg merge=ours
-#       BepInEx/config/org.bepinex.plugins.darwinawards.cfg merge=ours
-#       BepInEx/config/org.bepinex.plugins.groups.cfg merge=ours
-#       BepInEx/config/Searica.Valheim.DodgeShortcut.cfg merge=ours
-# 3) Add custom merge driver to Git configuration:
-#       git config --global merge.ours.driver true
+# NOT WORKING The above wasn't working.  ChatGPT to the rescue!
+# NOT WORKING 1) Create .gitattributes file at root
+# NOT WORKING 2) Apply "merge=ours" strategy to specific files within .gitattributes:
+# NOT WORKING       BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg merge=ours
+# NOT WORKING       BepInEx/config/org.bepinex.plugins.darwinawards.cfg merge=ours
+# NOT WORKING       BepInEx/config/org.bepinex.plugins.groups.cfg merge=ours
+# NOT WORKING       BepInEx/config/Searica.Valheim.DodgeShortcut.cfg merge=ours
+# NOT WORKING 3) Add custom merge driver to Git configuration:
+# NOT WORKING       git config --global merge.ours.driver true
