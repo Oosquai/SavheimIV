@@ -1,6 +1,6 @@
 ###################################################
 # Deep North structures
-# nullrefexception NoSmokeStayLit
+# errors with shield generators, but otherwise looks great.  probably safe to ignore errors.
 - prefab: citadel-v2_2
   enabled: true
   unique: true
@@ -8,7 +8,7 @@
   quantity: 1
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 500
   randomRotation: true
   clearArea: true
   groundOffset: -2
@@ -16,7 +16,22 @@
   maxTerrainDelta: 20
   iconPlaced: StartTemple
 
-# is this triggering nullreferenceexceptions with NoSmokeStayLit?  Yes.
+- prefab: jaik-mistvale-keep
+  enabled: true
+  unique: true
+  biome: DeepNorth
+  quantity: 1
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  clearArea: true
+  groundOffset: -2
+  minAltitude: 100
+  maxTerrainDelta: 20
+  iconPlaced: StartTemple
+
+# 12/4/24:  mostly good.  fallen rampart pieces are hanging in space.  remove?
 - prefab: brokkr-the-belmont
   enabled: true
   biome: DeepNorth
@@ -31,6 +46,7 @@
   maxTerrainDelta: 7
   iconPlaced: Icon0
 
+# 12/4/24: remove ring of fences around perimeter
 - prefab: brokkr-the-execution
   enabled: true
   biome: DeepNorth
@@ -45,6 +61,7 @@
   maxTerrainDelta: 7
   iconPlaced: Shout
 
+# 12/4/24:  sunk a little low.  raising 1.  good now!
 - prefab: brokkr-the-flabellum
   enabled: true
   biome: DeepNorth
@@ -54,13 +71,14 @@
   minDistanceFromSimilar: 300
   randomRotation: true
   clearArea: true
-  groundOffset: -1
+  groundOffset: 0
   minAltitude: 12
   maxTerrainDelta: 7
   iconPlaced: Player
 
+# 12/4/24: looks good.  maybe better in swamp though?
 - prefab: brokkr-the-medusa
-  enabled: true
+  enabled: false
   biome: DeepNorth
   quantity: 7
   prioritized: true
@@ -73,7 +91,7 @@
   maxTerrainDelta: 7
   iconPlaced: Ping
 
-# spawning well, but teleporter is buried, potentially trapping players if they tele to it.
+# 12/4/24:  looks amazing.
 - prefab: brokkr-the-cathedral
   enabled: true
   biome: DeepNorth
@@ -89,6 +107,7 @@
   maxTerrainDelta: 8
   iconPlaced: Bed
 
+# 12/4/24:  looks good, but secret entrance buried.  raising 2.5 meters.  looks good after change!
 - prefab: brokkr-the-churn
   enabled: true
   biome: DeepNorth
@@ -98,14 +117,14 @@
   minDistanceFromSimilar: 300
   randomRotation: true
   clearArea: true
-  groundOffset: -4.5
+  groundOffset: -2
   levelArea: false
   maxAltitude: -2
   minAltitude: -5
   maxTerrainDelta: 9
   iconPlaced: Vendor_BlackForest
 
-# spawning under water - UPDATED to 4/-2, but needs testing
+# 12/4/24:  looks good.
 - prefab: brokkr-the-misery
   enabled: true
   biome: DeepNorth
@@ -122,7 +141,7 @@
   maxTerrainDelta: 6
   iconPlaced: Death
 
-# spawning under water - UPDATED to 2/-2, but needs testing
+# 12/4/24:  under water.  raised minAlt 9 meters
 - prefab: brokkr-the-sacrifice
   enabled: true
   biome: DeepNorth
@@ -132,19 +151,20 @@
   minDistanceFromSimilar: 300
   randomRotation: true
   clearArea: true
-  groundOffset: -4.5
+  groundOffset: -2
   levelArea: false
-  maxAltitude: 6
-  minAltitude: -3
+  minAltitude: 6
   maxTerrainDelta: 6
   iconPlaced: Boss
+
+# fort torment.  ocean.  -12m min/max altitude
 
 ###################################################
 # Deep North bridges
 - prefab: brokkr-broken-bridge-1
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -157,7 +177,7 @@
 - prefab: brokkr-broken-bridge-2
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -171,7 +191,7 @@
 - prefab: brokkr-broken-bridge-3
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -185,7 +205,7 @@
 - prefab: brokkr-broken-bridge-1-short
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -198,7 +218,7 @@
 - prefab: brokkr-broken-bridge-2-short
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -212,7 +232,7 @@
 - prefab: brokkr-broken-bridge-3-short
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -227,7 +247,7 @@
 - prefab: brokkr-broken-bridge-1-worn
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -240,7 +260,7 @@
 - prefab: brokkr-broken-bridge-2-worn
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -254,7 +274,7 @@
 - prefab: brokkr-broken-bridge-3-worn
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -268,7 +288,7 @@
 - prefab: brokkr-broken-bridge-1-short-worn
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -281,7 +301,7 @@
 - prefab: brokkr-broken-bridge-2-short-worn
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -295,7 +315,7 @@
 - prefab: brokkr-broken-bridge-3-short-worn
   enabled: true
   biome: DeepNorth
-  quantity: 20
+  quantity: 12
   prioritized: true
   group: DeepNorthLocs
   minDistanceFromSimilar: 80
@@ -305,19 +325,3 @@
   maxAltitude: 0
   minAltitude: -5
   maxTerrainDelta: 5 #6 #7
-
-########################################
-- prefab: BWS_Mountains
-  enabled: true
-  biome: DeepNorth
-  quantity: 20
-  minAltitude: 10
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 100
-  randomRotation: true
-  snapToWater: true
-  maxTerrainDelta: 40
-  inForest: true
-  forestTresholdMax: 2
-  exteriorRadius: 20
-  clearArea: true

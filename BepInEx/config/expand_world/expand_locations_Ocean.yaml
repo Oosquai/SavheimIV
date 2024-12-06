@@ -1,0 +1,27 @@
+###################################################
+# Ocean structures
+- prefab: brokkr-fort-torment-final-cut
+  enabled: true
+  biome: Mistlands
+  quantity: 200 ######## 20
+  prioritized: true
+  group: OceanLocs
+  minDistanceFromSimilar: 1500
+  randomRotation: true
+  clearArea: true
+  groundOffset: -3
+  maxAltitude: -9
+  minAltitude: -13
+  maxTerrainDelta: 8
+  iconPlaced: StartTemple
+
+- prefab: floatingisland
+  enabled: true
+  biome: Ocean
+  quantity: 50
+  minDistance: 0.1
+  prioritized: true
+  group: OceanLocs
+  minDistanceFromSimilar: 1500
+  randomRotation: true
+  iconPlaced: StartTemple

@@ -227,3 +227,32 @@
 - name: d_killme_confirm_rst
   ints:
   - i_killme_confirm, 0
+
+#######################################
+# Debug and Development
+- name: d_piece_performance_normal
+  ints:
+  - WearNTear.m_supports, 0
+  - Piece.m_primaryTarget, 0
+  - Piece.m_randomTarget, 0
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+
+- name: d_piece_performance_worn
+  ints:
+  - WearNTear.m_supports, 0
+  - Piece.m_primaryTarget, 0
+  - Piece.m_randomTarget, 0
+  floats:
+  - WearNTear.m_health, -2
+  - health, -1
+
+- name: d_piece_performance_damaged
+  ints:
+  - WearNTear.m_supports, 0
+  - Piece.m_primaryTarget, 0
+  - Piece.m_randomTarget, 0
+  floats:
+  - WearNTear.m_health, -4
+  - health, -1

@@ -51,8 +51,8 @@
   clearArea: true
 - prefab: BWS_Mountains
   enabled: true
-  biome: Mountain
-  quantity: 75
+  biome: Mountain, DeepNorth
+  quantity: 150
   minDistance: 0.015
   maxDistance: 0.75
   minAltitude: 150
@@ -67,8 +67,8 @@
   clearArea: true
 - prefab: BWS_Plains
   enabled: true
-  biome: Plains
-  quantity: 75
+  biome: Plains, Mistlands
+  quantity: 150
   minDistance: 0.025
   maxDistance: 0.75
   minAltitude: 10

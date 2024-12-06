@@ -162,8 +162,8 @@
 
 - prefab: Pickable_Thistle
   enabled: true
-  min: 1
-  max: 2
+  min: 2
+  max: 4
   scaleMin: 0.5
   randTilt: 20
   biome: DeepNorth
