@@ -1,27 +1,66 @@
 ###################################################
 # Ocean structures
-- prefab: brokkr-fort-torment-final-cut
+- prefab: brokkr-fort-torment-final-cut-sh
   enabled: true
   biome: Mistlands
-  quantity: 200 ######## 20
+  quantity: 16
   prioritized: true
   group: OceanLocs
-  minDistanceFromSimilar: 1500
+  minDistanceFromSimilar: 1250
   randomRotation: true
   clearArea: true
-  groundOffset: -3
+  levelArea: false
+  groundOffset: -2.2
   maxAltitude: -9
   minAltitude: -13
   maxTerrainDelta: 8
+  discoverLabel: Fort Torment
   iconPlaced: StartTemple
 
 - prefab: floatingisland
   enabled: true
   biome: Ocean
   quantity: 50
-  minDistance: 0.1
+  minDistance: 0.05
   prioritized: true
   group: OceanLocs
   minDistanceFromSimilar: 1500
   randomRotation: true
   iconPlaced: StartTemple
+
+## DEBUG - REMOVE BELOW HERE
+#- prefab: boom-christianruins1
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: loki_chirch3
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: POIBLACKFORESTTOMBRUINS
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: ruins_0_1
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: ruins_0_2
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: ruins_0_3
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: ruins_0
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#

@@ -47,7 +47,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 400
   discoverLabel: Midgard Outpost
   maxTerrainDelta: 2
   exteriorRadius: 8
@@ -62,7 +62,7 @@
   maxAltitude: 0.5
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 350
   randomRotation: true
   maxTerrainDelta: 2
   exteriorRadius: 15

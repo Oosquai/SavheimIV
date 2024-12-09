@@ -110,7 +110,7 @@
   minAltitude: -1
   prioritized: true
   group: Swamp_medium
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 400
   maxTerrainDelta: 8
   exteriorRadius: 10
 - prefab: MWL_SwampTower1

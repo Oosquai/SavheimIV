@@ -19,7 +19,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 400
   discoverLabel: Hjortkult Ruins
   maxTerrainDelta: 3
   exteriorRadius: 8
@@ -33,7 +33,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 256
+  minDistanceFromSimilar: 200
   discoverLabel: Hjortkult Ruins
   maxTerrainDelta: 3
   exteriorRadius: 7
@@ -48,7 +48,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 256
+  minDistanceFromSimilar: 200
   maxTerrainDelta: 3
   exteriorRadius: 14
   randomDamage: true
@@ -60,7 +60,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 400
   maxTerrainDelta: 5
   exteriorRadius: 7
   randomDamage: true
@@ -73,7 +73,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 256
+  minDistanceFromSimilar: 200
   maxTerrainDelta: 5
   exteriorRadius: 11
   randomDamage: true
@@ -86,7 +86,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 400
   discoverLabel: Temple of Eik
   maxTerrainDelta: 3
   inForest: true
@@ -103,7 +103,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 512
+  minDistanceFromSimilar: 400
   discoverLabel: Garden of Eik
   maxTerrainDelta: 3
   inForest: true
@@ -117,7 +117,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 256
+  minDistanceFromSimilar: 150
   discoverLabel: Tyggrasons Church
   maxTerrainDelta: 3
   inForest: true
@@ -133,7 +133,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 256
+  minDistanceFromSimilar: 150
   maxTerrainDelta: 2
   exteriorRadius: 7
   randomDamage: true

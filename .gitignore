@@ -33,6 +33,8 @@ BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg
 BepInEx/config/org.bepinex.plugins.darwinawards.cfg
 BepInEx/config/org.bepinex.plugins.groups.cfg
 BepInEx/config/Searica.Valheim.DodgeShortcut.cfg
+BepInEx/config/expand_world/expand_data_Debug.yaml
+BepInEx/config/expand_world/expand_prefabs_Debug.yaml
 
 ### configs with GUI elements or key binds
 #BepInEx/config/Azumatt.AzuExtendedPlayerInventory.cfg

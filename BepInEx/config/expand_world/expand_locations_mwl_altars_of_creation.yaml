@@ -7,7 +7,7 @@
   minAltitude: 5
   prioritized: true
   group: Ruins_large
-  minDistanceFromSimilar: 1028
+  minDistanceFromSimilar: 750
   discoverLabel: Kristnir Cathedral
   maxTerrainDelta: 2
   inForest: true

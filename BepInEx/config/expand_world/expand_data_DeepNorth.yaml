@@ -142,7 +142,7 @@
 # Mob alterations
 - name: dn_deer
   ints:
-  - level, 0
+  - level, 1
   - CL&LC infusion, 0
   strings:
   - Character.m_name, Spirit of the Forest
@@ -467,3 +467,8 @@
   values:
   - CWS_Sword_1_SH_DNRL
   - CWS_TH_Sword_5_SH_DNRL
+
+######################################
+- name: d_againFlying_dn
+  ints:
+  - Humanoid.m_flying, 1

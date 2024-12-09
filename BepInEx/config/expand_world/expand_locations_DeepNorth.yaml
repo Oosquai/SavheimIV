@@ -1,6 +1,5 @@
 ###################################################
 # Deep North structures
-# errors with shield generators, but otherwise looks great.  probably safe to ignore errors.
 - prefab: citadel-v2_2
   enabled: true
   unique: true
@@ -8,320 +7,223 @@
   quantity: 1
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 500
+  minDistanceFromSimilar: 600
   randomRotation: true
   clearArea: true
-  groundOffset: -2
+  levelArea: false
+  groundOffset: -7
   minAltitude: 100
   maxTerrainDelta: 20
+  discoverLabel: The Citadel
   iconPlaced: StartTemple
 
-- prefab: jaik-mistvale-keep
-  enabled: true
-  unique: true
-  biome: DeepNorth
-  quantity: 1
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 500
-  randomRotation: true
-  clearArea: true
-  groundOffset: -2
-  minAltitude: 100
-  maxTerrainDelta: 20
-  iconPlaced: StartTemple
-
-# 12/4/24:  mostly good.  fallen rampart pieces are hanging in space.  remove?
 - prefab: brokkr-the-belmont
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -1
+  levelArea: false
+  groundOffset: -12
+  maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
+  discoverLabel: The Belmont
   iconPlaced: Icon0
 
-# 12/4/24: remove ring of fences around perimeter
 - prefab: brokkr-the-execution
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -1
+  levelArea: false
+  groundOffset: -8
+  maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
+  discoverLabel: The Execution
   iconPlaced: Shout
 
-# 12/4/24:  sunk a little low.  raising 1.  good now!
 - prefab: brokkr-the-flabellum
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: 0
+  levelArea: false
+  groundOffset: -7
+  maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
+  discoverLabel: The Flabellum
   iconPlaced: Player
 
-# 12/4/24: looks good.  maybe better in swamp though?
-- prefab: brokkr-the-medusa
-  enabled: false
-  biome: DeepNorth
-  quantity: 7
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 300
-  randomRotation: true
-  clearArea: true
-  groundOffset: -1.5
-  minAltitude: 12
-  maxTerrainDelta: 7
-  iconPlaced: Ping
-
-# 12/4/24:  looks amazing.
 - prefab: brokkr-the-cathedral
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -8
   levelArea: false
+  groundOffset: -8
+  maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 8
+  discoverLabel: The Cathedral
   iconPlaced: Bed
 
-# 12/4/24:  looks good, but secret entrance buried.  raising 2.5 meters.  looks good after change!
 - prefab: brokkr-the-churn
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -2
+  groundOffset: -8
   levelArea: false
-  maxAltitude: -2
-  minAltitude: -5
-  maxTerrainDelta: 9
+  maxAltitude: 0
+  minAltitude: -2
+  maxTerrainDelta: 20
+  discoverLabel: The Churn
   iconPlaced: Vendor_BlackForest
 
-# 12/4/24:  looks good.
 - prefab: brokkr-the-misery
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -4.5
+  groundOffset: -5
   levelArea: false
-  maxAltitude: 6
-  minAltitude: -3
-  maxTerrainDelta: 6
+  maxAltitude: 0
+  minAltitude: -2
+  maxTerrainDelta: 20
+  discoverLabel: The Misery
   iconPlaced: Death
 
-# 12/4/24:  under water.  raised minAlt 9 meters
 - prefab: brokkr-the-sacrifice
   enabled: true
   biome: DeepNorth
   quantity: 7
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 300
+  minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -2
+  groundOffset: -7
   levelArea: false
+  maxAltitude: 70
   minAltitude: 6
-  maxTerrainDelta: 6
+  maxTerrainDelta: 20
+  discoverLabel: The Sacrifice
   iconPlaced: Boss
-
-# fort torment.  ocean.  -12m min/max altitude
 
 ###################################################
 # Deep North bridges
 - prefab: brokkr-broken-bridge-1
   enabled: true
   biome: DeepNorth
-  quantity: 12
+  quantity: 16
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 80
+  minDistanceFromSimilar: 300
   randomRotation: true
+  clearArea: true
   groundOffset: -9
   levelArea: false
-  minAltitude: 50
-  maxTerrainDelta: 11 #10 #11
-
-- prefab: brokkr-broken-bridge-2
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -9
-  levelArea: false
-  maxAltitude: 45
-  minAltitude: 5
-  maxTerrainDelta: 6 #7 #8
-
-- prefab: brokkr-broken-bridge-3
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -4.5
-  levelArea: false
-  maxAltitude: 0
-  minAltitude: -5
-  maxTerrainDelta: 6 #7 #8
+  maxAltitude: 70
+  minAltitude: 30
+  maxTerrainDelta: 13
 
 - prefab: brokkr-broken-bridge-1-short
   enabled: true
   biome: DeepNorth
-  quantity: 12
+  quantity: 24
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 80
+  minDistanceFromSimilar: 250
   randomRotation: true
+  clearArea: true
   groundOffset: -8
   levelArea: false
-  minAltitude: 50
-  maxTerrainDelta: 10 #9 #10
+  maxAltitude: 70
+  minAltitude: 30
+  maxTerrainDelta: 12
+
+- prefab: brokkr-broken-bridge-2
+  enabled: true
+  biome: DeepNorth
+  quantity: 16
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 300
+  randomRotation: true
+  clearArea: true
+  groundOffset: -9
+  levelArea: false
+  maxAltitude: 30
+  minAltitude: 5
+  maxTerrainDelta: 8
 
 - prefab: brokkr-broken-bridge-2-short
   enabled: true
   biome: DeepNorth
-  quantity: 12
+  quantity: 24
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 80
+  minDistanceFromSimilar: 250
   randomRotation: true
+  clearArea: true
   groundOffset: -8
   levelArea: false
-  maxAltitude: 45
+  maxAltitude: 30
   minAltitude: 5
-  maxTerrainDelta: 5 #6 #7
+  maxTerrainDelta: 9
+
+- prefab: brokkr-broken-bridge-3
+  enabled: true
+  biome: DeepNorth
+  quantity: 16
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 300
+  randomRotation: true
+  clearArea: true
+  groundOffset: -6
+  levelArea: false
+  maxAltitude: 0
+  minAltitude: -5
+  maxTerrainDelta: 12
 
 - prefab: brokkr-broken-bridge-3-short
   enabled: true
   biome: DeepNorth
-  quantity: 12
+  quantity: 24
   prioritized: true
   group: DeepNorthLocs
-  minDistanceFromSimilar: 80
+  minDistanceFromSimilar: 250
   randomRotation: true
-  groundOffset: -4.5
+  clearArea: true
+  groundOffset: -6
   levelArea: false
   maxAltitude: 0
   minAltitude: -5
-  maxTerrainDelta: 5 #6 #7
-
-### worn versions of bridges, placed lower to adjust priority
-- prefab: brokkr-broken-bridge-1-worn
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -9
-  levelArea: false
-  minAltitude: 50
-  maxTerrainDelta: 11 #10 #11
-
-- prefab: brokkr-broken-bridge-2-worn
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -9
-  levelArea: false
-  maxAltitude: 45
-  minAltitude: 5
-  maxTerrainDelta: 6 #7 #8
-
-- prefab: brokkr-broken-bridge-3-worn
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -4.5
-  levelArea: false
-  maxAltitude: 0
-  minAltitude: -5
-  maxTerrainDelta: 6 #7 #8
-
-- prefab: brokkr-broken-bridge-1-short-worn
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -8
-  levelArea: false
-  minAltitude: 50
-  maxTerrainDelta: 10 #9 #10
-
-- prefab: brokkr-broken-bridge-2-short-worn
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -8
-  levelArea: false
-  maxAltitude: 45
-  minAltitude: 5
-  maxTerrainDelta: 5 #6 #7
-
-- prefab: brokkr-broken-bridge-3-short-worn
-  enabled: true
-  biome: DeepNorth
-  quantity: 12
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 80
-  randomRotation: true
-  groundOffset: -4.5
-  levelArea: false
-  maxAltitude: 0
-  minAltitude: -5
-  maxTerrainDelta: 5 #6 #7
+  maxTerrainDelta: 9

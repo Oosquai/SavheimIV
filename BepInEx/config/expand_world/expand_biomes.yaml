@@ -53,6 +53,7 @@
   musicDay: swamp
   musicNight: swamp
 - biome: DeepNorth
+  nature: Plains
   environments:
   - environment: Twilight_SnowStorm
     weight: 0.5

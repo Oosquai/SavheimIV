@@ -177,3 +177,17 @@
   inForest: true
   forestTresholdMin: 1
   forestTresholdMax: 1.15
+
+- prefab: Pickable_Dandelion
+  enabled: true
+  max: 0.5
+  biome: DeepNorth
+  minAltitude: 1
+  maxAltitude: 1000
+  maxTilt: 15
+  maxTerrainDelta: 2
+  groupSizeMin: 50
+  groupRadius: 2
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15

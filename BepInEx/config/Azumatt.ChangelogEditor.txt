@@ -4,16 +4,20 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/4/24</color>
+     0\  Savheim IV Patch Notes, 12/9/24</color>
+- Lots of updates to Deep North locations.
+- Added some Ocean locations.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/4/24
 - Modified AI for tank and scout creatures.
 - A few minor updates to Wet+Frost and Wet+Lightning logic.
 - Implemented elemental interaction between fire and poison.
 - Further optimizations to Deep North locations.
 - Cleaned up names for all crystal arrows.
 - Fixed colors on Stag Arrow.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 12/3/24
 - Added tips to loading screens and the Wet arrow about Lightning and Frost interactions with Wet.

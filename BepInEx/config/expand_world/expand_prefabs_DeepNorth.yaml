@@ -1319,3 +1319,11 @@
 # 3) Loot for only one player?
 # 4) players entering late should get tagged with roguelite, to prevent cheesing
 # 5) At startup, only broadcast goes to all.  RPC_Message goes only to local player.
+
+#############################################################
+# Other Deep North mechanics
+# Sleeping creatures fly again
+- prefab: Hatchling
+  type: state, wakeup
+  biomes: DeepNorth
+  data: d_againFlying_dn

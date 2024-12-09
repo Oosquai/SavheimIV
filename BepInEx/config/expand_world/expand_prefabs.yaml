@@ -930,7 +930,8 @@
   filters:
   - int, CL&LC infusion, 1;6
   - int, tamed, 0
-  biomes: AshLands
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: AshLands, DeepNorth
   spawns:
   - Bezel_T7
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
@@ -950,11 +951,12 @@
 # 3 star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
   type: destroy
-  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   filters:
   - int, CL&LC infusion, 0
   - int, level, 4
   - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   spawns:
   - DraumheimEssence
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
@@ -1120,7 +1122,8 @@
   - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
-  biomes: Mistlands, AshLands
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
@@ -1135,7 +1138,8 @@
   - int, CL&LC infusion, 0
   - int, level, 5
   - int, tamed, 0
-  biomes: Mistlands, AshLands
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_S
@@ -1312,7 +1316,8 @@
   - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
-  biomes: Mistlands, AshLands
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
@@ -1331,31 +1336,11 @@
   - int, CL&LC infusion, 0
   - int, level, 6
   - int, tamed, 0
-  biomes: Mistlands, AshLands
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_S
   - MoltenCore
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
   - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
-
-###############################################################
-## Debug and Development - should all be commented out!
-#- prefab: Player
-#  type: say, mypos
-#  delay: 0.1
-#  command: s <pos>
-#
-#- prefab: Piece
-#  type: create
-#  data: d_piece_performance_normal
-#
-#- prefab: Player
-#  type: say, rm_piece
-#  poke:
-#  - prefab: cliff_mistlands1
-#    limit: 1
-#    parameter: p_rm_piece
-#- prefab: Piece, cliff_mistlands1
-#  type: poke, p_rm_piece
-#  remove: true

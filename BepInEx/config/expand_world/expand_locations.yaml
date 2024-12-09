@@ -109,7 +109,7 @@
   quantity: 30
   minAltitude: -0.5
   group: SwampRuin
-  minDistanceFromSimilar: 256
+  minDistanceFromSimilar: 200
   randomRotation: true
   maxTerrainDelta: 3
   exteriorRadius: 10
@@ -1975,7 +1975,7 @@
   minAltitude: 2
   prioritized: true
   group: Tower_medium
-  minDistanceFromSimilar: 1024
+  minDistanceFromSimilar: 900
   maxTerrainDelta: 2
   exteriorRadius: 10
   clearArea: true
@@ -1988,7 +1988,7 @@
   minAltitude: 10
   prioritized: true
   group: Tower_large
-  minDistanceFromSimilar: 1024
+  minDistanceFromSimilar: 900
   maxTerrainDelta: 3
   exteriorRadius: 10
   clearArea: true
@@ -2001,7 +2001,7 @@
   minAltitude: 10
   prioritized: true
   group: Grave_large
-  minDistanceFromSimilar: 1024
+  minDistanceFromSimilar: 900
   maxTerrainDelta: 2
   exteriorRadius: 3
   noBuild: true
@@ -2014,7 +2014,7 @@
   minAltitude: 10
   prioritized: true
   group: Stone_small
-  minDistanceFromSimilar: 1024
+  minDistanceFromSimilar: 900
   maxTerrainDelta: 2
   exteriorRadius: 5
   clearArea: true
