@@ -7,6 +7,7 @@
      0\  Savheim IV Patch Notes, 12/9/24</color>
 - Lots of updates to Deep North locations.
 - Added some Ocean locations.
+- Fixing git to not overwrite local changes to a few configs.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

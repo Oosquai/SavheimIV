@@ -6,7 +6,6 @@
 - biome: ocean
   maxAltitude: -26
 - biome: deepnorth
-#  maxAltitude: 500
   maxDistance: 1.6
   minDistance: 1.2
   centerY: -0.4

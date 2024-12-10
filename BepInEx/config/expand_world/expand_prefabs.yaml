@@ -1344,3 +1344,52 @@
   - MoltenCore
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
   - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+########################################################################
+# Floating Island Quest
+- prefab: Serpent
+  type: destroy
+  weight: 1E30
+  filter: string, Humanoid.m_name, Havarr
+  spawn: AethericCore
+
+# Removes default spawn effects
+- prefab: sfx_prespawn,vfx_spawn,vfx_spawn_large,vfx_prespawn,sfx_spawn,vfx_offering,sfx_offering,eventzone_eikthyr,eventzone_gdking,eventzone_bonemass,eventzone_moder,eventzone_goblinking,eventzone_queen,eventzone_fader
+  type: create
+  objects:
+  - LocationProxy, 1, d_aetheric_altar_check
+  remove: true
+
+# Teleport player!
+- prefab: fx_Fader_CorpseExplosion
+  type: create
+  objects:
+  - LocationProxy, 1, d_aetheric_altar_check
+  spawns:
+  - sfx_GoblinShaman_fireball_launch
+  - sfx_GoblinShaman_fireball_launch, 0,0,0, 0,0,0, d_aetheric_teleport_pitch_1, 1.2
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_aetheric_teleport_pitch_1, 1.2
+  - fx_Fader_Spin, 0,-8,-2, 0,0,0, d_empty_data, 1.2
+  - sfx_GoblinShaman_fireball_launch, 0,0,0, 0,0,0, d_aetheric_teleport_pitch_2, 1.6
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_aetheric_teleport_pitch_2, 1.6
+  - fx_Fader_Spin, 0,-8,-2, 0,0,0, d_empty_data, 1.6
+  - fx_Fader_Spin, 0,-8,0, 0,0,0, d_empty_data, 1.65
+  - sfx_GoblinShaman_fireball_launch, 0,0,0, 0,0,0, d_aetheric_teleport_pitch_3, 1.9
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_aetheric_teleport_pitch_3, 1.9
+  - fx_Fader_Spin, 0,-8,-2, 0,0,0, d_empty_data, 1.9
+  - fx_Fader_Spin, 0,-8,0, 0,0,0, d_empty_data, 1.95
+  - fx_Fader_Spin, 0,-8,2, 0,0,0, d_empty_data, 2
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 10
+    delay: 2.8
+    parameter: p_aetheric_teleport <x> <z> <add_<y>_93>
+
+- prefab: Player
+  type: poke, p_aetheric_teleport
+  objectRpc:
+  - name: RPC_TeleportTo
+    1: vec, <par1>,<par2>,<par3>
+    2: quat, 1
+    3: bool, false

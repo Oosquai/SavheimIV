@@ -26,6 +26,21 @@
   ints:
   - tamed, 0
 
+- name: d_aetheric_teleport_pitch_1
+  floats:
+  - ZSFX.m_minPitch, 1.1
+  - ZSFX.m_maxPitch, 1.1
+
+- name: d_aetheric_teleport_pitch_2
+  floats:
+  - ZSFX.m_minPitch, 1.3
+  - ZSFX.m_maxPitch, 1.3
+
+- name: d_aetheric_teleport_pitch_3
+  floats:
+  - ZSFX.m_minPitch, 1.5
+  - ZSFX.m_maxPitch, 1.5
+
 # From Raaka - infinite fuel for all fireplaces, plus CampFire (Warm) effect (flashes, buggy, commented out)
 - name: fueler
   ints:
@@ -227,3 +242,8 @@
 - name: d_killme_confirm_rst
   ints:
   - i_killme_confirm, 0
+
+###################
+- name: d_aetheric_altar_check
+  ints:
+  - i_aetheric_altar, 1

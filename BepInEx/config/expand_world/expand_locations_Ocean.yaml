@@ -21,9 +21,10 @@
   enabled: true
   biome: Ocean
   quantity: 50
-  minDistance: 0.05
   prioritized: true
+  noBuild: true
   group: OceanLocs
+  maxAltitude: -20
   minDistanceFromSimilar: 1500
   randomRotation: true
   iconPlaced: StartTemple
