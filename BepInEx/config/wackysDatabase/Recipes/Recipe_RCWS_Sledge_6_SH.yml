@@ -1,0 +1,15 @@
+name: RCWS_Sledge_6_SH
+clonePrefabName: CWS_Sledge_6_SH
+craftingStation: $piece_blackforge
+minStationLevel: 1
+maxStationLevelCap: 3
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs: 
+- SwordCheat:1:0:True
+- Wispheart:1:0:True
+- BlackMarble:1:0:True

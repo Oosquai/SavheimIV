@@ -3,8 +3,8 @@
 # This file live updates the in-game listing. Feel free to change it while in the main menu.
 
 <color=green>Savheim IV Server</color>:
-  address: 172.240.238.76
-  port: 27770
+  address: 51.81.221.91
+  port: 27260
   password: jheimIV
 
 #Example Server:

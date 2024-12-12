@@ -125,6 +125,15 @@
   - CWS_TH_Axe_10_SH
   - CWS_Sword_8_SH
   - CWS_Dagger_6_SH
+  - CWS_Atgeir_3_SH
+  - CWS_TH_Sword_5_SH
+  - CWS_Sword_1_SH
+  - Staff_Wisp
+  - BattleaxeCrystal_Wisp
+  - CWS_Sledge_6_SH
+  - CWS_Mace_7_SH
+  - CWS_Dagger_9_SH
+  - CWS_Axe_6_SH
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_S
     amount: 1

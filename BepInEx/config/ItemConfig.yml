@@ -319,6 +319,8 @@ groups:
     - FistFenrirClaw_Boss_SH
     - AxeBerzerkr_Boss_SH
     - KnifeSkollAndHati_Boss_SH
+    - Staff_Wisp
+    - BattleaxeCrystal_Wisp
 
   OneHandedWeapon:
     - AxeBlackMetal

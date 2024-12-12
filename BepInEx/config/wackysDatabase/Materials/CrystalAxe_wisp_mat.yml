@@ -1,0 +1,33 @@
+name: CrystalAxe_wisp_mat
+original: CrystalAxe_mat
+overwrite: false
+changes:
+  colors:
+    _Color: [0.5, 0.5, 1, 1]
+    _EmissionColor: [0.2, 0.1, 0.7, 1]
+  floats:
+    _Cutoff: 0
+    _Glossiness: 0.076
+    _GlossMapScale: 0.932
+    _SmoothnessTextureChannel: 1
+    _Metallic: 1
+    _SpecularHighlights: 1
+    _GlossyReflections: 1
+    _BumpScale: 1
+    _Parallax: 0.02
+    _OcclusionStrength: 1
+    _DetailNormalMapScale: 1
+    _UVSec: 0
+    _Mode: 0
+    _SrcBlend: 1
+    _DstBlend: 0
+    _ZWrite: 1
+  textures:
+    _MainTex: battleaxe_crystal_d
+    _MetallicGlossMap:
+      name: battleaxe_crystal_m
+      filterMode: Bilinear
+    _BumpMap: battleaxe_crystal_n
+    _EmissionMap:
+      name: battleaxe_crystal_e
+      filterMode: Bilinear

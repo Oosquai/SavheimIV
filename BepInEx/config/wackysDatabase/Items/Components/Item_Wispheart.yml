@@ -1,11 +1,11 @@
-name: AethericCore
+name: Wispheart
 m_weight: 1
-m_name: Aetheric Core
-m_description: This relic was used by an ancient seafarer to chart paths to the floating realms, now buried in the bowels of one of the twin guardian serpents.
+m_name: Wispheart
+m_description: A heart of fickle mist, caught between sea and sky.
 clonePrefabName: MoltenCore
 mockName: 
 customIcon: 
-material: AethericCore_mat
+material: Wispheart_mat
 materials: 
 customVisual: 
 snapshotRotation: 

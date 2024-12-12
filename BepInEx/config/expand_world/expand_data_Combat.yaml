@@ -492,7 +492,7 @@
   floats:
   - $forward_speed, 5;999
   hashes:
-  - RightItem, AtgeirHimminAfl
+  - RightItem, AtgeirHimminAfl, CWS_Atgeir_3_SH
 
 - name: gear_atgeir_t7
   floats:

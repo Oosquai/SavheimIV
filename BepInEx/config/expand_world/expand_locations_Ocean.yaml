@@ -25,6 +25,7 @@
   noBuild: true
   group: OceanLocs
   maxAltitude: -20
+  minAltitude: -40
   minDistanceFromSimilar: 1500
   randomRotation: true
   iconPlaced: StartTemple
@@ -61,6 +62,11 @@
 #  quantity: 0
 #
 #- prefab: ruins_0
+#  enabled: true
+#  biome: Ocean
+#  quantity: 0
+#
+#- prefab: loki_ruins2_vanilla_supports_and_wear
 #  enabled: true
 #  biome: Ocean
 #  quantity: 0

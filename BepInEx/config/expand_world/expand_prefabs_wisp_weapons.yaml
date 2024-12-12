@@ -1,0 +1,503 @@
+##############################################################
+# Savheim Floating Island Quest / Wisp Weapons - prefabs
+##############################################################
+#################################################
+# Floating Island Quest
+- prefab: Serpent
+  type: destroy
+  weight: 1E30
+  filter: string, Humanoid.m_name, Havarr
+  spawns:
+  - DraumheimEssence
+  - Wispheart
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_wisp_weapons
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_wisp_weapons
+
+# Removes default spawn effects
+- prefab: sfx_prespawn,vfx_spawn,vfx_spawn_large,vfx_prespawn,sfx_spawn,vfx_offering,sfx_offering,eventzone_eikthyr,eventzone_gdking,eventzone_bonemass,eventzone_moder,eventzone_goblinking,eventzone_queen,eventzone_fader
+  type: create
+  objects:
+  - LocationProxy, 1, d_wisp_altar_check
+  remove: true
+
+# Teleport player!
+- prefab: fx_Fader_CorpseExplosion
+  type: create
+  objects:
+  - LocationProxy, 1, d_wisp_altar_check
+  poke:
+  - prefab: piece_groundtorch_mist
+    limit: 1
+    maxDistance: 20
+    parameter: p_wisp_teleport_fx
+  - prefab: Player
+    limit: 1
+    maxDistance: 20
+    delay: 2.8
+    parameter: p_wisp_teleport <x> <z> <add_<y>_93>
+  - prefab: CL_Raw_Blue
+    maxDistance: 20
+    delay: 3
+    parameter: p_wisp_altar_disable
+  - prefab: LocationProxy
+    maxDistance: 20
+    delay: 3
+    parameter: p_wisp_altar_disable
+  - prefab: Pickable_SurtlingCoreStand
+    maxDistance: 20
+    delay: 3
+    parameter: p_wisp_altar_disable
+  - prefab: TreasureChest_plains_stone
+    maxDistance: 95
+    parameter: p_wisp_altar_set_loot_cave <vWispWeapons>
+  - prefab: RS_Barrel_2
+    maxDistance: 95
+    parameter: p_wisp_altar_set_loot_barrel
+
+- prefab: piece_groundtorch_mist
+  type: poke, p_wisp_teleport_fx
+  spawns:
+  - sfx_GoblinShaman_fireball_launch
+  - sfx_GoblinShaman_fireball_launch, 0,0,0, 0,0,0, d_wisp_teleport_pitch_1, 1.2
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_wisp_teleport_pitch_1, 1.2
+  - fx_Fader_Spin, 0,0,-1, 0,0,0, d_empty_data_wisp_weapons, 1.2
+  - sfx_GoblinShaman_fireball_launch, 0,0,0, 0,0,0, d_wisp_teleport_pitch_2, 1.6
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_wisp_teleport_pitch_2, 1.6
+  - fx_Fader_Spin, 0,0,-1, 0,0,0, d_empty_data_wisp_weapons, 1.6
+  - fx_Fader_Spin, 0,0,1, 0,0,0, d_empty_data_wisp_weapons, 1.65
+  - sfx_GoblinShaman_fireball_launch, 0,0,0, 0,0,0, d_wisp_teleport_pitch_3, 1.9
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_wisp_teleport_pitch_3, 1.9
+  - fx_Fader_Spin, 0,0,-1, 0,0,0, d_empty_data_wisp_weapons, 1.9
+  - fx_Fader_Spin, 0,0,1, 0,0,0, d_empty_data_wisp_weapons, 1.95
+  - fx_Fader_Spin, 0,0,3, 0,0,0, d_empty_data_wisp_weapons, 2
+
+- prefab: Player
+  type: poke, p_wisp_teleport
+  objectRpc:
+  - name: RPC_TeleportTo
+    1: vec, <par1>,<par2>,<par3>
+    2: quat, 1
+    3: bool, false
+
+# disable altar once used
+- prefab: CL_Raw_Blue
+  type: poke, p_wisp_altar_disable
+  data: d_wisp_lights_disable
+
+- prefab: LocationProxy
+  type: poke, p_wisp_altar_disable
+  data: d_wisp_altar_disable
+
+#- prefab: Pickable_SurtlingCoreStand
+#  type: poke, p_wisp_altar_disable
+#  data: d_surt_picked_set
+
+# set loot in containers when player teleports
+- prefab: TreasureChest_plains_stone
+  type: poke, p_wisp_altar_set_loot_cave
+  data: d_wisp_weapons_loot
+  injectData: true
+
+- prefab: RS_Barrel_2
+  type: poke, p_wisp_altar_set_loot_barrel
+  data: d_wisp_barrel_loot
+  injectData: true
+
+####
+## Reset altar when surt cores come back
+## Surt cores set to respawn 5040 minutes, twice as long as other locations
+#- prefab: Player
+#  type: state, *
+#  objects:
+#  - LocationProxy, 100, d_wisp_altar_check
+#  poke:
+#  - prefab: LocationProxy
+#    data: d_wisp_altar_check
+#    limit: 1
+#    parameter: p_wisp_altar_respawn_check
+#
+#- prefab: LocationProxy
+#  type: poke, p_wisp_altar_respawn_check
+#  objects:
+#  - Pickable_SurtlingCoreStand, 10, d_surt_picked_rst
+#  objectsLimit: 4
+#  data: d_wisp_altar_enable
+#  poke:
+#  - self: true
+#    parameter: p_wisp_altar_serpent_respawn
+#  - prefab: CL_Raw_Blue
+#    maxDistance: 20
+#    parameter: p_wisp_altar_enable
+#
+#- prefab: LocationProxy
+#  type: poke, p_wisp_altar_serpent_respawn
+#  bannedObjects:
+#  - Serpent, 100, d_serpent_lavarr_check
+#  spawns:
+#  - Serpent, 0,3.5,1.5, 300,0,0, d_serpent_lavarr_set
+#
+#- prefab: CL_Raw_Blue
+#  type: poke, p_wisp_altar_enable
+#  data: d_wisp_lights_enable
+
+#################################################
+# Wisp Weapons
+### Atgeir
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_atgeir
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_atgeir
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_atgeir
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_atgeir
+  filter: int, i_wisp_buff_cd_atgeir, 0
+  data: d_wisp_buff_cd_atgeir_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Atgeir
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Atgeir_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 16                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_atgeir
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_atgeir
+  data: d_wisp_buff_cd_atgeir_rst
+  injectData: true
+
+### Axe
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_axe
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_axe
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_axe
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_axe
+  filter: int, i_wisp_buff_cd_axe, 0
+  data: d_wisp_buff_cd_axe_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Axe
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Axe_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 16                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_axe
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_axe
+  data: d_wisp_buff_cd_axe_rst
+  injectData: true
+
+### Battleaxe
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_battleaxe
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_battleaxe
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_battleaxe
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_battleaxe
+  filter: int, i_wisp_buff_cd_battleaxe, 0
+  data: d_wisp_buff_cd_battleaxe_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Battleaxe
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Battleaxe_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 16                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_battleaxe
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_battleaxe
+  data: d_wisp_buff_cd_battleaxe_rst
+  injectData: true
+
+### Greatsword
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_greatsword
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_greatsword
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_greatsword
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_greatsword
+  filter: int, i_wisp_buff_cd_greatsword, 0
+  data: d_wisp_buff_cd_greatsword_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Greatsword
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Greatsword_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 21                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_greatsword
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_greatsword
+  data: d_wisp_buff_cd_greatsword_rst
+  injectData: true
+
+### Knife
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_knife
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_knife
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_knife
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_knife
+  filter: int, i_wisp_buff_cd_knife, 0
+  data: d_wisp_buff_cd_knife_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Knife
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Knife_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 16                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_knife
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_knife
+  data: d_wisp_buff_cd_knife_rst
+  injectData: true
+
+### Mace
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_mace
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_mace
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_mace
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_mace
+  filter: int, i_wisp_buff_cd_mace, 0
+  data: d_wisp_buff_cd_mace_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Mace
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Mace_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 4                                     ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 34                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_mace
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_mace
+  data: d_wisp_buff_cd_mace_rst
+  injectData: true
+
+### Sledge
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_sledge
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_sledge
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_sledge
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_sledge
+  filter: int, i_wisp_buff_cd_sledge, 0
+  data: d_wisp_buff_cd_sledge_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Sledge
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Sledge_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 4                                     ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 34                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_sledge
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_sledge
+  data: d_wisp_buff_cd_sledge_rst
+  injectData: true
+
+### Staff
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_staff
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_staff
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_staff
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_staff
+  filter: int, i_wisp_buff_cd_staff, 0
+  data: d_wisp_buff_cd_staff_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Staff
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Staff_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 10                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_staff
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_staff
+  data: d_wisp_buff_cd_staff_rst
+  injectData: true
+
+### Sword
+- prefab: Player
+  type: state, staff_summon
+  filter: d_wisp_weapon_sword
+  poke:
+  - prefab: Player
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_sword
+  - prefab: creature
+    data: d_tamed_wisp_weapons
+    maxDistance: 10                              ### BUFF RANGE
+    parameter: p_wisp_weapon_buff_sword
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_sword
+  filter: int, i_wisp_buff_cd_sword, 0
+  data: d_wisp_buff_cd_sword_set
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Sword
+    2: bool, false
+    3: int, 1
+    4: float, 1
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Wisp_Sword_CD
+    2: bool, false
+    3: int, 1
+    4: float, 1
+    delay: 16                                    ### Must match SE TtL
+  poke:
+  - self: true
+    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    parameter: p_wisp_weapon_buff_cd_sword
+
+- prefab: Player, creature
+  type: poke, p_wisp_weapon_buff_cd_sword
+  data: d_wisp_buff_cd_sword_rst
+  injectData: true
