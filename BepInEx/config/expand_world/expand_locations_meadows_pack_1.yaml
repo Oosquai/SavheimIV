@@ -20,7 +20,6 @@
   prioritized: true
   group: Ruins_medium
   minDistanceFromSimilar: 400
-  discoverLabel: Hjortkult Ruins
   maxTerrainDelta: 3
   exteriorRadius: 8
   clearArea: true
@@ -34,7 +33,6 @@
   prioritized: true
   group: Ruins_small
   minDistanceFromSimilar: 200
-  discoverLabel: Hjortkult Ruins
   maxTerrainDelta: 3
   exteriorRadius: 7
   clearArea: true
@@ -87,7 +85,6 @@
   prioritized: true
   group: Ruins_medium
   minDistanceFromSimilar: 400
-  discoverLabel: Temple of Eik
   maxTerrainDelta: 3
   inForest: true
   forestTresholdMin: 1.2
@@ -104,7 +101,6 @@
   prioritized: true
   group: Ruins_small
   minDistanceFromSimilar: 400
-  discoverLabel: Garden of Eik
   maxTerrainDelta: 3
   inForest: true
   exteriorRadius: 15
@@ -118,7 +114,6 @@
   prioritized: true
   group: Ruins_medium
   minDistanceFromSimilar: 150
-  discoverLabel: Tyggrasons Church
   maxTerrainDelta: 3
   inForest: true
   forestTresholdMin: 1.2

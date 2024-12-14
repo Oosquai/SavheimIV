@@ -633,6 +633,7 @@
 - prefab: Player, creature
   type: state, *
   weight: 0.1         ### low makes it occur randomly, and also prioritizes other processes
+  fallback: true
   objects:
   - creature, 30, gear_staffgreenroots_any       # healer nearby?
   poke:
@@ -946,7 +947,6 @@
     3: int, 0
     delay: 2.75
 
-
 ###############################################################
 # No root effect on Bosses, mini bosses, elites, flying, or swimming creatures.
 - prefab: fx_RootAshlands
@@ -971,6 +971,80 @@
     parameter: p_creature_root_resist
 
 ###############################################################
+# Elements Combos
+####################################################
+# Ghosts do a small amount of Lightning damage
+- prefab: Ghost
+  types:
+  - state, punch0
+  - state, punch1
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    delay: 0.5
+    parameter: p_ghost_lightning_damage
+
+- prefab: Player
+  type: poke, p_ghost_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=10 dodge=true block=true
+
+####################################################
+# Wraiths do a small amount of Frost damage
+- prefab: Wraith
+  type: state, attack
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    delay: 0.7
+    parameter: p_wraith_frost_damage
+
+- prefab: Player
+  type: poke, p_wraith_frost_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=16 dodge=true block=true
+
+####################################################
+# Ticks make you Wet if they attach to you
+- prefab: Tick
+  type: state, attach
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    parameter: p_tick_make_wet
+
+- prefab: Player
+  type: poke, p_tick_make_wet
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Wet
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+####################################################
+# Seeker Brood do a small amount of Lightning damage
+- prefab: SeekerBrood
+  type: state, attack_pincers
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    delay: 0.7
+    parameter: p_seekerbrood_lightning_damage
+
+- prefab: Player
+  type: poke, p_seekerbrood_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=24 dodge=true block=true
+
+###############################################################
 # Boss tweaks
 ###################################################
 # Eikthyr - more aggressive.  Deep North uses different data.
@@ -990,12 +1064,12 @@
 
 # Elder - tentaroots slime nearby players when they attack.  (Thanks, Raaka!)
 - prefab: TentaRoot
-  type: state, *
+  type: state, attack
   poke: 
   - prefab: Player, creature
     limit: 5
     maxDistance: 4.1
-    delay: 1.45
+    delay: 1.4
     parameter: tentarootslimed
     
 - prefab: Player

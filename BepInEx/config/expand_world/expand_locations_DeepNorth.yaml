@@ -2,7 +2,6 @@
 # Deep North structures
 - prefab: citadel-v2_2
   enabled: true
-  unique: true
   biome: DeepNorth
   quantity: 1
   prioritized: true
@@ -14,7 +13,6 @@
   groundOffset: -7
   minAltitude: 100
   maxTerrainDelta: 20
-  discoverLabel: The Citadel
   iconPlaced: StartTemple
 
 - prefab: brokkr-the-belmont
@@ -31,7 +29,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-  discoverLabel: The Belmont
   iconPlaced: Icon0
 
 - prefab: brokkr-the-execution
@@ -48,7 +45,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-  discoverLabel: The Execution
   iconPlaced: Shout
 
 - prefab: brokkr-the-flabellum
@@ -65,7 +61,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-  discoverLabel: The Flabellum
   iconPlaced: Player
 
 - prefab: brokkr-the-cathedral
@@ -82,7 +77,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 8
-  discoverLabel: The Cathedral
   iconPlaced: Bed
 
 - prefab: brokkr-the-churn
@@ -99,7 +93,6 @@
   maxAltitude: 0
   minAltitude: -2
   maxTerrainDelta: 20
-  discoverLabel: The Churn
   iconPlaced: Vendor_BlackForest
 
 - prefab: brokkr-the-misery
@@ -116,7 +109,6 @@
   maxAltitude: 0
   minAltitude: -2
   maxTerrainDelta: 20
-  discoverLabel: The Misery
   iconPlaced: Death
 
 - prefab: brokkr-the-sacrifice
@@ -133,7 +125,6 @@
   maxAltitude: 70
   minAltitude: 6
   maxTerrainDelta: 20
-  discoverLabel: The Sacrifice
   iconPlaced: Boss
 
 ###################################################

@@ -12,7 +12,7 @@
 
 - prefab: Player
   type: poke, p_player_help_0
-  command: s !help-{keys, groups}
+  command: s !help-{keys, groups, trees}
   poke:
   - self: true
     delay: 0.1
@@ -20,7 +20,7 @@
 
 - prefab: Player
   type: poke, p_player_help_1
-  command: s !roll - Random 1 to 100.
+  command: s !roll - Random 1 to 100
   poke:
   - self: true
     delay: 0.1
@@ -36,7 +36,15 @@
 
 - prefab: Player
   type: poke, p_player_help_3
-  command: s !unstuck - Die (after confirmation).
+  command: s !unstuck - Die (after confirmation)
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_4
+
+- prefab: Player
+  type: poke, p_player_help_4
+  command: s !MytreeRanaWay{3,30} - Rotate trees
 
 # !help-keys
 - prefab: Player
@@ -118,6 +126,42 @@
   type: poke, p_player_help_groups_3
   command: s /leave
 
+# !help-trees
+- prefab: Player
+  type: say, !help-trees
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_trees_0
+
+- prefab: Player
+  type: poke, p_player_help_trees_0
+  command: s !MytreeRanaWay3 rotates nearest plantable tree 3 degrees.  Crosshairs ignored.
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_trees_1
+
+- prefab: Player
+  type: poke, p_player_help_trees_1
+  command: s !MytreeRanaWay30 rotates nearest plantable tree 30 degrees.  Crosshairs ignored.
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_trees_2
+
+- prefab: Player
+  type: poke, p_player_help_trees_2
+  command: s Rotating trees removes support from all dependent pieces!  All will break!
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_trees_3
+
+- prefab: Player
+  type: poke, p_player_help_trees_3
+  command: s Requires Owned and Inactive Ward.
+
 ### Player commands - random 100
 - prefab: Player
   type: say, !roll
@@ -167,6 +211,93 @@
   data: d_killme_confirm_rst
   injectData: true
 
+### Player commands - rotate trees 3 or 30 degrees at a time (for Ian).
+# WILL DESTROY AND PIECES DEPENDING ON TREE FOR SUPPORT!
+# Only works if owned and inactive ward within range.
+- prefab: Player
+  type: say, !MytreeRanaWay3
+  objects:
+  - guard_stone, 37, d_ward_owned_inactive
+  poke:
+  - prefab: FirTree
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree3
+  - prefab: Pinetree_01
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree3
+  - prefab: Beech1
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree3
+  - prefab: Birch1
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree3
+  - prefab: Birch2
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree3
+  - prefab: Oak1
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree3
+
+- prefab: Player
+  type: say, !MytreeRanaWay30
+  objects:
+  - guard_stone, 37, d_ward_owned_inactive
+  poke:
+  - prefab: FirTree
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree30
+  - prefab: Pinetree_01
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree30
+  - prefab: Beech1
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree30
+  - prefab: Birch1
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree30
+  - prefab: Birch2
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree30
+  - prefab: Oak1
+    maxDistance: 5
+    limit: 1
+    parameter: p_player_rotate_tree30
+
+- prefab: Player
+  types:
+  - say, !MytreeRanaWay3
+  - say, !MytreeRanaWay30
+  fallback: true
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, Tree rotation blocked - requires Owned and Inactive Ward
+    3: int, 0
+
+- prefab: FirTree, Pinetree_01, Beech1, Birch1, Birch2, Oak1
+  type: poke, p_player_rotate_tree3
+  remove: true
+  spawns:
+  - <prefab>, 0,0,0, 3,0,0
+
+- prefab: FirTree, Pinetree_01, Beech1, Birch1, Birch2, Oak1
+  type: poke, p_player_rotate_tree30
+  remove: true
+  spawns:
+  - <prefab>, 0,0,0, 30,0,0
+
 ##############################################################
 # No drops from (distant) monster kill
 - prefab: ItemDrop
@@ -181,7 +312,31 @@
 # credit:  onnan (and I know DhakhaR hates fish too)
 - prefab: Fish1, Fish2, Fish3, Fish4_cave, Fish5, Fish6, Fish7, Fish8, Fish9, Fish10, Fish11, Fish12
   type: create
+  biomes: Meadows, Blackforest, Swamp, Mountain, Plains, Mistlands, AshLands, DeepNorth
   remove: true
+  bannedObjects:
+  - Player, 100, equip_fishrod
+  maxY: 30
+
+# let 2 fish hang out in Ocean, for ambiance.
+- prefab: Fish1, Fish2, Fish3, Fish4_cave, Fish5, Fish6, Fish7, Fish8, Fish9, Fish10, Fish11, Fish12
+  type: create
+  biomes: Ocean
+  remove: true
+  objects:
+  - Fish1, 100
+  - Fish2, 100
+  - Fish3, 100
+  - Fish4_cave, 100
+  - Fish5, 100
+  - Fish6, 100
+  - Fish7, 100
+  - Fish8, 100
+  - Fish9, 100
+  - Fish10, 100
+  - Fish11, 100
+  - Fish12, 100
+  objectsLimit: 2  
   bannedObjects:
   - Player, 100, equip_fishrod
   maxY: 30
@@ -536,6 +691,7 @@
 # Within ward radius (default 32), any player action starts poke loop.  fallback to lower priorit vs. other processes.
 - prefab: Player
   type: state, *
+  fallback: true
   objects:
   - guard_stone, 32
   bannedObjects:
@@ -545,7 +701,6 @@
     maxDistance: 32
     limit: 1
     parameter: p_ward_no_fall_dmg_start
-  fallback: true
 
 # initial poke creates stone_marker_savheim, then enters main loop.
 # stone_marker_savheim used to avoid every player action triggering more loops.
@@ -606,6 +761,7 @@
     parameter: p_remove_marker
 - prefab: Player
   type: state, *
+  fallback: true
   objects:
   - stone_marker_savheim, 32
   bannedObjects:
@@ -614,7 +770,6 @@
   - prefab: stone_marker_savheim
     maxDistance: 32
     parameter: p_remove_marker
-  fallback: true
 
 ##############################################################
 # Orange Crystal Arrow - Torch arrow!
@@ -644,6 +799,7 @@
 # failsafe
 - prefab: Player
   type: state, *
+  fallback: true
   objects:
   - CL_Raw_Orange_arrow, 32
   bannedObjects:
@@ -652,7 +808,6 @@
   - prefab: CL_Raw_Orange_arrow
     maxDistance: 32
     parameter: p_remove_light
-  fallback: true
 
 ##############################################################
 # Ships (and carts)

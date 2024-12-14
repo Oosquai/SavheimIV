@@ -80,6 +80,25 @@
   forestTresholdMax: 99
   exteriorRadius: 8
   clearArea: true
+
+- prefab: BogWitch_Camp
+  enabled: true
+  biome: Swamp
+  biomeArea: median
+  quantity: 10
+  minDistance: 0.3
+  maxDistance: 0.8
+  minAltitude: 1
+  prioritized: true
+  unique: true
+  minDistanceFromSimilar: 1000
+  iconPlaced: BogWitch_Camp
+  randomRotation: true
+  maxTerrainDelta: 2
+  exteriorRadius: 24
+  clearArea: true
+  noBuild: true
+
 - prefab: Grave1
   enabled: true
   biome: Swamp
@@ -1883,23 +1902,6 @@
   maxTerrainDelta: 2
   exteriorRadius: 15
   clearArea: true
-- prefab: BogWitch_Camp
-  enabled: true
-  biome: Swamp
-  biomeArea: median
-  quantity: 10
-  minDistance: 0.3
-  maxDistance: 0.8
-  minAltitude: 1
-  prioritized: true
-  unique: true
-  minDistanceFromSimilar: 1000
-  iconPlaced: BogWitch_Camp
-  randomRotation: true
-  maxTerrainDelta: 2
-  exteriorRadius: 24
-  clearArea: true
-  noBuild: true
 
 - prefab: MWL_ForestForge1
   enabled: true
@@ -2017,4 +2019,16 @@
   minDistanceFromSimilar: 900
   maxTerrainDelta: 2
   exteriorRadius: 5
+  clearArea: true
+
+- prefab: MWL_GoblinCave1
+  enabled: true
+  biome: Plains
+  quantity: 20
+  minDistance: 0.05
+  minAltitude: 0
+  prioritized: true
+  group: PlainsCave
+  minDistanceFromSimilar: 900
+  exteriorRadius: 20
   clearArea: true

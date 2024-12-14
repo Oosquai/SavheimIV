@@ -1200,94 +1200,26 @@
   - name: RPC_Damage
     1: hit, lightning=<par2> dodge=true block=true
 
-#####################################
-## Elder
-## Elder Tentaroots move around - creepy!  (Thanks, Raaka!)
-#- prefab: TentaRoot
-#  type: create
-#  biomes: DeepNorth
-#  filter: not_tamed_dn
-#  objects:
-#  - gd_king, 100
-#  data: TentaRootMover_dnrl
-#
-## tentaroots slime nearby players when they attack.  (Thanks, Raaka!)
-#- prefab: TentaRoot
-#  type: state, *
-#  biomes: DeepNorth
-#  poke: 
-#  - prefab: Player, creature
-#    limit: 5
-#    maxDistance: 4.1
-#    delay: 1.45
-#    parameter: tentarootslimed
-#    
-#- prefab: Player
-#  type: poke, tentarootslimed
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, status=Slimed dodge=true block=true
-#
-#- prefab: creature
-#  type: poke, tentarootslimed
-#  filter: tamed_dn
-#  objectRpc:
-#  - name: RPC_Damage
-#    1: hit, status=Slimed dodge=true block=true
-
 ########################################################################
 # DEBUG
 ########################################################################
-#- prefab: Player
-#  type: say, test
-#  poke:
-#  - prefab: Player
-#    maxDistance: 1
-#    limit: 1
-#    delay: 1
-#    parameter: p_boss_loot_dn_roguelite <Coins>
-## DEBUG - remove all item drops, including anything a player throws on the ground!
-#- prefab: ItemDrop
-#  type: create
-#  biomes: DeepNorth
-#  command: s removed drop <prefab>!
-#  remove: true
-#
-## remove normal loot table - really only needed if making him 50 stars, which we're not.
-#- prefab: eikthyr_ragdoll
-#  type: create
-#  remove: true
-#  spawn: <prefab>, 0,0,0, 0,0,0, d_empty_data_dn, 0, true
-#
-## debug
-#- prefab: Player
-#  type: say, test
-#  poke:
-#  - prefab: Player
-#    parameter: testVG <vgNums> <vgNums> <vgNums>
-#
-#- prefab: Player
-#  type: poke, testVG
-#  command: s <par1> <par2> <par3>
-#
-## debug
 #- prefab: Player
 #  type: say, rl_set
 #  data: d_player_roguelite_start
 #  injectData: true
 #  command: s roguelite status ON
-- prefab: Player
-  type: say, rl_clear
-  data: d_player_roguelite_clear
-  injectData: true
-  command: s roguelite status OFF
-  poke:
-  - prefab: deer_ragdoll
-    maxDistance: 100
-    parameter: p_dn_deer_ragdoll_remove
-- prefab: Player
-  type: say, rl_stats
-  command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
+#- prefab: Player
+#  type: say, rl_clear
+#  data: d_player_roguelite_clear
+#  injectData: true
+#  command: s roguelite status OFF
+#  poke:
+#  - prefab: deer_ragdoll
+#    maxDistance: 100
+#    parameter: p_dn_deer_ragdoll_remove
+#- prefab: Player
+#  type: say, rl_stats
+#  command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
 #- prefab: Player
 #  type: say, rl_spawn
 #  spawns:

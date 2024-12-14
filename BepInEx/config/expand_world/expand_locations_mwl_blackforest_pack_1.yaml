@@ -20,7 +20,6 @@
   prioritized: true
   group: Ruins_medium
   minDistanceFromSimilar: 512
-  discoverLabel: Midgard Outpost
   maxTerrainDelta: 2
   exteriorRadius: 12.5
   randomDamage: true
@@ -48,7 +47,6 @@
   prioritized: true
   group: Ruins_medium
   minDistanceFromSimilar: 400
-  discoverLabel: Midgard Outpost
   maxTerrainDelta: 2
   exteriorRadius: 8
   randomDamage: true
@@ -77,7 +75,6 @@
   prioritized: true
   group: Wood_small
   minDistanceFromSimilar: 256
-  discoverLabel: Skald's Respite
   maxTerrainDelta: 2
   exteriorRadius: 12
   randomDamage: true
@@ -91,7 +88,6 @@
   prioritized: true
   group: Wood_small
   minDistanceFromSimilar: 256
-  discoverLabel: Midgard Scout Tower
   maxTerrainDelta: 2
   exteriorRadius: 8
   randomDamage: true

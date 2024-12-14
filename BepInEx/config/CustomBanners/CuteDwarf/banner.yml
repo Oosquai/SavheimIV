@@ -1,0 +1,24 @@
+prefab_name: piece_banner_cute_dwarf
+display_name: Diggy Hole
+alt_banner: true
+recipe:
+- m_prefabName: FineWood
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: LeatherScraps
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: Coal
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: Stone
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0

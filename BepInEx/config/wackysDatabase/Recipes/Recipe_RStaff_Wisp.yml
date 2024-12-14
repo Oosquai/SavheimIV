@@ -1,6 +1,6 @@
 name: RStaff_Wisp
 clonePrefabName: Staff_Wisp
-craftingStation: $piece_blackforge
+craftingStation: $bmr_spell_table
 minStationLevel: 1
 maxStationLevelCap: 3
 repairStation: 

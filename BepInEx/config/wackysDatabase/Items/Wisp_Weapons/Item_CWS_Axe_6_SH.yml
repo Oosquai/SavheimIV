@@ -1,7 +1,7 @@
 name: CWS_Axe_6_SH
 m_weight: 2
 m_name: Misthew
-m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>stamina regeneration</color> to nearby allies for a brief duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>stamina regeneration</color> to short-range allies for a medium duration.
 clonePrefabName: CWS_Axe_6
 mockName: 
 customIcon: 

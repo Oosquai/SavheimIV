@@ -37,84 +37,17 @@
   ints:
   - i_wisp_altar, 1
 
-- name: d_wisp_altar_enable
-  strings:
-  - OfferingBowl.m_name, Wisp Altar
-  - OfferingBowl.m_bossItem, Wispheart
-  - OfferingBowl.m_wrongOfferText, The skies reject your offer
-
 - name: d_wisp_altar_disable
   strings:
   - OfferingBowl.m_name, Wisp Altar <color=red>(Inactive)</color>
   - OfferingBowl.m_bossItem, Unobtainium
   - OfferingBowl.m_wrongOfferText, This altar has been used recently.  The skies lie dormant for now.
 
-- name: d_wisp_lights_enable
-  floats:
-  - LightLod.m_lightDistance, 100
-
 - name: d_wisp_lights_disable
   floats:
   - LightLod.m_lightDistance, 0
 
-- name: d_surt_picked_set
-  ints:
-  - picked, 1
-
-- name: d_surt_picked_rst
-  ints:
-  - picked, 0
-
-- name: d_serpent_lavarr_check
-  strings:
-  - Humanoid.m_name, Lavarr
-
-- name: d_serpent_lavarr_set
-  ints:
-  - MonsterAI.m_sleeping, 1
-  floats:
-  - MonsterAI.m_wakeupRange, 15
-  strings:
-  - Humanoid.m_name, Lavarr
-
-# loot
-- valueGroup: vWispWeapons
-  values:
-  - CWS_Atgeir_3_SH
-  - CWS_TH_Sword_5_SH
-  - CWS_Sword_1_SH
-  - Staff_Wisp
-  - BattleaxeCrystal_Wisp
-  - CWS_Sledge_6_SH
-  - CWS_Mace_7_SH
-  - CWS_Dagger_9_SH
-  - CWS_Axe_6_SH
-
-- name: d_wisp_weapons_loot
-  items:
-  - pos: 0, 0
-    prefab: Coins
-    stack: 151;249
-  - pos: 1, 0
-    prefab: RS_EtherPotion
-    stack: 1
-  - pos: 2, 0
-    prefab: <par1>
-    stack: 1
-
-- name: d_wisp_barrel_loot
-  items:
-  - pos: 0, 0
-    prefab: BoneFragments
-    stack: 1;3
-  - pos: 1, 0
-    prefab: Coins
-    stack: 3;7
-  - pos: 2, 0
-    prefab: RS_EtherPotion
-    stack: 1
-
-# Wisp Weapon filters
+# Wisp Weapon equipped filters
 - name: d_wisp_weapon_battleaxe
   hashes:
   - RightItem, BattleaxeCrystal_Wisp
@@ -151,7 +84,7 @@
   hashes:
   - RightItem, Staff_Wisp
 
-# Wisp Weapon buff cooldowns
+# Wisp Weapon buff cooldown flags
 - name: d_wisp_buff_cd_atgeir_set
   ints:
   - i_wisp_buff_cd_atgeir, 1

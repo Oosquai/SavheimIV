@@ -4,13 +4,36 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/11/24</color>
-- More updates to Deep North locations.
-- Updates to Ocean locations.
-- Added Wisp weapons and associated quest.
+     0\  Savheim IV Patch Notes, 12/13/24</color>
+- Deep North and Ocean location updates.
+- New custom banners by Kry!  They're amazing!!  Thank you!
+- Ocean no longer freezes during Winter.
+- Removed LocationReset mod.
+- Added Cron Job mod, but haven't configured yet.
+- Added player command for rotating trees, for Ian.  Say !help in game.
+- Improved logic for Wet+Frost interaction.
+- Cleaned up Wisp Weapon logic.
+- Moved Bog Witch camp location spawn up in sequence to give better spawn chances.
+- Removed discoverLabels from custom locations.
+- Populated Ocean.
+- Allowed 2 whole fish to spawn in Ocean only.
+- Added Lightning damage to Ghosts and Seeker Broods.
+- Added Frost damage to Wraiths.
+- Added ability for Ticks to make you Wet if they latch onto you.
+- Cleaned up some type: state, * code in mulitple files to reduce conflicts.
+- Tightened up Slimed timing range on TentaRoot attacks.
+- Rewrote code for making creatures Wet in weather that makes players Wet.
+- Increased priority for unique dual axe effect.
+- Increased range of Wisp Staff secondary.
+- Clarified tooltips on Wisp Weapons to better explain ranges and durations.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/11/24
+- More updates to Deep North locations.
+- Updates to Ocean locations.
+- Added Wisp weapons and associated quest.
 
 Patch Notes, 12/9/24
 - Lots of updates to Deep North locations.

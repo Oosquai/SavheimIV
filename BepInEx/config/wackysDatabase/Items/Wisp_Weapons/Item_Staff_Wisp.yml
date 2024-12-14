@@ -1,7 +1,7 @@
 name: Staff_Wisp
 m_weight: 0.3
 m_name: Mistshard
-m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>eitr regeneration</color> to nearby allies for a brief duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>eitr regeneration</color> to medium-range allies for a short duration.
 clonePrefabName: StaffIceShards
 mockName: 
 customIcon: 

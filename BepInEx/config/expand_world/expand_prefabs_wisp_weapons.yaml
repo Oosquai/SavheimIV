@@ -43,16 +43,6 @@
     maxDistance: 20
     delay: 3
     parameter: p_wisp_altar_disable
-  - prefab: Pickable_SurtlingCoreStand
-    maxDistance: 20
-    delay: 3
-    parameter: p_wisp_altar_disable
-  - prefab: TreasureChest_plains_stone
-    maxDistance: 95
-    parameter: p_wisp_altar_set_loot_cave <vWispWeapons>
-  - prefab: RS_Barrel_2
-    maxDistance: 95
-    parameter: p_wisp_altar_set_loot_barrel
 
 - prefab: piece_groundtorch_mist
   type: poke, p_wisp_teleport_fx
@@ -87,58 +77,6 @@
 - prefab: LocationProxy
   type: poke, p_wisp_altar_disable
   data: d_wisp_altar_disable
-
-#- prefab: Pickable_SurtlingCoreStand
-#  type: poke, p_wisp_altar_disable
-#  data: d_surt_picked_set
-
-# set loot in containers when player teleports
-- prefab: TreasureChest_plains_stone
-  type: poke, p_wisp_altar_set_loot_cave
-  data: d_wisp_weapons_loot
-  injectData: true
-
-- prefab: RS_Barrel_2
-  type: poke, p_wisp_altar_set_loot_barrel
-  data: d_wisp_barrel_loot
-  injectData: true
-
-####
-## Reset altar when surt cores come back
-## Surt cores set to respawn 5040 minutes, twice as long as other locations
-#- prefab: Player
-#  type: state, *
-#  objects:
-#  - LocationProxy, 100, d_wisp_altar_check
-#  poke:
-#  - prefab: LocationProxy
-#    data: d_wisp_altar_check
-#    limit: 1
-#    parameter: p_wisp_altar_respawn_check
-#
-#- prefab: LocationProxy
-#  type: poke, p_wisp_altar_respawn_check
-#  objects:
-#  - Pickable_SurtlingCoreStand, 10, d_surt_picked_rst
-#  objectsLimit: 4
-#  data: d_wisp_altar_enable
-#  poke:
-#  - self: true
-#    parameter: p_wisp_altar_serpent_respawn
-#  - prefab: CL_Raw_Blue
-#    maxDistance: 20
-#    parameter: p_wisp_altar_enable
-#
-#- prefab: LocationProxy
-#  type: poke, p_wisp_altar_serpent_respawn
-#  bannedObjects:
-#  - Serpent, 100, d_serpent_lavarr_check
-#  spawns:
-#  - Serpent, 0,3.5,1.5, 300,0,0, d_serpent_lavarr_set
-#
-#- prefab: CL_Raw_Blue
-#  type: poke, p_wisp_altar_enable
-#  data: d_wisp_lights_enable
 
 #################################################
 # Wisp Weapons
@@ -428,11 +366,11 @@
   filter: d_wisp_weapon_staff
   poke:
   - prefab: Player
-    maxDistance: 10                              ### BUFF RANGE
+    maxDistance: 20                              ### BUFF RANGE
     parameter: p_wisp_weapon_buff_staff
   - prefab: creature
     data: d_tamed_wisp_weapons
-    maxDistance: 10                              ### BUFF RANGE
+    maxDistance: 20                              ### BUFF RANGE
     parameter: p_wisp_weapon_buff_staff
 
 - prefab: Player, creature

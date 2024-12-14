@@ -1,7 +1,7 @@
 name: CWS_Atgeir_3_SH
 m_weight: 2.5
 m_name: Veilspire
-m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>movement speed</color> to nearby allies for a brief duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>movement speed</color> to short-range allies for a medium duration.
 clonePrefabName: CWS_Atgeir_3
 mockName: 
 customIcon: 

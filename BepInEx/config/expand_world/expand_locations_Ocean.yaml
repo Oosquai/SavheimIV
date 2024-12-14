@@ -3,71 +3,267 @@
 - prefab: brokkr-fort-torment-final-cut-sh
   enabled: true
   biome: Mistlands
-  quantity: 16
+  quantity: 24
   prioritized: true
   group: OceanLocs
-  minDistanceFromSimilar: 1250
+  minDistanceFromSimilar: 1000
   randomRotation: true
-  clearArea: true
   levelArea: false
   groundOffset: -2.2
   maxAltitude: -9
   minAltitude: -13
   maxTerrainDelta: 8
-  discoverLabel: Fort Torment
   iconPlaced: StartTemple
 
-- prefab: floatingisland
+#######################################
+# Floating Islands
+- prefab: floatingisland_atgeir
   enabled: true
   biome: Ocean
-  quantity: 50
+  quantity: 6
   prioritized: true
   noBuild: true
   group: OceanLocs
   maxAltitude: -20
   minAltitude: -40
-  minDistanceFromSimilar: 1500
+  minDistanceFromSimilar: 1000
   randomRotation: true
   iconPlaced: StartTemple
 
-## DEBUG - REMOVE BELOW HERE
-#- prefab: boom-christianruins1
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: loki_chirch3
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: POIBLACKFORESTTOMBRUINS
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: ruins_0_1
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: ruins_0_2
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: ruins_0_3
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: ruins_0
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
-#- prefab: loki_ruins2_vanilla_supports_and_wear
-#  enabled: true
-#  biome: Ocean
-#  quantity: 0
-#
+- prefab: floatingisland_axe
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_battleaxe
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_greatsword
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_knife
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_mace
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_sledge
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_staff
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+- prefab: floatingisland_sword
+  enabled: true
+  biome: Ocean
+  quantity: 6
+  prioritized: true
+  noBuild: true
+  group: OceanLocs
+  maxAltitude: -20
+  minAltitude: -40
+  minDistanceFromSimilar: 1000
+  randomRotation: true
+  iconPlaced: StartTemple
+
+#######################################
+# Ruins
+- prefab: boom-christianruins1
+  enabled: true
+  biome: Ocean
+  quantity: 30
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: false
+  groundOffset: -1.2
+
+- prefab: loki_ruins1
+  enabled: true
+  biome: Ocean
+  quantity: 30
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: false
+  groundOffset: -3
+
+- prefab: loki_ruins2
+  enabled: true
+  biome: Ocean
+  quantity: 30
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: false
+  groundOffset: -1.2
+
+- prefab: ruins_0_and_0_1_and_0_2_and_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 10
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 400
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2.5
+
+- prefab: ruins_0_1_and_0_2_and_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 13
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 300
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2.1
+
+- prefab: ruins_0_and_0_2_and_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 13
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 300
+  randomRotation: true
+  levelArea: false
+  groundOffset: -6
+
+- prefab: ruins_0_and_0_2
+  enabled: true
+  biome: Ocean
+  quantity: 16
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 200
+  randomRotation: true
+  levelArea: false
+  groundOffset: -8.5
+
+- prefab: ruins_0
+  enabled: true
+  biome: Ocean
+  quantity: 19
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 100
+  randomRotation: true
+  levelArea: false
+  groundOffset: -3.2
+
+- prefab: ruins_0_1
+  enabled: true
+  biome: Ocean
+  quantity: 19
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 100
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2
+
+- prefab: ruins_0_2
+  enabled: true
+  biome: Ocean
+  quantity: 19
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 100
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2
+
+- prefab: ruins_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 19
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 100
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2

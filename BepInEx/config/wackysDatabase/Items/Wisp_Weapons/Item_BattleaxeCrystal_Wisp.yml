@@ -1,7 +1,7 @@
 name: BattleaxeCrystal_Wisp
 m_weight: 2.5
 m_name: Shroudcutter
-m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>damage</color> to nearby allies for a brief duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>damage</color> to short-range allies for a medium duration.
 clonePrefabName: BattleaxeCrystal
 mockName: 
 customIcon: 

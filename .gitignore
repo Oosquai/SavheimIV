@@ -20,6 +20,7 @@ BepInEx/DumpedAssemblies
 BepInEx/LogOutput.log
 BepInEx/cache
 BepInEx/plugins/CLIENT_SIDE_DEV_ONLY
+BepInEx/plugins/SERVER_SIDE_ONLY
 BepInEx/config/data
 BepInEx/config/expand_world_backups
 BepInEx/config/wackyDatabase-BulkYML

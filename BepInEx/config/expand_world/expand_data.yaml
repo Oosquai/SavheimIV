@@ -227,3 +227,9 @@
 - name: d_killme_confirm_rst
   ints:
   - i_killme_confirm, 0
+
+- name: d_ward_owned_inactive
+  ints:
+  - enabled, 0
+  longs:
+  - creator, <long_playerID>

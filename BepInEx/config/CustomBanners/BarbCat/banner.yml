@@ -1,0 +1,24 @@
+prefab_name: piece_banner_barb_cat
+display_name: Barbarian Cat
+alt_banner: true
+recipe:
+- m_prefabName: FineWood
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: LeatherScraps
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: Coal
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: Blueberries
+  m_recover: true
+  m_amount: 1
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0

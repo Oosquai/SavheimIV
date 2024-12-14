@@ -1,0 +1,18 @@
+prefab_name: piece_banner_classic_bunny
+display_name: Classic Bunny
+recipe:
+- m_prefabName: FineWood
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: LeatherScraps
+  m_recover: true
+  m_amount: 2
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0
+- m_prefabName: Carrot
+  m_recover: true
+  m_amount: 1
+  m_amountPerLevel: 1
+  m_extraAmountOnlyOneIngredient: 0

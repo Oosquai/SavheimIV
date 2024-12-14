@@ -30,15 +30,14 @@ death by fire:
   - "{player} screams, HELP I'm on Fire!"
 
 death by poison:
-  - "{player} had a tea party with Putin."
-  - "{player} turned brave, then green, then dead."
+  - "{player} got brave, then green, then dead."
   - "{player} is not imunne to iocaine powder."
   - "{player} chose the wrong cup."
   - "{player} needs to make more poison potions, stat!"
   - "{player} had bad gas, then stood downwind."
   - "{player} should wear their mask to prevent more than COVID."
   - "{player} should not have drank the rancid milk."
-  - "{player} did not check the expiration dates."
+  - "{player} did not check the expiration date."
 
 death by frost:
   - "{player} chose to freeze instead of crafting a Torch."

@@ -1,4 +1,95 @@
-# shrub_2, vines, Pickable_ForestCryptRemains04
+- prefab: rock2_heath
+  enabled: true
+  max: 0.1
+  scaleMin: 0.6
+  scaleMax: 1.2
+  randTilt: 120
+  biome: Ocean
+  minAltitude: -150
 
-# floatingisland:  POIBLACKFORESTTOMBRUINS under.  remove tree ... and skeletons?  replace with serpent?  put treasure in tomb.
-# ocean:  scattered ruins_0*, boom-christian..., loki_chirch...
+- prefab: Rock_4
+  enabled: true
+  max: 0.7
+  blockCheck: false
+  scaleMin: 1
+  scaleMax: 1.5
+  randTilt: 120
+  biome: Ocean
+  minAltitude: -150
+
+- prefab: Rock_3
+  enabled: true
+  max: 7
+  scaleMin: 1
+  scaleMax: 2
+  randTilt: 120
+  biome: Ocean
+  minAltitude: -150
+  groupSizeMax: 4
+  groupRadius: 3
+
+- prefab: cliff_mistlands2
+  enabled: true
+  max: 0.5
+  scaleMin: 0.1
+  scaleMax: 0.6
+  randTilt: 120
+  biome: Ocean
+  minAltitude: -150
+
+- prefab: Bush02_en
+  enabled: true
+  min: 0.1
+  max: 12
+  scaleMin: 1.1,1.1,2
+  scaleMax: 2,2,6
+  scaleUniform: false
+  biome: Ocean
+  maxAltitude: -25
+  minAltitude: -150
+  groupSizeMax: 12
+  groupRadius: 6
+
+- prefab: Bush02_en
+  enabled: true
+  max: 4
+  blockCheck: false
+  scaleMin: 1.1,1.1,1.1
+  scaleMax: 1.3,1.3,2
+  scaleUniform: false
+  biome: Ocean
+  minAltitude: -150
+  groupSizeMax: 12
+  groupRadius: 6
+
+- prefab: AshlandsBush1
+  enabled: true
+  max: 4
+  scaleMin: 1.1,1.1,2
+  scaleMax: 2,2,7
+  scaleUniform: false
+  biome: Ocean
+  minAltitude: -150
+  groupSizeMax: 4
+  groupRadius: 3
+
+- prefab: AshlandsBush1
+  enabled: true
+  max: 2
+  blockCheck: false
+  scaleMin: 1.1,1.1,1.1
+  scaleMax: 1.3,1.3,2
+  scaleUniform: false
+  biome: Ocean
+  minAltitude: -150
+  groupSizeMax: 4
+  groupRadius: 3
+
+- prefab: shrub_2
+  enabled: true
+  max: 50
+  blockCheck: false
+  scaleMin: 0.25
+  scaleMax: 2
+  biome: Ocean
+  minAltitude: -150
