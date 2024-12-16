@@ -5,7 +5,7 @@ m_description: The essence of the Wispheart lives within this mythical weapon, g
 clonePrefabName: CWS_Sledge_6
 mockName: 
 customIcon: 
-material: 
+material: weapon_wispweapon_mat
 materials: 
 customVisual: 
 snapshotRotation: 

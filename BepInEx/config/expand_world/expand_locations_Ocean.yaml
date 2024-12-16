@@ -172,6 +172,30 @@
   levelArea: false
   groundOffset: -1.2
 
+- prefab: POISWAMPCASTLERUINS
+  enabled: true
+  biome: Ocean
+  quantity: 30
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: false
+  groundOffset: -1
+
+- prefab: Meadow_Ruins
+  enabled: true
+  biome: Ocean
+  quantity: 30
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: false
+  groundOffset: -4
+
 - prefab: ruins_0_and_0_1_and_0_2_and_0_3
   enabled: true
   biome: Ocean

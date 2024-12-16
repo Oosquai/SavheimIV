@@ -324,6 +324,12 @@
     "requiredGlobalKey": ""
   },
   {
+    "prefab": "Charredskull",
+    "stack": 1,
+    "price": 37,
+    "requiredGlobalKey": ""
+  },
+  {
     "prefab": "TrophyFader",
     "stack": 1,
     "price": 100,

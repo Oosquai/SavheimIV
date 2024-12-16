@@ -472,3 +472,253 @@
 - name: d_againFlying_dn
   ints:
   - Humanoid.m_flying, 1
+
+######################################
+### Loot - Value Groups
+- valueGroup: vWeaponsT7
+  values:
+  - CWS_Axe_4_SH
+  - MaceEldner
+  - CWS_Dagger_10_SH
+  - CWS_Sword_13_SH
+  - SpearSplitner
+  - SwordNiedhogg
+  - CWS_Atgeir_6_SH
+  - CWS_TH_Axe_8_SH
+  - BowAshlands
+  - CWS_Bow_6_SH
+  - BBP_BlackMetalBow_SH
+  - CrossbowRipper
+  - AxeBerzerkr
+  - FistFenrirClawFlametal
+  - KnifeSkollAndHatiFlametal
+  - THSwordSlayer
+  - T7_Reaper
+  - CWS_Sledge_10_SH
+  - BMR_FlametalStaff
+  - BMR_AncientWand
+  - CWS_Heater_Shield_3_SH
+  - CWS_Buckler_Shield_2_SH
+  - ShieldFlametal
+  - ShieldFlametalTower
+
+- valueGroup: vExperienceTomes
+  values:
+  - RS_KnifeExperienceTome
+  - RS_SwordExperienceTome
+  - RS_AxeExperienceTome
+  - RS_BowExperienceTome
+  - RS_CrossbowExperienceTome
+  - RS_SpearExperienceTome
+  - RS_PolearmExperienceTome
+  - RS_ClubExperienceTome
+  - RS_UnarmedExperienceTome
+  - RS_ElementalExperienceTome
+  - RS_BloodExperienceTome
+
+- valueGroup: vPreciousStones
+  values:
+  - Amber
+  - AmberPearl
+  - Ruby
+  - SilverNecklace
+  - BMR_PaperAncient
+
+- valueGroup: vAshlandsGemsAndUpgradeMats
+  values:
+  - GemstoneBlue
+  - GemstoneGreen
+  - GemstoneRed
+  - kg_EnchantScroll_Weapon_S
+  - kg_EnchantScroll_Armor_S
+  - kg_EnchantScroll_Weapon_Blessed_S
+  - kg_EnchantScroll_Armor_Blessed_S
+  - Bezel_T7
+  - DraumheimEssence
+
+- valueGroup: vDnRegenConsumables
+  values:
+  - MeadHealthLingering
+  - MeadHealthMajor
+  - MeadStaminaLingering
+  - MeadEitrLingering
+
+- valueGroup: vDnBuffConsumables
+  values:
+  - HoneyMeadSpeed
+  - HoneyMeadDamage
+  - ct_livingroominabottle
+  - MeadLightfoot
+  - MeadBzerker
+  - MeadSwimmer
+  - MeadStrength
+  - MeadHasty
+
+- valueGroup: vDnFoodConsumables
+  values:
+  - FierySvinstew
+  - MarinatedGreens
+  - SurtrsDelight
+  - KonungrOmelette
+  - BHP_PumpkinPie
+  - PiquantPie
+  - RoastedCrustPie
+  - VolvasBrew
+  - MashedMeat
+  - ScorchingMedley
+  - SizzlingBerryBroth
+  - SpicyMarmalade
+
+- valueGroup: vDnArrowConsumables
+  values:
+  - JC_Crystal_Arrow_Black
+  - JC_Crystal_Arrow_Blue
+  - JC_Crystal_Arrow_Green
+  - JC_Crystal_Arrow_Orange
+  - JC_Crystal_Arrow_Purple
+  - JC_Crystal_Arrow_Red
+  - JC_Crystal_Arrow_Yellow
+  - ArrowCharred
+  - ArrowCarapace
+  - ArrowFire
+  - ArrowFrost
+  - ArrowPoison
+  - BBP_ExplodingArrow_Fire_SH
+  - BBP_ExplodingArrow_Frost_SH
+  - BBP_ExplodingArrow_Poison_SH
+
+- valueGroup: vDnBoltConsumables
+  values:
+  - BoltCharred
+  - CWS_Arrow_1_SH
+  - CWS_Arrow_2_SH
+  - CWS_Arrow_3_SH
+  - CWS_Arrow_4_SH
+  - CWS_Arrow_5_SH
+  - BBP_ExplodingBolt_Fire_SH
+  - BBP_ExplodingBolt_Frost_SH
+  - BBP_ExplodingBolt_Poison_SH
+
+- valueGroup: vDnRareMaterials
+  values:
+  - MoltenCore
+  - Wispheart
+
+### Loot - Treasure Chest Profiles
+- name: d_treasurechest_dn_materials
+  itemAmount: 3;6
+  items:
+  - prefab: Iron
+    chance: 1
+    stack: 3;7
+  - prefab: Copper
+    chance: 1
+    stack: 6;13
+  - prefab: Bronze
+    chance: 1
+    stack: 3;6
+  - prefab: BlackMetal
+    chance: 0.7
+    stack: 3;7
+  - prefab: Silver
+    chance: 0.7
+    stack: 3;6
+  - prefab: Tin
+    chance: 0.5
+    stack: 1;3
+  - prefab: LeatherScraps
+    chance: 0.5
+    stack: 3;6
+  - prefab: DeerHide
+    chance: 0.5
+    stack: 2;4
+  - prefab: FineWood
+    chance: 0.5
+    stack: 9;14
+  - prefab: YggdrasilWood
+    chance: 0.4
+    stack: 6;12
+  - prefab: RS_FishingExperienceTome
+    chance: 0.2
+    stack: 1
+  - prefab: BlackCore
+    chance: 0.3
+    stack: 1;2
+
+- name: d_treasurechest_dn_consumables
+  itemAmount: 3;5
+  items:
+  - prefab: Coins
+    chance: 1
+    stack: 77;149
+  - prefab: BMR_PaperAncient
+    chance: 0.5
+    stack: 10;17
+  - prefab: <par1>           # vDnRegenConsumables
+    chance: 0.5
+    stack: 3;6
+  - prefab: <par2>           # vDnBuffConsumables
+    chance: 0.5
+    stack: 2;3
+  - prefab: <par3>           # vDnFoodConsumables
+    chance: 0.5
+    stack: 3;6
+  - prefab: <par4>           # vDnArrowConsumables
+    chance: 0.5
+    stack: 14;24
+  - prefab: <par5>           # vDnBoltConsumables
+    chance: 0.5
+    stack: 14;24
+
+- name: d_treasurechest_dn_weapons
+  itemAmount: 4;5
+  items:
+  - prefab: Coins
+    chance: 1
+    stack: 201;399
+  - prefab: <par1>           # vExperienceTomes
+    chance: 1
+    stack: 1
+  - prefab: <par2>           # vAshlandsGemsAndUpgradeMats
+    chance: 1
+    stack: 1;2
+  - prefab: <par3>           # vAshlandsGemsAndUpgradeMats
+    chance: 0.5
+    stack: 1
+  - prefab: <par4>           # vWeaponsT7
+    chance: 0.5
+    stack: 1
+  - prefab: <par5>           # vPreciousStones
+    chance: 0.5
+    stack: 2;5
+  - prefab: <par6>           # vDnRareMaterials
+    chance: 0.25
+    stack: 1
+  - prefab: JC_Gacha_Coins
+    chance: 0.1
+    stack: 1
+
+- name: d_treasurechest_dn_rares
+  itemAmount: 4;5
+  items:
+  - prefab: Coins
+    chance: 1
+    stack: 361;499
+  - prefab: JC_Gacha_Coins
+    chance: 0.5
+    stack: 1;2
+  - prefab: <par1>           # vExperienceTomes
+    chance: 0.5
+    stack: 1
+  - prefab: <par2>           # vAshlandsGemsAndUpgradeMats
+    chance: 0.5
+    stack: 2;4
+  - prefab: <par3>           # vAshlandsGemsAndUpgradeMats
+    chance: 0.5
+    stack: 2;3
+  - prefab: <par4>           # vWeaponsT7
+    chance: 0.5
+    stack: 1
+  - prefab: <par5>           # vDnRareMaterials
+    chance: 1
+    stack: 1

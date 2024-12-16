@@ -36,10 +36,15 @@
   floats:
   - MonsterAI.m_hearRange, 100
 
-- name: d_sfx_scout_yell
+- name: d_sfx_scout_yell_idle
   floats:
-  - ZSFX.m_minPitch, 1.2
-  - ZSFX.m_maxPitch, 1.6
+  - ZSFX.m_minPitch, 1.6
+  - ZSFX.m_maxPitch, 1.8
+
+- name: d_sfx_scout_yell_screech
+  floats:
+  - ZSFX.m_minPitch, 0.8
+  - ZSFX.m_maxPitch, 0.9
 
 - name: greenroots_heal_pitch_1
   floats:

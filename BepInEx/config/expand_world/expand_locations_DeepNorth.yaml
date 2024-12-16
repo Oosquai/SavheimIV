@@ -1,7 +1,7 @@
 ###################################################
 # Deep North structures
 - prefab: citadel-v2_2
-  enabled: true
+  enabled: false
   biome: DeepNorth
   quantity: 1
   prioritized: true
@@ -24,7 +24,7 @@
   minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  levelArea: false
+  levelArea: true
   groundOffset: -12
   maxAltitude: 70
   minAltitude: 12

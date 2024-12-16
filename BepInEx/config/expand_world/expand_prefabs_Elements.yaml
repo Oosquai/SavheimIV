@@ -154,8 +154,8 @@
   - self: true
     parameter: p_elemental_wet_lightning_stagger <par1>
 
-# Bosses immune to stagger, but can still spread
-- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+# Bosses (and serpents!) immune to stagger, but can still spread
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Serpent, BonemawSerpent
   type: poke, p_elemental_wet_lightning_stagger
   weight: 1E30  
 
@@ -443,3 +443,111 @@
 - prefab: vfx_Burning, vfx_Poison
   type: poke, p_elemental_fire_poison_vfx_remove
   remove: true
+
+###############################################################
+# Elements Combos
+####################################################
+# Ghosts do a small amount of Lightning damage
+- prefab: Ghost
+  types:
+  - state, punch0
+  - state, punch1
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    delay: 0.5
+    parameter: p_ghost_lightning_damage
+
+- prefab: Player
+  type: poke, p_ghost_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=10 dodge=true block=true
+
+####################################################
+# Wraiths do a small amount of Frost damage
+- prefab: Wraith
+  type: state, attack
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    delay: 0.7
+    parameter: p_wraith_frost_damage
+
+- prefab: Player
+  type: poke, p_wraith_frost_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=16 dodge=true block=true
+
+####################################################
+# Serpents do a small amount of Lightning damage
+- prefab: Serpent
+  type: state, attack
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3.5
+    delay: 1
+    parameter: p_serpent_lightning_damage
+
+- prefab: Player
+  type: poke, p_serpent_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=16 dodge=true block=true
+
+####################################################
+# Ticks make you Wet if they attach to you
+- prefab: Tick
+  type: state, attach
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    parameter: p_tick_make_wet
+
+- prefab: Player
+  type: poke, p_tick_make_wet
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, Wet
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+####################################################
+# Seeker Brood do a small amount of Lightning damage
+- prefab: SeekerBrood
+  type: state, attack_pincers
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3
+    delay: 0.7
+    parameter: p_seekerbrood_lightning_damage
+
+- prefab: Player
+  type: poke, p_seekerbrood_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=24 dodge=true block=true
+
+####################################################
+# Bonemaw Serpents do a small amount of Lightning damage
+- prefab: BonemawSerpent
+  type: state, attack_bite
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 3.5
+    delay: 1
+    parameter: p_bonemawserpent_lightning_damage
+
+- prefab: Player
+  type: poke, p_bonemawserpent_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=32 dodge=true block=true

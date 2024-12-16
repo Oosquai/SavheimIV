@@ -1259,3 +1259,65 @@
   type: state, wakeup
   biomes: DeepNorth
   data: d_againFlying_dn
+
+#############################################################
+# Deep North Treasure Chests
+# TreasureChest_charredfortress - rares
+# TreasureChest_ashland_stone - weapons
+# TreasureChest_plains_stone - consumables
+# TreasureChest_plainsfortress_hildir - materials  (or TreasureChest_blackforest)
+## Rares
+#- prefab: TreasureChest_charredfortress
+#  type: create
+#  biomes: DeepNorth
+#  weight: 1E30
+#  poke:
+#  - self: true
+#    parameter: p_treasurechest_dn_rares <vExperienceTomes> <vAshlandsGemsAndUpgradeMats> <vAshlandsGemsAndUpgradeMats> <vWeaponsT7> <vDnRareMaterials>
+#
+#- prefab: TreasureChest_charredfortress
+#  type: poke, p_treasurechest_dn_rares
+#  data: d_treasurechest_dn_rares
+#  injectData: true
+
+# Weapons
+- prefab: TreasureChest_ashland_stone
+  type: create
+  biomes: DeepNorth
+  weight: 1E30
+  poke:
+  - self: true
+    parameter: p_treasurechest_dn_weapons <vExperienceTomes> <vAshlandsGemsAndUpgradeMats> <vAshlandsGemsAndUpgradeMats> <vWeaponsT7> <vPreciousStones>
+
+- prefab: TreasureChest_ashland_stone
+  type: poke, p_treasurechest_dn_weapons
+  data: d_treasurechest_dn_weapons
+  injectData: true
+
+# Consumables
+- prefab: TreasureChest_plains_stone
+  type: create
+  biomes: DeepNorth
+  weight: 1E30
+  poke:
+  - self: true
+    parameter: p_treasurechest_dn_consumables <vDnRegenConsumables> <vDnBuffConsumables> <vDnFoodConsumables> <vDnArrowConsumables> <vDnBoltConsumables>
+
+- prefab: TreasureChest_plains_stone
+  type: poke, p_treasurechest_dn_consumables
+  data: d_treasurechest_dn_consumables
+  injectData: true
+
+# Materials
+- prefab: TreasureChest_plainsfortress_hildir
+  type: create
+  biomes: DeepNorth
+  weight: 1E30
+  poke:
+  - self: true
+    parameter: p_treasurechest_dn_materials
+
+- prefab: TreasureChest_plainsfortress_hildir
+  type: poke, p_treasurechest_dn_materials
+  data: d_treasurechest_dn_materials
+  injectData: true

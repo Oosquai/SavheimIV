@@ -460,9 +460,8 @@
   spawns:
   - vfx_blocked, 0,0,1.3
   - vfx_perfectblock, 0,0,1.3
-  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell, 0
-  - sfx_fallenvalkyrie_taunt, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.2
-  - sfx_fallenvalkyrie_screech, 0,0,0, 0,0,0, d_sfx_scout_yell, 0.4
+  - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell_idle
+  - sfx_boar_alerted, 0,0,0, 0,0,0, d_sfx_scout_yell_screech
   poke:
   - self: true
     delay: <par1>
@@ -969,80 +968,6 @@
   - self: true
     delay: 1
     parameter: p_creature_root_resist
-
-###############################################################
-# Elements Combos
-####################################################
-# Ghosts do a small amount of Lightning damage
-- prefab: Ghost
-  types:
-  - state, punch0
-  - state, punch1
-  poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 3
-    delay: 0.5
-    parameter: p_ghost_lightning_damage
-
-- prefab: Player
-  type: poke, p_ghost_lightning_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=10 dodge=true block=true
-
-####################################################
-# Wraiths do a small amount of Frost damage
-- prefab: Wraith
-  type: state, attack
-  poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 3
-    delay: 0.7
-    parameter: p_wraith_frost_damage
-
-- prefab: Player
-  type: poke, p_wraith_frost_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, frost=16 dodge=true block=true
-
-####################################################
-# Ticks make you Wet if they attach to you
-- prefab: Tick
-  type: state, attach
-  poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 3
-    parameter: p_tick_make_wet
-
-- prefab: Player
-  type: poke, p_tick_make_wet
-  objectRpc:
-  - name: RPC_AddStatusEffect
-    1: hash, Wet
-    2: bool, true
-    3: int, 1
-    4: float, 1
-
-####################################################
-# Seeker Brood do a small amount of Lightning damage
-- prefab: SeekerBrood
-  type: state, attack_pincers
-  poke:
-  - prefab: Player
-    limit: 1
-    maxDistance: 3
-    delay: 0.7
-    parameter: p_seekerbrood_lightning_damage
-
-- prefab: Player
-  type: poke, p_seekerbrood_lightning_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=24 dodge=true block=true
 
 ###############################################################
 # Boss tweaks

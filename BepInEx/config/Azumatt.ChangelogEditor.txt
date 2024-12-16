@@ -4,7 +4,25 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/13/24</color>
+     0\  Savheim IV Patch Notes, 12/16/24</color>
+- Update to PerfectPlacement mod now forcing build indicators.  Undecided whether we like them...
+- Updates to Ocean and Deep North locations - done!  I think?
+- Experience Tomes now attempt to give enough experience to reach the next level.
+- You can now sell Charred Skulls to vendors.
+- Improved sound effects for scout creature yells.
+- Overhauled treasure chest content generation for Deep North.
+- Added Serpents and Bonemaw Serpents to lightning+wet immunity list.
+- Added small amount of lightning damage to Serpent and Bonemaw Serpent attacks.
+- Moved extra elemental damage for specific creatures code from Creatures to Elements files.
+- Reduced minimum scaling for some plants in Ocean.
+- You can now press Spacebar to advance loading screen tips, except during initial character load.
+- Updated materials on Wips Weapons to give them all a blue tint.
+- Modified recipe for Mead base: Vananidir to use Raw Fish instead of Perch.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/13/24
 - Deep North and Ocean location updates.
 - New custom banners by Kry!  They're amazing!!  Thank you!
 - Ocean no longer freezes during Winter.
@@ -26,9 +44,6 @@
 - Increased priority for unique dual axe effect.
 - Increased range of Wisp Staff secondary.
 - Clarified tooltips on Wisp Weapons to better explain ranges and durations.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 12/11/24
 - More updates to Deep North locations.
