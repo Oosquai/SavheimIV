@@ -104,7 +104,7 @@
   minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -5
+  groundOffset: -10.5
   levelArea: false
   maxAltitude: 0
   minAltitude: -2
@@ -120,7 +120,7 @@
   minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  groundOffset: -7
+  groundOffset: -8.5
   levelArea: false
   maxAltitude: 70
   minAltitude: 6
