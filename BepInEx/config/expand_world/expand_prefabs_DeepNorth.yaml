@@ -1265,7 +1265,8 @@
 # TreasureChest_charredfortress - rares
 # TreasureChest_ashland_stone - weapons
 # TreasureChest_plains_stone - consumables
-# TreasureChest_plainsfortress_hildir - materials  (or TreasureChest_blackforest)
+# TreasureChest_plainsfortress_hildir - materials
+# TreasureChest_meadows - low quality
 ## Rares
 #- prefab: TreasureChest_charredfortress
 #  type: create
@@ -1287,7 +1288,7 @@
   weight: 1E30
   poke:
   - self: true
-    parameter: p_treasurechest_dn_weapons <vExperienceTomes> <vAshlandsGemsAndUpgradeMats> <vAshlandsGemsAndUpgradeMats> <vWeaponsT7> <vPreciousStones>
+    parameter: p_treasurechest_dn_weapons <vExperienceTomes> <vAshlandsGemsAndUpgradeMats> <vAshlandsGemsAndUpgradeMats> <vWeaponsT7> <vPreciousStones> <vDnRareMaterials>
 
 - prefab: TreasureChest_ashland_stone
   type: poke, p_treasurechest_dn_weapons
@@ -1320,4 +1321,18 @@
 - prefab: TreasureChest_plainsfortress_hildir
   type: poke, p_treasurechest_dn_materials
   data: d_treasurechest_dn_materials
+  injectData: true
+
+# Low Quality
+- prefab: TreasureChest_meadows
+  type: create
+  biomes: DeepNorth
+  weight: 1E30
+  poke:
+  - self: true
+    parameter: p_treasurechest_dn_low_quality
+
+- prefab: TreasureChest_meadows
+  type: poke, p_treasurechest_dn_low_quality
+  data: d_treasurechest_dn_low_quality
   injectData: true

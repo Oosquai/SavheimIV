@@ -128,16 +128,16 @@
   quantity: 30
   minAltitude: -0.5
   group: SwampRuin
-  minDistanceFromSimilar: 200
+  minDistanceFromSimilar: 175
   randomRotation: true
-  maxTerrainDelta: 3
+  maxTerrainDelta: 4
   exteriorRadius: 10
   clearArea: true
   randomDamage: true
 - prefab: FireHole
   enabled: true
   biome: Swamp
-  biomeArea: median
+#  biomeArea: median
   quantity: 75
   minAltitude: -1
   group: FireHole
@@ -891,7 +891,7 @@
   minAltitude: 100
   minDistanceFromSimilar: 256
   randomRotation: true
-  maxTerrainDelta: 3
+  maxTerrainDelta: 4
   exteriorRadius: 14
   randomDamage: true
 - prefab: ShipWreck01
@@ -977,7 +977,7 @@
   quantity: 100
   minAltitude: 100
   group: Runestones
-  minDistanceFromSimilar: 128
+  minDistanceFromSimilar: 90
   randomRotation: true
   maxTerrainDelta: 3
   exteriorRadius: 8
@@ -1092,7 +1092,7 @@
   minAltitude: 5
   maxAltitude: 60
   group: tarpit
-  minDistanceFromSimilar: 128
+  minDistanceFromSimilar: 112
   randomRotation: true
   maxTerrainDelta: 1.5
   forestTresholdMax: 0
@@ -1121,7 +1121,7 @@
   minAltitude: 100
   maxAltitude: 5000
   group: mountaincaves
-  minDistanceFromSimilar: 200
+  minDistanceFromSimilar: 150
   slopeRotation: true
   maxTerrainDelta: 40
   forestTresholdMax: 0

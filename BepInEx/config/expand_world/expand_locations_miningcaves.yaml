@@ -16,6 +16,6 @@
   maxAltitude: 2000
   prioritized: true
   randomRotation: true
-  maxTerrainDelta: 2
+  maxTerrainDelta: 3
   exteriorRadius: 16
   clearArea: true

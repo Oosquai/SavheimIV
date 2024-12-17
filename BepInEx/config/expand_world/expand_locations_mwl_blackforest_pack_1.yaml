@@ -46,7 +46,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 400
+  minDistanceFromSimilar: 300
   maxTerrainDelta: 2
   exteriorRadius: 8
   randomDamage: true
@@ -60,7 +60,7 @@
   maxAltitude: 0.5
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 350
+  minDistanceFromSimilar: 275
   randomRotation: true
   maxTerrainDelta: 2
   exteriorRadius: 15

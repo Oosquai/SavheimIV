@@ -3,17 +3,16 @@
 - prefab: brokkr-fort-torment-final-cut-sh
   enabled: true
   biome: Mistlands
-  quantity: 24
+  quantity: 30
   prioritized: true
   group: OceanLocs
-  minDistanceFromSimilar: 1000
+  minDistanceFromSimilar: 750
   randomRotation: true
-  levelArea: false
+  levelArea: true
   groundOffset: -2.2
   maxAltitude: -9
   minAltitude: -13
-  maxTerrainDelta: 8
-  iconPlaced: StartTemple
+  maxTerrainDelta: 9
 
 #######################################
 # Floating Islands
@@ -28,7 +27,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_axe
   enabled: true
@@ -41,7 +40,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_battleaxe
   enabled: true
@@ -54,7 +53,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_greatsword
   enabled: true
@@ -67,7 +66,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_knife
   enabled: true
@@ -80,7 +79,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_mace
   enabled: true
@@ -93,7 +92,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_sledge
   enabled: true
@@ -106,7 +105,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_staff
   enabled: true
@@ -119,7 +118,7 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 - prefab: floatingisland_sword
   enabled: true
@@ -132,100 +131,40 @@
   minAltitude: -40
   minDistanceFromSimilar: 1000
   randomRotation: true
-  iconPlaced: StartTemple
+  levelArea: true
 
 #######################################
 # Ruins
-- prefab: boom-christianruins1
-  enabled: true
-  biome: Ocean
-  quantity: 30
-  group: OceanLocs
-  maxAltitude: -25
-  minAltitude: -150
-  minDistanceFromSimilar: 500
-  randomRotation: true
-  levelArea: false
-  groundOffset: -1.2
-
-- prefab: loki_ruins1
-  enabled: true
-  biome: Ocean
-  quantity: 30
-  group: OceanLocs
-  maxAltitude: -25
-  minAltitude: -150
-  minDistanceFromSimilar: 500
-  randomRotation: true
-  levelArea: false
-  groundOffset: -3
-
 - prefab: loki_ruins2
   enabled: true
   biome: Ocean
-  quantity: 30
+  quantity: 50
   group: OceanLocs
-  maxAltitude: -25
+  maxAltitude: -30
   minAltitude: -150
   minDistanceFromSimilar: 500
   randomRotation: true
-  levelArea: false
+  levelArea: true
   groundOffset: -1.2
-
-- prefab: POISWAMPCASTLERUINS
-  enabled: true
-  biome: Ocean
-  quantity: 30
-  group: OceanLocs
-  maxAltitude: -25
-  minAltitude: -150
-  minDistanceFromSimilar: 500
-  randomRotation: true
-  levelArea: false
-  groundOffset: -1
-
-- prefab: Meadow_Ruins
-  enabled: true
-  biome: Ocean
-  quantity: 30
-  group: OceanLocs
-  maxAltitude: -25
-  minAltitude: -150
-  minDistanceFromSimilar: 500
-  randomRotation: true
-  levelArea: false
-  groundOffset: -4
 
 - prefab: ruins_0_and_0_1_and_0_2_and_0_3
   enabled: true
   biome: Ocean
-  quantity: 10
+  quantity: 20
   group: OceanLocs
-  maxAltitude: -25
+  maxAltitude: -30
   minAltitude: -150
   minDistanceFromSimilar: 400
   randomRotation: true
   levelArea: false
   groundOffset: -2.5
 
-- prefab: ruins_0_1_and_0_2_and_0_3
-  enabled: true
-  biome: Ocean
-  quantity: 13
-  group: OceanLocs
-  maxAltitude: -25
-  minAltitude: -150
-  minDistanceFromSimilar: 300
-  randomRotation: true
-  levelArea: false
-  groundOffset: -2.1
-
 - prefab: ruins_0_and_0_2_and_0_3
   enabled: true
   biome: Ocean
-  quantity: 13
+  quantity: 26
   group: OceanLocs
-  maxAltitude: -25
+  maxAltitude: -30
   minAltitude: -150
   minDistanceFromSimilar: 300
   randomRotation: true
@@ -235,9 +174,9 @@
 - prefab: ruins_0_and_0_2
   enabled: true
   biome: Ocean
-  quantity: 16
+  quantity: 32
   group: OceanLocs
-  maxAltitude: -25
+  maxAltitude: -30
   minAltitude: -150
   minDistanceFromSimilar: 200
   randomRotation: true
@@ -247,19 +186,79 @@
 - prefab: ruins_0
   enabled: true
   biome: Ocean
-  quantity: 19
+  quantity: 38
   group: OceanLocs
-  maxAltitude: -25
+  maxAltitude: -30
   minAltitude: -150
   minDistanceFromSimilar: 100
   randomRotation: true
   levelArea: false
   groundOffset: -3.2
 
+- prefab: loki_ruins1
+  enabled: true
+  biome: Ocean
+  quantity: 50
+  group: OceanLocs
+  maxAltitude: -28
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: true
+  groundOffset: -3
+
+- prefab: boom-christianruins1
+  enabled: true
+  biome: Ocean
+  quantity: 50
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: true
+  groundOffset: -1.2
+
+- prefab: POISWAMPCASTLERUINS
+  enabled: true
+  biome: Ocean
+  quantity: 50
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: true
+  groundOffset: -1
+
+- prefab: Meadow_Ruins
+  enabled: true
+  biome: Ocean
+  quantity: 50
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 500
+  randomRotation: true
+  levelArea: true
+  groundOffset: -4
+
+- prefab: ruins_0_1_and_0_2_and_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 26
+  group: OceanLocs
+  maxAltitude: -25
+  minAltitude: -150
+  minDistanceFromSimilar: 300
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2.1
+
 - prefab: ruins_0_1
   enabled: true
   biome: Ocean
-  quantity: 19
+  quantity: 38
   group: OceanLocs
   maxAltitude: -25
   minAltitude: -150
@@ -271,7 +270,7 @@
 - prefab: ruins_0_2
   enabled: true
   biome: Ocean
-  quantity: 19
+  quantity: 38
   group: OceanLocs
   maxAltitude: -25
   minAltitude: -150
@@ -283,7 +282,7 @@
 - prefab: ruins_0_3
   enabled: true
   biome: Ocean
-  quantity: 19
+  quantity: 38
   group: OceanLocs
   maxAltitude: -25
   minAltitude: -150

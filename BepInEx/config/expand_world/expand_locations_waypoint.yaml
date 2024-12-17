@@ -1,9 +1,9 @@
 - prefab: BWS_Meadows
   enabled: true
   biome: Meadows
-  quantity: 75
+  quantity: 100
   minDistance: 0.025
-  maxDistance: 0.15
+#  maxDistance: 0.15
   minAltitude: 10
   maxAltitude: 150
   group: BWS_Meadows
@@ -18,9 +18,9 @@
 - prefab: BWS_BlackForest
   enabled: true
   biome: BlackForest
-  quantity: 75
+  quantity: 100
   minDistance: 0.025
-  maxDistance: 0.5
+#  maxDistance: 0.5
   minAltitude: 10
   maxAltitude: 150
   group: BWS_BlackForest
@@ -35,9 +35,9 @@
 - prefab: BWS_Swamps
   enabled: true
   biome: Swamp
-  quantity: 75
+  quantity: 100
   minDistance: 0.015
-  maxDistance: 0.75
+#  maxDistance: 0.75
   minAltitude: 0.5
   maxAltitude: 100
   group: BWS_Swamps
@@ -52,9 +52,9 @@
 - prefab: BWS_Mountains
   enabled: true
   biome: Mountain, DeepNorth
-  quantity: 150
+  quantity: 200
   minDistance: 0.015
-  maxDistance: 0.75
+#  maxDistance: 0.75
   minAltitude: 150
   group: BWS_Mountains
   minDistanceFromSimilar: 150
@@ -68,9 +68,9 @@
 - prefab: BWS_Plains
   enabled: true
   biome: Plains, Mistlands
-  quantity: 150
+  quantity: 200
   minDistance: 0.025
-  maxDistance: 0.75
+#  maxDistance: 0.75
   minAltitude: 10
   maxAltitude: 300
   group: BWS_Plains

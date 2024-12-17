@@ -32,7 +32,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 200
+  minDistanceFromSimilar: 175
   maxTerrainDelta: 3
   exteriorRadius: 7
   clearArea: true
@@ -84,7 +84,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_medium
-  minDistanceFromSimilar: 400
+  minDistanceFromSimilar: 350
   maxTerrainDelta: 3
   inForest: true
   forestTresholdMin: 1.2
@@ -100,7 +100,7 @@
   minAltitude: 1
   prioritized: true
   group: Ruins_small
-  minDistanceFromSimilar: 400
+  minDistanceFromSimilar: 350
   maxTerrainDelta: 3
   inForest: true
   exteriorRadius: 15

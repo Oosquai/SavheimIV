@@ -13,7 +13,6 @@
   groundOffset: -7
   minAltitude: 100
   maxTerrainDelta: 20
-  iconPlaced: StartTemple
 
 - prefab: brokkr-the-belmont
   enabled: true
@@ -29,7 +28,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-  iconPlaced: Icon0
 
 - prefab: brokkr-the-execution
   enabled: true
@@ -45,7 +43,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-  iconPlaced: Shout
 
 - prefab: brokkr-the-flabellum
   enabled: true
@@ -61,7 +58,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-  iconPlaced: Player
 
 - prefab: brokkr-the-cathedral
   enabled: true
@@ -77,7 +73,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 8
-  iconPlaced: Bed
 
 - prefab: brokkr-the-churn
   enabled: true
@@ -93,7 +88,6 @@
   maxAltitude: 0
   minAltitude: -2
   maxTerrainDelta: 20
-  iconPlaced: Vendor_BlackForest
 
 - prefab: brokkr-the-misery
   enabled: true
@@ -109,7 +103,6 @@
   maxAltitude: 0
   minAltitude: -2
   maxTerrainDelta: 20
-  iconPlaced: Death
 
 - prefab: brokkr-the-sacrifice
   enabled: true
@@ -125,7 +118,6 @@
   maxAltitude: 70
   minAltitude: 6
   maxTerrainDelta: 20
-  iconPlaced: Boss
 
 ###################################################
 # Deep North bridges
@@ -187,7 +179,7 @@
   levelArea: false
   maxAltitude: 30
   minAltitude: 5
-  maxTerrainDelta: 9
+  maxTerrainDelta: 7
 
 - prefab: brokkr-broken-bridge-3
   enabled: true
@@ -217,4 +209,4 @@
   levelArea: false
   maxAltitude: 0
   minAltitude: -5
-  maxTerrainDelta: 9
+  maxTerrainDelta: 10

@@ -10,4 +10,5 @@ disabledUpgrade: true
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
+- Unobtainium:1:1:True
 - JC_Gacha_Coins:0:5:True

@@ -722,3 +722,34 @@
   - prefab: <par5>           # vDnRareMaterials
     chance: 1
     stack: 1
+
+- name: d_treasurechest_dn_low_quality
+  itemAmount: 3;5
+  items:
+  - prefab: Coins
+    chance: 1
+    stack: 79;149
+  - prefab: LeatherScraps
+    chance: 0.5
+    stack: 3;6
+  - prefab: DeerHide
+    chance: 0.5
+    stack: 2;4
+  - prefab: MeadFrostResist
+    chance: 0.5
+    stack: 2;4
+  - prefab: MeadTasty
+    chance: 0.5
+    stack: 2;4
+  - prefab: MeadHealthLingering
+    chance: 0.5
+    stack: 2;4
+  - prefab: Feathers
+    chance: 0.5
+    stack: 5;9
+  - prefab: BMR_PaperHigh
+    chance: 0.5
+    stack: 6;13
+  - prefab: Torch
+    chance: 0.5
+    stack: 1
