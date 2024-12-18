@@ -1,10 +1,84 @@
 timezone: UTC
-interval: 10
-jobs: []
+interval: 60
 zone: []
-join: []
 logJobs: true
 logZone: true
 logJoin: true
 logSkipped: true
 discordConnector: true
+
+join:
+  - commands:
+    - s ⦕ Welcome to day <day> of Savheim IV, <name>! ⦖
+
+jobs:
+# Reset locations, metals, and trees - 4am PST (noon UTC) every 4 days
+# Announce maintenance start
+  - commands:
+    - s 🚨 Server Maintenance - Every 4 Days 🚨
+    - s 🚨 Maintenance starting in 5 minutes 🚨
+    - s 🚨 Expect lag for the next 2 hours 🚨
+    schedule: "55 11 2,6,10,14,18,22,26,30 * *"    # At 03:55 on day-of-month 2, 6, 10, 14, 18, 22, 26, and 30.
+
+# Metal Resets
+  - commands:
+    - vegetation_reset MineRock_Tin,MineRock_Obsidian,BGP_SilicaVein terrain=10 start
+    - s 🚨 Maintenance - 120 minutes remaining 🚨
+    schedule: "0 12 2,6,10,14,18,22,26,30 * *"
+
+  - commands:
+    - vegetation_reset rock4_copper,silvervein,giant_ribs terrain=30 start
+    - s 🚨 Maintenance - 108 minutes remaining 🚨
+    schedule: "12 12 2,6,10,14,18,22,26,30 * *"
+
+  - commands:
+    - vegetation_reset giant_skull,giant_brain terrain=30 start
+    - vegetation_reset giant_helmet1 terrain=10 start
+    - s 🚨 Maintenance - 96 minutes remaining  🚨
+    schedule: "24 12 2,6,10,14,18,22,26,30 * *"
+
+  - commands:
+    - vegetation_reset giant_helmet2,giant_sword1,giant_sword2 terrain=10 start
+    - s 🚨 Maintenance - 84 minutes remaining 🚨
+    schedule: "36 12 2,6,10,14,18,22,26,30 * *"
+
+# Tree Resets
+  - commands:
+    - vegetation_reset Birch1,Birch2,SwampTree1 terrain=10 start
+    - s 🚨 Maintenance - 72 minutes remaining 🚨
+    schedule: "48 12 2,6,10,14,18,22,26,30 * *"
+
+  - commands:
+    - vegetation_reset AshlandsTree1,AshlandsTree3,AshlandsTree4 terrain=10 start
+    - s 🚨 Maintenance - 60 minutes remaining 🚨
+    schedule: "0 13 2,6,10,14,18,22,26,30 * *"
+
+  - commands:
+    - vegetation_reset AshlandsTree5,AshlandsTree6,AshlandsTree6_big terrain=10 start
+    - s 🚨 Maintenance - 48 minutes remaining 🚨
+    schedule: "12 13 2,6,10,14,18,22,26,30 * *"
+
+# Soft location resets (skip player bases) and misc clean up.
+  - commands:
+    - locations_reset CharredTowerRuins2,CharredTowerRuins3,FortressRuins,AshlandRuins,CharredRuins2,CharredRuins3,CharredRuins1,CharredRuins4,MorgenHole1,MorgenHole2,MorgenHole3,VoltureNest,CharredStone_Spawner,WoodFarm1,TrollCave02,Greydwarf_camp1,StoneHenge1,StoneHenge2,StoneHenge3,StoneHenge4,StoneHenge5,StoneHenge6,Grave1,InfestedTree01,Ruin3,StoneTower1,StoneTower3,WoodHouse1,WoodHouse2,WoodHouse3,WoodHouse4,WoodHouse5,WoodHouse6,WoodHouse7,WoodHouse8,WoodHouse9,WoodHouse10,WoodHouse11,WoodHouse12,WoodHouse13,StoneTowerRuins03,StoneTowerRuins07,StoneTowerRuins08,StoneTowerRuins09,StoneTowerRuins10,ShipSetting01,MountainGrave01,Dolmen01,Dolmen02,Dolmen03,StoneCircle,ShipWreck01,ShipWreck02,ShipWreck03,ShipWreck04,Meadow_Ruins,POISWAMPCASTLERUINS,boom-christianruins1,brokkr-broken-bridge-1-short,brokkr-broken-bridge-1,brokkr-broken-bridge-2-short,brokkr-broken-bridge-2,brokkr-broken-bridge-3-short,brokkr-broken-bridge-3,brokkr-fort-torment-final-cut-sh,brokkr-the-belmont,brokkr-the-cathedral,brokkr-the-churn,brokkr-the-execution,brokkr-the-flabellum,brokkr-the-misery,brokkr-the-sacrifice,loki_ruins1,loki_ruins2,ruins_0,ruins_0_1,ruins_0_1_and_0_2_and_0_3,ruins_0_2,ruins_0_3,ruins_0_and_0_1_and_0_2_and_0_3,ruins_0_and_0_2,ruins_0_and_0_2_and_0_3 start
+    - objects_remove Spawner_Draugr_Ranged,GraveStone_Broken_CharredTwitcherNest,GraveStone_CharredTwitcherNest,Volture,Spawner_Volture,Spawner_Morgen,Spawner_Morgen_wakeup,Spawner_FallenValkyrie,Spawner_Hatchling,Ashlands_Wall_2x2_cornerR,Ashlands_Wall_2x2_cornerR_top,Ashlands_Wall_2x2_edge,Ashlands_Wall_2x2_edge2,Ashlands_Wall_2x2_top,Ashlands_Fortress_Wall_Pillar,Ashlands_Fortress_Wall_Pillar_base,Ashlands_Fortress_Wall_PillarTop,Ashlands_Fortress_Wall_PillarTopStone,Ashlands_Fortress_Wall_Spikes,piece_Charred_Balista,Ashlands_Wall_2x2,Spawner_CharredCross,Ashland_Stair,Ashlands_Fortress_Gate,Ashlands_Fortress_Gate_Door,CharredBanner1,CharredBanner2,CharredBanner3,piece_Charred_Balista,Spawner_Charred,Spawner_Charred_Archer,Spawner_Charred_balista,Spawner_Charred_Mage biomes=AshLands,Mountain,Mistlands,Swamp,DeepNorth force start
+    - objects_remove beech_log,beech_log_half,Birch_log,Birch_log_half,FirTree_log,FirTree_log_half,Oak_log,Oak_log_half,PineTree_log,PineTree_log_half,SwampTree1_log,yggashoot_log,yggashoot_log_half,AshlandsTreeLog2,AshlandsTreeLog1,AshlandsTreeLogHalf1,AshlandsTreeLogHalf2,CL_Raw_Orange_arrow,deer_ragdoll,Hatchling,BonemawSerpent,Deer,Wraith,MistArea,MistArea_edge,MistArea_small force start
+    - s 🚨 Maintenance - 36 minutes remaining 🚨
+    schedule: "24 13 2,6,10,14,18,22,26,30 * *"
+
+# Hard location resets (ignore player bases).  CharredFortress must come after misc clean up above!
+  - commands:
+    - locations_reset CharredFortress,LeviathanLava,PlaceofMystery1,PlaceofMystery2,PlaceofMystery3,CharredTowerRuins1_dvergr,Hildir_cave,Hildir_crypt,Hildir_plainsfortress,Crypt2,GoblinCamp2,Crypt3,Crypt4,Mistlands_DvergrTownEntrance1,Mistlands_DvergrTownEntrance2,MountainCave02,SunkenCrypt4,Mistlands_Giant2,Mistlands_Giant1,TarPit1,TarPit2,TarPit3,WoodVillage1,Mistlands_RoadPost1,Mistlands_GuardTower1_ruined_new2,Mistlands_GuardTower3_new,Mistlands_GuardTower3_ruined_new,Mistlands_GuardTower1_new,Mistlands_GuardTower2_new,Mistlands_GuardTower1_ruined_new,Mistlands_Lighthouse1_new,Mistlands_Excavation1,Mistlands_Excavation2,Mistlands_Excavation3,Mistlands_Harbour1,floatingisland_atgeir,floatingisland_axe,floatingisland_battleaxe,floatingisland_greatsword,floatingisland_knife,floatingisland_mace,floatingisland_sledge,floatingisland_staff,floatingisland_sword safeZones=0 start
+    - s 🚨 Maintenance - 24 minutes remaining 🚨
+    schedule: "36 13 2,6,10,14,18,22,26,30 * *"
+
+# World clean up
+  - commands:
+    - world_clean
+    - s 🚨 Maintenance - 12 minutes remaining 🚨
+    schedule: "48 13 2,6,10,14,18,22,26,30 * *"
+
+# Announce maintenance end
+  - commands:
+    - s 🏰 Maintenance complete! 🏰
+    schedule: "0 14 2,6,10,14,18,22,26,30 * *"

@@ -4,7 +4,15 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/16/24</color>
+     0\  Savheim IV Patch Notes, 12/17/24</color>
+- Cron jobs to reset locations, metals, and trees every 4 days at 4am PST.
+- Removed previous ore and tree respawn logic.
+- Modified some creature loot tables.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/16/24
 - Update to PerfectPlacement mod now forcing build indicators.  Undecided whether we like them...
 - Updates to Ocean and Deep North locations - done!  I think?
 - Experience Tomes now attempt to give enough experience to reach the next level.
@@ -18,9 +26,6 @@
 - You can now press Spacebar to advance loading screen tips, except during initial character load.
 - Updated materials on Wips Weapons to give them all a blue tint.
 - Modified recipe for Mead base: Vananidir to use Raw Fish instead of Perch.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 12/13/24
 - Deep North and Ocean location updates.
