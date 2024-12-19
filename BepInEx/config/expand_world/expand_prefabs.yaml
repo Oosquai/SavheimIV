@@ -342,17 +342,27 @@
   maxY: 30
 
 ###############################################################
-# Leeches drain performance - remove them if distant.
+# Leeches drain performance - remove them if too many or if distant.
 # Leech water ripples already disabled by ParticleControl mod.
+# SpawnThat is being used to spawn leeches more rapidly in close range to compensate.
 - prefab: Leech
   type: create
   poke:
+  - self: true
+    parameter: p_leech_max_spawn
   - prefab: Leech
     maxDistance: 240
-    parameter: p_leech_performance_optimize
+    parameter: p_leech_remove_distant
 
 - prefab: Leech
-  type: poke, p_leech_performance_optimize
+  type: poke, p_leech_max_spawn
+  objects:
+  - Leech, 80
+  objectsLimit: 6                                ### MAX LEECHES SPAWNED NEAR PLAYER
+  remove: true
+
+- prefab: Leech
+  type: poke, p_leech_remove_distant
   bannedObjects:
   - Player, 80   # adjust for range to player at which to optimize leeches.  80 is max spawn range from a given player.
   remove: true

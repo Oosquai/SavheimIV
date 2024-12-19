@@ -4,13 +4,21 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/17/24</color>
-- Cron jobs to reset locations, metals, and trees every 4 days at 4am PST.
-- Removed previous ore and tree respawn logic.
-- Modified some creature loot tables.
+     0\  Savheim IV Patch Notes, 12/18/24</color>
+- Enabled Advanced Edit Mode to allow players to edit placed pieces.
+- Added Leeches and Fish to removals during cron clean up.
+- Improved Leech performance optimization code - leeches should feel more present while retaining performance... I hope?
+- Made Serpents scarier - they move better in the water now.
+- Updated world spawns to balance difficulty of spawns in later zones.
+- Improved tooltips on Hammer and Torch.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/17/24
+- Cron jobs to reset locations, metals, and trees every 4 days from 4am to 6am PST.
+- Removed previous ore and tree respawn logic.
+- Modified some creature loot tables.
 
 Patch Notes, 12/16/24
 - Update to PerfectPlacement mod now forcing build indicators.  Undecided whether we like them...

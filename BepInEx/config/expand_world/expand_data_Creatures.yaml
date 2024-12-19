@@ -665,3 +665,16 @@
   - RandomSkillFactor, 0.25 * <par2> + 0.5
   - max_health, <par1> * 0.25 * <par2> + <par1> * 0.25
   - health, <par1> * 0.25 * <par2> + <par1> * 0.251
+
+####################################
+# Serpents
+- name: d_serpent_tweaks
+  ints:
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_staggerWhenBlocked, 0             # 1
+  floats:
+  - Humanoid.m_swimSpeed, 15                     # 10
+  - Humanoid.m_swimTurnSpeed, 150                # 100
+  - MonsterAI.m_circleTargetDistance, 15         # 10
+  - MonsterAI.m_randomMoveInterval, 3            # 2
