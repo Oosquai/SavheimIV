@@ -20,11 +20,16 @@ jobs:
     - s 🚨 Expect lag for the next 2 hours 🚨
     schedule: "55 11 2,6,10,14,18,22,26,30 * *"    # At 03:55 on day-of-month 2, 6, 10, 14, 18, 22, 26, and 30.
 
+# Loose item removal - even in player bases!?
+  - commands:
+    - objects_remove * type=ItemDrop start
+    - s 🚨 Maintenance - 120 minutes remaining 🚨
+    schedule: "0 12 2,6,10,14,18,22,26,30 * *"
+
 # Metal Resets
   - commands:
     - vegetation_reset MineRock_Tin,MineRock_Obsidian,BGP_SilicaVein terrain=10 start
-    - s 🚨 Maintenance - 120 minutes remaining 🚨
-    schedule: "0 12 2,6,10,14,18,22,26,30 * *"
+    schedule: "1 12 2,6,10,14,18,22,26,30 * *"
 
   - commands:
     - vegetation_reset rock4_copper,silvervein,giant_ribs terrain=30 start
