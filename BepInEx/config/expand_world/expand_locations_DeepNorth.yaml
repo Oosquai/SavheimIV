@@ -1,19 +1,5 @@
 ###################################################
 # Deep North structures
-- prefab: citadel-v2_2
-  enabled: false
-  biome: DeepNorth
-  quantity: 1
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 600
-  randomRotation: true
-  clearArea: true
-  levelArea: false
-  groundOffset: -7
-  minAltitude: 100
-  maxTerrainDelta: 20
-
 - prefab: brokkr-the-belmont
   enabled: true
   biome: DeepNorth
