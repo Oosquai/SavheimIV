@@ -45,6 +45,14 @@
 - prefab: Player
   type: poke, p_player_help_4
   command: s !MytreeRanaWay{3,30} - Rotate trees
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_help_5
+
+- prefab: Player
+  type: poke, p_player_help_5
+  command: s !day - Current in-game day.
 
 # !help-keys
 - prefab: Player
@@ -180,7 +188,7 @@
 
 - prefab: Player
   type: poke, p_player_roll100
-  command: s <pname> rolls <randi_1_100>.
+  command: s 🎲 <pname> rolls <randi_1_100> 🎲
 
 ### Player commands - suicide (for stuck)
 - prefab: Player
@@ -297,6 +305,18 @@
   remove: true
   spawns:
   - <prefab>, 0,0,0, 30,0,0
+
+### Player commands - current day
+- prefab: Player
+  type: say, !day
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_player_cmd_day
+
+- prefab: Player
+  type: poke, p_player_cmd_day
+  command: s 🌞 Savheim IV - day <day> 🌙
 
 ##############################################################
 # No drops from (distant) monster kill

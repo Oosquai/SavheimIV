@@ -10,7 +10,6 @@ discordConnector: true
 join:
   - commands:
     - s 🏹 Welcome, <name>! 🪓
-    - s It's currently day <day> of Savheim IV.
     - s Say !help for in-game player commands.
     - s 🚨 Daily maintenance 4-6am PST. 🚨
 

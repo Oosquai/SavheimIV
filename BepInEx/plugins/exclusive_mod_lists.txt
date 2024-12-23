@@ -1,0 +1,10 @@
+*** CLIENT_SIDE_DEV_ONLY ***
+RuntimeUnityEditor
+ConfigurationManager
+ServerDevcommands              <--- Also install on server!  But don't distribute to clients other than developers
+WorldEditCommands
+
+*** SERVER_SIDE_ONLY ***
+CronJob
+SmoothSave
+ServerDevcommands              <--- Don't put this in both places on local dev machine!
