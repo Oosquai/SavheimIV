@@ -1,0 +1,197 @@
+##############################################################
+# Savheim Story Modifications - data
+##############################################################
+### Utilities
+- name: d_sh4_story_flag
+  ints:
+  - i_sh4_story_flag, 1
+
+- name: d_sh4_story_flag_ch_4
+  ints:
+  - i_sh4_story_flag, 1
+  - i_sh4_story_flag_ch, 4
+
+- name: d_sh4_story_flag_ch_10
+  ints:
+  - i_sh4_story_flag, 1
+  - i_sh4_story_flag_ch, 10
+
+- name: d_sh4_story_sign_quest_marker
+  ints:
+  - i_sh4_story_flag, 1
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  strings:
+  - text, <size=30><#FFFFCF><voffset=165>!  
+
+- name: d_sh4_story_light_data
+  ints:
+  - i_sh4_story_flag, 1
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+
+- name: d_sh4_story_light_data_perm
+  ints:
+  - i_sh4_story_flag, 1
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  - LightLod.m_lightDistance, 5
+  - LightLod.m_shadowDistance, 5
+
+- name: d_sh4_story_pieces_pos
+  position: <x>,<z>,<sub_<y>_<par1>>
+  ints:
+  - i_sh4_story_flag, 1
+
+- name: d_sh4_story_light_strobes
+  floats:
+  - LightLod.m_lightDistance, <par1>
+
+### Chapter datas
+- name: d_sh4_story_ch_1
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 0
+  - RuneStone.m_label, Jayk's Journey - 0
+  - RuneStone.m_text, <vSH4StoryCh1>
+
+- name: d_sh4_story_ch_2
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 1
+  - RuneStone.m_label, Jayk's Journey - 1
+  - RuneStone.m_text, <vSH4StoryCh2>
+
+- name: d_sh4_story_ch_3
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 2
+  - RuneStone.m_label, Jayk's Journey - 2
+  - RuneStone.m_text, <vSH4StoryCh3>
+
+- name: d_sh4_story_ch_4
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 3
+  - RuneStone.m_label, Jayk's Journey - 3
+  - RuneStone.m_text, <vSH4StoryCh4>
+
+- name: d_sh4_story_ch_5
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 4
+  - RuneStone.m_label, Jayk's Journey - 4
+  - RuneStone.m_text, <vSH4StoryCh5>
+
+- name: d_sh4_story_ch_6
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 5
+  - RuneStone.m_label, Jayk's Journey - 5
+  - RuneStone.m_text, <vSH4StoryCh6>
+
+- name: d_sh4_story_ch_7
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 6
+  - RuneStone.m_label, Jayk's Journey - 6
+  - RuneStone.m_text, <vSH4StoryCh7>
+
+- name: d_sh4_story_ch_8
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 7
+  - RuneStone.m_label, Jayk's Journey - 7
+  - RuneStone.m_text, <vSH4StoryCh8>
+
+- name: d_sh4_story_ch_9
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 8
+  - RuneStone.m_label, Jayk's Journey - 8
+  - RuneStone.m_text, <vSH4StoryCh9>
+
+- name: d_sh4_story_ch_10
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - 9
+  - RuneStone.m_label, Jayk's Journey - 9
+  - RuneStone.m_text, <vSH4StoryCh10>
+
+- name: d_sh4_story_ch_11
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - Epilogue
+  - RuneStone.m_label, Jayk's Journey - Epilogue
+  - RuneStone.m_text, <vSH4StoryCh11>
+
+### Chapter texts
+- value: vSH4StoryCh1, <#FFFFFF>Jayk woke into nightmare.  Lancing pain in both shoulders, frigid winds buffeting him from all sides, darkness broken only by flashes of lightning.  Something was carrying him through the storm, its grip tight and unyielding.<br><br><#AFAFAF>How high<#FFFFFF> - "AHHHHH!" Jayk screamed as the grip vanished.  He plummeted, heart racing, arms flailing... and then, impossibly, he landed on solid ground.<br><br>Dazed, his breath catching in his throat, Jayk staggered upright.  Strange stones, etched with swirling runes, encircled him.  Around them, skeletal trees clawed at the crisp air.  <#AFAFAF>Where in all the gods' cursed creations am I?<#FFFFFF><br><br>Cold, hungry, and utterly lost, Jayk stumbled forward, each step heavy with confusion.  Then he froze.  He wasn't alone.  Perched atop one of the stones was a raven - massive, black as night.  Its bright eyes glinted, hinting at secrets.<br><br>"Welcome to Savheim," it croaked.
+
+- value: vSH4StoryCh2, <#FFFFFF>The Meadows were a land of promise, green and quiet, save for the occasional angry boar or skittish deer.  It was here that Jayk made his first home - a hut that looked more like a splintered potato crate than a dwelling, but it was <#AFAFAF>his<#FFFFFF> splintered potato crate.<br><br>Each day brought small victories.  Chasing deer, punching beehives, and mastering the art of roasting neck tail without burning it to ash.  Yet not all in the Meadows was tranquil.  The whispers of Eikthyr's presence grew louder with each beast slain.  When Jayk reluctantly approached its altar, the skies darkened, and thunder rolled like an ominous drumbeat.<br><br>The battle was brief but brutal.  Eikthyr charged with the force of a storm, its glowing antlers slicing through the air.  Jayk stumbled, his hastily crafted axe nearly slipping from his grasp.  But instinct took over.  Dodge.  Swing.  Survive.  And somehow, against the odds, he did.<br><br>When Eikthyr collapsed in a final crack of thunder, the storm stilled.  Jayk stood panting, staring at the lifeless form of the creature.  The promise of the Meadows had been a lie; even here, danger lurked beneath the surface.<br><br>He looked toward the dark silhouette of the forest on the horizon and felt an unfamiliar heaviness in his chest.  Staying in the Meadows wasn't going to be an option.
+
+- value: vSH4StoryCh3, <#FFFFFF>When Jayk stepped into the Black Forest, he immediately regretted his bravery.  The air was heavier here, clinging to his skin like the breath of something lurking, unseen.  The trees loomed larger, their branches blotting out the sky, and the ground seemed to groan beneath his boots.  If the Meadows were a mother's embrace, the Black Forest was a drunken uncle looking for a fight.<br><br>Jayk learned quickly that trolls didn't much care for trespassers, and neither did the Greydwarfs.  It was here he forged his first true weapon - a bronze axe.  “I'll name you Choppy,” he muttered, holding it aloft.  Choppy, for her part, was indifferent but effective.  Trolls fell.  Greydwarfs scattered.  Jayk became a warrior of the forest, stomping through its shadows, dragging back treasures and scars alike.<br><br>The crypts, though, were something else entirely.  Hidden beneath the ground, they reeked of death.  Jayk's torch flickered weakly, revealing glimpses of rusted treasures and ancient bones.  He looted quickly and clawed his way back to the dim forest light, trying in vain to dispel the images of horrors grasping for him.<br><br>Then there was The Elder.  Its altar stood shrouded deep in a forgotten glade, and when the towering mass of bark and roots emerged, Jayk felt a dread coil in his gut.  Jayk dodged and hacked until it seemed exhaustion would spell his end, but at last, with a deafening crack of splintering wood, the Elder toppled.<br><br>As silence fell over the glade, Jayk felt a grim certainty settle in his chest.  The Meadows had been a lie; the Black Forest a cruel joke.  This place wasn't just dangerous - it was malicious.  Something wanted him here, and whatever it was, it wasn't friendly.
+
+- value: vSH4StoryCh4, <#FFFFFF>The forest's shadows had grown too oppressive, so Jayk turned his gaze outward - toward the sea.  Surely the ocean, vast and open, held answers.  Or, at the very least, fewer trolls.<br><br>Jayk built a raft with hands that had grown calloused and strong.  It was a humble vessel, creaking and swaying with every wave, but it carried him away from the forest's gloom and into the unknown.<br><br>At first, the ocean seemed peaceful.  Jayk even dared to hum a familiar tune as the salty breeze tugged at his hair.  But the sea was no kinder than the land.  A serpent, massive and terrifying, rose from the depths without warning, spraying spittle as it bellowed a deafening shriek.  Jayk loosed arrows wildly, struggling to keep panic at bay and fighting a gag reflex.  When the serpent finally sank beneath the waves, Jayk slumped against the mast, muttering to himself, “Fish breath... worst part.”<br><br>The ocean held other surprises too.  Sunken ruins glinted beneath the waves, promising treasure.  Jayk returned with relics and scrolls, each dive testing his nerve.  Once, he found what he thought was an island... until it moved.  The back of some massive creature, covered in moss and glowing fungi, shook as it rose from the water, nearly toppling Jayk's raft.<br><br>Despite the dangers, the ocean gave Jayk something he hadn't felt since waking in Savheim - purpose.  Each discovery, each battle, added to a growing puzzle.  He didn't have all the pieces yet, but he was starting to believe there was a bigger picture.<br><br>Whatever awaited him, Jayk tightened his grip on the tiller, his eyes fixed on the horizon.
+
+- value: vSH4StoryCh5, <#FFFFFF>It was the smell that hit Jayk first - a foul, choking stench that made him gag.  The Swamps were everything the Meadows and Black Forest were not.  Where once he had found beauty, here he found rot.  The air felt alive with decay, every step sucking his boots deeper into the mire.<br><br>A green mist clung to the landscape like a shroud, hiding shapes that slithered, crawled, and stalked.  Jayk fought draugr and blobs with growing frustration, each swing of his axe an act of rebellion against a world that seemed determined to break him.  But the worst came when he stumbled upon Bonemass.<br><br>The creature rose from the swamp like some forgotten god of filth, its massive, rotting form oozing with malice.  Jayk barely had time to react before the beast lashed out, sending him sprawling into the muck.  He fought desperately, each swing of his weapon doing little to the mountain of decay before him.  It wasn't strength or skill that saw him through, but sheer defiance.  When Bonemass finally collapsed, it was with a sickening, wet pop that echoed in Jayk's ears.<br><br>Standing amid the wreckage, covered in slime and shaking with exhaustion, Jayk looked out over the swamp.  It was as if the land itself wanted him gone, or worse, wanted him broken.  The realization hit him like a physical blow - he was being forced down a path he did not choose.  His victories felt hollow, his survival less a triumph and more an obligation.<br><br>“This isn't freedom,” he muttered, his voice swallowed by the mist.  For the first time, the thought struck him, <#AFAFAF>what if none of this was ever about me at all?
+
+- value: vSH4StoryCh6, <#FFFFFF>The Mountains loomed ahead, jagged and uninviting, their icy peaks cutting into the sky like a warning.  Jayk hesitated at their base, the frigid wind already biting through his patched armor.  For a fleeting moment, he considered turning back, but where would he go?  The Swamps?  The Black Forest?  There was nothing for him there but memories of battles he hadn't chosen to fight.<br><br>As he climbed, each step became a battle of its own.  The snow deepened, clinging to his boots and sapping his strength.  His breath fogged in the crisp air, the cold gnawing at his fingers despite the crude furs he'd wrapped around them.  Wolves stalked him at night, their glowing eyes gleaming just beyond the reach of his campfire.  By day, drakes screeched overhead, their frost-laden wings scattering ice like shards of glass.  “This place has no mercy,” Jayk muttered, pulling his cloak tighter against the relentless wind.  And yet, he pressed on.  There was nowhere else to go.<br><br>In the heart of the mountain, he found ruins half-buried in snow.  Their carvings were unlike any he'd seen, sharp and angular, as if the stone itself had been frozen mid-scream.  He uncovered silver - gleaming, precious, and uselessly heavy.  He stared at it, his reflection distorted in the metallic sheen.  “What do you want from me?” he growled, his voice echoing off the icy cliffs.  No one answered, but the air seemed heavier, as if the mountain itself were watching.<br><br>Moder came at dusk.  Her shadow fell across the snow, vast and terrifying, before she descended with a roar that shook the peaks.  Her frost breath turned the ground to ice, and her claws carved through stone as easily as flesh.  Jayk fought as he always did - because there was no other choice.  He dodged, he swung, he bled.  And when she fell, he felt no victory, only exhaustion.<br><br>Panting, Jayk leaned on his axe, staring at the still form of the dragon.  The mountain was silent now, save for the howl of the wind.  He turned his gaze skyward, the stars cold and distant.  “Is this what you wanted?” he whispered.  The question wasn't directed at anyone - or perhaps it was.  Something above, something unseen.  He couldn't shake the feeling that he was being watched, his every move scrutinized.<br><br>As he descended the mountain, the thought grew heavier in his mind - <#AFAFAF>what if I'm just a piece in a game I don't understand?  What if someone else is pulling the strings, driving me forward like a pawn on a board?<#FFFFFF><br><br>Jayk tightened his grip on his weapon, his breath steaming in the cold air.  Whoever - or whatever - it was, he would find them.  And when he did, he'd demand answers.
+
+- value: vSH4StoryCh7, <#FFFFFF>The Plains stretched endlessly, their golden grasses rippling in the wind like some divine wheat field.  "Finally," Jayk muttered, squinting at the horizon.  "A place that doesn't try to murder me every three steps."  He should've known better.<br><br>The first hint came when the grass started... moving.  Jayk froze, his hand tightening on his axe as the hulking form of a lox lumbered into view.  "Ah, a giant, furry meatball with legs," he whispered.  The beast snorted, its breath creating little tufts in the grass.  Jayk sighed.  "Let's hope you're friendly, buddy."  Moments later, Jayk was running for his life, his arms flailing wildly as the lox chased him across the Plains.<br><br>Then came the goblins - or fulings, as the locals apparently called them.  Jayk had barely caught his breath when a horde of the little green gremlins ambushed him, their laughter high-pitched and grating.  The fulings darted in and out, their weapons as irritating as they were deadly.<br><br>By the time the sun dipped below the horizon, Jayk was exhausted, battered, and beginning to wonder if the gods were playing some elaborate prank.  He sat by his campfire, staring into the flames as the sounds of the Plains echoed around him.  Somewhere in the distance, a deathsquito buzzed.  Jayk shuddered.  <#AFAFAF>What kind of twisted mind makes a mosquito the size of a rat?<#FFFFFF><br><br>He thought back to the lox, the goblins, the oversized insects. He clenched his fists, his jaw tightening.  <#AFAFAF>Who's running this show?  Yggdrasil herself, or did someone hand the reins to a lunatic?<#FFFFFF><br><br>As the fire crackled and the stars twinkled above, a new thought crept into his mind.  If whoever was in charge had gone mad, then maybe there was an opening.  Maybe Jayk could wrest control of his fate, carve out a path of his own.<br><br>He smirked, tossing a twig into the flames.  "Let's see how you like it when the pieces start playing their own game."  The sound of a deathsquito grew louder, and Jayk sighed, reaching for his bow.  "But first, I'm going to need a lot more arrows."
+
+- value: vSH4StoryCh8, <#FFFFFF>The Mistlands greeted Jayk with a quiet, eerie beauty that would have been breathtaking - if he could see more than two feet of it in any direction.  “Fantastic,” he muttered, peering through the shifting mists.  Tendrils of fog snaked around jagged rocks and twisted trees, their silhouettes forming ghostly shapes in the gloom.  "This place really leans into the whole 'abandon hope' aesthetic, doesn't it?"<br><br>His awe didn't last.  It never did.  Not here.  The first bug came out of nowhere, its enormous mandibles clicking as it lunged.  Jayk yelped, swinging his axe in a wide arc and missing entirely.  The fight didn't last long, but the Mistlands weren't done with him.  Every step forward brought another insect, each one seemingly larger and uglier than the last.<br><br>He paused to catch his breath, leaning against a tree that seemed to pulse faintly in the mists.  The Mistlands were quiet now, save for the faint hum of unseen wings.  It was almost peaceful, in a haunting sort of way.  Jayk sighed.  "You'd almost be pretty," he admitted to the fog, "if not for all the damn bugs."<br><br>The mists thickened as he pressed on, swallowing sound and light alike.  Jayk's frustration simmered beneath the surface, his earlier plans to seize control of his fate feeling more like a joke with every passing hour.  The Mistlands didn't care about his resolve or his rebellion.  They just... were.  Indifferent, eerie, and teeming with oversized pests.<br><br>But even as he trudged through the mists, his sarcasm giving way to weary resignation, Jayk couldn't help but notice the strange beauty of the place.  The way the fog caught the faint light, turning it into shifting ribbons of silver.  The way the gnarled trees twisted into shapes both grotesque and graceful.  The Mistlands were horrifying, yes, but also strangely captivating.<br><br>Jayk shook his head, tightening his grip on his axe as another insect screeched in the distance.  "Too bad beauty doesn't make you any less of a nightmare," he muttered, stepping forward into the fog.
+
+- value: vSH4StoryCh9, <#FFFFFF>The Ashlands were alive with fire and fury.  Rivers of molten lava snaked through a cracked and blackened landscape, spewing ash into the air.  The very ground burned beneath Jayk's boots, but he pressed on, his jaw set, his fury matching the inferno around him.  “This must be hell,” he growled, stepping over a chasm that belched smoke.  The air was thick with heat, every breath a struggle.  “Punishment for trying to control anything in this cursed place.  Or maybe for being angry about it.”<br><br>He should have been terrified.  The ground hissed and cracked beneath him, and shadows moved within the fire, their forms monstrous and malevolent.  But terror had no hold on Jayk anymore.  He was too angry to care.  Anger had carried him through the Swamps, the Mountains, and the Mistlands.  Here, in the Ashlands, it burned hotter than ever.<br><br>It was that anger that met Fader, a dragon unlike any he had faced before.  His scales shimmered like molten steel, his wings casting shadows over the burning land.  He moved with a lethal grace, his every motion precise and deliberate.  For a moment, Jayk hesitated, watching him circle above, his fiery eyes locked on him.  “Beautiful,” he muttered, gripping his weapon tighter.  “But so am I.”<br><br>Fader struck first, a column of flame erupting where Jayk had stood a second before.  He rolled, coming up swinging, his blade catching the light of the inferno.  The battle was a blur of fire and steel, of roaring flames and the clash of power.  Fader was no mindless beast; he was a predator, every strike calculated to destroy.  But Jayk was no longer prey.<br><br>Jayk screamed his fury, his voice rising above the roar of the flames.  Each swing of his weapon was fueled by rage, his movements reckless yet precise.  He didn't care about surviving; he cared about destroying.  He met Fader's claws with his halfmoon blade, his flames with his defiance.  When Fader dove, Jayk leapt to meet him, his axe biting deeply into Fader's shimmering scales.<br><br>When the dragon finally fell, his massive form crashing to the ground in a shower of ash and embers, Jayk stood over him, his chest heaving.  The flames around him roared, but he didn't flinch.  He stared down at Fader's lifeless form, his knuckles white as he gripped his axe.<br><br>And then something inside him snapped.  The anger that had carried him this far spilled over, consuming everything else.  He roared into the burning sky, his voice raw and broken.  There was no thought, no plan, no control - just the burning need to crush, destroy, obliterate.<br><br>As the Ashlands burned around him, Jayk's mind burned too, churning with fire and fury.  For the first time, he didn't care what came next.
+
+- value: vSH4StoryCh10, <#FFFFFF>Jayk pushed his ship away from the smoldering shore of the Ashlands, the dark waves hissing against the hull.  His hands trembled on the tiller, though whether from rage or exhaustion, he didn't know.  He wasn't sailing toward anything - just away.  Away from the fire, the fury, the hollow victory.<br><br>The sea stretched endlessly, its vastness a stark contrast to the inferno he'd left behind.  Jayk let the wind take him, his thoughts swirling like the eddies beneath the keel.  His anger simmered at first, a dull roar in the back of his mind.  He replayed the fight with Fader, the crack of her fall, the roar of the flames.  He had won.  Hadn't he?<br><br>Days passed.  The anger faded, replaced by a gnawing emptiness.  Jayk stared at the horizon, struggling to remember what he'd been so furious about.  The battle?  The gods?  Himself?  None of it seemed to matter anymore.  The waves rocked the ship gently, lulling him into a strange, hollow calm.<br><br>It was near dusk when he nearly ran aground.  Jayk jolted from his daze as the prow scraped against ice.  He scrambled to pull the sail, guiding the ship to a stop.  Before him stretched a frozen shore, glowing faintly in the fading light.  Trees covered in frost stood like sentinels, their branches reflecting the twilight in a multitude of colored hues.  The snow crunched softly underfoot as he stepped onto the shore.<br><br>The Deep North was silent, the kind of quiet that settles deep into your bones.  Jayk wandered among the glowing trees, their eerie light casting long shadows on the snow.  It was beautiful in a way that felt almost sacred.  As he walked, memories surfaced unbidden.  The first time he'd forged an axe in the Meadows.  The sting of the Swamp's rot in his lungs.  The cold bite of the Mountains' winds.  The searing heat of the Ashlands.  Each place had tried to break him, and each time he had survived.  Not because he was stronger or faster than the things that hunted him, but because not surviving hadn't been an option.<br><br>The realization came slowly, like dawn creeping over a battlefield.  He'd tried to outwit the gods, to forge his own destiny amid the chaos, and all he had to show for it were scars and stories.  But as he thought more about each victory, each impossible survival, a strange idea took hold.  What if none of it had been scripted - not the wins, the losses, the pain, or even the fleeting joys?  What if they were all just life, pure and chaotic?  And he'd survived it all because he'd stared each threat in the face, and one at a time - sometimes desperately - found a way to refuse to let it end him.  He didn't need stronger weapons or better plans; he needed only the belief that he could keep doing what he'd been doing from the start - adapt.<br><br>One evening, sitting by a fire, he saw that same giant, black raven again.  They stared at each other silently, sharing what Jayk could only assume was some sort of deep understanding.  After what seemed an age, the bird cocked its head and gave him one final look that seemed to weigh Jayk either as one deserving of respect, or maybe just an utter fool.  Then it looked away and flew off into the night, leaving Jayk chuckling softly to himself.<br><br>The next morning, when the sun rose over the frozen tundra, Jayk's ship remained, resting quietly by the shore.  But Jayk was gone, his footprints fading into the strange glowing forest.  It was there that the icy winds carried a faint echo of his laughter, drifting higher, farther, until it melted into the stillness.
+
+- value: vSH4StoryCh11, <#FFFFFF>“Well, well, look who made it.  I suppose congratulations are in order - or maybe not, considering what you've been through.  I was there once, stumbling through the Meadows, swatting bugs in the Mistlands, screaming into the Ashlands.  Sound familiar?<br><br>Here's the thing - none of that was my doing.  Yeah, I know, hard to believe.  You think I had some master plan?  Nah.  Just like you, I got tossed into the chaos and had to figure it out.  Turns out, the secret wasn't in bigger weapons or faster feet - it was up here.”  Jayk taps his head with a smirk.<br><br>“Adapt, roll with it, survive.  That's the trick.  It's not about fighting fate - it's about realizing there's no such thing.  Life just... happens.  And hey, you're here now, so I'd say you're doing alright.”<br><br>Jayk gestures around him.  “Pretty nice setup I've got, huh?  Fly around, throw some lightning, and occasionally creep on folks like you.  Not bad for a gig I didn't even apply for.  Maybe it's your turn next?  Who knows?  But whatever comes your way, you'll handle it.  You've already proven that much.”<br><br>He pauses, a glint of nostalgia in his eye.  “Did you like all the stuff I built?  How about that Flabellum?  Man, I miss that place.  Meet me there for an ale sometime - we'll swap stories.”<br><br>With that, he turns, his laughter echoing faintly as he disappears into the shadows.  “Good luck out there.  You're tougher than you think.”

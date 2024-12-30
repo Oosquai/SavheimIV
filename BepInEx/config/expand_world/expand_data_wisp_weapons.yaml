@@ -31,6 +31,21 @@
   - ZSFX.m_minPitch, 1.5
   - ZSFX.m_maxPitch, 1.5
 
+- name: d_sfx_odin_greet_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.8
+  - ZSFX.m_maxPitch, 0.8
+
+- name: d_angry_dverger_wisp_weapons
+  ints:
+  - alert, 1
+  - $alert, 1
+  - aggravated, 1
+  floats:
+  - MonsterAI.m_alertRange, 120                  # 20
+  - MonsterAI.m_viewRange, 120                   # 40
+  - MonsterAI.m_viewAngle, 180                   # 90
+
 ##################################
 # Floating Island
 - name: d_wisp_altar_check
@@ -46,6 +61,21 @@
 - name: d_wisp_lights_disable
   floats:
   - LightLod.m_lightDistance, 0
+
+- name: d_floating_island_odin_closer
+  ints:
+  - i_floating_island_odin, 1
+  floats:
+  - Odin.m_despawnCloseDistance, 8
+
+- name: d_floating_island_odin_cameo_flag_set
+  ints:
+  - i_floating_island_odin_cameo_flag, 1
+
+- name: d_floating_island_odin_cameo_flag_rst
+  ints:
+  - i_floating_island_treasure_chest, 1
+  - i_floating_island_odin_cameo_flag, 0
 
 # Wisp Weapon equipped filters
 - name: d_wisp_weapon_battleaxe

@@ -136,8 +136,15 @@
   - Odin.m_despawnCloseDistance, 0
 
 - name: d_odin_closer
+  ints:
+  - i_dnrl_victory_odin, 1
   floats:
   - Odin.m_despawnCloseDistance, 4
+
+- name: d_sfx_odin_greet_pitch_dn
+  floats:
+  - ZSFX.m_minPitch, 0.8
+  - ZSFX.m_maxPitch, 0.8
 
 # Mob alterations
 - name: dn_deer

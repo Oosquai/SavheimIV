@@ -934,6 +934,7 @@
   spawns:
   - <par1>, 0,0,snap, 0,0,0, d_empty_data_uniques, 0
   - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_uniques, 0
+  - fx_HildirChest_Unlock, 0,0,snap, 0,0,0, d_sfx_silent_uniques, 0
   - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_uniques, 0.2
   - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_uniques, 0.35
   - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_uniques, 0.35

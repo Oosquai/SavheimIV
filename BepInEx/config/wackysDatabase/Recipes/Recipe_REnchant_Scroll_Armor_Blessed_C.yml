@@ -1,0 +1,13 @@
+name: REnchant_Scroll_Armor_Blessed_C
+clonePrefabName: kg_EnchantScroll_Armor_Blessed_C
+craftingStation: $piece_artisanstation
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- kg_EnchantScroll_Armor_Blessed_D:3:1:True
+- Coins:9:1:True

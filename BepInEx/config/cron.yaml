@@ -128,7 +128,7 @@ jobs:
 # Schedule - Daily
   - commands:
     - objects_remove beech_log,beech_log_half,Birch_log,Birch_log_half,FirTree_log,FirTree_log_half,Oak_log,Oak_log_half,PineTree_log,PineTree_log_half,SwampTree1_log,yggashoot_log,yggashoot_log_half,AshlandsTreeLog2,AshlandsTreeLog1,AshlandsTreeLogHalf1,AshlandsTreeLogHalf2 force start
-    - objects_remove CL_Raw_Orange_arrow,deer_ragdoll,Leech,Fish1,Fish2,Fish3,Fish4_cave,Fish5,Fish6,Fish7,Fish8,Fish9,Fish10,Fish11,Fish12,kg_EnchantSkillScroll_F,kg_EnchantSkillScroll_D,kg_EnchantSkillScroll_C,kg_EnchantSkillScroll_B,kg_EnchantSkillScroll_A,kg_EnchantSkillScroll_S force start
+    - objects_remove CL_Raw_Orange_small_temp,CL_Raw_Yellow_small_temp,sign_sh4_story,deer_ragdoll,Leech,Fish1,Fish2,Fish3,Fish4_cave,Fish5,Fish6,Fish7,Fish8,Fish9,Fish10,Fish11,Fish12,kg_EnchantSkillScroll_F,kg_EnchantSkillScroll_D,kg_EnchantSkillScroll_C,kg_EnchantSkillScroll_B,kg_EnchantSkillScroll_A,kg_EnchantSkillScroll_S force start
     schedule: "0 12 * * *"
 
 # After specific day routines below, clean up world
@@ -153,12 +153,12 @@ jobs:
 
 # Soft location resets (skip player bases) - Warpalicious' More World Locations
   - commands:
-    - locations_reset MWL_Ruins1,MWL_Ruins2,MWL_Ruins3,MWL_Ruins6,MWL_Ruins7,MWL_Ruins8,MWL_RuinsArena1,MWL_RuinsArena3,MWL_RuinsChurch1,MWL_RuinsWell1,VV_CopperTinCave,MWL_MistFort2,MWL_SecretRoom1,MWL_MistWorkshop1,MWL_MistTower1,MWL_MistWall1,MWL_MistTower2,MWL_MistHut1,MWL_StoneCastle1,MWL_StoneFort1,MWL_StoneHall1,MWL_StoneTavern1,MWL_StoneTower1,MWL_StoneTower2,MWL_WoodBarn1,MWL_WoodFarm1,MWL_WoodHouse1,MWL_RuinsArena2,MWL_RuinsCastle1,MWL_RuinsCastle3,MWL_RuinsTower3,MWL_RuinsTower8,MWL_Tavern1,MWL_WoodTower1,MWL_WoodTower2,MWL_WoodTower3,MWL_GoblinFort1,MWL_FulingRock1,MWL_FulingVillage1,MWL_FulingVillage2,MWL_PlainsPillar1,MWL_FulingTemple1,MWL_FulingTemple2,MWL_FulingTemple3,MWL_FulingWall1,MWL_FulingTower1,MWL_GuckPit1,MWL_SwampAltar1,MWL_SwampAltar2,MWL_SwampAltar3,MWL_SwampAltar4,MWL_SwampCastle2,MWL_SwampGrave1,MWL_SwampHouse1,MWL_SwampRuin1,MWL_SwampTower1,MWL_SwampTower2,MWL_SwampTower3,MWL_SwampWell1,BWS_Meadows,BWS_BlackForest,BWS_Swamps,BWS_Mountains,BWS_Plains start
+    - locations_reset MWL_Ruins1,MWL_Ruins2,MWL_Ruins3,MWL_Ruins6,MWL_Ruins7,MWL_Ruins8,MWL_RuinsArena1,MWL_RuinsArena3,MWL_RuinsChurch1,MWL_RuinsWell1,VV_CopperTinCave,VV_SilverCave,MWL_MistFort2,MWL_SecretRoom1,MWL_MistWorkshop1,MWL_MistTower1,MWL_MistWall1,MWL_MistTower2,MWL_MistHut1,MWL_StoneCastle1,MWL_StoneFort1,MWL_StoneHall1,MWL_StoneTavern1,MWL_StoneTower1,MWL_StoneTower2,MWL_WoodBarn1,MWL_WoodFarm1,MWL_WoodHouse1,MWL_RuinsArena2,MWL_RuinsCastle1,MWL_RuinsCastle3,MWL_RuinsTower3,MWL_RuinsTower8,MWL_Tavern1,MWL_WoodTower1,MWL_WoodTower2,MWL_WoodTower3,MWL_GoblinFort1,MWL_FulingRock1,MWL_FulingVillage1,MWL_FulingVillage2,MWL_PlainsPillar1,MWL_FulingTemple1,MWL_FulingTemple2,MWL_FulingTemple3,MWL_FulingWall1,MWL_FulingTower1,MWL_GuckPit1,MWL_SwampAltar1,MWL_SwampAltar2,MWL_SwampAltar3,MWL_SwampAltar4,MWL_SwampCastle2,MWL_SwampGrave1,MWL_SwampHouse1,MWL_SwampRuin1,MWL_SwampTower1,MWL_SwampTower2,MWL_SwampTower3,MWL_SwampWell1,BWS_Meadows,BWS_BlackForest,BWS_Swamps,BWS_Mountains,BWS_Plains start
     schedule: "30 12 1,5,9,13,17,21,25,29 * *"
 
 # Soft location resets (skip player bases) - Savheim custom locations + other mods
   - commands:
-    - locations_reset Meadow_Ruins,POISWAMPCASTLERUINS,boom-christianruins1,brokkr-broken-bridge-1-short,brokkr-broken-bridge-1,brokkr-broken-bridge-2-short,brokkr-broken-bridge-2,brokkr-broken-bridge-3-short,brokkr-broken-bridge-3,brokkr-fort-torment-final-cut-sh,brokkr-the-belmont,brokkr-the-cathedral,brokkr-the-churn,brokkr-the-execution,brokkr-the-flabellum,brokkr-the-misery,brokkr-the-sacrifice,loki_ruins1,loki_ruins2,ruins_0,ruins_0_1,ruins_0_1_and_0_2_and_0_3,ruins_0_2,ruins_0_3,ruins_0_and_0_1_and_0_2_and_0_3,ruins_0_and_0_2,ruins_0_and_0_2_and_0_3,BCP_ClayPit start
+    - locations_reset Meadow_Ruins,POISWAMPCASTLERUINS,boom-christianruins1,brokkr-broken-bridge-1-short,brokkr-broken-bridge-1,brokkr-broken-bridge-2-short,brokkr-broken-bridge-2,brokkr-broken-bridge-3-short,brokkr-broken-bridge-3,brokkr-fort-torment-final-cut-sh,brokkr-the-belmont,brokkr-the-cathedral,brokkr-the-churn,brokkr-the-execution,brokkr-the-flabellum,brokkr-the-misery,brokkr-the-sacrifice,loki_ruins1,loki_ruins2,ruins_0,ruins_0_1,ruins_0_1_and_0_2_and_0_3,ruins_0_2,ruins_0_3,ruins_0_and_0_1_and_0_2_and_0_3,ruins_0_and_0_2,ruins_0_and_0_2_and_0_3,BCP_ClayPit,sh_firtree_light_black,sh_firtree_light_blue,sh_firtree_light_green,sh_firtree_light_orange,sh_firtree_light_purple,sh_firtree_light_red,sh_firtree_light_yellow start
     schedule: "50 12 1,5,9,13,17,21,25,29 * *"
 
 # Hard location resets (ignore player bases) - Vanilla, MWL, and Savheim
@@ -172,15 +172,15 @@ jobs:
     schedule: "30 13 1,5,9,13,17,21,25,29 * *"
 
 #############################
-# EVERY 4 DAYS, STARTING WITH DAY 2 OF MONTH
+# EVERY 4 DAYS, STARTING WITH DAY 2 OF MONTH - but each metal only every 8 days
 # Metal Resets
   - commands:
-    - vegetation_reset rock4_copper,silvervein,giant_ribs,giant_skull,giant_brain terrain=30 start
-    schedule: "10 12 2,6,10,14,18,22,26,30 * *"
+    - vegetation_reset rock4_copper,silvervein,giant_ribs,giant_skull,giant_brain,giant_helmet2,giant_sword2 terrain=30 start
+    schedule: "10 12 2,10,18,26 * *"
 
   - commands:
-    - vegetation_reset MineRock_Tin,MineRock_Obsidian,BGP_SilicaVein,giant_helmet1,giant_helmet2,giant_sword1,giant_sword2 terrain=10 start
-    schedule: "40 12 2,6,10,14,18,22,26,30 * *"
+    - vegetation_reset MineRock_Tin,MineRock_Obsidian,BGP_SilicaVein,giant_helmet1,giant_sword1 terrain=10 start
+    schedule: "40 12 6,14,22,30 * *"
 
 #############################
 # All other vegetation resets

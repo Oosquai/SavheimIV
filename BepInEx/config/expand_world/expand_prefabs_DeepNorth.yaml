@@ -83,7 +83,7 @@
   - sfx_gdking_idle, 0,0,0, 0,0,0, d_empty_data_dn, 3
   - sfx_gdking_scream, 0,0,0, 0,0,0, d_empty_data_dn, 6.5
   - sfx_dragon_scream, 0,0,0, 0,0,0, d_empty_data_dn, 6.5
-  command: broadcast center <string_playerName> has slain an innocent deer in the tranquil Deep North.
+  command: broadcast center <#00AFAF><string_playerName> has slain an innocent deer in the tranquil Deep North.
   objectRpc:
   - name: Message
     1: enum_message, 2
@@ -841,6 +841,7 @@
   spawns:
   - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
   - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_HildirChest_Unlock, 0,0,snap, 0,0,0, d_sfx_silent_dn, 0
   - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
   - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
   - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
@@ -855,6 +856,7 @@
   - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
   - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data_dn, 0
   - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_HildirChest_Unlock, 0,0,snap, 0,0,0, d_sfx_silent_dn, 0
   - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
   - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
   - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
@@ -881,13 +883,13 @@
 - prefab: Player
   type: poke, p_dn_roguelite_win_sequence
   biomes: DeepNorth                         # only process if in Deep North
-  command: broadcast center Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  command: broadcast center <#00AFAF>Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
   data: d_player_roguelite_clear
   injectData: true
   spawns:
   - Odin, 0,8,snap, 180,0,0, d_odin_persist, 0
-  - sfx_haldor_yea, 0,8,snap, d_empty_data_dn, 1
-  - sfx_haldor_laugh, 0,8,snap, d_empty_data_dn, 3
+  - sfx_haldor_yea, 0,8,snap, d_sfx_odin_greet_pitch_dn, 1
+  - sfx_haldor_laugh, 0,8,snap, d_sfx_odin_greet_pitch_dn, 3
   - vfx_FireWork_BlackCore, 0,12,2 0,0,0, d_empty_data_dn, 3.2
   - vfx_Firework_Rocket_Red, 12,11,-4 0,0,0, d_empty_data_dn, 3.8
   - sfx_firework_explode, 12,11,-4 0,0,0, d_empty_data_dn, 3.8
@@ -907,7 +909,7 @@
   - sfx_coins_destroyed, 0,6,snap, 0,0,0, d_empty_data_dn, 16.35
   - <par1>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
   - MoltenCore, 0,6,snap, 0,0,0, d_empty_data_dn, 16
-  - sfx_haldor_greet, 0,8,snap, d_empty_data_dn, 19
+  - sfx_haldor_greet, 0,8,snap, d_sfx_odin_greet_pitch_dn, 19
   poke:
   - prefab: Odin              # Odin prevented from leaving during reward sequence
     delay: 16.3               # injectData doesn't seem to work for this, so hide his flicker in other effects

@@ -196,3 +196,110 @@
   maxAltitude: 0
   minAltitude: -5
   maxTerrainDelta: 10
+
+###################################################
+# Colorful trees!
+- prefab: sh_firtree_light_black
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: sh_firtree_light_blue
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: sh_firtree_light_green
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: sh_firtree_light_orange
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: sh_firtree_light_purple
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: sh_firtree_light_red
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: sh_firtree_light_yellow
+  enabled: true
+  biome: DeepNorth
+  quantity: 100
+  group: DeepNorthTrees
+  minDistanceFromSimilar: 10
+  randomRotation: true
+  levelArea: false
+  minAltitude: 6
+  scaleMin: 2
+  scaleMax: 5
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15

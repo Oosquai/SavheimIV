@@ -400,9 +400,9 @@
   - HasFieldsHumanoid, 1
   hashes:
   - LeftItem, GoblinSword, StaffFireballMini, StaffGreenRoots_T5
-  - ChestItem, GoblinShoulders_SH
+  - ChestItem, GoblinLegband_SH
   - LegItem, GoblinLoin_SH
-  - UtilityItem, GoblinLegband_SH
+  - UtilityItem, GoblinShoulders_SH
 
 - name: clothes_goblin_brute
   ints:

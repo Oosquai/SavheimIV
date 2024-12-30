@@ -55,7 +55,23 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods: []
+  m_mods:
+  - m_type: Slash
+    m_modifier: Resistant
+  - m_type: Pierce
+    m_modifier: Resistant
+  - m_type: Blunt
+    m_modifier: Resistant
+  - m_type: Fire
+    m_modifier: Resistant
+  - m_type: Frost
+    m_modifier: Resistant
+  - m_type: Lightning
+    m_modifier: Resistant
+  - m_type: Poison
+    m_modifier: Resistant
+  - m_type: Spirit
+    m_modifier: Resistant
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0

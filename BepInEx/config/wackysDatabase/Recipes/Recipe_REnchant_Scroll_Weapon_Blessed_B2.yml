@@ -1,0 +1,13 @@
+name: REnchant_Scroll_Weapon_Blessed_B2
+clonePrefabName: kg_EnchantScroll_Weapon_Blessed_B
+craftingStation: $piece_artisanstation
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- kg_EnchantScroll_Weapon_B:3:1:True
+- Coins:11:1:True

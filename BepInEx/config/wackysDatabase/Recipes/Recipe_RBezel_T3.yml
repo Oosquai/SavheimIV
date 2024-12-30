@@ -1,0 +1,13 @@
+name: RBezel_T3
+clonePrefabName: Bezel_T3
+craftingStation: $piece_artisanstation
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Bezel_T2:3:1:False
+- Coins:9:1:False

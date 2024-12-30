@@ -1,0 +1,303 @@
+##############################################################
+# Savheim Story Modifications - prefabs
+##############################################################
+# Chapter 1 permanently available at starting stones
+- prefab: BossStone_Eikthyr
+  type: create
+  spawns:
+  - BossStone_TheElder, 2.2,-2,-8.5, 200,0,0, d_sh4_story_ch_1
+  - CL_Raw_Yellow_small, 2.2,-2,2.9, d_sh4_story_light_data_perm  # avoid cron job removal by not use *_temp
+
+##################################
+# Chapter 2 after killing Eikthyr
+- prefab: TrophyEikthyr
+  type: create
+  biomes: Meadows
+  objects:
+  - sfx_eikthyr_death, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_2
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 3 - Elder
+- prefab: TrophyTheElder
+  type: create
+  biomes: Blackforest
+  objects:
+  - sfx_gdking_death, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_3
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 4 - Ocean (loki_ruins2)
+- prefab: MushroomYellow
+  type: create
+  biomes: Ocean
+  filter: d_sh4_story_flag_ch_4
+  remove: true
+  spawns:
+  - BossStone_TheElder, 0,0,-8.5, d_sh4_story_ch_4
+  - sign, 0,0,-1.3, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small, 0,-0.1,2.9, d_sh4_story_light_data
+  - CL_Raw_Yellow_small, 0,0.1,2.9, d_sh4_story_light_data
+
+##################################
+# Chapter 5 - Bonemass
+- prefab: TrophyBonemass
+  type: create
+  biomes: Swamp
+  objects:
+  - sfx_Bonemass_death, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_5
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 6 - Moder
+- prefab: TrophyDragonQueen
+  type: create
+  biomes: Mountain
+  objects:
+  - sfx_dragon_death, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_6
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 7 - Yagluth
+- prefab: TrophyGoblinKing
+  type: create
+  biomes: Plains
+  objects:
+  - fx_goblinking_death, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_7
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 8 - Queen
+- prefab: TrophySeekerQueen
+  type: create
+  biomes: Mistlands
+  objects:
+  - fx_Queen_Death, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_8
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 9 - Fader
+- prefab: TrophyFader
+  type: create
+  biomes: AshLands
+  objects:
+  - sfx_fader_death_explosion, 15
+  spawns:
+  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_9
+  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,3.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+##################################
+# Chapter 10 - Deep North (Cathedral)
+- prefab: MushroomYellow
+  type: create
+  biomes: DeepNorth
+  filter: d_sh4_story_flag_ch_10
+  remove: true
+  spawns:
+  - BossStone_TheElder, 0,0,-8.5, d_sh4_story_ch_10
+  - sign, 0,0,-1.3, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small, 0,-0.1,2.9, d_sh4_story_light_data
+  - CL_Raw_Yellow_small, 0,0.1,2.9, d_sh4_story_light_data
+
+##################################
+# Chapter 11 - Deep North (roguelite victory - Odin)
+- prefab: Odin
+  type: destroy
+  biomes: DeepNorth
+  filter: int, i_dnrl_victory_odin, 1
+  spawns:
+  - BossStone_TheElder, 0,0,snap, d_sh4_story_ch_11
+  - sign_sh4_story, 0,0,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,-0.1,snap, d_sh4_story_light_data
+  - CL_Raw_Yellow_small_temp, 0,0.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
+#################################################################
+# Set vertical positions of pieces and schedule removals.
+- prefab: BossStone_TheElder, sign_sh4_story, CL_Raw_Yellow_small_temp
+  type: poke, p_sh4_story_pieces_pos
+  data: d_sh4_story_pieces_pos
+  poke:
+  - prefab: <prefab>
+    data: d_sh4_story_flag
+    limit: 4
+    maxDistance: 10
+    delay: 60                                    ### SECONDS UNTIL STORY PIECES DESPAWN
+    parameter: p_sh4_story_pieces_remove
+
+- prefab: BossStone_TheElder, sign_sh4_story, CL_Raw_Yellow_small_temp
+  type: poke, p_sh4_story_pieces_remove
+  remove: true
+
+# failsafe removal of boss stone.  other pieces removed by cron job.
+- prefab: Player
+  type: state, *
+  fallback: true
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    maxDistance: 30
+    parameter: p_sh4_story_pieces_remove_failsafe
+
+- prefab: BossStone_TheElder
+  type: poke, p_sh4_story_pieces_remove_failsafe
+  bannedObjects:
+  - sign_sh4_story, 12, d_sh4_story_flag
+  - CL_Raw_Yellow_small, 12, d_sh4_story_flag
+  - CL_Raw_Yellow_small_temp, 12, d_sh4_story_flag
+  bannedObjectsLimit: 1
+  remove: true
+   

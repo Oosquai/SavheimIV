@@ -4,15 +4,30 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/22/24</color>
+     0\  Savheim IV Patch Notes, 12/29/24</color>
+- Cleaned up multiple blueprints.
+- Finished story.
+- Removed fee when placing an item for sale in marketplace.
+- Improved cron schedules.
+- Improved logic on freeze effect.
+- Renamed a few late game uniques.
+- Added glowing trees to Deep North.
+- Added recipes to up-tier bezels and enchant scrolls at 3:1.
+- Summoned Goblins should now always have red shoulder pads.
+- Dvergr at Fort Torment now get pissed off if you kill their pet.
+- Stone Golems now do a small amount of frost damage.
+- Improved boss loot fx.
+- Fixed !unstuck command to work on server.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/22/24
 - Added !day player command.
 - Disabled dev modes in VNEI.
 - Disabled console.
 - Added TimeoutLimit mod to help with server connects.
 - Disabled CLLC resets, since cron job doing this now.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 12/21/24
 - Overhauled cron jobs.

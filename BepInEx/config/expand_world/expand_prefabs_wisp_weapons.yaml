@@ -12,6 +12,17 @@
   - Wispheart
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_wisp_weapons
   - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_wisp_weapons
+  poke:
+  - prefab: Dverger
+    maxDistance: 150
+    parameter: p_angry_dverger_wisp_weapons
+  - prefab: DvergerMage
+    maxDistance: 150
+    parameter: p_angry_dverger_wisp_weapons
+
+- prefab: Dverger, DvergerMage
+  type: poke, p_angry_dverger_wisp_weapons
+  data: d_angry_dverger_wisp_weapons
 
 # Removes default spawn effects
 - prefab: sfx_prespawn,vfx_spawn,vfx_spawn_large,vfx_prespawn,sfx_spawn,vfx_offering,sfx_offering,eventzone_eikthyr,eventzone_gdking,eventzone_bonemass,eventzone_moder,eventzone_goblinking,eventzone_queen,eventzone_fader
@@ -77,6 +88,33 @@
 - prefab: LocationProxy
   type: poke, p_wisp_altar_disable
   data: d_wisp_altar_disable
+
+######################
+# Odin cameo after looting floating island
+- prefab: Player
+  type: state, interact
+  biomes: Ocean
+  objects:
+  - prefab: TreasureChest_plains_stone
+    maxDistance: 6
+    maxHeight: 3
+    data: d_floating_island_odin_cameo_flag_rst
+  poke:
+  - prefab: TreasureChest_plains_stone
+    limit: 1
+    maxDistance: 6
+    parameter: p_floating_island_odin_cameo
+
+- prefab: TreasureChest_plains_stone
+  type: poke, p_floating_island_odin_cameo
+  data: d_floating_island_odin_cameo_flag_set
+  injectData: true
+  spawn: Odin, 10,7,0, d_floating_island_odin_closer
+
+- prefab: Odin
+  type: destroy
+  filter: int, i_floating_island_odin, 1
+  spawn: sfx_haldor_greet, d_sfx_odin_greet_pitch
 
 #################################################
 # Wisp Weapons

@@ -1,10 +1,10 @@
-name: CL_Raw_Orange_arrow
+name: CL_Raw_Yellow_small_temp
 piecehammer: Hammer
-m_name: $CL_Raw_Orange
+m_name: $CL_Raw_Yellow
 sizeMultiplier: 0.01
-m_description: $CL_Raw_Orange_Description
+m_description: $CL_Raw_Yellow_Description
 customIcon: 
-clonePrefabName: CL_Raw_Orange
+clonePrefabName: CL_Raw_Yellow
 material: 
 damagedMaterial: 
 craftingStation: ''
@@ -53,4 +53,4 @@ fireplaceData:
 teleportWorldData: 
 plantData: 
 build:
-- Uncut_Orange_Stone:5:1:False
+- Uncut_Yellow_Stone:5:1:False

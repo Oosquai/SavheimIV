@@ -209,10 +209,12 @@
 - prefab: Player
   type: say, please
   filter: d_killme_confirm_set
-  command: die
   spawns:
   - fx_chainlightning_hit
   - fx_chainlightning_spread, 0,0,0.5, 0,0,0, d_empty_data, 0.1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=9999
 
 - prefab: Player
   type: poke, p_killme_confirm_rst
@@ -808,10 +810,10 @@
   objects:
   - JC_Projectile_Orange, 1
   spawns:
-  - CL_Raw_Orange_arrow
+  - CL_Raw_Orange_small_temp
   - vfx_Smoked
   poke:
-  - prefab: CL_Raw_Orange_arrow
+  - prefab: CL_Raw_Orange_small_temp
     maxDistance: 1
     limit: 1
     delay: 120
@@ -822,7 +824,7 @@
     delay: 120
     parameter: p_remove_light
 
-- prefab: CL_Raw_Orange_arrow, vfx_Smoked
+- prefab: CL_Raw_Orange_small_temp, vfx_Smoked
   type: poke, p_remove_light
   remove: true
 
@@ -831,11 +833,11 @@
   type: state, *
   fallback: true
   objects:
-  - CL_Raw_Orange_arrow, 32
+  - CL_Raw_Orange_small_temp, 32
   bannedObjects:
   - vfx_Smoked, 32
   poke:
-  - prefab: CL_Raw_Orange_arrow
+  - prefab: CL_Raw_Orange_small_temp
     maxDistance: 32
     parameter: p_remove_light
 
