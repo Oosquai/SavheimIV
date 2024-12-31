@@ -42,6 +42,22 @@
   - RightItem, FishingRod, SpectaculureRod
 
 ####################################
+# Savheim Admin List
+- valueGroup: vSavheimAdmins
+  values:
+  - 76561198052473440                            ### Sav
+
+# SteamID injection.
+- name: d_steamidinject
+  strings:
+  - player_steamid, <pid>
+
+# Check for steamID being on the admins valueGroup list.
+- name: d_steamidadmincheck
+  strings:
+  - player_steamid, <vSavheimAdmins>  
+
+####################################
 # Auto-spawned piece data - immune, etc.
 - name: d_perma_piece
   bools:

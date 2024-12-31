@@ -320,6 +320,50 @@
   type: poke, p_player_cmd_day
   command: s 🌞 Savheim IV - day <day> 🌙
 
+#####################
+### Admin commands - announce server reboot
+- prefab: Player
+  type: create
+  data: d_steamidinject
+  injectData: true
+
+- prefab: Player
+  type: say, !admin_server_reboot_10             ### COMMAND - 10 minute downtime
+  filter: d_steamidadmincheck
+  poke:
+  - self: true
+    parameter: p_admin_server_reboot_announce 10
+
+- prefab: Player
+  type: say, !admin_server_reboot_60             ### COMMAND - 60 minute downtime
+  filter: d_steamidadmincheck
+  poke:
+  - self: true
+    parameter: p_admin_server_reboot_announce 60
+
+- prefab: Player
+  type: poke, p_admin_server_reboot_announce
+  commands:
+  - broadcast center <#FF7F7F>🚨 Server Reboot 5 min.  Est. downtime <par1> min.  Please log out 🚨
+  - wait 60000;broadcast center <#FF7F7F>🚨 Server Reboot 4 min.  Est. downtime <par1> min.  Please log out! 🚨
+  - wait 120000;broadcast center <#FF7F7F>🚨 Server Reboot 3 min.  Est. downtime <par1> min.  Please log out!! 🚨
+  - wait 180000;broadcast center <#FF7F7F>🚨 Server Reboot 2 min.  Est. downtime <par1> min.  Please log out!!! 🚨
+  - wait 240000;broadcast center <#FF7F7F>🚨 Server Reboot 1 min.  Est. downtime <par1> min.  You'll be kicked 🚨
+  - wait 270000;broadcast center <#FF7F7F>🚨 Server Reboot 30 sec.  Est. downtime <par1> min.  Kicking non-admins 🚨
+  - wait 285000;broadcast center <#FF7F7F>🚨 Server Reboot 15 sec.  Est. downtime <par1> min.  Saving world 🚨
+  - wait 287000;save
+  poke:
+  - prefab: Player
+    maxDistance: 20000
+    delay: 272
+    parameter: p_admin_server_reboot_kick_non_admins
+
+- prefab: Player
+  type: poke, p_admin_server_reboot_kick_non_admins
+  bannedFilter: d_steamidadmincheck
+  commands:
+  - kick <pid>
+
 ##############################################################
 # No drops from (distant) monster kill
 - prefab: ItemDrop

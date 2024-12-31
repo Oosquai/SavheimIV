@@ -4,7 +4,17 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/29/24</color>
+     0\  Savheim IV Patch Notes, 12/30/24</color>
+- Trader coins now reset more gracefully.
+- Fixed a few errors with Cathedral location.
+- Improved flow of story final chapters.
+- Added admin command for announcing server reboots.
+- Modified names of a couple unique weapons for consistency.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/29/24
 - Cleaned up multiple blueprints.
 - Finished story.
 - Removed fee when placing an item for sale in marketplace.
@@ -18,9 +28,6 @@
 - Stone Golems now do a small amount of frost damage.
 - Improved boss loot fx.
 - Fixed !unstuck command to work on server.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 12/22/24
 - Added !day player command.
