@@ -3,6 +3,7 @@ RuntimeUnityEditor
 ConfigurationManager
 ServerDevcommands              <--- Also install on server!  But don't distribute to clients other than developers
 WorldEditCommands
+InfinityHammer
 
 *** SERVER_SIDE_ONLY ***
 CronJob

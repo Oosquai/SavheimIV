@@ -1,135 +1,528 @@
+version: 2.0
 MeadowsLoot1:
-  - Coins
-  - Amber
-  - MeadTasty
-  - Uncut_Blue_Stone
-  - Uncut_Yellow_Stone
-  - Uncut_redish_Stone
-  - FishingBait
+  - item: Coins
+    stackMin: 11
+    stackMax: 24
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: MeadTasty
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Blue_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Yellow_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_redish_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: FishingBait
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 MeadowsLoot2:
-  - Coins
-  - Amber
-  - MeadTasty
-  - Uncut_Red_Stone
-  - Uncut_Purple_Stone
-  - Uncut_blueish_Stone
+  - item: Coins
+    stackMin: 11
+    stackMax: 24
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: MeadTasty
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Red_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Purple_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_blueish_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
 MeadowsLoot3:
-  - Coins
-  - Amber
-  - MeadTasty
-  - Uncut_Black_Stone
-  - Uncut_Green_Stone
-  - Uncut_Orange_Stone
-  - Uncut_Cyan_Stone
+  - item: Coins
+    stackMin: 11
+    stackMax: 24
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: MeadTasty
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Black_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Green_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Orange_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Cyan_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
 BlackforestLoot1:
-  - Amber
-  - AmberPearl
-  - MeadHealthMinor
-  - Uncut_Blue_Stone
-  - Uncut_Yellow_Stone
-  - Uncut_redish_Stone
-  - FishingBaitForest
+  - item: Coins
+    stackMin: 21
+    stackMax: 34
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: MeadHealthMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Blue_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Yellow_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_redish_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: FishingBaitForest
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 BlackforestLoot2:
-  - Amber
-  - AmberPearl
-  - MeadHealthMinor
-  - CarrotSeeds
-  - Uncut_Red_Stone
-  - Uncut_Purple_Stone
-  - Uncut_blueish_Stone
+  - item: Coins
+    stackMin: 21
+    stackMax: 34
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: MeadHealthMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: CarrotSeeds
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Red_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Purple_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_blueish_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
 BlackforestLoot3:
-  - Amber
-  - AmberPearl
-  - SurtlingCore
-  - Uncut_Black_Stone
-  - Uncut_Green_Stone
-  - Uncut_Orange_Stone
-  - Uncut_Cyan_Stone
+  - item: Coins
+    stackMin: 21
+    stackMax: 34
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: SurtlingCore
+    stackMin: 1
+    stackMax: 1
+    weight: 1.0
+  - item: Uncut_Black_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Green_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Orange_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Cyan_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
 WoodTavernLoot1:
-  - Coins
-  - AmberPearl
-  - CarrotSeeds
-  - MinceMeatSauce
-  - DeerStew
-  - SilverNecklace
-  - MeadTasty
-  - MeadHealthMinor
+  - item: Coins
+    stackMin: 21
+    stackMax: 34
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: CarrotSeeds
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: MinceMeatSauce
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: DeerStew
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: SilverNecklace
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: MeadTasty
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadHealthMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 SwampLoot1:
-  - AmberPearl
-  - Ruby
-  - ct_campfireinabottle
-  - MeadStaminaMinor
-  - Chain
-  - Uncut_Blue_Stone
-  - Uncut_Yellow_Stone
-  - Uncut_redish_Stone
-  - FishingBaitSwamp
+  - item: Coins
+    stackMin: 31
+    stackMax: 44
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: ct_campfireinabottle
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadStaminaMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Chain
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Blue_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Yellow_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_redish_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: FishingBaitSwamp
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
 SwampLoot2:
-  - AmberPearl
-  - Ruby
-  - ct_campfireinabottle
-  - MeadStaminaMinor
-  - SurtlingCore
-  - TurnipSeeds
-  - Uncut_Red_Stone
-  - Uncut_Purple_Stone
-  - Uncut_blueish_Stone
+  - item: Coins
+    stackMin: 31
+    stackMax: 44
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: ct_campfireinabottle
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadStaminaMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: SurtlingCore
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: TurnipSeeds
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Red_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Purple_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_blueish_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
 SwampLoot3:
-  - AmberPearl
-  - Ruby
-  - ct_campfireinabottle
-  - Chain
-  - Uncut_Black_Stone
-  - Uncut_Green_Stone
-  - Uncut_Orange_Stone
-  - Uncut_Cyan_Stone
-  - FishingBaitOcean
+  - item: Coins
+    stackMin: 31
+    stackMax: 44
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: ct_campfireinabottle
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Chain
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Black_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Green_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Orange_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: Uncut_Cyan_Stone
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: FishingBaitOcean
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 MountainsLoot1:
-  - AmberPearl
-  - SilverNecklace
-  - OnionSeeds
-  - SurtlingCore
-  - MeadEitrMinor
-  - Uncut_Red_Stone
-  - Uncut_Green_Stone
-  - Uncut_Blue_Stone
-  - Uncut_Orange_Stone
-  - FishingBaitCave
+  - item: Coins
+    stackMin: 41
+    stackMax: 54
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: SilverNecklace
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: OnionSeeds
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: SurtlingCore
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: MeadEitrMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Red_Stone
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: Uncut_Green_Stone
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: Uncut_Blue_Stone
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: Uncut_Orange_Stone
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: FishingBaitCave
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 PlainsLoot1:
-  - Ruby
-  - HoneyMeadSpeed
-  - Uncut_Green_Stone
-  - Uncut_Orange_Stone
-  - Uncut_Cyan_Stone
-  - Uncut_Purple_Stone
-  - FishingBaitPlains
+  - item: Coins
+    stackMin: 51
+    stackMax: 64
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: HoneyMeadSpeed
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Green_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Orange_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Cyan_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Purple_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: FishingBaitPlains
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 PlainsLoot2:
-  - Ruby
-  - CWS_Crossbow_4
-  - MeadHealthMedium
-  - ct_bonfireinabottle
-  - Uncut_Blue_Stone
-  - Uncut_Yellow_Stone
-  - Uncut_Red_Stone
-  - Uncut_Black_Stone
+  - item: Coins
+    stackMin: 51
+    stackMax: 64
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadHealthMedium
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: ct_bonfireinabottle
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Blue_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Yellow_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Red_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Uncut_Black_Stone
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 MistLoot1:
-  - Ruby
-  - SilverNecklace
-  - MeadEitrLingering
-  - MeadHealthMajor
-  - HoneyMeadDamage
-  - BarleyWine
-  - Lantern
-  - Mandible
-  - DraumheimEssence
-  - FishingBaitMistlands
+  - item: Coins
+    stackMin: 61
+    stackMax: 74
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: SilverNecklace
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadEitrLingering
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadHealthMajor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: HoneyMeadDamage
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: BarleyWine
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: Mandible
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: DraumheimEssence
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: FishingBaitMistlands
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
 MistLoot2:
-  - Ruby
-  - SilverNecklace
-  - MeadStaminaMedium
-  - BHP_PumpkinWine
-  - HoneyMeadSpeed
-  - ct_bonfireinabottle
-  - CWS_Tower_Shield_2
-  - BlackCore
-  - DraumheimEssence
+  - item: Coins
+    stackMin: 61
+    stackMax: 74
+    weight: 1.0
+  - item: Ruby
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: SilverNecklace
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: MeadStaminaMedium
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: BHP_PumpkinWine
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: HoneyMeadSpeed
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: ct_bonfireinabottle
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: BlackCore
+    stackMin: 1
+    stackMax: 1
+    weight: 1.0
+  - item: DraumheimEssence
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0

@@ -532,7 +532,7 @@
   spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=190 dodge=true block=true status=SE_Savheim_Slowed
+    1: hit, frost=<randi_153_161> dodge=true block=true status=SE_Savheim_Slowed
 
 - prefab: creature
   type: poke, Creature_Frost_Nova
@@ -541,7 +541,7 @@
   spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=34 dodge=true block=true
+    1: hit, frost=<randi_32_36> dodge=true block=true
 
 #################
 # Summon versions
@@ -553,7 +553,7 @@
   - fx_DvergerMage_Nova_ring
   poke:
   - prefab: creature
-    parameter: Creature_Frost_Nova_Summon 34
+    parameter: Creature_Frost_Nova_Summon <randi_32_36>
     maxDistance: 4
     delay: 0.8
 
@@ -565,7 +565,7 @@
   - fx_DvergerMage_Nova_ring
   poke:
   - prefab: creature
-    parameter: Creature_Frost_Nova_Summon 97
+    parameter: Creature_Frost_Nova_Summon <randi_93_101>
     maxDistance: 4
     delay: 0.8
 
@@ -597,7 +597,7 @@
   spawn: fx_fireball_staff_explosion
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=157 dodge=true block=true
+    1: hit, fire=<randi_153_161> dodge=true block=true
 
 - prefab: creature
   type: poke, Creature_Fire_Nova
@@ -605,7 +605,7 @@
   spawn: fx_fireball_staff_explosion
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=47 dodge=true block=true
+    1: hit, fire=<randi_45_49> dodge=true block=true
 
 #################
 # Summon version
@@ -626,7 +626,7 @@
   spawn: fx_fireball_staff_explosion
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=47 dodge=true block=true
+    1: hit, fire=<randi_45_49> dodge=true block=true
 
 ###############################################################
 # Creatures with offhand StaffGreenRoots heal nearby creatures

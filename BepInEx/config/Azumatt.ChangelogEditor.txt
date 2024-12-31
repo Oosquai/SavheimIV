@@ -10,6 +10,12 @@
 - Improved flow of story final chapters.
 - Added admin command for announcing server reboots.
 - Modified names of a couple unique weapons for consistency.
+- Cleaned up some item listings in the Catalog.
+- Added randomness to all extra damage effects.
+- Increased eitr cost of sanctir.
+- Reduced movespeed penalty for reapers.
+- Buffed damage of unique sanctis.
+- Improved loot tables for locations.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

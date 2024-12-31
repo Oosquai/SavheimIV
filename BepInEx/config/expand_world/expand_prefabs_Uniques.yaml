@@ -135,7 +135,7 @@
   - fx_chainlightning_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=7 status=Lightning_SH
+    1: hit, damage=<randi_6_8> status=Lightning_SH
   - name: RPC_Stagger
     1: vec, <par1>
   poke:
@@ -157,7 +157,7 @@
   - fx_chainlightning_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=7 status=Lightning_SH
+    1: hit, damage=<randi_6_8> status=Lightning_SH
   - name: RPC_Stagger
     1: vec, <par1>
   poke:
@@ -190,7 +190,7 @@
   - fx_clusterbombstaff_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, blunt=29 fire=29
+    1: hit, blunt=<randi_27_31> fire=<randi_27_31>
   poke:
   - prefab: creature
     delay: 5.6
@@ -221,8 +221,9 @@
   poke:
   - prefab: creature
     data: not_tamed_uniques
-    parameter: fireAE
+    parameter: p_sanctis_fireAE
     maxDistance: 4
+    limit: 5
     delay: 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
@@ -233,39 +234,39 @@
     delay: 0.3
 
 - prefab: creature
-  type: poke, fireAE
+  type: poke, p_sanctis_fireAE
   filter: not_tamed_uniques
   spawn: fx_clusterbombstaff_splinter_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, blunt=14 fire=66
+    1: hit, blunt=<randi_16_19> fire=<randi_85_95>
   poke:
   - prefab: creature
-    parameter: fireAE_spread_randDelay
+    parameter: p_sanctis_fireAE_spread_randDelay
     minDistance: 0.1
     maxDistance: 4
     limit: 3
 
 - prefab: creature
-  type: poke, fireAE_spread_randDelay
+  type: poke, p_sanctis_fireAE_spread_randDelay
   poke:
   - self: true
     delay: 0.4
-    parameter: fireAE_spread
+    parameter: p_sanctis_fireAE_spread
 
 - prefab: creature
-  type: poke, fireAE_spread_randDelay
+  type: poke, p_sanctis_fireAE_spread_randDelay
   poke:
   - self: true
     delay: 0.8
-    parameter: fireAE_spread
+    parameter: p_sanctis_fireAE_spread
 
 - prefab: creature
-  type: poke, fireAE_spread
+  type: poke, p_sanctis_fireAE_spread
   spawn: fx_clusterbombstaff_splinter_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, blunt=7 fire=33
+    1: hit, blunt=<randi_8_10> fire=<randi_42_48>
 
 ######################
 # Stormpiercer Spear
@@ -324,7 +325,7 @@
   type: poke, p_shield_tower_fire
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=21
+    1: hit, fire=<randi_19_23>
 
 ######################
 # Mace Torch
@@ -352,7 +353,7 @@
   spawn: sfx_GoblinShaman_fireball_launch
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=12
+    1: hit, fire=<randi_11_13>
 
 - prefab: creature
   type: poke, p_mace_torch_extra_fire
@@ -360,7 +361,7 @@
   - int, tamed_uniques, 0
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=16
+    1: hit, fire=<randi_15_17>
 
 ######################
 # Poison Atgeir
@@ -441,7 +442,7 @@
   - sfx_troll_hit, 0,0,0, 0,0,0, d_empty_data_uniques, 0.4
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=27
+    1: hit, damage=<randi_25_29>
     delay: 0.4
 
 ######################
@@ -658,7 +659,7 @@
   - Ulv_VFX, 0,0,1, 0,0,0, purple_axe_low_pitch
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=13
+    1: hit, damage=<randi_12_14>
   - name: RPC_Stagger
     1: vec, <par1>
   poke:
@@ -785,7 +786,7 @@
   spawn: fx_iceshard_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=13
+    1: hit, frost=<randi_12_14>
 
 ##############################################################
 # Boss Drops

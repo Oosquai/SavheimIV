@@ -470,7 +470,7 @@
   type: poke, p_ghost_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=10 dodge=true block=true
+    1: hit, lightning=<randi_9_11> dodge=true block=true
 
 ####################################################
 # Wraiths do a small amount of Frost damage
@@ -487,7 +487,7 @@
   type: poke, p_wraith_frost_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=16 dodge=true block=true
+    1: hit, frost=<randi_15_17> dodge=true block=true
 
 ####################################################
 # Serpents do a small amount of Lightning damage
@@ -504,7 +504,7 @@
   type: poke, p_serpent_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=16 dodge=true block=true
+    1: hit, lightning=<randi_15_17> dodge=true block=true
 
 ####################################################
 # Stone Golems do a small amount of Frost damage
@@ -532,7 +532,7 @@
   type: poke, p_stonegolem_frost_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=24 dodge=true block=true
+    1: hit, frost=<randi_23_25> dodge=true block=true
 
 ####################################################
 # Ticks make you Wet if they attach to you
@@ -568,7 +568,7 @@
   type: poke, p_seekerbrood_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=24 dodge=true block=true
+    1: hit, lightning=<randi_23_25> dodge=true block=true
 
 ####################################################
 # Bonemaw Serpents do a small amount of Lightning damage
@@ -585,4 +585,4 @@
   type: poke, p_bonemawserpent_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=32 dodge=true block=true
+    1: hit, lightning=<randi_30_34> dodge=true block=true

@@ -124,7 +124,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: p_spirit_counter_AE 24 <vec>  # higher than same tier sanctis, since this requires parry timing and sacrifices shield
+    parameter: p_spirit_counter_AE <randi_22_26> <vec>  # higher than same tier sanctis, since this requires parry timing and sacrifices shield
     maxDistance: 4
 
 - prefab: fx_StaffShield_Break
@@ -134,7 +134,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: p_spirit_counter_AE 48 <vec>
+    parameter: p_spirit_counter_AE <randi_45_51> <vec>
     maxDistance: 4
 
 - prefab: fx_StaffShield_Break
@@ -144,7 +144,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: p_spirit_counter_AE 72 <vec>
+    parameter: p_spirit_counter_AE <randi_68_74> <vec>
     maxDistance: 4
 
 # Spirit Counter Spirit & Stagger AE
@@ -600,7 +600,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 18
+    parameter: p_sanctis_spiritAE <randi_17_19>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -619,7 +619,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 30
+    parameter: p_sanctis_spiritAE <randi_28_32>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -638,7 +638,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 42
+    parameter: p_sanctis_spiritAE <randi_40_44>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -657,7 +657,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 54
+    parameter: p_sanctis_spiritAE <randi_51_57>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -676,7 +676,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 66
+    parameter: p_sanctis_spiritAE <randi_63_69>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -695,7 +695,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 72
+    parameter: p_sanctis_spiritAE <randi_68_76>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -714,7 +714,7 @@
   poke:
   - prefab: creature
     data: not_tamed_combat
-    parameter: spiritAE 84
+    parameter: p_sanctis_spiritAE <randi_80_88>
     maxDistance: 4
     delay: 0.4
   objectRpc:
@@ -727,17 +727,17 @@
 
 # Sanctis spirit AE
 - prefab: creature
-  type: poke, spiritAE
+  type: poke, p_sanctis_spiritAE
   filter: not_tamed_combat
   objectRpc:
   - name: RPC_Damage
     1: hit, spirit=<par1>
   poke:
   - self: true
-    parameter: spiritAE_fx
+    parameter: p_sanctis_spiritAE_fx
 
 - prefab: creature
-  type: poke, spiritAE_fx
+  type: poke, p_sanctis_spiritAE_fx
   objects:
   - sfx_UndeadBurn_Start, 1
   spawn: fx_Fader_Roar_Projectile_Hit
@@ -1525,7 +1525,7 @@
     data: not_tamed_combat
     maxDistance: 4
     delay: 0.4
-    parameter: p_heal_spell_spiritAE 6
+    parameter: p_heal_spell_spiritAE <randi_5_7>
 
 - prefab: BMR_HealScroll2_AOE
   type: create
@@ -1534,7 +1534,7 @@
     data: not_tamed_combat
     maxDistance: 4
     delay: 0.4
-    parameter: p_heal_spell_spiritAE 18
+    parameter: p_heal_spell_spiritAE <randi_17_19>
 
 - prefab: BMR_HealScroll3_AOE
   type: create
@@ -1543,7 +1543,7 @@
     data: not_tamed_combat
     maxDistance: 4
     delay: 0.4
-    parameter: p_heal_spell_spiritAE 30
+    parameter: p_heal_spell_spiritAE <randi_28_32>
 
 - prefab: BMR_HealScroll4_AOE
   type: create
@@ -1552,7 +1552,7 @@
     data: not_tamed_combat
     maxDistance: 4
     delay: 0.4
-    parameter: p_heal_spell_spiritAE 42
+    parameter: p_heal_spell_spiritAE <randi_40_44>
 
 - prefab: BMR_HealScroll5_AOE
   type: create
@@ -1561,7 +1561,7 @@
     data: not_tamed_combat
     maxDistance: 4
     delay: 0.4
-    parameter: p_heal_spell_spiritAE 54
+    parameter: p_heal_spell_spiritAE <randi_51_57>
 
 - prefab: BMR_HealScroll6_AOE
   type: create
@@ -1570,7 +1570,7 @@
     data: not_tamed_combat
     maxDistance: 4
     delay: 0.4
-    parameter: p_heal_spell_spiritAE 66
+    parameter: p_heal_spell_spiritAE <randi_63_69>
 
 # Heal spell spirit AE
 - prefab: creature

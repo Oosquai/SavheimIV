@@ -344,6 +344,7 @@
 - prefab: Player
   type: poke, p_admin_server_reboot_announce
   commands:
+  - s 🚨 Server Reboot in 5 minutes.  Estimated downtime <par1> minutes.  Please log out 🚨
   - broadcast center <#FF7F7F>🚨 Server Reboot 5 min.  Est. downtime <par1> min.  Please log out 🚨
   - wait 60000;broadcast center <#FF7F7F>🚨 Server Reboot 4 min.  Est. downtime <par1> min.  Please log out! 🚨
   - wait 120000;broadcast center <#FF7F7F>🚨 Server Reboot 3 min.  Est. downtime <par1> min.  Please log out!! 🚨
@@ -352,6 +353,7 @@
   - wait 270000;broadcast center <#FF7F7F>🚨 Server Reboot 30 sec.  Est. downtime <par1> min.  Kicking non-admins 🚨
   - wait 285000;broadcast center <#FF7F7F>🚨 Server Reboot 15 sec.  Est. downtime <par1> min.  Saving world 🚨
   - wait 287000;save
+  - wait 300000;s 🚨 Ready for reboot 🚨
   poke:
   - prefab: Player
     maxDistance: 20000
