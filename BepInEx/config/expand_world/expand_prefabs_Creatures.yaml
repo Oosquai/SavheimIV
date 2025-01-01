@@ -532,7 +532,7 @@
   spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_153_161> dodge=true block=true status=SE_Savheim_Slowed
+    1: hit, frost=<randi_123_131> dodge=true block=true status=SE_Savheim_Slowed
 
 - prefab: creature
   type: poke, Creature_Frost_Nova

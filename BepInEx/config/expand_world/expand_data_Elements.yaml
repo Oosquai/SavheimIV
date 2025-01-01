@@ -22,7 +22,10 @@
   ints:
   - i_elemental_wet_frozen, 1
   - i_elemental_wet_frost_cd, 1
-  - i_elemental_frozen_health_delta, <round_<abs_<sub_<float_health>_<float_f_elemental_frozen_health>>>>
+  - i_elemental_frozen_health_delta, 0
+  floats:
+  - f_elemental_frozen_health_z, <float_health>
+  - f_elemental_frozen_health, <float_health>
 
 - name: d_elemental_wet_frozen_rst
   ints:
@@ -30,13 +33,13 @@
 
 - name: d_elemental_frozen_health_save_creature
   ints:
-  - i_elemental_frozen_health_delta, <round_<abs_<sub_<float_health>_<float_f_elemental_frozen_health>>>>
+  - i_elemental_frozen_health_delta, <round_<sub_<float_health>_<float_f_elemental_frozen_health>>>
   floats:
   - f_elemental_frozen_health, <float_health>
 
 - name: d_elemental_frozen_health_save_player
   ints:
-  - i_elemental_frozen_health_delta, <round_<abs_<sub_<float_health>_<float_f_elemental_frozen_health_z>>>>
+  - i_elemental_frozen_health_delta, <round_<sub_<float_health>_<float_f_elemental_frozen_health_z>>>
   floats:
   - f_elemental_frozen_health_z, <float_f_elemental_frozen_health>
   - f_elemental_frozen_health, <float_health>

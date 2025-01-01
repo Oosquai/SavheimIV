@@ -4,7 +4,14 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 12/30/24</color>
+     0\  Savheim IV Patch Notes, 12/31/24</color>
+- Several fixes to frozen effect.
+- T6 Cleanse lasts 60 seconds now instead of 900.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 12/30/24
 - Trader coins now reset more gracefully.
 - Fixed a few errors with Cathedral location.
 - Improved flow of story final chapters.
@@ -16,9 +23,6 @@
 - Reduced movespeed penalty for reapers.
 - Buffed damage of unique sanctis.
 - Improved loot tables for locations.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 12/29/24
 - Cleaned up multiple blueprints.

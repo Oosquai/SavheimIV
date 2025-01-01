@@ -9,7 +9,7 @@
 #   - Bosses immune
 #   - Independent durations for players, elites, and all others.
 #   - Freeze animations and movement.
-#   - Any change in health, including heals, breaks freeze.
+#   - Any reduction in health breaks freeze.  Players can cleanse each other.
 #   - Longest duration cooldown from time freeze breaks.
 # Fire + Poison = explosion that tosses everyone away and sets vfx_Burning
 #   - Primary target staggered in place.
@@ -192,22 +192,14 @@
 # Players
 - prefab: Player
   type: poke, p_elemental_wet_frost
-  objects:
-  - vfx_player_hit, 3                            # differentiate between players and creatures getting hit
-  data: d_elemental_frozen_health_save_player    # init f_elemental_frozen_health
-  injectData: true
   poke:
   - self: true
     delay: 0.1                                   # give f_elemental_frozen_health time to save
-    parameter: p_elemental_wet_frozen_loop_init 10  ### PLAYER MAX FREEZE TIME.  Will unfreeze with food healing, adding some randomness!
+    parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
 
 # Elites
 - prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen
   type: poke, p_elemental_wet_frost
-  bannedObjects:
-  - vfx_player_hit, 3                            # differentiate between players and creatures getting hit
-  data: d_elemental_frozen_health_save_creature  # init f_elemental_frozen_health
-  injectData: true
   poke:
   - self: true
     delay: 0.1                                   # give f_elemental_frozen_health time to save
@@ -216,11 +208,7 @@
 # All other creatures
 - prefab: creature
   type: poke, p_elemental_wet_frost
-  bannedObjects:
-  - vfx_player_hit, 1                            # differentiate between players and creatures getting hit
   fallback: true                                 # any creature prefab not listed above under Elites
-  data: d_elemental_frozen_health_save_creature  # init f_elemental_frozen_health
-  injectData: true
   poke:
   - self: true
     delay: 0.1                                   # give f_elemental_frozen_health time to save
@@ -237,7 +225,7 @@
   - fx_iceshard_hit, 0,0,1
   objectRpc:
   - name: RPC_AddStatusEffect                    # stop movement ASAP
-    1: hash, SE_Savheim_ImmobilizedFrozen        # this includes very resistant to all - to counter stagger a few lines below this
+    1: hash, SE_Savheim_ImmobilizedFrozen        # this includes resistant to all - to counter stagger a few lines below this
     2: bool, true
     3: int, 1
     4: float, 1
@@ -260,12 +248,20 @@
   type: poke, p_elemental_wet_frozen_loop
   filters:
   - int, i_elemental_wet_frozen, 1               # end loop if no longer frozen
-  - int, i_elemental_frozen_health_delta, 0      # end loop if health changed since previous iteration
+  - int, i_elemental_frozen_health_delta, 0;9999 # end loop if health decreased since previous iteration
+  bannedObjects:
+  - bmr_cleanse1_aoe, 5
+  - bmr_cleanse2_aoe, 5
+  - bmr_cleanse3_aoe, 5
+  - bmr_cleanse4_aoe, 5
+  - bmr_cleanse5_aoe, 5
+  - bmr_cleanse6_aoe, 5
+  bannedObjectsLimit: 1
   data: d_elemental_frozen_health_save_player    # update health and delta-health each iteration
   injectData: true
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, SE_Savheim_ImmobilizedFrozen
+    1: hash, SE_Savheim_ImmobilizedFrozen_NoResists  # players don't stay staggered, so no extra resists
     2: bool, true
     3: int, 1
     4: float, 1
@@ -274,7 +270,7 @@
     delay: 0.3                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
     parameter: p_elemental_wet_frozen_loop
   ### DEBUG ###
-#  command: s hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
+  # command: s L hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
   #############
 
 ### Main Frozen Loop - creature
@@ -282,7 +278,7 @@
   type: poke, p_elemental_wet_frozen_loop
   filters:
   - int, i_elemental_wet_frozen, 1               # end loop if no longer frozen
-  - int, i_elemental_frozen_health_delta, 0      # end loop if health changed since previous iteration
+  - int, i_elemental_frozen_health_delta, 0;9999 # end loop if health decreased since previous iteration
   data: d_elemental_frozen_health_save_creature  # update health and delta-health each iteration
   injectData: true
   objectRpc:
@@ -296,10 +292,10 @@
     delay: 0.3                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
     parameter: p_elemental_wet_frozen_loop
   ### DEBUG ###
-#  command: s hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
+  # command: s L hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
   #############
 
-# Shatter check - looking for change in health, including heals!
+# Shatter check - looking for reduction in health
 - prefab: Player, creature
   type: poke, p_elemental_wet_frozen_loop
   filters:
@@ -309,22 +305,11 @@
   - self: true
     parameter: p_elemental_wet_frozen_rst
   ### DEBUG ###
-#  command: s S hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
+  # command: s S hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
   #############
 
-## Animation freeze only seems to stick if applied during an animation, so apply again in case
-#- prefab: Player, creature
-#  type: state, *
-#  weight: 1E30
-#  filter: int, i_elemental_wet_frozen, 1
-#  objectRpc:
-#  - name: RPC_FreezeFrame
-#    target: <zdo>
-#    1: float, 24                                 # freeze for max time. let unfreeze process clear early
-#    delay: 0.3                                   # slight delay so they pose dramatically!
-
-# Unfreeze after duration or when hit
-- prefab: Player, creature
+# Unfreeze after duration or when hit.  Players don't stay staggered, so no resists.
+- prefab: Player
   type: poke, p_elemental_wet_frozen_rst
   filter: int, i_elemental_wet_frozen, 1         # still frozen?
   data: d_elemental_wet_frozen_rst               # unfreeze!
@@ -335,7 +320,25 @@
   objectRpc:
   - name: RPC_FreezeFrame
     target: <zdo>
-    1: float, 0.1                                # unfreeze!
+    1: float, 0.01                               # unfreeze!
+  poke:
+  - self: true
+    delay: 24                                    ### COOLDOWN AFTER UNFREEZING.  Keep equal to NORMAL MAX FREEZE TIME above.  Lasts max duration of all creatures (else shorter durations wouldn't be an advantage).
+    parameter: p_elemental_wet_frost_cd_rst
+
+# Unfreeze after duration or when hit.
+- prefab: creature
+  type: poke, p_elemental_wet_frozen_rst
+  filter: int, i_elemental_wet_frozen, 1         # still frozen?
+  data: d_elemental_wet_frozen_rst               # unfreeze!
+  injectData: true
+  spawns:
+  - fx_crystal_destruction, 0,0,1
+  - sfx_ice_destroyed
+  objectRpc:
+  - name: RPC_FreezeFrame
+    target: <zdo>
+    1: float, 0.01                               # unfreeze!
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_ImmobilizedFrozenEnd     # lingering resists to counter stagger
     2: bool, true
@@ -487,7 +490,7 @@
   type: poke, p_wraith_frost_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_15_17> dodge=true block=true
+    1: hit, frost=<randi_21_25> dodge=true block=true
 
 ####################################################
 # Serpents do a small amount of Lightning damage
@@ -504,7 +507,7 @@
   type: poke, p_serpent_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=<randi_15_17> dodge=true block=true
+    1: hit, lightning=<randi_24_28> dodge=true block=true
 
 ####################################################
 # Stone Golems do a small amount of Frost damage
@@ -532,7 +535,7 @@
   type: poke, p_stonegolem_frost_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_23_25> dodge=true block=true
+    1: hit, frost=<randi_34_38> dodge=true block=true
 
 ####################################################
 # Ticks make you Wet if they attach to you
@@ -568,7 +571,7 @@
   type: poke, p_seekerbrood_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=<randi_23_25> dodge=true block=true
+    1: hit, lightning=<randi_25_29> dodge=true block=true
 
 ####################################################
 # Bonemaw Serpents do a small amount of Lightning damage
@@ -585,4 +588,4 @@
   type: poke, p_bonemawserpent_lightning_damage
   objectRpc:
   - name: RPC_Damage
-    1: hit, lightning=<randi_30_34> dodge=true block=true
+    1: hit, lightning=<randi_41_47> dodge=true block=true
