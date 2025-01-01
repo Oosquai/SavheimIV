@@ -6,7 +6,7 @@
   type: create
   spawns:
   - BossStone_TheElder, 2.2,-2,-8.5, 200,0,0, d_sh4_story_ch_1
-  - CL_Raw_Yellow_small, 2.2,-2,2.9, d_sh4_story_light_data_perm  # avoid cron job removal by not use *_temp
+  - sign, 2.2,-2,-1.3, 200,0,0, d_sh4_story_sign_quest_marker
 
 ##################################
 # Chapter 2 after killing Eikthyr
@@ -295,6 +295,7 @@
 - prefab: BossStone_TheElder
   type: poke, p_sh4_story_pieces_remove_failsafe
   bannedObjects:
+  - sign, 12, d_sh4_story_flag
   - sign_sh4_story, 12, d_sh4_story_flag
   - CL_Raw_Yellow_small, 12, d_sh4_story_flag
   - CL_Raw_Yellow_small_temp, 12, d_sh4_story_flag

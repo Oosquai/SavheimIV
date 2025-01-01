@@ -138,7 +138,8 @@
 - prefab: loki_ruins2
   enabled: true
   biome: Ocean
-  quantity: 50
+  quantity: 80
+  prioritized: true
   group: OceanLocs
   maxAltitude: -30
   minAltitude: -150
@@ -146,54 +147,6 @@
   randomRotation: true
   levelArea: true
   groundOffset: -1.2
-
-- prefab: ruins_0_and_0_1_and_0_2_and_0_3
-  enabled: true
-  biome: Ocean
-  quantity: 20
-  group: OceanLocs
-  maxAltitude: -30
-  minAltitude: -150
-  minDistanceFromSimilar: 400
-  randomRotation: true
-  levelArea: false
-  groundOffset: -2.5
-
-- prefab: ruins_0_and_0_2_and_0_3
-  enabled: true
-  biome: Ocean
-  quantity: 26
-  group: OceanLocs
-  maxAltitude: -30
-  minAltitude: -150
-  minDistanceFromSimilar: 300
-  randomRotation: true
-  levelArea: false
-  groundOffset: -6
-
-- prefab: ruins_0_and_0_2
-  enabled: true
-  biome: Ocean
-  quantity: 32
-  group: OceanLocs
-  maxAltitude: -30
-  minAltitude: -150
-  minDistanceFromSimilar: 200
-  randomRotation: true
-  levelArea: false
-  groundOffset: -8.5
-
-- prefab: ruins_0
-  enabled: true
-  biome: Ocean
-  quantity: 38
-  group: OceanLocs
-  maxAltitude: -30
-  minAltitude: -150
-  minDistanceFromSimilar: 100
-  randomRotation: true
-  levelArea: false
-  groundOffset: -3.2
 
 - prefab: loki_ruins1
   enabled: true
@@ -243,6 +196,30 @@
   levelArea: true
   groundOffset: -4
 
+- prefab: ruins_0_and_0_1_and_0_2_and_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 20
+  group: OceanLocs
+  maxAltitude: -30
+  minAltitude: -150
+  minDistanceFromSimilar: 400
+  randomRotation: true
+  levelArea: false
+  groundOffset: -2.5
+
+- prefab: ruins_0_and_0_2_and_0_3
+  enabled: true
+  biome: Ocean
+  quantity: 26
+  group: OceanLocs
+  maxAltitude: -30
+  minAltitude: -150
+  minDistanceFromSimilar: 300
+  randomRotation: true
+  levelArea: false
+  groundOffset: -6
+
 - prefab: ruins_0_1_and_0_2_and_0_3
   enabled: true
   biome: Ocean
@@ -254,6 +231,30 @@
   randomRotation: true
   levelArea: false
   groundOffset: -2.1
+
+- prefab: ruins_0_and_0_2
+  enabled: true
+  biome: Ocean
+  quantity: 32
+  group: OceanLocs
+  maxAltitude: -30
+  minAltitude: -150
+  minDistanceFromSimilar: 200
+  randomRotation: true
+  levelArea: false
+  groundOffset: -8.5
+
+- prefab: ruins_0
+  enabled: true
+  biome: Ocean
+  quantity: 38
+  group: OceanLocs
+  maxAltitude: -30
+  minAltitude: -150
+  minDistanceFromSimilar: 100
+  randomRotation: true
+  levelArea: false
+  groundOffset: -3.2
 
 - prefab: ruins_0_1
   enabled: true

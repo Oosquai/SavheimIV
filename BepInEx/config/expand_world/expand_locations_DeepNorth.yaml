@@ -1,5 +1,20 @@
 ###################################################
 # Deep North structures
+- prefab: brokkr-the-cathedral
+  enabled: true
+  biome: DeepNorth
+  quantity: 10
+  prioritized: true
+  group: DeepNorthLocs
+  minDistanceFromSimilar: 250
+  randomRotation: true
+  clearArea: true
+  levelArea: true
+  groundOffset: -8
+  maxAltitude: 70
+  minAltitude: 12
+  maxTerrainDelta: 8
+
 - prefab: brokkr-the-belmont
   enabled: true
   biome: DeepNorth
@@ -44,21 +59,6 @@
   maxAltitude: 70
   minAltitude: 12
   maxTerrainDelta: 7
-
-- prefab: brokkr-the-cathedral
-  enabled: true
-  biome: DeepNorth
-  quantity: 7
-  prioritized: true
-  group: DeepNorthLocs
-  minDistanceFromSimilar: 250
-  randomRotation: true
-  clearArea: true
-  levelArea: true
-  groundOffset: -8
-  maxAltitude: 70
-  minAltitude: 12
-  maxTerrainDelta: 8
 
 - prefab: brokkr-the-churn
   enabled: true
