@@ -54,7 +54,7 @@
   minDistanceFromSimilar: 250
   randomRotation: true
   clearArea: true
-  levelArea: false
+  levelArea: true
   groundOffset: -8
   maxAltitude: 70
   minAltitude: 12

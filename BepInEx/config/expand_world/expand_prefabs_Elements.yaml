@@ -456,6 +456,18 @@
 
 ###############################################################
 # Elements Combos
+- prefab: Player
+  type: poke, p_elements_player_lightning_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=<par1> dodge=true block=true
+
+- prefab: Player
+  type: poke, p_elements_player_frost_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=<par1> dodge=true block=true
+
 ####################################################
 # Ghosts do a small amount of Lightning damage
 - prefab: Ghost
@@ -467,13 +479,7 @@
     limit: 1
     maxDistance: 3
     delay: 0.5
-    parameter: p_ghost_lightning_damage
-
-- prefab: Player
-  type: poke, p_ghost_lightning_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=<randi_9_11> dodge=true block=true
+    parameter: p_elements_player_lightning_damage <randi_9_11>
 
 ####################################################
 # Wraiths do a small amount of Frost damage
@@ -484,13 +490,7 @@
     limit: 1
     maxDistance: 2.5
     delay: 0.7
-    parameter: p_wraith_frost_damage
-
-- prefab: Player
-  type: poke, p_wraith_frost_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, frost=<randi_21_25> dodge=true block=true
+    parameter: p_elements_player_frost_damage <randi_21_25>
 
 ####################################################
 # Serpents do a small amount of Lightning damage
@@ -501,13 +501,7 @@
     limit: 1
     maxDistance: 3.5
     delay: 1
-    parameter: p_serpent_lightning_damage
-
-- prefab: Player
-  type: poke, p_serpent_lightning_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=<randi_24_28> dodge=true block=true
+    parameter: p_elements_player_lightning_damage <randi_24_28>
 
 ####################################################
 # Stone Golems do a small amount of Frost damage
@@ -519,7 +513,7 @@
     limit: 1
     maxDistance: 6.35
     delay: 1.2
-    parameter: p_stonegolem_frost_damage
+    parameter: p_elements_player_frost_damage <randi_34_38>
 
 - prefab: StoneGolem
   types:
@@ -529,13 +523,7 @@
     limit: 1
     maxDistance: 6.3
     delay: 1.4
-    parameter: p_stonegolem_frost_damage
-
-- prefab: Player
-  type: poke, p_stonegolem_frost_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, frost=<randi_34_38> dodge=true block=true
+    parameter: p_elements_player_frost_damage <randi_34_38>
 
 ####################################################
 # Ticks make you Wet if they attach to you
@@ -565,13 +553,7 @@
     limit: 1
     maxDistance: 3
     delay: 0.7
-    parameter: p_seekerbrood_lightning_damage
-
-- prefab: Player
-  type: poke, p_seekerbrood_lightning_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=<randi_25_29> dodge=true block=true
+    parameter: p_elements_player_lightning_damage <randi_25_29>
 
 ####################################################
 # Bonemaw Serpents do a small amount of Lightning damage
@@ -582,10 +564,4 @@
     limit: 1
     maxDistance: 3.5
     delay: 1
-    parameter: p_bonemawserpent_lightning_damage
-
-- prefab: Player
-  type: poke, p_bonemawserpent_lightning_damage
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, lightning=<randi_41_47> dodge=true block=true
+    parameter: p_elements_player_lightning_damage <randi_41_47>
