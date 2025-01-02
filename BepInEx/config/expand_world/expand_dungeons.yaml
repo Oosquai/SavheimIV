@@ -192,3 +192,13 @@
     connectionType: ''
   doorChance: 0.3
   bounds: 64
+
+- name: DG_BlackForestDungeon
+  algorithm: Dungeon
+  maxRooms: 80
+  minRooms: 30
+  minRequiredRooms: 1
+  requiredRooms: BFD_Modular12_Solution, BFD_Modular8_Puzzle
+  doorTypes: []
+  interiorTransform: true
+  bounds: 64,64,256

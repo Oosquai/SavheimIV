@@ -526,3 +526,128 @@ MistLoot2:
     stackMin: 1
     stackMax: 2
     weight: 1.0
+UndergroundRuinsLoot1:
+  - item: Coins
+    stackMin: 27
+    stackMax: 39
+    weight: 1.0
+  - item: Amber
+    stackMin: 1
+    stackMax: 3
+    weight: 1.0
+  - item: AmberPearl
+    stackMin: 1
+    stackMax: 2
+    weight: 1.0
+  - item: SurtlingCore
+    stackMin: 1
+    stackMax: 1
+    weight: 1.0
+  - item: MeadHealthMinor
+    stackMin: 1
+    stackMax: 4
+    weight: 1.0
+  - item: AncientSeed
+    stackMin: 1
+    stackMax: 3
+    weight: 1
+  - item: CarrotSeeds
+    stackMin: 1
+    stackMax: 2
+    weight: 1
+  - item: kg_EnchantScroll_Armor_D
+    stackMin: 1
+    stackMax: 3
+    weight: 0.5
+  - item: kg_EnchantScroll_Weapon_D
+    stackMin: 1
+    stackMax: 3
+    weight: 0.5
+  - item: CopperOre
+    stackMin: 3
+    stackMax: 9
+    weight: 0.2
+  - item: TinOre
+    stackMin: 2
+    stackMax: 6
+    weight: 0.2
+  - item: AxeBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: MaceBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: KnifeCopper
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_Sword_2_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: SpearBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: SwordBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: AtgeirBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_TH_Axe_2_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: BowFineWood
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_Bow_8_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_Crossbow_2_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: FistFenrirClawBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: THSwordBronze
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_Sledge_9_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: BMR_EmberStaff
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: BMR_EmberWand
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_Round_Shield_5_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: ShieldBronzeBuckler
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: CWS_Round_Shield_2_SH
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05
+  - item: ShieldBoneTower
+    stackMin: 1
+    stackMax: 1
+    weight: 0.05

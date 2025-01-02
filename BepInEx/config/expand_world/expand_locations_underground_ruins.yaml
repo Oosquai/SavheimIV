@@ -1,0 +1,16 @@
+- prefab: BFD_Exterior
+  enabled: true
+  biome: BlackForest
+  biomeArea: median
+  quantity: 200                                  # 30
+  minDistance: 0.15
+  maxDistance: 0.7                               # 0.3
+  minAltitude: 10
+  prioritized: true
+  group: Dungeon_UndergroundRuins
+  minDistanceFromSimilar: 512
+  discoverLabel: Underground Ruins
+  maxTerrainDelta: 4                             # 2
+  exteriorRadius: 14
+  clearArea: true
+  noBuild: true

@@ -29,6 +29,19 @@
   strings:
   - text, <size=30><#FFFFCF><voffset=165>!  
 
+- name: d_sh4_story_sign_quest_marker_dim
+  ints:
+  - i_sh4_story_flag, 1
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  strings:
+  - text, <size=30><#AFAF7F><voffset=165>!  
+
 - name: d_sh4_story_light_data
   ints:
   - i_sh4_story_flag, 1
@@ -39,19 +52,6 @@
   floats:
   - WearNTear.m_health, -1
   - health, -1
-
-- name: d_sh4_story_light_data_perm
-  ints:
-  - i_sh4_story_flag, 1
-  bools:
-  - Piece.m_canBeRemoved, false
-  - Piece.m_primaryTarget, false
-  - Piece.m_randomTarget, false
-  floats:
-  - WearNTear.m_health, -1
-  - health, -1
-  - LightLod.m_lightDistance, 5
-  - LightLod.m_shadowDistance, 5
 
 - name: d_sh4_story_pieces_pos
   position: <x>,<z>,<sub_<y>_<par1>>

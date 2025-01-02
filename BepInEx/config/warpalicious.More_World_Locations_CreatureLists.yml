@@ -19,6 +19,7 @@ BlackforestCreatures1:
   - Skeleton
   - Skeleton
   - Skeleton_Poison
+  - Ghost
 BlackforestCreatures2:
   - Greydwarf
   - Greydwarf
@@ -39,6 +40,7 @@ SwampCreatures1:
   - Blob
   - Blob
   - Blob
+  - Surtling
   - Blob
   - BlobElite
 SwampCreatures2:
@@ -48,19 +50,15 @@ SwampCreatures2:
   - Draugr_Elite
   - Draugr
   - Draugr
-  - Draugr
-  - Draugr
   - Draugr_Elite
   - Draugr
   - Draugr
 SwampCreatures3:
   - Skeleton
   - Skeleton
-  - Skeleton
   - Skeleton_Poison
   - Skeleton
-  - Skeleton
-  - Skeleton
+  - Wraith
   - Skeleton
   - Skeleton_Poison
   - Skeleton
@@ -76,6 +74,8 @@ MountainsCreatures1:
   - Skeleton_Poison
   - Skeleton
   - Ghost
+  - Skeleton_Poison
+  - Wraith
   - Skeleton
 MountainsCreatures2:
   - Draugr
@@ -159,7 +159,9 @@ MistCreatures2:
   - Seeker
   - SeekerBrute
   - Seeker
+  - Tick
   - Seeker
+  - Tick
   - Seeker
   - Seeker
   - Seeker
@@ -173,3 +175,26 @@ MistCreatures3:
   - Seeker
   - Seeker
   - Seeker
+UndergroundRuinsCreatures1:
+  - Greydwarf
+  - Bat
+  - Greydwarf_Shaman
+  - Greydwarf
+  - Ghost
+  - Greydwarf_Elite
+  - Greydwarf
+  - Skeleton
+  - Skeleton
+  - Bat
+  - Skeleton_Poison
+  - Greydwarf
+  - Surtling
+  - Greydwarf_Elite
+  - Wraith
+  - Greydwarf
+  - Bat
+  - Greydwarf_Shaman
+  - Ghost
+  - Skeleton
+  - Skeleton_Poison
+  - Surtling

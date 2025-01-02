@@ -9,7 +9,7 @@ discordConnector: true
 
 join:
   - commands:
-    - s 🏹 Welcome, <name>! 🪓
+    - s 🏹 Welcome to Savheim, <name>! 🪓
     - s Say !help for in-game player commands.
     - s 🚨 Daily maintenance 4-6am PST. 🚨
 
@@ -163,7 +163,7 @@ jobs:
 
 # Hard location resets (ignore player bases) - Vanilla, MWL, and Savheim
   - commands:
-    - locations_reset LeviathanLava,PlaceofMystery1,PlaceofMystery2,PlaceofMystery3,CharredTowerRuins1_dvergr,Hildir_cave,Hildir_crypt,Hildir_plainsfortress,Crypt2,GoblinCamp2,Crypt3,Crypt4,Mistlands_DvergrTownEntrance1,Mistlands_DvergrTownEntrance2,MountainCave02,SunkenCrypt4,TarPit1,TarPit2,TarPit3,Mistlands_RoadPost1,Mistlands_GuardTower1_ruined_new2,Mistlands_GuardTower3_new,Mistlands_GuardTower3_ruined_new,Mistlands_GuardTower1_new,Mistlands_GuardTower2_new,Mistlands_GuardTower1_ruined_new,Mistlands_Lighthouse1_new,Mistlands_Excavation1,Mistlands_Excavation2,Mistlands_Excavation3,Mistlands_Harbour1,MWL_RuinsCathedral1,floatingisland_atgeir,floatingisland_axe,floatingisland_battleaxe,floatingisland_greatsword,floatingisland_knife,floatingisland_mace,floatingisland_sledge,floatingisland_staff,floatingisland_sword safeZones=0 start
+    - locations_reset LeviathanLava,PlaceofMystery1,PlaceofMystery2,PlaceofMystery3,CharredTowerRuins1_dvergr,Hildir_cave,Hildir_crypt,Hildir_plainsfortress,Crypt2,GoblinCamp2,Crypt3,Crypt4,Mistlands_DvergrTownEntrance1,Mistlands_DvergrTownEntrance2,MountainCave02,SunkenCrypt4,TarPit1,TarPit2,TarPit3,Mistlands_RoadPost1,Mistlands_GuardTower1_ruined_new2,Mistlands_GuardTower3_new,Mistlands_GuardTower3_ruined_new,Mistlands_GuardTower1_new,Mistlands_GuardTower2_new,Mistlands_GuardTower1_ruined_new,Mistlands_Lighthouse1_new,Mistlands_Excavation1,Mistlands_Excavation2,Mistlands_Excavation3,Mistlands_Harbour1,MWL_RuinsCathedral1,BFD_Exterior,floatingisland_atgeir,floatingisland_axe,floatingisland_battleaxe,floatingisland_greatsword,floatingisland_knife,floatingisland_mace,floatingisland_sledge,floatingisland_staff,floatingisland_sword safeZones=0 start
     schedule: "10 13 1,5,9,13,17,21,25,29 * *"
 
 # Hard location resets (ignore player bases) - Must do Charred Fortresses last!

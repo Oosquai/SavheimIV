@@ -138,12 +138,13 @@
 - prefab: loki_ruins2
   enabled: true
   biome: Ocean
-  quantity: 80
+  quantity: 50
   prioritized: true
   group: OceanLocs
+  maxDistance: 0.8
   maxAltitude: -30
   minAltitude: -150
-  minDistanceFromSimilar: 500
+  minDistanceFromSimilar: 1000
   randomRotation: true
   levelArea: true
   groundOffset: -1.2
