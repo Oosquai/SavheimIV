@@ -48,11 +48,18 @@
 # Random clothes for creatures
 # gear_buff(RandomSkillFactor)
 # ... but mobs created by game don't have a RandomSkillFactor field, so would be 0.  Use "1".
+
+# Meadows ruins use skeletons and bats.  Get them to be friendly to each other!
+- prefab: Bat
+  type: create
+  biomes: Meadows
+  data: d_meadows_ruins_group
+
 - prefab: Skeleton
   type: create
   weight: 1E30
-  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
-  data: clothes_skeleton_icestaff
+  biomes: Meadows
+  data: clothes_skeleton_meadows
   poke:
   - prefab: <prefab>
     parameter: gear_buff 1
@@ -62,8 +69,19 @@
 - prefab: Skeleton
   type: create
   weight: 1E30
-  biomes: Meadows, Blackforest
+  biomes: Blackforest
   data: clothes_skeleton
+  poke:
+  - prefab: <prefab>
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+
+- prefab: Skeleton
+  type: create
+  weight: 1E30
+  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  data: clothes_skeleton_icestaff
   poke:
   - prefab: <prefab>
     parameter: gear_buff 1

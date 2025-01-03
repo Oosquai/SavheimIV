@@ -13,6 +13,8 @@
 - Reduced difficulty of spawns at Meadow ruins.  (this may require location resets before taking effect).
 - Fixed extra recipes showing in craft tables.
 - Submitted bug report for Comfort display column issue in Hammer build menu.
+- Disabled "I have arrived!" text.
+- Cleaned up factions on some extra spawns around the world.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

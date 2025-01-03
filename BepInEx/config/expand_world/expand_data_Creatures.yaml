@@ -298,6 +298,22 @@
 
 ####################################
 # Monster Clothes!
+- name: d_meadows_ruins_group
+  strings:
+  - Humanoid.m_group, g_meadows_ruins_group
+
+- name: clothes_skeleton_meadows
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, <none>, <none>, skeleton_sword
+  strings:
+  - Humanoid.m_group, g_meadows_ruins_group
+
 - name: clothes_skeleton
   ints:
   - Humanoid.m_canSwim, 1
