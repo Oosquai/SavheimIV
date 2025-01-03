@@ -42,7 +42,7 @@
   injectData: true
   poke:
   - self: true
-    delay: 0.2       # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
+    delay: 0.25      # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
     parameter: p_shield_counter_end
 
 - prefab: Player
@@ -308,7 +308,7 @@
 
 - prefab: sfx_build_table
   type: create
-  removeDelay: 1   # reduce trigger window to enforce reaction time and prevent double leap
+  removeDelay: 1                                 ### TRIGGER WINDOW.  Reduce to enforce reaction time and prevent double leap
   remove: true
 
 - prefab: Player
@@ -323,8 +323,7 @@
   spawns:
   - fx_DvergerMage_Mistile_die
   - vfx_wraith_death
-  - vfx_ghost_death, 0,0,1, 0,0,0, d_empty_data_combat, 0.2
-  - vfx_ghost_death, 0,0,2, 0,0,0, d_empty_data_combat, 0.4
+  - vfx_ghost_death, 0,0,1, 0,0,0, d_empty_data_combat, 0.1
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Vanish
@@ -333,7 +332,7 @@
     4: float, 1
   poke:
   - prefab: creature
-    maxDistance: 4
+    maxDistance: 4                               ### RANGE WITHIN WHICH CREATURES AFFECTED
     parameter: p_vanish_deaggro
 
 - prefab: creature

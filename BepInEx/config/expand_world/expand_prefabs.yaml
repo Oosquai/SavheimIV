@@ -5,170 +5,174 @@
 # Group commands, New keys, 
 - prefab: Player
   type: say, !help
-  poke:
-  - self: true
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !help-{keys, groups, trees}"
+    5: string, 
     delay: 0.1
-    parameter: p_player_help_0
-
-- prefab: Player
-  type: poke, p_player_help_0
-  command: s !help-{keys, groups, trees}
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_1
-
-- prefab: Player
-  type: poke, p_player_help_1
-  command: s !roll - Random 1 to 100
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_2
-
-- prefab: Player
-  type: poke, p_player_help_2
-  command: s !rolls - (all nearby players)
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_3
-
-- prefab: Player
-  type: poke, p_player_help_3
-  command: s !unstuck - Die (after confirmation)
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_4
-
-- prefab: Player
-  type: poke, p_player_help_4
-  command: s !MytreeRanaWay{3,30} - Rotate trees
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_5
-
-- prefab: Player
-  type: poke, p_player_help_5
-  command: s !day - Current in-game day.
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !roll - Random 1 to 100"
+    5: string, 
+    delay: 0.2
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !rolls - (all nearby players)"
+    5: string, 
+    delay: 0.3
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !unstuck - Die (after confirmation)"
+    5: string, 
+    delay: 0.4
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !MytreeRanaWay{3,30} - Rotate trees"
+    5: string, 
+    delay: 0.5
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !day - Current in-game day"
+    5: string, 
+    delay: 0.6
 
 # !help-keys
 - prefab: Player
   type: say, !help-keys
-  poke:
-  - self: true
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, L-Alt=dodge. T,G=boss powers"
+    5: string, 
     delay: 0.1
-    parameter: p_player_help_keys_0
-
-- prefab: Player
-  type: poke, p_player_help_keys_0
-  command: s L-Alt=dodge. T,G=boss powers.
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_keys_1
-
-- prefab: Player
-  type: poke, p_player_help_keys_1
-  command: s F=cycle ammo. L-Shift=bow zoom.
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_keys_2
-
-- prefab: Player
-  type: poke, p_player_help_keys_2
-  command: s ~=swap hotbars. P=portal display.
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_keys_3
-
-- prefab: Player
-  type: poke, p_player_help_keys_3
-  command: s U=guilds. F6=comfort list.
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_keys_4
-
-- prefab: Player
-  type: poke, p_player_help_keys_4
-  command: s L-Ctrl=crafting tracker +/-.
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, F=cycle ammo. L-Shift=bow zoom"
+    5: string, 
+    delay: 0.2
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, ~=swap hotbars. P=portal display"
+    5: string, 
+    delay: 0.3
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, U=guilds. F6=comfort list"
+    5: string, 
+    delay: 0.4
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, L-Ctrl=crafting tracker +/-"
+    5: string, 
+    delay: 0.5
 
 # !help-groups
 - prefab: Player
   type: say, !help-groups
-  poke:
-  - self: true
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, /invite [name]"
+    5: string, 
     delay: 0.1
-    parameter: p_player_help_groups_0
-
-- prefab: Player
-  type: poke, p_player_help_groups_0
-  command: s /invite [name]
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_groups_1
-
-- prefab: Player
-  type: poke, p_player_help_groups_1
-  command: s /remove [name]
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_groups_2
-
-- prefab: Player
-  type: poke, p_player_help_groups_2
-  command: s /promote [name]
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_groups_3
-
-- prefab: Player
-  type: poke, p_player_help_groups_3
-  command: s /leave
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, /remove [name]"
+    5: string, 
+    delay: 0.2
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, /promote [name]"
+    5: string, 
+    delay: 0.3
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, /leave"
+    5: string, 
+    delay: 0.4
 
 # !help-trees
 - prefab: Player
   type: say, !help-trees
-  poke:
-  - self: true
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !MytreeRanaWay3 rotates nearest plantable tree 3 degrees.  Crosshairs ignored."
+    5: string, 
     delay: 0.1
-    parameter: p_player_help_trees_0
-
-- prefab: Player
-  type: poke, p_player_help_trees_0
-  command: s !MytreeRanaWay3 rotates nearest plantable tree 3 degrees.  Crosshairs ignored.
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_trees_1
-
-- prefab: Player
-  type: poke, p_player_help_trees_1
-  command: s !MytreeRanaWay30 rotates nearest plantable tree 30 degrees.  Crosshairs ignored.
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_trees_2
-
-- prefab: Player
-  type: poke, p_player_help_trees_2
-  command: s Rotating trees removes support from all dependent pieces!  All will break!
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_player_help_trees_3
-
-- prefab: Player
-  type: poke, p_player_help_trees_3
-  command: s Requires Owned and Inactive Ward.
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, !MytreeRanaWay30 rotates nearest plantable tree 30 degrees.  Crosshairs ignored."
+    5: string, 
+    delay: 0.2
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, Rotating trees removes support from all dependent pieces!  All will break!"
+    5: string, 
+    delay: 0.3
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, Requires Owned and Inactive Ward."
+    5: string, 
+    delay: 0.4
 
 ### Player commands - random 100
 - prefab: Player
@@ -188,7 +192,15 @@
 
 - prefab: Player
   type: poke, p_player_roll100
-  command: s 🎲 <pname> rolls <randi_1_100> 🎲
+  clientRpc:
+  - name: ChatMessage
+    target: all
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, 🎲 <pname> rolls <randi_1_100> 🎲"
+    5: string, 
+    delay: 0.1
 
 ### Player commands - suicide (for stuck)
 - prefab: Player
@@ -311,14 +323,15 @@
 ### Player commands - current day
 - prefab: Player
   type: say, !day
-  poke:
-  - self: true
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, 🌞 Savheim IV - day <day> 🌙"
+    5: string, 
     delay: 0.1
-    parameter: p_player_cmd_day
-
-- prefab: Player
-  type: poke, p_player_cmd_day
-  command: s 🌞 Savheim IV - day <day> 🌙
 
 #####################
 ### Admin commands - announce server reboot
