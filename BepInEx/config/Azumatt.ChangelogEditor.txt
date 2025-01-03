@@ -9,7 +9,7 @@
 - Modified player commands to no longer be global.  Need to test !roll(s) in multiplayer - everyone sees same rolls?
 - Shield Counter has a slightly more forgiving time window now.
 - Reduced visual effects on Knife Vanish slightly.
-- Story markers now last 90 seconds instead of 60.
+- Story markers now last 300 seconds instead of 60.
 - Reduced difficulty of spawns at Meadow ruins.  (this may require location resets before taking effect).
 - Fixed extra recipes showing in craft tables.
 - Submitted bug report for Comfort display column issue in Hammer build menu.

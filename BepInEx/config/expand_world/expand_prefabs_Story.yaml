@@ -265,7 +265,7 @@
     data: d_sh4_story_flag
     limit: 4
     maxDistance: 10
-    delay: 90                                    ### SECONDS UNTIL STORY PIECES DESPAWN
+    delay: 300                                   ### SECONDS UNTIL STORY PIECES DESPAWN
     parameter: p_sh4_story_pieces_remove
 
 - prefab: BossStone_TheElder, sign_sh4_story, CL_Raw_Yellow_small_temp
