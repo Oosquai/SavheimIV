@@ -163,7 +163,7 @@ Secondary_Attack:
     Burst_Effect: []
 Damage:
   Blunt: 0
-  Chop: 65
+  Chop: 45
   Damage: 0
   Fire: 0
   Frost: 0
@@ -175,7 +175,7 @@ Damage:
   Spirit: 40
 Damage_Per_Level:
   Blunt: 0
-  Chop: 4
+  Chop: 2
   Damage: 0
   Fire: 0
   Frost: 0
