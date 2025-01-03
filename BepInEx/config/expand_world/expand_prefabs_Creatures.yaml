@@ -53,7 +53,7 @@
 - prefab: Bat
   type: create
   biomes: Meadows
-  data: d_meadows_ruins_group
+  data: d_meadows_ruins_bats
 
 - prefab: Skeleton
   type: create

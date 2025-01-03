@@ -298,7 +298,13 @@
 
 ####################################
 # Monster Clothes!
-- name: d_meadows_ruins_group
+- name: d_meadows_ruins_bats
+  ints:
+  - level, 1
+  floats:
+  - RandomSkillFactor, 0.25
+  - max_health, <float_max_health>*0.5
+  - health, <float_max_health>*0.501
   strings:
   - Humanoid.m_group, g_meadows_ruins_group
 
@@ -307,6 +313,11 @@
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  - level, 1
+  floats:
+  - RandomSkillFactor, 0.5
+  - max_health, <float_max_health>*0.5
+  - health, <float_max_health>*0.501
   hashes:
   - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
   - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
