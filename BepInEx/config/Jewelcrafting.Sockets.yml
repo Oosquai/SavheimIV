@@ -7,7 +7,7 @@
 fire starter:
   slot: [weapon, magic]
   gem: red
-  unique: gem
+  unique: Item
   power:
     power: [10, 20, 30]
     chance: [20, 25, 30]
@@ -17,7 +17,7 @@ fire starter:
 ice heart:
   slot: [weapon, elementalmagic]
   gem: blue
-  unique: gem
+  unique: Item
   power:
     power: [6, 12, 18]
     chance: [20, 25, 30]
@@ -27,7 +27,7 @@ ice heart:
 snake bite:
   slot: [weapon, crossbow]
   gem: green
-  unique: gem
+  unique: Item
   power:
     power: [20, 40, 60]
     chance: [20, 25, 30]
@@ -37,7 +37,7 @@ snake bite:
 shadow hit:
   slot: [weapon, bloodmagic]
   gem: black
-  unique: gem
+  unique: Item
   power:
     power: [7, 10, 13]
     range: [5, 6, 7]
@@ -49,7 +49,7 @@ shadow hit:
 vampire:
   slot: [weapon, bloodmagic]
   gem: yellow
-  unique: gem
+  unique: Item
   power:
     power: [7, 10, 13]
     max heal: [5, 7, 9]
@@ -59,23 +59,23 @@ vampire:
 berserk:
   - slot: [weapon, magic]
     gem: purple
-    unique: gem
+    unique: Item
     power: [3, 6, 9]
   - slot: tool
     gem: red
-    unique: gem
+    unique: Item
     power: [3, 6, 9]
 
 acceleration:
   slot: [weapon, magic]
   gem: redish
-  unique: gem
+  unique: Item
   power: [4, 8, 12]
 
 overexertion:
   slot: [weapon, magic, bow, crossbow, tool]
   gem: blueish
-  unique: gem
+  unique: Item
   power:
     damage increase: [6, 12, 18]
     penalty: [1, 1, 1]
@@ -85,29 +85,29 @@ overexertion:
 magnetic:
   slot: spear
   gem: black
-  unique: gem
+  unique: Item
   power: [34, 67, 100]
 
 opportunity:
   slot: axe
   gem: red
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 perforation:
   slot: knife
   gem: orange
-  unique: gem
+  unique: Item
   power: [20, 25, 30]
 
 thunderclap:
   - slot: polearm
     gem: orange
-    unique: gem
+    unique: Item
     power: [4, 7, 10]
   - slot: bloodmagic
     gem: cyan
-    unique: gem
+    unique: Item
     power: [4, 7, 10]
 
 # Magic Weapons
@@ -115,13 +115,13 @@ thunderclap:
 magical bargain:
   slot: [weapon, elementalmagic]
   gem: orange
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 precious blood:
   slot: bloodmagic
   gem: blue
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 # Chest
@@ -129,25 +129,25 @@ precious blood:
 defender:
   slot: [chest, utility]
   gem: red
-  unique: gem
+  unique: Item
   power: [2, 4, 6]
 
 vitality:
   slot: chest
   gem: blue
-  unique: gem
+  unique: Item
   power: [12, 18, 24]
 
 regeneration:
   slot: chest
   gem: green
-  unique: gem
+  unique: Item
   power: [1, 2, 3]
 
 mirror:
   slot: [chest, elementalmagic]
   gem: black
-  unique: gem
+  unique: Item
   power:
     power: [6, 8, 10]
     damage reflected: [30, 40, 50]
@@ -157,7 +157,7 @@ mirror:
 fade:
   slot: chest
   gem: orange
-  unique: gem
+  unique: Item
   power:
     power: [1, 2, 3]
     damage threshold: [34, 30, 26]
@@ -167,13 +167,13 @@ fade:
 invigorated:
   slot: [chest, shield, bow, tool]
   gem: redish
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 relaxed:
   slot: [utility, crossbow]
   gem: redish
-  unique: gem
+  unique: Item
   power: [10, 20, 30]
 
 # Legs
@@ -181,49 +181,49 @@ relaxed:
 sprinter:
   slot: legs
   gem: red
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 ninja:
   slot: legs
   gem: black
-  unique: gem
+  unique: Item
   power: [10, 15, 20]
 
 nimble:
   slot: [bow, legs]
   gem: blue
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 marathon:
   slot: legs
   gem: yellow
-  unique: gem
+  unique: Item
   power: [10, 15, 20]
 
 mountain goat:
   slot: legs
   gem: purple
-  unique: gem
+  unique: Item
   power: [10, 20, 30]
 
 lifeguard:
   slot: [legs, utility]
   gem: orange
-  unique: gem
+  unique: Item
   power: [20, 25, 30]
 
 momentum:
   slot: legs
   gem: green
-  unique: gem
+  unique: Item
   power: [25, 50, 75]
 
 restless legs:
   slot: legs
   gem: blueish
-  unique: gem
+  unique: Item
   power: [15, 30, 45]
 
 # Utility
@@ -231,31 +231,31 @@ restless legs:
 power recovery:
   slot: utility
   gem: green
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 comfortable:
   slot: utility
   gem: yellow
-  unique: gem
+  unique: Item
   power: [3, 5, 7]
 
 hercules:
   slot: utility
   gem: purple
-  unique: gem
+  unique: Item
   power: [10, 20, 30]
 
 glowing spirit:
   slot: [utility, tool]
   gem: blue
-  unique: gem
+  unique: Item
   power: [3, 6, 9]
 
 dungeon guide:
   slot: utility
   gem: black
-  unique: gem
+  unique: Item
   power: [3, 6, 9]
 
 daring: unset
@@ -266,13 +266,13 @@ daring: unset
 wisplight:
   slot: utility
   gem: wisplight
-  unique: gem
+  unique: Item
   power: 10
 
 wishbone:
   slot: utility
   gem: wishbone
-  unique: gem
+  unique: Item
   power: 10
 
 # Head
@@ -280,47 +280,47 @@ wishbone:
 explorer:
   slot: head
   gem: green
-  unique: gem
+  unique: Item
   power: [50, 100, 150]
 
 student:
   slot: head
   gem: red
-  unique: gem
+  unique: Item
   power: [2, 4, 6]
 
 resilience:
   slot: head
   gem: yellow
-  unique: gem
+  unique: Item
   power: [10, 20, 30]
 
 gourmet:
   slot: head
   gem: purple
-  unique: gem
+  unique: Item
   power: [10, 30, 50]
 
 merciful death:
   slot: head
   gem: blue
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 eitr surge:
   - slot: head
     gem: orange
-    unique: gem
+    unique: Item
     power: [5, 10, 15]
   - slot: elementalmagic
     gem: yellow
-    unique: gem
+    unique: Item
     power: [5, 10, 15]
 
 refreshed mind:
   slot: head
   gem: blueish
-  unique: gem
+  unique: Item
   power: [3, 6, 9]
 
 # Bow
@@ -328,13 +328,13 @@ refreshed mind:
 endless arrows:
   slot: bow
   gem: red
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 master archer:
   slot: bow
   gem: purple
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 stealth archer: unset
@@ -345,7 +345,7 @@ stealth archer: unset
 quick draw:
   slot: bow
   gem: black
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 # Crossbow
@@ -353,19 +353,19 @@ quick draw:
 endless bolts:
   slot: crossbow
   gem: red
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 master arbalist:
   slot: crossbow
   gem: purple
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 quick load:
   slot: crossbow
   gem: black
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 # Bow and Crossbow
@@ -373,7 +373,7 @@ quick load:
 echo:
   slot: [bow, crossbow]
   gem: yellow
-  unique: gem
+  unique: Item
   power:
     power: [6, 8, 10]
     bonus projectiles: [1, 1, 2]
@@ -383,7 +383,7 @@ echo:
 necromancer:
   slot: [bow, elementalmagic]
   gem: green
-  unique: gem
+  unique: Item
   power:
     power: [5, 7, 9]
     duration: [6, 6, 9]
@@ -393,7 +393,7 @@ necromancer:
 ricochet:
   slot: [bow, crossbow]
   gem: orange
-  unique: gem
+  unique: Item
   power:
     power: [6, 9, 12]
     range: [12, 15, 18]
@@ -403,7 +403,7 @@ ricochet:
 elemental chaos:
   slot: crossbow
   gem: blue
-  unique: gem
+  unique: Item
   power:
     power: [10, 20, 30]
     chance: [16, 20, 24]
@@ -415,7 +415,7 @@ elemental chaos:
 glider:
   slot: cloak
   gem: green
-  unique: gem
+  unique: Item
   power: [3, 6, 9]
   # Optional Configs:
   # - required height (default: 3.5)
@@ -423,25 +423,25 @@ glider:
 inconspicuous:
   slot: cloak
   gem: black
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 turtle shell:
   slot: cloak
   gem: yellow
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 air dried:
   slot: cloak
   gem: blue
-  unique: gem
+  unique: Item
   power: [24, 42, 60]
 
 nourishing:
   slot: [cloak, utility]
   gem: blueish
-  unique: gem
+  unique: Item
   power:
     health: [34, 67, 100]
     comfort requirement: [1, 1, 1]
@@ -449,7 +449,7 @@ nourishing:
 wind walk:
   slot: cloak
   gem: purple
-  unique: gem
+  unique: Item
   power: [10, 20, 30]
 
 # Shield
@@ -457,19 +457,19 @@ wind walk:
 unfazed:
   slot: shield
   gem: blue
-  unique: gem
+  unique: Item
   power: [8, 16, 24]
 
 parry master:
   slot: shield
   gem: purple
-  unique: gem
+  unique: Item
   power: [50, 75, 100]
 
 avoidance:
   slot: shield
   gem: yellow
-  unique: gem
+  unique: Item
   power:
     power: [5, 10, 15]
     damage reduction: [50, 65, 80]
@@ -479,19 +479,19 @@ avoidance:
 tank:
   slot: shield
   gem: black
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 pain tolerance:
   slot: shield
   gem: red
-  unique: gem
+  unique: Item
   power: [3, 5, 7]
 
 fast reaction:
   slot: [shield, bloodmagic]
   gem: orange
-  unique: gem
+  unique: Item
   power:
     parry frame decrease: [30, 30, 30]
     parry power increase: [10, 20, 30]
@@ -499,7 +499,7 @@ fast reaction:
 vampiric parry:
   slot: [shield, bloodmagic]
   gem: green
-  unique: gem
+  unique: Item
   power: [3, 5, 7]
 
 # Tool
@@ -507,19 +507,19 @@ vampiric parry:
 unbreakable:
   slot: tool
   gem: purple
-  unique: gem
+  unique: Item
   power: [40, 50, 60]
 
 energetic:
   slot: tool
   gem: yellow
-  unique: gem
+  unique: Item
   power: [14, 28, 42]
 
 frenzy:
   slot: tool
   gem: black
-  unique: gem
+  unique: Item
   power: [5, 10, 15]
 
 # Boss

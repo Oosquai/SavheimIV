@@ -3,7 +3,7 @@ clonePrefabName: CWS_TH_Sword_8_SH
 craftingStation: $piece_blackforge
 minStationLevel: 1
 maxStationLevelCap: 3
-repairStation: 
+repairStation: $piece_forge
 amount: 1
 disabled: true
 disabledUpgrade: false

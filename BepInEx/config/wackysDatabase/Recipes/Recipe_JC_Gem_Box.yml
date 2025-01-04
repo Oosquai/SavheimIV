@@ -1,0 +1,16 @@
+name: JC_Gem_Box
+clonePrefabName: 
+craftingStation: ''
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: true
+disabledUpgrade: true
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- FineWood:15:0:True
+- LeatherScraps:10:0:True
+- Resin:5:0:True
+- GreydwarfEye:5:0:True

@@ -125,7 +125,7 @@
   ints:
   - IsBlocking, 1
   hashes:
-  - LeftItem, CWS_Round_Shield_5_SH, CWS_Round_Shield_4_SH, CWS_Round_Shield_3_SH, CWS_Round_Shield_1_SH, CWS_Heater_Shield_4_SH, CWS_Heater_Shield_2_SH, CWS_Heater_Shield_3_SH, CWS_Round_Shield_2_SH, ShieldBanded, ShieldSilver, ShieldBlackmetal, ShieldCarapace, ShieldFlametal, JC_Reaper_Shield, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7_SH, CWS_Buckler_Shield_1_SH, ShieldCarapaceBuckler, CWS_Buckler_Shield_2_SH, JC_Shield_Buckler, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower, CWS_Tower_Shield_3_SH, CWS_Tower_Shield_4_SH
+  - LeftItem, CWS_Round_Shield_5_SH, CWS_Round_Shield_4_SH, CWS_Round_Shield_3_SH, CWS_Round_Shield_1_SH, CWS_Heater_Shield_4_SH, CWS_Heater_Shield_2_SH, CWS_Heater_Shield_3_SH, CWS_Round_Shield_2_SH, ShieldBanded, ShieldSilver, ShieldBlackmetal, ShieldCarapace, ShieldFlametal, JC_Reaper_Shield, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7_SH, CWS_Buckler_Shield_1_SH, ShieldCarapaceBuckler, CWS_Buckler_Shield_2_SH, JC_Shield_Buckler, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower, CWS_Tower_Shield_3_SH, CWS_Tower_Shield_4_SH, ShieldWood, ShieldWoodTower
 
 - name: PlayerBlockingHuntressBow
   ints:

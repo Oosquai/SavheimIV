@@ -3,7 +3,7 @@ clonePrefabName: FistFenrirClaw_Boss_SH
 craftingStation: $piece_forge
 minStationLevel: 1
 maxStationLevelCap: 
-repairStation: 
+repairStation: $piece_workbench
 amount: 1
 disabled: true
 disabledUpgrade: false
