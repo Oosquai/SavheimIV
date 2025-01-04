@@ -206,7 +206,7 @@ Damage_Per_Level:
   Chop: 0
   Damage: 0
   Fire: 0
-  Frost: 2
+  Frost: 4
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
@@ -259,7 +259,7 @@ m_skillType: ElementalMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
 m_toolTier: 0
-m_maxQuality: 3
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

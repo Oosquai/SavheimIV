@@ -5,10 +5,12 @@ minStationLevel: 1
 maxStationLevelCap: 3
 repairStation: 
 amount: 1
-disabled: false
+disabled: true
 disabledUpgrade: false
 requireOnlyOneIngredient: false
-upgrade_reqs: []
+upgrade_reqs:
+- Wispheart:1
+- Coins:100
 reqs: 
 - SwordCheat:1:0:True
 - Wispheart:1:0:True

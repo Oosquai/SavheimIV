@@ -202,7 +202,7 @@ Damage:
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
-  Chop: 5
+  Chop: 10
   Damage: 0
   Fire: 0
   Frost: 0
@@ -210,7 +210,7 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 5
+  Slash: 10
   Spirit: 0
 Armor:
   armor: 20
@@ -223,7 +223,7 @@ SE_Equip:
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 36
-  m_blockPowerPerLevel: 2
+  m_blockPowerPerLevel: 4
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -248,7 +248,7 @@ m_skillType: Axes
 m_animationState: OneHanded
 m_itemType: OneHandedWeapon
 m_toolTier: 4
-m_maxQuality: 1
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
