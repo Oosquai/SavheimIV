@@ -10,6 +10,7 @@
 - Improved logic for Shield Counter.
 - Turned off recipes for Crystal Light Wand and Jeweler's Box.
 - Uniques at crafting bench transitional tiers can now be repaired at the previous tier's bench.
+- Groups now limited to 4 players instead of 5.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
