@@ -5,12 +5,17 @@
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 1/4/25</color>
-- TotinoTunes is now updated!  Thank you, Kry!
-- Gems are now unique to items rather than equipped.  Thanks, Myrmur!
-- Improved logic for Shield Counter.
-- Turned off recipes for Crystal Light Wand and Jeweler's Box.
+- TotinoTunes is now updated!  Thanks, Kry!
+- Gems are now unique to items rather than equipment.  Thanks, Myrmur!
+- Improved Shield Counter logic and FX.
+- Disabled recipes for Crystal Light Wand and Jeweler's Box.
 - Uniques at crafting bench transitional tiers can now be repaired at the previous tier's bench.
-- Groups now limited to 4 players instead of 5.
+- Groups are now limited to 4 players instead of 5.
+- Modified costs for a few of Kry's banners to spread unlocks.
+- Torches now have more meaningful upgrades and can be enchanted.
+- Adjusted drop rates for Leather Scraps and Flint in Meadows.
+- Deer Hide can now be broken down into Leather Scraps at a Workbench.
+- Fixed Stone Golem elemental logic.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

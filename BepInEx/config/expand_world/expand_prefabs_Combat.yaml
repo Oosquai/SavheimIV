@@ -79,9 +79,9 @@
   injectData: true
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
-  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.15
-  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.3
-  - vfx_crossbow_nature_fire, 0,0,1, 40,0,60, d_empty_data_combat, 0.36
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.2
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.4
+  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.4
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Shield_Counter

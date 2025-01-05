@@ -90,8 +90,8 @@
 
 - name: shield_counter_attack_pitch_high
   floats:
-  - ZSFX.m_minPitch, 2
-  - ZSFX.m_maxPitch, 2.5
+  - ZSFX.m_minPitch, 2.5
+  - ZSFX.m_maxPitch, 2.9
 
 - name: d_player_shield_counter_off
   ints:

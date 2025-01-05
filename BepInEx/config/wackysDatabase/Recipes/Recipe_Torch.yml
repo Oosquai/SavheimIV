@@ -2,12 +2,12 @@ name: Torch
 clonePrefabName: 
 craftingStation: ''
 minStationLevel: 1
-maxStationLevelCap: 
-repairStation: 
+maxStationLevelCap: 4
+repairStation: $piece_workbench
 amount: 1
 disabled: false
 requireOnlyOneIngredient: false
 reqs:
 - Wood:1:0:True
-- Resin:1:0:True
-- DeerHide:0:1:True
+- Resin:1:1:True
+- DeerHide:0:2:True

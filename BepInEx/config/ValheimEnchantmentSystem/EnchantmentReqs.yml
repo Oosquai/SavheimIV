@@ -406,6 +406,7 @@
   - ShieldWood
   - ShieldWoodTower
   - Bow
+  - Torch
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_F
     amount: 1

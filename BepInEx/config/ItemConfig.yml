@@ -189,7 +189,6 @@ groups:
     - DvergrKey
     - BOM_BonemassKey
     - BOM_EikthyrKey
-    - ChurchKey
 
   TwoHandedWeapon:
     - AtgeirBlackmetal

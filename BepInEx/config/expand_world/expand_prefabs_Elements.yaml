@@ -517,11 +517,31 @@
 
 - prefab: StoneGolem
   types:
+  - state, attack2
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 5.35
+    delay: 1.2
+    parameter: p_elements_player_frost_damage <randi_34_38>
+
+- prefab: StoneGolem
+  types:
   - state, attack3
   poke:
   - prefab: Player
     limit: 1
     maxDistance: 6.3
+    delay: 1.4
+    parameter: p_elements_player_frost_damage <randi_34_38>
+
+- prefab: StoneGolem
+  types:
+  - state, doublesmash
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 5.35
     delay: 1.4
     parameter: p_elements_player_frost_damage <randi_34_38>
 

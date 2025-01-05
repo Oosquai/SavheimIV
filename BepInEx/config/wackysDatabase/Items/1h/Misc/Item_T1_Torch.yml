@@ -1,7 +1,7 @@
 name: Torch
 m_weight: 1
 m_name: $item_torch
-m_description: It brings light and precious <color=#00FFFF>warmth</color> on cold nights.  Torches can be upgraded at a <color=yellow>workbench</color> to help them last longer.
+m_description: It brings light and precious <color=#00FFFF>warmth</color> on cold nights.  Torches can be repaired and upgraded at a <color=yellow>workbench</color>, and they can be enchanted.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -16,7 +16,7 @@ Primary_Attack:
   Chain_Attacks: 3
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 4
+  m_attackStamina: 6
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -100,7 +100,7 @@ Secondary_Attack:
     Trail_Effect: 
     Burst_Effect: 
 Damage:
-  Blunt: 6
+  Blunt: 3
   Chop: 0
   Damage: 0
   Fire: 6
@@ -115,7 +115,7 @@ Damage_Per_Level:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 0
+  Fire: 1
   Frost: 0
   Lightning: 0
   Pickaxe: 0
@@ -128,20 +128,20 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.03
+  m_movementModifier: 0
   m_EitrRegen: 0
 SE_Equip: 
   EffectName: SE_Savheim_Resistant_Frost
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 4
-  m_blockPowerPerLevel: 0
+  m_blockPowerPerLevel: 1
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
-m_canBeReparied: false
-m_destroyBroken: true
+m_canBeReparied: true
+m_destroyBroken: false
 m_dodgeable: true
 Attack_status_effect: 
 spawn_on_hit: 
@@ -160,7 +160,7 @@ m_skillType: Clubs
 m_animationState: Torch
 m_itemType: Torch
 m_toolTier: 0
-m_maxQuality: 2
+m_maxQuality: 4
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []

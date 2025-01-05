@@ -422,6 +422,7 @@
     - CWS_Tower_Shield_3_SH
     - CWS_Tower_Shield_4_SH
     - CWS_Tower_Shield_5_SH
+    - Torch
   Stats:
     1:
       armor_percentage: 1

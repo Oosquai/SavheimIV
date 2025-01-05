@@ -6,7 +6,7 @@ maxStationLevelCap:
 repairStation: 
 amount: 1
 disabled: true
-disabledUpgrade: false
+disabledUpgrade: true
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
