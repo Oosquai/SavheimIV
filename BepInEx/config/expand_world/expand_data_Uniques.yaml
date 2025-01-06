@@ -188,7 +188,7 @@
 
 - name: d_gear_unique_knife_t2
   hashes:
-  - RightItem, CWS_Dagger_5_SH
+  - RightItem, CWS_Dagger_7_SH
 
 - name: d_unique_knife_toxin_cnt_decrement
   ints:
@@ -205,7 +205,7 @@
   - BBP_ElvenBow_SH
   - SpectaculureRod
   - CWS_Axe_8_SH
-  - CWS_Dagger_5_SH
+  - CWS_Dagger_7_SH
   - FistFenrirClaw_Boss_SH
   - CWS_Spear_5_SH
 

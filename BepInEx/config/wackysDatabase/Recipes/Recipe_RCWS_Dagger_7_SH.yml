@@ -1,5 +1,5 @@
-name: RCWS_Dagger_5_SH
-clonePrefabName: CWS_Dagger_5_SH
+name: RCWS_Dagger_7_SH
+clonePrefabName: CWS_Dagger_7_SH
 craftingStation: $piece_forge
 minStationLevel: 1
 maxStationLevelCap: 

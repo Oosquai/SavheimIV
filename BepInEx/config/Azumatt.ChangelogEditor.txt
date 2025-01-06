@@ -5,38 +5,40 @@
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 1/6/25</color>
-- Removed Hover Stats mod for performance impacts.  This also removes squished comfort info in Hammer menu.
+- Removed Hover Stats mod for performance impacts.
+- This also removes squished comfort info in Hammer menu.
 - Reworked two of Eikthyr's unique weapons.
 - Disabled a few more unintended recipes.
-- Improved tooltip on knives for vanish.
+- Improved tooltips on knives for vanish.
 - Slightly increased chance to bleed with claws.
-- Wolf Pelts can now be broken down into Leather Scraps at a Workbench.
+- Wolf Pelts can now make Leather Scraps at a Workbench.
+- Significantly reduced Essence cost of spells.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 1/4/25
 - TotinoTunes is now updated!  Thanks, Kry!
-- Gems are now unique to items rather than equipment.  Thanks, Myrmur!
+- Gems are now unique to items vs. equipment.  Thanks, Myrmur!
 - Improved Shield Counter logic and FX.
 - Disabled recipes for Crystal Light Wand and Jeweler's Box.
-- Uniques at crafting bench transitional tiers can now be repaired at the previous tier's bench.
+- T2 and T6 uniques can now be repaired at the previous tier's bench.
 - Groups are now limited to 4 players instead of 5.
 - Modified costs for a few of Kry's banners to spread unlocks.
 - Torches now have more meaningful upgrades and can be enchanted.
 - Adjusted drop rates for Leather Scraps and Flint in Meadows.
-- Deer Hide can now be broken down into Leather Scraps at a Workbench.
+- Deer Hide can now make Leather Scraps at a Workbench.
 - Fixed Stone Golem elemental logic.
 
 Patch Notes, 1/3/25
 - Reduced daily maintenance to 1 hour (daily 4-5am PST).
-- Modified player commands to no longer be global.  Need to test !roll(s) in multiplayer - everyone sees same rolls?
+- Modified player commands to no longer be global.
 - Shield Counter has a slightly more forgiving time window now.
 - Reduced visual effects on Knife Vanish slightly.
 - Story markers now last 300 seconds instead of 60.
-- Reduced difficulty of spawns at Meadow ruins.  (this may require location resets before taking effect).
+- Reduced difficulty of spawns at Meadow ruins.
 - Fixed extra recipes showing in craft tables.
-- Submitted bug report for Comfort display column issue in Hammer build menu.
+- Submitted bug report for Comfort display column issue.
 - Disabled "I have arrived!" text.
 - Cleaned up factions on some extra spawns around the world.
 

@@ -1,8 +1,8 @@
-name: CWS_Dagger_5_SH
+name: CWS_Dagger_7_SH
 m_weight: 0.3
 m_name: Stag's Whisper
 m_description: Silent, deadly, and foul, this knife can inflict a stacking toxin on its victims.  Attempt to <color=yellow>vanish</color> immediately after a kill by performing a leap attack.  Try to land behind surviving enemies, be wary of crowds and ranged attackers, and crouch before leaping for best results.
-clonePrefabName: CWS_Dagger_5
+clonePrefabName: CWS_Dagger_7
 mockName: 
 customIcon: 
 material: 
