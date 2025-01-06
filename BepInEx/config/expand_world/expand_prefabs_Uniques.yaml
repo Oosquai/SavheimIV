@@ -788,6 +788,106 @@
   - name: RPC_Damage
     1: hit, frost=<randi_12_14>
 
+#####################
+# Ravenclaws, T2 claws
+- prefab: sfx_spear_flint_hit                    # on-hit sfx from unique claws secondary attack
+  type: create
+  objects:
+  - Player, 3, d_gear_unique_claws               # player with unique claws in melee range?
+  poke:
+  - prefab: creature
+    data: not_tamed_uniques
+    limit: 1
+    maxDistance: 3
+    delay: 0.1
+    parameter: p_unique_claws_lightning <vec>
+
+# Bosses immune - high-weight no-op
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  type: poke, p_unique_claws_lightning
+  weight: 1E30
+
+- prefab: creature
+  type: poke, p_unique_claws_lightning
+  filter: int, i_bleed_tick_cnt, 1;999           # creature bleeding?
+  objects:
+  - fx_Lightning, 3                              # SE from unique claws secondary attack
+  - fx_bloodweapon_hit, 3                        # bleed cloud still present?
+  spawn: fx_chainlightning_hit
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+#####################
+# Stag's Whisper, T2 knife
+- prefab: vfx_poisonarrow_hit                    # spawn-on-hit chance for unique knife
+  type: create
+  objects:
+  - Player, 3, d_gear_unique_knife_t2            # player with unique t2 knife in melee range?
+  bannedObjects:
+  - fx_jotunbane_hit, 3                          # prevent back to back triggers
+  poke:
+  - prefab: creature
+    data: not_tamed_uniques
+    limit: 1
+    maxDistance: 1
+    parameter: p_unique_knife_toxin_init
+
+# skip poison-immune creatures
+- prefab: Skeleton, Skeleton_Poison, Ghost, TentaRoot, Skeleton_Hildir, gd_king, Abomination, Blob, BlobElite, Draugr, Draugr_Elite, Wraith, Bonemass, StoneGolem, Bat, BlobTar, GoblinKing, Charred_Archer, Charred_Twitcher, Charred_Mage, Charred_Melee, FallenValkyrie, Volture
+  type: poke, p_unique_knife_toxin_init
+  weight: 1E30
+
+- prefab: creature
+  type: poke, p_unique_knife_toxin_init
+  filter: int, i_unique_knife_toxin_cnt, 1;99999 # toxin already ticking on creature - add stack without starting decrement loop
+  objects:
+  - sfx_knife_swing, 3                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
+  data: d_unique_knife_toxin_cnt_extend
+  injectData: true
+  spawn: fx_jotunbane_hit, 0,0,1
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_unique_knife_toxin_loop <randf_1_3>  # random tick damage per stack
+
+- prefab: creature
+  type: poke, p_unique_knife_toxin_init
+  fallback: true                                 # no toxin on creature yet - same as above but also start decrement loop
+  objects:
+  - sfx_knife_swing, 3                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
+  data: d_unique_knife_toxin_cnt_extend
+  injectData: true
+  spawn: fx_jotunbane_hit, 0,0,1
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_unique_knife_toxin_loop <randf_1_3>
+  - self: true
+    delay: 1
+    parameter: p_unique_knife_toxin_loop_decrement
+
+- prefab: creature
+  type: poke, p_unique_knife_toxin_loop
+  filter: int, i_unique_knife_toxin_cnt, 1;99999
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=<par1>
+  poke:
+  - self: true
+    delay: <vKnifeToxinTickTime>
+    parameter: p_unique_knife_toxin_loop <par1>
+
+- prefab: creature
+  type: poke, p_unique_knife_toxin_loop_decrement
+  filter: int, i_unique_knife_toxin_cnt, 1;99999
+  data: d_unique_knife_toxin_cnt_decrement
+  injectData: true
+  poke:
+  - self: true
+    delay: <vKnifeToxinTickTime>
+    parameter: p_unique_knife_toxin_loop_decrement
+
 ##############################################################
 # Boss Drops
 - prefab: Eikthyr

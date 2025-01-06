@@ -1014,22 +1014,34 @@
 # Elder - tentaroots slime nearby players when they attack.  (Thanks, Raaka!)
 - prefab: TentaRoot
   type: state, attack
-  poke: 
-  - prefab: Player, creature
+  filter: not_tamed_creatures
+  poke:
+  - prefab: Player
     limit: 5
     maxDistance: 4.1
     delay: 1.4
     parameter: tentarootslimed
-    
-- prefab: Player
-  type: poke, tentarootslimed
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, status=Slimed dodge=true block=true
+  - prefab: creature
+    data: tamed_creatures
+    limit: 5
+    maxDistance: 4.1
+    delay: 1.4
+    parameter: tentarootslimed
 
-- prefab: creature
-  type: poke, tentarootslimed
+# Roots summoned by Staff of the Wild also get to apply Slimed.
+- prefab: TentaRoot
+  type: state, attack
   filter: tamed_creatures
+  poke:
+  - prefab: creature
+    data: not_tamed_creatures
+    limit: 5
+    maxDistance: 4.1
+    delay: 1.4
+    parameter: tentarootslimed
+
+- prefab: Player, creature
+  type: poke, tentarootslimed
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Slimed dodge=true block=true

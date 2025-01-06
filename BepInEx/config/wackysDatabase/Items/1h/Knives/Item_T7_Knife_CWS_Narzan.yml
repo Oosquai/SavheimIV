@@ -1,7 +1,7 @@
 name: CWS_Dagger_10_SH
 m_weight: 0.3
 m_name: Flametal Knife
-m_description: <color=yellow>Quiet</color>, <color=yellow>evasive</color>, and fast, knife wielders can attempt to <color=yellow>vanish</color> immediately after a kill by performing a crouching leap attack.  Try to land behind surviving enemies, and be wary of crowds and ranged attackers.
+m_description: <color=yellow>Quiet</color>, <color=yellow>evasive</color>, and fast, knife wielders can attempt to <color=yellow>vanish</color> immediately after a kill by performing a leap attack.  Try to land behind surviving enemies, be wary of crowds and ranged attackers, and crouch before leaping for best results.
 clonePrefabName: CWS_Dagger_10
 mockName: 
 customIcon: 

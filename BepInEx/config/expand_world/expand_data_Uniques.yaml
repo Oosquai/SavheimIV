@@ -176,6 +176,28 @@
   hashes:
   - RightItem, AxeBerzerkr_Boss_SH
 
+####################################
+# T2 Claws
+- name: d_gear_unique_claws
+  hashes:
+  - RightItem, FistFenrirClaw_Boss_SH
+
+####################################
+# T2 Knife
+- value: vKnifeToxinTickTime, 1.3
+
+- name: d_gear_unique_knife_t2
+  hashes:
+  - RightItem, CWS_Dagger_5_SH
+
+- name: d_unique_knife_toxin_cnt_decrement
+  ints:
+  - i_unique_knife_toxin_cnt, <sub_<int_i_unique_knife_toxin_cnt>_1>
+
+- name: d_unique_knife_toxin_cnt_extend
+  ints:
+  - i_unique_knife_toxin_cnt, <add_<int_i_unique_knife_toxin_cnt>_9>
+
 ##############################################################
 # Boss Drop Tables
 - valueGroup: bossDropsEikthyr

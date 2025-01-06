@@ -47,6 +47,7 @@
 - name: d_tentaroot_t7
   ints:
   - tamed, 1
+  - Humanoid.m_aiSkipTarget, 1
   floats:
   - RandomSkillFactor, 0.6
   - max_health, 269
@@ -55,6 +56,7 @@
 - name: d_tentaroot_t5
   ints:
   - tamed, 1
+  - Humanoid.m_aiSkipTarget, 1
   floats:
   - RandomSkillFactor, 0.4
   - max_health, 169
@@ -63,6 +65,7 @@
 - name: d_tentaroot_t3
   ints:
   - tamed, 1
+  - Humanoid.m_aiSkipTarget, 1
   floats:
   - RandomSkillFactor, 0.2
   - max_health, 69
