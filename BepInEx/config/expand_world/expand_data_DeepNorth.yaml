@@ -20,6 +20,11 @@
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
 
+- name: d_sfx_low_pitch_dn
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 0.5
+
 ####################################
 # Player variables and controls
 - name: d_player_roguelite_on
@@ -42,6 +47,7 @@
   - i_player_roguelite_subtier, 0
   - i_player_roguelite_tier, 0
   - i_player_roguelite_wave, 0
+  - i_player_roguelite_win, 0
 
 - name: d_player_roguelite_clear
   ints:
@@ -56,21 +62,30 @@
   - i_player_roguelite_tier, 0
   - i_player_roguelite_wave, 0
 
+- name: d_player_roguelite_win_eligible
+  ints:
+  - i_player_roguelite_on, 1
+  - i_player_roguelite_win, 0
+
+- name: d_player_roguelite_win_set
+  ints:
+  - i_player_roguelite_win, 1
+
 - name: d_player_roguelite_wave_inc
   ints:
-  - i_player_roguelite_wave, <int_i_player_roguelite_wave> + 1
+  - i_player_roguelite_wave, <add_<int_i_player_roguelite_wave>_1>
 
 - name: d_player_roguelite_kills_inc
   ints:
-  - i_player_roguelite_kills, <int_i_player_roguelite_kills> + 1
+  - i_player_roguelite_kills, <add_<int_i_player_roguelite_kills>_1>
 
 - name: d_player_roguelite_boss_kills_inc
   ints:
-  - i_player_roguelite_boss_kills, <int_i_player_roguelite_boss_kills> + 1
+  - i_player_roguelite_boss_kills, <add_<int_i_player_roguelite_boss_kills>_1>
 
 - name: d_player_roguelite_boss_spawns_inc
   ints:
-  - i_player_roguelite_boss_spawns, <int_i_player_roguelite_boss_spawns> + 1
+  - i_player_roguelite_boss_spawns, <add_<int_i_player_roguelite_boss_spawns>_1>
 
 - name: d_player_roguelite_eikthyr_spawn
   ints:
@@ -86,11 +101,11 @@
 
 - name: d_player_roguelite_subtier_inc
   ints:
-  - i_player_roguelite_subtier, <int_i_player_roguelite_subtier> + 1
+  - i_player_roguelite_subtier, <add_<int_i_player_roguelite_subtier>_1>
 
 - name: d_player_roguelite_tier_inc
   ints:
-  - i_player_roguelite_tier, <int_i_player_roguelite_tier> + 1
+  - i_player_roguelite_tier, <add_<int_i_player_roguelite_tier>_1>
   - i_player_roguelite_subtier, 0
 
 - name: d_player_roguelite_tier_0
@@ -163,12 +178,24 @@
   strings:
   - Humanoid.m_group, dn_mobs
 
+- name: dn_mob_group_no_loot
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  strings:
+  - Humanoid.m_group, dn_mobs
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000  # Raaka's trick for removing loot!  Thanks!
+
 - name: dn_mob_group_roguelite
   ints:
   - i_creature_roguelite, 1
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  floats:
+  - MonsterAI.m_alertRange, 100
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -182,6 +209,7 @@
   - HasFieldsHumanoid, 1
   - level, 1
   floats:
+  - MonsterAI.m_alertRange, 100
   - MonsterAI.m_circleTargetDuration, 0
   - MonsterAI.m_circleTargetInterval, 1E30
   - Humanoid.m_runSpeed, 16
@@ -196,8 +224,8 @@
 
 - name: d_dn_eikthyr_hp
   floats:
-  - max_health, <float_max_health>*2
-  - health, <float_max_health>*2.001
+  - max_health, <mult_<float_max_health>_2>
+  - health, <mult_<float_max_health>_2.001>
 
 - name: dn_mob_group_roguelite_brenna
   ints:
@@ -205,6 +233,8 @@
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  floats:
+  - MonsterAI.m_alertRange, 100
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_name, Brenna
@@ -217,6 +247,8 @@
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
+  floats:
+  - MonsterAI.m_alertRange, 100
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_name, Geirrhafa
@@ -261,14 +293,6 @@
   - 33
   - 34
 
-#- name: TentaRootMover_dnrl
-#  ints:
-#  - i_creature_roguelite, 1
-#  strings:
-#  - Humanoid.m_group, dn_mobs
-#  floats:
-#  - Humanoid.m_runSpeed, 1
-
 # Deep North Roguelite Cleanup Datas
 # special deer ragdoll that lasts 4 hours and has a flag to differentiate it from naturally-spawned ones
 # times for 4 hours so that this isn't a race against the clock, but also will trigger a cleanup of itself eventually
@@ -279,14 +303,6 @@
   - i_dn_deer_ragdoll, 1
   floats:
   - Ragdoll.m_ttl, 14400  # 60*60*4 = 14400 = 4 hours
-
-- name: d_dnrl_cnt_inc
-  ints:
-  - i_dnrl_cnt, <int_i_dnrl_cnt> + 1
-
-- name: d_dnrl_cnt_rst
-  ints:
-  - i_dnrl_cnt, 0
 
 # DeepNorth roguelite trash mob tiers.  Some need multiples for independent random rolls, with gradually increasing difficulty.
 - valueGroup: dnTrashMobsT0
