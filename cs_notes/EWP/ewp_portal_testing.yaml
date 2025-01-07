@@ -1,0 +1,120 @@
+### DEBUG
+- prefab: Player
+  type: say, test_rst
+  poke:
+  - prefab: portal_wood
+    maxDistance: 20
+    parameter: p_remove
+  - prefab: fireplacems
+    maxDistance: 20
+    parameter: p_remove
+- prefab: portal_wood, fireplacems
+  type: poke, p_remove
+  remove: true
+
+- prefab: Player
+  type: say, test_pass
+  poke:
+  - prefab: BossStone_DragonQueen
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_pass
+  - prefab: Haldor
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_pass
+  - prefab: Hildir
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_pass
+  - prefab: BogWitch
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_pass
+  - prefab: Jewelcrafting_Chest
+    limit: 5
+    maxDistance: 30
+    parameter: p_set_pass
+
+- prefab: Player
+  type: say, test_fail
+  poke:
+  - prefab: BossStone_DragonQueen
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_fail
+  - prefab: Haldor
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_fail
+  - prefab: Hildir
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_fail
+  - prefab: BogWitch
+    limit: 1
+    maxDistance: 30
+    parameter: p_set_fail
+  - prefab: Jewelcrafting_Chest
+    limit: 5
+    maxDistance: 30
+    parameter: p_set_fail
+
+- prefab: BossStone_DragonQueen
+  type: poke, p_set_pass
+  spawns:
+  - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
+  - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece, true
+
+- prefab: BossStone_DragonQueen
+  type: poke, p_set_fail
+  spawns:
+  - portal_wood, 1.5,1,-1.2, 0,0,0, d_portal_sacrificial_stones
+  - fireplacems, -1.5,1.5,-1, 0,0,0, d_perma_piece, true
+
+- prefab: Haldor
+  type: poke, p_set_pass
+  spawns:
+  - portal_wood, 1.9,6.8,-0.2, 0,0,0, d_portal_haldor
+
+- prefab: Haldor
+  type: poke, p_set_fail
+  spawns:
+  - portal_wood, 1.9,6.8,-1.2, 0,0,0, d_portal_haldor
+
+- prefab: Hildir
+  type: poke, p_set_pass
+  spawns:
+  - portal_wood, 3.3,12.6,-0.2, 209,0,0, d_portal_hildir
+
+- prefab: Hildir
+  type: poke, p_set_fail
+  spawns:
+  - portal_wood, 3.3,12.6,-1.2, 209,0,0, d_portal_hildir
+
+- prefab: BogWitch
+  type: poke, p_set_pass
+  spawns:
+  - portal_wood, -0.5,-2.5,-0.2, 163,0,0, d_portal_bogwitch
+
+- prefab: BogWitch
+  type: poke, p_set_fail
+  spawns:
+  - portal_wood, -0.5,-2.5,-1.2, 163,0,0, d_portal_bogwitch
+
+- prefab: Jewelcrafting_Chest
+  type: poke, p_set_pass
+  objects:
+  - Jewelcrafting_Chest, 3
+  objectsLimit: 4
+  spawns:
+  - portal_wood, 2.1,-2,-0.2, 160,0,0, d_portal_jc_gacha
+
+- prefab: Jewelcrafting_Chest
+  type: poke, p_set_fail
+  objects:
+  - Jewelcrafting_Chest, 3
+  objectsLimit: 4
+  spawns:
+  - portal_wood, 2.1,-2,-1.2, 160,0,0, d_portal_jc_gacha
+

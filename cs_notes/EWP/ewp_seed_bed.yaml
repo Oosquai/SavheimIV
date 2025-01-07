@@ -1,0 +1,226 @@
+# From Jere
+############### DATA
+## Add more filters for different seeds.
+- name: carrotFilter
+  itemAmount: 1
+  items:
+  - prefab: CarrotSeeds
+
+- name: turnipFilter
+  itemAmount: 1
+  items:
+  - prefab: TurnipSeeds
+
+## Used for finding the seed chest after plant.
+- name: seedFilter
+  itemAmount: 1
+  items:
+  - prefab: <par1>
+  
+## Data delivery to the plant spot. 
+- name: planter
+  strings:
+  - op, <par1>
+  - seed, <par7>
+  - prefab, <par8>
+  ints:
+  - iter, <par2>
+  - round, <par3>
+  - fails, <par6>
+  floats:
+  - x, <par4>
+  - z, <par5>
+
+## Planting ends after this many consecutive failures.
+- name: plantLimit
+  ints:
+  - fails, 0;10
+
+
+############### PREFABS
+## Activation logic, probably needs custom data filter for the ward.
+- prefab: fx_guardstone_activate
+  type: create
+  poke:
+  - prefab: guard_stone
+    maxDistance: 1
+    limit: 1
+    delay: 1
+## Parameters: nextOperation remaining rowLength offsetX offsetY
+    parameter: plantNext 0 1 0 0
+  terrain:
+  - paintRadius: 7
+    paint: Cultivate
+
+## plantNext starts a new round by repositioning the offset to the top left corner.
+- prefab: guard_stone
+  type: poke, plantNext
+  poke:
+  - self: true
+    parameter: plantDown <par2> <par2>+2 <par3>-1 <par4>+1 <par5>
+
+## Logic: Go to one direction until counter reaches 0, then the next direction.
+- prefab: guard_stone
+  fallback: true
+  type: poke, plantDown
+  poke:
+  - self: true
+    parameter: tryPlant plantDown <par1>-1 <par2> <par3> <par4>-1 <par5>
+
+- prefab: guard_stone
+  type: poke, plantDown 0
+  poke:
+  - self: true
+    parameter: tryPlant plantRight <par2>-2 <par2> <par3> <par4>-1 <par5>
+
+- prefab: guard_stone
+  fallback: true
+  type: poke, plantRight
+  poke:
+  - self: true
+    parameter: tryPlant plantRight <par1>-1 <par2> <par3>+1 <par4> <par5>
+
+- prefab: guard_stone
+  type: poke, plantRight 0
+  poke:
+  - self: true
+    parameter: tryPlant plantUp <par2>-2 <par2> <par3>+1 <par4> <par5>
+
+- prefab: guard_stone
+  fallback: true
+  type: poke, plantUp
+  poke:
+  - self: true
+    parameter: tryPlant plantUp <par1>-1 <par2> <par3> <par4>+1 <par5>
+
+- prefab: guard_stone
+  type: poke, plantUp 0
+  poke:
+  - self: true
+    parameter: tryPlant plantLeft <par2>-2 <par2> <par3> <par4>+1 <par5>
+
+- prefab: guard_stone
+  fallback: true
+  type: poke, plantLeft
+  poke:
+  - self: true
+    parameter: tryPlant plantLeft <par1>-1 <par2> <par3>-1 <par4> <par5>
+
+- prefab: guard_stone
+  type: poke, plantLeft 0
+  poke:
+  - self: true
+    parameter: tryPlant plantNext <par2>-2 <par2> <par3>-1 <par4> <par5>
+
+## Seed picker, add more stuff is needed.
+## Randomly selects from available seeds.
+
+- prefab: guard_stone
+  type: poke, tryPlant
+  objects:
+  - prefab: Container
+    data: carrotFilter
+    maxDistance: 10
+  poke:
+  - self: true
+    parameter: plant <par1> <par2> <par3> <par4> <par5> <par6> CarrotSeeds Pickable_Carrot
+
+- prefab: guard_stone
+  type: poke, tryPlant
+  objects:
+  - prefab: Container
+    data: turnipFilter
+    maxDistance: 10
+  poke:
+  - self: true
+    parameter: plant <par1> <par2> <par3> <par4> <par5> <par6> TurnipSeeds Pickable_Turnip
+
+## Extra step needed to get the seed and prefab names to the planter data.
+## Also less repetetion if more seeds are added.
+- prefab: guard_stone
+  type: poke, plant
+  spawn:
+  - prefab: vfx_spawn_small
+    triggerRules: true
+    pos: <par4>,<par5>,-10
+## Snap can be removed to put the effect under ground.
+    snap: true
+    data: planter
+
+## Planting to place the prefab and to trigger next step.
+- prefab: vfx_spawn_small
+  paint: cultivated
+  type: create
+  spawn: <string_prefab>
+  poke:
+  - prefab: guard_stone
+    maxDistance: 20
+    limit: 1
+    delay: 0.1
+    parameter: <string_op> <int_iter> <int_round> <float_x> <float_z> 0
+  - prefab: guard_stone
+    maxDistance: 20
+    limit: 1
+    parameter: planted <string_seed>
+  bannedObjects:
+  - prefab: Pickable
+    maxDistance: 0.5
+
+## Failed planting (if no cultivated or something nearby).
+## Triggers the next step until enough failures.
+- prefab: vfx_spawn_small
+  fallback: true
+  type: create
+  filter: plantLimit
+  poke:
+  - prefab: guard_stone
+    maxDistance: 50
+    limit: 1
+    delay: 0.1
+    parameter: <string_op> <int_iter> <int_round> <float_x> <float_z> <int_fails>+1
+
+## Seed consuming
+- prefab: guard_stone
+  type: poke, planted
+  poke:
+  - prefab: Container
+    maxDistance: 10
+    limit: 1
+    data: seedFilter
+    parameter: remove <par1>
+
+- prefab: Container
+  type: poke, remove
+  removeItems: <par1>, 1
+  injectData: true
+
+## Clean up to remove plants.
+
+- prefab: fx_guardstone_deactivate
+  type: create
+  poke:
+  - prefab: guard_stone
+    maxDistance: 1
+    limit: 1
+    delay: 1
+    parameter: end
+
+- prefab: guard_stone
+  type: poke, end
+  poke:
+  - prefab: Pickable
+    maxDistance: 10
+    parameter: pick
+
+- prefab: Pickable
+  type: poke, pick
+  remove: true
+# Only half for testing purposes.
+  weight: 0.5
+  objectRpc:
+  - name: RPC_Pick
+
+# How to use this
+# Place ward
+# Place a chest with carror and turnip seeds
+# Activate ward

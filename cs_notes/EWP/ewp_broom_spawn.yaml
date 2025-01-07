@@ -1,0 +1,188 @@
+#JPValheim
+#OP
+# — Yesterday at 9:46 PM
+#Simple BogWitch patch that allows players to summon a Kvastur by throwing a Scythe handle on the ground. 
+#
+#The Kvastur repairs nearby build objects when it attacks
+#
+#Also includes some alternative methods to aquire the BogWitch spices that are tied to night-spawn keys
+
+
+#
+##
+### Kvastur Patch
+##
+
+## Stack of 1 Scythe handle starts vibrating when thrown
+## Players have a few seconds to pick it up to prevent spawn
+
+- prefab: ScytheHandle
+  type: create
+  filter: stack1
+  poke:
+  - prefab: ScytheHandle
+    limit: 1
+    maxDistance: 10
+    parameter: scytheStartsVibrating
+    delay: 1
+  - prefab: Player
+    limit: 1
+    maxDistance: 20
+    parameter: scytheStartsVibratingMessage
+    delay: 0.5
+  - prefab: ScytheHandle
+    limit: 1
+    maxDistance: 20
+    parameter: scytheSpawnsKvastur
+    delay: 6
+
+- prefab: ScytheHandle
+  type: poke, scytheStartsVibrating
+  spawn:
+  - prefab: vfx_Potion_eitr_minor
+  - prefab: sfx_charred_twitcher_idle
+  - prefab: sfx_charred_twitcher_idle
+    delay: 1.5
+  - prefab: sfx_charred_twitcher_idle
+    delay: 3
+
+- prefab: Player
+  type: poke, scytheStartsVibratingMessage
+  objectRpc:
+  - name: Message
+    1: enum_message, 2
+    2: string, !
+    3: int, 0
+    delay: 0
+  - name: Message
+    1: enum_message, 2
+    2: string, The Scythe Handle starts humming magically!
+    3: int, 0
+    delay: 0.4
+#
+##
+### Spawns the Kavastur
+##
+
+- prefab: ScytheHandle
+  type: poke, scytheSpawnsKvastur
+  spawn:
+  - prefab: BogWitchKvastur
+    data: tamemob_lvl1
+    delay: 0.1
+  - prefab: fx_blobLava_explosion
+  - prefab: sfx_unstablerock_explosion
+    delay: 0.1
+  - prefab: fx_lightningstaffprojectile_hit
+  - prefab: fx_Fader_Roar
+    delay: 0.1
+  - prefab: vfx_Potion_stamina_medium
+    delay: 0.1
+  remove: true
+  removeDelay: 0.1
+  command: s <pname> summoned a Kvastur from a Scythe Handle !
+
+#
+##
+### Kvastur Repairs 20 nearby objects each time it attacks
+##
+
+- prefab: BogWitchKvastur
+  type: state, *
+  spawn:
+  - prefab: fx_Fader_Roar
+  - prefab: vfx_Place_windmill
+    delay: 0.2
+  poke:
+  - prefab: Piece
+    limit: 20
+    maxDistance: 20
+    parameter: kvasturRepairs
+
+- prefab: Piece
+  type: poke, kvasturRepairs
+  objectRpc:
+  - name: RPC_Repair
+
+- prefab: BogWitchKvastur
+  type: create
+  spawn:
+  - prefab: fx_Fader_Roar
+  - prefab: vfx_Place_windmill
+    delay: 0.2
+  poke:
+  - prefab: Piece
+    limit: 20
+    maxDistance: 20
+    parameter: kvasturRepairs
+
+#
+##
+### Spice Alternatives
+##
+
+#
+##
+### These are used if the server removes Yag, Queen, and Fader keys to manage night spawns
+##
+
+#
+##
+### Trade 1 Fuling Totem for 5 Plains Spices
+##
+
+- prefab: GoblinTotem
+  type: create
+  objects:
+  - BogWitch, 5
+  filter: stack1
+  remove: true
+  command: s <pname> trades a Fuling Totem for some Plains Spices
+  weight: 1e30
+  spawns: 
+  - SpicePlains, 0,0,0, 0,0,0, stack5, 0.2
+  - sfx_bogwitch_trade
+  - vfx_Place_smallitem
+
+#
+##
+### Trade 1 Black Core for 5 Plains Spices
+##
+
+- prefab: BlackCore
+  type: create
+  objects:
+  - BogWitch, 5
+  filter: stack1
+  remove: true
+  command: s <pname> trades a Black Core for some Mistlands Spices
+  weight: 1e30
+  spawns: 
+  - SpiceMistlands, 0,0,0, 0,0,0, stack5, 0.2
+  - sfx_bogwitch_trade
+  - vfx_Place_smallitem
+#
+##
+### Trade 1 Molten Core for 5 Ashlands Spices
+##
+
+- prefab: MoltenCore
+  type: create
+  objects:
+  - BogWitch, 5
+  filter: stack1
+  remove: true
+  command: s <pname> trades a Molten Core for some Ashlands Spices
+  weight: 1e30
+  spawns: 
+  - SpiceAshlands, 0,0,0, 0,0,0, stack5, 0.2
+  - sfx_bogwitch_trade
+  - vfx_Place_smallitem
+
+Data
+- name: stack5
+  ints:
+  - stack, 5
+- name: stack1
+  ints:
+  - stack, 1

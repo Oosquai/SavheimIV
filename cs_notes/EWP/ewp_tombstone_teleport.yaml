@@ -1,0 +1,147 @@
+# from Raaka
+- name: tombcheck
+  longs:
+  - owner, <par1>
+
+- name: playertombcheck
+  longs:
+  - playerID, <par1>
+
+
+- prefab: Player
+  type: state, interact
+  objects:
+  - Player_tombstone, 5
+  poke:
+  - prefab: Player_tombstone
+    limit: 10
+    maxDistance: 5
+    parameter: tombcheck <long_playerID>
+    
+- prefab: Player_tombstone
+  type: poke, tombcheck
+  filter: tombcheck
+  spawns:
+  - vfx_spawn
+  
+- prefab: Player_tombstone
+  type: poke, tombcheck
+  bannedFilter: tombcheck
+  swaps:
+  - <prefab>
+  poke:
+  - prefab: Player
+    limit: 100
+    maxDistance: 20000
+    parameter: playertombcheck <long_owner> <pos>
+  spawns:
+  - fx_lightningweapon_hit
+  - sfx_staff_lightning_fire
+    
+- prefab: Player
+  type: poke, playertombcheck
+  filter: playertombcheck
+  objectRpc:
+  - name: RPC_TeleportTo
+    1: vec, <par2>
+    2: quat, 1
+    3: bool, 2
+    delay: 1
+  - name: Message
+    1: enum_message, 2
+    2: string, <#00FFFF>Teleporting to TombStone!
+    3: int, 0
+  spawns:
+  - fx_lightningweapon_hit
+  - sfx_staff_lightning_fire
+
+
+###########################################
+# ask permission version
+- name: tombcheck
+  longs:
+  - owner, <par1>
+
+- name: tombtelepos
+  strings:
+  - tomb_position, <par2>
+
+- name: playertombcheck
+  longs:
+  - playerID, <par1>
+  
+  
+- name: fxlightningdata
+  ints:
+  - killme, 1
+
+
+- prefab: Player
+  type: state, interact
+  objects:
+  - Player_tombstone, 5
+  poke:
+  - prefab: Player_tombstone
+    limit: 10
+    maxDistance: 5
+    parameter: tombcheck <long_playerID>
+    
+- prefab: Player_tombstone
+  type: poke, tombcheck
+  filter: tombcheck
+  spawns:
+  - vfx_spawn
+  
+- prefab: Player_tombstone
+  type: poke, tombcheck
+  bannedFilter: tombcheck
+  swaps:
+  - <prefab>
+  poke:
+  - prefab: Player
+    limit: 100
+    maxDistance: 20000
+    parameter: playertombcheck <long_owner> <pos>
+  spawns:
+  - fx_lightningweapon_hit
+  - sfx_staff_lightning_fire
+    
+- prefab: Player
+  type: poke, playertombcheck
+  filter: playertombcheck
+  data: tombtelepos
+  injectData: true
+  objectRpc:
+  - name: Message
+    1: enum_message, 2
+    2: string, <#00FFFF>Do you wish to teleport to tombstone? Write Y to chat to confirm while the lightning is flashing.
+    3: int, 0
+  spawn:
+  - prefab: fx_Lightning
+    data: fxlightningdata
+    triggerRules: true
+  
+- prefab: Player
+  type: say, Y
+  objects:
+  - fx_Lightning, 10, fxlightningdata
+  objectRpc:
+  - name: RPC_TeleportTo
+    1: vec, <string_tomb_position>
+    2: quat, 1
+    3: bool, 2
+    delay: 1
+  spawn:
+  - prefab: fx_lightningweapon_hit
+  - prefab: sfx_staff_lightning_fire
+
+      
+- prefab: fx_Lightning
+  type: create
+  filter: fxlightningdata
+  remove: true
+  removeDelay: 10
+
+
+########################
+# reagent cost?  Throw thunderstone to revive Buddy xD?

@@ -1,0 +1,98 @@
+ew_icons
+StartTemple
+Vendor_BlackForest
+Icon0
+Icon4
+Death
+Bed
+Shout
+Boss
+Player
+RandomEvent
+EventArea
+Ping
+
+locations_add brokkr-broken-bridge-1-short biomes=DeepNorth start
+locations_remove brokkr-broken-bridge-1-short biomes=DeepNorth start
+locations_reset brokkr-broken-bridge-1-short biomes=DeepNorth start
+
+zones_reset biomes=DeepNorth start
+
+modified expand_biomes.yaml, DeepNorth, altitudeMultiplier
+
+Save player data:
+(make sure all status effects off, i.e. Cold, etc)
+ghost, clearstatus
+data save=playerdata id=Player radius=0.1
+
+- name: sharpen
+  floats:
+  - durability, 2 * <float_ItemDrop.m_itemData.m_shared.m_maxDurability> + 2 * <int_quality> * <float_ItemDrop.m_itemData.m_shared.m_durabilityPerLevel> - 2 * <float_ItemDrop.m_itemData.m_shared.m_durabilityPerLevel>
+
+app launch argument for debug:
+-diag-job-temp-memory-leak-validation
+
+##########
+# spawn bonemass altar
+location_register Bonemass
+zones_reset start
+
+
+###
+Area pipette performance:
+Disable health and support
+
+DhakhaR — 8/17/2024 3:40 AM
+buildings made with -1 health so no damage is calculated = less performance impact, less network traffic
+also means no iron beams are required, no skull1s or icefloors = less objects
+usage of build pieces that save on performance, blackmarble_floor_large etc.
+using scale-adjusted rocks as floors/cielings/walls to save on instances
+removing unneccasry data from build pieces, eg. using creator=0
+avoiding overuse of performance demanding objects, piece_oven etc.
+trees and rocks near to busy locations made unbreakable = prevents _fracs from appearing which are more demanding on performance
+thinning out of environments near busy areas, reducing forest density etc.
+removed zone spawners near busy locations = no creature spawns, creatures are demanding on performance
+removing unneeded locations near busy areas
+using alternate light sources such as CastleKit_groundtorch that use less performance than player built lights
+any player style light sources given Fireplace,infiniteFuel,true  = no ticking fuel timers
+Pickables removed from busy areas = less objects to load, no ticking timers for respawns
+Terrain paint manipulated to prevent grass clutter loading in busy areas = less objects to load
+
+Raaka — 8/17/2024 3:48 AM
+outside map limits on sides, theres a huge flat area at -400y
+DhakhaR — 8/17/2024 3:48 AM
+yeah, outside map limits.  turn on god mode and "no edge of world pull with god more" in ServerDev Commands
+
+
+##########
+spawn woodwall 50000
+resulted in 7 fps
+
+hammer_location DevGround2
+
+
+1) EWP a woodwall to have:
+- name: d_piece_performance
+  ints:
+  - WearNTear.m_supports, 0
+  - Piece.m_primaryTarget, 0
+  - Piece.m_randomTarget, 0
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+
+2) spawn woodwall
+3) hammer menu, misc, pipette
+4) hammer_save some_throw_away_name
+5) find file in blueprints, copy data section
+6) find and replace in existing blueprint:  replace $ (end of line) with copied data
+7) if new name of file, add to expand_locations_DeepNorth.yaml
+8) restart game, or locations_add some_throw_away_name biomes=DeepNorth start
+9) hammer_location some_throw_away_name
+10) click!
+11) bonus - edit blueprint file to remove woodiron_pole, portal_wood, etc.
+
+
+object f=Fireplace,infiniteFuel,true
+object f=float,health,1
+object f=TerrainModifier,square,true

@@ -1,0 +1,3 @@
+# https://github.com/JereKuusela/valheim-expand_world_prefabs/blob/main/examples.md
+- prefab: odin
+  command: spawn_object TreasureChest_meadows refPos={x}+5,{z},{y}

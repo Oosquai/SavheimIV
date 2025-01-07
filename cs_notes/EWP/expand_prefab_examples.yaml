@@ -1,0 +1,277 @@
+#########################################
+#Jere
+#OP
+# — 05/22/2024 7:24 AM
+#Might expand this bit later.
+#
+#expand_prefabs.yaml
+# On boss spawn, increment counter on the altar.
+- prefab: Bonemass
+  type: create
+  poke:
+  - prefab: LocationProxy
+    parameter: spawned
+    limit: 1
+
+# On counter increment, relay the counter value to the spawned boss.
+- prefab: LocationProxy
+  type: poke, spawned
+  data: counter
+  poke:
+  - prefab: Bonemass
+    parameter: dmg <int_count>
+    limit: 1
+  
+# Add damage boost based on the incoming value.
+- prefab: Bonemass
+  type: poke, dmg
+  data: damage
+  
+
+
+#data.yaml
+# Increments the counter.
+- name: counter
+  ints:
+  - count, <int_count> + 1
+
+# Increases damage by 1% for each spawn counter.
+- name: damage
+  floats:
+  - RandomSkillFactor,  1 + <par1> / 100
+
+#Then you can scale things like damage, health, speed or even use CLLC affix if that mod is used.
+#Alternatively can use global keys to increase damage of all bosses. 
+
+#########################################
+#Raaka
+#OP
+# — 05/29/2024 8:19 AM
+#no more underwater snipers xD
+
+- prefab: Humanoid
+  type: create
+  data: canswim
+
+
+#data:
+- name: canswim
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+
+#########################################
+# Raaka - Turns everything admins say into broadcasts while the adminbroadcast global key is active.
+# setkey adminbroadcast
+- prefab: Player
+  type: command, *
+  command: broadcast center <par>
+  globalKeys: adminbroadcast
+
+
+# poke tutorial
+- prefab: Player
+  type: say, testpoke
+  poke:
+  - prefab: Boar
+    parameter: BecomeTwoStars
+
+- prefab: Boar
+  type: poke, BecomeTwoStars
+  data: TwoStar
+
+
+  # select from list - untested
+- name: randomRunestone_low_guaranteed
+  itemAmount: <randomItemAmount_1to2>
+  items:
+  - prefab: RunestoneMagic
+    chance: 0.7
+  - prefab: RunestoneRare
+    chance: 0.9
+
+#- name: randomItemAmount
+#  itemAmount: <randomAmount>
+
+- valueGroup: randomItemAmount_1to2
+  values:
+  - 1
+  - 2
+  - 2
+
+
+
+################################################################
+#  DhakhaR — Today at 12:50 AM
+# This is from something similar i have with charred_mages.  The main difference would be finding the name of the dverger attack as the triggering state.  You can use raakas state poker, ill link below
+
+# In this version, the mage shields himself (with RPC) and then others (with poke into RPC) a few seconds later (hes selfish xD )
+## AUTOMATON ENCRYPTOR - lvl 2 shielder mage
+
+# performs shielding
+- prefab: Charred_Mage
+  type: state, attack_fireaoe
+  filter: mageEncryptorCheck
+  spawns:
+  - vfx_Potion_health_medium, timeout
+  - vfx_HealthUpgrade, timeout, 2
+  - fx_guardstone_permitted_removed, timeout, 3.75
+  poke:
+  - prefab: MonsterAI
+    parameter: encryptorShield
+    data: automaton
+    limit: 4
+    minDistance: 1
+    maxDistance: 20
+    delay: 4
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Staff_shield level=1 skill=1
+    delay: 2
+
+# friendlies recieve shields
+- prefab: MonsterAI
+  type: poke, encryptorShield
+  filter: automaton
+  spawns:
+  - sfx_shieldgenerator_shutdown, timeout
+  - vfx_lightningstaff_fire, 0,0,2, 0,90,0, timeout
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Staff_shield level=1 skill=1
+    delay: 0.5
+
+########################
+# Raaka state poker
+- prefab: MonsterAI
+  type: state, *
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 10000
+    parameter: statechecker <par>
+
+- prefab: Player
+  type: poke, statechecker
+  objectRpc:
+  - name: Message
+    1: enum_message, 2
+    2: string, <par1>
+    3: int, 0
+
+########################
+# The spawns are just visual stuff and the filters are just names so that it only happens to X creatures etc.
+
+################################################################
+# Sign that counts and displays kills
+kill counter part
+# Fallback killcount
+- prefab: MonsterAI
+  type: destroy
+  filter: automaton
+  command: setkey automatonskilled <key_automatonskilled>+1
+  spawns:
+  - sfx_pickaxe_hit, automatonDeathSound, 0
+  - sfx_gui_repairitem_forge, automatonDeathSound, 0.1
+  fallback: true
+ 
+sign part, origional poke could be a 1sec timer or player state, * near the sign, whatever fits..
+# kill counter automatons
+- prefab: sign
+  type: poke, updateKillsAutomatons
+  filter: killcounterAutomatonsChecker
+  data: killcounterAutomatons
+
+## Kill Counters
+# Automatons
+- name: killcounterAutomatonsChecker
+  strings:
+  - Piece.m_name, Kill Count Automatons
+
+- name: killcounterAutomatons
+  strings:
+  - text, <size=10><#FFD800><key_automatonskilled><#fff>
+
+################################################################
+# change pitch of sound effects
+name: lowpitch
+  ints:
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minPitch, 0.45
+  - ZSFX.m_maxPitch, 0.6
+
+
+sfx_obliterator_close
+sfx_gui_repairitem_forge
+sfx_metal_shield_blocked
+sfx_metal_shield_blocked_overlay
+
+##############################
+name: aoe_Projectile
+  ints:
+  - HasFields, 1
+  - HasFieldsProjectile, 1
+  floats:
+  - Projectile.m_aoe, 10
+
+
+##############################
+# Player Bubble Block
+- prefab: vfx_blocked
+  type: create
+  poke:
+  - prefab: MonsterAI,Player
+    limit: 1
+    maxDistance: 1
+    parameter: bubbleshield
+    
+- prefab: Player
+  type: poke, bubbleshield
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Staff_shield level=1
+  spawns:
+  - fx_himminafl_hit
+  spawnDelay: 1
+  triggerRules: true
+  
+- prefab: fx_himminafl_hit
+  type: create 
+  poke:
+  - prefab: vfx_StaffShield
+    limit: 1
+    maxDistance: 10
+    parameter: shieldvfxremover
+ 
+- prefab: vfx_StaffShield
+  type: poke, shieldvfxremover
+  remove: true
+
+
+###################
+# Orionox
+- valueGroup: randomCreaturePos
+  values:
+  - <x>+1,<z>,<y>
+  - <x>-1,<z>,<y>
+  - <x>,<z>+1,<y>
+  - <x>,<z>-1,<y>
+  - <x>+1,<z>+1,<y>
+  - <x>-1,<z>+1,<y>
+  - <x>+1,<z>-1,<y>
+  - <x>-1,<z>-1,<y>
+
+###################
+# Jere
+- prefab: Player
+  types:
+  - poke, 1sec
+  - say, 1secstart
+# Supported: ceil, floor, round, sqrt
+  command: s <ceil_<sqrt_<sqrt_<par1>>>>
+  poke:
+  - self: true
+    parameter: 1sec <float_$forward_speed>
+    delay: 0.5

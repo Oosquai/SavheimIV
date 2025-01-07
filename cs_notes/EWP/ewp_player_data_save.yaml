@@ -1,0 +1,100 @@
+# data save=playerdata id=Player radius=0.1
+- name: raakaplayerdata
+  ints:
+  - $onGround, 1
+  - BeardItem, 441172977
+  - $statei, 0
+  - $falling, 0
+  - seed, 661001827
+  - seAttrib, 0
+  - $encumbered, 0
+  - wakeup, 0
+  - $crafting, 0
+  - baseValue, 0
+  - HairItem, 1043840416
+  - dodgeinv, 0
+  hashes:
+  - UtilityItem, ArmorTunic5
+  - HelmetItem, HelmetPointyHat
+  - RightItem, 0
+  floats:
+  - max_health, 25
+  - $forward_speed, 0,001547716
+  - $turn_speed, 0,0102884
+  - $sideway_speed, -0,00352779
+  - health, 1
+  - noise, 0
+  - Stealth, 1
+  - stamina, 50
+  - $anim_speed, 1
+  - $statef, 0
+  - eitr, 0
+  strings:
+  - 'attachJoint, '
+  - playerName, Raaka
+  longs:
+  - playerID, 256979773
+  vecs:
+  - SkinColor, 0.65,0.65,0.65
+  - vel, 0.00025,0.00064,-0.00015
+  - LookTarget, 959.5472,-6688.233,-4.4095
+  - BodyVelocity, 0.00025,0.00064,-0.00015
+  - HairColor, 1,0.70588,0.93103
+  - body_vel, 0.00025,0.00064,-0.00015
+  - body_avel, 0,0,0
+  quats:
+  - tiltrot, 0
+
+####### dump
+- name: kneelingraaka
+  ints:
+  - $onGround, 1
+  - DebugFly, 0
+  - BeardItem, 441172977
+  - $statei, 0
+  - IsBlocking, 0
+  - $falling, 0
+  - seed, 656872964
+  - seAttrib, 0
+  - emote_oneshot, 1
+  - $encumbered, 0
+  - $crouching, 0
+  - wakeup, 0
+  - baseValue, 0
+  - $blocking, 0
+  - emoteID, 1
+  - HairItem, 1043840416
+  - dodgeinv, 0
+  hashes:
+  - HelmetItem, HelmetPointyHat
+  - RightItem, 0
+  floats:
+  - max_health, 25
+  - $forward_speed, 0,001544621
+  - $turn_speed, 0,01014538
+  - $sideway_speed, -0,003916705
+  - health, 1
+  - noise, 0
+  - Stealth, 1
+  - stamina, 50
+  - $anim_speed, 1
+  - $statef, 0
+  - eitr, 0
+  strings:
+  - 'attachJoint, '
+  - emote, kneel
+  - playerName, Raaka
+  longs:
+  - playerID, 256979773
+  vecs:
+  - SkinColor, 0.65,0.65,0.65
+  - vel, -0.00005,0.00026,-0.00002
+  - LookTarget, 513.9988,1103.752,11.60021
+  - BodyVelocity, -0.00005,0.00026,-0.00002
+  - HairColor, 1,0.70588,0.93103
+  - body_vel, -0.00005,0.00026,-0.00002
+  - body_avel, 0,0,0
+  - relPos, 0.0073,0.37971,1.11912
+  quats:
+  - tiltrot, 0
+  - relRot, 102.593

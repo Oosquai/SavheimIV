@@ -1,0 +1,512 @@
+- prefab: Humanoid
+  type: create
+  data: MHmobsdefaults
+  filter: MHnotTame
+  weight: 1
+
+
+- prefab: Humanoid
+  type: create
+  filter: MHnotTame
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 5
+    maxDistance: 5
+    parameter: 1sec
+  data: MHmobs1
+  weight: 0.05
+
+- prefab: Humanoid
+  type: create
+  filter: MHnotTame
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 5
+    maxDistance: 5
+    parameter: 1sec
+  data: MHExplosive
+  weight: 0.005
+
+- prefab: Skeleton,Skeleton_Poison,Ghost
+  type: create
+  filter: MHnotTame
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 5
+    maxDistance: 5
+    parameter: 1sec  
+  data: MHskele
+  weight: 0.05
+  
+- prefab: Humanoid
+  type: state, *
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec  
+
+- prefab: Humanoid
+  type: poke, 1sec
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  fallback: true 
+ 
+
+ 
+ 
+#Explosive
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Explosive*
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=SE_Dvergr_buff
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Explosive*
+  spawns:
+  - BlobLava_explosion
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Burning
+  spawnDelay: 1
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Explosive*
+  spawns:
+  - SurtlingCore
+  - BlobLava_explosion
+  
+  
+#Poison 
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Poison*
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Poison
+  weight: 1e30
+ 
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Poison*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 2
+    parameter: MHPoisonAOE
+  spawns:
+  - vfx_poisonarrow_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Poison
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Poison* 
+  spawns:
+  - BombOoze 
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  
+#poisondamage players    
+- prefab: Player
+  type: poke, MHPoisonAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, poison=15
+
+
+    
+#Burning
+
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Burning*
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Burning
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  weight: 1e30
+    
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Burning*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 2
+    parameter: MHBurningAOE
+  spawns:
+  - vfx_FireAddFuel
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Burning
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Burning* 
+  spawns:
+  - SurtlingCore
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  
+#burningdamage players    
+- prefab: Player
+  type: poke, MHBurningAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=15
+    
+#Lightning
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Lightning*
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Lightning
+  weight: 1e30
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Lightning*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHLightningAOE
+  spawns:
+  - fx_lightningweapon_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Lightning
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Lightning* 
+  spawns:
+  - Thunderstone 
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+
+#lightningdamage players    
+- prefab: Player
+  type: poke, MHLightningAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, lightning=15    
+
+
+#Frost
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Frost*
+  poke:
+  - prefab: Humanoid
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Frost
+  weight: 1e30
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Frost*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHFreezingAOE
+  spawns:
+  - vfx_frostarrow_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Frost
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Frost* 
+  spawns:
+  - FreezeGland
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+
+#freezingdamage players    
+- prefab: Player
+  type: poke, MHFreezingAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, frost=15   
+    
+    
+#Splitting
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Splitting* 
+  spawns:
+  - <prefab>
+  - <prefab>
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  
+
+#Plague
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Plague*
+  poke:
+  - prefab: Humanoid
+    delay: 0.1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Slimed
+  weight: 1e30
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Plague*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHPlagueAOE
+  spawns:
+  - vfx_blob_attack
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Plague* 
+  spawns:
+  - Bilebag
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+
+#Plaguedamage players    
+- prefab: Player
+  type: poke, MHPlagueAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Puke  
+    
+    
+#Waller
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Waller*
+  poke:
+  - prefab: Humanoid
+    delay: 0.1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Smoked
+  weight: 1e30
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Waller*
+  spawns:
+  - DvergerStaffBlocker_blockU
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Waller* 
+  spawns:
+  - Eitr
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  
+  
+#Trapper
+- prefab: Humanoid
+  type: poke, 1sec
+  filter: string, Humanoid.m_name, Trapper*
+  poke:
+  - prefab: Humanoid
+    delay: 0.1
+    limit: 1
+    maxDistance: 1
+    parameter: 1sec
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Tared
+  weight: 1e30
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Trapper*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHTrapperAOE
+  spawns:
+  - fx_trap_trigger
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Trapper* 
+  spawns:
+  - MechanicalSpring
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+
+#Trapperdamage players    
+- prefab: Player
+  type: poke, MHTrapperAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Immobilized 
+    
+#Nature
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Nature*
+  spawns:
+  - TentaRoot
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Nature* 
+  spawns:
+  - Sap
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  
+  
+#Mocking
+
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Mocking*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHMockingAOE
+  spawns:
+  - sfx_haldor_laugh, 0,0,0, 0,0,0, MockingLaugh
+  - sfx_haldor_laugh, 0,0,0, 0,0,0, MockingLaugh
+  - sfx_haldor_laugh, 0,0,0, 0,0,0, MockingLaugh
+  - sfx_haldor_laugh, 0,0,0, 0,0,0, MockingLaugh
+  - sfx_haldor_laugh, 0,0,0, 0,0,0, MockingLaugh
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Mocking* 
+  spawns:
+  - sfx_haldor_laugh, 0,0,0, 0,0,0, MockingLaugh
+  - MeadTasty
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  
+#Mockingdamage players    
+- prefab: Player
+  type: poke, MHMockingAOE
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Slimed 
+    
+    
+    
+#Ringer
+ 
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Ringer* 
+  spawns:
+  - sfx_fader_bell
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 5
+    parameter: MHRinger 
+
+
+- prefab: Player
+  type: poke, MHRinger   
+  objectRpc:
+  - name: RPC_AddNoise
+    1: float, 150
+    
+
+
+#Blinding
+- prefab: Humanoid
+  type: state, attack*
+  filter: string, Humanoid.m_name, Blinding*
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHBlindingAOE
+  spawns:
+  - fx_fireball_staff_explosion
+  weight: 1e30
+  
+- prefab: Humanoid
+  type: destroy
+  filter: string, Humanoid.m_name, Blinding* 
+  spawns:
+  - fx_fireball_staff_explosion
+  - Coins, 0,0,0, 0,0,0, MHCoinDrop20
+  poke:
+  - prefab: Player
+    limit: 10
+    maxDistance: 3
+    parameter: MHBlindingAOE
+
+#Blindingdamage players    
+- prefab: Player
+  type: poke, MHBlindingAOE
+  objectRpc:
+  - name: Message
+    1: enum_message, 2
+    2: string, <color=white><size=2000>█
+    3: int, 0 

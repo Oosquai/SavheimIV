@@ -1,0 +1,137 @@
+- name: MHCoinDrop20
+  ints:
+  - stack, 20
+
+
+- name: MockingLaugh
+  floats:
+  - ZSFX.m_minPitch, 2
+  - ZSFX.m_maxPitch, 2
+
+- name: MHnotTame
+  ints:
+  - tamed, 0
+
+- valueGroup: MHname1
+  values:
+  - Burning
+  - Lightning
+  - Poison
+  - Frost
+  - Splitting
+  - Plague
+  - Waller
+  - Trapper
+  - Nature
+  - Ringer
+  - Blinding
+
+  
+- name: MHExplosive
+  ints:
+  - seed, 1046275452
+  - level, 1
+  floats:
+  - RandomSkillFactor, 1.5
+  - Humanoid.m_runSpeed, 1
+  - Humanoid.m_speed, 1
+  - Humanoid.m_walkSpeed, 1
+  - Humanoid.m_crouchSpeed, 1
+  strings:
+  - Humanoid.m_group, MHMobs
+  - Humanoid.m_name, Explosive <prefab> 
+
+- name: MHskele
+  ints:
+  - seed, 1046275452
+  - level, 3
+  hashes:
+  - LegItem, <MHlegs>
+  - ChestItem, <MHchest>
+  - ShoulderItem, <MHCape>
+  floats:
+  - RandomSkillFactor, 1.5
+  strings:
+  - Humanoid.m_group, MHMobs
+  - Humanoid.m_name, <MHname1> <prefab>
+
+- name: MHmobs1
+  ints:
+  - level, 3
+  floats:
+  - RandomSkillFactor, 1.5
+  strings:
+  - Humanoid.m_group, MHMobs
+  - Humanoid.m_name, <MHname1> <prefab>
+
+- name: MHmobsdefaults
+  strings:
+  - Humanoid.m_group, MHMobs
+  
+ 
+- valueGroup: MHchest
+  values:  
+  - ArmorTunic1
+  - ArmorTunic2
+  - ArmorTunic3
+  - ArmorTunic4
+  - ArmorTunic5
+  - ArmorTunic6
+  - ArmorTunic7
+  - ArmorTunic8
+  - ArmorTunic9
+  - ArmorTunic10
+  - ArmorBronzeChest
+  - ArmorCarapaceChest
+  - ArmorFenringChest
+  - ArmorIronChest
+  - ArmorLeatherChest
+  - ArmorMageChest
+  - ArmorPaddedCuirass
+  - ArmorRagsChest
+  - ArmorRootChest
+  - ArmorTrollLeatherChest
+  - ArmorWolfChest
+
+- valueGroup: MHhelmet
+  values: 
+  - HelmetBronze
+  - HelmetCarapace
+  - HelmetDrake
+  - HelmetDverger
+  - HelmetFenring
+  - HelmetFishingHat
+  - HelmetIron
+  - HelmetLeather
+  - HelmetMage
+  - HelmetMidsummerCrown
+  - HelmetOdin
+  - HelmetPadded
+  - HelmetPointyHat
+  - HelmetRoot
+  - HelmetTrollLeather
+  - HelmetYule
+
+- valueGroup: MHlegs
+  values: 
+  - ArmorBronzeLegs
+  - ArmorCarapaceLegs
+  - ArmorFenringLegs
+  - ArmorIronLegs
+  - ArmorLeatherLegs
+  - ArmorMageLegs
+  - ArmorPaddedGreaves
+  - ArmorRagsLegs
+  - ArmorRootLegs
+  - ArmorTrollLeatherLegs
+  - ArmorWolfLegs
+
+- valueGroup: MHcape
+  values: 
+  - CapeDeerHide
+  - CapeFeather
+  - CapeLinen
+  - CapeLox
+  - CapeOdin
+  - CapeTrollHide
+  - CapeWolf

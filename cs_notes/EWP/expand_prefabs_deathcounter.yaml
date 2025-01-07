@@ -1,0 +1,407 @@
+# Player says !dc to check their current death count.
+- prefab: Player
+  type: say, !dc
+  poke:
+  - self: true
+    parameter: rezmessage <long_playerID>
+
+# Player join checks & messages.
+- prefab: Player
+  type: create
+  poke:
+  - self: true
+    parameter: permadeathcheck <long_playerID>
+  - self: true
+    parameter: rezmessage <long_playerID>
+  - self: true
+    parameter: firstmessage <long_playerID>
+
+# The first message for a new character when spawning.   
+- prefab: Player
+  type: poke, firstmessage
+  bannedGlobalKeys: <par1>_deathmessages,permadeath_<par1>
+  command: setkey <long_playerID>_deathmessage 0
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <firstmessage>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <firstmessage>
+    3: int, 0
+    delay: 1
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <firstmessage>
+    3: int, 0
+    delay: 2
+# Permadeath message.  
+- prefab: Player
+  type: poke, permadeathcheck
+  globalKeys: permadeath_<par1>
+  commands:
+  - wait 4000;kick <pid>
+  - <pname> can't resurrect in this world.
+  - removekey <par1>_deathmessage
+  - removekey <par1>_deathmessages
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <permadeathmessage>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <permadeathmessage>
+    3: int, 0
+    delay: 2
+
+
+# Creation of Player_ragdoll when player dies pokes the Player.
+- prefab: Player_ragdoll
+  type: create
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessagetrigger1
+
+# Player gets poked by the ragdoll, pokes player with the next trigger to send the long_playerID to be used as par1 in the next entry to check for bannedGlobalKeys.
+- prefab: Player
+  type: poke, deathmessagetrigger1
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessagetrigger2 <long_playerID>
+  command: setkey <long_playerID>_deathmessages
+
+# Shifts to the next number of playerid deathmessage globalKeys.
+- prefab: Player
+  type: poke, deathmessagetrigger2
+  globalKeys: <par1>_deathmessages
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  command: setkey <long_playerID>_deathmessage 1
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessage <long_playerID>
+
+# 1
+- prefab: Player
+  type: poke, deathmessagetrigger2
+  globalKeys: <par1>_deathmessage 1
+  bannedGlobalKeys: <par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  command: setkey <long_playerID>_deathmessage 2
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessage <long_playerID>
+# 2  
+- prefab: Player
+  type: poke, deathmessagetrigger2 
+  globalKeys: <par1>_deathmessage 2
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  command: setkey <long_playerID>_deathmessage 3
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessage <long_playerID>
+# 3    
+- prefab: Player
+  type: poke, deathmessagetrigger2
+  globalKeys: <par1>_deathmessage 3
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 4,<par1>_deathmessage 5
+  command: setkey <long_playerID>_deathmessage 4
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessage <long_playerID>
+# 4
+- prefab: Player
+  type: poke, deathmessagetrigger2
+  globalKeys: <par1>_deathmessage 4
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 5
+  command: setkey <long_playerID>_deathmessage 5
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessage <long_playerID>
+# 5 PERMADEATH
+- prefab: Player
+  type: poke, deathmessagetrigger2
+  globalKeys: <par1>_deathmessage 5
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4 
+  commands: 
+  - s <revenantspawnmessage>
+  - kick <pid>
+  - setkey permadeath_<long_playerID>
+  - removekey <par1>_deathmessage
+  - removekey <par1>_deathmessages
+  poke:
+  - prefab: Player
+    maxDistance: 1
+    limit: 1
+    parameter: deathmessage <long_playerID>
+  spawn:
+  - prefab: <revenant>
+    data: revenant
+    
+# Shows the death messages and makes server shout to chat about the player meeting their end, filters for globalKey and bannedGlobalKey numbers.
+
+# 1
+- prefab: Player
+  type: poke, deathmessage
+  globalKeys: <par1>_deathmessage 1
+  bannedGlobalKeys: <par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <deathmessage1>
+    3: int, 0
+  command: s <string_playerName> <deathmessageshout1>
+# 2    
+- prefab: Player
+  type: poke, deathmessage
+  globalKeys: <par1>_deathmessage 2
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <deathmessage2>
+    3: int, 0
+  command: s <string_playerName> <deathmessageshout2>
+# 3    
+- prefab: Player
+  type: poke, deathmessage
+  globalKeys: <par1>_deathmessage 3
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <deathmessage3>
+    3: int, 0
+  command: s <string_playerName> <deathmessageshout3>
+# 4    
+- prefab: Player
+  globalKeys: <par1>_deathmessage 4
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 5
+  type: poke, deathmessage
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <deathmessage4>
+    3: int, 0
+  command: s <string_playerName> <deathmessageshout4>
+# 5    
+- prefab: Player
+  globalKeys: <par1>_deathmessage 5
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4
+  type: poke, deathmessage
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <deathmessage5>
+    3: int, 0
+  command: s <string_playerName> <deathmessageshout5> 
+
+# Revive messages & !dc death counter checks
+
+# 0, for when player has not died yet in the world.
+
+- prefab: Player
+  type: poke, rezmessage
+  globalKeys: <par1>_deathmessage 0
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <nodeathsmessage>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <nodeathsmessage>
+    3: int, 0
+    delay: 2
+
+# 1
+- prefab: Player
+  type: poke, rezmessage
+  globalKeys: <par1>_deathmessage 1
+  bannedGlobalKeys: <par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage1>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage1>
+    3: int, 0
+    delay: 2
+
+# 2    
+- prefab: Player
+  type: poke, rezmessage
+  globalKeys: <par1>_deathmessage 2
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 3,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage2>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage2>
+    3: int, 0
+    delay: 2
+
+# 3    
+- prefab: Player
+  type: poke, rezmessage
+  globalKeys: <par1>_deathmessage 3
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 4,<par1>_deathmessage 5
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage3>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage3>
+    3: int, 0
+    delay: 2
+
+# 4    
+- prefab: Player
+  globalKeys: <par1>_deathmessage 4
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 5
+  type: poke, rezmessage
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage4>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage4>
+    3: int, 0
+    delay: 2
+
+# 5    
+- prefab: Player
+  globalKeys: <par1>_deathmessage 5
+  bannedGlobalKeys: <par1>_deathmessage 1,<par1>_deathmessage 2,<par1>_deathmessage 3,<par1>_deathmessage 4
+  type: poke, rezmessage
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage5>
+    3: int, 0
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <rezmessage5>
+    3: int, 0
+    delay: 2
+
+
+  
+  
+# altar sacrifice
+
+# vfx being spawned at sacrifice altar triggers the players death counter to get lowered.
+- prefab: vfx_HealthUpgrade
+  type: create
+  objects:
+  - LocationProxy, 5, deathcounteraltarcheck
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 5
+    parameter: counterdown
+    
+- prefab: Player
+  type: poke, counterdown
+  poke:
+  - self: true
+    parameter: reducedeathcount <long_playerID>
+
+# Reduction of death count.    
+- prefab: Player
+  type: poke, reducedeathcount
+  bannedGlobalKeys: <par1>_deathmessage 1,<long_playerID>_deathmessage 0
+  commands:
+  - setkey <long_playerID>_deathmessage <sub_<key_<long_playerID>_deathmessage>_1>
+  - s <pname>'s Death Counter lowered!
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <size=70><#00FFFF>Death Counter lowered!
+    3: int, 0
+# Trying to use death count reduction before dying.
+- prefab: Player
+  type: poke, reducedeathcount
+  globalKeys: <par1>_deathmessage 0
+  commands:
+  - s <pname>'s Death Counter as low as it can get!
+  spawn:
+  - prefab: SurtlingCore
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <size=70><#00FFFF>Death counter can't get lower, SurtlingCore refunded!
+    3: int, 0
+
+# trying to use death count reduction at lowest possible deathcount.  
+- prefab: Player
+  type: poke, reducedeathcount
+  globalKeys: <par1>_deathmessage 1
+  commands:
+  - s <pname>'s Death Counter as low as it can get!
+  spawn:
+  - prefab: SurtlingCore
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, 2
+    2: string, <size=70><#00FFFF>Death counter can't get lower, SurtlingCore refunded!
+    3: int, 0
+    
+    
+# Slaying players revenant removes permadeath key
+
+- prefab: Humanoid
+  filter: revenantcheck
+  type: destroy
+  commands:
+  - removekey permadeath_<string_PlayerIDsave>
+  - s <revenantdeathmessage>

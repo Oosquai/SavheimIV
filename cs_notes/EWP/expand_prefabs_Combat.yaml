@@ -1,0 +1,1460 @@
+###############################################################
+# Savheim Combat Mechanics - prefabs
+###############################################################
+# Exotic player states
+# Parry
+- prefab: sfx_perfectblock
+  type: create
+  removeDelay: 3   # shorten duration for use as trigger in bleed logic
+  remove: true
+  bannedObjects:
+  - Player, 1, PlayerBlockingHuntressBow
+  poke:
+  - prefab: Player
+    data: PlayerBlocking
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerParry
+
+#####################
+# Block
+- prefab: vfx_blocked
+  type: create
+  poke:
+  - prefab: Player
+    data: PlayerBlocking
+    limit: 1
+    maxDistance: 1
+    parameter: PlayerBlock
+  - prefab: Player
+    data: PlayerBlockingShield
+    limit: 1
+    maxDistance: 1
+    parameter: p_shield_counter_start
+
+###############################################################
+# Shield Counter
+- prefab: Player
+  type: poke, p_shield_counter_start
+  bannedObjects:
+  - sfx_perfectblock, 1
+  data: d_player_shield_counter_on
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.2       # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
+    parameter: p_shield_counter_end
+
+- prefab: Player
+  type: poke, p_shield_counter_end
+  data: d_player_shield_counter_off
+  injectData: true
+
+- prefab: Player
+  types:
+  - state, swing_axe0
+  - state, swing_longsword0
+  - state, spear_poke
+  - state, unarmed_attack0
+  filter: d_player_shield_counter_on
+  poke:
+  - self: true
+    data: d_player_shield_counter_on
+    parameter: p_shield_counter_fx
+
+# special process for Rikarr's rapier since it uses different attacks.  trigger off secondary slash.
+- prefab: Player
+  types:
+  - state, swing_longsword1
+  filter: d_player_shield_counter_on_rikarr
+  poke:
+  - self: true
+    data: d_player_shield_counter_on
+    parameter: p_shield_counter_fx
+
+# shield counter effects
+- prefab: Player
+  type: poke, p_shield_counter_fx
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.12
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.24
+  - vfx_crossbow_nature_fire, 0,0,1, 40,0,60, d_empty_data_combat, 0.3
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter
+    2: bool, true
+    3: int, 1
+    4: float, 1
+    delay: 0.2  # set to just less than fastest possible wind-up of swords, axes, and spears.  Local testing showed spears 0.35 worked but 0.37 failed.  players can speed up attacks though.  0.3?
+
+###############################################################
+# Spirit Counter
+- prefab: Player
+  type: state, swing_longsword1
+  filter: gear_staffshield_all
+  poke:
+  - self: true
+    parameter: p_spirit_counter
+
+- prefab: Player
+  type: poke, p_spirit_counter
+  data: d_spirit_counter_on
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Staff_shield_Spirit_Counter
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - self: true
+    delay: 0.3                      # must match TtL of SE_Savheim_Staff_shield_Spirit_Counter
+    parameter: p_spirit_counter_off
+
+- prefab: Player
+  type: poke, p_spirit_counter_off
+  data: d_spirit_counter_off
+  injectData: true
+
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, d_spirit_counter_t2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: p_spirit_counter_AE 24 <vec>  # higher than same tier sanctis, since this requires parry timing and sacrifices shield
+    maxDistance: 4
+
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, d_spirit_counter_t4
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: p_spirit_counter_AE 48 <vec>
+    maxDistance: 4
+
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, d_spirit_counter_t6
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: p_spirit_counter_AE 72 <vec>
+    maxDistance: 4
+
+# Spirit Counter Spirit & Stagger AE
+- prefab: creature
+  type: poke, p_spirit_counter_AE
+  filter: not_tamed_combat
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, spirit=<par1>
+  poke:
+  - self: true
+    parameter: p_spirit_counter_AE_fx <par2>
+
+- prefab: creature
+  type: poke, p_spirit_counter_AE_fx
+  objects:
+  - sfx_UndeadBurn_Start, 1
+  spawn: fx_Fader_Roar
+  objectRpc:
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+###############################################################
+# Results of exotic player states
+###############################################################
+# Aegis parry
+- prefab: Player
+  type: poke, PlayerParry
+  filter: aegisShieldList
+  spawn: fx_DvergerMage_Mistile_die
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Aegis_Eitr_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Buckler parry - speed burst
+- prefab: Player
+  type: poke, PlayerParry
+  filter: bucklerShieldList
+  spawns:
+  - sfx_start_buff_2
+  - vfx_ColdBall_launch
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_BucklerShield_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Round parry - stamina regen
+- prefab: Player
+  type: poke, PlayerParry
+  filter: roundShieldList
+  spawns:
+  - sfx_metal_blocked_overlay
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_RoundShield_Stam_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Tower block - HP regen
+- prefab: Player
+  type: poke, PlayerBlock
+  filter: towerShieldList
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_TowerShield_HP_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Shortbow acrobatics - thanks DhakhaR!
+- prefab: Player
+  type: state, jump
+  filter: shortBowList
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, dodge
+    delay: 0.15
+
+#####################
+# Shortbow speed burst
+- prefab: Player
+  type: state, bow_fire
+  filter: shortBowList
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shortbow_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Longbow jump shot
+- prefab: sfx_bow_draw
+  type: create
+  objects:
+  - Player, 1, d_player_airborne_longbow
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_airborne_longbow
+    parameter: p_longbow_jump_shot
+
+- prefab: Player
+  type: poke, p_longbow_jump_shot
+  filter: d_player_airborne_longbow
+  data: d_longbow_jump_shot_cd_on
+  injectData: true
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_LongbowSkill
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_longbow_jump_cd_off
+
+- prefab: Player
+  type: poke, p_longbow_jump_cd_off
+  data: d_longbow_jump_shot_cd_off
+  injectData: true
+
+- prefab: Player
+  type: state, jump
+  filter: d_longbow_jump_shot_cd_on
+  data: d_longbow_jump_shot_cd_off
+  injectData: true
+
+###############################################################
+# Spear speed burst after throw
+- prefab: Player
+  type: state, spear_throw
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Spear_Throw_Speed_Burst
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+###############################################################
+# Vanish after knife kill
+- prefab: creature
+  type: destroy
+  fallback: true
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent_combat
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent_combat
+
+- prefab: sfx_build_table
+  type: create
+  removeDelay: 1   # reduce trigger window to enforce reaction time and prevent double leap
+  remove: true
+
+- prefab: Player
+  types:
+  - state, knife_secondary
+  - state, dual_knives_secondary
+  objects:
+  - sfx_arrow_hit, 6
+  - sfx_knife_swing, 6
+  - sfx_gui_craftitem_cauldron, 6
+  - sfx_build_table, 6
+  spawns:
+  - fx_DvergerMage_Mistile_die
+  - vfx_wraith_death
+  - vfx_ghost_death, 0,0,1, 0,0,0, d_empty_data_combat, 0.2
+  - vfx_ghost_death, 0,0,2, 0,0,0, d_empty_data_combat, 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Vanish
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    parameter: p_vanish_deaggro
+
+- prefab: creature
+  type: poke, p_vanish_deaggro
+  data: d_vanish_deaggro
+  injectData: true              # need inject to avoid respawn
+  owner: 0                      # need to remove ownership to force inject to recognize new data
+
+###############################################################
+# Bleed Mechanics
+# Secondary attacks from swords and greatswords cause bleed against staggered enemies.
+# Greatswords get more ticks than 1h swords.
+# Claw primary attacks have a chance to trigger bleed, but with shorter duration.
+# Bleed arrows and bolts always bleed, but much shorter duration.
+# Reapplications reset count and add a second set of increased ticks, for stacking damage.
+# More stacks makes ticks faster too though, so can't stack infinitely.
+# Damage and tick count scales roughly with creature max hp.
+
+# 1h swords
+- prefab: sfx_rebirth               # Wacky's Database SE adds this, to ensure only occurs on hit.
+  type: create
+  objects:
+  - sfx_build_hoe, 1                # Wacky's Database SE sfx added to secondary attacks of 1h swords only
+  - sfx_perfectblock, 5             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6                  # big range for big creatures (troll 2.  bonemass 4.  8-star bonemass 6)
+    parameter: p_sword_bleed_hp 7   # par1 = base total ticks minus 1
+
+# 2h swords
+- prefab: sfx_rebirth
+  type: create
+  objects:
+  - sfx_build_cultivator, 1         # specific to greatswords
+  - sfx_perfectblock, 5
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 13
+
+# claws - chance to bleed on primary attacks.  this is also used with Ryvers (CWS_Sword_5_SH).
+# chance achieved with Wacky's Database chance to proc SE on attack
+- prefab: sfx_rebirth               # Wacky's Database SE adds this, to ensure only occurs on hit.
+  type: create
+  objects:
+  - sfx_gui_craftitem_end, 1        # specific to claws and Ryvers
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 1   # more frequent but shorter duration bleeds
+
+# bleed arrows and bolts
+- prefab: sfx_rebirth
+  type: create
+  objects:
+  - sfx_gui_craftitem, 1            # specific to bleed arrows and bolts
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 0   # on-demand bleed arrows have short duration, but can rapidly stack, especially against high hp enemies
+
+# unique melee bow - huntress.  bleeds on parry.
+- prefab: sfx_perfectblock
+  type: create
+  removeDelay: 3   # shorten duration for use as trigger in bleed logic
+  remove: true
+  objects:
+  - Player, 1, PlayerBlockingHuntressBow
+  weight: 0.6
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 6
+    parameter: p_sword_bleed_hp 3
+
+##########################
+# Some creatures don't bleed
+# Intercept with no-op
+- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen
+  type: poke, p_sword_bleed_hp
+  weight: 1E30
+
+##########################
+# Check max hp of creature to set tick damage and extra tick count
+# RPC_Damage wants an int, and no way to type convert...
+# Brute force Fibonacci to solve... obviously??
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 0;99         # victim health range
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+0 1  # ticks, dmg per tick
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 100;199
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+1 2
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 200;299
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+2 3
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 300;499
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+3 4
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 500;799
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+4 5
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 800;1299
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+5 6
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 1300;2099
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+6 7
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 2100;3399
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+7 8
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 3400;5499
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+8 9
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 5500;8899
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+9 10
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 8900;14399
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+10 11
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 14400;23299
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+11 12
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 23300;37699
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+12 13
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 37700;60999
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+13 14
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 61000;98699
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+14 15
+
+- prefab: creature
+  type: poke, p_sword_bleed_hp
+  filter: float, max_health, 98700;999999
+  poke:
+  - self: true
+    parameter: p_sword_bleed_fx <par1>+15 16
+
+# Bleed fx
+- prefab: creature
+  type: poke, p_sword_bleed_fx
+  data: d_bleed_tick_rst_stack_inc     # reset tick count and increment stack count any time a new stack is created
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.06
+  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_combat, 0.12
+  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_combat, 0.18
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.4
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8
+  poke:
+  - self: true
+    parameter: p_sword_bleed_loop <par1> <par2>+<par2>*<int_i_bleed_stack_cnt>
+
+# Main Bleed Loop.  Count to X, then exit.
+- prefab: creature
+  type: poke, p_sword_bleed_loop
+  filter: int, i_bleed_tick_cnt, 0;<par1>   # check tick count
+  data: d_bleed_tick_cnt_inc                # increment tick count and clear i_bleed_stack_timeout flag
+  injectData: true
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=<par2>                   # apply tick damage
+  poke:
+  - self: true
+    delay: 1
+    parameter: p_sword_bleed_loop <par1> <par2>  # self loop
+### DEBUG - COMMENT OUT ###
+#  command: s <int_i_bleed_tick_cnt>
+###########################
+
+# once count exceeds limit, fallback process will clear all stacks
+- prefab: creature
+  type: poke, p_sword_bleed_loop
+  data: d_bleed_stack_timeout_set  # attempt to clear all bleed state. will only succeed if no other poke loops still active.
+  injectData: true
+  poke:
+  - self: true
+    delay: 1.1                     # need this delay to clear all stacks
+    parameter: p_sword_bleed_clear
+  fallback: true
+
+# clear bleed stacks
+- prefab: creature
+  type: poke, p_sword_bleed_clear
+  filter: int, i_bleed_stack_timeout, 1
+  data: d_bleed_full_rst
+  injectData: true
+
+################################################################
+# Sanctis - 1h sword class, eitr-based
+# Players shield themselves on secondary attack of any Sanctis.
+# Shield has 5 hp and lasts 1 minute.
+# Also spawns AE spirit damage.
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t2
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 18
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t3
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 30
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t4
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 42
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t5
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 54
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t6
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 66
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t7
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 72
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_t8
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_combat
+    parameter: spiritAE 84
+    maxDistance: 4
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+# Sanctis spirit AE
+- prefab: creature
+  type: poke, spiritAE
+  filter: not_tamed_combat
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, spirit=<par1>
+  poke:
+  - self: true
+    parameter: spiritAE_fx
+
+- prefab: creature
+  type: poke, spiritAE_fx
+  objects:
+  - sfx_UndeadBurn_Start, 1
+  spawn: fx_Fader_Roar_Projectile_Hit
+
+################################################################
+# Reapers
+# Primary X -> Secondary attacks have effects if they connect
+# 1, 2 = Generate stacks on enemy
+# 1, 1, 2 = Pop stacks for heal
+# 1, 1, 1, 2 = Pop stacks for damage
+## set flags when player primary attacks with a reaper, distinguishing between 1st, 2nd, and 3rd animations
+- prefab: Player
+  type: state, greatsword0
+  filter: d_reaper_list
+  data: d_state_reaper0_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed for primary hit to land
+    parameter: p_state_reaper0_clr
+
+- prefab: Player                                 # clear flag after a delay
+  type: poke, p_state_reaper0_clr
+  data: d_state_reaper0_clr
+  injectData: true
+
+- prefab: Player
+  type: state, greatsword1
+  filter: d_reaper_list
+  data: d_state_reaper1_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed for primary hit to land
+    parameter: p_state_reaper1_clr
+
+- prefab: Player
+  type: poke, p_state_reaper1_clr
+  data: d_state_reaper1_clr
+  injectData: true
+
+- prefab: Player
+  type: state, greatsword2
+  filter: d_reaper_list
+  data: d_state_reaper2_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed for primary hit to land
+    parameter: p_state_reaper2_clr
+
+- prefab: Player
+  type: poke, p_state_reaper2_clr
+  data: d_state_reaper2_clr
+  injectData: true
+
+## Detect reaper primary attack making contact, poke if animation flagged
+- prefab: sfx_cinder_rain_hit
+  type: create
+  objects:
+  - Player, 6, d_reaper_list
+  - sfx_sword_hit, 1
+  poke:
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_state_reaper0_filter                 # animation flag check
+    parameter: p_state_reaper0_latched
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_state_reaper1_filter
+    parameter: p_state_reaper1_latched
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_state_reaper2_filter
+    parameter: p_state_reaper2_latched
+
+## Latch state on player that a specific reaper attack made contact
+- prefab: Player
+  type: poke, p_state_reaper0_latched
+  data: d_state_reaper0_latched_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed to start secondary attack
+    parameter: p_state_reaper0_latched_clr
+
+- prefab: Player                                 # clear flag after a delay
+  type: poke, p_state_reaper0_latched_clr
+  data: d_state_reaper0_latched_clr
+  injectData: true
+
+- prefab: Player
+  type: poke, p_state_reaper1_latched
+  data: d_state_reaper1_latched_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time needed to start secondary attack
+    parameter: p_state_reaper1_latched_clr
+
+- prefab: Player
+  type: poke, p_state_reaper1_latched_clr
+  data: d_state_reaper1_latched_clr
+  injectData: true
+
+- prefab: Player
+  type: poke, p_state_reaper2_latched
+  data: d_state_reaper2_latched_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 1.1                                   # time needed to start secondary attack
+    parameter: p_state_reaper2_latched_clr
+
+- prefab: Player
+  type: poke, p_state_reaper2_latched_clr
+  data: d_state_reaper2_latched_clr
+  injectData: true
+
+## Detect Reaper Secondary attack after 1st primary.  poke creatures to set up for hit fx.
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper0_latched_filter
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo0_pending
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper1_latched_filter
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo1_pending
+
+# final combo needs to determine which tier reaper player is using to calculate dmg
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter_t3
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending 1         # <par1> is dmg multiplier for final combo
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter_t4
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending 2
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter_t5
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending 3
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter_t6
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending 4
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter_t7
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending 5
+
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_state_reaper2_latched_filter_t8
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 3
+    data: not_tamed_combat
+    parameter: p_reaper_combo2_pending 6
+
+## Poke creatures to queue flags and queue up flag clears
+- prefab: creature
+  type: poke, p_reaper_combo0_pending
+  data: d_reaper_combo0_pending_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time for reaper 2nd attack to land
+    parameter: p_reaper_combo0_pending_clr
+
+- prefab: creature
+  type: poke, p_reaper_combo0_pending_clr
+  data: d_reaper_combo0_pending_clr
+  injectData: true
+
+- prefab: creature
+  type: poke, p_reaper_combo1_pending
+  data: d_reaper_combo1_pending_set
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time for reaper 2nd attack to land
+    parameter: p_reaper_combo1_pending_clr
+
+- prefab: creature
+  type: poke, p_reaper_combo1_pending_clr
+  data: d_reaper_combo1_pending_clr
+  injectData: true
+
+- prefab: creature
+  type: poke, p_reaper_combo2_pending
+  data: d_reaper_combo2_pending_set_and_save_dmg
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.7                                   # time for reaper 2nd attack to land
+    parameter: p_reaper_combo2_pending_clr
+
+- prefab: creature
+  type: poke, p_reaper_combo2_pending_clr
+  data: d_reaper_combo2_pending_clr
+  injectData: true
+
+## Trigger on reaper 2nd hit fx, then poke creatures with comboX_pending filters
+- prefab: sfx_axe_flint_hit
+  type: create
+  objects:
+  - Player, 6, d_reaper_list
+  - sfx_sword_hit, 1
+  poke:
+  - prefab: creature
+    maxDistance: 6
+    limit: 1
+    data: d_reaper_combo0_pending_set
+    parameter: p_reaper_combo0_hit
+  - prefab: creature
+    maxDistance: 6
+    limit: 1
+    data: d_reaper_combo1_pending_set
+    parameter: p_reaper_combo1_hit
+  - prefab: creature
+    maxDistance: 6
+    limit: 1
+    data: d_reaper_combo2_pending_set
+    parameter: p_reaper_combo2_hit
+
+### REAPER COMBOS
+## Primary-Secondary Combo = Create debuff stacks on creatures, max 3
+- prefab: creature
+  type: poke, p_reaper_combo0_hit
+  poke:
+  - self: true
+    parameter: p_reaper_debuff_stacks_set
+
+# set stack 1
+- prefab: creature
+  type: poke, p_reaper_debuff_stacks_set
+  filter: d_reaper_debuff_stack_cnt_0
+  data: d_reaper_debuff_stack_1_set
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit                           # only spawn debuff fx if adding a stack
+  - sfx_leech_hit
+  - sfx_gjall_idle_shiver
+  poke:
+  - self: true
+    delay: 60                                    # REAPER DEBUFF STACK TtL
+    parameter: p_reaper_debuff_stack_1_clr
+  - self: true
+    delay: 2.5
+    parameter: p_reaper_debuff_stack_dot1
+
+# set stack 2
+- prefab: creature
+  type: poke, p_reaper_debuff_stacks_set
+  filter: d_reaper_debuff_stack_cnt_1
+  data: d_reaper_debuff_stack_2_set
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit
+  - fx_radiation_hit, 0,0,1
+  - sfx_leech_hit
+  - sfx_gjall_idle_shiver
+  poke:
+  - self: true
+    delay: 60                                    # REAPER DEBUFF STACK TtL
+    parameter: p_reaper_debuff_stack_2_clr
+  - self: true
+    delay: 2.5
+    parameter: p_reaper_debuff_stack_dot2
+  
+# set stack 3
+- prefab: creature
+  type: poke, p_reaper_debuff_stacks_set
+  filter: d_reaper_debuff_stack_cnt_2
+  data: d_reaper_debuff_stack_3_set
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit
+  - fx_jotunbane_hit, 0,0,1
+  - sfx_leech_hit
+  - sfx_gjall_idle_shiver
+  poke:
+  - self: true
+    delay: 60                                    # REAPER DEBUFF STACK TtL
+    parameter: p_reaper_debuff_stack_3_clr
+  - self: true
+    delay: 2.5
+    parameter: p_reaper_debuff_stack_dot3
+
+# clear stack 1
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_1_clr
+  data: d_reaper_debuff_stack_1_clr
+  injectData: true
+
+# clear stack 2
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_2_clr
+  data: d_reaper_debuff_stack_2_clr
+  injectData: true
+
+# clear stack 3
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_3_clr
+  data: d_reaper_debuff_stack_3_clr
+  injectData: true
+
+### Debuff stacks have a small dot, mostly to help indicate they're there.  Good idea, Matt!
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_dot1
+  filter: d_reaper_debuff_stack_cnt_1
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=1
+  poke:
+  - self: true
+    delay: 2.5
+    parameter: p_reaper_debuff_stack_dot1
+  
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_dot2
+  filter: d_reaper_debuff_stack_cnt_2
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=2
+  poke:
+  - self: true
+    delay: 2.5
+    parameter: p_reaper_debuff_stack_dot2
+  
+- prefab: creature
+  type: poke, p_reaper_debuff_stack_dot3
+  filter: d_reaper_debuff_stack_cnt_3
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=3
+  poke:
+  - self: true
+    delay: 2.5
+    parameter: p_reaper_debuff_stack_dot3
+  
+## Primary-Primary-Secondary Combo = Consume debuff stacks to heal self.  Low damage.
+- prefab: creature
+  type: poke, p_reaper_combo1_hit
+  filter: d_reaper_debuff_stack_cnt_1            # 1 debuff stack
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
+  spawns:
+  - vfx_BloodHit, 0,0,1
+  - fx_natureweapon_hit, 0,0,1
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch1
+  poke:
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_reaper_list
+    parameter: p_reaper_player_heal 1
+
+- prefab: creature
+  type: poke, p_reaper_combo1_hit
+  filter: d_reaper_debuff_stack_cnt_2            # 2 debuff stacks
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
+  spawns:
+  - vfx_BloodHit, 0,0,1
+  - fx_natureweapon_hit, 0,0,1
+  - fx_natureweapon_hit, 0,0,1.3, 0,0,0, d_empty_data, 0.3
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch1
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch2, 0.3
+  poke:
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_reaper_list
+    parameter: p_reaper_player_heal 2
+
+- prefab: creature
+  type: poke, p_reaper_combo1_hit
+  filter: d_reaper_debuff_stack_cnt_3            # 3 debuff stacks
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
+  spawns:
+  - vfx_BloodHit, 0,0,1
+  - fx_natureweapon_hit, 0,0,1
+  - fx_natureweapon_hit, 0,0,1.3, 0,0,0, d_empty_data, 0.3
+  - fx_natureweapon_hit, 0,0,1.6, 0,0,0, d_empty_data, 0.6
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch1
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch2, 0.3
+  - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch3, 0.6
+  poke:
+  - prefab: Player
+    maxDistance: 6
+    limit: 1
+    data: d_reaper_list
+    parameter: p_reaper_player_heal 3
+
+# Heal player
+- prefab: Player
+  type: poke, p_reaper_player_heal
+  spawns:
+  - fx_natureweapon_hit, 0,0,1.2, 0,0,0, d_empty_data_combat, 0.2
+  objectRpc:
+  - name: RPC_Heal
+    1: float, <par1>*0.2*<float_max_health>     # PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
+    2: bool, 1
+
+## Primary-Primary-Primary-Secondary Combo = Consume debuff stacks to burst dmg on target and spread stacks to nearby enemies
+- prefab: creature
+  type: poke, p_reaper_combo2_hit
+  filter: d_reaper_debuff_stack_cnt_1            # 1 debuff stack
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
+  spawns:
+  - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
+  - sfx_fallenvalkyrie_attack_spit_projectile
+  - vfx_player_death, 0.5,0,1, 0,90,70
+  - vfx_player_death, -0.5,0,1, 0,90,250
+  poke:
+  - self: true
+    parameter: p_reaper_damage <vReaperDmg1>
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 4
+    limit: 3
+    parameter: p_reaper_combo0_hit
+
+- prefab: creature
+  type: poke, p_reaper_combo2_hit
+  filter: d_reaper_debuff_stack_cnt_2            # 2 debuff stacks
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
+  spawns:
+  - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
+  - sfx_fallenvalkyrie_attack_spit_projectile
+  - vfx_player_death, 0.5,0,1, 0,90,70
+  - vfx_player_death, -0.5,0,1, 0,90,250
+  - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
+  - vfx_player_death, 0,0,1, 0,90,250, d_empty_data_combat, 0.05
+  poke:
+  - self: true
+    parameter: p_reaper_damage <vReaperDmg2>
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 5
+    limit: 3
+    parameter: p_reaper_combo0_hit
+
+- prefab: creature
+  type: poke, p_reaper_combo2_hit
+  filter: d_reaper_debuff_stack_cnt_3            # 3 debuff stacks
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
+  spawns:
+  - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
+  - sfx_fallenvalkyrie_attack_spit_projectile
+  - vfx_player_death, 0.5,0,1, 0,90,70
+  - vfx_player_death, -0.5,0,1, 0,90,250
+  - vfx_player_death, 0,0,1, 0,90,70, d_empty_data_combat, 0.05
+  - vfx_player_death, 0,0,1, 0,90,250, d_empty_data_combat, 0.05
+  - vfx_player_death, -0.5,0,1, 0,90,70, d_empty_data_combat, 0.1
+  - vfx_player_death, 0.5,0,1, 0,90,250, d_empty_data_combat, 0.1
+  poke:
+  - self: true
+    parameter: p_reaper_damage <vReaperDmg3>
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 6
+    limit: 3
+    parameter: p_reaper_combo0_hit
+
+- prefab: creature
+  type: poke, p_reaper_damage
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, slash=<par1>
+
+####################################################
+# Atgeirs Momentum
+# When a player uses atgeir primary attacks, apply bonus damage proportional to movement speed.
+# Normalize movement to 0-2x, then multiply by base damage of atgeir being used.
+- prefab: Player
+  types:
+  - state, atgeir_attack0
+  - state, atgeir_attack1
+  - state, atgeir_attack2
+  poke:
+  - self: true
+    parameter: p_impale_atgeir_tier
+
+# Save base damage of atgeir based on weapon tier
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t2
+  data: d_impale_atgeir_t2
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t3
+  data: d_impale_atgeir_t3
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t4
+  data: d_impale_atgeir_t4
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t5
+  data: d_impale_atgeir_t5
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t6
+  data: d_impale_atgeir_t6
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t7
+  data: d_impale_atgeir_t7
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+- prefab: Player
+  type: poke, p_impale_atgeir_tier
+  filter: gear_atgeir_t8
+  data: d_impale_atgeir_t8
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_save_vel <vec_vel>
+
+# Save Player velocity at time of attack
+- prefab: Player
+  type: poke, p_impale_save_vel
+  data: d_impale_save_vel
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_abs_x
+
+# Absolute value of X
+- prefab: Player
+  type: poke, p_impale_abs_x
+  filter: float, f_vel_x, 0;9999  # positive?
+  data: d_impale_noinvert_x       # do not invert
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_abs_y
+
+- prefab: Player
+  type: poke, p_impale_abs_x
+  fallback: true
+  data: d_impale_invert_x         # invert
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_abs_y
+
+# Absolute value of Y
+- prefab: Player
+  type: poke, p_impale_abs_y
+  filter: float, f_vel_y, 0;9999  # positive?
+  data: d_impale_noinvert_y       # do not invert
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_abs_z
+
+- prefab: Player
+  type: poke, p_impale_abs_y
+  fallback: true
+  data: d_impale_invert_y         # invert
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_abs_z
+
+# Absolute value of Z
+- prefab: Player
+  type: poke, p_impale_abs_z
+  filter: float, f_vel_z, 0;9999  # positive?
+  data: d_impale_noinvert_z       # do not invert
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_calc_momentum
+
+- prefab: Player
+  type: poke, p_impale_abs_z
+  fallback: true
+  data: d_impale_invert_z         # invert
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_calc_momentum
+
+# Calculate approximation of momentum
+# Vertical halved, since jump attacks preserve forward momentum, and gravity accelerates rapidly.
+# X, Y, and Z components normalized by dividing by 10, based on empyrical tests.
+# EWP doesn't support squareroot, so we use this approximation instead.
+- prefab: Player
+  type: poke, p_impale_calc_momentum
+  data: d_impale_calc_momentum
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_cap_momentum
+
+# Cap momentum at 2x, in case players dive off a mountain...
+- prefab: Player
+  type: poke, p_impale_cap_momentum
+  filter: float, f_impale_momentum_norm10, 2;9999
+  data: d_impale_momentum_capped
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_calc_dmg
+
+- prefab: Player
+  type: poke, p_impale_cap_momentum
+  fallback: true
+  data: d_impale_momentum_not_capped
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_calc_dmg
+
+# Calculate damage as normalized momentum multiplied by atgeir base damage
+- prefab: Player
+  type: poke, p_impale_calc_dmg
+  data: d_impale_calc_dmg
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_impale_debug
+
+
+- prefab: Player
+  type: poke, p_impale_debug
+  command: s <float_f_impale_atgeir_dmg> <float_f_impale_momentum_norm10> <float_f_impale_momentum_capped> <float_f_impale_dmg>
+
+
+###########
+- prefab: Player
+  types:
+  - poke, 1sec
+  - say, 1secstart
+  command: s <par1>
+  poke:
+  - self: true
+    parameter: 1sec <float_$forward_speed>
+    delay: 0.5  

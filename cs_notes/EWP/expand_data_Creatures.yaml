@@ -1,0 +1,680 @@
+##############################################################
+# Savheim Creature AI - data
+##############################################################
+- name: d_empty_data_creatures
+  ints:
+  - HasFields, 1
+
+- name: tamed_creatures
+  ints:
+  - tamed, 1
+
+- name: not_tamed_creatures
+  ints:
+  - tamed, 0
+
+- name: allied_group_data
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  strings:
+  - Humanoid.m_group, allied_group_tag
+
+- name: canswim
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+
+- name: deaf_canswim
+  ints:
+  - HasFields, 1
+  - HasFieldsMonsterAI, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_canSwim, 1
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+- name: d_sfx_scout_yell_idle
+  floats:
+  - ZSFX.m_minPitch, 1.6
+  - ZSFX.m_maxPitch, 1.8
+
+- name: d_sfx_scout_yell_screech
+  floats:
+  - ZSFX.m_minPitch, 0.8
+  - ZSFX.m_maxPitch, 0.9
+
+- name: greenroots_heal_pitch_1
+  floats:
+  - ZSFX.m_minPitch, 1.1
+  - ZSFX.m_maxPitch, 1.3
+
+- name: greenroots_heal_pitch_2
+  floats:
+  - ZSFX.m_minPitch, 1.4
+  - ZSFX.m_maxPitch, 1.6
+
+- name: greenroots_heal_pitch_3
+  floats:
+  - ZSFX.m_minPitch, 1.7
+  - ZSFX.m_maxPitch, 1.9
+
+- name: d_no_stagger
+  ints:
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_canSwim, 1
+  - Humanoid.m_staggerWhenBlocked, 0
+
+- name: d_ulv_howl_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.65
+  - ZSFX.m_maxPitch, 0.75
+
+- name: d_sfx_silent_creatures
+  ints:
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+
+- name: d_zero_health_creatures
+  floats:
+  - health, 0
+
+- name: d_fx_remove_early
+  ints:
+  - i_fx_remove_early, 1
+
+- name: d_wood_destroyed_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 3
+
+- name: d_sfx_queen_crunch_pitch
+  floats:
+  - ZSFX.m_minPitch, 0.5
+  - ZSFX.m_maxPitch, 0.7
+
+- name: d_sfx_queen_scream_pitch
+  floats:
+  - ZSFX.m_minPitch, 2
+  - ZSFX.m_maxPitch, 2.5
+
+####################################
+# Creature AI extra attacks
+- name: dw_second_attack_cd0
+  ints:
+  - dw_second_attack_cd, 0
+
+- name: dw_second_attack_cd1
+  ints:
+  - dw_second_attack_cd, 1
+
+####################################
+# Bosses
+- name: d_eikthyr_ai
+  floats:
+  - Humanoid.m_runSpeed, 9                       # 8
+  - Humanoid.m_turnSpeed, 130                    # 100
+  - Humanoid.m_runTurnSpeed, 130                 # 100
+  - MonsterAI.m_circleTargetInterval, 9          # 0
+  - MonsterAI.m_circleTargetDuration, 4          # 15
+  - MonsterAI.m_circleTargetDistance, 12         # 15
+  - MonsterAI.m_randomCircleInterval, 0          # 4
+  - MonsterAI.m_randomMoveInterval, 0            # 10
+  - MonsterAI.m_randomMoveRange, 0               # 20
+  - MonsterAI.m_minAttackInterval, 1             # 2
+
+- name: d_bonemass_ai
+  floats:
+  - Humanoid.m_runSpeed, 6                       # 4
+  - Humanoid.m_turnSpeed, 120                    # 60
+  - Humanoid.m_runTurnSpeed, 120                 # 100
+
+- name: d_bonemass_ycalc
+  floats:
+  - f_y_diff, <sub_<y>_<par1>>
+
+- valueGroup: vBonemassElevQuotes
+  values:
+  - <#3FDF3F>Face me… in thaa muck… ye ssslippery foolsss!
+  - <#3FDF3F>Come… down… an' tasste the rot… of your doomsss, cowardsss!
+  - <#3FDF3F>Ye dare… hide above me? Come… prove your worth… in thaa mire!
+  - <#3FDF3F>Come… down…! Ssslither in the filth… like wormsss you are!
+  - <#3FDF3F>I… AM… thaa sswwaaamp! There… issss no… essscape!
+  - <#3FDF3F>You… call this… a fight? Come… sssink into thaa ssswamp… an' sssuffer!
+  - <#3FDF3F>Run… climb… but below issss… where you'll… ROT!
+  - <#3FDF3F>Hiding… won't… ssaaave you. Fight… meee in thaa sslluuudge!
+
+- name: TentaRootMover
+  floats:
+  - Humanoid.m_runSpeed, 1                       # 0
+
+- name: d_moder_ai
+  floats:
+  - Humanoid.m_runSpeed, 9                       # 6
+  - Humanoid.m_turnSpeed, 90                     # 60
+  - Humanoid.m_runTurnSpeed, 120                 # 80
+  - Humanoid.m_flyTurnSpeed, 120                 # 80
+  - Humanoid.m_flyFastSpeed, 30                  # 20
+
+- name: d_ulv_wakeup
+  floats:
+  - MonsterAI.m_wakeupRange, 20
+
+- valueGroup: vModerIceBlockerDmgRnd
+  values:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+
+- name: d_force_toward_calc_creatures
+  floats:
+  - f_force_x, <sub_<par1>_<x>>
+  - f_force_z, <sub_<par2>_<z>>
+
+- name: d_force_away_calc_creatures
+  floats:
+  - f_force_x, <sub_<x>_<par1>>
+  - f_force_z, <sub_<z>_<par2>>
+
+- name: d_yagluth_ai
+  floats:
+  - Humanoid.m_runSpeed, 6                       # 4
+  - Humanoid.m_turnSpeed, 120                    # 50
+  - Humanoid.m_runTurnSpeed, 120                 # 50
+
+- name: d_yagluth_add_fire
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_staggerWhenBlocked, 0             # 1
+  hashes:
+  - ShoulderItem, CapeFeather
+  - LeftItem, CWS_Sword_10_SH
+  - LegItem, ArmorFenringLegs
+  floats:
+  - Humanoid.m_runSpeed, 2.5                     # 4
+  - RandomSkillFactor, 2                         # 1
+  - max_health, 300
+  - health, 301
+  - MonsterAI.m_hearRange, 100                   # 30
+  strings:
+  - Humanoid.m_name, Blazing Wight
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000
+
+- name: d_yagluth_add_frost
+  ints:
+  - seed, -2003399168     # empty left hand, to be replaced by Ice Staff
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, Cape_Eitr_SH
+  - LegItem, ArmorFenringLegs
+  - LeftItem, StaffIceShards
+  floats:
+  - Humanoid.m_runSpeed, 2.5                     # 4
+  - RandomSkillFactor, 2                         # 1
+  - max_health, 300
+  - health, 301
+  - MonsterAI.m_hearRange, 100                   # 30
+  strings:
+  - Humanoid.m_name, Frigid Wight
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000
+
+- name: d_yagluth_add_nature
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, BMR_SeekerCape
+  - LegItem, ArmorFenringLegs
+  - LeftItem, StaffGreenRoots
+  floats:
+  - Humanoid.m_runSpeed, 2.5                     # 4
+  - RandomSkillFactor, 3                         # 1
+  - max_health, 300
+  - health, 301
+  - MonsterAI.m_hearRange, 100                   # 30
+  strings:
+  - Humanoid.m_name, Verdant Wight
+  vecs:
+  - CharacterDrop.m_spawnOffset, 0,0,10000
+
+- name: d_yagluth_boon_ttl_fire_start
+  ints:
+  - i_yagluth_boon_ttl_fire, 1
+
+- name: d_yagluth_boon_ttl_fire_end
+  ints:
+  - i_yagluth_boon_ttl_fire, 0
+
+- name: d_yagluth_boon_ttl_frost_start
+  ints:
+  - i_yagluth_boon_ttl_frost, 1
+
+- name: d_yagluth_boon_ttl_frost_end
+  ints:
+  - i_yagluth_boon_ttl_frost, 0
+
+- name: d_yagluth_boon_ttl_nature_start
+  ints:
+  - i_yagluth_boon_ttl_nature, 1
+
+- name: d_yagluth_boon_ttl_nature_end
+  ints:
+  - i_yagluth_boon_ttl_nature, 0
+
+- name: d_queen_ai
+  floats:
+  - Humanoid.m_turnSpeed, 120                    # 50
+  - RandomSkillFactor, 0.9                       # 1
+
+- name: d_queen_normal_damage
+  floats:
+  - RandomSkillFactor, 0.9                       # 1  MAKE THIS MATCH d_queen_ai!
+
+- name: d_queen_lower_damage
+  floats:
+  - RandomSkillFactor, 0.5                       # 1
+
+- name: d_fader_ai
+  floats:
+  - Humanoid.m_runSpeed, 10                      # 8
+  - Humanoid.m_turnSpeed, 180                    # 120
+  - Humanoid.m_runTurnSpeed, 150                 # 120
+
+####################################
+# Monster Clothes!
+- name: clothes_skeleton
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, <none>, skeleton_sword, skeleton_sword, Torch, KnifeCopper
+
+- name: clothes_skeleton_icestaff
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, <none>, <none>, CapeDeerHide, BMR_TatteredCape
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, skeleton_sword, Torch, KnifeCopper, StaffIceShards
+
+- name: clothes_skeleton_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, CapeTrollHideRed_SH
+  - LegItem, <none>, <none>, <none>, ArmorWolfLegs, ArmorFenringLegs
+  - LeftItem, skeleton_sword, Torch, StaffIceShards
+
+- name: clothes_skeleton_vanilla_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, CapeAsksvinRed_SH
+  - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
+  - LeftItem, skeleton_sword2, Lantern, StaffIceShards, StaffGreenRoots
+
+- name: clothes_skeleton_poison
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
+  - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
+  - LeftItem, <none>, CWS_Round_Shield_6, CWS_Round_Shield_6, Lantern, StaffGreenRoots_T3
+
+- name: clothes_skeleton_hildir
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - ShoulderItem, Cape_Fire_SH
+  - LegItem, ArmorPaddedGreaves
+  - LeftItem, CWS_Round_Shield_5_SH
+  floats:
+  - Humanoid.m_runSpeed, 5                       # 4
+
+- name: clothes_draugr
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, draugr_axe
+
+- name: clothes_draugr_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, draugr_axe, ShieldBoneTower
+  - HelmetItem, VDS_AtlantianCrown
+
+- name: clothes_draugr_elite
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, ShieldIronTower, ShieldKnight
+
+- name: clothes_goblin
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, GoblinSword, CWS_Dagger_2, Torch, StaffFireballMini, StaffGreenRoots_T5
+
+- name: clothes_goblin_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, GoblinSword, StaffFireballMini, StaffGreenRoots_T5
+  - ChestItem, GoblinLegband_SH
+  - LegItem, GoblinLoin_SH
+  - UtilityItem, GoblinShoulders_SH
+
+- name: clothes_goblin_brute
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, <none>, GoblinBrute_RageAttack
+
+- name: clothes_dverger_mage_allied_group
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  hashes:
+  - LeftItem, <none>, <none>, <none>, StaffSkeleton
+  strings:
+  - Humanoid.m_group, allied_group_tag
+
+- name: clothes_charred_mage
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, StaffShield, StaffGreenRoots
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+- name: clothes_charred_twitcher
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LegItem, <none>, <none>, Charred_HipCloth
+  - ChestItem, <none>, <none>, Charred_MageCloths
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+- name: clothes_charred_melee
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, <none>, <none>, SwordNiedhogg, ShieldFlametalTower
+  floats:
+  - MonsterAI.m_hearRange, 100
+
+- name: clothes_charred_melee_bmr_summon
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - HasFieldsMonsterAI, 1
+  hashes:
+  - LeftItem, <none>, SwordNiedhogg, ShieldFlametalTower
+  - LegItem, Charred_HipCloth_SH
+  - ChestItem, Charred_Breastplate_SH
+  - HelmetItem, Charred_Helmet_SH
+
+####################################
+# Creature modifications based on gear
+- name: gear_staff_skeleton
+  hashes:
+  - LeftItem, StaffSkeleton
+
+- name: gear_staff_shield
+  hashes:
+  - LeftItem, StaffShield
+
+- name: gear_staff_ice_shards
+  hashes:
+  - LeftItem, StaffIceShards
+
+- name: gear_staff_fireball
+  hashes:
+  - LeftItem, StaffFireball, StaffFireballMini
+
+- name: gear_shield
+  hashes:
+  - LeftItem, ShieldWood, ShieldBronzeBuckler, ShieldBanded, CWS_Round_Shield_6, CWS_Round_Shield_6_SH, ShieldIronTower, ShieldFlametalTower, ShieldKnight, ShieldBoneTower
+
+- name: gear_dual_wield
+  hashes:
+  - LeftItem, skeleton_sword, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
+
+- name: gear_dual_wield_cd0
+  hashes:
+  - LeftItem, skeleton_sword, KnifeCopper, draugr_axe, GoblinSword, CWS_Dagger_2, CWS_Dagger_2_SH, GoblinBrute_RageAttack, SwordNiedhogg, skeleton_sword2
+  ints:
+  - dw_second_attack_cd, 0
+
+- name: gear_alert_left
+  hashes:
+  - LeftItem, Torch, Lantern
+
+- name: gear_alert_left_not_tamed
+  ints:
+  - tamed, 0
+  hashes:
+  - LeftItem, Torch, Lantern
+
+- name: gear_alert_right
+  hashes:
+  - LeftItem, <none>   # prioritize tank AI if holding a shield (goblins with right hand torches)
+  - RightItem, Torch
+
+- name: gear_alert_right_not_tamed
+  ints:
+  - tamed, 0
+  hashes:
+  - LeftItem, <none>   # prioritize tank AI if holding a shield (goblins with right hand torches)
+  - RightItem, Torch
+
+- name: gear_staffgreenroots_t3
+  ints:
+  - i_greenroots_healer_cooldown, 0
+  hashes:
+  - LeftItem, StaffGreenRoots_T3
+
+- name: gear_staffgreenroots_t5
+  ints:
+  - i_greenroots_healer_cooldown, 0
+  hashes:
+  - LeftItem, StaffGreenRoots_T5
+
+- name: gear_staffgreenroots_t7
+  ints:
+  - i_greenroots_healer_cooldown, 0
+  hashes:
+  - LeftItem, StaffGreenRoots
+
+- name: gear_staffgreenroots_any
+  hashes:
+  - LeftItem, StaffGreenRoots_T3, StaffGreenRoots_T5, StaffGreenRoots
+
+- valueGroup: vGreenRootsTickRnd
+  values:
+  - 0
+  - 1
+  - 2
+
+- name: d_greenroots_heal_tick_cnt_rst
+  ints:
+  - i_greenroots_heal_tick_cnt, 1
+
+- name: d_greenroots_heal_inactive
+  ints:
+  - i_greenroots_heal_tick_cnt, 0, 7
+
+- name: d_greenroots_heal_tick_cnt_inc
+  ints:
+  - i_greenroots_heal_tick_cnt, <add_<int_i_greenroots_heal_tick_cnt>_1>
+
+- name: d_greenroots_healer_cooldown_set
+  ints:
+  - i_greenroots_healer_cooldown, 1
+
+- name: d_greenroots_healer_cooldown_rst
+  ints:
+  - i_greenroots_healer_cooldown, 0
+
+- name: gear_bow
+  hashes:
+  - LeftItem, skeleton_bow, draugr_bow
+
+- name: gear_goblin_spear
+  hashes:
+  - RightItem, GoblinSpear
+
+#######################################################################
+# Gear Buffs
+# enemies with shields have more health, don't circle, and move slower.
+- name: gear_shield_buff
+  ints:
+  # whether to circle while waiting for minAttackInterval
+  - MonsterAI.m_circulateWhileCharging, 0
+  floats:
+  - max_health, <mult_<float_max_health>_1.5>
+  - health, <mult_<float_max_health>_1.501>
+  # how long to circle.  goblin default = 6?
+  - MonsterAI.m_circleTargetDuration, 0
+  # how often to circle.  goblin default = 8?
+  - MonsterAI.m_circleTargetInterval, 1E30
+  # minimum time between attacks.  lowering doesn't seem to do anything, but higher slows attacks down.
+#  - MonsterAI.m_minAttackInterval, 3.3
+  # movespeed while running (combat).  default for goblin seems to be 5?
+  - Humanoid.m_runSpeed, <sub_<float_Humanoid.m_runSpeed>_0.5>
+
+# enemes with second weapon do more damage, run faster, and and only do quick, tight circles that tend to put them behind the player.
+- name: gear_dw_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 0
+  - Humanoid.m_staggerWhenBlocked, 0
+  floats:
+  - RandomSkillFactor, <mult_<par1>_1.1>
+  - MonsterAI.m_circleTargetDuration, 3
+  - MonsterAI.m_randomCircleInterval, 4
+  - MonsterAI.m_circleTargetDistance, 3
+  - Humanoid.m_runSpeed, <add_<float_Humanoid.m_runSpeed>_1>
+
+# enemies with torch or lantern will agro from further away
+- name: gear_alert_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_alertRange, <mult_<float_MonsterAI.m_alertRange>_2>
+  - MonsterAI.m_viewRange, <mult_<float_MonsterAI.m_viewRange>_2>
+  - MonsterAI.m_minAttackInterval, 5
+  - Humanoid.m_runSpeed, <add_<float_Humanoid.m_runSpeed>_1>
+
+# enemies with healing staff run around and heal
+- name: gear_greenroots_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_minAttackInterval, 7
+  - Humanoid.m_runSpeed, <add_<float_Humanoid.m_runSpeed>_1>
+
+# enemies with a nova staff circle a lot, so they're not constantly nova'ing
+- name: gear_staff_novas_buff
+  ints:
+  - MonsterAI.m_circulateWhileCharging, 1
+  floats:
+  - MonsterAI.m_minAttackInterval, 9
+
+####################################
+# MagicRevamp Summon Tweaks
+# d_bmr_summon_tweaks(max_health, RandomSkillFactor)
+# MagicRevamp scales RandomSkillFactor by a factor of (1,21) at Blood Magic skill levels (1, 100), which is broken.
+# Scale damage by (0.3, 0.5, 0.7) at Blood Magic skill levels (1, 50, 100)
+# Scale health by (1, 1.5, 2) at Blood Magic skill levels (1, 50, 100)
+- name: d_bmr_summon_tweaks
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  floats:
+  - RandomSkillFactor, <add_<mult_0.02_<par2>>_0.28>
+  - max_health, <add_<mult_<mult_<par1>_0.05>_<par2>>_<mult_<par1>_0.95>>
+  - health, <add_<mult_<mult_<par1>_0.05>_<par2>>_<mult_<par1>_0.951>>
+
+####################################
+# Vanilla Summon Tweaks
+# d_bmr_summon_tweaks_vanilla(max_health, RandomSkillFactor)
+# Base game scales RandomSkillFactor by a factor of (1,2,3) at Blood Magic skill levels (1, 50, 100).
+# Scale damage by (0.75, 1, 1.25) at Blood Magic skill levels (1, 50, 100) (more powerful skeletons!)
+# Scale health by (0.5, 0.75, 1) at Blood Magic skill levels (1, 50, 100) (default 400 too high)
+- name: d_bmr_summon_tweaks_vanilla
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  floats:
+  - RandomSkillFactor, <add_<mult_0.25_<par2>>_0.5>
+  - max_health, <add_<mult_<mult_<par1>_0.25>_<par2>>_<mult_<par1>_0.25>>
+  - health, <add_<mult_<mult_<par1>_0.25>_<par2>>_<mult_<par1>_0.251>>
+
+####################################
+# Serpents
+- name: d_serpent_tweaks
+  ints:
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - Humanoid.m_staggerWhenBlocked, 0             # 1
+  floats:
+  - Humanoid.m_swimSpeed, 15                     # 10
+  - Humanoid.m_swimTurnSpeed, 150                # 100
+  - MonsterAI.m_circleTargetDistance, 15         # 10
+  - MonsterAI.m_randomMoveInterval, 3            # 2

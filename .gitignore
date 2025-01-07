@@ -28,8 +28,6 @@ BepInEx/config/wackyDatabase-BulkYML
 BepInEx/config/wackyDatabase-BulkYML_vanilla
 BepInEx/config/wackyDatabase-BulkYML_savheimIII
 BepInEx/config/com.maxsch.valheim.vnei.favourites.txt
-BepInEx/config/cron_last.yaml
-BepInEx/config/cron_track.yaml
 BepInEx/config/server_devcommands.cfg
 BepInEx/config/_shudnal.ConfigurationManager.cfg
 BepInEx/config/shudnal.ConfigurationManager.cfg

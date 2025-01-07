@@ -269,7 +269,6 @@
   - HelmetDrake
   - HelmetFenring
   - BMR_PolarWolfHood
-  - VDS_AtlantianCrown
   - ArmorWolfChest
   - BMR_PolarWolfChest
   - ArmorWolfLegs
@@ -335,6 +334,7 @@
   - ArmorIronLegs
   - ArmorRootLegs
   - BMR_SorcerersTrousers
+  - VDS_AtlantianCrown
   - CapeOil
 - enchant_prefab:
     prefab: kg_EnchantScroll_Weapon_D

@@ -1,0 +1,360 @@
+join:
+  - command: setkey skillreductionrate 0
+    log: false
+  - commands: 
+    - setkey welcomemessage
+    - setkey triggerdayandyear
+
+timezone: UTC
+# Jobs checked every minute.
+interval: 60
+jobs: 
+
+# Manages Friday Downtime
+  - commands:
+    - s Path of Magic is closing now. It will reopen 6 30 on Saturday morning in UTC
+    - setkey blockplayersjoining
+    schedule: "30 6 * * FRI"
+  - command: s Friday downtime in 1 minutes. See you on Saturday!
+    schedule: "29 6 * * FRI"
+  - command: s Friday downtime in 2 minutes. See you on Saturday!
+    schedule: "28 6 * * FRI"
+  - command: s Friday downtime in 3 minutes. See you on Saturday!
+    schedule: "27 6 * * FRI"
+  - command: s Friday downtime in 4 minutes. See you on Saturday!
+    schedule: "26 6 * * FRI"
+  - command: s Friday downtime in 5 minutes. Log out soon.
+    schedule: "25 6 * * FRI"
+  - command: s Friday downtime in thirty minutes.
+    schedule: "00 6 * * FRI"
+  - command: s Friday downtime in one hour.
+    schedule: "30 5 * * FRI"
+  - command: s Friday downtime in two hours.
+    schedule: "30 4 * * FRI"
+  - command: s 🚪🚪🚪✨ Path of Magic opens in 23 hours
+    schedule: "31 8 * * FRI"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 22 hours
+    schedule: "31 9 * * FRI"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 21 hours
+    schedule: "31 10 * * FRI"
+  - command: s ✨🚪🚪🚪 Path of Magic opens in 20 hours
+    schedule: "31 11 * * FRI"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 19 hours
+    schedule: "31 12 * * FRI"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 18 hours
+    schedule: "31 13 * * FRI"
+  - command: s 🚪🚪🚪✨ Path of Magic opens in 17 hours
+    schedule: "31 14 * * FRI"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 16 hours
+    schedule: "31 15 * * FRI"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 15 hours
+    schedule: "31 16 * * FRI"
+  - command: s ✨🚪🚪🚪 Path of Magic opens in 14 hours
+    schedule: "31 17 * * FRI"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 13 hours
+    schedule: "31 18 * * FRI"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 12 hours
+    schedule: "31 19 * * FRI"
+  - command: s 🚪🚪🚪✨ Path of Magic opens in 11 hours
+    schedule: "31 20 * * FRI"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 10 hours
+    schedule: "31 21 * * FRI"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 8 hours
+    schedule: "31 22 * * FRI"
+  - command: s ✨🚪🚪🚪 Path of Magic opens in 7 hours
+    schedule: "31 23 * * FRI"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 6 hours
+    schedule: "31 0 * * SAT"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 5 hours
+    schedule: "31 1 * * SAT"
+  - command: s 🚪🚪🚪✨ Path of Magic opens in 4 hours
+    schedule: "31 2 * * SAT"
+  - command: s 🚪🚪✨🚪 Path of Magic opens in 3 hours
+    schedule: "31 3 * * SAT"
+  - command: s 🚪✨🚪🚪 Path of Magic opens in 2 hours
+    schedule: "31 4 * * SAT"
+  - command: s ✨🚪🚪🚪 Path of Magic opens in 1 hour
+    schedule: "31 5 * * SAT"
+  - commands:
+    - s ✨✨✨✨ Path of Magic is now open 
+    - removekey blockplayersjoining
+    schedule: "31 6 * * SAT"
+  - commands:
+    - removekey blockplayersjoining
+    schedule: "35 6 * * SAT"
+  - commands:
+    - setkey resetnotifiertrigger
+    schedule: "*/57 * * * *"
+
+# Manages year passing
+  - commands:
+    - time_set_day 1
+    - setkey yearspassedtrigger
+    - s 🌞 Another year has passed 🌞
+    - objects_remove Beech_Sapling,Birch_Sapling,FirTree_Sapling,Oak_Sapling,PineTree_Sapling,sapling_barley,sapling_carrot,sapling_flax,sapling_jotunpuffs,sapling_magecap,sapling_onion,sapling_seedcarrot,sapling_seedonion,sapling_seedturnip,sapling_turnip,VineAsh_sapling,VineGreen_sapling force start
+    useGameTime: true
+    schedule: "* * * 1 1 *"
+# Two just in case one misses the year
+  - commands:
+    - time_set_day 1
+    - setkey yearspassedtrigger
+    - s 🌞 Another year has passed 🌞
+    - objects_remove Beech_Sapling,Birch_Sapling,FirTree_Sapling,Oak_Sapling,PineTree_Sapling,sapling_barley,sapling_carrot,sapling_flax,sapling_jotunpuffs,sapling_magecap,sapling_onion,sapling_seedcarrot,sapling_seedonion,sapling_seedturnip,sapling_turnip,VineAsh_sapling,VineGreen_sapling force start
+    useGameTime: true
+    schedule: "0 23 31 12 *"
+
+# Monday locations reset
+  - command: locations_reset CharredTowerRuins2,CharredTowerRuins3,FortressRuins,AshlandRuins,CharredRuins2,CharredRuins3,CharredRuins1,CharredRuins4,MorgenHole1,MorgenHole2,MorgenHole3,VoltureNest,CharredStone_Spawner,WoodFarm1,TrollCave02,Greydwarf_camp1,StoneHenge1,StoneHenge2,StoneHenge3,StoneHenge4,StoneHenge5,StoneHenge6,Grave1,InfestedTree01,Ruin3,StoneTower1,StoneTower3,WoodHouse1,WoodHouse2,WoodHouse3,WoodHouse4,WoodHouse5,WoodHouse6,WoodHouse7,WoodHouse8,WoodHouse9,WoodHouse10,WoodHouse11,WoodHouse12,WoodHouse13,StoneTowerRuins03,StoneTowerRuins07,StoneTowerRuins08,StoneTowerRuins09,StoneTowerRuins10,ShipSetting01,MountainGrave01,Dolmen01,Dolmen02,Dolmen03,StoneCircle,ShipWreck01,ShipWreck02,ShipWreck03,ShipWreck04 start
+    schedule: "30 8 * * MON"
+  - command: s Beginning Monday Soft Resets
+    schedule: "30 8 * * MON"
+  - command: locations_reset LeviathanLava,PlaceofMystery1,PlaceofMystery2,PlaceofMystery3,CharredTowerRuins1_dvergr,Hildir_cave,Hildir_crypt,Hildir_plainsfortress,Crypt2,GoblinCamp2,Crypt3,Crypt4,Mistlands_DvergrTownEntrance1,Mistlands_DvergrTownEntrance2,MountainCave02,SunkenCrypt4,Mistlands_Giant2,Mistlands_Giant1,TarPit1,TarPit2,TarPit3,WoodVillage1,Mistlands_RoadPost1,Mistlands_GuardTower1_ruined_new2,Mistlands_GuardTower3_new,Mistlands_GuardTower3_ruined_new,Mistlands_GuardTower1_new,Mistlands_GuardTower2_new,Mistlands_GuardTower1_ruined_new,Mistlands_Lighthouse1_new,Mistlands_Excavation1,Mistlands_Excavation2,Mistlands_Excavation3,Mistlands_Harbour1 safeZones=0 start
+    schedule: "0 9 * * MON"
+  - command: s Beginning Monday Hard Resets
+    schedule: "0 9 * * MON"
+  - command: setkey disableMessagesResets
+    schedule: "29 9 * * MON"
+  - command: objects_remove Spawner_Draugr_Ranged,GraveStone_Broken_CharredTwitcherNest,GraveStone_CharredTwitcherNest,Volture,Spawner_Volture,Spawner_Morgen,Spawner_Morgen_wakeup,Spawner_FallenValkyrie,Spawner_Hatchling,Ashlands_Wall_2x2_cornerR,Ashlands_Wall_2x2_cornerR_top,Ashlands_Wall_2x2_edge,Ashlands_Wall_2x2_edge2,Ashlands_Wall_2x2_top,Ashlands_Fortress_Wall_Pillar,Ashlands_Fortress_Wall_Pillar_base,Ashlands_Fortress_Wall_PillarTop,Ashlands_Fortress_Wall_PillarTopStone,Ashlands_Fortress_Wall_Spikes,piece_Charred_Balista,Ashlands_Wall_2x2,Spawner_CharredCross,Ashland_Stair,Ashlands_Fortress_Gate,Ashlands_Fortress_Gate_Door,CharredBanner1,CharredBanner2,CharredBanner3,piece_Charred_Balista,Spawner_Charred,Spawner_Charred_Archer,Spawner_Charred_balista,Spawner_Charred_Mage biomes=AshLands,Mountain,Mistlands,Swamp force start
+    schedule: "30 9 * * MON"
+  - commands:
+    - s Destroying Fortresses
+    - setkey disableMessagesResets
+    schedule: "30 9 * * MON"
+  - command: locations_reset CharredFortress force start
+    schedule: "32 9 * * MON"
+  - command: s Respawning Fortresses
+    schedule: "32 9 * * MON"
+  - command: removekey disableMessagesResets
+    schedule: "40 9 * * MON"
+  - command: s Cleaning World...
+    schedule: "3 10 * * MON"
+  - command: world_clean
+    schedule: "3 10 * * MON"
+  - command: s Reset Routine Complete. Reset in 10 minutes.
+    schedule: "20 10 * * MON"
+  - command: s World Restart in 5 minutes
+    schedule: "25 10 * * MON"
+  - command: s World Restart in 4 minutes
+    schedule: "26 10 * * MON"
+  - command: s World Restart in 3 minutes
+    schedule: "27 10 * * MON"
+  - command: s World Restart in 2 minutes
+    schedule: "28 10 * * MON"
+  - command: s World Restart in 1 minute !
+    schedule: "29 10 * * MON"
+  - command: s World Restarting !
+    schedule: "30 10 * * MON"
+
+# Thursday location resets
+  - command: locations_reset CharredTowerRuins2,CharredTowerRuins3,FortressRuins,AshlandRuins,CharredRuins2,CharredRuins3,CharredRuins1,CharredRuins4,MorgenHole1,MorgenHole2,MorgenHole3,VoltureNest,CharredStone_Spawner,WoodFarm1,TrollCave02,Greydwarf_camp1,StoneHenge1,StoneHenge2,StoneHenge3,StoneHenge4,StoneHenge5,StoneHenge6,Grave1,InfestedTree01,Ruin3,StoneTower1,StoneTower3,WoodHouse1,WoodHouse2,WoodHouse3,WoodHouse4,WoodHouse5,WoodHouse6,WoodHouse7,WoodHouse8,WoodHouse9,WoodHouse10,WoodHouse11,WoodHouse12,WoodHouse13,StoneTowerRuins03,StoneTowerRuins07,StoneTowerRuins08,StoneTowerRuins09,StoneTowerRuins10,ShipSetting01,MountainGrave01,Dolmen01,Dolmen02,Dolmen03,StoneCircle,ShipWreck01,ShipWreck02,ShipWreck03,ShipWreck04 start
+    schedule: "30 8 * * THU"
+  - command: s Beginning Thursday Soft Resets
+    schedule: "30 8 * * THU"
+  - command: locations_reset LeviathanLava,PlaceofMystery1,PlaceofMystery2,PlaceofMystery3,CharredTowerRuins1_dvergr,Hildir_cave,Hildir_crypt,Hildir_plainsfortress,Crypt2,GoblinCamp2,Crypt3,Crypt4,Mistlands_DvergrTownEntrance1,Mistlands_DvergrTownEntrance2,MountainCave02,SunkenCrypt4,Mistlands_Giant2,Mistlands_Giant1,TarPit1,TarPit2,TarPit3,WoodVillage1,Mistlands_RoadPost1,Mistlands_GuardTower1_ruined_new2,Mistlands_GuardTower3_new,Mistlands_GuardTower3_ruined_new,Mistlands_GuardTower1_new,Mistlands_GuardTower2_new,Mistlands_GuardTower1_ruined_new,Mistlands_Lighthouse1_new,Mistlands_Excavation1,Mistlands_Excavation2,Mistlands_Excavation3,Mistlands_Harbour1 safeZones=0 start
+    schedule: "0 9 * * THU"
+  - command: setkey disableMessagesResets
+    schedule: "29 9 * * THU"
+  - command: s Beginning Thursday Hard Resets
+    schedule: "0 9 * * THU"
+  - command: objects_remove Spawner_Draugr_Ranged,GraveStone_Broken_CharredTwitcherNest,GraveStone_CharredTwitcherNest,Volture,Spawner_Volture,Spawner_Morgen,Spawner_Morgen_wakeup,Spawner_FallenValkyrie,Spawner_Hatchling,Ashlands_Wall_2x2_cornerR,Ashlands_Wall_2x2_cornerR_top,Ashlands_Wall_2x2_edge,Ashlands_Wall_2x2_edge2,Ashlands_Wall_2x2_top,Ashlands_Fortress_Wall_Pillar,Ashlands_Fortress_Wall_Pillar_base,Ashlands_Fortress_Wall_PillarTop,Ashlands_Fortress_Wall_PillarTopStone,Ashlands_Fortress_Wall_Spikes,piece_Charred_Balista,Ashlands_Wall_2x2,Spawner_CharredCross,Ashland_Stair,Ashlands_Fortress_Gate,Ashlands_Fortress_Gate_Door,CharredBanner1,CharredBanner2,CharredBanner3,piece_Charred_Balista,Spawner_Charred,Spawner_Charred_Archer,Spawner_Charred_balista,Spawner_Charred_Mage biomes=AshLands,Mountain,Mistlands,Swamp force start
+    schedule: "30 9 * * THU"
+  - commands: 
+    - s Destroying Fortresses
+    - setkey disableMessagesResets
+    schedule: "30 9 * * THU"
+  - command: locations_reset CharredFortress force start
+    schedule: "32 9 * * THU"
+  - command: s Respawning Fortresses
+    schedule: "32 9 * * THU"
+  - command: removekey disableMessagesResets
+    schedule: "40 9 * * THU"
+  - command: s Cleaning World...
+    schedule: "3 10 * * THU"
+  - command: world_clean
+    schedule: "3 10 * * THU"
+  - command: s Reset Routine Complete. Reset in 10 minutes.
+    schedule: "20 10 * * THU"
+  - command: s World Restart in 5 minutes
+    schedule: "25 10 * * THU"
+  - command: s World Restart in 4 minutes
+    schedule: "26 10 * * THU"
+  - command: s World Restart in 3 minutes
+    schedule: "27 10 * * THU"
+  - command: s World Restart in 2 minutes
+    schedule: "28 10 * * THU"
+  - command: s World Restart in 1 minute !
+    schedule: "29 10 * * THU"
+  - command: s World Restarting !
+    schedule: "30 10 * * THU"
+
+# Saves every 11 minutes instead of every 30
+  - command: save
+    schedule: "*/11 * * * *"
+
+# Removes night spawns by rmoving queen yagluth and fader keys every 6 hours
+  - command: removekey defeated_queen
+    schedule: "0 */6 * * *"
+  - command: removekey defeated_goblinking
+    schedule: "0 */6 * * *"
+  - command: removekey defeated_fader
+    schedule: "0 */6 * * *"
+
+# Clears tree logs that are loose
+  - command: s Loki clears loose logs
+    schedule: "0 11 * * THU"
+  - command: objects_remove beech_log,beech_log_half,Birch_log,Birch_log_half,FirTree_log,FirTree_log_half,Oak_log,Oak_log_half,PineTree_log,PineTree_log_half,SwampTree1_log,yggashoot_log,yggashoot_log_half,AshlandsTreeLog2,AshlandsTreeLog1,AshlandsTreeLogHalf1,AshlandsTreeLogHalf2 force start
+    schedule: "0 11 * * THU"
+
+# Culls various mobs to prevent overspawning
+  - command: s Loki culls Bonemaw Drakes and Deer
+    schedule: "10 11 * * THU"
+  - command: objects_remove Hatchling,BonemawSerpent,Deer
+    schedule: "10 11 * * THU"
+  - command: objects_remove Wraith,MistArea,MistArea_edge,MistArea_small biomes=Meadows,Ocean,BlackForest,Plains,Swamp,Mountain,AshLands
+    schedule: "20 11 * * THU"
+
+# Removes all loose items on floor once a week
+  - command: s Floor item removal will run in two hours
+    schedule: "30 17 * * TUE"
+  - command: s Floor item removal will run in one hour
+    schedule: "30 18 * * TUE"
+  - command: s Floor item removal will run in 10 minutes
+    schedule: "20 19 * * TUE"
+  - command: s Floor item removal will run in 5 minutes
+    schedule: "25 19 * * TUE"
+  - command: s Floor item removal in 2 minutes
+    schedule: "28 19 * * TUE"
+  - command: s All loose items will be removed in 1 minute
+    schedule: "30 19 * * TUE"
+  - command: s Loose items removed
+    schedule: "30 19 * * TUE"
+  - command: objects_remove * type=ItemDrop biomes=AshLands,BlackForest,DeepNorth,Meadows,Mistlands,Mountain,Plains,Swamp
+    schedule: "30 19 * * TUE"
+
+# Tuesday metal respawn A
+  - command: vegetation_reset MineRock_Tin,MineRock_Obsidian,rock4_copper,giant_skull,giant_brain maxDistance=4600 safeZones=0 start
+    schedule: "30 7 * * TUE"
+  - command: s Copper Brains and more respawning... be wary of lag
+    schedule: "29 7 * * TUE"
+  - command: s Cleaning World...
+    schedule: "3 10 * * TUE"
+  - command: world_clean
+    schedule: "3 10 * * TUE"
+  - command: s Copper Brains reset routine complete. World restart in 10 minutes.
+    schedule: "20 10 * * TUE"
+  - command: s World Restart in 5 minutes
+    schedule: "25 10 * * TUE"
+  - command: s World Restart in 4 minutes
+    schedule: "26 10 * * TUE"
+  - command: s World Restart in 3 minutes
+    schedule: "27 10 * * TUE"
+  - command: s World Restart in 2 minutes
+    schedule: "28 10 * * TUE"
+  - command: s World Restart in 1 minute
+    schedule: "29 10 * * TUE"
+  - command: s World Restarting !
+    schedule: "30 10 * * TUE"
+
+# Wednesday metal respawn B
+  - command: vegetation_reset silvervein terrain=20 maxDistance=4600 safeZones=0 start
+    schedule: "30 7 * * WED"
+  - command: s Silver respawning and filling... be wary of lag
+    schedule: "29 7 * * WED"
+  - command: s Cleaning World...
+    schedule: "45 9 * * WED"
+  - command: world_clean
+    schedule: "45 9 * * WED"
+  - command: s Silver Reset Routine Complete. Reset in 10 minutes
+    schedule: "20 10 * * WED"
+  - command: s World Restart in 5 minutes
+    schedule: "25 10 * * WED"
+  - command: s World Restart in 4 minutes
+    schedule: "26 10 * * WED"
+  - command: s World Restart in 3 minutes
+    schedule: "27 10 * * WED"
+  - command: s World Restart in 2 minutes
+    schedule: "28 10 * * WED"
+  - command: s World Restart in 1 minutes
+    schedule: "29 10 * * WED"
+  - command: s World Restarting !
+    schedule: "30 10 * * WED"
+
+# PM Restart Routines separated by day to avoid Friday
+# Monday
+  - command: s Sunday Night Restart in 5 Minutes. Log out soon.
+    schedule: "1 23 * * MON"
+  - command: s Sunday Night Restart in 4 Minutes. Log out.
+    schedule: "2 23 * * MON"
+  - command: s Sunday Night Restart in 3 Minutes. You should be logged out already.
+    schedule: "3 23 * * MON"
+  - command: s Sunday Night Restart in 2 Minutes. You should be logged out already.
+    schedule: "4 23 * * MON"
+  - command: s Sunday Night Restart in 1 Minute. You should be logged out already.
+    schedule: "5 23 * * MON"
+  - command: s World Restarting !
+    schedule: "6 23 * * MON"
+# Tuesday
+  - command: s Sunday Night Restart in 5 Minutes. Log out soon.
+    schedule: "1 23 * * TUE"
+  - command: s Sunday Night Restart in 4 Minutes. Log out.
+    schedule: "2 23 * * TUE"
+  - command: s Sunday Night Restart in 3 Minutes. You should be logged out already.
+    schedule: "3 23 * * TUE"
+  - command: s Sunday Night Restart in 2 Minutes. You should be logged out already.
+    schedule: "4 23 * * TUE"
+  - command: s Sunday Night Restart in 1 Minute. You should be logged out already.
+    schedule: "5 23 * * TUE"
+  - command: s World Restarting !
+    schedule: "6 23 * * TUE"
+# Wednesday
+  - command: s Sunday Night Restart in 5 Minutes. Log out soon.
+    schedule: "1 23 * * WED"
+  - command: s Sunday Night Restart in 4 Minutes. Log out.
+    schedule: "2 23 * * WED"
+  - command: s Sunday Night Restart in 3 Minutes. You should be logged out already.
+    schedule: "3 23 * * WED"
+  - command: s Sunday Night Restart in 2 Minutes. You should be logged out already.
+    schedule: "4 23 * * WED"
+  - command: s Sunday Night Restart in 1 Minute. You should be logged out already.
+    schedule: "5 23 * * WED"
+  - command: s World Restarting !
+    schedule: "6 23 * * WED"
+# Thursday
+  - command: s Sunday Night Restart in 5 Minutes. Log out soon.
+    schedule: "1 23 * * THU"
+  - command: s Sunday Night Restart in 4 Minutes. Log out.
+    schedule: "2 23 * * THU"
+  - command: s Sunday Night Restart in 3 Minutes. You should be logged out already.
+    schedule: "3 23 * * THU"
+  - command: s Sunday Night Restart in 2 Minutes. You should be logged out already.
+    schedule: "4 23 * * THU"
+  - command: s Sunday Night Restart in 1 Minute. You should be logged out already.
+    schedule: "5 23 * * THU"
+  - command: s World Restarting !
+    schedule: "6 23 * * THU"
+# Saturday
+  - command: s Sunday Night Restart in 5 Minutes. Log out soon.
+    schedule: "1 23 * * SAT"
+  - command: s Sunday Night Restart in 4 Minutes. Log out.
+    schedule: "2 23 * * SAT"
+  - command: s Sunday Night Restart in 3 Minutes. You should be logged out already.
+    schedule: "3 23 * * SAT"
+  - command: s Sunday Night Restart in 2 Minutes. You should be logged out already.
+    schedule: "4 23 * * SAT"
+  - command: s Sunday Night Restart in 1 Minute. You should be logged out already.
+    schedule: "5 23 * * SAT"
+  - command: s World Restarting !
+    schedule: "6 23 * * SAT"
+# Sunday
+  - command: s Sunday Night Restart in 5 Minutes. Log out soon.
+    schedule: "1 23 * * SUN"
+  - command: s Sunday Night Restart in 4 Minutes. Log out.
+    schedule: "2 23 * * SUN"
+  - command: s Sunday Night Restart in 3 Minutes. You should be logged out already.
+    schedule: "3 23 * * SUN"
+  - command: s Sunday Night Restart in 2 Minutes. You should be logged out already.
+    schedule: "4 23 * * SUN"
+  - command: s Sunday Night Restart in 1 Minute. You should be logged out already.
+    schedule: "5 23 * * SUN"
+  - command: s World Restarting !
+    schedule: "6 23 * * SUN"

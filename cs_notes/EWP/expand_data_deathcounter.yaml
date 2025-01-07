@@ -1,0 +1,81 @@
+# deathcounter data
+
+# Values Revenant
+# revenant value determines that monster is spawned when player permadies.
+- value: revenant, Ghost
+# revenant equipment if skeleton/ghost
+- value: revenanthelmet, HelmetOdin
+- value: revenantchest, ArmorMageChest_Ashlands
+- value: revenantleg, ArmorMageLegs_Ashlands
+- value: revenantshoulder, CapeFeather
+#revenant level and health values, maxhealth pulls from health and adds 0.1 to it.
+- value: revenantlevel, 3
+- value: revenanthealth, 1000
+- value: revenantmaxhealth, <add_<revenanthealth>_0.1>
+#revenant random skill factor/its multiplier for dmg/knockback force
+- value: rsf, 2
+# Revenant data, pulls values from revenant values.
+- name: revenant
+  ints:
+  - isrevenant, 1
+  - level, <revenantlevel>
+  strings:
+  - Humanoid.m_name, <string_playerName>'s Revenant
+  - PlayerIDsave, <long_playerID>
+  hashes:
+  - HelmetItem, <revenanthelmet>
+  - ChestItem, <revenantchest>
+  - LegItem, <revenantleg>
+  - ShoulderItem, <revenantshoulder>
+  floats:
+  - health, <revenanthealth>
+  - max_health, <revenantmaxhealth>
+  - RandomSkillFactor, <rsf>
+
+# Checks for if monster is revenant, used for type: destroy filter.
+- name: revenantcheck
+  ints:
+  - isrevenant, 1
+
+# Values Messages
+
+- value: revenantspawnmessage, <pname> has kicked the bucket permanently and a Revenant has taken over their soul!
+
+- value: revenantdeathmessage, <string_Humanoid.m_name>'s soul has been freed! They have another shot at life now!
+
+# Spawning for first time % no deaths yet
+- value: firstmessage, <#FF0000><size=100>Fresh meat? You have 6 lives to go!
+
+- value: nodeathsmessage, <#FFFF00><size=100>You haven't died yet!
+
+
+# Death messages
+- value: deathmessage1, <#FF0000><size=100>Wasted!<br> Death count 1
+- value: deathmessage2, <#FF0000><size=100>Wasted!<br> Death count 2
+- value: deathmessage3, <#FF0000><size=100>Wasted!<br> Death count 3
+- value: deathmessage4, <#FF0000><size=100>Wasted!<br> Death count 4
+- value: deathmessage5, <#FF0000><size=100>Wasted!<br> Death count 5 <br><size=100>FINAL LIFE!
+
+# Death message shouts
+- value: deathmessageshout1, Wasted! Death count 1
+- value: deathmessageshout2, Wasted! Death count 2
+- value: deathmessageshout3, Wasted! Death count 3
+- value: deathmessageshout4, Wasted! Death count 4
+- value: deathmessageshout5, Wasted! Death count 5, final life for <pname>!
+
+
+# Revive messages
+- value: rezmessage1, <#FF0000><size=100>Death count 1, 5 lives to go!
+- value: rezmessage2, <#FF0000><size=100>Death count 2, 4 lives to go!
+- value: rezmessage3, <#FF0000><size=100>Death count 3, 3 lives to go!
+- value: rezmessage4, <#FF0000><size=100>Death count 4, 2 lives to go!
+- value: rezmessage5, <#FF0000><size=100>Death count 5 <br><size=100>FINAL LIFE!
+
+# Permadeath message when joining server but characters ID matches permadeath globalkey.
+- value: permadeathmessage, <size=100><#FF0000>YOU ARE ALREADY DEAD!
+
+
+# Filter check for the Death Count Reduction Sacrifice Altar.
+- name: deathcounteraltarcheck
+  strings:
+  - OfferingBowl.m_name, Death Count Sacrifice Altar

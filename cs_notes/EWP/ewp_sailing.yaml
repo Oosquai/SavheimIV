@@ -1,0 +1,172 @@
+# Raaka:
+# Do data dump on ship
+# Sailforcefactor and sailforceoffset
+# Offset can balance a fast ship If its trying to dive, lol
+#
+# Also look at config-share/Ship Flying Buttons
+# fields_and_lists/Ship
+
+###################
+# from Cryoshakespeare
+#Increases the minimum velocity required for ships and carts to take impact damage, generally just above the maximum speed achievable by the rudder. Also significantly stabilises carts on boats, allowing you to walk them on larger boats and sail around without constant damage ticks.
+#
+#Velocities:
+#2 m/s - Raft
+#3 m/s - Karve
+#4 m/s - Cart, Longship, Drakkar
+#
+#As a side effect, boats can generally beach themselves at rudder speeds without taking damage. No changes are made to damage from enemies, ship base health, or movement speeds.
+### Minimum velocity breakpoints for ships and carts taking impact damage
+
+# Raft
+- name: minVelocity2
+  floats:
+  - ImpactEffect.m_minVelocity, 2
+# Karve
+- name: minVelocity3
+  floats:
+  - ImpactEffect.m_minVelocity, 3
+# Cart, Longship, Drakkar
+- name: minVelocity4
+  floats:
+  - ImpactEffect.m_minVelocity, 4
+
+
+### Higher minimum velocity for ships and carts taking impact damage, ships won't generally take damage when moving with just the rudder, and you can walk carts along the larger boats
+
+# Raft: minimum velocity 2
+- prefab: Raft
+  type: create
+  data: minVelocity2
+  spawn: Neck, 0,0,-0.5, 0,0,0
+  poke:
+  - prefab: Neck
+    parameter: tempDelete
+    limit: 1
+    maxDistance: 1
+# Karve: minimum velocity 3
+- prefab: Karve
+  type: create
+  data: minVelocity3
+  spawn: Neck, 0,0,-0.5, 0,0,0
+  poke:
+  - prefab: Neck
+    parameter: tempDelete
+    limit: 1
+    maxDistance: 1
+# Cart: minimum velocity 4
+- prefab: Cart
+  type: create
+  data: minVelocity4
+# Longship: minimum velocity 4
+- prefab: VikingShip
+  type: create
+  data: minVelocity4
+  spawn: Neck, 0,0,-0.5, 0,0,0
+  poke:
+  - prefab: Neck
+    parameter: tempDelete
+    limit: 1
+    maxDistance: 1
+# Drakkar: minimum velocity 4
+- prefab: VikingShip_Ashlands
+  type: create
+  data: minVelocity4
+  spawn: Neck, 0,0,-0.5, 0,0,0
+  poke:
+  - prefab: Neck
+    parameter: tempDelete
+    limit: 1
+    maxDistance: 1
+# Utility Neck: spawned to re-enable physics for the modified ships
+- prefab: Neck
+  type: poke, tempDelete
+  remove: true
+  removeDelay: 0.1
+
+
+##################################
+# JPValheim
+Heres some of the stuff I used for the quest reward ships. There are 4 quest reward ships in Pom. They all grant players rested bonuses when they do stuff near the ship.
+Fishing raft (invincible, constant moder)
+Tune (Very fast very high health karve)
+Knarr (Longship with 350 slots of storage)
+Barden (Invincible Drakkar)
+
+Theres also a self defense that spawns mistiles when players arent nearby and the boat takes damage
+
+# Tune Quest
+- name: tuneKarve
+  ints:
+  - Container.m_height, 4
+  - HasFieldsImpactEffect, 1
+  - Container.m_width, 4
+  - HasFieldsShip, 1
+  - HasFields, 1
+  - HasFieldsContainer, 1
+  - addedDefaultItems, 1
+  - InUse, 0
+  - HasFieldsShipControlls, 1
+  - HasFieldsWearNTear, 1
+  floats:
+  - Ship.m_force, 1
+  - Ship.m_sailForceFactor, 0.225
+  - rudder, 1
+  - ImpactEffect.m_minVelocity, 3
+  - WearNTear.m_health, 50000
+  - health, 50000
+  - Ship.m_dampingSideway, 0.2
+  strings:
+  - Container.m_name, <br>Tune Hull<br><br>
+  - ShipControlls.m_hoverText, Steer Tune
+
+- name: tuneKarveCheck
+  strings:
+  - Container.m_name, <br>Tune Hull<br><br> 
+Heres some other fun ship stuff for you
+# Tune grants players wisplights Wind Run Rested and Wisplight 
+
+- prefab: Player
+  type: state, *
+  objects:
+  - Karve, 20, whipKarveCheck
+  poke:
+  - prefab: Player
+    limit: 4
+    maxDistance: 20
+    parameter: grantWhipKarveBuffs
+    delay: 0.2
+
+- prefab: Player
+  type: poke, grantWhipKarveBuffs
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Rested
+    delay: 0.4
+  - name: RPC_Damage
+    1: hit, status=Demister
+    delay: 0.6
+  - name: RPC_Damage
+    1: hit, status=WindRun
+    delay: 0.7
+
+# Karve self defense spawns mistiles when getting damaged
+
+- prefab: sfx_ship_impact
+  type: create
+  objects:
+  - Karve, 10, whipKarveCheck
+  bannedObjects:
+  - Player, 10
+  spawnDelay: 0.1
+  spawns:
+  - fx_Fader_Roar_Projectile_Hit, 0,6,8
+  - Mistile, 0,6,8, 0,0,0, isTamed, 1
+  triggerRules: true
+  weight: 0.3
+
+DATA
+
+- name: isTamed
+  ints:
+  - tamed, 1
