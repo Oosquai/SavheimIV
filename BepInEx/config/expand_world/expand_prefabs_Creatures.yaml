@@ -5,22 +5,14 @@
 - prefab: Goblin, SeekerBrood, Tick, Seeker, Charred_Melee, Charred_Archer, Charred_Twitcher, Charred_Mage
   type: create
   biomes: Meadows
+  weight: 1E30
   remove: true
 
 # Fix Ashlands?  (Thanks, Raaka!)
 - prefab: MonsterAI
   biomes: AshLands
   type: create
-  weight: 1
   data: deaf_canswim
-  fallback: true
-
-##############################################################
-# All mobs can swim (Raaka) - UNTESTED.  Also, blocks other type: create, like clothing, hence weight: 0.1
-- prefab: creature
-  type: create
-  weight: 0.1
-  data: canswim
   fallback: true
 
 ###############################################################
@@ -37,6 +29,10 @@
 - prefab: Greydwarf_Elite, Troll, Abomination, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen, Charred_Archer, Surtling
   type: create
   data: d_no_stagger
+  injectData: true
+  poke:
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 ###############################################################
 # Serpents swim faster and don't stagger when blocked
@@ -54,6 +50,12 @@
   type: create
   biomes: Meadows
   data: d_meadows_ruins_bats
+
+# keep swamp bats at level 1
+- prefab: Bat
+  type: create
+  biomes: Swamp
+  data: d_swamp_bats
 
 - prefab: Skeleton
   type: create
@@ -80,13 +82,15 @@
 - prefab: Skeleton
   type: create
   weight: 1E30
-  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   data: clothes_skeleton_icestaff
   poke:
   - prefab: <prefab>
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: Skeleton_Poison
   type: create
@@ -97,6 +101,8 @@
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: Skeleton_Hildir
   type: create
@@ -104,6 +110,11 @@
   - GoblinKing, 100
   weight: 1E30
   data: clothes_skeleton_hildir
+  injectData: true    # need this in order to poke to adjust hp.  runspeed still gets applied when injected.
+  poke:
+  - self: true
+    delay: 0.1      # delay so other data applies first
+    parameter: p_dn_boss_hp_adjustments
 
 - prefab: Draugr
   type: create
@@ -124,6 +135,8 @@
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: Goblin
   type: create
@@ -138,6 +151,8 @@
   - prefab: <prefab>
     parameter: gear_buff_goblin_spear_no_stagger
     delay: 0.2
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: GoblinBrute
   type: create
@@ -148,6 +163,8 @@
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: DvergerMage
   type: create
@@ -164,12 +181,17 @@
     parameter: gear_buff 1
     delay: 0.1
     maxDistance: 0.1
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: Charred_Mage
   type: create
   biomes: Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   weight: 1E30
   data: clothes_charred_mage
+  poke:
+  - self: true
+    parameter: p_creature_level_up_calc_dn
 
 - prefab: Charred_Twitcher
   type: create
@@ -459,6 +481,7 @@
 
 - prefab: creature
   type: state, *
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   filter: gear_alert_left_not_tamed
   objects:
   - Player, 15
@@ -469,6 +492,7 @@
 
 - prefab: creature
   type: state, *
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   filter: gear_alert_right_not_tamed
   objects:
   - Player, 15
@@ -485,7 +509,7 @@
   - vfx_blocked, 0,0,1.3
   - vfx_perfectblock, 0,0,1.3
   - sfx_fallenvalkyrie_idle, 0,0,0, 0,0,0, d_sfx_scout_yell_idle
-  - sfx_boar_alerted, 0,0,0, 0,0,0, d_sfx_scout_yell_screech
+  - sfx_skeleton_big_alerted, 0,0,0, 0,0,0, d_sfx_scout_yell_screech
   poke:
   - self: true
     delay: <par1>
@@ -494,6 +518,12 @@
     limit: 1
     maxDistance: 30
     parameter: p_player_noise
+  - prefab: sfx_skeleton_big_alerted
+    data: d_sfx_scout_yell_screech
+    delay: 1
+    limit: 1
+    maxDistance: 1
+    parameter: p_alert_yell_truncate
 
 - prefab: Player
   type: poke, p_player_noise
@@ -501,6 +531,10 @@
   objectRpc:
   - name: RPC_AddNoise
     1: float, <float_noise>*1.5
+
+- prefab: sfx_skeleton_big_alerted
+  type: poke, p_alert_yell_truncate
+  remove: true
 
 ###############################################################
 # Dverger must be grouped with Dverger Mages so they don't agro the skeletons mages can summon.
@@ -1011,6 +1045,15 @@
   - gd_king, 100
   data: TentaRootMover
 
+# Elder - Fewer Tentaroots in melee range, to make melee more viable
+- prefab: TentaRoot
+  type: create
+  weight: 4
+  filter: not_tamed_creatures
+  objects:
+  - gd_king, 12
+  remove: true
+
 # Elder - tentaroots slime nearby players when they attack.  (Thanks, Raaka!)
 - prefab: TentaRoot
   type: state, attack
@@ -1045,14 +1088,6 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, status=Slimed dodge=true block=true
-
-# Elder - Fewer Tentaroots in melee range, to make melee more viable
-- prefab: TentaRoot
-  type: create
-  weight: 3
-  objects:
-  - gd_king, 12
-  remove: true
 
 # Elder - extra attacks
 - prefab: gd_king
@@ -1099,6 +1134,7 @@
 # Bonemass - faster move and turn speed
 - prefab: Bonemass
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: d_bonemass_ai
 
 # Bonemass - extra attacks
@@ -1316,6 +1352,7 @@
 # Moder - faster movement when grounded
 - prefab: Dragon
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: d_moder_ai
 
 # Moder - Ice Blocks have a chance to spawn an Ulv if not destroyed.  more players makes them pop sooner.
@@ -1550,6 +1587,7 @@
 # move and turn faster
 - prefab: GoblinKing
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: d_yagluth_ai
 
 # Melee AOE shortened so a successful dodge lets you stay in melee
@@ -2042,6 +2080,7 @@
 # faster turn speed
 - prefab: SeekerQueen
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: d_queen_ai
 
 # Queen - extra attacks.  slash1: upper-left leg.  slash2:upper-right leg.  slash3: lower-left leg.
@@ -2282,6 +2321,7 @@
 # faster
 - prefab: Fader
   type: create
+  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
   data: d_fader_ai
 
 # Fader - extra attacks.  attack_clawr, attack_clawl, attack_bite, attack_spin

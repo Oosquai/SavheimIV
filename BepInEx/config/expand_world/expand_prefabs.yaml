@@ -482,6 +482,7 @@
 # Starting Stones
 - prefab: BossStone_DragonQueen
   type: create
+  weight: 1E30
   spawns:
   - portal_wood, 1.5,1,-0.2, 0,0,0, d_portal_sacrificial_stones
   - fireplacems, -1.5,1.5,0, 0,0,0, d_perma_piece, true
@@ -489,24 +490,28 @@
 # Haldor
 - prefab: Haldor
   type: create
+  weight: 1E30
   spawns:
   - portal_wood, 1.9,6.8,-0.2, 0,0,0, d_portal_haldor
 
 # Hildir
 - prefab: Hildir
   type: create
+  weight: 1E30
   spawns:
   - portal_wood, 3.3,12.6,-0.2, 209,0,0, d_portal_hildir
 
 # Bog Witch
 - prefab: BogWitch
   type: create
+  weight: 1E30
   spawns:
   - portal_wood, -0.5,-2.5,-0.2, 163,0,0, d_portal_bogwitch
 
 # JC Gacha location - use delayed poke & objects filter to limit to middle chest, since 5 chests spawn.
 - prefab: Jewelcrafting_Chest
   type: create
+  weight: 1E30
   poke:
   - prefab: Jewelcrafting_Chest
     maxDistance: 1
@@ -987,7 +992,7 @@
   - prefab: VikingShip_Ashlands
     maxDistance: <vPlayerRangeDrakkar>
     limit: 1
-    parameter: p_ship_speed_calc_players <vPlayerRangeDrakkar> <vSailForceFactorDrakkar> 5
+    parameter: p_ship_speed_calc_players <vPlayerRangeDrakkar> <vSailForceFactorDrakkar> 4
 
 # Determine number of players within range and not in water, which usually means they're on the ship.
 # 1 player

@@ -1,5 +1,6 @@
 ########################################################################
 # Savheim Deep North - prefabs
+# REQUIRES - expand_prefabs_Creatures
 ########################################################################
 # Killing a deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
@@ -52,25 +53,32 @@
   spawns:
   - vfx_spawn_small, 0,3,2
   - deer_ragdoll, 0,3,2, dn_deer_ragdoll, false
-  command: wait 1000;broadcast center <#00AFAF><string_playerName> has slain an innocent deer in the tranquil Deep North.
+  - sfx_reaper_idle
+  - stone_marker_savheim_dn, 0,3,-3
+  command: wait 3000;broadcast center <#00AFAF><string_playerName> has slain an innocent deer in the tranquil Deep North.
   poke:
   - prefab: Player     # poke all nearby players as accomplices, including self
     data: d_player_roguelite_off
     maxDistance: 100
-    delay: 1
+    delay: 3
     parameter: p_deer_murder
   - prefab: deer_ragdoll     # start deer_ragdoll cleanup loop from here so only poked once
     data: dn_deer_ragdoll
     maxDistance: 5
     limit: 1
-    delay: 1
+    delay: 3
     parameter: p_dnrl_cleanup_deer_ragdoll_loop
   - prefab: deer_ragdoll
     data: dn_deer_ragdoll
     maxDistance: 5
     limit: 1
-    delay: 9
+    delay: 10
     parameter: p_dnrl_deer_ragdoll_fx_loop
+  - prefab: stone_marker_savheim_dn
+    maxDistance: 5
+    limit: 1
+    delay: 8
+    parameter: p_dnrl_weather
 
 - prefab: deer_ragdoll
   type: poke, p_dnrl_deer_ragdoll_fx_loop
@@ -85,6 +93,10 @@
   type: poke, p_dnrl_deer_ragdoll_fx
   spawn: vfx_MeadBzerker, 0,0,-1.5
 
+- prefab: stone_marker_savheim_dn
+  type: poke, p_dnrl_weather
+  data: d_dnrl_weather_ashlands_seastorm
+
 ####################################
 # ... you (or your friend) murdered the deer.  :(
 - prefab: Player
@@ -94,7 +106,7 @@
   data: d_player_roguelite_start   # clear all state for a fresh start
   injectData: true
   spawns:
-  - sfx_reaper_idle, 0,0,0, 0,0,0, d_empty_data_dn, 0
+  - sfx_ghost_idle, 0,0,0, 0,0,0, d_empty_data_dn, 0
   - sfx_gdking_idle, 0,0,0, 0,0,0, d_empty_data_dn, 3
   - sfx_gdking_scream, 0,0,0, 0,0,0, d_empty_data_dn, 6.5
   - sfx_dragon_scream, 0,0,0, 0,0,0, d_empty_data_dn, 6.5
@@ -111,7 +123,7 @@
     delay: 6.5
   poke:  
   - self: true               # initial entry into spawner loop
-    delay: <randi_9_14>      # randomized startup delay so different players have uniquely timed spawn loops
+    delay: <randi_12_16>     # randomized startup delay so different players have uniquely timed spawn loops
     parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - self: true               # start player cleanup loop
     delay: 1                 # wait for data
@@ -133,73 +145,160 @@
 ###################
   poke:
   - self: true                                   # separate process for spawns to check max creatures
-    parameter: dn_roguelite_spawn_trash <par1> <par2> <par3> <par4>
+    parameter: dn_roguelite_spawn_trash_calc <par1> <par2> <par3> <par4>
   - prefab: Player                               # self-looping spawners!
     maxDistance: 1                               # cannot use self: true, else data not checked
     limit: 1
-    delay: <randi_15_20>                         ### LOOP TIMER
+    delay: <randi_20_25>                         ### LOOP TIMER
     data: d_player_roguelite_tier_0              # Player is at Roguelite tier X --> Choose mob set.
     parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_20_25>                         ### LOOP TIMER
+    delay: <randi_25_30>                         ### LOOP TIMER
     data: d_player_roguelite_tier_1
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_25_30>                         ### LOOP TIMER
+    delay: <randi_30_35>                         ### LOOP TIMER
     data: d_player_roguelite_tier_2
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_30_35>                         ### LOOP TIMER
+    delay: <randi_35_40>                         ### LOOP TIMER
     data: d_player_roguelite_tier_3
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT2> <dnTrashMobsT3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_35_40>                         ### LOOP TIMER
+    delay: <randi_40_45>                         ### LOOP TIMER
     data: d_player_roguelite_tier_4
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT2> <dnTrashMobsT3> <dnTrashMobsT4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_40_45>                         ### LOOP TIMER
+    delay: <randi_45_50>                         ### LOOP TIMER
     data: d_player_roguelite_tier_5
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT2> <dnTrashMobsT3> <dnTrashMobsT4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_45_50>                         ### LOOP TIMER
+    delay: <randi_50_55>                         ### LOOP TIMER
     data: d_player_roguelite_tier_6
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT3> <dnTrashMobsT4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_50_55>                         ### LOOP TIMER
+    delay: <randi_55_60>                         ### LOOP TIMER
     data: d_player_roguelite_tier_7
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT5v3> <dnTrashMobsT4v2>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_55_60>                         ### LOOP TIMER
+    delay: <randi_60_65>                         ### LOOP TIMER
     data: d_player_roguelite_tier_8
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT5v3> <dnTrashMobsT4v2>
 
+# check number of nearby players to determine max trash mobs.  ignore whether dnrl flagged, to suppress cheesing.
+# 1 player
 - prefab: Player
-  type: poke, dn_roguelite_spawn_trash
+  type: poke, dn_roguelite_spawn_trash_calc
+  objects:
+  - Player, 100
+  objectsLimit: 0            # seems to not count self when poking player!
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 1
+  poke:
+  - self: true
+    parameter: dn_roguelite_spawn_trash_1p <par1> <par2> <par3> <par4>
+
+# 2 players
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_calc
+  objects:
+  - Player, 100
+  objectsLimit: 1
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 2
+  poke:
+  - self: true
+    parameter: dn_roguelite_spawn_trash_2p <par1> <par2> <par3> <par4>
+
+# 3 players
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_calc
+  objects:
+  - Player, 100
+  objectsLimit: 2
+  bannedObjects:
+  - Player, 100
+  bannedObjectsLimit: 3
+  poke:
+  - self: true
+    parameter: dn_roguelite_spawn_trash_3p <par1> <par2> <par3> <par4>
+
+# 4+ players
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_calc
+  objects:
+  - Player, 100
+  objectsLimit: 3
+  poke:
+  - self: true
+    parameter: dn_roguelite_spawn_trash_4p <par1> <par2> <par3> <par4>
+
+# spawn trash, capped per players nearby
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_1p
+  biomes: DeepNorth
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
-  bannedObjectsLimit: 16                         ### TRASH SPAWN CAP
+  bannedObjectsLimit: 5                          ### TRASH SPAWN CAP - 1 player
   spawns:
   - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
   - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
   - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
   - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
 
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_2p
+  biomes: DeepNorth
+  bannedObjects:
+  - creature, 100, dn_mob_group_roguelite
+  bannedObjectsLimit: 9                          ### TRASH SPAWN CAP - 2 players
+  spawns:
+  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
+  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
+  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
+  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
+
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_3p
+  biomes: DeepNorth
+  bannedObjects:
+  - creature, 100, dn_mob_group_roguelite
+  bannedObjectsLimit: 13                         ### TRASH SPAWN CAP - 3 players
+  spawns:
+  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
+  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
+  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
+  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
+
+- prefab: Player
+  type: poke, dn_roguelite_spawn_trash_4p
+  biomes: DeepNorth
+  bannedObjects:
+  - creature, 100, dn_mob_group_roguelite
+  bannedObjectsLimit: 17                         ### TRASH SPAWN CAP - 4+ players
+  spawns:
+  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
+  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
+  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
+  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
 ####################################
 ########################################################################
 
@@ -335,7 +434,7 @@
   - int, i_player_roguelite_on, 1
   - int, i_player_roguelite_subtier, 7;9999
   - int, i_player_roguelite_boss_kills, 4;999  # Killed one additional boss (likely one other still up) ...
-  - int, i_player_roguelite_tier, 7;999        # ... so max tier is unlocked
+  - int, i_player_roguelite_tier, 6;999        # ... so max tier is unlocked
   data: d_player_roguelite_tier_inc
   injectData: true
 
@@ -369,7 +468,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - gd_king, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - gd_king, 0,12,snap, 180,0,0, dn_mob_group_roguelite_elder, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -383,7 +482,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Bonemass, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Bonemass, 0,12,snap, 180,0,0, dn_mob_group_roguelite_bonemass, 0, true
 
 ### Tier 2 - Brenna
 - prefab: Player
@@ -413,7 +512,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Dragon, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Dragon, 0,12,snap, 180,0,0, dn_mob_group_roguelite_moder, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -427,7 +526,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - GoblinKing, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - GoblinKing, 0,12,snap, 180,0,0, dn_mob_group_roguelite_yagluth, 0, true
 
 ### Tier 4 - Geirrhafa
 - prefab: Player
@@ -457,7 +556,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - SeekerQueen, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - SeekerQueen, 0,12,snap, 180,0,0, dn_mob_group_roguelite_queen, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -471,7 +570,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Fader, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Fader, 0,12,snap, 180,0,0, dn_mob_group_roguelite_fader, 0, true
 
 ### Tier 6 - Elder, Bonemass, or Moder
 - prefab: Player
@@ -485,7 +584,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - gd_king, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - gd_king, 0,12,snap, 180,0,0, dn_mob_group_roguelite_elder, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -498,7 +597,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Bonemass, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Bonemass, 0,12,snap, 180,0,0, dn_mob_group_roguelite_bonemass, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -511,7 +610,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Dragon, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Dragon, 0,12,snap, 180,0,0, dn_mob_group_roguelite_moder, 0, true
 
 ### Tier 7 - Yagluth, Queen, or Fader
 - prefab: Player
@@ -525,7 +624,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - GoblinKing, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - GoblinKing, 0,12,snap, 180,0,0, dn_mob_group_roguelite_yagluth, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -538,7 +637,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - SeekerQueen, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - SeekerQueen, 0,12,snap, 180,0,0, dn_mob_group_roguelite_queen, 0, true
 
 - prefab: Player
   type: poke, p_dn_roguelite_boss_check
@@ -551,7 +650,7 @@
   data: d_player_roguelite_boss_spawns_inc     # if filters pass, prevent another spawn this tier
   injectData: true
   spawns:
-  - Fader, 0,12,snap, 180,0,0, dn_mob_group_roguelite, 0, true
+  - Fader, 0,12,snap, 180,0,0, dn_mob_group_roguelite_fader, 0, true
 
 ########################################################################
 # Loot!
@@ -953,6 +1052,9 @@
   - prefab: creature
     maxDistance: 150                    # wider range in case Fallen Valkyrie flew away at the perfect time
     parameter: p_dnrl_remove_creature
+  - prefab: stone_marker_savheim_dn
+    maxDistance: 100
+    parameter: p_dnrl_remove_items
 
 - prefab: Odin
   type: poke, p_odin_closer
@@ -1011,10 +1113,10 @@
   - Player, 100, d_player_roguelite_on
   spawn: vfx_corpse_destruction_small
   remove: true
+  removeDelay: 3                        # need this to ensure player fled triggers before player failsafe
   poke:
   - prefab: creature
     maxDistance: 150                    # wider range in case people trying to cheese by kiting - mobs will despawn
-    delay: <randf_0.3_0.8>
     parameter: p_dnrl_remove_creature
   - prefab: creature
     maxDistance: 150
@@ -1022,28 +1124,41 @@
     parameter: p_dnrl_remove_creature
   - prefab: ItemDrop
     maxDistance: 100
-    delay: <randf_0.3_0.8>
+    parameter: p_dnrl_remove_items
+  - prefab: stone_marker_savheim_dn
+    maxDistance: 100
     parameter: p_dnrl_remove_items
 
 # remove roguelite creatures
 - prefab: creature
   type: poke, p_dnrl_remove_creature
   biomes: DeepNorth
-  filter: dn_mob_group_roguelite
-  spawn: vfx_corpse_destruction_small
-  remove: true
+  filter: d_creature_roguelite
+  poke:
+  - self: true
+    delay: <randf_0.5_1.5>
+    parameter: p_dnrl_remove_random_delay
 
 # remove spawns from roguelite creatures
 - prefab: Blob, SeekerBrood, Charred_Twitcher, Tick
   type: poke, p_dnrl_remove_creature
   biomes: DeepNorth
-  spawn: vfx_corpse_destruction_small
-  remove: true
+  poke:
+  - self: true
+    delay: <randf_0.5_1.5>
+    parameter: p_dnrl_remove_random_delay
 
 # remove loose items
-- prefab: ItemDrop
+- prefab: ItemDrop, stone_marker_savheim_dn
   type: poke, p_dnrl_remove_items
   biomes: DeepNorth
+  poke:
+  - self: true
+    delay: <randf_0.5_1.5>
+    parameter: p_dnrl_remove_random_delay
+
+- prefab: creature, ItemDrop, stone_marker_savheim_dn
+  type: poke, p_dnrl_remove_random_delay
   spawn: vfx_corpse_destruction_small
   remove: true
 
@@ -1066,10 +1181,10 @@
   type: state, *
   filter: d_player_roguelite_on
   bannedObjects:
-  - deer_ragdoll, 200, dn_deer_ragdoll   # wider range so this doesn't trigger before normal Player Fled process
+  - deer_ragdoll, 150, dn_deer_ragdoll   # wider range so this doesn't trigger before normal Player Fled process
   data: d_player_roguelite_clear
   injectData: true
-  command: s DEBUG - triggered Deep North roguelite_remove_failsafe
+  command: s DEBUG - Deep North roguelite_remove_failsafe - tell Sav!
 
 ########################################################################
 # Spawn data and specific creature data
@@ -1086,33 +1201,8 @@
   biomes: DeepNorth
   data: dn_mob_group_no_loot
 
-# for Bonemass spawns
-- prefab: Skeleton
-  type: create
-  biomes: DeepNorth
-  data: clothes_skeleton_dn
-  poke:
-  - prefab: creature
-    parameter: gear_buff 1
-    delay: 0.1
-    maxDistance: 0.1
-
 ####################################
-# Eikthyr
-- prefab: Eikthyr
-  type: create
-  biomes: DeepNorth
-  poke:
-  - prefab: <prefab>
-    maxDistance: 1
-    limit: 1
-    delay: 0.1
-    parameter: p_dn_eikthyr_hp
-
-- prefab: Eikthyr
-  type: poke, p_dn_eikthyr_hp
-  data: d_dn_eikthyr_hp
-
+# Eikthyr Tweaks
 # Extra attacks to give Eikthyr damage appropriate for Deep North
 - prefab: Eikthyr
   type: state, attack1
@@ -1182,6 +1272,103 @@
   - name: RPC_Damage
     1: hit, lightning=<par2> dodge=true block=true
 
+####################################
+# Boss HP adjustments
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Fenring_Cultist_Hildir
+  type: create
+  biomes: DeepNorth
+  poke:
+  - self: true
+    delay: 0.1   # need this else they insta-die.  hp not registered yet maybe?
+    parameter: p_dn_boss_hp_adjustments
+
+- prefab: Eikthyr
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_eikthyr
+
+- prefab: gd_king
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_elder
+
+- prefab: Bonemass
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_bonemass
+
+- prefab: Dragon
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_moder
+
+- prefab: GoblinKing
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_yagluth
+
+- prefab: SeekerQueen
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_queen
+
+- prefab: Fader
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_fader
+
+- prefab: Skeleton_Hildir
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_brenna
+
+- prefab: Fenring_Cultist_Hildir
+  type: poke, p_dn_boss_hp_adjustments
+  biomes: DeepNorth
+  data: d_dn_boss_hp_geirrhafa
+
+###################################################
+# Creature level up chances
+- prefab: creature
+  type: poke, p_creature_level_up_dn
+  bannedFilters:
+  - int, CL&LC effect, 5                         # do not create never-ending splitting creatures!
+  data: d_creature_level_up_dn
+
+- prefab: creature
+  type: create
+  biomes: DeepNorth
+  fallback: true
+  poke:
+  - self: true
+    parameter: p_creature_level_up_calc_dn
+
+# Low level up chances
+- prefab: Troll, Abomination, StoneGolem, GoblinBrute, Lox, BlobTar, Seeker
+  type: poke, p_creature_level_up_calc_dn
+  biomes: DeepNorth
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_creature_level_up_dn <vLevelUp1Dn>
+
+# Medium level up chances
+- prefab: Skeleton_Poison, Greydwarf_Elite, Greydwarf_Shaman, Wraith, BlobElite, Draugr_Elite, Fenring, Fenring_Cultist, Ulv, Hatchling, Goblin, GoblinShaman
+  type: poke, p_creature_level_up_calc_dn
+  biomes: DeepNorth
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_creature_level_up_dn <vLevelUp2Dn>
+
+# High level up chances
+- prefab: Ghost, Skeleton, Bat, Surtling
+  type: poke, p_creature_level_up_calc_dn
+  biomes: DeepNorth
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_creature_level_up_dn <vLevelUp3Dn>
 
 #####################################################################
 # Other Deep North mechanics
@@ -1287,9 +1474,9 @@
 #  - prefab: deer_ragdoll
 #    maxDistance: 100
 #    parameter: p_dnrl_victory_remove_deer_ragdoll
-- prefab: Player
-  type: say, rl_stats
-  command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
+#- prefab: Player
+#  type: say, rl_stats
+#  command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
 #- prefab: Player
 #  type: say, rl_spawn
 #  spawns:

@@ -1,48 +1,47 @@
-name: VikingShip_Ashlands
+name: stone_marker_savheim_dn
 piecehammer: Hammer
-m_name: $ship_longship_ashlands
-sizeMultiplier: 1
-m_description: Sail faster with up to <color=orange>3</color> additional players on board.  This giant, Ashlands-ready ship is much faster and sturdier than others, but it can't be customized.
+m_name: $piece_stonewall1x1
+sizeMultiplier: 0.1
+m_description: ''
 customIcon: 
-clonePrefabName: 
+clonePrefabName: stone_wall_1x1
 material: 
 damagedMaterial: 
-craftingStation: $piece_workbench
-piecehammerCategory: Misc
+craftingStation: ''
+piecehammerCategory: BuildingStonecutter
 minStationLevel: 1
 amount: 1
-disabled: false
+disabled: true
 adminonly: false
 comfort: 
 groundPiece: false
 ground: false
-waterPiece: true
+waterPiece: false
 noInWater: false
 notOnFloor: false
 onlyinTeleportArea: false
 allowedInDungeons: false
-canBeRemoved: false
+canBeRemoved: true
 notOnWood: false
 wearNTearData:
-  health: 3000
+  health: 1500
   damageModifiers:
     m_blunt: Normal
     m_slash: Normal
-    m_pierce: Resistant
-    m_chop: Immune
-    m_pickaxe: Immune
-    m_fire: VeryResistant
+    m_pierce: Normal
+    m_chop: Normal
+    m_pickaxe: Weak
+    m_fire: Resistant
     m_frost: Resistant
     m_lightning: Normal
     m_poison: Immune
     m_spirit: Immune
   noRoofWear: false
-  noSupportWear: false
+  noSupportWear: true
   supports: true
   triggerPrivateArea: true
 craftingStationData: 
 cSExtensionData: 
-cSExtensionDataList: 
 contData: 
 smelterData: 
 cookingStationData: 
@@ -54,7 +53,4 @@ fireplaceData:
 teleportWorldData: 
 plantData: 
 build:
-- IronNails:100:1:True
-- CeramicPlate:30:1:True
-- FineWood:50:1:True
-- YggdrasilWood:25:1:True
+- Stone:3:1:False

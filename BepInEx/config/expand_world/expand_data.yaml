@@ -190,7 +190,7 @@
 - value: vPlayerRangeKarve, 6                    ### 5, 6, 12, 19 extend just barely beyond prow of each ship
 - value: vPlayerRangeLongship, 12
 - value: vPlayerRangeDrakkar, 19
-- value: vShipSpeedPercentPerPlayer, 0.25        ### 0.25 means 25% speed increase per extra player in ship
+- value: vShipSpeedPercentPerPlayer, 0.3         ### 0.3 means 30% speed increase per extra player in ship
 
 - name: d_not_in_water
   ints:

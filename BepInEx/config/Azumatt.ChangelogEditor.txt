@@ -4,7 +4,15 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/6/25</color>
+     0\  Savheim IV Patch Notes, 1/8/25</color>
+- Sailing speed now increases by 30% per player.
+- Sailing speed increases now capped at 4 players.
+- Improved sfx for creatures with scout AI.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 1/6/25
 - Removed Hover Stats mod for performance impacts.
 - This also removes squished comfort info in Hammer menu.
 - Reworked two of Eikthyr's unique weapons.
@@ -13,9 +21,6 @@
 - Slightly increased chance to bleed with claws.
 - Wolf Pelts can now make Leather Scraps at a Workbench.
 - Significantly reduced Essence cost of spells.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 1/4/25
 - TotinoTunes is now updated!  Thanks, Kry!
