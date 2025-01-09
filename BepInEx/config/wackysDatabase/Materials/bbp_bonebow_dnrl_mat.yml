@@ -1,0 +1,27 @@
+name: bbp_bonebow_dnrl_mat
+original: bbp_PP_Standard_Material
+overwrite: false
+changes:
+  colors: {}
+  floats:
+    _Color: 0
+    _Hue: 0
+    _Saturation: 0
+    _Value: 0
+    _Cutoff: 0.5
+    _Glossiness: 0.068
+    _UseGlossmap: 0
+    _Metallic: 0.5
+    _MetalGloss: 0
+    _MetalColor: 0
+    _EmissionColor: 0
+    _BumpScale: 1
+    _TwoSidedNormals: 0
+    _UseStyles: 0
+    _Style: 0
+    _AddRain: 0
+    _Cull: 2
+  textures:
+    _MainTex:
+      name: bbp_PP_Color_Palette
+      filterMode: Bilinear

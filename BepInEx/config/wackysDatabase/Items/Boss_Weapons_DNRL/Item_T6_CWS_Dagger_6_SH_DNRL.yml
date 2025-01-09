@@ -1,11 +1,11 @@
-name: CWS_Atgeir_2_SH
-m_weight: 2.5
-m_name: Celestial Atgeir
-m_description: An atgeir made from a mysterious, otherworldly material that supports an additional socket.
-clonePrefabName: CWS_Atgeir_2
+name: CWS_Dagger_6_SH_DNRL
+m_weight: 0.3
+m_name: Awakened Skelfang
+m_description: Criticals and backstabs from this demonic blade strike staggering fear into the hearts of those close enough to witness the victim's fate.
+clonePrefabName: CWS_Dagger_6
 mockName: 
 customIcon: 
-material: Weapon_t8_atgeir
+material: Weapon_t8_dnrl 
 materials: 
 customVisual: 
 snapshotRotation: 
@@ -14,22 +14,22 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Horizontal
-  Attack_Animation: atgeir_attack
+  Attack_Animation: knife_stab
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.15
-  m_attackStamina: 20
+  Custom_AttackSpeed: 1.2
+  m_attackStamina: 16
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.7
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 0.5
   RecoilMultiplier: 0
-  AttackRange: 3.2
-  AttackHeight: 1
+  AttackRange: 1.8
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -41,25 +41,18 @@ Primary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 20
-  Attack_Ray_Width: 0.3
+  Attack_Angle: 60
+  Attack_Ray_Width: 0.2
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
-  Last_Chain_Dmg_Multiplier: 2
-  Reset_Chain_If_hit: None
-  SpawnOnHit: 
-  SpawnOnHit_Chance: 0
+  Last_Chain_Dmg_Multiplier: 1
   Attack_status_effect: 
-  Attack_status_effect_chance: 
-  Raise_Skill_Amount: 1
-  Skill_Hit_Type: Character
-  Special_Hit_Skill: None
-  Special_Hit_Type: None
+  Attack_status_effect_chance: 0
   Attack_Projectile: 
-  Projectile_Vel: 20
-  Projectile_Accuraccy: 0
+  Projectile_Vel: 10
+  Projectile_Accuraccy: 10
   Projectiles: 1
   Skill_Accuracy: false
   Launch_Angle: 0
@@ -79,22 +72,22 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: atgeir_secondary
+  Attack_Animation: knife_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1
-  m_attackStamina: 40
+  Custom_AttackSpeed: 1.5
+  m_attackStamina: 32
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
-  DmgMultiplier: 1
-  ForceMultiplier: 160
+  DmgMultiplier: 3
+  ForceMultiplier: 4
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 3.5
-  AttackHeight: 1
+  AttackRange: 1.8
+  AttackHeight: 0.5
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -106,15 +99,22 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 360
+  Attack_Angle: 45
   Attack_Ray_Width: 0.3
-  Lower_Dmg_Per_Hit: false
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Hamstring
-  Attack_status_effect_chance: 1
+  Reset_Chain_If_hit: None
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 0
+  Attack_status_effect: 
+  Attack_status_effect_chance: 
+  Raise_Skill_Amount: 1
+  Skill_Hit_Type: Character
+  Special_Hit_Skill: None
+  Special_Hit_Type: None
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -131,18 +131,7 @@ Secondary_Attack:
   AEffectsPLUS:
     Hit_Effects: []
     Hit_Terrain_Effects: []
-    Start_Effect:
-    - name: sfx_atgeir_attack_secondary
-      m_enabled: true
-      m_variant: -1
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Start_Effect: []
     Trigger_Effect: []
     Trail_Effect: []
     Burst_Effect: []
@@ -154,9 +143,9 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 150
+  Pierce: 39
   Poison: 0
-  Slash: 0
+  Slash: 39
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -166,16 +155,16 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 6
+  Pierce: 2
   Poison: 0
-  Slash: 0
+  Slash: 2
   Spirit: 0
 Armor:
-  armor: 15
+  armor: 20
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.06
+  m_movementModifier: 0
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -187,10 +176,11 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
+  EffectName: SE_Savheim_QuietWeapon
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 58
-  m_blockPowerPerLevel: 3
+  m_blockPower: 27
+  m_blockPowerPerLevel: 2
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
@@ -204,27 +194,26 @@ spawn_on_hit:
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
-m_backstabbonus: 3
-m_knockback: 1
+m_backstabbonus: 6
+m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 0.5
+m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-Attach_Override: Attach_Atgeir
-m_skillType: Polearms
-m_animationState: Atgeir
-m_itemType: TwoHandedWeapon
+m_skillType: Knives
+m_animationState: Unarmed
+m_itemType: OneHandedWeapon
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
 GEffects: 
 GEffectsPLUS:
   Hit_Effects:
-  - name: vfx_arrowhit
+  - name: vfx_HitSparks
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -235,18 +224,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: sfx_spear_hit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: sfx_sword_hit
+  - name: sfx_arrow_hit
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -258,6 +236,17 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   - name: fx_hit_camshake_knife
+    m_enabled: false
+    m_variant: -1
+    m_attach: false
+    m_follow: false
+    m_inheritParentRotation: false
+    m_inheritParentScale: false
+    m_multiplyParentVisualScale: false
+    m_randomRotation: false
+    m_scale: false
+    m_childTransform: ''
+  - name: vfx_ghost_hit
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -284,10 +273,10 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Trail_Effect:
-  - name: sfx_atgeir_attack
+  - name: sfx_knife_swing
     m_enabled: true
     m_variant: -1
-    m_attach: true
+    m_attach: false
     m_follow: false
     m_inheritParentRotation: false
     m_inheritParentScale: false

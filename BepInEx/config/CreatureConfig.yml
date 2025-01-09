@@ -224,8 +224,8 @@ Gjall:
 
 # ----------------------------------------
 # Creature Adjustments - Ashlands
-# Askvin base stats - HP: 800; dmg: 150; weak: -; resist: Fire, Poison; immune: Spirit
-#Askvin:
+# Asksvin base stats - HP: 800; dmg: 150; weak: -; resist: Fire, Poison; immune: Spirit
+#Asksvin:
 #  health: 1
 
 # Bonemaw Serpent base stats - HP: 1100; dmg: 140; weak: Frost; resist: Poison; immune: Fire, Spirit

@@ -1,6 +1,8 @@
 ########################################################################
 # Savheim Deep North - prefabs
-# REQUIRES - expand_prefabs_Creatures
+# REQUIRES
+# - expand_prefabs_Creatures (gear_buff)
+# - expand_prefabs_Uniques (loot!)
 ########################################################################
 # Killing a deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
@@ -774,7 +776,7 @@
     maxDistance: 100
     limit: 1
     delay: 12
-    parameter: p_boss_loot_dn_roguelite <bossDropsElderDnRoguelite>
+    parameter: p_boss_loot_dn_roguelite_half_coin <bossDropsElderDnRoguelite>
 
 - prefab: Bonemass
   type: destroy
@@ -800,7 +802,7 @@
     maxDistance: 100
     limit: 1
     delay: 5
-    parameter: p_boss_loot_dn_roguelite <bossDropsBonemassDnRoguelite>
+    parameter: p_boss_loot_dn_roguelite_half_coin <bossDropsBonemassDnRoguelite>
 
 - prefab: Dragon
   type: destroy
@@ -952,7 +954,8 @@
     delay: 3
     parameter: p_boss_loot_dn_roguelite_no_coin <bossDropsGeirrhafaDnRoguelite>
 
-# Boss Loot.  No coins from Eikthyr or mini-bosses.
+# Boss Loot.
+# No coins from Eikthyr or mini-bosses.
 - prefab: Player
   type: poke, p_boss_loot_dn_roguelite_no_coin
   biomes: DeepNorth                         # only process if in Deep North
@@ -967,6 +970,37 @@
   - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
   - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
 
+# 50% chance of coin - elder, bonemass
+- prefab: Player
+  type: poke, p_boss_loot_dn_roguelite_half_coin
+  biomes: DeepNorth                         # only process if in Deep North
+  filters:
+  - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
+  spawns:
+  - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_HildirChest_Unlock, 0,0,snap, 0,0,0, d_sfx_silent_dn, 0
+  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
+  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
+
+- prefab: Player
+  type: poke, p_boss_loot_dn_roguelite_half_coin
+  biomes: DeepNorth                         # only process if in Deep North
+  filters:
+  - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
+  spawns:
+  - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data_dn, 0               # Coin!
+  - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - fx_HildirChest_Unlock, 0,0,snap, 0,0,0, d_sfx_silent_dn, 0
+  - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - fx_DvergerMage_Mistile_die, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
+  - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
+  - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_dn, 0.35
+
+# 100% chance of coin - moder, yagluth, queen, fader
 - prefab: Player
   type: poke, p_boss_loot_dn_roguelite
   biomes: DeepNorth                         # only process if in Deep North
@@ -974,7 +1008,7 @@
   - int, i_player_roguelite_on, 1           # roguelite mode must be active for player
   spawns:
   - <par1>, 0,0,snap, 0,0,0, d_empty_data_dn, 0
-  - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data_dn, 0
+  - JC_Gacha_Coins, 0,0,snap, 0,0,0, d_empty_data_dn, 0               # Coin!
   - fx_chainlightning_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0
   - fx_HildirChest_Unlock, 0,0,snap, 0,0,0, d_sfx_silent_dn, 0
   - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_dn, 0.2
@@ -995,9 +1029,9 @@
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite   # no nearby creatures tagged as roguelite mob
   poke:
-  - self: true
+  - self: true                              # You win!
     delay: 15
-    parameter: p_dn_roguelite_win_sequence <rogueliteLoot>  # You win!
+    parameter: p_dn_roguelite_win_sequence <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot>
   - prefab: Player
     data: d_player_roguelite_on
     maxDistance: 100
@@ -1037,7 +1071,13 @@
   - vfx_coin_pile_destroyed, 0,6,snap, 0,0,0, d_empty_data_dn, 16.35
   - sfx_coins_destroyed, 0,6,snap, 0,0,0, d_empty_data_dn, 16.35
   - <par1>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
-  - MoltenCore, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par2>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par3>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par4>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par5>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par6>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par7>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
+  - <par8>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
   - sfx_haldor_greet, 0,8,snap, d_sfx_odin_greet_pitch_dn, 19
   poke:
   - prefab: Odin              # Odin prevented from leaving during reward sequence
@@ -1140,7 +1180,7 @@
     parameter: p_dnrl_remove_random_delay
 
 # remove spawns from roguelite creatures
-- prefab: Blob, SeekerBrood, Charred_Twitcher, Tick
+- prefab: Blob, SeekerBrood, Charred_Twitcher, Charred_Twitcher_Summoned, Tick
   type: poke, p_dnrl_remove_creature
   biomes: DeepNorth
   poke:
@@ -1196,7 +1236,7 @@
   data: dn_deer
 
 # for creatures spawned by other creatures
-- prefab: Blob, SeekerBrood, Charred_Twitcher, Tick
+- prefab: Blob, SeekerBrood, Charred_Twitcher, Charred_Twitcher_Summoned, Tick
   type: create
   biomes: DeepNorth
   data: dn_mob_group_no_loot
@@ -1456,6 +1496,68 @@
   data: d_treasurechest_dn_low_quality
   injectData: true
 
+#############################################################
+# Patrol creatures
+- prefab: Asksvin, Dverger, DvergerMage, Volture
+  type: create
+  biomes: DeepNorth
+  data: dn_mob_group_patrol
+#  injectData: true    # need this in order to poke to adjust stars
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_creature_level_up_dn <vLevelUp3Dn>
+
+# If player threatens forest, % chance to aggravate/hunt patrols within range
+# Attack tree, rock, or ground.  Pick pickables.
+# Asksvin always core spawn of patrol groups (see SpawnThat! configs).
+# Poke leader with % chance, then have leader poke group.
+# This way patrols move together, but different patrols agro at different times.
+- prefab: sfx_tree_hit, sfx_rock_hit, sfx_pickaxe_hit, sfx_pickable_pick
+  type: create
+  biomes: DeepNorth
+  poke:
+  - prefab: Asksvin
+    maxDistance: 200
+    parameter: p_dn_patrol_aggravate_leader
+
+- prefab: Asksvin
+  type: poke, p_dn_patrol_aggravate_leader
+  biomes: DeepNorth
+  weight: 0.3
+  poke:
+  - prefab: creature
+    maxDistance: 30
+    limit: 10
+    parameter: p_dn_patrol_aggravate
+
+- prefab: Asksvin, Dverger, DvergerMage, Volture
+  type: poke, p_dn_patrol_aggravate
+  biomes: DeepNorth
+  data: dn_mob_group_patrol_aggravated
+
+# Patrols yell their complaints
+- prefab: Dverger
+  types:
+  - state, attack_poke
+  - state, attack_cast
+  biomes: DeepNorth
+  weight: 0.1
+  poke:
+  - prefab: Player
+    maxDistance: 30
+    limit: 5
+    parameter: p_dn_patrol_shout
+
+- prefab: Player
+  type: poke, p_dn_patrol_shout
+  biomes: DeepNorth
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, Center
+    2: string, <vDnPatrolShouts>
+    3: int, 0
 
 ########################################################################
 # DEBUG

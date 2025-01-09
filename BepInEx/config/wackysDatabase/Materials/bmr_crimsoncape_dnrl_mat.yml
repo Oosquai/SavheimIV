@@ -1,0 +1,33 @@
+name: bmr_crimsoncape_dnrl_mat
+original: bmr_Ashcape_Mat2
+overwrite: false
+changes:
+  colors:
+    _Color: [1, 0.7, 0.7, 1]
+    _MetalColor: [1, 1, 1, 1]
+    _EmissionColor: [1, 0.2, 0.2, 1]
+    _NoiseGlowColor: [1, 1, 1, 1]
+  floats:
+    _Hue: 0
+    _Saturation: 0
+    _Value: 0
+    _Cutoff: 0.686
+    _Glossiness: 0.23
+    _UseGlossmap: 0
+    _Metallic: 1
+    _MetalGloss: 0.82
+    _BumpScale: 1
+    _TwoSidedNormals: 1
+    _UseStyles: 0
+    _Style: 0
+    _AddRain: 1
+    _Cull: 0
+    _NoiseGlowEnabled: 0
+    _SnapNoiseToPixel: 1
+    _NoiseGlowSize: 3
+    _NoiseGlowEdge: 0
+  textures:
+    _MainTex: bmr_Ashcape_d2
+    _MetallicGlossMap: bmr_Ashcape_m
+    _EmissionMap: bmr_Ashcape_m
+    _BumpMap: bmr_Ashcape_n

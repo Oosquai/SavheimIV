@@ -1,0 +1,9 @@
+name: bbp_seekerbow_dnrl_mat
+original: bbp_bow
+overwrite: false
+changes:
+  colors:
+    _Color: [1, 0.7, 0.7, 1]
+  floats: {}
+  textures:
+    _MainTex: bbp_bow

@@ -1,11 +1,11 @@
-name: CWS_Atgeir_2_SH
-m_weight: 2.5
-m_name: Celestial Atgeir
-m_description: An atgeir made from a mysterious, otherworldly material that supports an additional socket.
-clonePrefabName: CWS_Atgeir_2
+name: CWS_Tower_Shield_3_SH_DNRL
+m_weight: 8
+m_name: Awakened Noxguard
+m_description: This unique tower shield grants a lingering resistance to poison when used to block attacks.
+clonePrefabName: CWS_Tower_Shield_3
 mockName: 
 customIcon: 
-material: Weapon_t8_atgeir
+material: Weapon_t8_dnrl 
 materials: 
 customVisual: 
 snapshotRotation: 
@@ -14,22 +14,22 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Horizontal
-  Attack_Animation: atgeir_attack
+  Attack_Animation: ''
   Attack_Random_Animation: 0
-  Chain_Attacks: 3
+  Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.15
+  Custom_AttackSpeed: 1
   m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.7
+  SpeedFactor: 0.2
   DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 3.2
-  AttackHeight: 1
+  AttackRange: 2.4
+  AttackHeight: 0.8
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -41,8 +41,8 @@ Primary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 20
-  Attack_Ray_Width: 0.3
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
@@ -58,8 +58,8 @@ Primary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 20
-  Projectile_Accuraccy: 0
+  Projectile_Vel: 10
+  Projectile_Accuraccy: 10
   Projectiles: 1
   Skill_Accuracy: false
   Launch_Angle: 0
@@ -79,22 +79,22 @@ Primary_Attack:
     Burst_Effect: []
 Secondary_Attack:
   AttackType: Horizontal
-  Attack_Animation: atgeir_secondary
+  Attack_Animation: ''
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 40
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 0.3
+  SpeedFactor: 0.2
   DmgMultiplier: 1
-  ForceMultiplier: 160
+  ForceMultiplier: 1
   StaggerMultiplier: 1
   RecoilMultiplier: 0
-  AttackRange: 3.5
-  AttackHeight: 1
+  AttackRange: 1.5
+  AttackHeight: 0.6
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -106,15 +106,22 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 360
-  Attack_Ray_Width: 0.3
-  Lower_Dmg_Per_Hit: false
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: SE_Savheim_Hamstring
-  Attack_status_effect_chance: 1
+  Reset_Chain_If_hit: None
+  SpawnOnHit: 
+  SpawnOnHit_Chance: 0
+  Attack_status_effect: 
+  Attack_status_effect_chance: 
+  Raise_Skill_Amount: 1
+  Skill_Hit_Type: Character
+  Special_Hit_Skill: None
+  Special_Hit_Type: None
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -131,51 +138,29 @@ Secondary_Attack:
   AEffectsPLUS:
     Hit_Effects: []
     Hit_Terrain_Effects: []
-    Start_Effect:
-    - name: sfx_atgeir_attack_secondary
-      m_enabled: true
-      m_variant: -1
-      m_attach: false
-      m_follow: false
-      m_inheritParentRotation: false
-      m_inheritParentScale: false
-      m_multiplyParentVisualScale: false
-      m_randomRotation: false
-      m_scale: false
-      m_childTransform: ''
+    Start_Effect: []
     Trigger_Effect: []
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 0
+  Blunt: 10
   Chop: 0
   Damage: 0
   Fire: 0
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 150
+  Pierce: 0
   Poison: 0
   Slash: 0
   Spirit: 0
-Damage_Per_Level:
-  Blunt: 0
-  Chop: 0
-  Damage: 0
-  Fire: 0
-  Frost: 0
-  Lightning: 0
-  Pickaxe: 0
-  Pierce: 6
-  Poison: 0
-  Slash: 0
-  Spirit: 0
+Damage_Per_Level: 
 Armor:
-  armor: 15
+  armor: 200
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: -0.06
+  m_movementModifier: -0.08
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -189,9 +174,9 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 58
-  m_blockPowerPerLevel: 3
-  m_timedBlockBonus: 2
+  m_blockPower: 76
+  m_blockPowerPerLevel: 4
+  m_timedBlockBonus: 0
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -204,27 +189,26 @@ spawn_on_hit:
 spawn_on_terrain_hit: 
 m_questItem: false
 m_teleportable: true
-m_backstabbonus: 3
-m_knockback: 1
+m_backstabbonus: 4
+m_knockback: 50
 m_useDurability: true
-m_useDurabilityDrain: 0.5
+m_useDurabilityDrain: 0.25
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-Attach_Override: Attach_Atgeir
-m_skillType: Polearms
-m_animationState: Atgeir
-m_itemType: TwoHandedWeapon
+m_skillType: Blocking
+m_animationState: Shield
+m_itemType: Shield
 m_toolTier: 0
-m_maxQuality: 4
+m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers: []
 GEffects: 
 GEffectsPLUS:
   Hit_Effects:
-  - name: vfx_arrowhit
+  - name: vfx_clubhit
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -235,29 +219,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: sfx_spear_hit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: sfx_sword_hit
-    m_enabled: true
-    m_variant: -1
-    m_attach: false
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
-  - name: fx_hit_camshake_knife
+  - name: sfx_club_hit
     m_enabled: true
     m_variant: -1
     m_attach: false
@@ -269,11 +231,9 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Hit_Terrain_Effects: []
-  Start_Effect: []
-  Hold_Start_Effects: []
-  Trigger_Effect:
-  - name: fx_swing_camshake
-    m_enabled: false
+  Start_Effect:
+  - name: sfx_club_swing
+    m_enabled: true
     m_variant: -1
     m_attach: false
     m_follow: false
@@ -283,15 +243,6 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  Trail_Effect:
-  - name: sfx_atgeir_attack
-    m_enabled: true
-    m_variant: -1
-    m_attach: true
-    m_follow: false
-    m_inheritParentRotation: false
-    m_inheritParentScale: false
-    m_multiplyParentVisualScale: false
-    m_randomRotation: false
-    m_scale: false
-    m_childTransform: ''
+  Hold_Start_Effects: []
+  Trigger_Effect: []
+  Trail_Effect: []

@@ -1,0 +1,9 @@
+name: Longbow_Lightning_SH_DNRL_mat
+original: bbp_Elven_Bow_01
+overwrite: false
+changes:
+  colors:
+    _Color: [1, 0.7, 0.7, 1]
+  floats: {}
+  textures:
+    _MainTex: bbp_Elven_Bow_01

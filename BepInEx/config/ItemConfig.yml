@@ -152,6 +152,9 @@ groups:
     - Cape_Fire_SH
     - Cape_Eitr_SH
     - Cape_Stam_SH
+    - Cape_Fire_SH_DNRL
+    - Cape_Eitr_SH_DNRL
+    - Cape_Stam_SH_DNRL
 
   Utility:
     - BeltStrength
@@ -320,6 +323,25 @@ groups:
     - KnifeSkollAndHati_Boss_SH
     - Staff_Wisp
     - BattleaxeCrystal_Wisp
+    - SpectaculureRod_DNRL
+    - FistFenrirClaw_Boss_SH_DNRL
+    - CWS_Atgeir_8_SH_DNRL
+    - JC_Poison_Staff_SH_DNRL
+    - CWS_Atgeir_9_SH_DNRL
+    - CWS_Sledge_8_SH_DNRL
+    - StaffIceShards_DNRL
+    - CWS_TH_Sword_9_SH_DNRL
+    - CWS_TH_Sword_11_SH_DNRL
+    - CWS_Sledge_7_SH_DNRL
+    - StaffFireball_DNRL
+    - CWS_TH_Sword_8_SH_DNRL
+    - CWS_TH_Axe_10_SH_DNRL
+    - JC_Lightning_Staff_SH_DNRL
+    - CWS_TH_Sword_6_SH_DNRL
+    - AxeBerzerkr_Boss_SH_DNRL
+    - CWS_TH_Axe_9_SH_DNRL
+    - StaffClusterbomb_DNRL
+    - KnifeSkollAndHati_Boss_SH_DNRL
 
   OneHandedWeapon:
     - AxeBlackMetal
@@ -442,6 +464,20 @@ groups:
     - CWS_Sword_13_SH
     - CWS_Sword_14_SH
     - CWS_Sword_12_SH
+    - CWS_Axe_8_SH_DNRL
+    - CWS_Dagger_7_SH_DNRL
+    - CWS_Spear_5_SH_DNRL
+    - CWS_Mace_9_SH_DNRL
+    - CWS_Sword_9_SH_DNRL
+    - CWS_Mace_6_SH_DNRL
+    - CWS_Mace_5_SH_DNRL
+    - CWS_Spear_6_SH_DNRL
+    - CWS_Axe_5_SH_DNRL
+    - CWS_Sword_8_SH_DNRL
+    - CWS_Dagger_6_SH_DNRL
+    - CWS_Dagger_1_SH_DNRL
+    - CWS_Sword_5_SH_DNRL
+    - CWS_Sword_6_SH_DNRL
 
   Shield:
     - ShieldBanded
@@ -482,6 +518,8 @@ groups:
     - CWS_Tower_Shield_4_SH
     - CWS_Tower_Shield_5_SH
     - LanternSoulcatcher
+    - CWS_Tower_Shield_3_SH_DNRL
+    - CWS_Tower_Shield_4_SH_DNRL
 
   Bow:
     - Bow
@@ -526,6 +564,13 @@ groups:
     - CWS_Crossbow_7_SH
     - CWS_Crossbow_8_SH
     - CWS_Crossbow_9_SH
+    - BBP_ElvenBow_SH_DNRL
+    - CWS_Crossbow_7_SH_DNRL
+    - CWS_Bow_11_SH_DNRL
+    - CWS_Bow_7_SH_DNRL
+    - BBP_BoneBow_SH_DNRL
+    - CWS_Crossbow_8_SH_DNRL
+    - BBP_SeekerBow_SH_DNRL
 
   Tool:
     - Cultivator

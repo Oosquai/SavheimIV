@@ -178,6 +178,38 @@
   strings:
   - Humanoid.m_group, dn_mobs
 
+- name: dn_mob_group_patrol
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - MonsterAI.m_aggravatable, 1
+  - aggravated, 0
+  - MonsterAI.m_enableHuntPlayer, 0
+  - MonsterAI.m_attackPlayerObjects, 0
+  strings:
+  - Humanoid.m_group, dn_mobs
+  floats:
+  - MonsterAI.m_alertRange, 200
+  - MonsterAI.m_viewRange, 200
+  - MonsterAI.m_viewAngle, 360
+  - MonsterAI.m_hearRange, 9999
+
+- name: dn_mob_group_patrol_aggravated
+  ints:
+  - aggravated, 1
+  - MonsterAI.m_enableHuntPlayer, 1
+  - MonsterAI.m_attackPlayerObjects, 1
+
+- valueGroup: vDnPatrolShouts
+  values:
+  - <#009FFF>We speak for the trees!
+  - <#009FFF>We protect the forest!
+  - <#009FFF>Violence against these sacred lands will not be tolerated!
+  - <#009FFF>How about I do to your neck like you just did to that flower?!
+  - <#009FFF>You think it's fun smashing rocks?  I feel the same about yer head!
+  - <#009FFF>You make holes in my ground, I make holes in yer chest!
+
 - name: dn_mob_group_no_loot
   ints:
   - Humanoid.m_canSwim, 1
@@ -617,24 +649,29 @@
 
 - valueGroup: bossDropsBrennaDnRoguelite
   values:
-# ADD T8 BUFF WEAPONS AS LOOT
-  - kg_EnchantScroll_Weapon_Blessed_S  # diluted loot table, since spawned as trash, possibly multiple times
+  - Cape_Fire_SH_DNRL
+  - kg_EnchantScroll_Weapon_Blessed_S  # diluted loot table
   - kg_EnchantScroll_Armor_Blessed_S
   - DraumheimEssence                   
   - Bezel_T7
 
 - valueGroup: bossDropsGeirrhafaDnRoguelite
   values:
-# ADD T8 BUFF WEAPONS AS LOOT
-  - kg_EnchantScroll_Weapon_Blessed_S  # diluted loot table, since spawned as trash, possibly multiple times
+  - Cape_Eitr_SH_DNRL
+  - Cape_Stam_SH_DNRL
+  - kg_EnchantScroll_Weapon_Blessed_S  # diluted loot table
   - kg_EnchantScroll_Armor_Blessed_S
   - DraumheimEssence                   
   - Bezel_T7
 
 - valueGroup: rogueliteLoot
   values:
-  - CWS_Sword_1_SH_DNRL
-  - CWS_TH_Sword_5_SH_DNRL
+  - JC_Gacha_Coins
+  - JC_Gacha_Coins
+  - JC_Gacha_Coins
+  - MoltenCore
+  - MoltenCore
+  - Wispheart
 
 ######################################
 - name: d_againFlying_dn

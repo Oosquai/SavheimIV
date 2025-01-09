@@ -1,0 +1,41 @@
+name: Weapon_t8_atgeir
+original: Weapon
+overwrite: false
+changes:
+  colors:
+    _Color: [0.9, 0.3, 0.9, 1]
+    _EmissionColor: [0.6981132, 0.6981132, 0.6981132, 1]
+  floats:
+    _Cutoff: 0.5
+    _Metallic: 0.491
+    _Glossiness: 0
+    _BumpScale: 1
+    _DistortionStrength: 1
+    _DistortionBlend: 0.5
+    _SoftParticlesNearFadeDistance: 0
+    _SoftParticlesFarFadeDistance: 1
+    _CameraNearFadeDistance: 1
+    _CameraFarFadeDistance: 2
+    _Mode: 0
+    _FlipbookMode: 0
+    _LightingEnabled: 1
+    _DistortionEnabled: 0
+    _EmissionEnabled: 0
+    _BlendOp: 0
+    _SrcBlend: 1
+    _DstBlend: 0
+    _ZWrite: 1
+    _Cull: 0
+    _SoftParticlesEnabled: 0
+    _CameraFadingEnabled: 0
+    _DistortionStrengthScaled: 0
+  textures:
+    _MainTex:
+      name: Weapon_D
+      filterMode: Trilinear
+    _MetallicGlossMap:
+      name: Weapon_D_meta
+      filterMode: Bilinear
+    _BumpMap:
+      name: NormalMap(28)
+      filterMode: Bilinear

@@ -1,0 +1,32 @@
+name: Cape_Fire_SH_DNRL_mat
+original: bmr_LoxCape_Mat
+overwrite: false
+changes:
+  colors:
+    _Color: [1, 0.7, 0.7, 1]
+    _MetalColor: [1, 1, 1, 1]
+    _EmissionColor: [0, 0, 0, 1]
+    _NoiseGlowColor: [1, 1, 1, 1]
+  floats:
+    _Hue: 0
+    _Saturation: 0
+    _Value: 0
+    _Cutoff: 0.5
+    _Glossiness: 0.23
+    _UseGlossmap: 0
+    _Metallic: 1
+    _MetalGloss: 0.82
+    _BumpScale: 1
+    _TwoSidedNormals: 1
+    _UseStyles: 0
+    _Style: 0
+    _AddRain: 1
+    _Cull: 0
+    _NoiseGlowEnabled: 0
+    _SnapNoiseToPixel: 1
+    _NoiseGlowSize: 3
+    _NoiseGlowEdge: 0
+  textures:
+    _MainTex: bmr_LoxCape_D
+    _MetallicGlossMap: bmr_LoxCape_M
+    _BumpMap: bmr_LoxCape_N
