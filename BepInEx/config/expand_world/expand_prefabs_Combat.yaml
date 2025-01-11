@@ -417,7 +417,7 @@
 ##########################
 # Some creatures don't bleed
 # Intercept with no-op
-- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen
+- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen, Troll_Summoned
   type: poke, p_sword_bleed_hp
   weight: 1E30
 

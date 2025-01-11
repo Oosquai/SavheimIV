@@ -172,7 +172,7 @@
 
 - name: d_dn_summoned_troll
   strings:
-  - Character.m_name, Wrath of the Forest
+  - Humanoid.m_name, Wrath of the Forest
   - Humanoid.m_group, dn_mobs
 
 - name: dn_mob_group
@@ -185,6 +185,11 @@
 
 - name: dn_mob_group_patrol
   ints:
+  - i_dn_mob_group_patrol, 1
+
+- name: dn_mob_group_patrol_dverger
+  ints:
+  - i_dn_mob_group_patrol, 1
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
@@ -193,7 +198,7 @@
   - MonsterAI.m_enableHuntPlayer, 0
   - MonsterAI.m_attackPlayerObjects, 0
   strings:
-  - Character.m_name, Guardian of the Forest
+  - Humanoid.m_name, Guardian of the Forest
   - Humanoid.m_group, dn_mobs
   floats:
   - MonsterAI.m_alertRange, 200
@@ -201,11 +206,35 @@
   - MonsterAI.m_viewAngle, 360
   - MonsterAI.m_hearRange, 9999
 
+- name: dn_mob_group_patrol_not_dverger
+  ints:
+  - i_dn_mob_group_patrol, 1
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+#  - MonsterAI.m_aggravatable, 1
+#  - aggravated, 0
+  - MonsterAI.m_enableHuntPlayer, 0
+  - MonsterAI.m_attackPlayerObjects, 0
+  strings:
+  - Humanoid.m_name, Guardian's Companion
+  - Humanoid.m_group, dn_mobs
+  floats:
+  - MonsterAI.m_alertRange, 0
+  - MonsterAI.m_viewRange, 0
+  - MonsterAI.m_viewAngle, 0
+  - MonsterAI.m_hearRange, 0
+
 - name: dn_mob_group_patrol_aggravated
   ints:
   - aggravated, 1
   - MonsterAI.m_enableHuntPlayer, 1
   - MonsterAI.m_attackPlayerObjects, 1
+  floats:
+  - MonsterAI.m_alertRange, 200
+  - MonsterAI.m_viewRange, 200
+  - MonsterAI.m_viewAngle, 360
+  - MonsterAI.m_hearRange, 9999
 
 - valueGroup: vDnPatrolShouts
   values:
@@ -679,6 +708,23 @@
   - MoltenCore
   - Wispheart
 
+- valueGroup: vgTrollSummonedLoot
+  values:
+  - CharredBone
+  - CharredBone
+  - CharredBone
+  - Softtissue
+  - Softtissue
+  - Softtissue
+  - Softtissue
+  - Softtissue
+  - GemstoneBlue
+  - GemstoneGreen
+  - GemstoneRed
+  - kg_EnchantScroll_Weapon_Blessed_S
+  - kg_EnchantScroll_Armor_Blessed_S
+  - DraumheimEssence
+
 ######################################
 - name: d_againFlying_dn
   ints:
@@ -970,6 +1016,8 @@
 - name: d_creature_level_up_dn
   ints:
   - level, <min_6_<add_<max_1_<int_level>>_<par1>>>
+  strings:
+  - Humanoid.m_group, dn_mobs
 
 - valueGroup: vLevelUp1Dn
   values:

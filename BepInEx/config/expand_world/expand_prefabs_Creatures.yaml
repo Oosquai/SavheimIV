@@ -173,6 +173,11 @@
   type: create
   weight: 1E30
   data: clothes_dverger_mage_allied_group
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_dn_mob_group_patrol
 
 - prefab: Charred_Melee
   type: create
@@ -545,6 +550,11 @@
   type: create
   weight: 1E30
   data: allied_group_data
+  injectData: true
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_dn_mob_group_patrol
 
 # Mages with StaffSkeleton randomly summon skeleton allies.  Skeletons will die to AE.  Oh well.
 - prefab: DvergerMage

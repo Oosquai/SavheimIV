@@ -1202,7 +1202,6 @@
 # 3 star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
   type: destroy
-  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   filters:
   - int, CL&LC infusion, 0
   - int, level, 4

@@ -1498,15 +1498,15 @@
 
 #############################################################
 # Patrol creatures
-- prefab: Asksvin, Dverger, DvergerMage, Volture
+- prefab: Dverger, DvergerMage
+  type: poke, p_dn_mob_group_patrol
+  biomes: DeepNorth
+  data: dn_mob_group_patrol_dverger
+
+- prefab: Asksvin, Volture
   type: create
   biomes: DeepNorth
-  data: dn_mob_group_patrol
-#  injectData: true    # need this in order to poke to adjust stars?
-  poke:
-  - self: true
-    delay: 0.1
-    parameter: p_creature_level_up_dn <vLevelUp3Dn>
+  data: dn_mob_group_patrol_not_dverger
 
 # If player threatens forest, % chance to aggravate/hunt patrols within range.
 # Attack tree, rock, or ground.  Pick pickables.
@@ -1515,16 +1515,18 @@
 - prefab: sfx_tree_hit, sfx_rock_hit, sfx_pickaxe_hit, sfx_pickable_pick
   type: create
   biomes: DeepNorth
+  bannedObjects:
+  - Player, 100, d_player_roguelite_on
   poke:
   - prefab: creature
     data: dn_mob_group_patrol
-    maxDistance: 200
+    maxDistance: 100                             ### AGRO RANGE
     parameter: p_dn_patrol_aggravate_individual
 
 - prefab: Asksvin, Dverger, DvergerMage, Volture
   type: poke, p_dn_patrol_aggravate_individual
   biomes: DeepNorth
-  weight: 0.1
+  weight: 0.1                                    ### CHANCE TO AGRO PER SFX
   poke:
   - prefab: creature
     data: dn_mob_group_patrol
@@ -1541,9 +1543,8 @@
 - prefab: Dverger
   types:
   - state, attack_poke
-  - state, attack_cast
   biomes: DeepNorth
-  weight: 0.1
+  weight: 0.3
   poke:
   - prefab: Player
     maxDistance: 30
@@ -1568,6 +1569,25 @@
   bannedObjects:
   - Player, 40
   data: d_dn_summoned_troll
+
+- prefab: Troll_Summoned
+  type: destroy
+  biomes: DeepNorth
+  filter: d_dn_summoned_troll
+  weight: 1E30
+  poke:
+  - self: true
+    parameter: p_troll_summoned_loot <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgTrollSummonedLoot>
+
+- prefab: Troll_Summoned
+  type: poke, p_troll_summoned_loot
+  spawns:
+  - Charredskull
+  - CharredBone
+  - <par1>
+  - <par2>
+  - <par3>
+  - <par4>
 
 ########################################################################
 # DEBUG

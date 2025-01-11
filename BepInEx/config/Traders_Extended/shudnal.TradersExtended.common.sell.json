@@ -30,6 +30,36 @@
     "requiredGlobalKey": ""
   },
   {
+    "prefab": "GemstoneBlue",
+    "stack": 1,
+    "price": 57,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "GemstoneGreen",
+    "stack": 1,
+    "price": 57,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "GemstoneRed",
+    "stack": 1,
+    "price": 57,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Charredskull",
+    "stack": 1,
+    "price": 43,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "FaderDrop",
+    "stack": 3,
+    "price": 666,
+    "requiredGlobalKey": ""
+  },
+  {
     "prefab": "TrophyDeer",
     "stack": 1,
     "price": 4,
@@ -324,21 +354,9 @@
     "requiredGlobalKey": ""
   },
   {
-    "prefab": "Charredskull",
-    "stack": 1,
-    "price": 37,
-    "requiredGlobalKey": ""
-  },
-  {
     "prefab": "TrophyFader",
     "stack": 1,
     "price": 100,
-    "requiredGlobalKey": ""
-  },
-  {
-    "prefab": "FaderDrop",
-    "stack": 3,
-    "price": 666,
     "requiredGlobalKey": ""
   }
 ]
