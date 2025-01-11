@@ -5,7 +5,7 @@ m_description: Soar with your raven-kin, and rain death down upon your foes.
 clonePrefabName: CWS_Bow_7
 mockName: 
 customIcon: 
-material: Weapon_t8_dnrl 
+material: Weapon2_t8_dnrl 
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
@@ -38,7 +38,7 @@ Primary_Attack:
   Reload_Eitr_Drain: 0
   Bow_Draw: true
   Bow_Duration_Min: 2.5
-  Bow_Stamina_Drain: 12
+  Bow_Stamina_Drain: 20
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
   Attack_Ray_Width: 0
@@ -145,7 +145,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 52
+  Pierce: 92
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -157,7 +157,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 2
+  Pierce: 4
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -181,7 +181,7 @@ SE_Equip:
   EffectName: SE_Savheim_Levitation
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 12
+  m_blockPower: 24
   m_blockPowerPerLevel: 1
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0

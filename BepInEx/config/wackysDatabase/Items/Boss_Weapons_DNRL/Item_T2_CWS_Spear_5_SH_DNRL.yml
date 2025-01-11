@@ -19,7 +19,7 @@ Primary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1
-  m_attackStamina: 8
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -82,7 +82,7 @@ Secondary_Attack:
   Chain_Attacks: 0
   Hit_Terrain: true
   Custom_AttackSpeed: 1.5
-  m_attackStamina: 16
+  m_attackStamina: 40
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
@@ -110,7 +110,7 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_status_effect: SE_Savheim_PinnedLightning
-  Attack_status_effect_chance: 1
+  Attack_status_effect_chance: 0.75
   Attack_Projectile: CWS_Spear_5_Projectile
   Projectile_Vel: 60
   Projectile_Accuraccy: 1
@@ -130,7 +130,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 29
+  Pierce: 140
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -142,7 +142,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 3
+  Pierce: 6
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -156,8 +156,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 12
-  m_blockPowerPerLevel: 1
+  m_blockPower: 48
+  m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0

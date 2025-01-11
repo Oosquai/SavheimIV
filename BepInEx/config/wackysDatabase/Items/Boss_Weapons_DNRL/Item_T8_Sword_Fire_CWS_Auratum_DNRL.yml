@@ -189,13 +189,13 @@ Damage:
   Blunt: 0
   Chop: 0
   Damage: 0
-  Fire: 34
+  Fire: 38
   Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 96
+  Slash: 102
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -207,7 +207,7 @@ Damage_Per_Level:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 5
+  Slash: 6
   Spirit: 0
 Armor:
   armor: 20
@@ -229,7 +229,7 @@ SE_Equip:
   EffectName: SE_Savheim_Resistant_Frost
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 45
+  m_blockPower: 48
   m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0

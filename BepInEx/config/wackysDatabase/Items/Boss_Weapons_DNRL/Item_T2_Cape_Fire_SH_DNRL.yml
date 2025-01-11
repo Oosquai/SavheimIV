@@ -17,7 +17,7 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 1
+  armor: 8
   armorPerLevel: 2
 FoodStats: 
 Moddifiers:
@@ -68,6 +68,7 @@ m_maxQuality: 3
 m_value: 0
 ConsumableStatusEffect: 
 damageModifiers:
+- Frost:Resistant
 - Fire:Resistant
 GEffects: 
 GEffectsPLUS:

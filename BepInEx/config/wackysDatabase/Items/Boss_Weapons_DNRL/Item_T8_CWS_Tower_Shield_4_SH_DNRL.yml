@@ -5,7 +5,7 @@ m_description: Its surface glows with smoldering embers, ready to unleash scorch
 clonePrefabName: CWS_Tower_Shield_4
 mockName: 
 customIcon: 
-material: Weapon_t8_dnrl 
+material: Weapon2_t8_dnrl 
 materials: 
 customVisual: 
 snapshotRotation: 
@@ -174,7 +174,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 203
+  m_blockPower: 218
   m_blockPowerPerLevel: 6
   m_timedBlockBonus: 0
   m_deflectionForce: 0

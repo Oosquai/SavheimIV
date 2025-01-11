@@ -92,13 +92,13 @@
 # Poison staff
 - name: d_staff_poison
   hashes:
-  - RightItem, JC_Poison_Staff_SH
+  - RightItem, JC_Poison_Staff_SH, JC_Poison_Staff_SH_DNRL
 
 ####################################
 # Lightning staff
 - name: d_staff_lightning
   hashes:
-  - RightItem, JC_Lightning_Staff_SH
+  - RightItem, JC_Lightning_Staff_SH, JC_Lightning_Staff_SH_DNRL
 
 ####################################
 # Clusterbomb staff
@@ -106,15 +106,23 @@
   hashes:
   - RightItem, StaffClusterbomb
 
+- name: d_staff_fracturing_dnrl
+  hashes:
+  - RightItem, StaffClusterbomb_DNRL
+
 ####################################
 # Unique tower shields
 - name: towerShieldListPoison
   hashes:
-  - LeftItem, CWS_Tower_Shield_3_SH
+  - LeftItem, CWS_Tower_Shield_3_SH, CWS_Tower_Shield_3_SH_DNRL
 
 - name: towerShieldListFire
   hashes:
   - LeftItem, CWS_Tower_Shield_4_SH
+
+- name: towerShieldListFire_dnrl
+  hashes:
+  - LeftItem, CWS_Tower_Shield_4_SH_DNRL
 
 ####################################
 # Mace Torch
@@ -122,41 +130,49 @@
   hashes:
   - RightItem, CWS_Mace_5_SH
 
+- name: d_mace_torch_dnrl
+  hashes:
+  - RightItem, CWS_Mace_5_SH_DNRL
+
 ####################################
 # Poison Atgeir
 - name: d_poison_atgeir
   hashes:
   - RightItem, CWS_Atgeir_9_SH
 
+- name: d_poison_atgeir_dnrl
+  hashes:
+  - RightItem, CWS_Atgeir_9_SH_DNRL
+
 ####################################
 # Skybreaker sledge
 - name: d_skybreaker_sledge
   hashes:
-  - RightItem, CWS_Sledge_8_SH
+  - RightItem, CWS_Sledge_8_SH, CWS_Sledge_8_SH_DNRL
 
 ####################################
 # Sanguino (Reaper)
 - name: d_sanguino_reaper
   hashes:
-  - RightItem, CWS_TH_Sword_11_SH
+  - RightItem, CWS_TH_Sword_11_SH, CWS_TH_Sword_11_SH_DNRL
 
 ####################################
 # Terror crit knife
 - name: d_skelfang_knife
   hashes:
-  - RightItem, CWS_Dagger_6_SH
+  - RightItem, CWS_Dagger_6_SH, CWS_Dagger_6_SH_DNRL
 
 ####################################
 # Vali's Light sword
 - name: d_valis_light
   hashes:
-  - RightItem, CWS_Sword_8_SH
+  - RightItem, CWS_Sword_8_SH, CWS_Sword_8_SH_DNRL
 
 ####################################
 # Purple Battleaxe
 - name: d_purple_battleaxe
   hashes:
-  - RightItem, CWS_TH_Axe_10_SH
+  - RightItem, CWS_TH_Axe_10_SH, CWS_TH_Axe_10_SH_DNRL
 
 ####################################
 # Runefang
@@ -164,23 +180,27 @@
   hashes:
   - RightItem, CWS_Dagger_1_SH
 
+- name: d_runefang_knife_dnrl
+  hashes:
+  - RightItem, CWS_Dagger_1_SH_DNRL
+
 ####################################
 # Greatsword AE Parry
 - name: d_greatsword_parry
   hashes:
-  - RightItem, CWS_TH_Sword_6_SH
+  - RightItem, CWS_TH_Sword_6_SH, CWS_TH_Sword_6_SH_DNRL
 
 ####################################
 # Dual axes lightning
 - name: d_dual_axes_lightning
   hashes:
-  - RightItem, AxeBerzerkr_Boss_SH
+  - RightItem, AxeBerzerkr_Boss_SH, AxeBerzerkr_Boss_SH_DNRL
 
 ####################################
 # T2 Claws
 - name: d_gear_unique_claws
   hashes:
-  - RightItem, FistFenrirClaw_Boss_SH
+  - RightItem, FistFenrirClaw_Boss_SH, FistFenrirClaw_Boss_SH_DNRL
 
 ####################################
 # T2 Knife
@@ -190,6 +210,10 @@
   hashes:
   - RightItem, CWS_Dagger_7_SH
 
+- name: d_gear_unique_knife_t2_dnrl
+  hashes:
+  - RightItem, CWS_Dagger_7_SH_DNRL
+
 - name: d_unique_knife_toxin_cnt_decrement
   ints:
   - i_unique_knife_toxin_cnt, <sub_<int_i_unique_knife_toxin_cnt>_1>
@@ -197,6 +221,16 @@
 - name: d_unique_knife_toxin_cnt_extend
   ints:
   - i_unique_knife_toxin_cnt, <add_<int_i_unique_knife_toxin_cnt>_9>
+
+####################################
+# T8 Sanctis
+- name: gear_sanctis_flame
+  hashes:
+  - RightItem, CWS_Sword_6_SH
+
+- name: gear_sanctis_flame_dnrl
+  hashes:
+  - RightItem, CWS_Sword_6_SH_DNRL
 
 ##############################################################
 # Boss Drop Tables

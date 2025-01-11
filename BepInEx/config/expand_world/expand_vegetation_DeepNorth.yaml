@@ -116,6 +116,51 @@
   forestTresholdMin: 1
   forestTresholdMax: 1.15
 
+- prefab: cliff_ashlands2
+  enabled: true
+  max: 1
+  scaleMin: 0.5
+  scaleMax: 1.5
+  chanceToUseGroundTilt: 1
+  biome: DeepNorth
+  biomeArea: median
+  blockCheck: false
+  maxTilt: 99
+
+- prefab: cliff_ashlands6
+  enabled: true
+  min: 3
+  max: 6
+  scaleMin: 0.5
+  scaleMax: 0.9
+  biome: DeepNorth
+  biomeArea: median
+  minTilt: 10
+  maxTilt: 40
+  groupRadius: 10
+
+- prefab: cliff_ashlands5
+  enabled: true
+  max: 0.1
+  scaleMin: 0.2
+  scaleMax: 1.5
+  biome: DeepNorth
+  biomeArea: median
+  maxAltitude: 100
+  maxTilt: 60
+  maxTerrainDelta: 0
+  groupRadius: 10
+
+- prefab: giant_ribs
+  enabled: true
+  max: 1
+  randTilt: 10
+  biome: DeepNorth
+  biomeArea: median
+  maxTilt: 10
+  terrainDeltaRadius: 5
+  maxTerrainDelta: 2
+
 - prefab: stubbe
   enabled: true
   max: 0.8
@@ -188,6 +233,19 @@
   maxTerrainDelta: 2
   groupSizeMin: 50
   groupRadius: 2
+  inForest: true
+  forestTresholdMin: 1
+  forestTresholdMax: 1.15
+
+- prefab: AshlandsBranch2
+  enabled: true
+  min: 2
+  max: 5
+  scaleMin: 0.8
+  randTilt: 5
+  biome: DeepNorth
+  biomeArea: median
+  maxTilt: 99
   inForest: true
   forestTresholdMin: 1
   forestTresholdMax: 1.15

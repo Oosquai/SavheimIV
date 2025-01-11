@@ -46,7 +46,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: DvergerStaffFire_fire_aoe
-  SpawnOnHit_Chance: 0.2
+  SpawnOnHit_Chance: 0.22
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10
@@ -155,7 +155,7 @@ Damage:
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 140
+  Slash: 150
   Spirit: 0
 Damage_Per_Level:
   Blunt: 0
@@ -188,7 +188,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 54
+  m_blockPower: 58
   m_blockPowerPerLevel: 3
   m_timedBlockBonus: 2
   m_deflectionForce: 0

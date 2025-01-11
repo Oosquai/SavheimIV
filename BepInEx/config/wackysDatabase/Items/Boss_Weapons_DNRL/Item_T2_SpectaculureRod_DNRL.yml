@@ -183,7 +183,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip: 
-  EffectName: SE_Savheim_SpectaculureRod
+  EffectName: SE_Savheim_SpectaculureRod_DNRL
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 5
@@ -235,6 +235,5 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Hold_Start_Effects: []
-  Trigger_Effect:
-  - 
+  Trigger_Effect: []
   Trail_Effect: []

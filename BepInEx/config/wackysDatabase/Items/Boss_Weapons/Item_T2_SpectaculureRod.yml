@@ -235,6 +235,5 @@ GEffectsPLUS:
     m_scale: false
     m_childTransform: ''
   Hold_Start_Effects: []
-  Trigger_Effect:
-  - 
+  Trigger_Effect: []
   Trail_Effect: []

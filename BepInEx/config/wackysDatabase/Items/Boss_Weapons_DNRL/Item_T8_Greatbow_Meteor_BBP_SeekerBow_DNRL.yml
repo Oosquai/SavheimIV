@@ -48,7 +48,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: projectile_ashlandmeteor2
-  SpawnOnHit_Chance: 0.666
+  SpawnOnHit_Chance: 0.69
   Attack_status_effect: SE_Savheim_Hamstring_Greatbow
   Attack_status_effect_chance: 1
   Attack_Projectile: 
@@ -142,7 +142,7 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 76
+  Pierce: 87
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -154,7 +154,7 @@ Damage_Per_Level:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 3
+  Pierce: 4
   Poison: 0
   Slash: 0
   Spirit: 0
@@ -177,7 +177,7 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 23
+  m_blockPower: 24
   m_blockPowerPerLevel: 1
   m_timedBlockBonus: 1.5
   m_deflectionForce: 0
@@ -197,7 +197,7 @@ m_knockback: 0
 m_useDurability: true
 m_useDurabilityDrain: 2
 m_durabilityDrain: 0
-m_maxDurability: 200
+m_maxDurability: 250
 m_durabilityPerLevel: 100
 m_equipDuration: 0
 Attach_Override: Shield

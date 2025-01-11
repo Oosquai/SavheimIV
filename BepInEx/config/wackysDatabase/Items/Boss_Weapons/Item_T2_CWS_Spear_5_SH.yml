@@ -110,7 +110,7 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Attack_status_effect: SE_Savheim_PinnedLightning
-  Attack_status_effect_chance: 1
+  Attack_status_effect_chance: 0.6
   Attack_Projectile: CWS_Spear_5_Projectile
   Projectile_Vel: 60
   Projectile_Accuraccy: 1

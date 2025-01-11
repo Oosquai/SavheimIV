@@ -5,12 +5,12 @@ m_description: $item_stafffireball_description  The secondary attack ignites wil
 clonePrefabName: StaffFireball
 mockName: 
 customIcon: 
-material: staffs_mat_dnrl
+material: 
 materials: 
 customVisual: 
 snapshotRotation: 
 snapshotOnMaterialChange: true
-sizeMultiplier: 1
+sizeMultiplier: 1.1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Projectile
@@ -20,7 +20,7 @@ Primary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 24
+  m_eitrCost: 32
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
@@ -85,7 +85,7 @@ Secondary_Attack:
   Hit_Terrain: true
   Custom_AttackSpeed: 1.8
   m_attackStamina: 0
-  m_eitrCost: 48
+  m_eitrCost: 64
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.2
@@ -159,16 +159,27 @@ Secondary_Attack:
       m_randomRotation: false
       m_scale: false
       m_childTransform: ''
+    - name: sfx_FireAddFuel
+      m_enabled: true
+      m_variant: -1
+      m_attach: false
+      m_follow: true
+      m_inheritParentRotation: false
+      m_inheritParentScale: false
+      m_multiplyParentVisualScale: false
+      m_randomRotation: false
+      m_scale: false
+      m_childTransform: ''
     Hit_Terrain_Effects: []
     Start_Effect: []
     Trigger_Effect: []
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 42
+  Blunt: 56
   Chop: 0
   Damage: 0
-  Fire: 126
+  Fire: 168
   Frost: 0
   Lightning: 0
   Pickaxe: 0
@@ -177,10 +188,10 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 2
+  Blunt: 3
   Chop: 0
   Damage: 0
-  Fire: 7
+  Fire: 8
   Frost: 0
   Lightning: 0
   Pickaxe: 0

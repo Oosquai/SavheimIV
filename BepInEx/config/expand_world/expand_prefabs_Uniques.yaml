@@ -10,6 +10,8 @@
   type: create
   objects:
   - sfx_imp_fireball_explode, 0.1
+  bannedObjects:
+  - sfx_FireAddFuel, 0.1
   poke:
   - prefab: creature
     maxDistance: 2
@@ -31,6 +33,34 @@
     maxDistance: 6
     limit: 3
     parameter: p_stafffireball_secondary <randf_4_6> <randf_4_6> <randf_1_1.5>
+
+# DNRL version
+- prefab: sfx_GoblinShaman_fireball_launch
+  type: create
+  objects:
+  - sfx_imp_fireball_explode, 0.1
+  - sfx_FireAddFuel, 0.1
+  poke:
+  - prefab: creature
+    maxDistance: 2
+    limit: 3
+    parameter: p_stafffireball_secondary_dnrl <randf_6_8> <randf_6_8> <randf_1_1.5>
+
+- prefab: creature
+  type: poke, p_stafffireball_secondary_dnrl
+  weight: 0.5
+  spawns:
+  - fx_batteringram_fire
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=<par1> damage=<par2>  # need true damage to avoid infinite loops on fire-immune enemies
+  poke:
+  - prefab: creature
+    delay: <par3>
+    minDistance: 0.1
+    maxDistance: 6
+    limit: 3
+    parameter: p_stafffireball_secondary <randf_6_8> <randf_6_8> <randf_1_1.5>
 
 #############################
 # Staff of Myrkyr secondary:  outbreak (spreading vomit)
@@ -209,6 +239,46 @@
     limit: 2
     parameter: p_staff_clusterbomb_afflict
 
+# DNRL version
+- prefab: Player
+  type: state, battleaxe_attack2
+  filter: d_staff_fracturing_dnrl
+  delay: 0.5
+  spawns:
+  - fx_siegebomb_explosion
+  poke:
+  - prefab: creature
+    delay: 0.5
+    maxDistance: 5
+    limit: 3
+    parameter: p_staff_clusterbomb_afflict_dnrl
+
+- prefab: creature
+  type: poke, p_staff_clusterbomb_afflict_dnrl
+  spawns:
+  - sfx_gjall_idle_shiver
+  - fx_clusterbombstaff_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, blunt=<randi_30_34> fire=<randi_30_34>
+  poke:
+  - prefab: creature
+    delay: 5.6
+    maxDistance: 0.1
+    limit: 1
+    parameter: p_staff_clusterbomb_expire_dnrl
+
+- prefab: creature
+  type: poke, p_staff_clusterbomb_expire_dnrl
+  spawns:
+  - fx_siegebomb_explosion
+  poke:
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 8
+    limit: 2
+    parameter: p_staff_clusterbomb_afflict_dnrl
+
 ###############################################################
 # Unique Weapon Effects
 ###############################################################
@@ -268,9 +338,65 @@
   - name: RPC_Damage
     1: hit, blunt=<randi_8_10> fire=<randi_42_48>
 
+# DNRL version
+- prefab: Player
+  type: state, staff_summon
+  filter: gear_sanctis_flame_dnrl
+  spawn: fx_DvergerMage_Mistile_attack
+  delay: 0.2
+  poke:
+  - prefab: creature
+    data: not_tamed_uniques
+    parameter: p_sanctis_fireAE_dnrl
+    maxDistance: 4
+    limit: 5
+    delay: 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+    delay: 0.3
+
+- prefab: creature
+  type: poke, p_sanctis_fireAE_dnrl
+  filter: not_tamed_uniques
+  spawn: fx_clusterbombstaff_splinter_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, blunt=<randi_18_21> fire=<randi_94_104>
+  poke:
+  - prefab: creature
+    parameter: p_sanctis_fireAE_spread_randDelay_dnrl
+    minDistance: 0.1
+    maxDistance: 4
+    limit: 3
+
+- prefab: creature
+  type: poke, p_sanctis_fireAE_spread_randDelay_dnrl
+  poke:
+  - self: true
+    delay: 0.4
+    parameter: p_sanctis_fireAE_spread_DNRL
+
+- prefab: creature
+  type: poke, p_sanctis_fireAE_spread_randDelay_dnrl
+  poke:
+  - self: true
+    delay: 0.8
+    parameter: p_sanctis_fireAE_spread_dnrl
+
+- prefab: creature
+  type: poke, p_sanctis_fireAE_spread_dnrl
+  spawn: fx_clusterbombstaff_splinter_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, blunt=<randi_9_11> fire=<randi_46_52>
+
 ######################
 # Stormpiercer Spear
-- prefab: CWS_Spear_5_SH
+- prefab: CWS_Spear_5_SH, CWS_Spear_5_SH_DNRL
   type: create
   objects:
   - fx_chainlightning_hit, 1
@@ -327,6 +453,30 @@
   - name: RPC_Damage
     1: hit, fire=<randi_19_23>
 
+# DNRL version
+- prefab: Player
+  type: poke, PlayerBlock
+  filter: towerShieldListFire_dnrl
+  spawns:
+  - vfx_kiln_addore
+  - sfx_kiln_addore, 0,0,0, 0,0,0, runefang_eitr_pitch
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_TowerShield_HP_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+  poke:
+  - prefab: creature
+    maxDistance: 3
+    parameter: p_shield_tower_fire_dnrl
+
+- prefab: creature
+  type: poke, p_shield_tower_fire_dnrl
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=<randi_21_25>
+
 ######################
 # Mace Torch
 - prefab: fx_fireball_staff_explosion
@@ -363,6 +513,41 @@
   - name: RPC_Damage
     1: hit, fire=<randi_15_17>
 
+# DNRL version
+- prefab: fx_fireball_staff_explosion
+  type: create
+  objects:
+  - Player, 3, d_mace_torch_dnrl
+  - sfx_club_hit, 0.5
+  poke:
+  - prefab: creature
+    minDistance: 0.1
+    maxDistance: 3
+    limit: 2
+    delay: 0.4
+    parameter: p_mace_torch_explosions_dnrl
+  - prefab: creature
+    maxDistance: 0.1
+    limit: 1
+    parameter: p_mace_torch_extra_fire_dnrl
+
+- prefab: creature
+  type: poke, p_mace_torch_explosions_dnrl
+  filters:
+  - int, tamed_uniques, 0
+  spawn: sfx_GoblinShaman_fireball_launch
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=<randi_22_26>
+
+- prefab: creature
+  type: poke, p_mace_torch_extra_fire_dnrl
+  filters:
+  - int, tamed_uniques, 0
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, fire=<randi_30_34>
+
 ######################
 # Poison Atgeir
 - prefab: vfx_GuckSackHit
@@ -374,33 +559,7 @@
   - prefab: creature
     maxDistance: 0.1
     limit: 1
-    parameter: p_poison_atgeir_puke_randDelay
-
-- prefab: creature
-  type: poke, p_poison_atgeir_puke_randDelay
-  poke:
-  - prefab: creature
-    maxDistance: 0.1
-    limit: 1
-    delay: 0.5
-    parameter: p_poison_atgeir_puke
-
-- prefab: creature
-  type: poke, p_poison_atgeir_puke_randDelay
-  poke:
-  - prefab: creature
-    maxDistance: 0.1
-    limit: 1
-    delay: 1
-    parameter: p_poison_atgeir_puke
-
-- prefab: creature
-  type: poke, p_poison_atgeir_puke_randDelay
-  poke:
-  - prefab: creature
-    maxDistance: 0.1
-    limit: 1
-    delay: 1.5
+    delay: <randf_0.5_1.5>
     parameter: p_poison_atgeir_puke
 
 - prefab: creature
@@ -412,9 +571,7 @@
   - name: RPC_Damage
     1: hit, status=Poison_Atgeir_Puke_SH
   poke:
-  - prefab: creature
-    maxDistance: 0.1
-    limit: 1
+  - self: true
     delay: 3
     parameter: p_poison_atgeir_haze
 
@@ -426,9 +583,7 @@
   - name: RPC_Damage
     1: hit, status=Poison_Atgeir_Haze_SH
   poke:
-  - prefab: creature
-    maxDistance: 0.1
-    limit: 1
+  - self: true
     delay: 1.6
     parameter: p_poison_atgeir_burst
 
@@ -443,6 +598,57 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, damage=<randi_25_29>
+    delay: 0.4
+
+# DNRL version
+- prefab: vfx_GuckSackHit
+  type: create
+  objects:
+  - Player, 3, d_poison_atgeir_dnrl
+  - sfx_spear_hit, 0.5
+  poke:
+  - prefab: creature
+    maxDistance: 0.1
+    limit: 1
+    delay: <randf_0.5_1.5>
+    parameter: p_poison_atgeir_puke_dnrl
+
+- prefab: creature
+  type: poke, p_poison_atgeir_puke_dnrl
+  filters:
+  - int, tamed_uniques, 0
+  spawn: vfx_poisonarrow_hit
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Poison_Atgeir_Puke_SH
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_poison_atgeir_haze_dnrl
+
+- prefab: creature
+  type: poke, p_poison_atgeir_haze_dnrl
+  filters:
+  - int, tamed_uniques, 0
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, status=Poison_Atgeir_Haze_SH
+  poke:
+  - self: true
+    delay: 1.6
+    parameter: p_poison_atgeir_burst_dnrl
+
+- prefab: creature
+  type: poke, p_poison_atgeir_burst_dnrl
+  filters:
+  - int, tamed_uniques, 0
+  spawns:
+  - sfx_wraith_hit, 0,0,0, 0,0,0, d_empty_data_uniques, 0.2
+  - vfx_GuckSackHit, 0,0,1.5, 0,0,0, d_empty_data_uniques, 0.4
+  - sfx_troll_hit, 0,0,0, 0,0,0, d_empty_data_uniques, 0.4
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=<randi_50_58>
     delay: 0.4
 
 ######################
@@ -659,7 +865,7 @@
   - Ulv_VFX, 0,0,1, 0,0,0, purple_axe_low_pitch
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=<randi_12_14>
+    1: hit, damage=<randi_12_16>
   - name: RPC_Stagger
     1: vec, <par1>
   poke:
@@ -709,6 +915,31 @@
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Runefang_Eitr_Regen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+# DNRL version
+- prefab: fx_crit, fx_backstab
+  type: create
+  objects:
+  - Player, 2, d_runefang_knife_dnrl
+  - sfx_jc_arrow_hit, 1
+  poke:
+  - prefab: Player
+    maxDistance: 3
+    limit: 1
+    delay: 0.3
+    data: d_runefang_knife
+    parameter: p_runefang_eitr_dnrl
+
+- prefab: Player
+  type: poke, p_runefang_eitr_dnrl
+  spawns:
+  - fx_GoblinShieldHit, 0,0,1, 0,0,0, runefang_eitr_pitch
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Runefang_Eitr_Regen_DNRL
     2: bool, true
     3: int, 1
     4: float, 1
@@ -786,7 +1017,7 @@
   spawn: fx_iceshard_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_12_14>
+    1: hit, frost=<randi_12_16>
 
 #####################
 # Ravenclaws, T2 claws
@@ -823,15 +1054,31 @@
 - prefab: vfx_poisonarrow_hit                    # spawn-on-hit chance for unique knife
   type: create
   objects:
-  - Player, 3, d_gear_unique_knife_t2            # player with unique t2 knife in melee range?
+  - Player, 6, d_gear_unique_knife_t2            # player with unique t2 knife in melee range?
   bannedObjects:
-  - fx_jotunbane_hit, 3                          # prevent back to back triggers
+  - fx_jotunbane_hit, 6                          # prevent back to back triggers
+  - Player, 6, d_gear_unique_knife_t2_dnrl       # scale to higher dmg if both nearby
+  bannedObjectsLimit: 1
   poke:
   - prefab: creature
     data: not_tamed_uniques
     limit: 1
     maxDistance: 1
-    parameter: p_unique_knife_toxin_init
+    parameter: p_unique_knife_toxin_init 1.5 3.2 # min and max dmg per tick
+
+# DNRL version
+- prefab: vfx_poisonarrow_hit                    # spawn-on-hit chance for unique knife
+  type: create
+  objects:
+  - Player, 6, d_gear_unique_knife_t2_dnrl       # player with unique t8 knife in melee range?
+  bannedObjects:
+  - fx_jotunbane_hit, 6                          # prevent back to back triggers
+  poke:
+  - prefab: creature
+    data: not_tamed_uniques
+    limit: 1
+    maxDistance: 1
+    parameter: p_unique_knife_toxin_init 8.5 10.5 # min and max dmg per tick
 
 # skip poison-immune creatures
 - prefab: Skeleton, Skeleton_Poison, Ghost, TentaRoot, Skeleton_Hildir, gd_king, Abomination, Blob, BlobElite, Draugr, Draugr_Elite, Wraith, Bonemass, StoneGolem, Bat, BlobTar, GoblinKing, Charred_Archer, Charred_Twitcher, Charred_Mage, Charred_Melee, FallenValkyrie, Volture
@@ -842,27 +1089,31 @@
   type: poke, p_unique_knife_toxin_init
   filter: int, i_unique_knife_toxin_cnt, 1;99999 # toxin already ticking on creature - add stack without starting decrement loop
   objects:
-  - sfx_knife_swing, 3                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
+  - sfx_knife_swing, 6                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
   data: d_unique_knife_toxin_cnt_extend
   injectData: true
-  spawn: fx_jotunbane_hit, 0,0,1
+  spawns:
+  - fx_jotunbane_hit, 0,0,1
+  - sfx_Poison_Start
   poke:
   - self: true
     delay: 1
-    parameter: p_unique_knife_toxin_loop <randf_1_3>  # random tick damage per stack
+    parameter: p_unique_knife_toxin_loop <randf_<par1>_<par2>>  # random tick damage per stack
 
 - prefab: creature
   type: poke, p_unique_knife_toxin_init
   fallback: true                                 # no toxin on creature yet - same as above but also start decrement loop
   objects:
-  - sfx_knife_swing, 3                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
+  - sfx_knife_swing, 6                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
   data: d_unique_knife_toxin_cnt_extend
   injectData: true
-  spawn: fx_jotunbane_hit, 0,0,1
+  spawns:
+  - fx_jotunbane_hit, 0,0,1
+  - sfx_Poison_Start
   poke:
   - self: true
     delay: 1
-    parameter: p_unique_knife_toxin_loop <randf_1_3>
+    parameter: p_unique_knife_toxin_loop <randf_<par1>_<par2>>
   - self: true
     delay: 1
     parameter: p_unique_knife_toxin_loop_decrement

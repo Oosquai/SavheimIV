@@ -212,10 +212,6 @@
   hashes:
   - RightItem, CWS_Sword_12_SH
 
-- name: gear_sanctis_flame
-  hashes:
-  - RightItem, CWS_Sword_6_SH
-
 ####################################
 # Reapers
 - name: d_reaper_list

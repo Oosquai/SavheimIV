@@ -66,7 +66,7 @@ Primary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Secondary_Attack:
-  AttackType: Horizontal
+  AttackType: Area
   Attack_Animation: knife_secondary
   Attack_Random_Animation: 0
   Chain_Attacks: 0
@@ -93,7 +93,7 @@ Secondary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 0.5
+  Attack_Ray_Width: 2
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true

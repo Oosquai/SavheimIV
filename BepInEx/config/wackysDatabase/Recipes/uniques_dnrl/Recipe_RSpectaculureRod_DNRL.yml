@@ -1,0 +1,14 @@
+name: RSpectaculureRod_DNRL
+clonePrefabName: SpectaculureRod_DNRL
+craftingStation: $piece_workbench
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: true
+disabledUpgrade: true
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- FlametalNew:1:0:True
+- FaderDrop:1:0:True

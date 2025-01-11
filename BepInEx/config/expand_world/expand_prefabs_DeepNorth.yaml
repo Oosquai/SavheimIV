@@ -1502,37 +1502,38 @@
   type: create
   biomes: DeepNorth
   data: dn_mob_group_patrol
-#  injectData: true    # need this in order to poke to adjust stars
+#  injectData: true    # need this in order to poke to adjust stars?
   poke:
   - self: true
     delay: 0.1
     parameter: p_creature_level_up_dn <vLevelUp3Dn>
 
-# If player threatens forest, % chance to aggravate/hunt patrols within range
+# If player threatens forest, % chance to aggravate/hunt patrols within range.
 # Attack tree, rock, or ground.  Pick pickables.
-# Asksvin always core spawn of patrol groups (see SpawnThat! configs).
-# Poke leader with % chance, then have leader poke group.
-# This way patrols move together, but different patrols agro at different times.
+# Want patrols to move together, but want % chance to agro different groups.
+# Poke all creatures within range with low chance.  If any trigger, poke immediate group.  Redudancy Ok, since setting same data.
 - prefab: sfx_tree_hit, sfx_rock_hit, sfx_pickaxe_hit, sfx_pickable_pick
   type: create
   biomes: DeepNorth
   poke:
-  - prefab: Asksvin
-    maxDistance: 200
-    parameter: p_dn_patrol_aggravate_leader
-
-- prefab: Asksvin
-  type: poke, p_dn_patrol_aggravate_leader
-  biomes: DeepNorth
-  weight: 0.3
-  poke:
   - prefab: creature
-    maxDistance: 30
-    limit: 10
-    parameter: p_dn_patrol_aggravate
+    data: dn_mob_group_patrol
+    maxDistance: 200
+    parameter: p_dn_patrol_aggravate_individual
 
 - prefab: Asksvin, Dverger, DvergerMage, Volture
-  type: poke, p_dn_patrol_aggravate
+  type: poke, p_dn_patrol_aggravate_individual
+  biomes: DeepNorth
+  weight: 0.1
+  poke:
+  - prefab: creature
+    data: dn_mob_group_patrol
+    maxDistance: 30
+    limit: 10
+    parameter: p_dn_patrol_aggravate_group
+
+- prefab: Asksvin, Dverger, DvergerMage, Volture
+  type: poke, p_dn_patrol_aggravate_group
   biomes: DeepNorth
   data: dn_mob_group_patrol_aggravated
 
@@ -1558,6 +1559,15 @@
     1: enum_message, Center
     2: string, <vDnPatrolShouts>
     3: int, 0
+
+#############################################################
+# Summoned Trolls
+- prefab: Troll_Summoned
+  type: poke, p_dn_summoned_troll
+  biomes: DeepNorth
+  bannedObjects:
+  - Player, 40
+  data: d_dn_summoned_troll
 
 ########################################################################
 # DEBUG

@@ -5,7 +5,7 @@ m_description: This unique tower shield grants a lingering resistance to poison 
 clonePrefabName: CWS_Tower_Shield_3
 mockName: 
 customIcon: 
-material: Weapon_t8_dnrl 
+material: Weapon2_t8_dnrl 
 materials: 
 customVisual: 
 snapshotRotation: 
@@ -174,8 +174,8 @@ Moddifiers:
 SE_Equip: 
 SE_SET_Equip: 
 ShieldStats:
-  m_blockPower: 76
-  m_blockPowerPerLevel: 4
+  m_blockPower: 218
+  m_blockPowerPerLevel: 6
   m_timedBlockBonus: 0
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
