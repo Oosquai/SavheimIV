@@ -1180,7 +1180,7 @@
     parameter: p_dnrl_remove_random_delay
 
 # remove spawns from roguelite creatures
-- prefab: Blob, SeekerBrood, Charred_Twitcher, Charred_Twitcher_Summoned, Tick
+- prefab: Blob, SeekerBrood, Charred_Twitcher, Charred_Twitcher_Summoned, Tick, TentaRoot, Charred_Melee_Fader, Charred_Archer_Fader
   type: poke, p_dnrl_remove_creature
   biomes: DeepNorth
   poke:
@@ -1221,6 +1221,7 @@
     data: dn_deer_ragdoll
     limit: 1
     maxDistance: 100
+    delay: 5                                     # make sure data set on player when starting event
     parameter: p_dnrl_cleanup_deer_ragdoll_abandoned
 
 ####################################
@@ -1257,7 +1258,7 @@
   data: dn_deer
 
 # for creatures spawned by other creatures
-- prefab: Blob, SeekerBrood, Charred_Twitcher, Charred_Twitcher_Summoned, Tick
+- prefab: Blob, SeekerBrood, Charred_Twitcher, Charred_Twitcher_Summoned, Tick, TentaRoot, Charred_Melee_Fader, Charred_Archer_Fader
   type: create
   biomes: DeepNorth
   data: dn_mob_group_no_loot
@@ -1593,6 +1594,7 @@
   objectsLimit: 1
   bannedObjects:
   - Player, 100, d_player_roguelite_on
+  - Troll_Summoned, 30, d_dn_summoned_troll
   weight: 0.03                                   ### CHANCE TO SPAWN
   spawns:
   - fx_summon_twitcher_spawn, 5,20,snap
