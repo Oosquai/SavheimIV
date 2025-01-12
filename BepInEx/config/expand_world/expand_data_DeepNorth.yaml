@@ -166,14 +166,50 @@
   ints:
   - level, 1
   - CL&LC infusion, 0
+  - Character.m_aiSkipTarget, 1
   strings:
   - Character.m_name, Spirit of the Forest
   - Humanoid.m_group, dn_mobs
 
 - name: d_dn_summoned_troll
+  ints:
+  - i_dn_summoned_troll, 1
+  - level, <vgDnSummonedTrollLevels>
   strings:
   - Humanoid.m_name, Wrath of the Forest
-  - Humanoid.m_group, dn_mobs
+  floats:
+  - Humanoid.m_runSpeed, 7                       # 6
+  - MonsterAI.m_alertRange, 200                  # 20
+  - MonsterAI.m_viewRange, 200                   # 30
+  - MonsterAI.m_viewAngle, 360                   # 90
+  - MonsterAI.m_hearRange, 9999                  # 9999
+
+- valueGroup: vgDnSummonedTrollLevels
+  values:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 3
+  - 3
+  - 3
+  - 3
+  - 4
+  - 4
+  - 4
+  - 5
+  - 5
+  - 6
 
 - name: dn_mob_group
   ints:
@@ -241,9 +277,7 @@
   - <#009FFF>We speak for the trees!
   - <#009FFF>We protect the forest!
   - <#009FFF>Violence against these sacred lands will not be tolerated!
-  - <#009FFF>How about I do to your neck like you just did to that flower?!
-  - <#009FFF>You think it's fun smashing rocks?  I feel the same about yer head!
-  - <#009FFF>You make holes in my ground, I make holes in yer chest!
+  - <#009FFF>You and that filthy pickaxe will pay for your crimes!
 
 - name: dn_mob_group_no_loot
   ints:
@@ -721,9 +755,11 @@
   - GemstoneBlue
   - GemstoneGreen
   - GemstoneRed
+
+- valueGroup: vgBlessedScrollsSDn
+  values:
   - kg_EnchantScroll_Weapon_Blessed_S
   - kg_EnchantScroll_Armor_Blessed_S
-  - DraumheimEssence
 
 ######################################
 - name: d_againFlying_dn

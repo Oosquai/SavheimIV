@@ -198,7 +198,7 @@
     parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
 
 # Elites
-- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen
+- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen, Troll_Summoned
   type: poke, p_elemental_wet_frost
   poke:
   - self: true

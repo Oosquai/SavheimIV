@@ -203,6 +203,7 @@
   scaleMax: 2
   chanceToUseGroundTilt: 1
   biome: DeepNorth
+  biomeArea: median
   maxAltitude: 1000
   maxOceanDepth: 2
   maxTilt: 45

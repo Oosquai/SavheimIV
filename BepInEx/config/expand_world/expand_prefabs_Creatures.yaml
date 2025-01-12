@@ -1022,13 +1022,13 @@
 - prefab: fx_RootAshlands
   type: create
   poke:
-  - prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen
+  - prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen, Troll_Summoned
     maxDistance: 1
     limit: 1
     parameter: p_creature_root_resist
 
 # Immune to root so long as vfx_Smoked persists (handles reapplications, since SE won't trigger fx_RootAshlands again until it falls off)
-- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Skeleton_Hildir, Fenring_Cultist_Hildir, GoblinBruteBros, GoblinShaman_Hildir, GoblinBrute_Hildir, Charred_Melee_Dyrnwyn, FallenValkyrie, Ghost, Serpent, BonemawSerpent, Wraith, Hatchling, Bat, Deathsquito, Gjall, Volture, Troll, Abomination, StoneGolem, GoblinBrute, Morgen, Troll_Summoned
   type: poke, p_creature_root_resist
   objects:
   - vfx_Smoked, 0.1

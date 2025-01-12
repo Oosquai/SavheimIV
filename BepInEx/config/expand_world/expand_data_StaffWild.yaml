@@ -50,8 +50,8 @@
   - Humanoid.m_aiSkipTarget, 1
   floats:
   - RandomSkillFactor, 0.6
-  - max_health, 269
-  - health, 269.01
+  - max_health, 129
+  - health, 129.01
 
 - name: d_tentaroot_t5
   ints:
@@ -59,8 +59,8 @@
   - Humanoid.m_aiSkipTarget, 1
   floats:
   - RandomSkillFactor, 0.4
-  - max_health, 169
-  - health, 169.01
+  - max_health, 79
+  - health, 79.01
 
 - name: d_tentaroot_t3
   ints:
@@ -68,8 +68,8 @@
   - Humanoid.m_aiSkipTarget, 1
   floats:
   - RandomSkillFactor, 0.2
-  - max_health, 69
-  - health, 69.01
+  - max_health, 29
+  - health, 29.01
 
 ##########################################
 # Stacks and Tick Counts

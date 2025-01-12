@@ -79,7 +79,7 @@ jobs:
 # For people who like to leave a Campfire outside every dungeon in the world.
 # Player_tombstone will still block soft resets though.
 # Clean up extra mob spawns.  Some of these spawn with locations, so this process intentionally run right before resetting locations
-  - command: objects_remove Hatchling,Serpent,BonemawSerpent,Deer,Wraith,Bat,Skeleton,Skeleton_Poison,Skeleton_Hildir,Deathsquito,Goblin,GoblinShaman,Ulv,Charred_Twitcher,Seagal,Crow,Volture force start
+  - command: objects_remove Hatchling,Serpent,BonemawSerpent,Deer,Wraith,Bat,Skeleton,Skeleton_Poison,Skeleton_Hildir,Deathsquito,Goblin,GoblinShaman,Ulv,Charred_Twitcher,Charred_Twitcher_Summoned,Seagal,Crow,Volture,Asksvin,Dverger,DvergerMage,Troll_Summoned force start
     schedule: "5 12 1,5,9,13,17,21,25,29 * *"
 
 # Soft location resets (skip player bases) - Vanilla locations

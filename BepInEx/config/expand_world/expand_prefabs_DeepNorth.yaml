@@ -2,7 +2,7 @@
 # Savheim Deep North - prefabs
 # REQUIRES
 # - expand_prefabs_Creatures (gear_buff)
-# - expand_prefabs_Uniques (loot!)
+# - expand_prefabs_Uniques (loot!  and d_purple_battleaxe)
 ########################################################################
 # Killing a deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
@@ -79,7 +79,7 @@
   - prefab: stone_marker_savheim_dn
     maxDistance: 5
     limit: 1
-    delay: 8
+    delay: 9
     parameter: p_dnrl_weather
 
 - prefab: deer_ragdoll
@@ -125,7 +125,7 @@
     delay: 6.5
   poke:  
   - self: true               # initial entry into spawner loop
-    delay: <randi_12_16>     # randomized startup delay so different players have uniquely timed spawn loops
+    delay: <randi_13_16>     # randomized startup delay so different players have uniquely timed spawn loops
     parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - self: true               # start player cleanup loop
     delay: 1                 # wait for data
@@ -1197,10 +1197,31 @@
     delay: <randf_0.5_1.5>
     parameter: p_dnrl_remove_random_delay
 
-- prefab: creature, ItemDrop, stone_marker_savheim_dn
+- prefab: creature, ItemDrop
   type: poke, p_dnrl_remove_random_delay
   spawn: vfx_corpse_destruction_small
   remove: true
+
+- prefab: stone_marker_savheim_dn
+  type: poke, p_dnrl_remove_random_delay
+  remove: true
+
+# failsafe removal of deer and roguelite mobs if players nearby but none flagged dnrl.  example - logout cheese.
+- prefab: Player
+  type: state, *
+  biomes: DeepNorth
+  filter: d_player_roguelite_off
+  objects:
+  - deer_ragdoll, 100, dn_deer_ragdoll
+  bannedObjects:
+  - Player, 100, d_player_roguelite_on
+  fallback: true
+  poke:
+  - prefab: deer_ragdoll
+    data: dn_deer_ragdoll
+    limit: 1
+    maxDistance: 100
+    parameter: p_dnrl_cleanup_deer_ragdoll_abandoned
 
 ####################################
 # Clear state if player dies and releases.
@@ -1509,10 +1530,10 @@
   data: dn_mob_group_patrol_not_dverger
 
 # If player threatens forest, % chance to aggravate/hunt patrols within range.
-# Attack tree, rock, or ground.  Pick pickables.
+# Attack tree, rock, or ground.
 # Want patrols to move together, but want % chance to agro different groups.
 # Poke all creatures within range with low chance.  If any trigger, poke immediate group.  Redudancy Ok, since setting same data.
-- prefab: sfx_tree_hit, sfx_rock_hit, sfx_pickaxe_hit, sfx_pickable_pick
+- prefab: sfx_tree_hit, sfx_rock_hit, sfx_pickaxe_hit
   type: create
   biomes: DeepNorth
   bannedObjects:
@@ -1563,24 +1584,61 @@
 
 #############################################################
 # Summoned Trolls
-- prefab: Troll_Summoned
-  type: poke, p_dn_summoned_troll
+- prefab: sfx_tree_fall, sfx_wood_break, sfx_rock_destroyed
+  type: create
   biomes: DeepNorth
+  objects:
+  - sfx_tree_hit, 10
+  - sfx_rock_hit, 10
+  objectsLimit: 1
   bannedObjects:
-  - Player, 40
-  data: d_dn_summoned_troll
+  - Player, 100, d_player_roguelite_on
+  weight: 0.03                                   ### CHANCE TO SPAWN
+  spawns:
+  - fx_summon_twitcher_spawn, 5,20,snap
+  - sfx_bonemaw_serpent_spit, 5,20,snap
+  - fx_summon_troll, 5,20,snap, 1
+  - fx_fireball_staff_explosion, 5,20,snap, 2
+  - Troll_Summoned, 5,20,snap, 2.2, d_dn_summoned_troll
 
 - prefab: Troll_Summoned
   type: destroy
   biomes: DeepNorth
-  filter: d_dn_summoned_troll
+  filter: int, i_dn_summoned_troll, 1
   weight: 1E30
   poke:
   - self: true
-    parameter: p_troll_summoned_loot <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgTrollSummonedLoot>
+    parameter: p_troll_summoned_loot <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgTrollSummonedLoot> <vgBlessedScrollsSDn>
 
+# 0 star
 - prefab: Troll_Summoned
   type: poke, p_troll_summoned_loot
+  filter: int, level, 0;1
+  spawns:
+  - Charredskull
+  - CharredBone
+  - <par1>
+  - <par2>
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+# 1 star
+- prefab: Troll_Summoned
+  type: poke, p_troll_summoned_loot
+  filter: int, level, 2
+  spawns:
+  - Charredskull
+  - CharredBone
+  - <par1>
+  - <par2>
+  - <par3>
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+# 2 star
+- prefab: Troll_Summoned
+  type: poke, p_troll_summoned_loot
+  filter: int, level, 3
   spawns:
   - Charredskull
   - CharredBone
@@ -1588,24 +1646,60 @@
   - <par2>
   - <par3>
   - <par4>
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+# 3 star
+- prefab: Troll_Summoned
+  type: poke, p_troll_summoned_loot
+  filter: int, level, 4
+  spawns:
+  - Charredskull
+  - CharredBone
+  - <par1>
+  - <par2>
+  - <par3>
+  - <par4>
+  - DraumheimEssence
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+# 4 star
+- prefab: Troll_Summoned
+  type: poke, p_troll_summoned_loot
+  filter: int, level, 5
+  spawns:
+  - Charredskull
+  - CharredBone
+  - <par1>
+  - <par2>
+  - <par3>
+  - <par4>
+  - DraumheimEssence
+  - <par5>
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+# 5+ star
+- prefab: Troll_Summoned
+  type: poke, p_troll_summoned_loot
+  filter: int, level, 6;99
+  spawns:
+  - Charredskull
+  - CharredBone
+  - <par1>
+  - <par2>
+  - <par3>
+  - <par4>
+  - DraumheimEssence
+  - <par5>
+  - MoltenCore
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 ########################################################################
 # DEBUG
 ########################################################################
-#- prefab: Player
-#  type: say, rl_set
-#  data: d_player_roguelite_start
-#  injectData: true
-#  command: s roguelite status ON
-#- prefab: Player
-#  type: say, rl_clear
-#  data: d_player_roguelite_clear
-#  injectData: true
-#  command: s roguelite status OFF
-#  poke:
-#  - prefab: deer_ragdoll
-#    maxDistance: 100
-#    parameter: p_dnrl_victory_remove_deer_ragdoll
 #- prefab: Player
 #  type: say, rl_stats
 #  command: s State <int_i_player_roguelite_on> Wave <int_i_player_roguelite_wave> Kills <int_i_player_roguelite_kills> BKills <int_i_player_roguelite_boss_kills> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns>  # DEBUG
@@ -1622,21 +1716,3 @@
 #  type: say, rl_t8
 #  data: d_player_roguelite_tier_8
 #  injectData: true
-
-##############################
-# NOTES
-# Need to add roaming guardians, inquisitors, and deer!  Hearing range 100 for patrols.
-#   God weapon:  secondary casts shield, value scales with Swords.  if shielded, secondary is skybreaker + blackhole + FX.  if FX, primary applies VeryWeak Slash + Slow.  Uses eitr + stam.  fast attack 1h or 2h sword versions.  CWS_Sword_1 / CWS_TH_Sword_5 (recolor green or blue?)?
-#   Odin's gifts throughout previous zones are temporal/ethereal versions of them.
-#   Purity, Serenity, Tranquility?  synonyms...
-#   Bind on Equip??
-# Make ancient loot, including buff weapons, odin weapons.
-# Finish loot tables for mini-bosses.
-# Test unique battleaxe that siphons souls
-
-# Multiplayer Testing
-# 1) Difficulty (should have trash per player, but same number of bosses)
-# 2) Resurrect does not clear roguelite state, nor trigger end broadcast?
-# 3) Loot for only one player?
-# 4) players entering late should get tagged with roguelite, to prevent cheesing
-# 5) At startup, only broadcast goes to all.  RPC_Message goes only to local player.

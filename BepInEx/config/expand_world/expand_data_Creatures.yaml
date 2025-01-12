@@ -211,6 +211,7 @@
   - MonsterAI.m_hearRange, 100                   # 30
   strings:
   - Humanoid.m_name, Blazing Wight
+  - Humanoid.m_group, dn_mobs
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -232,6 +233,7 @@
   - MonsterAI.m_hearRange, 100                   # 30
   strings:
   - Humanoid.m_name, Frigid Wight
+  - Humanoid.m_group, dn_mobs
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -252,6 +254,7 @@
   - MonsterAI.m_hearRange, 100                   # 30
   strings:
   - Humanoid.m_name, Verdant Wight
+  - Humanoid.m_group, dn_mobs
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 

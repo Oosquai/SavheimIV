@@ -417,7 +417,7 @@
 ##########################
 # Some creatures don't bleed
 # Intercept with no-op
-- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Morgen, Troll_Summoned
+- prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Charred_Twitcher_Summoned, Morgen, Troll_Summoned
   type: poke, p_sword_bleed_hp
   weight: 1E30
 
@@ -1623,7 +1623,7 @@
     parameter: p_vortex_arrow_pull_calc <x> <z> <randi_6_9> 0
 
 # no-op for enemies immune to vortex
-- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader, Troll, Abomination, Serpent, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen, Troll_Summoned
   type: poke, p_vortex_arrow_pull_calc
   weight: 1E30
 
