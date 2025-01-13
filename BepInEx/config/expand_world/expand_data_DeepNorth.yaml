@@ -20,6 +20,13 @@
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
 
+- name: d_sfx_half_volume_dn
+  ints:
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0.5
+  - ZSFX.m_maxVol, 0.5
+
 - name: d_sfx_low_pitch_dn
   floats:
   - ZSFX.m_minPitch, 0.5
@@ -169,7 +176,7 @@
   - Character.m_aiSkipTarget, 1
   strings:
   - Character.m_name, Spirit of the Forest
-  - Humanoid.m_group, dn_mobs
+  - Humanoid.m_group, dn_mobs_peaceful
 
 - name: d_dn_summoned_troll
   ints:
@@ -235,30 +242,22 @@
   - MonsterAI.m_attackPlayerObjects, 0
   strings:
   - Humanoid.m_name, Guardian of the Forest
-  - Humanoid.m_group, dn_mobs
-  floats:
-  - MonsterAI.m_alertRange, 200
-  - MonsterAI.m_viewRange, 200
-  - MonsterAI.m_viewAngle, 360
-  - MonsterAI.m_hearRange, 9999
-
+  - Humanoid.m_group, dn_mobs_peaceful
+  
 - name: dn_mob_group_patrol_not_dverger
   ints:
   - i_dn_mob_group_patrol, 1
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
-#  - MonsterAI.m_aggravatable, 1
-#  - aggravated, 0
   - MonsterAI.m_enableHuntPlayer, 0
   - MonsterAI.m_attackPlayerObjects, 0
   strings:
   - Humanoid.m_name, Guardian's Companion
-  - Humanoid.m_group, dn_mobs
+  - Humanoid.m_group, dn_mobs_peaceful
   floats:
   - MonsterAI.m_alertRange, 0
   - MonsterAI.m_viewRange, 0
-  - MonsterAI.m_viewAngle, 0
   - MonsterAI.m_hearRange, 0
 
 - name: dn_mob_group_patrol_aggravated
@@ -274,10 +273,15 @@
 
 - valueGroup: vDnPatrolShouts
   values:
-  - <#009FFF>We speak for the trees!
-  - <#009FFF>We protect the forest!
+  - <#009FFF>We speak for the forest!
   - <#009FFF>Violence against these sacred lands will not be tolerated!
-  - <#009FFF>You and that filthy pickaxe will pay for your crimes!
+  - <#009FFF>Do not anger the forest, lest great sorrow befall us all!
+
+- valueGroup: vDnPatrolShoutsBad
+  values:
+  - <#009FFF>You've doomed us all, fool!
+  - <#009FFF>We'll not stand idle as you unleash this curse!
+  - <#009FFF>Your madness threatens us all!  You shall pay in blood!
 
 - name: dn_mob_group_no_loot
   ints:
@@ -1054,6 +1058,12 @@
   - level, <min_6_<add_<max_1_<int_level>>_<par1>>>
   strings:
   - Humanoid.m_group, dn_mobs
+
+- name: d_creature_level_up_dn_peaceful
+  ints:
+  - level, <min_6_<add_<max_1_<int_level>>_<par1>>>
+  strings:
+  - Humanoid.m_group, dn_mobs_peaceful
 
 - valueGroup: vLevelUp1Dn
   values:

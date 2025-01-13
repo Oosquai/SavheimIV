@@ -215,7 +215,7 @@
   bannedObjectsLimit: 1
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_1p <par1> <par2> <par3> <par4>
+    parameter: dn_roguelite_spawn_trash_1p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
 
 # 2 players
 - prefab: Player
@@ -228,7 +228,7 @@
   bannedObjectsLimit: 2
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_2p <par1> <par2> <par3> <par4>
+    parameter: dn_roguelite_spawn_trash_2p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
 
 # 3 players
 - prefab: Player
@@ -241,7 +241,7 @@
   bannedObjectsLimit: 3
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_3p <par1> <par2> <par3> <par4>
+    parameter: dn_roguelite_spawn_trash_3p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
 
 # 4+ players
 - prefab: Player
@@ -251,7 +251,7 @@
   objectsLimit: 3
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_4p <par1> <par2> <par3> <par4>
+    parameter: dn_roguelite_spawn_trash_4p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
 
 # spawn trash, capped per players nearby
 - prefab: Player
@@ -260,11 +260,43 @@
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
   bannedObjectsLimit: 5                          ### TRASH SPAWN CAP - 1 player
-  spawns:
-  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
-  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
-  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
-  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
+  spawn:
+  - prefab: <par1>  ########## creature 1
+    pos: 12,12,snap
+    rot: 225,0,0
+    data: dn_mob_group_roguelite
+    delay: <par5>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,12,snap
+    delay: <sub_<par5>_1>
+  - prefab: <par2>  ########## creature 2
+    pos: 12,-12,snap
+    rot: 315,0,0
+    data: dn_mob_group_roguelite
+    delay: <par6>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,-12,snap
+    delay: <sub_<par6>_1>
+  - prefab: <par3>  ########## creature 3
+    pos: -12,12,snap
+    rot: 135,0,0
+    data: dn_mob_group_roguelite
+    delay: <par7>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,12,snap
+    delay: <sub_<par7>_1>
+  - prefab: <par4>  ########## creature 4
+    pos: -12,-12,snap
+    rot: 45,0,0
+    data: dn_mob_group_roguelite
+    delay: <par8>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,-12,snap
+    delay: <sub_<par8>_1>
 
 - prefab: Player
   type: poke, dn_roguelite_spawn_trash_2p
@@ -272,11 +304,43 @@
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
   bannedObjectsLimit: 9                          ### TRASH SPAWN CAP - 2 players
-  spawns:
-  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
-  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
-  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
-  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
+  spawn:
+  - prefab: <par1>  ########## creature 1
+    pos: 12,12,snap
+    rot: 225,0,0
+    data: dn_mob_group_roguelite
+    delay: <par5>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,12,snap
+    delay: <sub_<par5>_1>
+  - prefab: <par2>  ########## creature 2
+    pos: 12,-12,snap
+    rot: 315,0,0
+    data: dn_mob_group_roguelite
+    delay: <par6>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,-12,snap
+    delay: <sub_<par6>_1>
+  - prefab: <par3>  ########## creature 3
+    pos: -12,12,snap
+    rot: 135,0,0
+    data: dn_mob_group_roguelite
+    delay: <par7>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,12,snap
+    delay: <sub_<par7>_1>
+  - prefab: <par4>  ########## creature 4
+    pos: -12,-12,snap
+    rot: 45,0,0
+    data: dn_mob_group_roguelite
+    delay: <par8>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,-12,snap
+    delay: <sub_<par8>_1>
 
 - prefab: Player
   type: poke, dn_roguelite_spawn_trash_3p
@@ -284,11 +348,43 @@
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
   bannedObjectsLimit: 13                         ### TRASH SPAWN CAP - 3 players
-  spawns:
-  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
-  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
-  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
-  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
+  spawn:
+  - prefab: <par1>  ########## creature 1
+    pos: 12,12,snap
+    rot: 225,0,0
+    data: dn_mob_group_roguelite
+    delay: <par5>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,12,snap
+    delay: <sub_<par5>_1>
+  - prefab: <par2>  ########## creature 2
+    pos: 12,-12,snap
+    rot: 315,0,0
+    data: dn_mob_group_roguelite
+    delay: <par6>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,-12,snap
+    delay: <sub_<par6>_1>
+  - prefab: <par3>  ########## creature 3
+    pos: -12,12,snap
+    rot: 135,0,0
+    data: dn_mob_group_roguelite
+    delay: <par7>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,12,snap
+    delay: <sub_<par7>_1>
+  - prefab: <par4>  ########## creature 4
+    pos: -12,-12,snap
+    rot: 45,0,0
+    data: dn_mob_group_roguelite
+    delay: <par8>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,-12,snap
+    delay: <sub_<par8>_1>
 
 - prefab: Player
   type: poke, dn_roguelite_spawn_trash_4p
@@ -296,11 +392,43 @@
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
   bannedObjectsLimit: 17                         ### TRASH SPAWN CAP - 4+ players
-  spawns:
-  - <par1>, 12,12,snap, 225,0,0, dn_mob_group_roguelite, 0, true
-  - <par2>, 12,-12,snap, 315,0,0, dn_mob_group_roguelite, 0, true
-  - <par3>, -12,12,snap, 135,0,0, dn_mob_group_roguelite, 0, true
-  - <par4>, -12,-12,snap, 45,0,0, dn_mob_group_roguelite, 0, true
+  spawn:
+  - prefab: <par1>  ########## creature 1
+    pos: 12,12,snap
+    rot: 225,0,0
+    data: dn_mob_group_roguelite
+    delay: <par5>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,12,snap
+    delay: <sub_<par5>_1>
+  - prefab: <par2>  ########## creature 2
+    pos: 12,-12,snap
+    rot: 315,0,0
+    data: dn_mob_group_roguelite
+    delay: <par6>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: 12,-12,snap
+    delay: <sub_<par6>_1>
+  - prefab: <par3>  ########## creature 3
+    pos: -12,12,snap
+    rot: 135,0,0
+    data: dn_mob_group_roguelite
+    delay: <par7>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,12,snap
+    delay: <sub_<par7>_1>
+  - prefab: <par4>  ########## creature 4
+    pos: -12,-12,snap
+    rot: 45,0,0
+    data: dn_mob_group_roguelite
+    delay: <par8>
+    triggerRules: true
+  - prefab: fx_summon_troll  # fx
+    pos: -12,-12,snap
+    delay: <sub_<par8>_1>
 ####################################
 ########################################################################
 
@@ -1118,6 +1246,10 @@
     parameter: p_dnrl_cleanup_player_loop
   - self: true
     parameter: p_dnrl_cleanup_player_fled
+  - prefab: creature               # agro nearby patrols so they're not allies
+    data: dn_mob_group_patrol
+    maxDistance: 50
+    parameter: p_dn_patrol_aggravate_group
 
 # Check if deer_ragdoll still within range, else player fled
 - prefab: Player
@@ -1398,6 +1530,12 @@
   data: d_creature_level_up_dn
 
 - prefab: creature
+  type: poke, p_creature_level_up_dn_peaceful
+  bannedFilters:
+  - int, CL&LC effect, 5                         # do not create never-ending splitting creatures!
+  data: d_creature_level_up_dn_peaceful
+
+- prefab: creature
   type: create
   biomes: DeepNorth
   fallback: true
@@ -1424,9 +1562,29 @@
     parameter: p_creature_level_up_dn <vLevelUp2Dn>
 
 # High level up chances
-- prefab: Ghost, Skeleton, Bat, Surtling
+- prefab: Ghost, Bat, Surtling
   type: poke, p_creature_level_up_calc_dn
   biomes: DeepNorth
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_creature_level_up_dn <vLevelUp3Dn>
+
+# special case since Dverger Mages can summon Skeletons - this puts them on Dverger team
+- prefab: Skeleton
+  type: poke, p_creature_level_up_calc_dn
+  biomes: DeepNorth
+  objects:
+  - DvergerMage, 3
+  poke:
+  - self: true
+    delay: 0.1
+    parameter: p_creature_level_up_dn_peaceful <vLevelUp3Dn>
+
+- prefab: Skeleton
+  type: poke, p_creature_level_up_calc_dn
+  biomes: DeepNorth
+  fallback: true
   poke:
   - self: true
     delay: 0.1
@@ -1537,8 +1695,6 @@
 - prefab: sfx_tree_hit, sfx_rock_hit, sfx_pickaxe_hit
   type: create
   biomes: DeepNorth
-  bannedObjects:
-  - Player, 100, d_player_roguelite_on
   poke:
   - prefab: creature
     data: dn_mob_group_patrol
@@ -1560,6 +1716,7 @@
   type: poke, p_dn_patrol_aggravate_group
   biomes: DeepNorth
   data: dn_mob_group_patrol_aggravated
+  injectData: true
 
 # Patrols yell their complaints
 - prefab: Dverger
@@ -1576,6 +1733,32 @@
 - prefab: Player
   type: poke, p_dn_patrol_shout
   biomes: DeepNorth
+  objects:
+  - Troll_Summoned, 50, d_dn_summoned_troll
+  objectsLimit: 1
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, Center
+    2: string, <vDnPatrolShoutsBad>
+    3: int, 0
+
+- prefab: Player
+  type: poke, p_dn_patrol_shout
+  biomes: DeepNorth
+  filter: d_player_roguelite_on
+  objectsLimit: 1
+  objectRpc:
+  - name: Message
+    target: <zdo>
+    1: enum_message, Center
+    2: string, <vDnPatrolShoutsBad>
+    3: int, 0
+
+- prefab: Player
+  type: poke, p_dn_patrol_shout
+  biomes: DeepNorth
+  fallback: true
   objectRpc:
   - name: Message
     target: <zdo>
@@ -1593,16 +1776,29 @@
   - sfx_rock_hit, 10
   objectsLimit: 1
   bannedObjects:
-  - Player, 100, d_player_roguelite_on
-  - Troll_Summoned, 30, d_dn_summoned_troll
-  weight: 0.03                                   ### CHANCE TO SPAWN
+  - Troll_Summoned, 100, d_dn_summoned_troll      # only 1 at a time
+  weight: 0.05                                   ### CHANCE TO SPAWN
   spawns:
-  - fx_summon_twitcher_spawn, 5,20,snap
-  - sfx_bonemaw_serpent_spit, 5,20,snap
-  - fx_summon_troll, 5,20,snap, 1
-  - fx_fireball_staff_explosion, 5,20,snap, 2
-  - Troll_Summoned, 5,20,snap, 2.2, d_dn_summoned_troll
+  - sfx_ghost_idle, d_sfx_half_volume_dn, 1
+  - sfx_ghost_idle, 5,20,snap, 2
+  - fx_summon_twitcher_spawn, 5,20,snap, 2
+  - sfx_bonemaw_serpent_spit, 5,20,snap, 2
+  - fx_summon_troll, 5,20,snap, 3
+  - fx_fireball_staff_explosion, 5,20,snap, 4
+  - Troll_Summoned, 5,20,snap, 4.2, d_dn_summoned_troll
 
+# Forest moans when damaged
+- prefab: sfx_tree_fall, sfx_wood_break, sfx_rock_destroyed
+  type: create
+  biomes: DeepNorth
+  objects:
+  - sfx_tree_hit, 10
+  - sfx_rock_hit, 10
+  objectsLimit: 1
+  spawns:
+  - sfx_ghost_idle, d_sfx_half_volume_dn, 1
+
+# Loot for summoned trolls in Deep North
 - prefab: Troll_Summoned
   type: destroy
   biomes: DeepNorth
