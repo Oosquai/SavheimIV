@@ -170,7 +170,7 @@
     1: vec, 0,0,0
     2: int, 1
     3: userinfo, Server
-    4: "string, Requires Owned and Inactive Ward."
+    4: "string, You must own a Ward, and there can't be any active Wards nearby."
     5: string, 
     delay: 0.4
 
@@ -235,11 +235,13 @@
 
 ### Player commands - rotate trees 3 or 30 degrees at a time (for Ian).
 # WILL DESTROY AND PIECES DEPENDING ON TREE FOR SUPPORT!
-# Only works if owned and inactive ward within range.
+# Only works if owned and inactive ward within range, and no active wards.
 - prefab: Player
   type: say, !MytreeRanaWay3
   objects:
   - guard_stone, 37, d_ward_owned_inactive
+  bannedObjects:
+  - guard_stone, 37, d_ward_active
   poke:
   - prefab: FirTree
     maxDistance: 5
@@ -270,6 +272,8 @@
   type: say, !MytreeRanaWay30
   objects:
   - guard_stone, 37, d_ward_owned_inactive
+  bannedObjects:
+  - guard_stone, 37, d_ward_active
   poke:
   - prefab: FirTree
     maxDistance: 5
@@ -560,7 +564,7 @@
 - prefab: portal_wood   # pass!
   type: poke, p_bossstones_portal_check_portal_eval
   weight: 1E30
-  filter: float, f_y_diff, 0.2
+  filter: float, f_y_diff, 0
 
 - prefab: portal_wood   # fail!
   type: poke, p_bossstones_portal_check_portal_eval
@@ -618,7 +622,7 @@
 - prefab: portal_wood   # pass!
   type: poke, p_haldor_portal_check_portal_eval
   weight: 1E30
-  filter: float, f_y_diff, 0.2
+  filter: float, f_y_diff, 0
 
 - prefab: portal_wood   # fail!
   type: poke, p_haldor_portal_check_portal_eval
@@ -666,7 +670,7 @@
 - prefab: portal_wood   # pass!
   type: poke, p_hildir_portal_check_portal_eval
   weight: 1E30
-  filter: float, f_y_diff, 0.2
+  filter: float, f_y_diff, 0
 
 - prefab: portal_wood   # fail!
   type: poke, p_hildir_portal_check_portal_eval
@@ -714,7 +718,7 @@
 - prefab: portal_wood   # pass!
   type: poke, p_bogwitch_portal_check_portal_eval
   weight: 1E30
-  filter: float, f_y_diff, 0.2
+  filter: float, f_y_diff, 0
 
 - prefab: portal_wood   # fail!
   type: poke, p_bogwitch_portal_check_portal_eval
@@ -765,7 +769,7 @@
 - prefab: portal_wood   # pass!
   type: poke, p_jcg_portal_check_portal_eval
   weight: 1E30
-  filter: float, f_y_diff, 0.2
+  filter: float, f_y_diff, 0
 
 - prefab: portal_wood   # fail!
   type: poke, p_jcg_portal_check_portal_eval

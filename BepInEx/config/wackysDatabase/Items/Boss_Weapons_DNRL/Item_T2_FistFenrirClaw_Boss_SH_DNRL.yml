@@ -109,7 +109,7 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  Attack_status_effect: Lightning
+  Attack_status_effect: SE_Savheim_ChainLightningSpread_FX
   Attack_status_effect_chance: 1
   Attack_Projectile: 
   Projectile_Vel: 20

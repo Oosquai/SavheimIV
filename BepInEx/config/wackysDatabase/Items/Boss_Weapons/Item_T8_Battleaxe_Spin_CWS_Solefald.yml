@@ -17,12 +17,12 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 3
-  m_attackStamina: 6
+  Custom_AttackSpeed: 2
+  m_attackStamina: 8
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
-  SpeedFactor: 1
+  SpeedFactor: 0.7
   DmgMultiplier: 0.1
   ForceMultiplier: 1
   StaggerMultiplier: 1
@@ -46,7 +46,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: DvergerStaffFire_fire_aoe
-  SpawnOnHit_Chance: 0.2
+  SpawnOnHit_Chance: 0.15
   Attack_Projectile: 
   Projectile_Vel: 10
   Projectile_Accuraccy: 10

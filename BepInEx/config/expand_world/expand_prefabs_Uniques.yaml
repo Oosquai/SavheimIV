@@ -16,11 +16,11 @@
   - prefab: creature
     maxDistance: 2
     limit: 3
-    parameter: p_stafffireball_secondary <randf_4_6> <randf_4_6> <randf_1_1.5>
+    parameter: p_stafffireball_secondary <randf_4_7> <randf_4_7> <randf_1_1.5>
   
 - prefab: creature
   type: poke, p_stafffireball_secondary
-  weight: 0.5
+  weight: 0.6
   spawns:
   - fx_batteringram_fire
   objectRpc:
@@ -32,7 +32,7 @@
     minDistance: 0.1
     maxDistance: 6
     limit: 3
-    parameter: p_stafffireball_secondary <randf_4_6> <randf_4_6> <randf_1_1.5>
+    parameter: p_stafffireball_secondary <randf_4_7> <randf_4_7> <randf_1_1.5>
 
 # DNRL version
 - prefab: sfx_GoblinShaman_fireball_launch
@@ -44,11 +44,11 @@
   - prefab: creature
     maxDistance: 2
     limit: 3
-    parameter: p_stafffireball_secondary_dnrl <randf_6_8> <randf_6_8> <randf_1_1.5>
+    parameter: p_stafffireball_secondary_dnrl <randf_6_9> <randf_6_9> <randf_1_1.5>
 
 - prefab: creature
   type: poke, p_stafffireball_secondary_dnrl
-  weight: 0.5
+  weight: 0.6
   spawns:
   - fx_batteringram_fire
   objectRpc:
@@ -60,7 +60,7 @@
     minDistance: 0.1
     maxDistance: 6
     limit: 3
-    parameter: p_stafffireball_secondary <randf_6_8> <randf_6_8> <randf_1_1.5>
+    parameter: p_stafffireball_secondary <randf_6_9> <randf_6_9> <randf_1_1.5>
 
 #############################
 # Staff of Myrkyr secondary:  outbreak (spreading vomit)
@@ -686,6 +686,7 @@
   type: poke, enabledflyer
   filter: noFlying
   data: againFlying
+  spawn: vfx_puff_small, 0,0,1
   poke:
   - prefab: MonsterAI
     data: againFlying
@@ -698,6 +699,7 @@
   type: poke, immunityEnd
   filter: againFlying
   data: groundedImmunityEnd
+  injectData: true
 
 ######################
 # Sanguino (Reaper)
@@ -898,11 +900,13 @@
 - prefab: fx_crit, fx_backstab
   type: create
   objects:
-  - Player, 2, d_runefang_knife
-  - sfx_jc_arrow_hit, 1
+  - Player, 6, d_runefang_knife
+  - sfx_jc_arrow_hit, 6
+  bannedObjects:
+  - Player, 6, d_runefang_knife_dnrl   # negotiate to higher-tier weapon when both nearby
   poke:
   - prefab: Player
-    maxDistance: 3
+    maxDistance: 6
     limit: 1
     delay: 0.3
     data: d_runefang_knife
@@ -923,14 +927,14 @@
 - prefab: fx_crit, fx_backstab
   type: create
   objects:
-  - Player, 2, d_runefang_knife_dnrl
-  - sfx_jc_arrow_hit, 1
+  - Player, 6, d_runefang_knife_dnrl
+  - sfx_jc_arrow_hit, 6
   poke:
   - prefab: Player
-    maxDistance: 3
+    maxDistance: 6
     limit: 1
     delay: 0.3
-    data: d_runefang_knife
+    data: d_runefang_knife_dnrl
     parameter: p_runefang_eitr_dnrl
 
 - prefab: Player
@@ -1024,12 +1028,12 @@
 - prefab: sfx_spear_flint_hit                    # on-hit sfx from unique claws secondary attack
   type: create
   objects:
-  - Player, 3, d_gear_unique_claws               # player with unique claws in melee range?
+  - Player, 6, d_gear_unique_claws               # player with unique claws in melee range?
   poke:
   - prefab: creature
     data: not_tamed_uniques
     limit: 1
-    maxDistance: 3
+    maxDistance: 6
     delay: 0.1
     parameter: p_unique_claws_lightning <vec>
 
@@ -1042,8 +1046,8 @@
   type: poke, p_unique_claws_lightning
   filter: int, i_bleed_tick_cnt, 1;999           # creature bleeding?
   objects:
-  - fx_Lightning, 3                              # SE from unique claws secondary attack
-  - fx_bloodweapon_hit, 3                        # bleed cloud still present?
+  - fx_chainlightning_spread, 6                  # SE from unique claws secondary attack
+  - fx_bloodweapon_hit, 6                        # bleed cloud still present?
   spawn: fx_chainlightning_hit
   objectRpc:
   - name: RPC_Stagger

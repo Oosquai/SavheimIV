@@ -125,13 +125,13 @@
   ints:
   - IsBlocking, 1
   hashes:
-  - LeftItem, CWS_Round_Shield_5_SH, CWS_Round_Shield_4_SH, CWS_Round_Shield_3_SH, CWS_Round_Shield_1_SH, CWS_Heater_Shield_4_SH, CWS_Heater_Shield_2_SH, CWS_Heater_Shield_3_SH, CWS_Round_Shield_2_SH, ShieldBanded, ShieldSilver, ShieldBlackmetal, ShieldCarapace, ShieldFlametal, JC_Reaper_Shield, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7_SH, CWS_Buckler_Shield_1_SH, ShieldCarapaceBuckler, CWS_Buckler_Shield_2_SH, JC_Shield_Buckler, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower, CWS_Tower_Shield_3_SH, CWS_Tower_Shield_4_SH, ShieldWood, ShieldWoodTower
+  - LeftItem, CWS_Round_Shield_5_SH, CWS_Round_Shield_4_SH, CWS_Round_Shield_3_SH, CWS_Round_Shield_1_SH, CWS_Heater_Shield_4_SH, CWS_Heater_Shield_2_SH, CWS_Heater_Shield_3_SH, CWS_Round_Shield_2_SH, ShieldBanded, ShieldSilver, ShieldBlackmetal, ShieldCarapace, ShieldFlametal, JC_Reaper_Shield, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7_SH, CWS_Buckler_Shield_1_SH, ShieldCarapaceBuckler, CWS_Buckler_Shield_2_SH, JC_Shield_Buckler, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower, CWS_Tower_Shield_3_SH, CWS_Tower_Shield_4_SH, ShieldWood, ShieldWoodTower, CWS_Tower_Shield_3_SH_DNRL, CWS_Tower_Shield_4_SH_DNRL
 
 - name: PlayerBlockingHuntressBow
   ints:
   - IsBlocking, 1
   hashes:
-  - LeftItem, CWS_Bow_11_SH
+  - LeftItem, CWS_Bow_11_SH, CWS_Bow_11_SH_DNRL
 
 ###############################################################
 # Gear lists
@@ -154,7 +154,7 @@
   - LeftItem, ShieldBronzeBuckler, ShieldIronBuckler, CWS_Round_Shield_7_SH, CWS_Buckler_Shield_1_SH, ShieldCarapaceBuckler, CWS_Buckler_Shield_2_SH, JC_Shield_Buckler
 
 ####################################
-# Tower Shields - give hp regen when blocking stance
+# Tower Shields - give hp regen when blocking stance - uniques for this entry only handled in expand_data_Uniques.yaml
 - name: towerShieldList
   hashes:
   - LeftItem, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower
@@ -163,7 +163,7 @@
 # Shortbows - jump ninja roll
 - name: shortBowList
   hashes:
-  - LeftItem, CWS_Bow_8_SH, CWS_Bow_10_SH, CWS_Bow_3_SH, CWS_Bow_1_SH, CWS_Bow_2_SH, CWS_Bow_6_SH, JC_Reaper_Bow, CWS_Bow_11_SH, BBP_BoneBow_SH
+  - LeftItem, CWS_Bow_8_SH, CWS_Bow_10_SH, CWS_Bow_3_SH, CWS_Bow_1_SH, CWS_Bow_2_SH, CWS_Bow_6_SH, JC_Reaper_Bow, CWS_Bow_11_SH, BBP_BoneBow_SH, CWS_Bow_11_SH_DNRL, BBP_BoneBow_SH_DNRL
 
 ####################################
 # Longbows - levitate while drawing bow
@@ -172,7 +172,7 @@
   - $onGround, 0
   - i_longbow_jump_shot_cd, 0
   hashes:
-  - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5_SH, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow_SH, CWS_Bow_7_SH, CWS_Bow_4_SH_SH
+  - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5_SH, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow_SH, CWS_Bow_7_SH, CWS_Bow_4_SH, BBP_ElvenBow_SH_DNRL, CWS_Bow_7_SH_DNRL
 
 - name: d_longbow_jump_shot_cd_on
   ints:
@@ -183,7 +183,7 @@
   - i_longbow_jump_shot_cd, 0
 
 ####################################
-# Sanctis
+# Sanctis - uniques handled in expand_data_Uniques.yaml
 - name: gear_sanctis_t2
   hashes:
   - RightItem, CWS_Sword_2_SH
@@ -216,7 +216,7 @@
 # Reapers
 - name: d_reaper_list
   hashes:
-  - RightItem, T3_Reaper, T4_Reaper, T5_Reaper, T6_Reaper, T7_Reaper, T8_Reaper, CWS_TH_Sword_11_SH
+  - RightItem, T3_Reaper, T4_Reaper, T5_Reaper, T6_Reaper, T7_Reaper, T8_Reaper, CWS_TH_Sword_11_SH, CWS_TH_Sword_11_SH_DNRL
 
 - name: d_state_reaper0_set
   ints:
@@ -326,7 +326,7 @@
   ints:
   - i_state_reaper2_latched, 1
   hashes:
-  - RightItem, T8_Reaper
+  - RightItem, T8_Reaper, CWS_TH_Sword_11_SH_DNRL
 
 - name: d_reaper_combo0_pending_set
   ints:
@@ -500,7 +500,7 @@
   floats:
   - $forward_speed, 5;999
   hashes:
-  - RightItem, CWS_Atgeir_2_SH
+  - RightItem, CWS_Atgeir_2_SH, CWS_Atgeir_8_SH_DNRL, CWS_Atgeir_9_SH_DNRL
 
 - name: d_impale_save_dmg
   ints:

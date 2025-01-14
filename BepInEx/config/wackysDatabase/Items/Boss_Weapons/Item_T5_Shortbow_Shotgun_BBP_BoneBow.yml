@@ -1,7 +1,7 @@
 name: BBP_BoneBow_SH
 m_weight: 1
 m_name: Scatterwood
-m_description: This shortbow sprays a cloud of arrows, staggering close range targets or shredding multiple targets.
+m_description: This shortbow sprays a cloud of arrows, shredding close range targets or catching multiple targets.
 clonePrefabName: BBP_BoneBow
 mockName: 
 customIcon: 

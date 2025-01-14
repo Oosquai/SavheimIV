@@ -24,7 +24,7 @@ Primary_Attack:
   m_attackHealthPercentage: 0
   SpeedFactor: 0.3
   DmgMultiplier: 1
-  ForceMultiplier: -420
+  ForceMultiplier: -800
   StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 1

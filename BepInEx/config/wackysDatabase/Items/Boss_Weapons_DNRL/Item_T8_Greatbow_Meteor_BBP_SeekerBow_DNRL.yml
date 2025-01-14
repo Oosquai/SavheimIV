@@ -198,7 +198,7 @@ m_useDurability: true
 m_useDurabilityDrain: 2
 m_durabilityDrain: 0
 m_maxDurability: 250
-m_durabilityPerLevel: 100
+m_durabilityPerLevel: 50
 m_equipDuration: 0
 Attach_Override: Shield
 m_skillType: Bows

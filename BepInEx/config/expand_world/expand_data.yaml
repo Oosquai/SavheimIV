@@ -165,7 +165,7 @@
 
 - name: d_portal_ycalc
   floats:
-  - f_y_diff, <par1>-<y>
+  - f_y_diff, <round_<sub_<sub_<par1>_<y>>_0.2>>
 
 ####################################
 # Bezel drop quantities
@@ -243,6 +243,10 @@
 - name: d_killme_confirm_rst
   ints:
   - i_killme_confirm, 0
+
+- name: d_ward_active
+  ints:
+  - enabled, 1
 
 - name: d_ward_owned_inactive
   ints:

@@ -11,67 +11,67 @@ join:
   - commands:
     - s 🏹 Welcome to Savheim, <name>! 🪓
     - s Say !help for in-game player commands.
-    - s 🚨 Daily 1h maintenance 4-5am PST. 🚨
+    - s 🚨 Daily maintenance 4-5am PST. 🚨
 
 jobs:
 #############################
 ### DAILY
 # Maintenance announcements.
-  - command: s 🚨 Daily 1h maintenance in 5 minutes 🚨
-    schedule: "55 11 * * *"
+  - command: s 🚨 Daily maintenance in 5 minutes 🚨
+    schedule: "55 11 1-31 * *"
 
   - command: s 🚨 Maintenance - 60 minutes remaining 🚨
-    schedule: "0 12 * * *"
+    schedule: "0 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 55 minutes remaining 🚨
-    schedule: "5 12 * * *"
+    schedule: "5 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 50 minutes remaining 🚨
-    schedule: "10 12 * * *"
+    schedule: "10 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 45 minutes remaining 🚨
-    schedule: "15 12 * * *"
+    schedule: "15 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 40 minutes remaining 🚨
-    schedule: "20 12 * * *"
+    schedule: "20 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 35 minutes remaining 🚨
-    schedule: "25 12 * * *"
+    schedule: "25 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 30 minutes remaining 🚨
-    schedule: "30 12 * * *"
+    schedule: "30 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 25 minutes remaining 🚨
-    schedule: "35 12 * * *"
+    schedule: "35 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 20 minutes remaining 🚨
-    schedule: "40 12 * * *"
+    schedule: "40 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 15 minutes remaining 🚨
-    schedule: "45 12 * * *"
+    schedule: "45 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 10 minutes remaining 🚨
-    schedule: "50 12 * * *"
+    schedule: "50 12 1-31 * *"
 
   - command: s 🚨 Maintenance - 5 minutes remaining 🚨
-    schedule: "55 12 * * *"
+    schedule: "55 12 1-31 * *"
 
   - command: s 🏰 Maintenance complete! 🏰
-    schedule: "0 13 * * *"
+    schedule: "0 13 1-31 * *"
 
 #############################
 ### DAILY
 # Clean up loose logs and EWP prefabs that were supposed to get removed but somehow didn't.
 # Schedule - Daily
   - command: objects_remove beech_log,beech_log_half,Birch_log,Birch_log_half,FirTree_log,FirTree_log_half,Oak_log,Oak_log_half,PineTree_log,PineTree_log_half,SwampTree1_log,yggashoot_log,yggashoot_log_half,AshlandsTreeLog2,AshlandsTreeLog1,AshlandsTreeLogHalf1,AshlandsTreeLogHalf2 force start
-    schedule: "0 12 * * *"
+    schedule: "0 12 1-31 * *"
 
   - command: objects_remove stone_marker_savheim,stone_marker_savheim_dn,CL_Raw_Orange_small_temp,CL_Raw_Yellow_small_temp,sign_sh4_story,deer_ragdoll,Leech,Fish1,Fish2,Fish3,Fish4_cave,Fish5,Fish6,Fish7,Fish8,Fish9,Fish10,Fish11,Fish12,kg_EnchantSkillScroll_F,kg_EnchantSkillScroll_D,kg_EnchantSkillScroll_C,kg_EnchantSkillScroll_B,kg_EnchantSkillScroll_A,kg_EnchantSkillScroll_S force start
-    schedule: "2 12 * * *"
+    schedule: "2 12 1-31 * *"
 
 # After specific day routines below, clean up world
   - command: world_clean
-    schedule: "50 12 * * *"
+    schedule: "50 12 1-31 * *"
 
 #############################
 # EVERY 4 DAYS, STARTING WITH DAY 1 OF MONTH
@@ -80,33 +80,40 @@ jobs:
 # Player_tombstone will still block soft resets though.
 # Clean up extra mob spawns.  Some of these spawn with locations, so this process intentionally run right before resetting locations
   - command: objects_remove Hatchling,Serpent,BonemawSerpent,Deer,Wraith,Bat,Skeleton,Skeleton_Poison,Skeleton_Hildir,Deathsquito,Goblin,GoblinShaman,Ulv,Charred_Twitcher,Charred_Twitcher_Summoned,Seagal,Crow,Volture,Asksvin,Dverger,DvergerMage,Troll_Summoned,Charred_Melee_Fader,Charred_Archer_Fader force start
-    schedule: "5 12 1,5,9,13,17,21,25,29 * *"
+#    schedule: "5 12 1,5,9,13,17,21,25,29 * *"
+    schedule: "5 12 1,5,9,13,14,17,21,25,29 * *"
 
 # Soft location resets (skip player bases) - Vanilla locations
   - command: locations_reset CharredTowerRuins2,CharredTowerRuins3,FortressRuins,AshlandRuins,CharredRuins2,CharredRuins3,CharredRuins1,CharredRuins4,MorgenHole1,MorgenHole2,MorgenHole3,VoltureNest,CharredStone_Spawner,WoodFarm1,TrollCave02,Greydwarf_camp1,StoneHenge1,StoneHenge2,StoneHenge3,StoneHenge4,StoneHenge5,StoneHenge6,Grave1,InfestedTree01,Ruin3,StoneTower1,StoneTower3,WoodHouse1,WoodHouse2,WoodHouse3,WoodHouse4,WoodHouse5,WoodHouse6,WoodHouse7,WoodHouse8,WoodHouse9,WoodHouse10,WoodHouse11,WoodHouse12,WoodHouse13,StoneTowerRuins03,StoneTowerRuins07,StoneTowerRuins08,StoneTowerRuins09,StoneTowerRuins10,ShipSetting01,MountainGrave01,Dolmen01,Dolmen02,Dolmen03,StoneCircle,ShipWreck01,ShipWreck02,ShipWreck03,ShipWreck04,Mistlands_Giant2,Mistlands_Giant1,WoodVillage1 start
-    schedule: "20 12 1,5,9,13,17,21,25,29 * *"
+#    schedule: "20 12 1,5,9,13,17,21,25,29 * *"
+    schedule: "20 12 1,5,9,13,14,17,21,25,29 * *"
 
 # Soft location resets (skip player bases) - Warpalicious' More World Locations
   - command: locations_reset MWL_Ruins1,MWL_Ruins2,MWL_Ruins3,MWL_Ruins6,MWL_Ruins7,MWL_Ruins8,MWL_RuinsArena1,MWL_RuinsArena3,MWL_RuinsChurch1,MWL_RuinsWell1,VV_CopperTinCave,VV_SilverCave,MWL_MistFort2,MWL_SecretRoom1,MWL_MistWorkshop1,MWL_MistTower1,MWL_MistWall1,MWL_MistTower2,MWL_MistHut1,MWL_StoneCastle1,MWL_StoneFort1,MWL_StoneHall1,MWL_StoneTavern1,MWL_StoneTower1,MWL_StoneTower2,MWL_WoodBarn1,MWL_WoodFarm1,MWL_WoodHouse1,MWL_RuinsArena2,MWL_RuinsCastle1,MWL_RuinsCastle3,MWL_RuinsTower3,MWL_RuinsTower8,MWL_Tavern1,MWL_WoodTower1,MWL_WoodTower2,MWL_WoodTower3,MWL_GoblinFort1,MWL_FulingRock1,MWL_FulingVillage1,MWL_FulingVillage2,MWL_PlainsPillar1,MWL_FulingTemple1,MWL_FulingTemple2,MWL_FulingTemple3,MWL_FulingWall1,MWL_FulingTower1,MWL_GuckPit1,MWL_SwampAltar1,MWL_SwampAltar2,MWL_SwampAltar3,MWL_SwampAltar4,MWL_SwampCastle2,MWL_SwampGrave1,MWL_SwampHouse1,MWL_SwampRuin1,MWL_SwampTower1,MWL_SwampTower2,MWL_SwampTower3,MWL_SwampWell1,BWS_Meadows,BWS_BlackForest,BWS_Swamps,BWS_Mountains,BWS_Plains start
-    schedule: "25 12 1,5,9,13,17,21,25,29 * *"
+#    schedule: "25 12 1,5,9,13,17,21,25,29 * *"
+    schedule: "25 12 1,5,9,13,14,17,21,25,29 * *"
 
 # Soft location resets (skip player bases) - Savheim custom locations + other mods
   - command: locations_reset Meadow_Ruins,POISWAMPCASTLERUINS,boom-christianruins1,brokkr-broken-bridge-1-short,brokkr-broken-bridge-1,brokkr-broken-bridge-2-short,brokkr-broken-bridge-2,brokkr-broken-bridge-3-short,brokkr-broken-bridge-3,brokkr-fort-torment-final-cut-sh,brokkr-the-belmont,brokkr-the-cathedral,brokkr-the-churn,brokkr-the-execution,brokkr-the-flabellum,brokkr-the-misery,brokkr-the-sacrifice,loki_ruins1,loki_ruins2,ruins_0,ruins_0_1,ruins_0_1_and_0_2_and_0_3,ruins_0_2,ruins_0_3,ruins_0_and_0_1_and_0_2_and_0_3,ruins_0_and_0_2,ruins_0_and_0_2_and_0_3,BCP_ClayPit,sh_firtree_light_black,sh_firtree_light_blue,sh_firtree_light_green,sh_firtree_light_orange,sh_firtree_light_purple,sh_firtree_light_red,sh_firtree_light_yellow start
-    schedule: "30 12 1,5,9,13,17,21,25,29 * *"
+#    schedule: "30 12 1,5,9,13,17,21,25,29 * *"
+    schedule: "30 12 1,5,9,13,14,17,21,25,29 * *"
 
 # Hard location resets (ignore player bases) - Vanilla, MWL, and Savheim
   - command: locations_reset LeviathanLava,PlaceofMystery1,PlaceofMystery2,PlaceofMystery3,CharredTowerRuins1_dvergr,Hildir_cave,Hildir_crypt,Hildir_plainsfortress,Crypt2,GoblinCamp2,Crypt3,Crypt4,Mistlands_DvergrTownEntrance1,Mistlands_DvergrTownEntrance2,MountainCave02,SunkenCrypt4,TarPit1,TarPit2,TarPit3,Mistlands_RoadPost1,Mistlands_GuardTower1_ruined_new2,Mistlands_GuardTower3_new,Mistlands_GuardTower3_ruined_new,Mistlands_GuardTower1_new,Mistlands_GuardTower2_new,Mistlands_GuardTower1_ruined_new,Mistlands_Lighthouse1_new,Mistlands_Excavation1,Mistlands_Excavation2,Mistlands_Excavation3,Mistlands_Harbour1,MWL_RuinsCathedral1,BFD_Exterior,floatingisland_atgeir,floatingisland_axe,floatingisland_battleaxe,floatingisland_greatsword,floatingisland_knife,floatingisland_mace,floatingisland_sledge,floatingisland_staff,floatingisland_sword safeZones=0 start
-    schedule: "35 12 1,5,9,13,17,21,25,29 * *"
+#    schedule: "35 12 1,5,9,13,17,21,25,29 * *"
+    schedule: "35 12 1,5,9,13,14,17,21,25,29 * *"
 
 # Hard location resets (ignore player bases) - Must do Charred Fortresses last!
   - command: locations_reset CharredFortress safeZones=0 start
-    schedule: "40 12 1,5,9,13,17,21,25,29 * *"
+#    schedule: "40 12 1,5,9,13,17,21,25,29 * *"
+    schedule: "40 12 1,5,9,13,14,17,21,25,29 * *"
 
 #############################
 # EVERY 4 DAYS, STARTING WITH DAY 2 OF MONTH - but each metal only every 8 days
 # Metal Resets
   - command: vegetation_reset rock4_copper,silvervein,giant_ribs,giant_skull,giant_brain,giant_helmet2,giant_sword2 terrain=30 start
-    schedule: "10 12 2,10,18,26 * *"
+#    schedule: "10 12 2,10,18,26 * *"
+    schedule: "10 12 2,10,14,18,26 * *"
 
   - command: vegetation_reset MineRock_Tin,MineRock_Obsidian,BGP_SilicaVein,giant_helmet1,giant_sword1 terrain=10 start
     schedule: "10 12 6,14,22,30 * *"
@@ -115,7 +122,8 @@ jobs:
 # All other vegetation resets
 # Schedule - Every 4 days, starting with day 3 of month, but each command only occurs twice monthly
   - command: vegetation_reset RaspberryBush,AshlandsBush1,Leviathan,YggaShoot1,vfx_edge_clouds,MistArea_edge,rock2_mountain,cliff_ashlands3_Arch_1,Rock_3,GraveStone_Broken_World,AshlandsTree3,FirTree_oldLog,FirTree_small_dead,Beech_small2,Flies,HeathRockPillar,YggdrasilRoot,shrub_2_heath,Birch2_aut terrain=5 start
-    schedule: "10 12 3,19 * *"
+#    schedule: "10 12 3,19 * *"
+    schedule: "10 12 3,14,19 * *"
 
   - command: vegetation_reset rock_mistlands1,BlueberryBush,shrub_2,Bush02_en,AshlandsTree6,cliff_mistlands1,MistArea,Oak1,Pinetree_01,Bush01_heath,Beech_small1,cliff_ashlands5,Beech1,Ashlands_ArchRoofDamaged,YggaShoot3,SwampTree2,ice_rock1,Bush01 terrain=5 start
     schedule: "10 12 7,23 * *"
