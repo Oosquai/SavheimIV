@@ -5,8 +5,8 @@
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 1/15/25</color>
-- Overhauled bleed logic to solve flickering health and make it more intuitive.
-- Improved Shield Counter logic.
+- Improved bleed logic for clarity and to solve flickering health.
+- Improved Shield Counter logic for consistency.
 - Knives are no longer excluded from Shield Counter.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
