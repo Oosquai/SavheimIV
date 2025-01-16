@@ -4,12 +4,17 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/11/25</color>
-- <color=#AF7F7F>Savheim IV</color> development complete.
-- Transitioning to server testing.
+     0\  Savheim IV Patch Notes, 1/15/25</color>
+- Overhauled bleed logic to solve flickering health and make it more intuitive.
+- Improved Shield Counter logic.
+- Knives are no longer excluded from Shield Counter.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 1/11/25
+- <color=#AF7F7F>Savheim IV</color> development complete.
+- Transitioning to server testing.
 
 Patch Notes, 1/8/25
 - Sailing speed now increases by 30% per player.

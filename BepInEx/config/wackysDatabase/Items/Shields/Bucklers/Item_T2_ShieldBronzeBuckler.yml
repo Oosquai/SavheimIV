@@ -1,7 +1,7 @@
 name: ShieldBronzeBuckler
 m_weight: 2
 m_name: $item_shield_bronzebuckler
-m_description: Bucklers grant a <color=#00FFFF>burst of speed</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
+m_description: Bucklers grant a <color=#00FFFF>burst of speed</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon.
 clonePrefabName: 
 mockName: 
 customIcon: 

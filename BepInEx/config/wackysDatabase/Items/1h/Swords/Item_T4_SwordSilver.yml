@@ -1,7 +1,7 @@
 name: SwordSilver
 m_weight: 1
 m_name: $item_sword_silver
-m_description: Sword secondary attacks apply a stacking <color=red>bleed</color> after <color=yellow>parrying</color> that scales in duration and potency with the victim's maximum health.
+m_description: Sword secondary attacks apply a stacking <color=red>bleed</color> after <color=yellow>parrying</color> that scales in potency with the victim's maximum health.
 clonePrefabName: 
 mockName: 
 customIcon: 

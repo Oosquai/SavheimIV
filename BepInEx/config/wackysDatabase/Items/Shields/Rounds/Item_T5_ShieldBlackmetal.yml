@@ -1,7 +1,7 @@
 name: ShieldBlackmetal
 m_weight: 4
 m_name: $item_shield_blackmetal
-m_description: $item_shield_blackmetal_description  Round shields grant a <color=#00FFFF>burst of stamina regeneration</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
+m_description: $item_shield_blackmetal_description  Round shields grant a <color=#00FFFF>burst of stamina regeneration</color> after a successful parry.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon.
 clonePrefabName: 
 mockName: 
 customIcon: 

@@ -430,8 +430,10 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, status=SE_Savheim_Elements_Fire_Poison_Smoked force=<par1> dir=<float_f_force_x>,<float_f_force_z>,<y>
+    delay: 0.1
   - name: RPC_Damage
     1: hit, status=SE_Savheim_Elements_Fire_Poison_Snared
+    delay: 0.2
   poke:
   - self: true
     delay: 5                                     ### COOLDOWN to be secondary target.  Make equal to SE_Savheim_Elements_Fire_Poison_Smoked to visual indiciation of cd status.

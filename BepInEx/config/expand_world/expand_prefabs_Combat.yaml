@@ -24,12 +24,12 @@
   - prefab: Player
     data: PlayerBlocking
     limit: 1
-    maxDistance: 1
+    maxDistance: 6
     parameter: PlayerBlock
   - prefab: Player
     data: PlayerBlockingShield
     limit: 1
-    maxDistance: 1
+    maxDistance: 6
     parameter: p_shield_counter_start
 
 ###############################################################
@@ -59,8 +59,16 @@
   filter: d_player_shield_counter_on
   poke:
   - self: true
-    data: d_player_shield_counter_on
     parameter: p_shield_counter_fx
+
+# special process for knives, since so much faster than other weapons
+- prefab: Player
+  types:
+  - state, knife_stab0
+  filter: d_player_shield_counter_on
+  poke:
+  - self: true
+    parameter: p_shield_counter_fx_knife
 
 # special process for Rikarr's rapier since it uses different attacks.  trigger off secondary slash.
 - prefab: Player
@@ -69,7 +77,6 @@
   filter: d_player_shield_counter_on_rikarr
   poke:
   - self: true
-    data: d_player_shield_counter_on
     parameter: p_shield_counter_fx
 
 # shield counter effects
@@ -88,7 +95,24 @@
     2: bool, true
     3: int, 1
     4: float, 1
-    delay: 0.2  # set to just less than fastest possible wind-up of swords, axes, and spears.  Local testing showed spears 0.35 worked but 0.37 failed.  players can speed up attacks though.  0.3?
+    delay: 0.15  # set to just less than fastest possible wind-up of spears (fastest).  +20 spear with perfect purple and redish gems sometimes failed to boosted damage at 0.2.
+
+# shield counter effects - knives (faster)
+- prefab: Player
+  type: poke, p_shield_counter_fx_knife
+  data: d_player_shield_counter_off   # failsafe to ensure only one buffed attack
+  injectData: true
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.1
+  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.1
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter_Knife
+    2: bool, true
+    3: int, 1
+    4: float, 1
+    delay: 0.05
 
 ###############################################################
 # Spirit Counter
@@ -128,6 +152,7 @@
     data: not_tamed_combat
     parameter: p_spirit_counter_AE <randi_22_26> <vec>  # higher than same tier sanctis, since this requires parry timing and sacrifices shield
     maxDistance: 4
+    limit: 3
 
 - prefab: fx_StaffShield_Break
   type: create
@@ -138,6 +163,7 @@
     data: not_tamed_combat
     parameter: p_spirit_counter_AE <randi_45_51> <vec>
     maxDistance: 4
+    limit: 3
 
 - prefab: fx_StaffShield_Break
   type: create
@@ -148,6 +174,7 @@
     data: not_tamed_combat
     parameter: p_spirit_counter_AE <randi_68_74> <vec>
     maxDistance: 4
+    limit: 3
 
 # Spirit Counter Spirit & Stagger AE
 - prefab: creature
@@ -158,6 +185,7 @@
     1: hit, spirit=<par1>
   poke:
   - self: true
+    delay: 0.1           # needed on server to trigger stagger
     parameter: p_spirit_counter_AE_fx <par2>
 
 - prefab: creature
@@ -349,9 +377,8 @@
 # Greatswords get more ticks than 1h swords.
 # Claw primary attacks have a chance to trigger bleed, but with shorter duration.
 # Bleed arrows and bolts always bleed, but much shorter duration.
-# Reapplications reset count and add a second set of increased ticks, for stacking damage.
-# More stacks makes ticks faster too though, so can't stack infinitely.
-# Damage and tick count scales roughly with creature max hp.
+# Reapplications stack damage and add small amounts of extra ticks.
+# Damage scales roughly with creature max hp.
 
 # 1h swords
 - prefab: sfx_open_box              # Wacky's Database SE adds this, to ensure only occurs on hit.
@@ -363,7 +390,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6                  # big range for big creatures (troll 2.  bonemass 4.  8-star bonemass 6)
-    parameter: p_sword_bleed_hp 7   # par1 = base total ticks minus 1
+    parameter: p_sword_bleed_hp 6 2 0.25   # base total ticks minus 1 | ticks added per additional stack | power used to scale max hp - higher is exponentially more damage
 
 # 2h swords
 - prefab: sfx_open_box
@@ -375,7 +402,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 13
+    parameter: p_sword_bleed_hp 10 3 0.285
 
 # claws - chance to bleed on primary attacks.  this is also used with Ryvers (CWS_Sword_5_SH).
 # chance achieved with Wacky's Database chance to proc SE on attack
@@ -387,18 +414,18 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 1   # more frequent but shorter duration bleeds
+    parameter: p_sword_bleed_hp 4 2 0.25   # rapid short-duration bleeds
 
 # bleed arrows and bolts
 - prefab: sfx_open_box
   type: create
   objects:
-  - sfx_gui_craftitem, 1            # specific to bleed arrows and bolts
+  - sfx_gui_craftitem, 1               # specific to bleed arrows and bolts
   poke:
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 0   # on-demand bleed arrows have short duration, but can rapidly stack, especially against high hp enemies
+    parameter: p_sword_bleed_hp 4 2 0.25   # on-demand bleed arrows have short duration and limited stacking
 
 # unique melee bow - huntress.  bleeds on parry.
 - prefab: sfx_perfectblock
@@ -412,135 +439,20 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 3
+    parameter: p_sword_bleed_hp 4 2 0.25
 
 ##########################
-# Some creatures don't bleed
-# Intercept with no-op
+# Bleed Inits
+# Some creatures don't bleed - Intercept with no-op
 - prefab: Skeleton, Skeleton_Poison, Skeleton_Hildir, Ghost, Wraith, StoneGolem, GoblinKing, Charred_Archer, Charred_Melee, Charred_Mage, Charred_Twitcher, Charred_Twitcher_Summoned, Morgen, Troll_Summoned
   type: poke, p_sword_bleed_hp
   weight: 1E30
 
-##########################
-# Check max hp of creature to set tick damage and extra tick count
-# RPC_Damage wants an int, and no way to type convert...
-# Brute force Fibonacci to solve... obviously??
+# Creature not yet bleeding - init loop
 - prefab: creature
   type: poke, p_sword_bleed_hp
-  filter: float, max_health, 0;99         # victim health range
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+0 1  # ticks, dmg per tick
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 100;199
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+1 2
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 200;299
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+2 3
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 300;499
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+3 4
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 500;799
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+4 5
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 800;1299
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+5 6
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 1300;2099
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+6 7
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 2100;3399
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+7 8
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 3400;5499
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+8 9
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 5500;8899
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+9 10
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 8900;14399
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+10 11
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 14400;23299
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+11 12
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 23300;37699
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+12 13
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 37700;60999
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+13 14
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 61000;98699
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+14 15
-
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: float, max_health, 98700;999999
-  poke:
-  - self: true
-    parameter: p_sword_bleed_fx <par1>+15 16
-
-# Bleed fx
-- prefab: creature
-  type: poke, p_sword_bleed_fx
-  data: d_bleed_tick_rst_stack_inc     # reset tick count and increment stack count any time a new stack is created
+  filter: int, i_bleed_active, 0       # not already bleeding.  init and start loop
+  data: d_combat_bleed_init
   injectData: true
   spawns:
   - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.05
@@ -551,41 +463,47 @@
   - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8
   poke:
   - self: true
-    parameter: p_sword_bleed_loop <par1> <par2>+<par2>*<int_i_bleed_stack_cnt>
+    delay: 1
+    parameter: p_combat_bleed_loop <par3>
 
-# Main Bleed Loop.  Count to X, then exit.
+# Creature already bleeding - increase stack count and max tick count but don't add new loop
 - prefab: creature
-  type: poke, p_sword_bleed_loop
-  filter: int, i_bleed_tick_cnt, 0;<par1>   # check tick count
-  data: d_bleed_tick_cnt_inc                # increment tick count and clear i_bleed_stack_timeout flag
+  type: poke, p_sword_bleed_hp
+  filter: int, i_bleed_active, 1       # already bleeding.  add stack and extend
+  data: d_combat_bleed_add_stack
+  injectData: true
+  spawns:
+  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.05
+  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_combat, 0.1
+  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_combat, 0.15
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.4
+  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8
+
+##########################
+### MAIN BLEED LOOP
+- prefab: creature
+  type: poke, p_combat_bleed_loop
+  filter: int, i_bleed_tick_cnt, 1;99999
+  data: d_combat_bleed_tick_cnt_dec
   injectData: true
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=<par2>                   # apply tick damage
+    1: hit, damage=<mul_<randf_0.9_1.1>_<mul_<pow_<float_max_health>_<par1>>_<int_i_bleed_stack_cnt>>>  ### TICK DMG = stacks x max hp raised to 0.25
+    delay: 0.1
   poke:
   - self: true
-    delay: 1
-    parameter: p_sword_bleed_loop <par1> <par2>  # self loop
-### DEBUG - COMMENT OUT ###
-#  command: s <int_i_bleed_tick_cnt>
-###########################
+    delay: 1                                     ### TICK TIME
+    parameter: p_combat_bleed_loop <par1>
+#### DEBUG - COMMENT OUT ###
+#  command: s <int_i_bleed_tick_cnt> tcks. <int_i_bleed_stack_cnt> stks. <round_<float_health>> hp
+############################
 
-# once count exceeds limit, fallback process will clear all stacks
+# Clear bleeding state
 - prefab: creature
-  type: poke, p_sword_bleed_loop
-  data: d_bleed_stack_timeout_set  # attempt to clear all bleed state. will only succeed if no other poke loops still active.
-  injectData: true
-  poke:
-  - self: true
-    delay: 1.1                     # need this delay to clear all stacks
-    parameter: p_sword_bleed_clear
+  type: poke, p_combat_bleed_loop
   fallback: true
-
-# clear bleed stacks
-- prefab: creature
-  type: poke, p_sword_bleed_clear
-  filter: int, i_bleed_stack_timeout, 1
-  data: d_bleed_full_rst
+  data: d_combat_bleed_end
   injectData: true
 
 ################################################################
@@ -735,6 +653,7 @@
     1: hit, spirit=<par1>
   poke:
   - self: true
+    delay: 0.1
     parameter: p_sanctis_spiritAE_fx
 
 - prefab: creature
@@ -825,7 +744,7 @@
   injectData: true
   poke:
   - self: true
-    delay: 0.7                                   # time needed to start secondary attack
+    delay: 0.53                                  # time needed to start secondary attack
     parameter: p_state_reaper0_latched_clr
 
 - prefab: Player                                 # clear flag after a delay
@@ -1247,7 +1166,7 @@
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
   - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
-  - sfx_troll_attack_hit
+  - sfx_troll_attack_hit, d_sfx_troll_attack_hit_pitch
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg1>
@@ -1270,7 +1189,7 @@
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
   - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
-  - sfx_troll_attack_hit
+  - sfx_troll_attack_hit, d_sfx_troll_attack_hit_pitch
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg2>
@@ -1279,6 +1198,13 @@
     minDistance: 0.1
     maxDistance: 5
     limit: 5
+    parameter: p_reaper_combo0_hit
+  - prefab: creature
+    data: not_tamed_combat
+    minDistance: 0.1
+    maxDistance: 5
+    limit: 5
+    delay: 0.1
     parameter: p_reaper_combo0_hit
   - prefab: Player
     limit: 1
@@ -1293,7 +1219,7 @@
   spawns:
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
   - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
-  - sfx_troll_attack_hit
+  - sfx_troll_attack_hit, d_sfx_troll_attack_hit_pitch
   poke:
   - self: true
     parameter: p_reaper_damage <vReaperDmg3>
@@ -1302,6 +1228,20 @@
     minDistance: 0.1
     maxDistance: 6
     limit: 6
+    parameter: p_reaper_combo0_hit
+  - prefab: creature
+    data: not_tamed_combat
+    minDistance: 0.1
+    maxDistance: 6
+    limit: 6
+    delay: 0.1
+    parameter: p_reaper_combo0_hit
+  - prefab: creature
+    data: not_tamed_combat
+    minDistance: 0.1
+    maxDistance: 6
+    limit: 6
+    delay: 0.2
     parameter: p_reaper_combo0_hit
   - prefab: Player
     limit: 1
@@ -1313,6 +1253,7 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, slash=<par1>
+    delay: 0.1
 
 - prefab: Player
   type: poke, p_reaping_blood_vfx_cnt_1
@@ -1363,7 +1304,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.  also prevents running in place while faceplanted in the mob.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 39*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 39*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 3
 - prefab: Player
@@ -1379,7 +1320,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 56*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 56*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 4
 - prefab: Player
@@ -1395,7 +1336,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 76*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 76*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 5
 - prefab: Player
@@ -1411,7 +1352,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 93*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 93*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 6
 - prefab: Player
@@ -1427,7 +1368,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 113*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 113*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 7
 - prefab: Player
@@ -1443,7 +1384,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 130*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 130*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 # Atgeir Tier 8
 - prefab: Player
@@ -1459,7 +1400,7 @@
     minDistance: 3.5                  ### if sprinting this distance should enforce hitting with blade instead of shaft of atgeir.
     maxDistance: 9
     data: not_tamed_combat
-    parameter: p_impale_save_dmg 150*<float_$forward_speed>*<float_$forward_speed>*0.02+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
+    parameter: p_impale_save_dmg 150*<float_$forward_speed>*<float_$forward_speed>*0.01+<vImpaleDmgRnd>   ### First constant is base dmg per tier of atgeir.  Divisor normalizes squared momentum to get a percentage of atgeir base damage.  At +14% movespeed full sprint max sqrd momentum = 65.  At -15% movespeed full sprint max sqrd momentum = 33.
 
 #################
 # Save damage and flag(s) to nearby creatures.  Only the one hit will trigger.
@@ -1487,13 +1428,13 @@
   - prefab: creature
     maxDistance: 9
     limit: 1
-    data: d_impale_vld                ### check that creature has a valid impale window flag
     parameter: p_impale_apply_dmg
 
 #################
 # Do damage!  And FX!
 - prefab: creature
   type: poke, p_impale_apply_dmg
+  filter: d_impale_vld                ### check that creature has a valid impale window flag
   spawns:
   - sfx_troll_attack_hit
   - sfx_troll_hit

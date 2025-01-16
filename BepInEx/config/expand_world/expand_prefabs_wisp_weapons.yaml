@@ -142,15 +142,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Atgeir_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 16                                    ### Must match SE TtL
+    delay: 16.1                                  ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                  ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_atgeir
 
 - prefab: Player, creature
@@ -182,15 +183,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Axe_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 16                                    ### Must match SE TtL
+    delay: 16.1                                    ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_axe
 
 - prefab: Player, creature
@@ -222,15 +224,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Battleaxe_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 16                                    ### Must match SE TtL
+    delay: 16.1                                    ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_battleaxe
 
 - prefab: Player, creature
@@ -262,15 +265,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Greatsword_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 21                                    ### Must match SE TtL
+    delay: 21.1                                    ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_greatsword
 
 - prefab: Player, creature
@@ -302,15 +306,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Knife_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 16                                    ### Must match SE TtL
+    delay: 16.1                                    ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_knife
 
 - prefab: Player, creature
@@ -342,15 +347,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Mace_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 4                                     ### Must match SE TtL
+    delay: 4.1                                     ### Must match SE TtL
   poke:
   - self: true
-    delay: 34                                    ### Must match sum of SE + SE_CD TtL
+    delay: 34.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_mace
 
 - prefab: Player, creature
@@ -382,15 +388,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Sledge_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 4                                     ### Must match SE TtL
+    delay: 4.1                                     ### Must match SE TtL
   poke:
   - self: true
-    delay: 34                                    ### Must match sum of SE + SE_CD TtL
+    delay: 34.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_sledge
 
 - prefab: Player, creature
@@ -422,15 +429,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Staff_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 10                                    ### Must match SE TtL
+    delay: 10.1                                    ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_staff
 
 - prefab: Player, creature
@@ -462,15 +470,16 @@
     2: bool, false
     3: int, 1
     4: float, 1
+    delay: 0.1
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_Wisp_Sword_CD
     2: bool, false
     3: int, 1
     4: float, 1
-    delay: 16                                    ### Must match SE TtL
+    delay: 16.1                                    ### Must match SE TtL
   poke:
   - self: true
-    delay: 64                                    ### Must match sum of SE + SE_CD TtL
+    delay: 64.1                                    ### Must match sum of SE + SE_CD TtL
     parameter: p_wisp_weapon_buff_cd_sword
 
 - prefab: Player, creature

@@ -333,6 +333,7 @@
   - name: RPC_Heal
     1: float, <par1>
     2: bool, true
+    delay: 0.1
   poke:
   - self: true
     delay: 2.4                                   # TIME BETWEEN TICKS. diverge per stack count
@@ -354,6 +355,7 @@
   - name: RPC_Heal
     1: float, <par1>
     2: bool, true
+    delay: 0.1
   poke:
   - self: true
     delay: 2.48                                  # TIME BETWEEN TICKS. diverge per stack count
@@ -375,6 +377,7 @@
   - name: RPC_Heal
     1: float, <par1>
     2: bool, true
+    delay: 0.1
   poke:
   - self: true
     delay: 2.56                                  # TIME BETWEEN TICKS. diverge per stack count

@@ -1,3 +1,44 @@
+###########################################################
+# Server side RPC vs. injectData rules
+1) RPCs known to be effected:  RPC_Damage, RPC_Heal
+2) RPCs known to be uneffected:  RPC_AddStatusEffect, RPC_Stagger, RPC_FreezeFrame, SetTrigger
+3) Even with injectData, any data and RPC occuring at same time will block effected RPCs
+4) This is still true whether both data and RPC are within same process, or data in process that then pokes another for the RPC if there isn't a poke delay.
+5) Can workaround with delay: 0.1 for poke or RPC.
+
+# Examples
+# Data in either commented spot will cause RPC_Damage to fail unless at least one of the commented delays is active.
+# RPC_Stagger works with either data and without either delay.
+- prefab: Player
+  type: say, test
+  poke:
+  - prefab: creature
+    limit: 1
+    maxDistance: 20
+    parameter: p_test <vec>
+
+- prefab: creature
+  type: poke, p_test
+#  data: d_empty_data
+#  injectData: true
+  poke:
+  - self: true
+#    delay: 0.1
+    parameter: p_test2 <par1>
+
+- prefab: creature
+  type: poke, p_test2
+#  data: d_empty_data
+#  injectData: true
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, damage=100
+#    delay: 0.1
+  - name: RPC_Stagger
+    1: vec, <par1>
+
+
+###########################################################
 # Jere Math Update
 Functions
 Text related functions:

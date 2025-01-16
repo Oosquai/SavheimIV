@@ -29,13 +29,9 @@
 - prefab: Greydwarf_Elite, Troll, Abomination, StoneGolem, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, SeekerBrute, Gjall, BonemawSerpent, Morgen, Charred_Archer, Surtling, Troll_Summoned
   type: create
   data: d_no_stagger
-  injectData: true
   poke:
   - self: true
     parameter: p_creature_level_up_calc_dn
-  - self: true
-    delay: 0.1
-    parameter: p_dn_summoned_troll  # expand_prefabs_DeepNorth.yaml.  Troll_Summoned only.
 
 ###############################################################
 # Serpents swim faster and don't stagger when blocked
@@ -843,6 +839,7 @@
   - name: RPC_Heal
     1: float, <par1>
     2: bool, true
+    delay: 0.1
   poke:
   - self: true
     delay: 1

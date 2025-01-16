@@ -50,6 +50,11 @@
   - ZSFX.m_minPitch, 0.5
   - ZSFX.m_maxPitch, 0.5
 
+- name: d_sfx_troll_attack_hit_pitch
+  floats:
+  - ZSFX.m_minPitch, 1.1
+  - ZSFX.m_maxPitch, 1.2
+
 - name: d_force_toward_calc_combat
   floats:
   - f_force_x, <par1>-<x>
@@ -62,24 +67,24 @@
 
 ##############################################################
 # Bleed Mechanics
-- name: d_bleed_tick_rst_stack_inc
+- name: d_combat_bleed_init
   ints:
-  - i_bleed_tick_cnt, 0
-  - i_bleed_stack_cnt, <int_i_bleed_stack_cnt> + 1
+  - i_bleed_active, 1
+  - i_bleed_tick_cnt, <par1>
+  - i_bleed_stack_cnt, 1
 
-- name: d_bleed_full_rst
+- name: d_combat_bleed_end
   ints:
-  - i_bleed_tick_cnt, 0
-  - i_bleed_stack_cnt, 0
+  - i_bleed_active, 0
 
-- name: d_bleed_tick_cnt_inc
+- name: d_combat_bleed_add_stack
   ints:
-  - i_bleed_tick_cnt, <int_i_bleed_tick_cnt> + 1
-  - i_bleed_stack_timeout, 0
+  - i_bleed_tick_cnt, <add_<int_i_bleed_tick_cnt>_<par2>>
+  - i_bleed_stack_cnt, <add_<int_i_bleed_stack_cnt>_1>
 
-- name: d_bleed_stack_timeout_set
+- name: d_combat_bleed_tick_cnt_dec
   ints:
-  - i_bleed_stack_timeout, 1
+  - i_bleed_tick_cnt, <sub_<int_i_bleed_tick_cnt>_1>
 
 ##############################################################
 # Shield Counter

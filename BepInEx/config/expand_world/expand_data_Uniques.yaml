@@ -204,8 +204,6 @@
 
 ####################################
 # T2 Knife
-- value: vKnifeToxinTickTime, 1.3
-
 - name: d_gear_unique_knife_t2
   hashes:
   - RightItem, CWS_Dagger_7_SH
@@ -214,13 +212,24 @@
   hashes:
   - RightItem, CWS_Dagger_7_SH_DNRL
 
-- name: d_unique_knife_toxin_cnt_decrement
+- name: d_unique_knife_toxin_init
   ints:
-  - i_unique_knife_toxin_cnt, <sub_<int_i_unique_knife_toxin_cnt>_1>
+  - i_unique_knife_toxin_active, 1
+  - i_unique_knife_toxin_tick_cnt, 13
+  - i_unique_knife_toxin_stack_cnt, 1
 
-- name: d_unique_knife_toxin_cnt_extend
+- name: d_unique_knife_toxin_end
   ints:
-  - i_unique_knife_toxin_cnt, <add_<int_i_unique_knife_toxin_cnt>_9>
+  - i_unique_knife_toxin_active, 0
+
+- name: d_unique_knife_toxin_add_stack
+  ints:
+  - i_unique_knife_toxin_tick_cnt, <add_<int_i_unique_knife_toxin_tick_cnt>_9>
+  - i_unique_knife_toxin_stack_cnt, <add_<int_i_unique_knife_toxin_stack_cnt>_1>
+
+- name: d_unique_knife_toxin_tick_cnt_dec
+  ints:
+  - i_unique_knife_toxin_tick_cnt, <sub_<int_i_unique_knife_toxin_tick_cnt>_1>
 
 ####################################
 # T8 Sanctis

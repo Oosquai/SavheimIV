@@ -1,7 +1,7 @@
 name: CWS_Tower_Shield_2_SH
 m_weight: 8
 m_name: Steel Carapace Tower Shield
-m_description: A beautifully crafted tower shield.  You feel safe, and quite stylish, behind this.  Tower shields grant increased <color=green>health regeneration</color> when blocking attacks.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon, excluding knives.
+m_description: A beautifully crafted tower shield.  You feel safe, and quite stylish, behind this.  Tower shields grant increased <color=green>health regeneration</color> when blocking attacks.  Normal blocks with any shield enable a quick <color=yellow>Shield Counter</color> using any one-handed weapon.
 clonePrefabName: CWS_Tower_Shield_2
 mockName: 
 customIcon: 

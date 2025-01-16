@@ -1,7 +1,7 @@
 name: CWS_TH_Sword_10_SH
 m_weight: 4
 m_name: Ebonsteel Greatsword
-m_description: Greatswords have a reliable <color=yellow>parry</color>, and their secondary attacks stack <color=red>long-lasting bleeds</color> after <color=yellow>parrying</color> that scale in duration and potency with the victim's maximum health.
+m_description: Greatswords have a reliable <color=yellow>parry</color>, and their secondary attacks stack <color=red>long-lasting bleeds</color> after <color=yellow>parrying</color> that scale in potency with the victim's maximum health.
 clonePrefabName: CWS_TH_Sword_10
 mockName: 
 customIcon: 
