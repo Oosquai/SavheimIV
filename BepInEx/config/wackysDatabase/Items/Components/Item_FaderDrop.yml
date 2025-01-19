@@ -1,5 +1,5 @@
 name: FaderDrop
-m_weight: 3
+m_weight: 1.6
 m_name: $item_fader_drop
 m_description: $item_fader_drop_description  Until then, vendors will pay handsomely for these if you carry enough to catch their eye.
 clonePrefabName: 

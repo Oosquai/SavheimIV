@@ -1,7 +1,7 @@
 ###########################################################
-# Server side RPC vs. injectData rules
-1) RPCs known to be effected:  RPC_Damage, RPC_Heal
-2) RPCs known to be uneffected:  RPC_AddStatusEffect, RPC_Stagger, RPC_FreezeFrame, SetTrigger
+# Server-side RPC vs. injectData rules
+1) RPCs tested to be effected:  RPC_Damage, RPC_Heal
+2) RPCs tested to be uneffected:  RPC_AddStatusEffect, RPC_Stagger, RPC_FreezeFrame, SetTrigger
 3) Even with injectData, any data and RPC occuring at same time will block effected RPCs
 4) This is still true whether both data and RPC are within same process, or data in process that then pokes another for the RPC if there isn't a poke delay.
 5) Can workaround with delay: 0.1 for poke or RPC.

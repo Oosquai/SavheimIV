@@ -6,6 +6,12 @@
     "requiredGlobalKey": "defeated_eikthyr"
   },
   {
+    "prefab": "RoundLog", 
+    "stack": 1,
+    "price": 3,
+    "requiredGlobalKey": "defeated_gdking"
+  },
+  {
     "prefab": "BeltStrength_T2",
     "stack": 1,
     "price": 1150,

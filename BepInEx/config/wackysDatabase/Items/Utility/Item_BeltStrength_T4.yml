@@ -1,7 +1,7 @@
 name: BeltStrength_T4
 m_weight: 2
 m_name: Megingjord III
-m_description: Gives the wearer increased strength.
+m_description: Gives the wearer increased strength and stamina regeneration.
 clonePrefabName: BeltStrength
 mockName: 
 customIcon: 

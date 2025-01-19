@@ -190,8 +190,6 @@ groups:
     - AmmoTote
     - CryptKey
     - DvergrKey
-    - BOM_BonemassKey
-    - BOM_EikthyrKey
 
   TwoHandedWeapon:
     - AtgeirBlackmetal

@@ -41,6 +41,11 @@
     maxDistance: 30
     parameter: p_make_me_wet
 
+# skip bosses
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  type: poke, p_make_me_wet
+  weight: 1E30  
+
 - prefab: creature
   type: poke, p_make_me_wet
   objectRpc:

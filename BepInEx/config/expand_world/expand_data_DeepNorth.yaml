@@ -154,14 +154,10 @@
 ###########################################
 # Odin data
 - name: d_odin_persist
-  floats:
-  - Odin.m_despawnCloseDistance, 0
-
-- name: d_odin_closer
   ints:
   - i_dnrl_victory_odin, 1
   floats:
-  - Odin.m_despawnCloseDistance, 4
+  - Odin.m_despawnCloseDistance, 0
 
 - name: d_sfx_odin_greet_pitch_dn
   floats:
@@ -460,48 +456,48 @@
 # Boss HP adjustments
 - name: d_dn_boss_hp_eikthyr
   floats:
-  - max_health, <mul_<float_max_health>_3>
-  - health, <mul_<float_max_health>_3.001>
+  - max_health, <mul_<float_max_health>_2>
+  - health, <mul_<float_max_health>_2.001>
 
 - name: d_dn_boss_hp_brenna
   floats:
-  - max_health, <mul_<float_max_health>_1>
-  - health, <mul_<float_max_health>_1.001>
+  - max_health, <mul_<float_max_health>_0.7>
+  - health, <mul_<float_max_health>_0.701>
 
 - name: d_dn_boss_hp_elder
-  floats:
-  - max_health, <mul_<float_max_health>_1.5>
-  - health, <mul_<float_max_health>_1.501>
-
-- name: d_dn_boss_hp_bonemass
-  floats:
-  - max_health, <mul_<float_max_health>_0.938>
-  - health, <mul_<float_max_health>_0.939>
-
-- name: d_dn_boss_hp_geirrhafa
-  floats:
-  - max_health, <mul_<float_max_health>_0.75>
-  - health, <mul_<float_max_health>_0.751>
-
-- name: d_dn_boss_hp_moder
-  floats:
-  - max_health, <mul_<float_max_health>_0.9>
-  - health, <mul_<float_max_health>_0.901>
-
-- name: d_dn_boss_hp_yagluth
-  floats:
-  - max_health, <mul_<float_max_health>_0.675>
-  - health, <mul_<float_max_health>_0.676>
-
-- name: d_dn_boss_hp_queen
   floats:
   - max_health, <mul_<float_max_health>_0.8>
   - health, <mul_<float_max_health>_0.801>
 
-- name: d_dn_boss_hp_fader
+- name: d_dn_boss_hp_bonemass
+  floats:
+  - max_health, <mul_<float_max_health>_0.5>
+  - health, <mul_<float_max_health>_0.501>
+
+- name: d_dn_boss_hp_geirrhafa
+  floats:
+  - max_health, <mul_<float_max_health>_0.5>
+  - health, <mul_<float_max_health>_0.501>
+
+- name: d_dn_boss_hp_moder
+  floats:
+  - max_health, <mul_<float_max_health>_0.47>
+  - health, <mul_<float_max_health>_0.471>
+
+- name: d_dn_boss_hp_yagluth
+  floats:
+  - max_health, <mul_<float_max_health>_0.35>
+  - health, <mul_<float_max_health>_0.351>
+
+- name: d_dn_boss_hp_queen
   floats:
   - max_health, <mul_<float_max_health>_0.4>
   - health, <mul_<float_max_health>_0.401>
+
+- name: d_dn_boss_hp_fader
+  floats:
+  - max_health, <mul_<float_max_health>_0.2>
+  - health, <mul_<float_max_health>_0.201>
 
 - valueGroup: dnEikthyrDmgPlayer
   values:

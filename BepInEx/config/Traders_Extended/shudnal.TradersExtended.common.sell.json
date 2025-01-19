@@ -1,32 +1,44 @@
 [
   {
-    "prefab": "BOM_EikthyrKey",
-    "stack": 1,
-    "price": 5,
-    "requiredGlobalKey": ""
-  },
-  {
     "prefab": "HardAntler",
     "stack": 1,
-    "price": 5,
+    "price": 7,
     "requiredGlobalKey": ""
   },
   {
     "prefab": "CryptKey",
     "stack": 1,
-    "price": 5,
-    "requiredGlobalKey": ""
-  },
-  {
-    "prefab": "BOM_BonemassKey",
-    "stack": 1,
-    "price": 5,
+    "price": 13,
     "requiredGlobalKey": ""
   },
   {
     "prefab": "Wishbone",
     "stack": 1,
-    "price": 5,
+    "price": 19,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "DragonTear",
+    "stack": 2,
+    "price": 12,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "YagluthDrop",
+    "stack": 3,
+    "price": 73,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "QueenDrop",
+    "stack": 4,
+    "price": 387,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "FaderDrop",
+    "stack": 6,
+    "price": 133,
     "requiredGlobalKey": ""
   },
   {
@@ -54,12 +66,6 @@
     "requiredGlobalKey": ""
   },
   {
-    "prefab": "FaderDrop",
-    "stack": 3,
-    "price": 666,
-    "requiredGlobalKey": ""
-  },
-  {
     "prefab": "TrophyDeer",
     "stack": 1,
     "price": 4,
@@ -80,7 +86,7 @@
   {
     "prefab": "TrophyEikthyr",
     "stack": 1,
-    "price": 40,
+    "price": 30,
     "requiredGlobalKey": ""
   },
   {
@@ -122,7 +128,7 @@
   {
     "prefab": "TrophyTheElder",
     "stack": 1,
-    "price": 50,
+    "price": 40,
     "requiredGlobalKey": ""
   },
   {
@@ -170,7 +176,7 @@
   {
     "prefab": "TrophyBonemass",
     "stack": 1,
-    "price": 60,
+    "price": 50,
     "requiredGlobalKey": ""
   },
   {
@@ -218,7 +224,7 @@
   {
     "prefab": "TrophyDragonQueen",
     "stack": 1,
-    "price": 70,
+    "price": 60,
     "requiredGlobalKey": ""
   },
   {
@@ -260,7 +266,7 @@
   {
     "prefab": "TrophyGoblinKing",
     "stack": 1,
-    "price": 80,
+    "price": 70,
     "requiredGlobalKey": ""
   },
   {
@@ -302,7 +308,7 @@
   {
     "prefab": "TrophySeekerQueen",
     "stack": 1,
-    "price": 90,
+    "price": 80,
     "requiredGlobalKey": ""
   },
   {
@@ -356,7 +362,7 @@
   {
     "prefab": "TrophyFader",
     "stack": 1,
-    "price": 100,
+    "price": 90,
     "requiredGlobalKey": ""
   }
 ]

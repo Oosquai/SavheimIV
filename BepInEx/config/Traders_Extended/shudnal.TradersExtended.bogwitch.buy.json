@@ -1,5 +1,11 @@
 [
   {
+    "prefab": "ElderBark",
+    "stack": 1,
+    "price": 7,
+    "requiredGlobalKey": "defeated_bonemass"
+  },
+  {
     "prefab": "Chain",
     "stack": 1,
     "price": 50,

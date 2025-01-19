@@ -10,11 +10,12 @@
 
 ##################################
 # Chapter 2 after killing Eikthyr
-- prefab: TrophyEikthyr
-  type: create
+- prefab: eikthyr_ragdoll
+  type: destroy
   biomes: Meadows
-  objects:
-  - sfx_eikthyr_death, 15
+  weight: 1E30
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_2
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_2
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -38,11 +39,12 @@
 
 ##################################
 # Chapter 3 - Elder
-- prefab: TrophyTheElder
-  type: create
+- prefab: gdking_Ragdoll
+  type: destroy
   biomes: Blackforest
-  objects:
-  - sfx_gdking_death, 15
+  weight: 1E30
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_3
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_3
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -83,6 +85,8 @@
   biomes: Swamp
   objects:
   - sfx_Bonemass_death, 15
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_5
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_5
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -111,6 +115,8 @@
   biomes: Mountain
   objects:
   - sfx_dragon_death, 15
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_6
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_6
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -139,6 +145,8 @@
   biomes: Plains
   objects:
   - fx_goblinking_death, 15
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_7
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_7
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -167,6 +175,8 @@
   biomes: Mistlands
   objects:
   - fx_Queen_Death, 15
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_8
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_8
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -195,6 +205,8 @@
   biomes: AshLands
   objects:
   - sfx_fader_death_explosion, 15
+  bannedObjects:
+  - BossStone_TheElder, 30, d_sh4_story_ch_9
   spawns:
   - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_9
   - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
@@ -226,18 +238,44 @@
   spawns:
   - BossStone_TheElder, 0,0,-8.5, -30,0,0, d_sh4_story_ch_10
   - sign, 0,0,-1.3, -30,0,0, d_sh4_story_sign_quest_marker
-  - CL_Raw_Yellow_small, 0,0.1,2.9, d_sh4_story_light_data
+  - CL_Raw_Yellow_small, 0,0.1,2.9, d_sh4_story_light_data_off
+
+- prefab: Morgen
+  type: destroy
+  biomes: DeepNorth
+  objects:
+  - BossStone_TheElder, 100, d_sh4_story_ch_10
+  weight: 1E30
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_ch_10
+    maxDistance: 100
+    limit: 1
+    parameter: p_sh4_story_ch_10_enable
+  - prefab: CL_Raw_Yellow_small
+    data: d_sh4_story_light_data_off
+    maxDistance: 100
+    limit: 1
+    parameter: p_sh4_story_ch_10_enable
+
+- prefab: BossStone_TheElder
+  type: poke, p_sh4_story_ch_10_enable
+  data: d_sh4_story_ch_10_enable
+
+- prefab: CL_Raw_Yellow_small
+  type: poke, p_sh4_story_ch_10_enable
+  data: d_sh4_story_light_data_on
 
 ##################################
 # Chapter 11 - Deep North (roguelite victory - Odin)
 - prefab: Odin
-  type: destroy
+  type: poke, p_story_dnrl_odin
   biomes: DeepNorth
   filter: int, i_dnrl_victory_odin, 1
   spawns:
-  - BossStone_TheElder, 0,0,snap, d_sh4_story_ch_11
-  - sign_sh4_story, 0,0,snap, 0,0,0, d_sh4_story_sign_quest_marker
-  - CL_Raw_Yellow_small_temp, 0,0.1,snap, d_sh4_story_light_data
+  - BossStone_TheElder, -3,0,snap, d_sh4_story_ch_11
+  - sign_sh4_story, -3,0,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, -3,0.1,snap, d_sh4_story_light_data
   poke:
   - prefab: BossStone_TheElder
     data: d_sh4_story_flag

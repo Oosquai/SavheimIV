@@ -1,7 +1,7 @@
 name: BeltStrength_T8
 m_weight: 2
 m_name: Celestial Megingjord
-m_description: Gives the wearer increased strength and supports an extra socket.
+m_description: Gives the wearer increased strength and stamina regeneration, and it supports an extra socket.
 clonePrefabName: BeltStrength
 mockName: 
 customIcon: 

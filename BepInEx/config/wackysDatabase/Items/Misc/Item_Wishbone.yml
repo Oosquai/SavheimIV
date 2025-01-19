@@ -1,7 +1,7 @@
 name: Wishbone
 m_weight: 0.1
 m_name: $item_wishbone
-m_description: "This ancient bone remembers the location of many forgotten things.  This is a <color=yellow>gem</color> that can be socketed into Utility items."
+m_description: This ancient bone remembers the location of many forgotten things.  This is a <color=yellow>gem</color> that can be socketed into Utility items.  A vendor would probably buy your extras.
 clonePrefabName: 
 mockName: 
 customIcon: 

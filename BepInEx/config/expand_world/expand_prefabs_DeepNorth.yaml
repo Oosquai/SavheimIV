@@ -123,7 +123,7 @@
     2: string, <#7F1F1F>Blood for blood, a life is forfeit!
     3: int, 0
     delay: 6.5
-  poke:  
+  poke:
   - self: true               # initial entry into spawner loop
     delay: <randi_13_16>     # randomized startup delay so different players have uniquely timed spawn loops
     parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
@@ -215,7 +215,7 @@
   bannedObjectsLimit: 1
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_1p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
+    parameter: dn_roguelite_spawn_trash_1p <par1> <par2> <par3> <par4> <randf_1_18> <randf_1_18> <randf_1_18> <randf_1_18>
 
 # 2 players
 - prefab: Player
@@ -228,7 +228,7 @@
   bannedObjectsLimit: 2
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_2p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
+    parameter: dn_roguelite_spawn_trash_2p <par1> <par2> <par3> <par4> <randf_1_15> <randf_1_15> <randf_1_15> <randf_1_15>
 
 # 3 players
 - prefab: Player
@@ -241,7 +241,7 @@
   bannedObjectsLimit: 3
   poke:
   - self: true
-    parameter: dn_roguelite_spawn_trash_3p <par1> <par2> <par3> <par4> <randf_1_9> <randf_1_9> <randf_1_9> <randf_1_9>
+    parameter: dn_roguelite_spawn_trash_3p <par1> <par2> <par3> <par4> <randf_1_12> <randf_1_12> <randf_1_12> <randf_1_12>
 
 # 4+ players
 - prefab: Player
@@ -1174,11 +1174,13 @@
 - prefab: Player
   type: poke, p_dn_roguelite_win_sequence
   biomes: DeepNorth                         # only process if in Deep North
-  command: broadcast center <#00AFAF>Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  commands:
+  - broadcast center <#00AFAF>Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  - s Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
   data: d_player_roguelite_clear
   injectData: true
   spawns:
-  - Odin, 0,8,snap, 180,0,0, d_odin_persist, 0
+  - Odin, 0,8,snap, 180,0,0, d_odin_persist, 0  # game will despawn odin after max 60 seconds
   - sfx_haldor_yea, 0,8,snap, d_sfx_odin_greet_pitch_dn, 1
   - sfx_haldor_laugh, 0,8,snap, d_sfx_odin_greet_pitch_dn, 3
   - vfx_FireWork_BlackCore, 0,12,2 0,0,0, d_empty_data_dn, 3.2
@@ -1208,10 +1210,11 @@
   - <par8>, 0,6,snap, 0,0,0, d_empty_data_dn, 16
   - sfx_haldor_greet, 0,8,snap, d_sfx_odin_greet_pitch_dn, 19
   poke:
-  - prefab: Odin              # Odin prevented from leaving during reward sequence
-    delay: 16.3               # injectData doesn't seem to work for this, so hide his flicker in other effects
+  - prefab: Odin
+    data: d_odin_persist
+    delay: 7.4
     maxDistance: 50
-    parameter: p_odin_closer  # let him leave once it concludes
+    parameter: p_story_dnrl_odin
   - prefab: deer_ragdoll
     data: dn_deer_ragdoll
     maxDistance: 100
@@ -1223,10 +1226,6 @@
   - prefab: stone_marker_savheim_dn
     maxDistance: 100
     parameter: p_dnrl_remove_items
-
-- prefab: Odin
-  type: poke, p_odin_closer
-  data: d_odin_closer
 
 - prefab: deer_ragdoll
   type: poke, p_dnrl_victory_remove_deer_ragdoll
@@ -1250,6 +1249,10 @@
     data: dn_mob_group_patrol
     maxDistance: 50
     parameter: p_dn_patrol_aggravate_group
+  - prefab: Player                     # do this from players instead of deer_ragdoll, so fleeing players don't get reflagged if they turn around as soon as they see the broadcast.
+    maxDistance: 100
+    data: d_player_roguelite_off       # tag any players who showed up late with dnrl flag
+    parameter: p_dnrl_player_late_arrival
 
 # Check if deer_ragdoll still within range, else player fled
 - prefab: Player
@@ -1263,6 +1266,30 @@
   commands:
   - broadcast center <#00AFAF><string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
   - s <string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+
+# players who show up late need to be flagged so the event doesn't end when they're last alive
+- prefab: Player
+  type: poke, p_dnrl_player_late_arrival
+  biomes: DeepNorth                # only in Deep North
+  objects:
+  - deer_ragdoll, 100, dn_deer_ragdoll
+  filter: d_player_roguelite_off   # only process if not already started
+  data: d_player_roguelite_start   # clear all state for a fresh start for this new player
+  injectData: true
+  objectRpc:
+  - name: Message
+    1: enum_message, 2
+    2: string, <#007F7F>You are now an accomplice to the murder of an innocent deer.
+    3: int, 0
+  - name: Message
+    1: enum_message, 2
+    2: string, <#7F1F1F>Blood for blood, your lives are forfeit!
+    3: int, 0
+    delay: 3.5
+  poke:
+  - self: true               # start player cleanup loop
+    delay: 1                 # wait for data
+    parameter: p_dnrl_cleanup_player_loop
 
 ####################################
 # Deer ragdoll main cleanup loop
@@ -1473,7 +1500,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.1   # need this else they insta-die.  hp not registered yet maybe?
+    delay: 0.2   # need this else they insta-die.  hp not registered yet maybe?
     parameter: p_dn_boss_hp_adjustments
 
 - prefab: Eikthyr
@@ -1549,7 +1576,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.1
+    delay: 0.2
     parameter: p_creature_level_up_dn <vLevelUp1Dn>
 
 # Medium level up chances
@@ -1558,7 +1585,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.1
+    delay: 0.2
     parameter: p_creature_level_up_dn <vLevelUp2Dn>
 
 # High level up chances
@@ -1567,7 +1594,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.1
+    delay: 0.2
     parameter: p_creature_level_up_dn <vLevelUp3Dn>
 
 # special case since Dverger Mages can summon Skeletons - this puts them on Dverger team
@@ -1578,7 +1605,7 @@
   - DvergerMage, 3
   poke:
   - self: true
-    delay: 0.1
+    delay: 0.2
     parameter: p_creature_level_up_dn_peaceful <vLevelUp3Dn>
 
 - prefab: Skeleton
@@ -1587,7 +1614,7 @@
   fallback: true
   poke:
   - self: true
-    delay: 0.1
+    delay: 0.2
     parameter: p_creature_level_up_dn <vLevelUp3Dn>
 
 #####################################################################

@@ -53,14 +53,26 @@
   - WearNTear.m_health, -1
   - health, -1
 
+- name: d_sh4_story_light_data_off
+  ints:
+  - i_sh4_story_flag, 1
+  bools:
+  - Piece.m_canBeRemoved, false
+  - Piece.m_primaryTarget, false
+  - Piece.m_randomTarget, false
+  floats:
+  - WearNTear.m_health, -1
+  - health, -1
+  - LightLod.m_lightDistance, 0
+
+- name: d_sh4_story_light_data_on
+  floats:
+  - LightLod.m_lightDistance, 100
+
 - name: d_sh4_story_pieces_pos
   position: <x>,<z>,<sub_<y>_<par1>>
   ints:
   - i_sh4_story_flag, 1
-
-- name: d_sh4_story_light_strobes
-  floats:
-  - LightLod.m_lightDistance, <par1>
 
 ### Chapter datas
 - name: d_sh4_story_ch_1
@@ -158,10 +170,15 @@
   - HasFieldsRuneStone, 1
   - HasFields, 1
   - i_sh4_story_flag, 1
+  - override_interact, 1   # can't read final chapter until killing nearby Morgen
   strings:
   - RuneStone.m_name, <#AF7F7F>Jayk's Journey - Ch. 9
   - RuneStone.m_label, Jayk's Journey - Ch. 9
   - RuneStone.m_text, <vSH4StoryCh10>
+
+- name: d_sh4_story_ch_10_enable
+  ints:
+  - override_interact, 0
 
 - name: d_sh4_story_ch_11
   ints:

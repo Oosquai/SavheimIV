@@ -1,7 +1,7 @@
 name: CryptKey
 m_weight: 0.1
 m_name: $item_cryptkey
-m_description: $item_cryptkey_description
+m_description: $item_cryptkey_description  A vendor would probably buy your extras.
 clonePrefabName: 
 mockName: 
 customIcon: 

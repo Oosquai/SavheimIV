@@ -988,7 +988,7 @@
   filter: dual_axe_lightning_debuff1
   data: dual_axe_lightning_debuff0
   injectData: true
-  spawn: fx_chainlightning_hit
+  spawn: fx_chainlightning_hit, 0.3
   objectRpc:
   - name: RPC_Stagger
     1: vec, <x>,<z>,<y>

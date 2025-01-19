@@ -24,6 +24,18 @@
     "requiredGlobalKey": "defeated_eikthyr"
   },
   {
+    "prefab": "QueenBee", 
+    "stack": 1,
+    "price": 300,
+    "requiredGlobalKey": "defeated_eikthyr"
+  },
+  {
+    "prefab": "FineWood", 
+    "stack": 1,
+    "price": 5,
+    "requiredGlobalKey": "defeated_gdking"
+  },
+  {
     "prefab": "Thistle", 
     "stack": 1,
     "price": 10,
@@ -34,11 +46,5 @@
     "stack": 1,
     "price": 10,
     "requiredGlobalKey": "defeated_gdking"
-  },
-  {
-    "prefab": "QueenBee", 
-    "stack": 1,
-    "price": 300,
-    "requiredGlobalKey": "defeated_eikthyr"
   }
 ]
