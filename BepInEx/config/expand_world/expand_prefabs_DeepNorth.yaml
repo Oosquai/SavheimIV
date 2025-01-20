@@ -74,6 +74,12 @@
     data: dn_deer_ragdoll
     maxDistance: 5
     limit: 1
+    delay: 1
+    parameter: p_dnrl_spawn_deer_ragdoll_loop
+  - prefab: deer_ragdoll
+    data: dn_deer_ragdoll
+    maxDistance: 5
+    limit: 1
     delay: 10
     parameter: p_dnrl_deer_ragdoll_fx_loop
   - prefab: stone_marker_savheim_dn
@@ -94,6 +100,32 @@
 - prefab: deer_ragdoll
   type: poke, p_dnrl_deer_ragdoll_fx
   spawn: vfx_MeadBzerker, 0,0,-1.5
+
+# deer loops to ensure exactly 1 player in range is running spawn loop
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_spawn_deer_ragdoll_loop
+  biomes: DeepNorth
+  filter: dn_deer_ragdoll        # only process if ragdoll has dnrl flag
+  poke:
+  - self: true
+    delay: 3
+    parameter: p_dnrl_spawn_deer_ragdoll_loop
+  - self: true
+    parameter: p_dnrl_spawn_deer_ragdoll_check
+
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_spawn_deer_ragdoll_check
+  biomes: DeepNorth
+  objects:
+  - Player, 100, d_player_roguelite_on
+  bannedObjects:
+  - Player, 100, d_player_roguelite_spawn_loop_on
+  poke:
+  - prefab: Player
+    data: d_player_roguelite_on
+    maxDistance: 100
+    limit: 1
+    parameter: p_dnrl_player_spawn_loop_init
 
 - prefab: stone_marker_savheim_dn
   type: poke, p_dnrl_weather
@@ -123,13 +155,26 @@
     2: string, <#7F1F1F>Blood for blood, a life is forfeit!
     3: int, 0
     delay: 6.5
+  - name: Message
+    1: enum_message, 2
+    2: string, [Resurrection disabled during this event]
+    3: int, 0
+    delay: 12
   poke:
-  - self: true               # initial entry into spawner loop
-    delay: <randi_13_16>     # randomized startup delay so different players have uniquely timed spawn loops
-    parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - self: true               # start player cleanup loop
     delay: 1                 # wait for data
     parameter: p_dnrl_cleanup_player_loop
+
+- prefab: Player
+  type: poke, p_dnrl_player_spawn_loop_init
+  biomes: DeepNorth
+  filter: d_player_roguelite_on
+  data: d_player_roguelite_spawn_loop_on
+  injectData: true
+  poke:
+  - self: true               # initial entry into spawner loop
+    delay: 12
+    parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
 
 ########################################################################
 ####################################
@@ -259,7 +304,7 @@
   biomes: DeepNorth
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
-  bannedObjectsLimit: 5                          ### TRASH SPAWN CAP - 1 player
+  bannedObjectsLimit: 4                          ### TRASH SPAWN CAP - 1 player
   spawn:
   - prefab: <par1>  ########## creature 1
     pos: 12,12,snap
@@ -303,7 +348,7 @@
   biomes: DeepNorth
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
-  bannedObjectsLimit: 9                          ### TRASH SPAWN CAP - 2 players
+  bannedObjectsLimit: 7                          ### TRASH SPAWN CAP - 2 players
   spawn:
   - prefab: <par1>  ########## creature 1
     pos: 12,12,snap
@@ -347,7 +392,7 @@
   biomes: DeepNorth
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
-  bannedObjectsLimit: 13                         ### TRASH SPAWN CAP - 3 players
+  bannedObjectsLimit: 10                         ### TRASH SPAWN CAP - 3 players
   spawn:
   - prefab: <par1>  ########## creature 1
     pos: 12,12,snap
@@ -391,7 +436,7 @@
   biomes: DeepNorth
   bannedObjects:
   - creature, 100, dn_mob_group_roguelite
-  bannedObjectsLimit: 17                         ### TRASH SPAWN CAP - 4+ players
+  bannedObjectsLimit: 13                         ### TRASH SPAWN CAP - 4+ players
   spawn:
   - prefab: <par1>  ########## creature 1
     pos: 12,12,snap
@@ -1176,7 +1221,14 @@
   biomes: DeepNorth                         # only process if in Deep North
   commands:
   - broadcast center <#00AFAF>Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
-  - s Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures."
+    5: string, 
   data: d_player_roguelite_clear
   injectData: true
   spawns:
@@ -1265,7 +1317,14 @@
   injectData: true
   commands:
   - broadcast center <#00AFAF><string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
-  - s <string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, <string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures."
+    5: string, 
 
 # players who show up late need to be flagged so the event doesn't end when they're last alive
 - prefab: Player
@@ -1393,7 +1452,14 @@
   filter: d_player_roguelite_on
   commands:
   - broadcast center <#00AFAF><string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
-  - s <string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+  clientRpc:
+  - name: ChatMessage
+    target: <zdo>
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, <string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures."
+    5: string, 
   data: d_player_roguelite_clear
   injectData: true
 

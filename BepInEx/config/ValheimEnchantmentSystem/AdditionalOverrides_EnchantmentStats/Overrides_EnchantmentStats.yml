@@ -309,80 +309,85 @@
   Stats:
     1:
       max_hp: 1
+      max_stamina: 1
     2:
       max_hp: 1
-      max_stamina: 1
+      max_stamina: 2
     3:
       max_hp: 2
-      max_stamina: 1
+      max_stamina: 3
     4:
       max_hp: 2
-      max_stamina: 2
+      max_stamina: 4
     5:
       max_hp: 3
-      max_stamina: 2
+      max_stamina: 5
     6:
       max_hp: 3
-      max_stamina: 3
+      max_stamina: 6
     7:
       max_hp: 4
-      max_stamina: 3
+      max_stamina: 7
     8:
       max_hp: 4
-      max_stamina: 4
+      max_stamina: 8
     9:
       max_hp: 5
-      max_stamina: 4
+      max_stamina: 9
     10:
       max_hp: 5
-      max_stamina: 5
+      max_stamina: 10
       hp_regen: 1
     11:
       max_hp: 6
-      max_stamina: 5
+      max_stamina: 11
       hp_regen: 1.1
+      stamina_regen: 0.1
     12:
       max_hp: 6
-      max_stamina: 6
+      max_stamina: 12
       hp_regen: 1.2
+      stamina_regen: 0.2
     13:
       max_hp: 7
-      max_stamina: 6
+      max_stamina: 13
       hp_regen: 1.3
+      stamina_regen: 0.3
     14:
       max_hp: 7
-      max_stamina: 7
+      max_stamina: 14
       hp_regen: 1.4
+      stamina_regen: 0.4
     15:
       max_hp: 8
-      max_stamina: 7
+      max_stamina: 15
       hp_regen: 1.5
-      stamina_regen: 0.25
+      stamina_regen: 0.5
     16:
       max_hp: 8
-      max_stamina: 8
+      max_stamina: 16
       hp_regen: 1.6
-      stamina_regen: 0.3
+      stamina_regen: 0.6
     17:
       max_hp: 9
-      max_stamina: 8
+      max_stamina: 17
       hp_regen: 1.7
-      stamina_regen: 0.35
+      stamina_regen: 0.7
     18:
       max_hp: 9
-      max_stamina: 9
+      max_stamina: 18
       hp_regen: 1.8
-      stamina_regen: 0.4
+      stamina_regen: 0.8
     19:
       max_hp: 10
-      max_stamina: 9
+      max_stamina: 19
       hp_regen: 1.9
-      stamina_regen: 0.45
+      stamina_regen: 0.9
     20:
       max_hp: 10
-      max_stamina: 10
+      max_stamina: 20
       hp_regen: 2
-      stamina_regen: 0.5
+      stamina_regen: 1
 
 - Items:
     - ShieldBanded

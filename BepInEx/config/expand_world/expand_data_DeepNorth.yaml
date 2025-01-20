@@ -42,6 +42,10 @@
   ints:
   - i_player_roguelite_on, 0
 
+- name: d_player_roguelite_spawn_loop_on
+  ints:
+  - i_player_roguelite_spawn_loop_on, 1
+
 - name: d_player_roguelite_start
   ints:
   - i_player_roguelite_on, 1
@@ -55,6 +59,7 @@
   - i_player_roguelite_tier, 0
   - i_player_roguelite_wave, 0
   - i_player_roguelite_win, 0
+  - i_player_roguelite_spawn_loop_on, 0
 
 - name: d_player_roguelite_clear
   ints:
@@ -68,6 +73,7 @@
   - i_player_roguelite_subtier, 0
   - i_player_roguelite_tier, 0
   - i_player_roguelite_wave, 0
+  - i_player_roguelite_spawn_loop_on, 0
 
 - name: d_player_roguelite_win_eligible
   ints:
