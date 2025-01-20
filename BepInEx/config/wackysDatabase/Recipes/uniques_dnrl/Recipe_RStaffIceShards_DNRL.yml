@@ -11,6 +11,7 @@ requireOnlyOneIngredient: false
 upgrade_reqs:
 - JC_Gacha_Coins:2
 - Coins:100
+- FlametalNew:0
 reqs:
 - FlametalNew:1:0:True
 - FaderDrop:1:0:True

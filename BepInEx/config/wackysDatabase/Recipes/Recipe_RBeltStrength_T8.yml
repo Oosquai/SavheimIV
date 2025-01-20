@@ -8,5 +8,5 @@ amount: 1
 disabled: true
 requireOnlyOneIngredient: false
 reqs:
-- FlametalNew:1:0:True
+- FlametalNew:1:1:True
 - FaderDrop:1:0:True

@@ -10,4 +10,4 @@ requireOnlyOneIngredient: false
 reqs:
 - Unobtainium:1:0:True
 - Coins:1300:0:True
-- BlackMetal:1:0:True
+- BlackMetal:1:1:True

@@ -10,4 +10,4 @@ requireOnlyOneIngredient: false
 reqs:
 - Unobtainium:1:0:True
 - Coins:1400:0:True
-- FlametalNew:1:0:True
+- FlametalNew:1:1:True
