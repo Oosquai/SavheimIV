@@ -14,10 +14,32 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0.6
+TimeToLive: 1.2
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS: []
+StartEffect_PLUS: 
+- name: fx_trap_trigger
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: true
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: fx_charred_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: true
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
 StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
@@ -50,7 +72,7 @@ SeData:
   m_noiseModifier: 0
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
-  m_speedModifier: -0.90
+  m_speedModifier: -0.7
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0

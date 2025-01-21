@@ -37,7 +37,7 @@ Primary_Attack:
   Reload_Stamina_Drain: 0
   Reload_Eitr_Drain: 0
   Bow_Draw: true
-  Bow_Duration_Min: 3.5
+  Bow_Duration_Min: 3
   Bow_Stamina_Drain: 20
   Bow_Animation_State: bow_aim
   Attack_Angle: 90
@@ -260,7 +260,7 @@ GEffectsPLUS:
     m_randomRotation: false
     m_scale: false
     m_childTransform: ''
-  - name: sfx_buffed
+  - name: sfx_battleaxe_swing_wosh
     m_enabled: true
     m_variant: -1
     m_attach: false

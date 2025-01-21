@@ -254,6 +254,17 @@
     4: float, 1
 
 ###############################################################
+# Dual Knives acrobatics - thanks DhakhaR!
+- prefab: Player
+  type: state, jump
+  filter: dualKnivesList
+  objectRpc:
+  - name: SetTrigger
+    target: all
+    1: name, dodge
+    delay: 0.15
+
+###############################################################
 # Shortbow acrobatics - thanks DhakhaR!
 - prefab: Player
   type: state, jump
@@ -999,7 +1010,7 @@
   - fx_bloodweapon_hit
   - fx_radiation_hit, 0,0,1
   - sfx_leech_hit
-  - sfx_gjall_idle_shiver
+  - sfx_gjall_idle_shiver, d_sfx_reaper_dmg_pitch1p5
   poke:
   - self: true
     delay: 60                                    # REAPER DEBUFF STACK TtL
@@ -1018,7 +1029,7 @@
   - fx_bloodweapon_hit
   - fx_jotunbane_hit, 0,0,1
   - sfx_leech_hit
-  - sfx_gjall_idle_shiver
+  - sfx_gjall_idle_shiver, d_sfx_reaper_dmg_pitch2
   poke:
   - self: true
     delay: 60                                    # REAPER DEBUFF STACK TtL
@@ -1164,6 +1175,7 @@
   data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
   injectData: true
   spawns:
+  - fx_CharredStone_Destruction, 0,0,-2
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch1
   - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
   - sfx_troll_attack_hit, d_sfx_troll_attack_hit_pitch
@@ -1187,6 +1199,7 @@
   data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
   injectData: true
   spawns:
+  - fx_CharredStone_Destruction, 0,0,-2
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch2
   - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
   - sfx_troll_attack_hit, d_sfx_troll_attack_hit_pitch
@@ -1217,6 +1230,7 @@
   data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
   injectData: true
   spawns:
+  - fx_CharredStone_Destruction, 0,0,-2
   - sfx_metal_blocked_overlay, 0,0,0, 0,0,0, d_sfx_reaper_dmg_pitch3
   - sfx_fallenvalkyrie_attack_spit_projectile, 0,0,0, 0,0,0, d_empty_data_combat, 0, true
   - sfx_troll_attack_hit, d_sfx_troll_attack_hit_pitch

@@ -1566,7 +1566,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.2   # need this else they insta-die.  hp not registered yet maybe?
+    delay: 0.25   # need this else they insta-die.  hp not registered yet maybe?
     parameter: p_dn_boss_hp_adjustments
 
 - prefab: Eikthyr
@@ -1642,7 +1642,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.2
+    delay: 0.25
     parameter: p_creature_level_up_dn <vLevelUp1Dn>
 
 # Medium level up chances
@@ -1651,7 +1651,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.2
+    delay: 0.25
     parameter: p_creature_level_up_dn <vLevelUp2Dn>
 
 # High level up chances
@@ -1660,7 +1660,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.2
+    delay: 0.25
     parameter: p_creature_level_up_dn <vLevelUp3Dn>
 
 # special case since Dverger Mages can summon Skeletons - this puts them on Dverger team
@@ -1671,7 +1671,7 @@
   - DvergerMage, 3
   poke:
   - self: true
-    delay: 0.2
+    delay: 0.25
     parameter: p_creature_level_up_dn_peaceful <vLevelUp3Dn>
 
 - prefab: Skeleton
@@ -1680,7 +1680,7 @@
   fallback: true
   poke:
   - self: true
-    delay: 0.2
+    delay: 0.25
     parameter: p_creature_level_up_dn <vLevelUp3Dn>
 
 #####################################################################

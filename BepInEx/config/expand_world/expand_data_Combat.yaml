@@ -40,6 +40,11 @@
   - ZSFX.m_minPitch, 0.9
   - ZSFX.m_maxPitch, 0.9
 
+- name: d_sfx_reaper_dmg_pitch1p5
+  floats:
+  - ZSFX.m_minPitch, 0.85
+  - ZSFX.m_maxPitch, 0.85
+
 - name: d_sfx_reaper_dmg_pitch2
   floats:
   - ZSFX.m_minPitch, 0.7
@@ -163,6 +168,12 @@
 - name: towerShieldList
   hashes:
   - LeftItem, ShieldBoneTower, CWS_Tower_Shield_1_SH, ShieldSerpentscale, ShieldBlackmetalTower, CWS_Tower_Shield_2_SH, ShieldFlametalTower, JC_Shield_Tower
+
+####################################
+# Dual Knives - jump ninja roll
+- name: dualKnivesList
+  hashes:
+  - RightItem, KnifeSkollAndHatiIron, KnifeSkollAndHatiSilver, KnifeSkollAndHati, KnifeSkollAndHatiEbonsteel, KnifeSkollAndHatiFlametal, KnifeSkollAndHatiCelestial, KnifeSkollAndHati_Boss_SH, KnifeSkollAndHati_Boss_SH_DNRL
 
 ####################################
 # Shortbows - jump ninja roll
