@@ -112,7 +112,7 @@
   injectData: true    # need this in order to poke to adjust hp.  runspeed still gets applied when injected.
   poke:
   - self: true
-    delay: 0.1      # delay so other data applies first
+    delay: 0.25       # delay so other data applies first
     parameter: p_dn_boss_hp_adjustments
 
 - prefab: Draugr
@@ -553,12 +553,12 @@
     parameter: p_dn_mob_group_patrol
 
 # Mages with StaffSkeleton randomly summon skeleton allies.  Skeletons will die to AE.  Oh well.
-- prefab: DvergerMage
-  type: state, *
-  filter: gear_staff_skeleton
-  weight: 0.4
-  triggerRules: true
-  spawn: Skeleton, allied_group_data
+# SERVER TESTING - group not working.  sloppy anyway, just comment out.
+#- prefab: DvergerMage
+#  type: state, *
+#  filter: gear_staff_skeleton
+#  weight: 0.4
+#  spawn: Skeleton, allied_group_data
 
 ###############################################################
 # Charred Mages shield themselves on cast if they're holding a StaffShield.

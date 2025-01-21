@@ -179,7 +179,7 @@
     delay: 0.1                                   # so the hit that applies doesn't crit
   poke:
   - self: true
-    delay: 9                                     ### COOLDOWN
+    delay: 12                                    ### COOLDOWN
     parameter: p_elemental_wet_lightning_cd_rst
 
 - prefab: Player, creature
