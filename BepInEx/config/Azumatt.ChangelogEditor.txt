@@ -4,17 +4,19 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/15/25</color>
-- Improved bleed logic for clarity and to solve flickering health.
-- Improved Shield Counter logic for consistency.
-- Knives are no longer excluded from Shield Counter.
+     0\  Savheim IV Patch Notes, 1/21/25</color>
+- Reduced auto-return range for thrown spears to reduce chances of them never returning.
+- Fixed socket costs for wood shields and troll leather armor.
+- Reduced damage of wood arrows and bolts.
+- Removed unintended recipe for Surtling Coal - not used.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
 
-Patch Notes, 1/11/25
-- <color=#AF7F7F>Savheim IV</color> development complete.
-- Transitioning to server testing.
+Patch Notes, 1/15/25
+- Improved bleed logic for clarity and to solve flickering health.
+- Improved Shield Counter logic for consistency.
+- Knives are no longer excluded from Shield Counter.
 
 Patch Notes, 1/8/25
 - Sailing speed now increases by 30% per player.
@@ -58,7 +60,8 @@ Patch Notes, 1/3/25
 
 <color=#AF7F7F>Savheim IV Development History</color>
 - 1/21/25:  LAUNCH!
-- 1/1/25:  Open Beta
+- 1/11/25:  Development complete; Server testing
+- 1/3/25:  Open Beta
 - 8/26/24:  Closed player testing
 - 5/18/24:  Start of development
 
