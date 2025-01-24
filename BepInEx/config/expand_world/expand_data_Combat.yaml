@@ -103,19 +103,17 @@
   - ZSFX.m_minPitch, 2.5
   - ZSFX.m_maxPitch, 2.9
 
-- name: d_player_shield_counter_off
+- name: d_shield_counter_sfx
   ints:
-  - i_player_shield_counter, 0
+  - i_shield_counter_sfx
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
 
-- name: d_player_shield_counter_on
-  ints:
-  - i_player_shield_counter, 1
-
-- name: d_player_shield_counter_on_rikarr
-  ints:
-  - i_player_shield_counter, 1
+- name: d_player_shield_counter_rikarr
   hashes:
-  - RightItem, CWS_Sword_9_SH  
+  - RightItem, CWS_Sword_9_SH, CWS_Sword_9_SH_DNRL
 
 ###############################################################
 # Knives Vanish

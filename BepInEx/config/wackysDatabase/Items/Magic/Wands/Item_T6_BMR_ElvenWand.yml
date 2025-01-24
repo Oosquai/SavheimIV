@@ -47,6 +47,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
+  SpawnOnHit: BMR_LightningEssence
+  SpawnOnHit_Chance: 0.15
   Reset_Chain_If_hit: None
   Attack_status_effect: SE_Savheim_VeryWeakLightning
   Attack_status_effect_chance: 0.18

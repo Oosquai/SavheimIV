@@ -148,11 +148,11 @@ Damage:
   Damage: 0
   Fire: 0
   Frost: 0
-  Lightning: 48
+  Lightning: 59
   Pickaxe: 0
   Pierce: 0
   Poison: 0
-  Slash: 8
+  Slash: 10
   Spirit: 0
 Damage_Per_Level: 
 Armor:

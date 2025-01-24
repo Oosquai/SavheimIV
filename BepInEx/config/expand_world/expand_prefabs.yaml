@@ -383,13 +383,14 @@
   commands:
   - kick <pid>
 
-##############################################################
-# No drops from (distant) monster kill
-- prefab: ItemDrop
-  type: create
-  bannedObjects:
-  - Player, 100
-  remove: true
+###############################################################
+## No drops from (distant) monster kill
+## NO!  Smelters, etc.  BAD!
+#- prefab: ItemDrop
+#  type: create
+#  bannedObjects:
+#  - Player, 100
+#  remove: true
 
 ##############################################################
 # Fish are reported to cost 8% performance to just swim/glitch around
@@ -1598,3 +1599,9 @@
   - MoltenCore
   - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
   - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+#######################################################
+# Chaos Essence randomly generates other essences
+- prefab: BMR_ChaosEssence_SH
+  type: create
+  swap: <vgElementalEssences>

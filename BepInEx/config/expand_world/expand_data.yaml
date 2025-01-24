@@ -253,3 +253,12 @@
   - enabled, 0
   longs:
   - creator, <long_playerID>
+
+####################
+# Essences
+- valueGroup: vgElementalEssences
+  values:
+  - BMR_FireEssence
+  - BMR_FrostEssence
+  - BMR_LightningEssence
+  - BMR_PoisonEssence

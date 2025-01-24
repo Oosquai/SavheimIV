@@ -1,4 +1,4 @@
-Name: SE_Savheim_Shield_Counter_Knife
+Name: SE_Savheim_Shield_Counter_Axes
 Status_m_name: Shield Counter
 Category: ''
 IconName: 
@@ -14,7 +14,7 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0.2
+TimeToLive: 0.725
 StartEffect_: 
 StopEffect_: 
 Cooldown: 0

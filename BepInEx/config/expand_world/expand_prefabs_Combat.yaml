@@ -37,53 +37,45 @@
 - prefab: Player
   type: poke, p_shield_counter_start
   bannedObjects:
-  - sfx_perfectblock, 1
-  data: d_player_shield_counter_on
-  injectData: true
+  - vfx_perfectblock, 1
+  - vfx_crossbow_nature_fire, 6
+  spawn: sfx_smelter_add, d_shield_counter_sfx
   poke:
-  - self: true
-    delay: 0.3      # time to activate attack after block.  Testing showed 0.15 minimum in local game.  Maybe 0.2 if too tight online?
-    parameter: p_shield_counter_end
+  - prefab: sfx_smelter_add
+    data: d_shield_counter_sfx
+    maxDistance: 1
+    limit: 1
+    delay: 0.3                                   ### SHIELD COUNTER REACTION TIME WINDOW
+    parameter: p_shield_counter_window
 
-- prefab: Player
-  type: poke, p_shield_counter_end
-  data: d_player_shield_counter_off
-  injectData: true
+- prefab: sfx_smelter_add
+  type: poke, p_shield_counter_window
+  remove: true
 
+# Axes
 - prefab: Player
   types:
   - state, swing_axe0
+  objects:
+  - sfx_smelter_add, 1, d_shield_counter_sfx
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.2
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.4
+  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.4
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter_Axes
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+# Swords, Maces
+- prefab: Player
+  types:
   - state, swing_longsword0
-  - state, spear_poke
-  - state, unarmed_attack0
-  filter: d_player_shield_counter_on
-  poke:
-  - self: true
-    parameter: p_shield_counter_fx
-
-# special process for knives, since so much faster than other weapons
-- prefab: Player
-  types:
-  - state, knife_stab0
-  filter: d_player_shield_counter_on
-  poke:
-  - self: true
-    parameter: p_shield_counter_fx_knife
-
-# special process for Rikarr's rapier since it uses different attacks.  trigger off secondary slash.
-- prefab: Player
-  types:
-  - state, swing_longsword1
-  filter: d_player_shield_counter_on_rikarr
-  poke:
-  - self: true
-    parameter: p_shield_counter_fx
-
-# shield counter effects
-- prefab: Player
-  type: poke, p_shield_counter_fx
-  data: d_player_shield_counter_off   # failsafe to ensure only one buffed attack
-  injectData: true
+  objects:
+  - sfx_smelter_add, 1, d_shield_counter_sfx
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
   - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.15
@@ -91,28 +83,64 @@
   - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.3
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, SE_Savheim_Shield_Counter
+    1: hash, SE_Savheim_Shield_Counter_Swords
     2: bool, true
     3: int, 1
     4: float, 1
-    delay: 0.15  # set to just less than fastest possible wind-up of spears (fastest).  +20 spear with perfect purple and redish gems sometimes failed to boosted damage at 0.2.
 
-# shield counter effects - knives (faster)
+# Spears
 - prefab: Player
-  type: poke, p_shield_counter_fx_knife
-  data: d_player_shield_counter_off   # failsafe to ensure only one buffed attack
-  injectData: true
+  types:
+  - state, spear_poke
+  objects:
+  - sfx_smelter_add, 1, d_shield_counter_sfx
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
-  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.1
-  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.1
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.1
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.2
+  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.2
   objectRpc:
   - name: RPC_AddStatusEffect
-    1: hash, SE_Savheim_Shield_Counter_Knife
+    1: hash, SE_Savheim_Shield_Counter_Spears
     2: bool, true
     3: int, 1
     4: float, 1
-    delay: 0.05
+
+# Knives
+- prefab: Player
+  types:
+  - state, knife_stab0
+  objects:
+  - sfx_smelter_add, 1, d_shield_counter_sfx
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.025
+  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.05
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter_Knives
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+# special process for Rikarr's rapier since it uses different attacks.  trigger off secondary slash.
+- prefab: Player
+  types:
+  - state, swing_longsword1
+  objects:
+  - sfx_smelter_add, 1, d_shield_counter_sfx
+  filter: d_player_shield_counter_rikarr
+  spawns:
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.15
+  - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.3
+  - vfx_crossbow_nature_fire, -0.5,0,0.7, 40,0,60, d_empty_data_combat, 0.3
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Shield_Counter_Swords
+    2: bool, true
+    3: int, 1
+    4: float, 1
 
 ###############################################################
 # Spirit Counter

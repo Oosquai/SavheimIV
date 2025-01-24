@@ -46,8 +46,9 @@ jobs:
   - command: objects_remove stone_marker_savheim,stone_marker_savheim_dn,CL_Raw_Orange_small_temp,CL_Raw_Yellow_small_temp,sign_sh4_story,deer_ragdoll,Leech,Fish1,Fish2,Fish3,Fish4_cave,Fish5,Fish6,Fish7,Fish8,Fish9,Fish10,Fish11,Fish12,kg_EnchantSkillScroll_F,kg_EnchantSkillScroll_D,kg_EnchantSkillScroll_C,kg_EnchantSkillScroll_B,kg_EnchantSkillScroll_A,kg_EnchantSkillScroll_S force start
     schedule: "2 12 * * *"
 
-  - command: objects_remove * type=ItemDrop start
-    schedule: "3 12 * * *"
+# BAD!  Smelters etc.
+#  - command: objects_remove * type=ItemDrop start
+#    schedule: "3 12 * * *"
 
 # After specific day routines below, clean up world
   - command: world_clean

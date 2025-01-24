@@ -4,14 +4,26 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/21/25</color>
+     0\  Savheim IV Patch Notes, 1/23/25</color>
+- Loose items are no longer removed during Maintenance.
+- Loose items are no longer removed when no player is within 100m.
+- The above two changes should hopefully resolve disappearing metal woes.
+- Lowered drop rate of essences from enemies.
+- All staves and wands that use essence spells now have a chance to spawn essences related to their element on spell impact.
+- The above two changes should result in non-mages seeing fewer essences, while mages have plenty.
+- Increased damage of essence spells.
+- Reduced and altered ingredients of essence spells.
+- Overhauled Shield Counter logic to be much more reliable.
+- Stag and Pine Arrows can now be stored in the Runaeldr Satchel.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 1/21/25
 - Reduced auto-return range for thrown spears to reduce chances of them never returning.
 - Fixed socket costs for wood shields and troll leather armor.
 - Reduced damage of wood arrows and bolts.
 - Removed unintended recipe for Surtling Coal - not used.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 1/15/25
 - Improved bleed logic for clarity and to solve flickering health.
