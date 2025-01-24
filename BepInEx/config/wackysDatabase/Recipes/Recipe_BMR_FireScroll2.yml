@@ -1,0 +1,15 @@
+name: BMR_FireScroll2
+clonePrefabName: 
+craftingStation: ''
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- BMR_PaperLow:5:0:True
+- BMR_FireEssence:2:0:True
+- RoundLog:2:0:True

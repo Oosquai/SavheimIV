@@ -10,7 +10,8 @@
 - The above two changes hopefully resolve disappearing metal woes.
 - Lowered drop rate of essences from enemies.
 - All staves and wands that use essence spells now have a chance on spell impact to spawn essences of their element.
-- The above two changes should result in non-mages seeing fewer essences, while mages have plenty.
+- Level 2 and 4 essence spells now produce 20 per craft instead of 10.
+- The above three changes should result in non-mages seeing fewer essences, while mages have plenty.
 - Increased damage of essence spells.
 - Reduced and altered ingredients of essence spells.
 - Overhauled Shield Counter logic to be more reliable.
