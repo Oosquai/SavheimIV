@@ -7,13 +7,13 @@
      0\  Savheim IV Patch Notes, 1/23/25</color>
 - Loose items are no longer removed during Maintenance.
 - Loose items are no longer removed when no player is within 100m.
-- The above two changes should hopefully resolve disappearing metal woes.
+- The above two changes hopefully resolve disappearing metal woes.
 - Lowered drop rate of essences from enemies.
-- All staves and wands that use essence spells now have a chance to spawn essences related to their element on spell impact.
+- All staves and wands that use essence spells now have a chance on spell impact to spawn essences of their element.
 - The above two changes should result in non-mages seeing fewer essences, while mages have plenty.
 - Increased damage of essence spells.
 - Reduced and altered ingredients of essence spells.
-- Overhauled Shield Counter logic to be much more reliable.
+- Overhauled Shield Counter logic to be more reliable.
 - Stag and Pine Arrows can now be stored in the Runaeldr Satchel.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
