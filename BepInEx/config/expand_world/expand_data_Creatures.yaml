@@ -375,6 +375,17 @@
   - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
   - LeftItem, skeleton_sword2, Lantern, StaffIceShards, StaffGreenRoots
 
+- name: clothes_skeleton_poison_black_forest
+  ints:
+  - Humanoid.m_canSwim, 1
+  - HasFields, 1
+  - HasFieldsHumanoid, 1
+  - level, 1
+  hashes:
+  - ShoulderItem, <none>, BOH_HuntersLapinCape, CapeLox
+  - LegItem, <none>, ArmorBronzeLegs, ArmorPaddedGreaves
+  - LeftItem, <none>, <none>, <none>, <none>, Lantern
+
 - name: clothes_skeleton_poison
   ints:
   - Humanoid.m_canSwim, 1

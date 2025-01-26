@@ -88,11 +88,7 @@
   objects:
   - sfx_Frost_Start, 1
   poke:
-  - prefab: Player
-    maxDistance: 1
-    limit: 1
-    parameter: p_elemental_wet_frost
-  - prefab: creature
+  - prefab: Player, creature
     maxDistance: 1
     limit: 1
     parameter: p_elemental_wet_frost
@@ -102,11 +98,7 @@
   objects:
   - vfx_Wet, 1
   poke:
-  - prefab: Player
-    maxDistance: 1
-    limit: 1
-    parameter: p_elemental_wet_frost
-  - prefab: creature
+  - prefab: Player, creature
     maxDistance: 1
     limit: 1
     parameter: p_elemental_wet_frost
@@ -194,36 +186,38 @@
   type: poke, p_elemental_wet_frost
   weight: 1E30
 
-# Players
-- prefab: Player
-  type: poke, p_elemental_wet_frost
-  poke:
-  - self: true
-    delay: 0.1                                   # give f_elemental_frozen_health time to save
-    parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
-
-# Elites
-- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen, Troll_Summoned
-  type: poke, p_elemental_wet_frost
-  poke:
-  - self: true
-    delay: 0.1                                   # give f_elemental_frozen_health time to save
-    parameter: p_elemental_wet_frozen_loop_init 9   ### ELITE MAX FREEZE TIME
-
-# All other creatures
-- prefab: creature
-  type: poke, p_elemental_wet_frost
-  fallback: true                                 # any creature prefab not listed above under Elites
-  poke:
-  - self: true
-    delay: 0.1                                   # give f_elemental_frozen_health time to save
-    parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
+## Players
+#- prefab: Player
+#  type: poke, p_elemental_wet_frost
+#  poke:
+#  - self: true
+#    delay: 0.1                                   # give f_elemental_frozen_health time to save
+#    parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
+#
+## Elites
+#- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen, Troll_Summoned
+#  type: poke, p_elemental_wet_frost
+#  poke:
+#  - self: true
+#    delay: 0.1                                   # give f_elemental_frozen_health time to save
+#    parameter: p_elemental_wet_frozen_loop_init 9   ### ELITE MAX FREEZE TIME
+#
+## All other creatures
+#- prefab: creature
+#  type: poke, p_elemental_wet_frost
+#  fallback: true                                 # any creature prefab not listed above under Elites
+#  poke:
+#  - self: true
+#    delay: 0.1                                   # give f_elemental_frozen_health time to save
+#    parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
 
 #####################
 # Init frozen loop
 - prefab: Player, creature
   type: poke, p_elemental_wet_frozen_loop_init
-  filter: int, i_elemental_wet_frost_cd, 0       # off cooldown?
+  filters:
+  - int, i_elemental_wet_frost_cd, 0             # off cooldown?
+  - int, i_elemental_wet_frozen, 0               # not yet frozen?
   data: d_elemental_wet_frozen_and_cd_set        # set frozen and cd flags, and init i_elemental_frozen_health_delta
   injectData: true
   spawns:

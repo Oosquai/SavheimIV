@@ -94,6 +94,20 @@
 - prefab: Skeleton_Poison
   type: create
   weight: 1E30
+  biomes: Meadows, Blackforest
+  data: clothes_skeleton_poison_black_forest
+  poke:
+  - prefab: <prefab>
+    parameter: gear_buff 1
+    delay: 0.1
+    maxDistance: 0.1
+  - self: true
+    parameter: p_creature_level_up_calc_dn
+
+- prefab: Skeleton_Poison
+  type: create
+  weight: 1E30
+  biomes: Swamp, Ocean, Mountain, Plains, Mistlands, AshLands, DeepNorth
   data: clothes_skeleton_poison
   poke:
   - prefab: <prefab>
@@ -593,7 +607,7 @@
   spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_123_131> dodge=true block=true status=SE_Savheim_Slowed
+    1: hit, frost=<randi_53_61> dodge=true block=true status=SE_Savheim_Slowed
 
 - prefab: creature
   type: poke, Creature_Frost_Nova

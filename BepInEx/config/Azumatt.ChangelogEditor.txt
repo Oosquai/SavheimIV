@@ -4,10 +4,24 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/25/25</color>
+     0\  Savheim IV Patch Notes, 1/26/25</color>
 - The Elder now usually favors one of his feet for repeat stomps, giving players better chances to adapt.
 - Slightly lowered chances for second attacks from several creatures.
+- Enchanted items no longer have a glowing border in inventory slots.
 - Modified Shield Counter code to better disciminate against parries.
+- The Runaeldr Satchel should now stay with you when you die.
+- Rancid Remains difficulty reduced in Meadows and Black Forest.
+- Reduced chances of multiple Rancid Remains in Meadows and Black Forest.
+- Corrected recipe for Shadowleaf Vanguard Hat, which should correct socket costs.
+- Hopefully fixed the crumbling stone sound in your base.
+- Added a very small chance for a special harvesting item to appear in sunken crypt and mountain cave chests.
+- Reduced spell crafting costs.
+- Increased eitr costs.
+- Creatures with Ice Staves had their damage significantly reduced.
+- Crafting from containers will no longer pull the last of a stack, to preserve organization.
+- Atlantean Crown is now easier to craft.
+- Attempted to reduce lag spikes from Resource Unloading.
+- Frozen effect temporarily disabled.  Will be fixed soon!
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
