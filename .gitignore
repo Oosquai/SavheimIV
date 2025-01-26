@@ -24,6 +24,7 @@ BepInEx/plugins/CLIENT_SIDE_DEV_ONLY
 BepInEx/plugins/SERVER_SIDE_ONLY
 BepInEx/config/data
 BepInEx/config/expand_world_backups
+BepInEx/config/wackysDatabase/Cache
 BepInEx/config/wackyDatabase-BulkYML
 BepInEx/config/wackyDatabase-BulkYML_vanilla
 BepInEx/config/wackyDatabase-BulkYML_savheimIII

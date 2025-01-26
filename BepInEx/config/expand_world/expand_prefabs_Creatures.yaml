@@ -392,7 +392,7 @@
 # creature-specific attack animations and timings.
 - prefab: Greydwarf_Elite
   type: state, attack
-  weight: 0.35
+  weight: 0.3
   poke:
   - self: true
     delay: 1.7
@@ -400,7 +400,7 @@
 
 - prefab: Skeleton_Hildir
   type: state, attack
-  weight: 0.45
+  weight: 0.34
   poke:
   - self: true
     delay: 1.8
@@ -408,7 +408,7 @@
 
 - prefab: Draugr_Elite
   type: state, attack
-  weight: 0.4
+  weight: 0.34
   poke:
   - self: true
     delay: 2
@@ -416,7 +416,7 @@
 
 - prefab: Skeleton_Poison
   type: state, attack_mace
-  weight: 0.35
+  weight: 0.34
   poke:
   - self: true
     delay: 2.5
@@ -425,7 +425,7 @@
 - prefab: Fenring
   types:
   - state, attack_claw0
-  weight: 0.4
+  weight: 0.34
   poke:
   - self: true
     delay: 1.5
@@ -1099,11 +1099,11 @@
   - name: RPC_Damage
     1: hit, status=Slimed dodge=true block=true
 
-# Elder - extra attacks
+# Elder - extra attacks, favoring one foot to give players chance to adapt
 - prefab: gd_king
   types:
   - state, stomp0
-  weight: 0.4
+  weight: 0.05
   poke:
   - self: true
     delay: 1.9
@@ -1112,7 +1112,7 @@
 - prefab: gd_king
   types:
   - state, stomp1
-  weight: 0.4
+  weight: 0.67
   poke:
   - self: true
     delay: 1.9
@@ -1151,7 +1151,7 @@
 - prefab: Bonemass
   types:
   - state, punch0
-  weight: 0.4
+  weight: 0.05
   poke:
   - self: true
     delay: 1.9
@@ -1160,7 +1160,7 @@
 - prefab: Bonemass
   types:
   - state, punch1
-  weight: 0.4
+  weight: 0.7
   poke:
   - self: true
     delay: 1.9
@@ -1471,7 +1471,7 @@
 - prefab: Dragon
   types:
   - state, attack_claw_left
-  weight: 0.4
+  weight: 0.05
   poke:
   - self: true
     delay: 2.2
@@ -1480,7 +1480,7 @@
 - prefab: Dragon
   types:
   - state, attack_claw_right
-  weight: 0.4
+  weight: 0.7
   poke:
   - self: true
     delay: 2.2
@@ -1616,7 +1616,7 @@
 - prefab: GoblinKing
   types:
   - state, nova
-  weight: 0.35
+  weight: 0.34
   poke:
   - self: true
     delay: 4.5
@@ -2124,12 +2124,12 @@
   - self: true                                   # special case - no delay here.  see below.
     parameter: p_extra_attack_queen_ll <randf_0.3_0.5>     ### ANIMATION STUTTER DELAY
 
-# extra attack results - pierce:  100% chance of follow up.
+# extra attack results - pierce:  high chance of random follow up.
 - prefab: SeekerQueen
   type: poke, p_extra_attack_queen_p
   weight: 0.1
   objects:
-  - Player, 8                                # check range!  LSDJFLKJAEOFWILJIAESJF
+  - Player, 8                                # check range!
   - creature, 8, tamed_creatures
   objectsLimit: 1
   objectRpc:
@@ -2173,10 +2173,10 @@
     target: all
     1: name, attack_slash3
 
-# extra attack results - slash1:  40% chance of follow up.
+# extra attack results - slash1:  very low chance of follow up.
 - prefab: SeekerQueen
   type: poke, p_extra_attack_queen_ul
-  weight: 0.4
+  weight: 0.05
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
@@ -2186,10 +2186,10 @@
     target: all
     1: name, attack_slash2
 
-# extra attack results - slash2:  50% chance of follow up.
+# extra attack results - slash2:  medium chance of follow up.
 - prefab: SeekerQueen
   type: poke, p_extra_attack_queen_ur
-  weight: 0.25
+  weight: 0.3
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
@@ -2201,7 +2201,7 @@
 
 - prefab: SeekerQueen
   type: poke, p_extra_attack_queen_ur
-  weight: 0.25
+  weight: 0.3
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
@@ -2352,7 +2352,7 @@
 # extra attack reactions - clawl
 - prefab: Fader
   type: poke, p_extra_attack_fader_clawl
-  weight: 0.2
+  weight: 0.05
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
@@ -2365,7 +2365,7 @@
 # extra attack reactions - clawr
 - prefab: Fader
   type: poke, p_extra_attack_fader_clawr
-  weight: 0.2
+  weight: 0.7
   objects:
   - Player, 12
   - creature, 12, tamed_creatures
