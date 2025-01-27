@@ -111,7 +111,7 @@ Secondary_Attack:
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.2
-  DmgMultiplier: 4
+  DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
@@ -136,10 +136,10 @@ Secondary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
-  SpawnOnHit: vfx_dragon_ice_hit
+  SpawnOnHit: 
   SpawnOnHit_Chance: 1
-  Attack_status_effect: 
-  Attack_status_effect_chance: 
+  Attack_status_effect: SE_Savheim_Trigger_Frozen
+  Attack_status_effect_chance: 1
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None

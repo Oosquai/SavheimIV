@@ -594,29 +594,21 @@
   - sfx_icestaff_start
   - fx_DvergerMage_Nova_ring
   poke:
-  - prefab: Player, creature
+  - prefab: Player
+    parameter: Creature_Frost_Nova
+    maxDistance: 4
+    delay: 0.8
+  - prefab: creature
+    data: tamed_creatures
     parameter: Creature_Frost_Nova
     maxDistance: 4
     delay: 0.8
 
-# player armor reduces damage by a lot, which also reduces slow duration.
-# frost resist is common on cloaks and negates slow, so add an SE to ensure slow if not dodged.
-- prefab: Player
+- prefab: Player, creature
   type: poke, Creature_Frost_Nova
-  spawn: vfx_dragon_ice_hit
-  spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_53_61> dodge=true block=true status=SE_Savheim_Slowed
-
-- prefab: creature
-  type: poke, Creature_Frost_Nova
-  filter: tamed_creatures
-  spawn: vfx_dragon_ice_hit
-  spawnDelay: 0.9
-  objectRpc:
-  - name: RPC_Damage
-    1: hit, frost=<randi_32_36> dodge=true block=true
+    1: hit, frost=<randi_32_36> dodge=true block=true status=SE_Savheim_Trigger_Frozen
 
 #################
 # Summon versions
@@ -640,18 +632,16 @@
   - fx_DvergerMage_Nova_ring
   poke:
   - prefab: creature
-    parameter: Creature_Frost_Nova_Summon <randi_93_101>
+    parameter: Creature_Frost_Nova_Summon <randi_64_72>
     maxDistance: 4
     delay: 0.8
 
 - prefab: creature
   type: poke, Creature_Frost_Nova_Summon
   filter: not_tamed_creatures
-  spawn: vfx_dragon_ice_hit
-  spawnDelay: 0.9
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<par1> dodge=true block=true
+    1: hit, frost=<par1> dodge=true block=true status=SE_Savheim_Trigger_Frozen
 
 ###############################################################
 # Goblins with offhand StaffFireballMini cast fire nova
@@ -1583,7 +1573,7 @@
     1: hit, frost=<par1> dodge=true block=true status=SE_Savheim_Slowed force=60 dir=<float_f_force_x>,<float_f_force_z>,<y>
 
 ######
-# Players or tames hit by frost breath cause an IceBlocker to spawn.
+# Players or tames hit by frost breath cause an IceBlocker to spawn.  And get frozen!
 - prefab: vfx_Frost
   type: create
   objects:
@@ -1603,8 +1593,11 @@
 - prefab: Player, creature
   type: poke, p_iceblock_spawn
   spawns:
-  - IceBlocker, 0,-1,0
+  - IceBlocker, 0,-3,0
   triggerRules: true
+  objectRpc:
+  - name: RPC_Damage
+    1: hit, dodge=true block=true status=SE_Savheim_Trigger_Frozen
 
 ###################################################
 # Yagluth

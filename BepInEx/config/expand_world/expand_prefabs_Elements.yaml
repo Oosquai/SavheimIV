@@ -186,30 +186,30 @@
   type: poke, p_elemental_wet_frost
   weight: 1E30
 
-## Players
-#- prefab: Player
-#  type: poke, p_elemental_wet_frost
-#  poke:
-#  - self: true
-#    delay: 0.1                                   # give f_elemental_frozen_health time to save
-#    parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
-#
-## Elites
-#- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen, Troll_Summoned
-#  type: poke, p_elemental_wet_frost
-#  poke:
-#  - self: true
-#    delay: 0.1                                   # give f_elemental_frozen_health time to save
-#    parameter: p_elemental_wet_frozen_loop_init 9   ### ELITE MAX FREEZE TIME
-#
-## All other creatures
-#- prefab: creature
-#  type: poke, p_elemental_wet_frost
-#  fallback: true                                 # any creature prefab not listed above under Elites
-#  poke:
-#  - self: true
-#    delay: 0.1                                   # give f_elemental_frozen_health time to save
-#    parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
+# Players
+- prefab: Player
+  type: poke, p_elemental_wet_frost
+  poke:
+  - self: true
+    delay: 0.1                                   # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
+
+# Elites
+- prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen, Troll_Summoned
+  type: poke, p_elemental_wet_frost
+  poke:
+  - self: true
+    delay: 0.1                                   # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init 9   ### ELITE MAX FREEZE TIME
+
+# All other creatures
+- prefab: creature
+  type: poke, p_elemental_wet_frost
+  fallback: true                                 # any creature prefab not listed above under Elites
+  poke:
+  - self: true
+    delay: 0.1                                   # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
 
 #####################
 # Init frozen loop
@@ -217,7 +217,6 @@
   type: poke, p_elemental_wet_frozen_loop_init
   filters:
   - int, i_elemental_wet_frost_cd, 0             # off cooldown?
-  - int, i_elemental_wet_frozen, 0               # not yet frozen?
   data: d_elemental_wet_frozen_and_cd_set        # set frozen and cd flags, and init i_elemental_frozen_health_delta
   injectData: true
   spawns:
@@ -239,15 +238,21 @@
     delay: <par1>
     parameter: p_elemental_wet_frozen_rst
   - self: true
+    delay: 0.1
+    parameter: p_elemental_wet_frozen_health_save
+  - self: true
     delay: 0.3                                   # keep this equal to LOOP TIME
     parameter: p_elemental_wet_frozen_loop
 
-### Main Frozen Loop - Player (unique data for players to prevent race condition)
+- prefab: Player, creature
+  type: poke, p_elemental_wet_frozen_health_save
+  data: d_elemental_wet_frozen_health_save
+  injectData: true
+
+### Main Frozen Loop - Player (unique data for players for resists)
 - prefab: Player
   type: poke, p_elemental_wet_frozen_loop
-  filters:
-  - int, i_elemental_wet_frozen, 1               # end loop if no longer frozen
-  - int, i_elemental_frozen_health_delta, 0;9999 # end loop if health decreased since previous iteration
+  filter: d_elemental_wet_frozen_health_check
   bannedObjects:
   - bmr_cleanse1_aoe, 5
   - bmr_cleanse2_aoe, 5
@@ -256,8 +261,6 @@
   - bmr_cleanse5_aoe, 5
   - bmr_cleanse6_aoe, 5
   bannedObjectsLimit: 1
-  data: d_elemental_frozen_health_save_player    # update health and delta-health each iteration
-  injectData: true
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_ImmobilizedFrozen_NoResists  # players don't stay staggered, so no extra resists
@@ -269,17 +272,13 @@
     delay: 0.3                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
     parameter: p_elemental_wet_frozen_loop
   ### DEBUG ###
-  # command: s L hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
+#  command: s L hp <float_health> rnd hp <round_<float_health>> h0 <int_i_elemental_frozen_health>
   #############
 
 ### Main Frozen Loop - creature
 - prefab: creature
   type: poke, p_elemental_wet_frozen_loop
-  filters:
-  - int, i_elemental_wet_frozen, 1               # end loop if no longer frozen
-  - int, i_elemental_frozen_health_delta, 0;9999 # end loop if health decreased since previous iteration
-  data: d_elemental_frozen_health_save_creature  # update health and delta-health each iteration
-  injectData: true
+  filter: d_elemental_wet_frozen_health_check
   objectRpc:
   - name: RPC_AddStatusEffect
     1: hash, SE_Savheim_ImmobilizedFrozen
@@ -291,7 +290,7 @@
     delay: 0.3                                   ### LOOP TIME.  If changed must update SE_Savheim_Immobilization to have slightly higher TtL.  Also update a dozen lines above where it mentions LOOP TIME.
     parameter: p_elemental_wet_frozen_loop
   ### DEBUG ###
-  # command: s L hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
+#  command: s L hp <float_health> rnd hp <round_<float_health>> h0 <int_i_elemental_frozen_health>
   #############
 
 # Shatter check - looking for reduction in health
@@ -304,7 +303,7 @@
   - self: true
     parameter: p_elemental_wet_frozen_rst
   ### DEBUG ###
-  # command: s S hp <float_health> h0 <float_f_elemental_frozen_health> h1 <float_f_elemental_frozen_health_z> hd <int_i_elemental_frozen_health_delta>
+#  command: s S hp <float_health> rnd hp <round_<float_health>> h0 <int_i_elemental_frozen_health>
   #############
 
 # Unfreeze after duration or when hit.  Players don't stay staggered, so no resists.

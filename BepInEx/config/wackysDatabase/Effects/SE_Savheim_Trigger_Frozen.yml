@@ -1,9 +1,9 @@
-Name: SE_Savheim_ImmobilizedFrozenEnd
-Status_m_name: FrozenEnd
+Name: SE_Savheim_Trigger_Frozen
+Status_m_name: Slowed
 Category: ''
 IconName: 
-CustomIcon: frostnova.png
-FlashIcon: true
+CustomIcon: 
+FlashIcon: false
 CooldownIcon: false
 Tooltip: ''
 Attributes: None
@@ -14,11 +14,44 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 2.5
+TimeToLive: 0.1
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS: []
-StopEffect_PLUS: []
+StartEffect_PLUS:
+- name: vfx_Wet
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: sfx_Frost_Start
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+StopEffect_PLUS:
+- name: vfx_dragon_ice_hit
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
 Cooldown: 0
 ActivationAnimation: gpower
 SeData:
@@ -44,23 +77,7 @@ SeData:
   m_skillLevelModifier: 0
   m_skillLevel2: None
   m_skillLevelModifier2: 0
-  m_mods:
-  - m_type: Slash
-    m_modifier: Resistant
-  - m_type: Pierce
-    m_modifier: Resistant
-  - m_type: Blunt
-    m_modifier: Resistant
-  - m_type: Fire
-    m_modifier: Resistant
-  - m_type: Frost
-    m_modifier: Resistant
-  - m_type: Lightning
-    m_modifier: Resistant
-  - m_type: Poison
-    m_modifier: Resistant
-  - m_type: Spirit
-    m_modifier: Resistant
+  m_mods: []
   m_modifyAttackSkill: None
   m_damageModifier: 1
   m_noiseModifier: 0
