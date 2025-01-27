@@ -4,12 +4,16 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/26/25, v2</color>
-- Frozen is fixed!  I think!  Let me know if it does NOT shatter on first hit.
-- Frost novas now do even less damage, but now they trigger frozen.
+     0\  Savheim IV Patch Notes, 1/27/25, v2</color>
+- Battleaxes should now use Weapon gem effects instead of Tool.
+- Harpoons can no longer tether rocks.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 1/26/25
+- Frozen is fixed!  I think!  Let me know if it does NOT shatter on first hit.
+- Frost novas now do even less damage, but now they trigger frozen.
 
 Patch Notes, 1/26/25
 - The Elder now usually favors one of his feet for repeat stomps, giving players better chances to adapt.
