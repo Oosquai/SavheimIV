@@ -186,7 +186,7 @@
   type: say, !rolls
   poke:
   - prefab: Player
-    maxDistance: 20
+    maxDistance: 50
     delay: 0.1
     parameter: p_player_roll100
 

@@ -37,8 +37,8 @@
 - prefab: Player
   type: poke, p_shield_counter_start
   bannedObjects:
-  - vfx_perfectblock, 6
-  - vfx_crossbow_nature_fire, 6
+  - vfx_perfectblock, 12
+  - vfx_crossbow_nature_fire, 12
   spawn: sfx_smelter_add, d_shield_counter_sfx
   poke:
   - prefab: sfx_smelter_add
