@@ -72,24 +72,13 @@
 
 ##############################################################
 # Bleed Mechanics
-- name: d_combat_bleed_init
-  ints:
-  - i_bleed_active, 1
-  - i_bleed_tick_cnt, <par1>
-  - i_bleed_stack_cnt, 1
-
-- name: d_combat_bleed_end
-  ints:
-  - i_bleed_active, 0
-
 - name: d_combat_bleed_add_stack
   ints:
-  - i_bleed_tick_cnt, <add_<int_i_bleed_tick_cnt>_<par2>>
-  - i_bleed_stack_cnt, <add_<int_i_bleed_stack_cnt>_1>
+  - i_combat_bleed_stack_cnt, <add_<int_i_combat_bleed_stack_cnt>_1>
 
-- name: d_combat_bleed_tick_cnt_dec
+- name: d_combat_bleed_subtract_stack
   ints:
-  - i_bleed_tick_cnt, <sub_<int_i_bleed_tick_cnt>_1>
+  - i_combat_bleed_stack_cnt, <sub_<int_i_combat_bleed_stack_cnt>_1>
 
 ##############################################################
 # Shield Counter

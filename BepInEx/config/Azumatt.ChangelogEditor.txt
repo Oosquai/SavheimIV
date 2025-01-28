@@ -7,6 +7,10 @@
      0\  Savheim IV Patch Notes, 1/27/25, v2</color>
 - Battleaxes should now use Weapon gem effects instead of Tool.
 - Harpoons can no longer tether rocks.
+- Rewrote bleed code to address flickering health.
+- Rewrote Stag's Whisper toxin code to address flickering health.
+- Improved Shield Counter code to be more reliable (again).
+- Improved visual indicators for a specific status interaction.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

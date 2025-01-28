@@ -362,7 +362,7 @@
   injectData: true
   spawns:
   - fx_clusterbombstaff_hit
-  - fx_jotunbane_hit, 0,0,0.5
+  - vfx_blob_attack, 0,0,0.5
   poke:
   - self: true
     delay: 0.1                                   # so the hit that applies doesn't crit

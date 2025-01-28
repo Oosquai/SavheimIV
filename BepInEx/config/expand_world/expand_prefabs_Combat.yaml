@@ -37,8 +37,7 @@
 - prefab: Player
   type: poke, p_shield_counter_start
   bannedObjects:
-  - vfx_perfectblock, 12
-  - vfx_crossbow_nature_fire, 12
+  - vfx_perfectblock, 1
   spawn: sfx_smelter_add, d_shield_counter_sfx
   poke:
   - prefab: sfx_smelter_add
@@ -57,7 +56,7 @@
   types:
   - state, swing_axe0
   objects:
-  - sfx_smelter_add, 1, d_shield_counter_sfx
+  - sfx_smelter_add, 3, d_shield_counter_sfx
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
   - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.2
@@ -75,7 +74,7 @@
   types:
   - state, swing_longsword0
   objects:
-  - sfx_smelter_add, 1, d_shield_counter_sfx
+  - sfx_smelter_add, 3, d_shield_counter_sfx
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
   - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.15
@@ -93,7 +92,7 @@
   types:
   - state, spear_poke
   objects:
-  - sfx_smelter_add, 1, d_shield_counter_sfx
+  - sfx_smelter_add, 3, d_shield_counter_sfx
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
   - sfx_kromsword_swing, 0,0,0, 0,0,0, d_empty_data_combat, 0.1
@@ -111,7 +110,7 @@
   types:
   - state, knife_stab0
   objects:
-  - sfx_smelter_add, 1, d_shield_counter_sfx
+  - sfx_smelter_add, 3, d_shield_counter_sfx
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_high, 0.025
@@ -128,7 +127,7 @@
   types:
   - state, swing_longsword1
   objects:
-  - sfx_smelter_add, 1, d_shield_counter_sfx
+  - sfx_smelter_add, 3, d_shield_counter_sfx
   filter: d_player_shield_counter_rikarr
   spawns:
   - sfx_kromsword_swing, 0,0,0, 0,0,0, shield_counter_attack_pitch_low, 0
@@ -412,11 +411,11 @@
 
 ###############################################################
 # Bleed Mechanics
-# Secondary attacks from swords and greatswords cause bleed against staggered enemies.
+# Secondary attacks from swords and greatswords cause bleed after parry.
 # Greatswords get more ticks than 1h swords.
 # Claw primary attacks have a chance to trigger bleed, but with shorter duration.
-# Bleed arrows and bolts always bleed, but much shorter duration.
-# Reapplications stack damage and add small amounts of extra ticks.
+# Bleed arrows and bolts always bleed with medium duration.
+# Can stack up to 3 bleeds, each stack extending duration and adding more damage ticks.
 # Damage scales roughly with creature max hp.
 
 # 1h swords
@@ -429,7 +428,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6                  # big range for big creatures (troll 2.  bonemass 4.  8-star bonemass 6)
-    parameter: p_sword_bleed_hp 6 2 0.25   # base total ticks minus 1 | ticks added per additional stack | power used to scale max hp - higher is exponentially more damage
+    parameter: p_sword_bleed_hp 6.1 0.25   # bleed time | power used to scale max hp - higher is exponentially more damage
 
 # 2h swords
 - prefab: sfx_open_box
@@ -441,7 +440,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 10 3 0.285
+    parameter: p_sword_bleed_hp 9.1 0.285
 
 # claws - chance to bleed on primary attacks.  this is also used with Ryvers (CWS_Sword_5_SH).
 # chance achieved with Wacky's Database chance to proc SE on attack
@@ -453,7 +452,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 4 2 0.25   # rapid short-duration bleeds
+    parameter: p_sword_bleed_hp 4.1 0.25   # rapid short-duration bleeds
 
 # bleed arrows and bolts
 - prefab: sfx_open_box
@@ -464,7 +463,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 6 2 0.25   # on-demand bleed arrows have short duration and limited stacking
+    parameter: p_sword_bleed_hp 6.1 0.25   # on-demand bleed arrows have short duration and limited stacking
 
 # unique melee bow - huntress.  bleeds on parry.
 - prefab: sfx_perfectblock
@@ -478,7 +477,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 4 1 0.25
+    parameter: p_sword_bleed_hp 4.1 0.25
 
 ##########################
 # Bleed Inits
@@ -487,11 +486,11 @@
   type: poke, p_sword_bleed_hp
   weight: 1E30
 
-# Creature not yet bleeding - init loop
+# Bleed stack add (whether bleeding yet or not), capped at 3 stacks
 - prefab: creature
   type: poke, p_sword_bleed_hp
-  filter: int, i_bleed_active, 0       # not already bleeding.  init and start loop
-  data: d_combat_bleed_init
+  filter: int, i_combat_bleed_stack_cnt, 0;2
+  data: d_combat_bleed_add_stack
   injectData: true
   spawns:
   - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.05
@@ -503,46 +502,32 @@
   poke:
   - self: true
     delay: 1
-    parameter: p_combat_bleed_loop <par3>
-
-# Creature already bleeding - increase stack count and max tick count but don't add new loop
-- prefab: creature
-  type: poke, p_sword_bleed_hp
-  filter: int, i_bleed_active, 1       # already bleeding.  add stack and extend
-  data: d_combat_bleed_add_stack
-  injectData: true
-  spawns:
-  - fx_bloodweapon_hit, 0,0,1, 0,0,0, d_empty_data_combat, 0.05
-  - fx_bloodweapon_hit, 0,0,1.6, 0,0,0, d_empty_data_combat, 0.1
-  - fx_bloodweapon_hit, 0,0,2.2, 0,0,0, d_empty_data_combat, 0.15
-  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0
-  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.4
-  - sfx_tick_attack_drain, 0,0,0, 0,0,0, d_empty_data_combat, 0.8
+    parameter: p_combat_bleed_loop <par2>
+  - self: true
+    delay: <par1>
+    parameter: p_combat_bleed_subtract_stack
 
 ##########################
 ### MAIN BLEED LOOP
 - prefab: creature
   type: poke, p_combat_bleed_loop
-  filter: int, i_bleed_tick_cnt, 1;99999
-  data: d_combat_bleed_tick_cnt_dec
-  injectData: true
+  filter: int, i_combat_bleed_stack_cnt, 1;3
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=<mul_<randf_0.9_1.1>_<mul_<pow_<float_max_health>_<par1>>_<int_i_bleed_stack_cnt>>>  ### TICK DMG = stacks x max hp raised to 0.25
-    delay: 0.1
+    1: hit, damage=<mul_<randf_0.9_1.1>_<pow_<float_max_health>_<par1>>>  ### TICK DMG = max hp raised to 0.25
   poke:
   - self: true
     delay: 1                                     ### TICK TIME
     parameter: p_combat_bleed_loop <par1>
 #### DEBUG - COMMENT OUT ###
-#  command: s <int_i_bleed_tick_cnt> tcks. <int_i_bleed_stack_cnt> stks. <round_<float_health>> hp
+#  command: s <int_i_bleed_stack_cnt> stks. <round_<float_health>> hp
 ############################
 
-# Clear bleeding state
+# Remove stacks to stop bleeding
 - prefab: creature
-  type: poke, p_combat_bleed_loop
-  fallback: true
-  data: d_combat_bleed_end
+  type: poke, p_combat_bleed_subtract_stack
+  filter: int, i_combat_bleed_stack_cnt, 1;3
+  data: d_combat_bleed_subtract_stack
   injectData: true
 
 ################################################################

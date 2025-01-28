@@ -1095,10 +1095,10 @@
 
 - prefab: creature
   type: poke, p_unique_knife_toxin_init
-  filter: int, i_unique_knife_toxin_active, 0    # no toxin on creature yet - init and start loop
+  filter: int, i_unique_knife_toxin_stack_cnt, 0;2  # max 3 stacks
   objects:
   - sfx_knife_swing, 6                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
-  data: d_unique_knife_toxin_init
+  data: d_unique_knife_toxin_add_stack
   injectData: true
   spawns:
   - fx_jotunbane_hit, 0,0,1
@@ -1107,39 +1107,28 @@
   - self: true
     delay: 1
     parameter: p_unique_knife_toxin_loop <par1> <par2>
-
-- prefab: creature
-  type: poke, p_unique_knife_toxin_init
-  filter: int, i_unique_knife_toxin_active, 1    # toxin already ticking on creature - add stack but don't start loop
-  objects:
-  - sfx_knife_swing, 6                           # did player with knife swing?  less likely to proc from a poison arrow near someone with the knife.
-  data: d_unique_knife_toxin_add_stack
-  injectData: true
-  spawns:
-  - fx_jotunbane_hit, 0,0,1
-  - sfx_Poison_Start
+  - self: true
+    delay: 12.1                                  ### TOXIC STACK DURATION
+    parameter: p_unique_knife_toxin_subtract_stack
 
 - prefab: creature
   type: poke, p_unique_knife_toxin_loop
-  filter: int, i_unique_knife_toxin_tick_cnt, 1;99999
-  data: d_unique_knife_toxin_tick_cnt_dec
-  injectData: true
+  filter: int, i_unique_knife_toxin_stack_cnt, 1;3
   objectRpc:
   - name: RPC_Damage
-    1: hit, damage=<mul_<int_i_unique_knife_toxin_stack_cnt>_<randf_<par1>_<par2>>>
-    delay: 0.1
+    1: hit, damage=<randf_<par1>_<par2>>
   poke:
   - self: true
-    delay: 1.3                                   ### TICK TIME
+    delay: 2.5                                   ### TICK TIME
     parameter: p_unique_knife_toxin_loop <par1> <par2>
 #### DEBUG - COMMENT OUT ###
-#  command: s <int_i_unique_knife_toxin_tick_cnt> tcks. <int_i_unique_knife_toxin_stack_cnt> stks. <round_<float_health>> hp.  p1 <par1> p2 <par2>
+#  command: s <int_i_unique_knife_toxin_stack_cnt> stks. <round_<float_health>> hp.  p1 <par1> p2 <par2>
 ############################
 
 - prefab: creature
-  type: poke, p_unique_knife_toxin_loop
-  fallback: true
-  data: d_unique_knife_toxin_end
+  type: poke, p_unique_knife_toxin_subtract_stack
+  filter: int, i_unique_knife_toxin_stack_cnt, 1;3
+  data: d_unique_knife_toxin_subtract_stack
   injectData: true
 
 ##############################################################
