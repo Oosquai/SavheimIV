@@ -4,16 +4,23 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/27/25, v2</color>
+     0\  Savheim IV Patch Notes, 1/28/25, v2</color>
+- Crossbows have improved vertical aim.
+- Crossbows gained a small amount of knockback.
+- Elites have much higher chances to drop trophies.
+- Market Stall no longer charges tax when you list.
+- Honeyed Fish now gives a small amount of eitr.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 1/27/25
 - Battleaxes should now use Weapon gem effects instead of Tool.
 - Harpoons can no longer tether rocks.
 - Rewrote bleed code to address flickering health.
 - Rewrote Stag's Whisper toxin code to address flickering health.
 - Improved Shield Counter code to be more reliable (again).
 - Improved visual indicators for a specific status interaction.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 1/26/25
 - Frozen is fixed!  I think!  Let me know if it does NOT shatter on first hit.
