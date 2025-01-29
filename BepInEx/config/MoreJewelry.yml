@@ -1,0 +1,213 @@
+##########
+#
+# Supported prefab names
+#   defaultring, customring, stonering, bonering, silverring, defaultneck, customneck, leatherneck, silverneck
+#
+# Supported color names
+#   red, cyan, blue, darkblue, lightblue, purple, yellow, lime, fuchsia, white, silver, grey, black, orange, brown, maroon, green, olive, navy, teal, aqua, magenta.
+#
+# Supported effect names
+#   aquatic, awareness, guidance, headhunter, legacy, lumberjack, magicRepair, modersBlessing, rigidFinger, warmth, perception.
+#
+##########
+
+# Here is a very overpowered ring which documents nearly all of the settings you have access to in this yaml config.
+#
+# The Everything Ring:
+#   description: "I was bored one day and put everything on a bagel.  Everything...."
+#   prefab: silverring
+#   gem: black 
+#   crafting:
+#     craftingstation: gemcutter
+#     stationlevel: 1
+#     maxquality: 2
+#     costs:
+#       Wood: 1
+#       Stone: 1
+#   upgrade:
+#     1:
+#       Perfect_Black_Socket: 99
+#       BlackMetal: 99
+#   effect:
+#     name: The Everything Bagel
+#     tooltip:
+#     startmsgloc: Center
+#     startmsg: "You're overwhelmed"
+#     stopmsgloc:
+#     stopmsg:
+#     runstaminadrainmodifier: -0.5
+#     jumpstaminamodifier: -0.5
+#     runstaminamodifier: -0.5
+#     attackstaminamodifier: -0.5
+#     blockstaminamodifier: -0.5
+#     dodgestaminamodifier: -0.5
+#     baseitemstaminamodifier: -0.5
+#     swimstaminamodifier: -0.5
+#     sneakstaminamodifier: -0.5
+#     healthregen: 1.5
+#     staminaregen: 1.5
+#     eitrregen: 1.5
+#     raiseskill:
+#     skilllevel:
+#       type: all
+#       modifier: 20
+#     skillleveltwo:
+#     damagemodifiers: 
+#     - type: fire
+#       modifier: veryresistant
+#     - type: frost
+#       modifier: veryresistant
+#     - type: poison
+#       modifier: veryresistant
+#     percentdamagemodifiers:
+#       pierce: .1
+#       slash: .1
+#       chop: .1
+#     attackskill:
+#     maxcarry: 200
+#     movespeed: 2.0
+#     fallspeed: 5
+#     falldamage: -1
+
+Stone ring:
+  description: "A simple ring made of stone"
+  prefab: "StoneRing"
+  gem: FFBF00
+  crafting:
+    craftingstation: gemcutter
+    stationlevel: 1
+    maxquality: 1
+    costs:
+      Simple_Yellow_Socket: 1
+      Stone: 10
+  effect:
+    blockstaminamodifier: -0.1
+    skilllevel:
+      type: blocking
+      modifier: 10
+
+Bone ring:
+  description: "A band wrought from bone."
+  prefab: "bonering"
+  gem: red
+  crafting:
+    craftingstation: gemcutter
+    stationlevel: 1
+    maxquality: 1
+    costs:
+      BoneFragments: 12
+      Bronze: 1
+      Advanced_Red_Socket: 1
+  effect:
+    maxcarry: 25
+
+Leather cord:
+  description: "Rustic but comfortable."
+  prefab: "leatherneck"
+  gem: green
+  crafting:
+    craftingstation: gemcutter
+    stationlevel: 1
+    maxquality: 1
+    costs:
+      LeatherScraps: 8
+      DeerHide: 1
+      Advanced_Green_Socket: 1
+  effect:
+    eitrregen: 1.2
+
+Humite Ring of Perception:
+  description: "This ring emits a glow that helps you breathe deeper."
+  prefab: "defaultring"
+  gem: orange
+  crafting:
+    craftingstation: gemcutter
+    stationlevel: 2
+    maxquality: 1
+    costs:
+      Bronze: 1
+      Perfect_Orange_Socket: 1
+  effect:
+    staminaregen: 1.1
+
+
+Silver band:
+  description: "A ring imbued with minor magic to make falling less painful and movement easier.  Sadly, it won't help you grow a tail or furry ears."
+  prefab: "silverring"
+  gem: black
+  crafting:
+    craftingstation: gemcutter
+    stationlevel: 1
+    maxquality: 1
+    costs:
+      Silver: 1
+      Perfect_Black_Socket: 1
+  effect:
+    movespeed: 0.03
+    falldamage: -0.5
+
+Polished silver necklace:
+  description: "Highly polished, finely wrought necklace."
+  prefab: "silverneck"
+  gem: blue
+  crafting:
+    craftingstation: gemcutter
+    stationlevel: 3
+    maxquality: 1
+    costs:
+      SilverNecklace: 1
+      Perfect_Blue_Socket: 1
+  effect:
+    movespeed: 0.07
+    jumpstaminamodifier: -0.14
+
+## Testing random jewelry settings to ensure models+styles are working
+# Alpha:
+#   prefab: defaultring
+#   gem: white
+#   crafting:
+#     craftingstation: gemcutter
+#     stationlevel: 1
+#     maxquality: 1
+#     costs:
+#       Stone: 1
+
+# Beta:
+#   prefab: customring
+#   gem: 4A412A # the ugliest color
+#   crafting:
+#     craftingstation: gemcutter
+#     stationlevel: 1
+#     maxquality: 1
+#     costs:
+#       Stone: 1
+
+# Gamma:
+#   prefab: defaultneck
+#   gem: orange
+#   crafting:
+#     craftingstation: gemcutter
+#     stationlevel: 1
+#     maxquality: 1
+#     costs:
+#       Stone: 1
+
+# Delta:
+#   prefab: customneck
+#   gem: fuchsia
+#   crafting:
+#     craftingstation: gemcutter
+#     stationlevel: 1
+#     maxquality: 1
+#     costs:
+#       Stone: 1
+
+# Epsilon:
+#   prefab: defaultring
+#   gem: lightblue
+#   crafting:
+#     craftingstation: gemcutter
+#     stationlevel: 1
+#     maxquality: 1
+#     costs:
+#       Stone: 1
