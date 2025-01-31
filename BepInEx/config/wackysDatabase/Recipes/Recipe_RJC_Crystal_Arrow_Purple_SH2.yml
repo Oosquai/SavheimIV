@@ -1,0 +1,16 @@
+name: RJC_Crystal_Arrow_Purple_SH2
+clonePrefabName: JC_Crystal_Arrow_Purple_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 120
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Simple_Purple_Socket:1:0:True
+- BlackMetal:48:0:True
+- Feathers:12:0:True
+- BMR_LightningEssence:12:0:True

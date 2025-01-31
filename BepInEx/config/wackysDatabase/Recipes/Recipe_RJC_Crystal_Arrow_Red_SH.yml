@@ -1,0 +1,15 @@
+name: RJC_Crystal_Arrow_Red_SH
+clonePrefabName: JC_Crystal_Arrow_Red_SH
+craftingStation: $piece_workbench
+minStationLevel: 4
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Shattered_Red_Crystal:1:0:True
+- SerpentScale:1:0:True
+- Feathers:2:0:True

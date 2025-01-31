@@ -1,0 +1,31 @@
+name: ObsidianRock_mat_ice
+original: ObsidianRock_mat
+overwrite: false
+changes:
+  colors:
+    _Color: [1, 1, 1, 1]
+    _MossColor: [1, 1, 1, 1]
+    _EmissionColor: [0.05, 0.05, 0.05, 0.1]
+  floats:
+    _UseGlossMap: 0
+    _Glossiness: 0
+    _Metallic: 0.622
+    _MetalGloss: 0.297
+    _MossAlpha: 0
+    _MossBlend: 0
+    _MossGloss: 0
+    _MossNormal: 0.5
+    _MossTransition: 0.1
+    _BumpScale: 1
+    _WaterlineOffset: 0
+    _TriplanarMap: 0
+    _TriplanarScale: 1
+    _AddSnow: 1
+    _AddRain: 1
+    _RippleDistance: 0
+    _RippleFreq: 1
+  textures:
+    _MainTex: ObsidanRock_d
+    _MetalTex: ObsidanRock_m
+    _MossTex: stonemoss
+    _BumpMap: ObsidanRock_n

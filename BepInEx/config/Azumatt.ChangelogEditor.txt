@@ -4,15 +4,29 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 1/28/25</color>
+     0\  Savheim IV Patch Notes, 1/30/25</color>
+- Removed a mod that reduces lag spikes during world saves.  I hope this was what was causing crashes.
+- Sailing speed modifications per onboard player have been disabled to see if multiplayer desync is related.
+- Hearthstones now require a Surtling Core to craft.
+- You can now craft tier F enchant scrolls at the Artisan Table.
+- Improved new Moder mechanics for better balance.
+- Reduced elemental essence return rate for mages.
+- Fixed recipes for tier 4 Frost, Lightning, Poison, and Heal spells.
+- Reduced damage feedback on Reflective bosses.
+- Crystal arrows are now much cheaper to craft.
+- Added 4 new essence cyclers that allow stack loading and crafting from containers.
+- Increased all essence cycler speeds.
+- Spell tables can now craft from containers.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 1/27/25
 - Crossbows have improved vertical aim.
 - Crossbows gained a small amount of knockback.
 - Elites have much higher chances to drop trophies.
 - Market Stall no longer charges tax when you list.
 - Honeyed Fish now gives a small amount of eitr.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 1/27/25
 - Battleaxes should now use Weapon gem effects instead of Tool.

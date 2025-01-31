@@ -1,0 +1,69 @@
+name: essence_kiln_ice
+piecehammer: Hammer
+m_name: Ice Essence Cycler
+sizeMultiplier: 0.4
+m_description: An enchanted kiln that can cycle essences from ice to lightning.  This specialized cycler supports loading stacks and loading from containers.
+customIcon: 
+clonePrefabName: charcoal_kiln
+material: ObsidianRock_mat_ice
+damagedMaterial: 
+craftingStation: $piece_workbench
+piecehammerCategory: Crafting
+minStationLevel: 1
+amount: 1
+disabled: false
+adminonly: false
+comfort: 
+groundPiece: false
+ground: false
+waterPiece: false
+noInWater: true
+notOnFloor: false
+onlyinTeleportArea: false
+allowedInDungeons: false
+canBeRemoved: true
+wearNTearData:
+  health: 1500
+  damageModifiers:
+    m_blunt: Resistant
+    m_slash: Resistant
+    m_pierce: Resistant
+    m_chop: Resistant
+    m_pickaxe: Normal
+    m_fire: Immune
+    m_frost: Immune
+    m_lightning: Normal
+    m_poison: Immune
+    m_spirit: Immune
+  noRoofWear: false
+  noSupportWear: true
+  supports: true
+  triggerPrivateArea: true
+craftingStationData: 
+cSExtensionData: 
+contData: 
+smelterData:
+  addOreTooltip: Place items on hotbar to add $bmr_essence_ice
+  emptyOreTooltip: $piece_smelter_empty
+  fuelItem: 
+  maxOre: 200
+  maxFuel: 
+  fuelPerProduct: 
+  secPerProduct: 2
+  spawnStack: 
+  requiresRoof: 
+  addOreAnimationLength: 
+  smelterConversion:
+  - FromName: BMR_IceEssence
+    ToName: BMR_LightningEssence
+    Remove: false
+cookingStationData: 
+beehiveData: 
+fermStationData: 
+sapData: 
+incineratorData: 
+build:
+- Stone:16:1:True
+- GreydwarfEye:5:1:True
+- SurtlingCore:1:1:True
+- BMR_IceEssence:1:1:True

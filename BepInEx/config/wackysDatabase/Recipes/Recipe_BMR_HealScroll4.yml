@@ -12,5 +12,4 @@ upgrade_reqs: []
 reqs:
 - BMR_PaperHigh:5:0:True
 - Honey:5:0:True
-- WolfPelt:2:0:True
-- Crystal:2:0:True
+- WolfFang:2:0:True

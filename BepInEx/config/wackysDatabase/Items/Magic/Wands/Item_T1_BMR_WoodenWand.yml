@@ -48,7 +48,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: BMR_ChaosEssence_SH
-  SpawnOnHit_Chance: 0.15
+  SpawnOnHit_Chance: 0.12
   Reset_Chain_If_hit: None
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character

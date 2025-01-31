@@ -11,5 +11,5 @@ requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
 - BMR_PaperLow:5:0:True
-- Honey:10:0:True
+- Honey:5:0:True
 - AncientSeed:1:0:True

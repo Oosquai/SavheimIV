@@ -1,0 +1,15 @@
+name: RJC_Crystal_Arrow_Orange_SH
+clonePrefabName: JC_Crystal_Arrow_Orange_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 20
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Shattered_Orange_Crystal:1:0:True
+- Wood:8:0:True
+- Feathers:2:0:True

@@ -1,0 +1,13 @@
+name: REnchant_Scroll_Weapon_F
+clonePrefabName: kg_EnchantScroll_Weapon_F
+craftingStation: $piece_artisanstation
+minStationLevel: 1
+maxStationLevelCap: 
+repairStation: 
+amount: 9
+disabled: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- SurtlingCore:1:1:True
+- Coins:9:1:True

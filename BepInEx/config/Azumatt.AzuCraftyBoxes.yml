@@ -214,6 +214,30 @@ essence_kiln:
   exclude:
     - All
 
+essence_kiln_fire:
+  exclude:
+    - All
+  includeOverride:
+    - BMR_FireEssence
+
+essence_kiln_ice:
+  exclude:
+    - All
+  includeOverride:
+    - BMR_IceEssence
+
+essence_kiln_lightning:
+  exclude:
+    - All
+  includeOverride:
+    - BMR_LightningEssence
+
+essence_kiln_poison:
+  exclude:
+    - All
+  includeOverride:
+    - BMR_PoisonEssence
+
 smelter:
   exclude: []
 #  exclude:
@@ -331,3 +355,9 @@ piece_jackoturnip:
 piece_walltorch:
   exclude:
     - All
+
+piece_magetable:
+  exclude: []
+
+op_transmution_table:
+  exclude: []

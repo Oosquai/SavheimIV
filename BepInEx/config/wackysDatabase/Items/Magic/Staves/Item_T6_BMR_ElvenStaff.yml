@@ -49,7 +49,7 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
   SpawnOnHit: BMR_LightningEssence
-  SpawnOnHit_Chance: 0.15
+  SpawnOnHit_Chance: 0.12
   Attack_status_effect: SE_Savheim_VeryWeakLightning
   Attack_status_effect_chance: 0.18
   Raise_Skill_Amount: 1

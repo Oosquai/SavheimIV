@@ -49,7 +49,7 @@ smelterData:
   maxOre: 200
   maxFuel: 
   fuelPerProduct: 
-  secPerProduct: 7
+  secPerProduct: 2
   spawnStack: 
   requiresRoof: 
   addOreAnimationLength: 

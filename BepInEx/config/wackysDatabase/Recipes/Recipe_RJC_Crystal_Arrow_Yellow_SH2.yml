@@ -1,0 +1,15 @@
+name: RJC_Crystal_Arrow_Yellow_SH2
+clonePrefabName: JC_Crystal_Arrow_Yellow_SH
+craftingStation: $piece_workbench
+minStationLevel: 2
+maxStationLevelCap: 
+repairStation: 
+amount: 120
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Simple_Yellow_Socket:1:0:True
+- BoneFragments:48:0:True
+- Feathers:12:0:True

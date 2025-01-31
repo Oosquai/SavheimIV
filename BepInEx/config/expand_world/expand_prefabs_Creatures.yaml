@@ -1382,8 +1382,8 @@
   bannedObjectsLimit: 2
   poke:
   - self: true
-    delay: 4                                     ### time until IceBlockers can start popping Ulvs
-    parameter: p_iceblock_spawn_ulv_loop 2.3     ### time between chances to pop ulvs
+    delay: 3                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 1.7     ### time between chances to pop ulvs
 
 # 2 players present
 - prefab: IceBlocker
@@ -1397,8 +1397,8 @@
   bannedObjectsLimit: 3
   poke:
   - self: true
-    delay: 3                                     ### time until IceBlockers can start popping Ulvs
-    parameter: p_iceblock_spawn_ulv_loop 1.8     ### time between chances to pop ulvs
+    delay: 2.5                                   ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 1.4     ### time between chances to pop ulvs
 
 # 3 players present
 - prefab: IceBlocker
@@ -1413,7 +1413,7 @@
   poke:
   - self: true
     delay: 2                                     ### time until IceBlockers can start popping Ulvs
-    parameter: p_iceblock_spawn_ulv_loop 1.3     ### time between chances to pop ulvs
+    parameter: p_iceblock_spawn_ulv_loop 1.1     ### time between chances to pop ulvs
 
 # 4 players present
 - prefab: IceBlocker
@@ -1427,7 +1427,7 @@
   bannedObjectsLimit: 5
   poke:
   - self: true
-    delay: 1                                     ### time until IceBlockers can start popping Ulvs
+    delay: 1.5                                   ### time until IceBlockers can start popping Ulvs
     parameter: p_iceblock_spawn_ulv_loop 0.8     ### time between chances to pop ulvs
 
 # 5+ players present
@@ -1439,8 +1439,8 @@
   objectsLimit: 6
   poke:
   - self: true
-    delay: 0                                     ### time until IceBlockers can start popping Ulvs
-    parameter: p_iceblock_spawn_ulv_loop 0.3     ### time between chances to pop ulvs
+    delay: 1                                     ### time until IceBlockers can start popping Ulvs
+    parameter: p_iceblock_spawn_ulv_loop 0.5     ### time between chances to pop ulvs
 
 - prefab: IceBlocker
   type: poke, p_iceblock_spawn_ulv_loop
@@ -1454,6 +1454,9 @@
 - prefab: IceBlocker
   type: poke, p_iceblock_spawn_ulv_spawn
   weight: 0.1
+  bannedObjects:
+  - Ulv, 50
+  bannedObjectsLimit: 5
   remove: true
   spawns:
   - Ulv, 0,0,0, 0,0,0, d_ulv_wakeup, 0.5

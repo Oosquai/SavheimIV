@@ -12,4 +12,4 @@ upgrade_reqs: []
 reqs:
 - BMR_PaperHigh:5:0:True
 - BMR_LightningEssence:2:0:True
-- WolfFang:2:0:True
+- Obsidian:2:0:True
