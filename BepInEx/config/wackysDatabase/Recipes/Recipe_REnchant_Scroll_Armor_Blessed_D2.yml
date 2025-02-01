@@ -9,5 +9,5 @@ disabled: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- kg_EnchantScroll_Armor_D:3:1:True
-- Coins:7:1:True
+- kg_EnchantScroll_Armor_D:5:1:True
+- Coins:21:1:True

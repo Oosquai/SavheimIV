@@ -392,6 +392,56 @@
 #  - Player, 100
 #  remove: true
 
+###############################################################
+# Cron Job triggered item removal
+- type: globalkey, gkshmaintenanceitemcleanup
+  poke:
+  - prefab: ItemDrop
+    maxDistance: 30000
+    parameter: p_sh_maintenance_item_cleanup
+
+- prefab: ItemDrop
+  type: poke, p_sh_maintenance_item_cleanup
+  bannedObjects:
+  - Player, 50
+  - blastfurnace, 50
+  - charcoal_kiln, 50
+  - fermenter, 50
+  - forge, 50
+  - guard_stone, 50
+  - hearth, 50
+  - piece_artisanstation, 50
+  - piece_bed02, 50
+  - piece_brazierceiling01, 50
+  - piece_oven, 50
+  - piece_spinningwheel, 50
+  - piece_stonecutter, 50
+  - portal_stone, 50
+  - portal_wood, 50
+  - smelter, 50
+  - windmill, 50
+  - piece_chest, 50
+  - piece_chest_blackmetal, 50
+  - piece_chest_private, 50
+  - piece_chest_treasure, 50
+  - piece_chest_wood, 50
+  - blastfurnace_blackmetal, 50
+  - blastfurnace_flametal, 50
+  - blastfurnace_silica, 50
+  - eitrrefinery, 50
+  - essence_kiln, 50
+  - essence_kiln_fire, 50
+  - essence_kiln_ice, 50
+  - essence_kiln_lightning, 50
+  - essence_kiln_poison, 50
+  - piece_beehive, 50
+  - smelter_copper, 50
+  - smelter_iron, 50
+  - smelter_silver, 50
+  - smelter_tin, 50
+  bannedObjectsLimit: 1
+  remove: true
+
 ##############################################################
 # Fish are reported to cost 8% performance to just swim/glitch around
 # Fish get removed if Fishing Rod is not equipped

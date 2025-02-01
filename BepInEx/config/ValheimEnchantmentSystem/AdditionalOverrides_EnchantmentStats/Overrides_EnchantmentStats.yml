@@ -427,7 +427,6 @@
     - CWS_Tower_Shield_3_SH
     - CWS_Tower_Shield_4_SH
     - CWS_Tower_Shield_5_SH
-    - Torch
   Stats:
     1:
       armor_percentage: 1
@@ -709,3 +708,69 @@
       damage_percentage: 10
       durability_percentage: 20
       durability: 40
+
+- Items:
+  - Torch
+  - RS_Lantern
+  - Lantern
+  Stats:
+    1:
+      stamina_regen: 0.1
+      durability_percentage: 1
+    2:
+      stamina_regen: 0.2
+      durability_percentage: 2
+    3:
+      stamina_regen: 0.3
+      durability_percentage: 3
+    4:
+      stamina_regen: 0.4
+      durability_percentage: 4
+    5:
+      stamina_regen: 0.5
+      durability_percentage: 5
+    6:
+      stamina_regen: 0.6
+      durability_percentage: 6
+    7:
+      stamina_regen: 0.7
+      durability_percentage: 7
+    8:
+      stamina_regen: 0.8
+      durability_percentage: 8
+    9:
+      stamina_regen: 0.9
+      durability_percentage: 9
+    10:
+      stamina_regen: 1
+      durability_percentage: 10
+    11:
+      stamina_regen: 1.1
+      durability_percentage: 11
+    12:
+      stamina_regen: 1.2
+      durability_percentage: 12
+    13:
+      stamina_regen: 1.3
+      durability_percentage: 13
+    14:
+      stamina_regen: 1.4
+      durability_percentage: 14
+    15:
+      stamina_regen: 1.5
+      durability_percentage: 15
+    16:
+      stamina_regen: 1.6
+      durability_percentage: 16
+    17:
+      stamina_regen: 1.7
+      durability_percentage: 17
+    18:
+      stamina_regen: 1.8
+      durability_percentage: 18
+    19:
+      stamina_regen: 1.9
+      durability_percentage: 19
+    20:
+      stamina_regen: 2
+      durability_percentage: 20

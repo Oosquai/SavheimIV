@@ -178,6 +178,7 @@
   - CWS_Sword_6_SH_DNRL
   - CWS_Tower_Shield_4_SH_DNRL
   - KnifeSkollAndHati_Boss_SH_DNRL
+  - Lantern
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_S
     amount: 1
@@ -362,6 +363,7 @@
   - CWS_Tower_Shield_3_SH
   - CWS_Sword_9_SH
   - CWS_Atgeir_8_SH
+  - RS_Lantern
 - enchant_prefab:
     prefab: kg_EnchantScroll_Armor_C
     amount: 1

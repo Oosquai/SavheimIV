@@ -15,7 +15,7 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 0.3
+TimeToLive: 0.25
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:

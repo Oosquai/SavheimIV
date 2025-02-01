@@ -160,9 +160,10 @@
     2: bool, true
     3: int, 1
     4: float, 1
+    delay: 0.1
   poke:
   - self: true
-    delay: 0.3                      # must match TtL of SE_Savheim_Staff_shield_Spirit_Counter
+    delay: 0.25                      # must match TtL of SE_Savheim_Staff_shield_Spirit_Counter
     parameter: p_spirit_counter_off
 
 - prefab: Player
