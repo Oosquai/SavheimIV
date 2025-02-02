@@ -1,7 +1,7 @@
 name: HoneyTeriyakiSalmon
 m_weight: 1
 m_name: $custom_item_honeyteriyakisalmon
-m_description: $custom_item_honeyteriyakisalmon_description  This food gives increased healing.
+m_description: $custom_item_honeyteriyakisalmon_description  This food gives eitr and increased healing.
 clonePrefabName: 
 mockName: 
 customIcon: 

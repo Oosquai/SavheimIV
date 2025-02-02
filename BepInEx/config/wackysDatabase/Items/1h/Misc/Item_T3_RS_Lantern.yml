@@ -1,7 +1,7 @@
 name: RS_Lantern
 m_weight: 2
 m_name: $item_rs_lantern
-m_description: This rugged iron lantern, unbreakable despite its age, shelters a flickering candle.  Whether held aloft or clipped to your waist, its gentle glow will light your way, but it's not enough to keep you warm on a cold night.
+m_description: This rugged iron lantern, unbreakable despite its age, shelters a flickering candle.  Whether held aloft or sheathed at your waist, its gentle glow will light your way, but it's not enough to keep you warm on a cold night.
 clonePrefabName: 
 mockName: 
 customIcon: 

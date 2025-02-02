@@ -4,12 +4,16 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/1/25, v2</color>
-- Refactored Reaper combos code.  It should work now.
-- Refactored Atgeir Impale code to work more reliably.
+     0\  Savheim IV Patch Notes, 2/2/25</color>
+- Removed DungeonSplitter from clients, but kept on server for now.
+- Server reboot to try and help multiplayer lag from last night.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/1/25, v2
+- Refactored Reaper combos code.  It should work now.
+- Refactored Atgeir Impale code to work more reliably.
 
 Patch Notes, 2/1/25
 - Rewrote and enabled daily loose item clearing, but only away from Player Bases.
