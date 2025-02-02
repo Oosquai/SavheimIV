@@ -224,141 +224,152 @@
 - name: d_state_reaper0_set
   ints:
   - i_state_reaper0, 1
-
-- name: d_state_reaper0_clr
-  ints:
-  - i_state_reaper0, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
 - name: d_state_reaper1_set
   ints:
   - i_state_reaper1, 1
-
-- name: d_state_reaper1_clr
-  ints:
-  - i_state_reaper1, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
 - name: d_state_reaper2_set
   ints:
   - i_state_reaper2, 1
-
-- name: d_state_reaper2_clr
-  ints:
-  - i_state_reaper2, 0
-
-- name: d_state_reaper0_filter
-  ints:
-  - i_state_reaper0, 1
-  - i_state_reaper1, 0
-
-- name: d_state_reaper1_filter
-  ints:
-  - i_state_reaper1, 1
-  - i_state_reaper2, 0
-
-- name: d_state_reaper2_filter
-  ints:
-  - i_state_reaper2, 1
-  - i_state_reaper0, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
 - name: d_state_reaper0_latched_set
   ints:
   - i_state_reaper0_latched, 1
-
-- name: d_state_reaper0_latched_clr
-  ints:
-  - i_state_reaper0_latched, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.53
 
 - name: d_state_reaper1_latched_set
   ints:
   - i_state_reaper1_latched, 1
-
-- name: d_state_reaper1_latched_clr
-  ints:
-  - i_state_reaper1_latched, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
 - name: d_state_reaper2_latched_set
   ints:
   - i_state_reaper2_latched, 1
-
-- name: d_state_reaper2_latched_clr
-  ints:
-  - i_state_reaper2_latched, 0
-
-- name: d_state_reaper0_latched_filter
-  ints:
-  - i_state_reaper0_latched, 1
-  - i_state_reaper1_latched, 0
-  - i_state_reaper2_latched, 0
-
-- name: d_state_reaper1_latched_filter
-  ints:
-  - i_state_reaper1_latched, 1
-  - i_state_reaper2_latched, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 1.1
 
 - name: d_state_reaper2_latched_filter_t3
-  ints:
-  - i_state_reaper2_latched, 1
   hashes:
   - RightItem, T3_Reaper
 
 - name: d_state_reaper2_latched_filter_t4
-  ints:
-  - i_state_reaper2_latched, 1
   hashes:
   - RightItem, T4_Reaper
 
 - name: d_state_reaper2_latched_filter_t5
-  ints:
-  - i_state_reaper2_latched, 1
   hashes:
   - RightItem, T5_Reaper, CWS_TH_Sword_11_SH
 
 - name: d_state_reaper2_latched_filter_t6
-  ints:
-  - i_state_reaper2_latched, 1
   hashes:
   - RightItem, T6_Reaper
 
 - name: d_state_reaper2_latched_filter_t7
-  ints:
-  - i_state_reaper2_latched, 1
   hashes:
   - RightItem, T7_Reaper
 
 - name: d_state_reaper2_latched_filter_t8
-  ints:
-  - i_state_reaper2_latched, 1
   hashes:
   - RightItem, T8_Reaper, CWS_TH_Sword_11_SH_DNRL
 
 - name: d_reaper_combo0_pending_set
   ints:
   - i_reaper_combo0_pending, 1
-
-- name: d_reaper_combo0_pending_clr
-  ints:
-  - i_reaper_combo0_pending, 0
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
 - name: d_reaper_combo1_pending_set
   ints:
   - i_reaper_combo1_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
-- name: d_reaper_combo1_pending_clr
+- name: d_reaper_combo2_t3_pending_set
   ints:
-  - i_reaper_combo1_pending, 0
+  - i_reaper_combo2_t3_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
-- name: d_reaper_combo2_pending_set
+- name: d_reaper_combo2_t4_pending_set
   ints:
-  - i_reaper_combo2_pending, 1
+  - i_reaper_combo2_t4_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
-- name: d_reaper_combo2_pending_set_and_save_dmg
+- name: d_reaper_combo2_t5_pending_set
   ints:
-  - i_reaper_combo2_pending, 1
-  - i_reaper_dmg_mult, <par1>
+  - i_reaper_combo2_t5_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
-- name: d_reaper_combo2_pending_clr
+- name: d_reaper_combo2_t6_pending_set
   ints:
-  - i_reaper_combo2_pending, 0
+  - i_reaper_combo2_t6_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
+
+- name: d_reaper_combo2_t7_pending_set
+  ints:
+  - i_reaper_combo2_t7_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
+
+- name: d_reaper_combo2_t8_pending_set
+  ints:
+  - i_reaper_combo2_t8_pending, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.7
 
 - name: d_reaper_debuff_stack_1_clr
   ints:
@@ -386,23 +397,27 @@
 
 - name: d_reaper_debuff_stack_cnt_0
   ints:
+  - tamed, 0
   - i_reaper_debuff_stack_1, 0
   - i_reaper_debuff_stack_2, 0
   - i_reaper_debuff_stack_3, 0
 
 - name: d_reaper_debuff_stack_cnt_1
   ints:
+  - tamed, 0
   - i_reaper_debuff_stack_1, 1
   - i_reaper_debuff_stack_2, 0
   - i_reaper_debuff_stack_3, 0
 
 - name: d_reaper_debuff_stack_cnt_2
   ints:
+  - tamed, 0
   - i_reaper_debuff_stack_2, 1
   - i_reaper_debuff_stack_3, 0
 
 - name: d_reaper_debuff_stack_cnt_3
   ints:
+  - tamed, 0
   - i_reaper_debuff_stack_3, 1
 
 - valueGroup: vReaperDmgRnd
@@ -416,18 +431,9 @@
   - 7
   - 8
   - 9
-- value: vReaperDmg1, 1*90+<vReaperDmgRnd>+1*<int_i_reaper_dmg_mult>*20
-- value: vReaperDmg2, 2*90+<vReaperDmgRnd>+2*<int_i_reaper_dmg_mult>*20
-- value: vReaperDmg3, 3*90+<vReaperDmgRnd>+3*<int_i_reaper_dmg_mult>*20
-
-- name: d_reaping_player_set
-  ints:
-  - i_reaping_player, 1
-
-- name: d_reaping_player_rst
-  ints:
-  - i_reaping_player, 0
-
+- value: vReaperDmg1, 1*90+<vReaperDmgRnd>+1*<par1>*20
+- value: vReaperDmg2, 2*90+<vReaperDmgRnd>+2*<par1>*20
+- value: vReaperDmg3, 3*90+<vReaperDmgRnd>+3*<par1>*20
 
 ####################################
 # Spirit Counter
@@ -505,27 +511,26 @@
   hashes:
   - RightItem, CWS_Atgeir_2_SH, CWS_Atgeir_8_SH_DNRL, CWS_Atgeir_9_SH_DNRL
 
+- name: d_atgeir_impale_vld
+  ints:
+  - i_atgeir_impale_vld, 1
+  - HasFieldsZSFX, 1
+  floats:
+  - ZSFX.m_minVol, 0
+  - ZSFX.m_maxVol, 0
+  - TimedDestruction.m_timeout, 0.5    ### time between start of attack and attack landing.  0.35 min.  0.85 max
+
 - name: d_impale_save_dmg
   ints:
   - i_impale_dmg_vld, 1
   floats:
   - f_impale_dmg, <par1>
+  longs:
+  - l_impaling_playerid, <par2>
 
-- name: d_impale_vld
-  ints:
-  - i_impale_dmg_vld, 1
-
-- name: d_impale_disable
-  ints:
-  - i_impale_dmg_vld, 0
-
-- name: d_impaling_player_set
-  ints:
-  - i_impaling_player, 1
-
-- name: d_impaling_player_rst
-  ints:
-  - i_impaling_player, 0
+- name: d_impaling_playerid_check
+  longs:
+  - playerID, <long_l_impaling_playerid>
 
 - valueGroup: vImpaleDmgRnd
   values:

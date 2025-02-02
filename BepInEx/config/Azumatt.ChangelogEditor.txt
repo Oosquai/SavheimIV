@@ -4,19 +4,23 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/1/25</color>
+     0\  Savheim IV Patch Notes, 2/1/25, v2</color>
+- Refactored Reaper combos code.  It should work now.
+- Refactored Atgeir Impale code to work more reliably.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/1/25
 - Rewrote and enabled daily loose item clearing, but only away from Player Bases.
 - Improved Enchanting effects for Torches and Lanterns.
 - You can now enchant Candle and Dverger Lanterns.
-- Increased cost of creating Blessed Enchant scrolls from lower tier scrolls.
+- Increased cost of crafting Blessed Enchant scrolls from non-Blessed scrolls.
 - Improved timing of Spirit Counter.
 - The Scythe Handle can now be purchased from the Bog Witch after defeating Bonemass instead of Moder.
 - Hid several static buff indicators from equipped jewelry.
 - Increased pumpkin drops and improved their tooltip.
 - Optimized dungeon prefabs to improve performance when exploring outside them.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 1/30/25
 - Removed a mod that reduces lag spikes during world saves.  I hope this was what was causing crashes.
