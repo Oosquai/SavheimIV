@@ -1,7 +1,7 @@
 name: Helmet_Dvergr_SH
 m_weight: 2
 m_name: Dvergr's Hood
-m_description: Dvergr's fight fiercely to defend their way of life.
+m_description: Dvergr's fight fiercely to defend their way of life.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: HelmetAshlandsMediumHood
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: BMR_PolarWolfChest
 m_weight: 3
 m_name: $bmr_polarwolf_chest
-m_description: It looks intimidating, but it won't do much to turn a blade.
+m_description: It looks intimidating, but it won't do much to turn a blade.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

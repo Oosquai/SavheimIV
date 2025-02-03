@@ -1,7 +1,7 @@
 name: BMR_PolarWolfHood
 m_weight: 1
 m_name: $bmr_polarwolf_hood
-m_description: Your studies continue, and your wisdom grows.
+m_description: Your studies continue, and your wisdom grows.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

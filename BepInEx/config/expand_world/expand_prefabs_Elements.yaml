@@ -191,8 +191,8 @@
   type: poke, p_elemental_wet_frost
   poke:
   - self: true
-    delay: 0.1                                   # give f_elemental_frozen_health time to save
-    parameter: p_elemental_wet_frozen_loop_init 12  ### PLAYER MAX FREEZE TIME
+    delay: 0.05                                  # give f_elemental_frozen_health time to save
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_helmet 1  ### PLAYER BASE MAX FREEZE TIME
 
 # Elites
 - prefab: Troll, Skeleton_Hildir, Abomination, Serpent, StoneGolem, Fenring_Cultist_Hildir, GoblinBrute, GoblinBruteBros, GoblinBrute_Hildir, GoblinShaman_Hildir, SeekerBrute, DvergerMage, Gjall, BonemawSerpent, FallenValkyrie, Morgen, Troll_Summoned
@@ -210,6 +210,84 @@
   - self: true
     delay: 0.1                                   # give f_elemental_frozen_health time to save
     parameter: p_elemental_wet_frozen_loop_init 24  ### NORMAL MAX FREEZE TIME
+
+#####################
+# Calculate player freeze time based on armor.
+# Each light piece adds 1s, medium 2s/slot, heavy or naked 3s/slot.  Plus base set above.
+### helmets
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_helmet
+  filter: d_elemental_armor_helmet_light
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_chest <add_<par1>_1>
+
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_helmet
+  filter: d_elemental_armor_helmet_medium
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_chest <add_<par1>_2>
+
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_helmet
+  fallback: true
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_chest <add_<par1>_3>
+
+### chests
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_chest
+  filter: d_elemental_armor_chest_light
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_legs <add_<par1>_1>
+
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_chest
+  filter: d_elemental_armor_chest_medium
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_legs <add_<par1>_2>
+
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_chest
+  fallback: true
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init_player_calc_legs <add_<par1>_3>
+
+### legs
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_legs
+  filter: d_elemental_armor_legs_light
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init <add_<par1>_1>
+
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_legs
+  filter: d_elemental_armor_legs_medium
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init <add_<par1>_2>
+
+- prefab: Player
+  type: poke, p_elemental_wet_frozen_loop_init_player_calc_legs
+  fallback: true
+  poke:
+  - self: true
+    delay: 0.05
+    parameter: p_elemental_wet_frozen_loop_init <add_<par1>_3>
 
 #####################
 # Init frozen loop

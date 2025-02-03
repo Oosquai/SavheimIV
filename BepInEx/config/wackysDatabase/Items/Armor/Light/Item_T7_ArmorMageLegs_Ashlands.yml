@@ -1,7 +1,7 @@
 name: ArmorMageLegs_Ashlands
 m_weight: 3
 m_name: $item_legs_mage_ashlands
-m_description: $item_legs_mage_ashlands_description
+m_description: $item_legs_mage_ashlands_description  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

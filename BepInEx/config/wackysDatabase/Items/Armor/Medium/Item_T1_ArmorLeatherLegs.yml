@@ -1,7 +1,7 @@
 name: ArmorLeatherLegs
 m_weight: 5
 m_name: $item_legs_leather
-m_description: $item_legs_leather_description
+m_description: $item_legs_leather_description  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

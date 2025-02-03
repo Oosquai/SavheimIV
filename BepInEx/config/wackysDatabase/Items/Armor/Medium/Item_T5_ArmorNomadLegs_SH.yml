@@ -1,7 +1,7 @@
 name: ArmorNomadLegs_SH
 m_weight: 5
 m_name: Nomad's Leggings
-m_description: Roam freely and find your way.
+m_description: Roam freely and find your way.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: ArmorFenringLegs
 mockName: 
 customIcon: 

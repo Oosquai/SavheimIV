@@ -1,7 +1,7 @@
 name: BMR_TatteredHelm
 m_weight: 1
 m_name: $bmr_tattered_helm
-m_description: A stylish cap for creative thinkers.
+m_description: A stylish cap for creative thinkers.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

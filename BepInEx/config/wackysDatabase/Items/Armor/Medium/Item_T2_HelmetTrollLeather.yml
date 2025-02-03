@@ -1,7 +1,7 @@
 name: HelmetTrollLeather
 m_weight: 2
 m_name: $item_helmet_trollleather
-m_description: $item_helmet_trollleather_description  This hood is favored by apprentice rogues.
+m_description: $item_helmet_trollleather_description  This hood is favored by apprentice rogues.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

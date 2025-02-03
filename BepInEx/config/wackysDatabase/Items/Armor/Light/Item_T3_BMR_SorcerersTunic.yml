@@ -1,7 +1,7 @@
 name: BMR_SorcerersTunic
 m_weight: 3
 m_name: $bmr_sorcerers_tunic
-m_description: Soft and flowy, this stylish tunic hangs easy on you.
+m_description: Soft and flowy, this stylish tunic hangs easy on you.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

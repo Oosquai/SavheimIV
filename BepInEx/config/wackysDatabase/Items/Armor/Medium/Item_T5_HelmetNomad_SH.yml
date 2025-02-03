@@ -1,7 +1,7 @@
 name: HelmetNomad_SH
 m_weight: 2
 m_name: Nomad's Hood
-m_description: Roam freely and find your way.
+m_description: Roam freely and find your way.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: HelmetFenring
 mockName: 
 customIcon: 

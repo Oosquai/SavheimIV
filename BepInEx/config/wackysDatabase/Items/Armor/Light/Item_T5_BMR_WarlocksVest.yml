@@ -1,7 +1,7 @@
 name: BMR_WarlocksVest
 m_weight: 3
 m_name: $bmr_warlocks_vest
-m_description: A robe for a proper Viking mage.
+m_description: A robe for a proper Viking mage.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

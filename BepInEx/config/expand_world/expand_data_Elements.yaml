@@ -51,3 +51,24 @@
 - name: d_elemental_fire_poison_cd2_set
   ints:
   - i_elemental_fire_poison_cd2, 1
+
+- name: d_elemental_armor_helmet_light
+  hashes:
+  - HelmetItem, BMR_TatteredHelm, BMR_SorcerersHat, BMR_PolarWolfHood, BMR_WarlocksHood, HelmetMage, HelmetMage_Ashlands
+- name: d_elemental_armor_helmet_medium
+  hashes:
+  - HelmetItem, HelmetLeather, HelmetTrollLeather, HelmetRoot, HelmetFenring, HelmetNomad_SH, Helmet_Dvergr_SH, HelmetAshlandsMediumHood
+
+- name: d_elemental_armor_chest_light
+  hashes:
+  - ChestItem, BMR_TatteredChest, BMR_SorcerersTunic, BMR_PolarWolfChest, BMR_WarlocksVest, ArmorMageChest, ArmorMageChest_Ashlands
+- name: d_elemental_armor_chest_medium
+  hashes:
+  - ChestItem, ArmorLeatherChest, ArmorTrollLeatherChest, ArmorRootChest, ArmorFenringChest, ArmorNomadChest_SH, ArmorDvergrChest_SH, ArmorAshlandsMediumChest
+
+- name: d_elemental_armor_legs_light
+  hashes:
+  - LegItem, BMR_TatteredLegs, BMR_SorcerersTrousers, BMR_PolarWolfLegs, BMR_WarlocksPants, ArmorMageLegs, ArmorMageLegs_Ashlands
+- name: d_elemental_armor_legs_medium
+  hashes:
+  - LegItem, ArmorLeatherLegs, ArmorTrollLeatherLegs, ArmorRootLegs, ArmorFenringLegs, ArmorNomadLegs_SH, ArmorDvergrLegs_SH, ArmorAshlandsMediumlegs

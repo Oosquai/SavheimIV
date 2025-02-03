@@ -4,12 +4,21 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/2/25</color>
-- Removed DungeonSplitter from clients, but kept on server for now.
-- Server reboot to try and help multiplayer lag from last night.
+     0\  Savheim IV Patch Notes, 2/2/25, v2</color>
+- Frozen duration now depends on Helmet, Chest, and Legs.  Bare skin and metal freeze longest, then leather, then cloth.  Each slot is calculated independently.
+- Scythe and Fire Wisp spells now stay with you on death.
+- Fixed Reaper logic to work on bosses.
+- Increased Reaper healing from second combo.
+- Additional items allowed in Runaeldr Satchel: Atlantean Crown, Dverger Circlet, Oosnexus.
+- Network Experiment: Removed CombatOwner and DungeonSplitter.
+- Network Experiment: Added ReturnToSender.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/2/25
+- Removed DungeonSplitter from clients, but kept on server for now.
+- Server reboot to try and help multiplayer lag from last night.
 
 Patch Notes, 2/1/25, v2
 - Refactored Reaper combos code.  It should work now.

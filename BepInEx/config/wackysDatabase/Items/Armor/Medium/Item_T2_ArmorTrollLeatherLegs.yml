@@ -1,7 +1,7 @@
 name: ArmorTrollLeatherLegs
 m_weight: 5
 m_name: $item_legs_trollleather
-m_description: $item_legs_trollleather_description  They offer a good balance of movement and protection, perfect for archery and knife work.
+m_description: $item_legs_trollleather_description  They offer a good balance of movement and protection, perfect for archery and knife work.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

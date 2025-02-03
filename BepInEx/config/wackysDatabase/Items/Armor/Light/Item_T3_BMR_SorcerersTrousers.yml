@@ -1,7 +1,7 @@
 name: BMR_SorcerersTrousers
 m_weight: 3
 m_name: $bmr_sorcerers_trousers
-m_description: Soft pants for lounging or casting fireballs.
+m_description: Soft pants for lounging or casting fireballs.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

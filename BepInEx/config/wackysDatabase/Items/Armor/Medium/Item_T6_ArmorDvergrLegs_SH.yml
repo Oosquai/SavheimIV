@@ -1,7 +1,7 @@
 name: ArmorDvergrLegs_SH
 m_weight: 5
 m_name: Dvergr's Legguards
-m_description: Dvergr's fight fiercely to defend their way of life.
+m_description: Dvergr's fight fiercely to defend their way of life.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: ArmorAshlandsMediumlegs
 mockName: 
 customIcon: 

@@ -1,7 +1,7 @@
 name: ArmorRootChest
 m_weight: 5
 m_name: $item_chest_root
-m_description: $item_chest_pcuirass_description  This is the armor of choice for aspiring <color=yellow>archers</color> and <color=yellow>thieves</color>.
+m_description: $item_chest_pcuirass_description  This is the armor of choice for aspiring <color=yellow>archers</color> and <color=yellow>thieves</color>.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

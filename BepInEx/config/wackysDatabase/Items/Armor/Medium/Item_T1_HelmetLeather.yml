@@ -1,7 +1,7 @@
 name: HelmetLeather
 m_weight: 2
 m_name: $item_helmet_leather
-m_description: $item_helmet_leather_description
+m_description: $item_helmet_leather_description  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

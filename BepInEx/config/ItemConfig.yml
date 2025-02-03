@@ -575,6 +575,7 @@ groups:
     - Hammer
     - Hoe
     - RuneFocus
+    - Scythe
 
   ArrowsAndBolts:
     - ArrowBronze
@@ -724,6 +725,7 @@ groups:
     - BMR_CleanseScroll4
     - BMR_CleanseScroll5
     - BMR_CleanseScroll6
+    - BMR_FireWispScroll
 
   Consumables:
     - BarleyWine

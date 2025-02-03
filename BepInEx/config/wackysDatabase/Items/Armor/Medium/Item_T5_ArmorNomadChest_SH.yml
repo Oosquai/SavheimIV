@@ -1,7 +1,7 @@
 name: ArmorNomadChest_SH
 m_weight: 5
 m_name: Nomad's Vest
-m_description: Roam freely and find your way.  This is the armor of choice for experienced <color=yellow>archers</color> and <color=yellow>thieves</color>.
+m_description: Roam freely and find your way.  This is the armor of choice for experienced <color=yellow>archers</color> and <color=yellow>thieves</color>.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: ArmorFenringChest
 mockName: 
 customIcon: 

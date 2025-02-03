@@ -1,7 +1,7 @@
 name: BMR_SorcerersHat
 m_weight: 1
 m_name: $bmr_sorcerers_hat
-m_description: A pointy, soft hat for a young mage.
+m_description: A pointy, soft hat for a young mage.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 

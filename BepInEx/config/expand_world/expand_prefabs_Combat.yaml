@@ -812,7 +812,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo0_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo0_hit
@@ -825,7 +825,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo1_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo1_hit
@@ -838,7 +838,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo2_t3_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 1             ### damage multiplier
@@ -851,7 +851,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo2_t4_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 2             ### damage multiplier
@@ -864,7 +864,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo2_t5_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 3             ### damage multiplier
@@ -877,7 +877,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo2_t6_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 4             ### damage multiplier
@@ -890,7 +890,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo2_t7_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 5             ### damage multiplier
@@ -903,7 +903,7 @@
   - sfx_clay_pot_break, 6, d_reaper_combo2_t8_pending_set
   poke:
   - prefab: creature
-    maxDistance: 1
+    maxDistance: 6
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 6             ### damage multiplier
@@ -1096,7 +1096,7 @@
   type: poke, p_reaper_player_heal
   poke:
   - self: true
-    parameter: p_reaper_player_heal_rpcs <par1>*0.2*<float_max_health>  ### PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
+    parameter: p_reaper_player_heal_rpcs <par1>*0.25*<float_max_health>  ### PERCENT OF MAX HEALTH TO HEAL PER DEBUFF STACK
 
 - prefab: Player
   type: poke, p_reaper_player_heal_rpcs

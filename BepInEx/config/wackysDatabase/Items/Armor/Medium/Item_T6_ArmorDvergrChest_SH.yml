@@ -1,7 +1,7 @@
 name: ArmorDvergrChest_SH
 m_weight: 5
 m_name: Dvergr's Chestguard
-m_description: Dvergr's fight fiercely to defend their way of life.  This is the armor of choice for expert <color=yellow>archers</color> and <color=yellow>thieves</color>.
+m_description: Dvergr's fight fiercely to defend their way of life.  This is the armor of choice for expert <color=yellow>archers</color> and <color=yellow>thieves</color>.  This armor confers <color=yellow>moderate</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: ArmorAshlandsMediumChest
 mockName: 
 customIcon: 

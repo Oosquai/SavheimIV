@@ -1,7 +1,7 @@
 name: BMR_WarlocksPants
 m_weight: 3
 m_name: $bmr_warlocks_pants
-m_description: Soft, elastic, and expertly crafted, these pants let you move freely.
+m_description: Soft, elastic, and expertly crafted, these pants let you move freely.  This armor confers <color=yellow>high</color> resistance to <color=yellow>freezing</color>.
 clonePrefabName: 
 mockName: 
 customIcon: 
