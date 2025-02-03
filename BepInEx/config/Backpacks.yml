@@ -1,5 +1,5 @@
 Runaeldr Satchel:
-  description: "A satchel for all kinds of ammunition, jewelry, and capes, plus a handy keyring.  <color=yellow>Ammo rotation</color> will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
+  description: "A satchel for all kinds of ammunition, jewelry, consumables, and capes, plus a handy keyring.  <color=yellow>Ammo rotation</color> will ignore contents.  Does not need to be equipped.  This container and all contents will stay with your character on death."
   size: 5x4
   unique: global
   appearance:
@@ -230,5 +230,119 @@ Runaeldr Satchel:
     - Cape_Eitr_SH_DNRL
     - Cape_Stam_SH_DNRL
     - VDS_AtlantianCrown
-    - MoltenCore
     - HelmetDverger
+    - BarleyWine
+    - BlackSoup
+    - BloodPudding
+    - BoarJerky
+    - Bread
+    - CarrotSoup
+    - CookedAsksvinMeat
+    - CookedBoneMawSerpentMeat
+    - CookedBugMeat
+    - CookedChickenMeat
+    - CookedDeerMeat
+    - CookedEgg
+    - CookedHareMeat
+    - CookedLoxMeat
+    - CookedMeat
+    - CookedVoltureMeat
+    - CookedWolfMeat
+    - DeerStew
+    - Eyescream
+    - FierySvinstew
+    - FishAndBread
+    - FishCooked
+    - FishWraps
+    - HoneyGlazedChicken
+    - LoxPie
+    - MagicallyStuffedShroom
+    - MarinatedGreens
+    - MashedMeat
+    - MeadEitrLingering
+    - MeadEitrMinor
+    - MeadFrostResist
+    - MeadHealthLingering
+    - MeadHealthMajor
+    - MeadHealthMedium
+    - MeadHealthMinor
+    - MeadPoisonResist
+    - MeadStaminaLingering
+    - MeadStaminaMedium
+    - MeadStaminaMinor
+    - MeadTasty
+    - MeatPlatter
+    - MinceMeatSauce
+    - MisthareSupreme
+    - MushroomOmelette
+    - NeckTailGrilled
+    - OnionSoup
+    - PiquantPie
+    - QueensJam
+    - RoastedCrustPie
+    - Salad
+    - Sausages
+    - ScorchingMedley
+    - SeekerAspic
+    - SerpentMeatCooked
+    - SerpentStew
+    - ShocklateSmoothie
+    - SizzlingBerryBroth
+    - SparklingShroomshake
+    - SpicyMarmalade
+    - TurnipStew
+    - WolfJerky
+    - WolfMeatSkewer
+    - YggdrasilPorridge
+    - Hearthstone
+    - BCA_BoiledEgg
+    - BCA_ChickenSoup
+    - BCA_FishSoup
+    - BCA_MeatSoup
+    - BCA_SpicyMeatPlatter
+    - BCA_SpicyMeatSupreme
+    - BCA_SpicySerpentMeat
+    - BCA_SweetNSpicyFish
+    - BCA_TomatoSoup
+    - BCA_VeggieSoup
+    - BHP_PumpkinBread
+    - BHP_PumpkinPie
+    - BHP_PumpkinWine
+    - ct_campfireinabottle
+    - ct_bonfireinabottle
+    - ct_livingroominabottle
+    - BOH_CookedHare_Meat
+    - BOH_HareStew
+    - HoneyCookedMeat
+    - HoneyCookedDeer
+    - HoneyCookedNeck
+    - HoneyTeriyakiSalmon
+    - HoneySausages
+    - HoneySerpentMeat
+    - HoneyMushroomSoup
+    - HoneyTeriyakiSalmonWrap
+    - HoneyCookedWolf
+    - OdinsDelight
+    - HoneyYellowStewLesser
+    - HoneyBread
+    - HoneyCookedLox
+    - HoneyCookedHare
+    - HoneyCookedSeeker
+    - HoneyMushroomStew
+    - HoneyYellowStew
+    - HoneyNeckJerky
+    - HoneyDeerJerky
+    - HoneyLoxJerky
+    - HoneyCooked
+    - HoneyDessertPie
+    - HoneyHarePie
+    - HoneyMeadSpeed
+    - HoneyMeadDamage
+    - RS_HealthPotion_2
+    - RS_WindPotion
+    - RS_StrengthPotion
+    - RS_BerryWine
+    - RS_EtherPotion
+    - RS_RevitalizePotion
+    - RS_HealthPotion_1
+    - RS_SpeedPotion_1

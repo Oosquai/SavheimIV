@@ -835,6 +835,14 @@ groups:
     - HoneyHarePie
     - HoneyMeadSpeed
     - HoneyMeadDamage
+    - RS_HealthPotion_2
+    - RS_WindPotion
+    - RS_StrengthPotion
+    - RS_BerryWine
+    - RS_EtherPotion
+    - RS_RevitalizePotion
+    - RS_HealthPotion_1
+    - RS_SpeedPotion_1
 
   AllEquipment:
     - Bow
