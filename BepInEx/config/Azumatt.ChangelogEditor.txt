@@ -9,7 +9,7 @@
 - Scythe and Fire Wisp spells now stay with you on death.
 - Fixed Reaper logic to work on bosses.
 - Increased Reaper healing from second combo.
-- Additional items allowed in Runaeldr Satchel: Atlantean Crown, Dverger Circlet, Oosnexus.
+- Additional items allowed in Runaeldr Satchel: Atlantean Crown, Dverger Circlet.
 - Network Experiment: Removed CombatOwner and DungeonSplitter.
 - Network Experiment: Added ReturnToSender.
 
