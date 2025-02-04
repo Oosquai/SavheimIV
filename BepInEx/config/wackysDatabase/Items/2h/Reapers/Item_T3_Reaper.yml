@@ -18,13 +18,13 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.15
-  m_attackStamina: 5
+  Custom_AttackSpeed: 1.3
+  m_attackStamina: 2
   m_eitrCost: 0
   AttackHealthCost: 0
-  m_attackHealthPercentage: 8
-  SpeedFactor: 0.5
-  DmgMultiplier: 1
+  m_attackHealthPercentage: 5
+  SpeedFactor: 0.7
+  DmgMultiplier: 0.7
   ForceMultiplier: 1
   StaggerMultiplier: 1.25
   RecoilMultiplier: 0
@@ -105,13 +105,13 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 0.9
-  m_attackStamina: 5
+  Custom_AttackSpeed: 1
+  m_attackStamina: 2
   m_eitrCost: 0
   AttackHealthCost: 0
-  m_attackHealthPercentage: 8
+  m_attackHealthPercentage: 5
   SpeedFactor: 0.3
-  DmgMultiplier: 0.3
+  DmgMultiplier: 1
   ForceMultiplier: 1
   StaggerMultiplier: 2
   RecoilMultiplier: 0

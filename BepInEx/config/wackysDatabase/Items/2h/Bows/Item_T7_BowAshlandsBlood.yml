@@ -46,7 +46,7 @@ Primary_Attack:
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
   SpawnOnHit: Feathers
-  SpawnOnHit_Chance: 0.05
+  SpawnOnHit_Chance: 0.1
   Attack_Projectile: 
   Projectile_Vel: 60
   Projectile_Accuraccy: 0

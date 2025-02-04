@@ -228,7 +228,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.62              ### time from primary attack start to hit
 
 - name: d_state_reaper1_set
   ints:
@@ -237,7 +237,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.62              ### time from primary attack start to hit
 
 - name: d_state_reaper2_set
   ints:
@@ -246,7 +246,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.62              ### time from primary attack start to hit
 
 - name: d_state_reaper0_latched_set
   ints:
@@ -255,7 +255,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.53
+  - TimedDestruction.m_timeout, 0.47              ### time from 1st primary attack hit to secondary attack start
 
 - name: d_state_reaper1_latched_set
   ints:
@@ -264,7 +264,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.62              ### time from 2nd primary attack hit to secondary attack start
 
 - name: d_state_reaper2_latched_set
   ints:
@@ -273,7 +273,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 1.1
+  - TimedDestruction.m_timeout, 0.97              ### time from 3rd primary attack hit to secondary attack start
 
 - name: d_state_reaper2_latched_filter_t3
   hashes:
@@ -306,7 +306,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo1_pending_set
   ints:
@@ -315,7 +315,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo2_t3_pending_set
   ints:
@@ -324,7 +324,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo2_t4_pending_set
   ints:
@@ -333,7 +333,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo2_t5_pending_set
   ints:
@@ -342,7 +342,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo2_t6_pending_set
   ints:
@@ -351,7 +351,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo2_t7_pending_set
   ints:
@@ -360,7 +360,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_combo2_t8_pending_set
   ints:
@@ -369,7 +369,7 @@
   floats:
   - ZSFX.m_minVol, 0
   - ZSFX.m_maxVol, 0
-  - TimedDestruction.m_timeout, 0.7
+  - TimedDestruction.m_timeout, 0.63              ### time from secondary attack start to hit
 
 - name: d_reaper_debuff_stack_1_clr
   ints:

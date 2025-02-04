@@ -182,7 +182,7 @@ sprinter:
   slot: legs
   gem: red
   unique: Item
-  power: [5, 10, 15]
+  power: [3, 6, 9]
 
 ninja:
   slot: legs
@@ -450,7 +450,7 @@ wind walk:
   slot: cloak
   gem: purple
   unique: Item
-  power: [10, 20, 30]
+  power: [8, 16, 24]
 
 # Shield
 

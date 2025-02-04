@@ -999,11 +999,11 @@
     packaged: true
     1: enum_damagetext, Bonus
     2: vec, <x>,<z>,<y>+1
-    3: string, 1
+    3: string, ☠
     4: bool, false
   poke:
   - self: true
-    delay: 2
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot1
   
 - prefab: creature
@@ -1014,11 +1014,11 @@
     packaged: true
     1: enum_damagetext, Bonus
     2: vec, <x>,<z>,<y>+1
-    3: string, 2
+    3: string, ☠☠
     4: bool, false
   poke:
   - self: true
-    delay: 2
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot2
   
 - prefab: creature
@@ -1029,11 +1029,11 @@
     packaged: true
     1: enum_damagetext, Bonus
     2: vec, <x>,<z>,<y>+1
-    3: string, 3
+    3: string, ☠☠☠
     4: bool, false
   poke:
   - self: true
-    delay: 2
+    delay: 2.5
     parameter: p_reaper_debuff_stack_dot3
   
 ## Primary-Primary-Secondary Combo = Consume debuff stacks to heal self.  Low damage.

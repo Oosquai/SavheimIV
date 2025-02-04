@@ -50,7 +50,7 @@ Primary_Attack:
   Last_Chain_Dmg_Multiplier: 2
   Reset_Chain_If_hit: None
   SpawnOnHit: Feathers
-  SpawnOnHit_Chance: 0.05
+  SpawnOnHit_Chance: 0.1
   Attack_status_effect: SE_Savheim_Hamstring_Greatbow
   Attack_status_effect_chance: 1
   Attack_Projectile: 

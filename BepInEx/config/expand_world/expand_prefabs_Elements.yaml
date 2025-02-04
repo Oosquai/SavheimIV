@@ -440,18 +440,20 @@
   injectData: true
   spawns:
   - fx_clusterbombstaff_hit
-  - vfx_blob_attack, 0,0,0.5
+  - fx_jotunbane_hit, 0,0,1
   poke:
-  - self: true
-    delay: 0.1                                   # so the hit that applies doesn't crit
+  - prefab: Player, creature
+    delay: 0.3                                   # so the hit that applies doesn't crit
+    minDistance: 0.1
+    maxDistance: 6
     parameter: p_elemental_fire_poison_stagger <vec>
   - self: true
-    delay: 27                                    ### COOLDOWN to be primary target.  Arbitrary.
+    delay: 37                                    ### COOLDOWN to be primary target.  Arbitrary.
     parameter: p_elemental_fire_poison_cd1_rst
   - prefab: Player
     minDistance: 0.1
     maxDistance: 3                               ### AE RANGE - close range high knockback
-    parameter: p_elemental_fire_poison_calc <x> <z> 200   ### x | z | KNOCKBACK FORCE
+    parameter: p_elemental_fire_poison_calc <x> <z> 100   ### x | z | KNOCKBACK FORCE
   - prefab: creature
     minDistance: 0.1
     maxDistance: 3                               ### AE RANGE - close range high knockback
@@ -459,19 +461,11 @@
   - prefab: Player
     minDistance: 3.01
     maxDistance: 6                               ### AE RANGE - far range low knockback
-    parameter: p_elemental_fire_poison_calc <x> <z> 100   ### x | z | KNOCKBACK FORCE
+    parameter: p_elemental_fire_poison_calc <x> <z> 50    ### x | z | KNOCKBACK FORCE
   - prefab: creature
     minDistance: 3.01
     maxDistance: 6                               ### AE RANGE - far range low knockback
     parameter: p_elemental_fire_poison_calc <x> <z> 100   ### x | z | KNOCKBACK FORCE
-  - prefab: vfx_Burning
-    maxDistance: 1
-    limit: 1
-    parameter: p_elemental_fire_poison_vfx_remove
-  - prefab: vfx_Poison
-    maxDistance: 1
-    limit: 1
-    parameter: p_elemental_fire_poison_vfx_remove
 
 # immunities to stagger and knockback
 - prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
@@ -507,9 +501,6 @@
   - name: RPC_Damage
     1: hit, status=SE_Savheim_Elements_Fire_Poison_Smoked force=<par1> dir=<float_f_force_x>,<float_f_force_z>,<y>
     delay: 0.1
-  - name: RPC_Damage
-    1: hit, status=SE_Savheim_Elements_Fire_Poison_Snared
-    delay: 0.2
   poke:
   - self: true
     delay: 5                                     ### COOLDOWN to be secondary target.  Make equal to SE_Savheim_Elements_Fire_Poison_Smoked to visual indiciation of cd status.
@@ -526,11 +517,6 @@
   type: poke, p_elemental_fire_poison_cd2_rst
   data: d_elemental_fire_poison_cd2_rst
   injectData: true
-
-# clear vfx on primary target to paint them as a staggered and isolated target
-- prefab: vfx_Burning, vfx_Poison
-  type: poke, p_elemental_fire_poison_vfx_remove
-  remove: true
 
 ###############################################################
 # Elements Combos

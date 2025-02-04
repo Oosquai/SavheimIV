@@ -11,5 +11,5 @@ requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
 - LinenThread:15:10:True
-- LoxPelt:4:2:True
+- LoxPelt:6:3:True
 - TrophyGrowth:1:0:True

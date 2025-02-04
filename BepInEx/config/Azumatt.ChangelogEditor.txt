@@ -4,7 +4,25 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/2/25, v2</color>
+     0\  Savheim IV Patch Notes, 2/3/25</color>
+- Modified Reaper stats to swing faster for less damage, health, and stamina per swing.
+- Improved Reaper floating text to indicate curse levels.
+- Improved fire + poison effects to be less punishing to melee.
+- Clay now stacks to 200.
+- Fixed several location resets - Goblin villages will no longer reset if player bases nearby.
+- T3 and T4 medium armor now easier to craft.
+- T5 medium armor slightly harder to craft.
+- Tasty Mead now lasts 3x as long.
+- Bows now leave behind more feathers.
+- Sprinter legs gem run speed reduced.
+- Wind Walker cape gem run speed reduced.
+- Raw Fish should now float.
+- Coins can now be stored in the Runaeldr Satchel.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/2/25, v2
 - Frozen duration now depends on Helmet, Chest, and Legs.  Bare skin and metal freeze longest, then leather, then cloth.  Each slot is calculated independently.
 - Scythe and Fire Wisp spells now stay with you on death.
 - Fixed Reaper logic to work on bosses.
@@ -12,9 +30,6 @@
 - Additional items allowed in Runaeldr Satchel: Atlantean Crown, Dverger Circlet, food, and potions.
 - Network Experiment: Removed CombatOwner and DungeonSplitter.
 - Network Experiment: Added ReturnToSender.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 2/2/25
 - Removed DungeonSplitter from clients, but kept on server for now.

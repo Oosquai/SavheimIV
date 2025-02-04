@@ -867,6 +867,7 @@ groups:
     - TrophySerpent
     - TrophyBonemawSerpent
     - Wispheart
+    - FishRaw
 
 NoLossOnDeath:
   loss: no
