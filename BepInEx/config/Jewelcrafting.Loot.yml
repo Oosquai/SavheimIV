@@ -31,6 +31,7 @@ equipment:
     resource map:
       - iron
       - root
+      - ancient bark
   mountain:
     low health: 60
     high health: 250

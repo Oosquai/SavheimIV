@@ -1651,7 +1651,7 @@
   - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 #######################################################
-# Chaos Essence randomly generates other essences
-- prefab: BMR_ChaosEssence_SH
+# Gem Essence crafted from Gem Grinder with Perfect Gems
+- prefab: BMR_GemEssence_SH
   type: create
-  swap: <vgElementalEssences>
+  swap: kg_EnchantSkillScroll_F

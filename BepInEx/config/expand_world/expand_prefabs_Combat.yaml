@@ -1458,3 +1458,59 @@
   objectRpc:
   - name: RPC_Damage
     1: hit, pierce=<par1> status=SE_Savheim_Hamstring_Vortex_Arrow force=<par2> dir=<float_f_force_x>,<float_f_force_z>,<y>
+
+###############################
+# MagicRevamp Essence spawning
+# poison
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - vfx_poisonarrow_hit, 1
+  - sfx_Potion_frostresist_Start, 1
+  weight: 0.6
+  spawn: BMR_PoisonEssence
+
+# fire
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - vfx_Potion_health_medium, 1
+  - sfx_Potion_frostresist_Start, 1
+  weight: 0.6
+  spawn: BMR_FireEssence
+
+# frost
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - fx_Potion_frostresist, 1
+  weight: 0.6
+  spawn: BMR_IceEssence
+
+# lightning
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - vfx_Potion_stamina_medium, 1
+  - sfx_Potion_frostresist_Start, 1
+  weight: 0.6
+  spawn: BMR_LightningEssence
+
+# spirit
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - vfx_Potion_eitr_minor, 1
+  - sfx_Potion_frostresist_Start, 1
+  weight: 0.6
+  spawn: <vgElementalEssences>
+
+# elemental
+- prefab: fx_radiation_hit
+  type: create
+  objects:
+  - fx_Potion_frostresist, 1
+  - vfx_Potion_health_medium, 1
+  - vfx_Potion_stamina_medium, 1
+  weight: 0.6
+  spawn: <vgElementalEssences>

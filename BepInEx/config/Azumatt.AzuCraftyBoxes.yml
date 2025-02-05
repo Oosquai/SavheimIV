@@ -238,6 +238,10 @@ essence_kiln_poison:
   includeOverride:
     - BMR_PoisonEssence
 
+gem_kiln:
+  exclude:
+    - All
+
 smelter:
   exclude: []
 #  exclude:

@@ -364,5 +364,47 @@
     "stack": 1,
     "price": 90,
     "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Black_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Blue_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Green_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Orange_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Purple_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Red_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Yellow_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
   }
 ]

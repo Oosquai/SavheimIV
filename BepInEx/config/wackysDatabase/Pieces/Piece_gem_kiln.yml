@@ -1,0 +1,86 @@
+name: gem_kiln
+piecehammer: Hammer
+m_name: Gem Grinder
+sizeMultiplier: 0.5
+m_description: A powerful enclosure that slowly grinds and melts Perfect Gems into Enchanting experience orbs.  <color=red>Orbs will despawn during daily maintenance!</color>
+customIcon: 
+clonePrefabName: charcoal_kiln
+material: ObsidianRock_mat_gem
+damagedMaterial: 
+craftingStation: $piece_workbench
+piecehammerCategory: Crafting
+minStationLevel: 1
+amount: 1
+disabled: false
+adminonly: false
+comfort: 
+groundPiece: false
+ground: false
+waterPiece: false
+noInWater: true
+notOnFloor: false
+onlyinTeleportArea: false
+allowedInDungeons: false
+canBeRemoved: true
+wearNTearData:
+  health: 1500
+  damageModifiers:
+    m_blunt: Resistant
+    m_slash: Resistant
+    m_pierce: Resistant
+    m_chop: Resistant
+    m_pickaxe: Normal
+    m_fire: Immune
+    m_frost: Immune
+    m_lightning: Normal
+    m_poison: Immune
+    m_spirit: Immune
+  noRoofWear: false
+  noSupportWear: true
+  supports: true
+  triggerPrivateArea: true
+craftingStationData: 
+cSExtensionData: 
+contData: 
+smelterData:
+  addOreTooltip: Place Perfect Gems on hotbar to add
+  emptyOreTooltip: $piece_smelter_empty
+  fuelItem: 
+  maxOre: 200
+  maxFuel: 
+  fuelPerProduct: 
+  secPerProduct: 30
+  spawnStack: 
+  requiresRoof: 
+  addOreAnimationLength: 
+  smelterConversion:
+  - FromName: Perfect_Black_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+  - FromName: Perfect_Blue_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+  - FromName: Perfect_Green_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+  - FromName: Perfect_Orange_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+  - FromName: Perfect_Purple_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+  - FromName: Perfect_Red_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+  - FromName: Perfect_Yellow_Socket
+    ToName: BMR_GemEssence_SH
+    Remove: false
+cookingStationData: 
+beehiveData: 
+fermStationData: 
+sapData: 
+incineratorData: 
+build:
+- Stone:20:1:True
+- GreydwarfEye:10:1:True
+- SurtlingCore:5:1:True

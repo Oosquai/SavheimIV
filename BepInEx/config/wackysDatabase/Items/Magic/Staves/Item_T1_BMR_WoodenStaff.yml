@@ -47,9 +47,9 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  SpawnOnHit: BMR_ChaosEssence_SH
-  SpawnOnHit_Chance: 0.12
   Reset_Chain_If_hit: None
+  Attack_status_effect: 
+  Attack_status_effect_chance: 0.1
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
@@ -196,7 +196,7 @@ m_teleportable: true
 m_backstabbonus: 1
 m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 0.5
+m_useDurabilityDrain: 0.1
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50

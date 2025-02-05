@@ -113,7 +113,7 @@ Secondary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 1.5
-  Attack_status_effect: SE_Savheim_VeryWeakSpirit
+  Attack_status_effect: SE_Savheim_VeryWeakSpiritMelee
   Attack_status_effect_chance: 1
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character

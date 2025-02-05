@@ -1,7 +1,7 @@
 name: BMR_CrystalStaff
 m_weight: 0.3
 m_name: $bmr_crystalstaff
-m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff always strips its victims of <color=yellow>spirit resistance</color> for an extended duration.
+m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff always strips its victims of <color=yellow>spirit resistance</color> for an extended duration and can sometimes create a random Essence on spell impact.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -47,8 +47,6 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  SpawnOnHit: BMR_ChaosEssence_SH
-  SpawnOnHit_Chance: 0.12
   Reset_Chain_If_hit: None
   Attack_status_effect: SE_Savheim_VeryWeakSpirit
   Attack_status_effect_chance: 1
@@ -198,7 +196,7 @@ m_teleportable: true
 m_backstabbonus: 1
 m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 0.5
+m_useDurabilityDrain: 0.1
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50

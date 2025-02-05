@@ -4,7 +4,27 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/3/25</color>
+     0\  Savheim IV Patch Notes, 2/5/25</color>
+- Resurrection reagent reverted to Surtling Cores instead of Coins.
+- Poison damage from magic sources has been doubled.
+- Lightning Crossbows (Bjolt, Dhidtning, Dundr) damage significantly increased.
+- Staves and Wands lose durability much more slowly.
+- Poison and Fire affinity staves and wands swapped in progression order.
+- Epic spells should work now (Poison Mist, Lightning Storm, Cluster Bomb, etc).
+- Defender, Vitality, Regeneration, and Frenzy gem effects increased.
+- A new kiln has been added to convert Perfect gems to Enchanting experience.
+- Crystal arrows can now be crafted with greater efficiency using Perfect gems.
+- Perfect gems can now be sold to vendors.
+- Dual Knives backstab and parry multipliers increased.
+- Supple Shortbow socket costs corrected.
+- Increased weapon and Scythe Handle drops in dungeon chests.
+- Several meads added to no-loss-on-death and Runaeldr Satchel lists.
+- Friendship can now be crafted at the Gemcutters table!
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/3/25
 - Modified Reaper stats to swing faster for less damage, health, and stamina per swing.
 - Improved Reaper floating text to indicate curse levels.
 - Improved fire + poison effects to be less punishing to melee.
@@ -18,9 +38,6 @@
 - Wind Walker cape gem run speed reduced.
 - Raw Fish should now float.
 - Coins can now be stored in the Runaeldr Satchel.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 2/2/25, v2
 - Frozen duration now depends on Helmet, Chest, and Legs.  Bare skin and metal freeze longest, then leather, then cloth.  Each slot is calculated independently.

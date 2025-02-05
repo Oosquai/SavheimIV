@@ -1,7 +1,7 @@
-name: BMR_EmberStaff
+name: BMR_VoodooStaff
 m_weight: 0.3
-m_name: $bmr_emberstaff
-m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff occasionally strips its victims of <color=yellow>fire resistance</color> for a brief duration.
+m_name: $bmr_voodoostaff
+m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff occasionally strips its victims of <color=yellow>poison resistance</color> for a brief duration and can sometimes create Toxic Essence on spell impact.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -47,10 +47,8 @@ Primary_Attack:
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  SpawnOnHit: BMR_FireEssence
-  SpawnOnHit_Chance: 0.12
   Reset_Chain_If_hit: None
-  Attack_status_effect: SE_Savheim_VeryWeakFire
+  Attack_status_effect: SE_Savheim_VeryWeakPoison
   Attack_status_effect_chance: 0.18
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
@@ -198,7 +196,7 @@ m_teleportable: true
 m_backstabbonus: 1
 m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 0.5
+m_useDurabilityDrain: 0.1
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
@@ -207,7 +205,7 @@ Attach_Override: Bow
 m_skillType: ElementalMagic
 m_animationState: Staves
 m_itemType: TwoHandedWeapon
-m_toolTier: 1
+m_toolTier: 4
 m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 

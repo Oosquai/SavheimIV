@@ -1,7 +1,7 @@
-name: BMR_CursedWand
-m_weight: 0.5
-m_name: $bmr_wand_cursed
-m_description: Wielded in one hand and lacking in length, wands can't fling spells as far as staves can, but are otherwise their equal.  Their reduced size allows for <color=yellow>faster dodging</color> and the use of shields though, making them excellent choices for close to mid range magical combat.  This wand occasionally strips its victims of <color=yellow>poison resistance</color> for a brief duration.
+name: BMR_EmberStaff
+m_weight: 0.3
+m_name: $bmr_emberstaff
+m_description: Staves focus magical energy into all manner of spells, and the wise mage selects a staff based on elemental need rather than component rarity.  This staff occasionally strips its victims of <color=yellow>fire resistance</color> for a brief duration and can sometimes create Fire Essence on spell impact.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -13,11 +13,11 @@ sizeMultiplier: 1
 scale_weight_by_quality: 0
 Primary_Attack:
   AttackType: Projectile
-  Attack_Animation: swing_axe
+  Attack_Animation: staff_fireball
   Attack_Random_Animation: 0
   Chain_Attacks: 2
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.2
+  Custom_AttackSpeed: 1
   m_attackStamina: 0
   m_eitrCost: 0
   AttackHealthCost: 0
@@ -27,7 +27,7 @@ Primary_Attack:
   ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
-  AttackRange: 2.4
+  AttackRange: 2
   AttackHeight: 1.2
   Spawn_On_Trigger: 
   Requires_Reload: false
@@ -41,23 +41,21 @@ Primary_Attack:
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
   Attack_Angle: 90
-  Attack_Ray_Width: 0.3
+  Attack_Ray_Width: 0
   Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
   Last_Chain_Dmg_Multiplier: 2
-  SpawnOnHit: BMR_PoisonEssence
-  SpawnOnHit_Chance: 0.12
   Reset_Chain_If_hit: None
-  Attack_status_effect: SE_Savheim_VeryWeakPoison
+  Attack_status_effect: SE_Savheim_VeryWeakFire
   Attack_status_effect_chance: 0.18
   Raise_Skill_Amount: 1
   Skill_Hit_Type: Character
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 10
+  Projectile_Vel: 20
   Projectile_Accuraccy: 1
   Projectiles: 1
   Skill_Accuracy: false
@@ -82,18 +80,18 @@ Secondary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 0
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.2
-  m_attackStamina: 40
+  Custom_AttackSpeed: 1
+  m_attackStamina: 20
   m_eitrCost: 0
   AttackHealthCost: 0
   m_attackHealthPercentage: 0
   SpeedFactor: 0.2
   DmgMultiplier: 1
-  ForceMultiplier: 5
+  ForceMultiplier: 1
   StaggerMultiplier: 0
   RecoilMultiplier: 0
-  AttackRange: 3
-  AttackHeight: 1
+  AttackRange: 1.5
+  AttackHeight: 0.6
   Spawn_On_Trigger: 
   Requires_Reload: false
   Reload_Animation: ''
@@ -105,9 +103,9 @@ Secondary_Attack:
   Bow_Duration_Min: 0
   Bow_Stamina_Drain: 0
   Bow_Animation_State: ''
-  Attack_Angle: 360
-  Attack_Ray_Width: 0.3
-  Lower_Dmg_Per_Hit: false
+  Attack_Angle: 90
+  Attack_Ray_Width: 0
+  Lower_Dmg_Per_Hit: true
   Hit_Through_Walls: false
   Multi_Hit: true
   Pickaxe_Special: false
@@ -118,7 +116,7 @@ Secondary_Attack:
   Special_Hit_Skill: None
   Special_Hit_Type: None
   Attack_Projectile: 
-  Projectile_Vel: 5
+  Projectile_Vel: 10
   Projectile_Accuraccy: 10
   Projectiles: 1
   Skill_Accuracy: false
@@ -166,7 +164,7 @@ Armor:
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
-  m_movementModifier: 0
+  m_movementModifier: -0.05
   m_EitrRegen: 0
   m_homeItemsStaminaModifier: 0
   m_heatResistanceModifier: 0
@@ -182,7 +180,7 @@ SE_SET_Equip:
 ShieldStats:
   m_blockPower: 8
   m_blockPowerPerLevel: 0
-  m_timedBlockBonus: 0
+  m_timedBlockBonus: 2
   m_deflectionForce: 0
   m_deflectionForcePerLevel: 0
 m_maxStackSize: 1
@@ -190,7 +188,7 @@ m_canBeReparied: true
 m_destroyBroken: false
 m_dodgeable: true
 Attack_status_effect: 
-Attack_status_effect_chance: 0.13
+Attack_status_effect_chance: 0.18
 spawn_on_hit: 
 spawn_on_terrain_hit: 
 m_questItem: false
@@ -198,16 +196,16 @@ m_teleportable: true
 m_backstabbonus: 1
 m_knockback: 0
 m_useDurability: true
-m_useDurabilityDrain: 0.5
+m_useDurabilityDrain: 0.1
 m_durabilityDrain: 0
 m_maxDurability: 200
 m_durabilityPerLevel: 50
 m_equipDuration: 0
-Attach_Override: None
+Attach_Override: Bow
 m_skillType: ElementalMagic
-m_animationState: OneHanded
-m_itemType: OneHandedWeapon
-m_toolTier: 4
+m_animationState: Staves
+m_itemType: TwoHandedWeapon
+m_toolTier: 1
 m_maxQuality: 1
 m_value: 0
 ConsumableStatusEffect: 

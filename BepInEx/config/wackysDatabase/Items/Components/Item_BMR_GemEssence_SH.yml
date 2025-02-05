@@ -1,8 +1,8 @@
-name: BMR_ChaosEssence_SH
+name: BMR_GemEssence_SH
 m_weight: 0.1
-m_name: Chaos Essence
-m_description: I'm useless as is.  Throw me on the ground and I'll change into a random essence.
-clonePrefabName: BMR_FireEssence
+m_name: Gem Essence
+m_description: I'm useless as is.  Throw me on the ground and I'll change into Enchanting experience.
+clonePrefabName: BMR_LightningEssence
 mockName: 
 customIcon: 
 material: 

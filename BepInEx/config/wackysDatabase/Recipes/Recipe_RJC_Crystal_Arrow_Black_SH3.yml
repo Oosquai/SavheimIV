@@ -1,0 +1,14 @@
+name: RJC_Crystal_Arrow_Black_SH3
+clonePrefabName: JC_Crystal_Arrow_Black_SH
+craftingStation: $piece_workbench
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 200
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Perfect_Black_Socket:1:0:True
+- BoneFragments:48:0:True

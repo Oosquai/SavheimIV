@@ -1,5 +1,5 @@
-Name: SE_Savheim_VeryWeakElemental
-Status_m_name: Elemental Sensitivity
+Name: SE_Savheim_VeryWeakSpiritMelee
+Status_m_name: Spirit Sensitivity
 Category: ''
 IconName: 
 CustomIcon: 
@@ -14,11 +14,11 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 3
+TimeToLive: 6
 StartEffect_: 
 StopEffect_: 
 StartEffect_PLUS:
-- name: fx_Potion_frostresist
+- name: vfx_Potion_eitr_minor
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -29,29 +29,7 @@ StartEffect_PLUS:
   m_randomRotation: false
   m_scale: true
   m_childTransform: ''
-- name: vfx_Potion_health_medium
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: vfx_Potion_stamina_medium
-  m_enabled: true
-  m_variant: -1
-  m_attach: true
-  m_follow: false
-  m_inheritParentRotation: false
-  m_inheritParentScale: false
-  m_multiplyParentVisualScale: false
-  m_randomRotation: false
-  m_scale: true
-  m_childTransform: ''
-- name: fx_radiation_hit
+- name: sfx_Potion_frostresist_Start
   m_enabled: true
   m_variant: -1
   m_attach: true
@@ -89,14 +67,6 @@ SeData:
   m_skillLevel2: None
   m_skillLevelModifier2: 0
   m_mods:
-  - m_type: Fire
-    m_modifier: VeryWeak
-  - m_type: Frost
-    m_modifier: VeryWeak
-  - m_type: Lightning
-    m_modifier: VeryWeak
-  - m_type: Poison
-    m_modifier: VeryWeak
   - m_type: Spirit
     m_modifier: VeryWeak
   m_modifyAttackSkill: None

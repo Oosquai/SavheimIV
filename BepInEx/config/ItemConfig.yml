@@ -768,6 +768,13 @@ groups:
     - MeadStaminaMedium
     - MeadStaminaMinor
     - MeadTasty
+    - MeadTamer
+    - MeadBugRepellent
+    - MeadBzerker
+    - MeadLightfoot
+    - MeadHasty
+    - MeadStrength
+    - MeadSwimmer
     - MeatPlatter
     - MinceMeatSauce
     - MisthareSupreme
@@ -792,24 +799,12 @@ groups:
     - WolfMeatSkewer
     - YggdrasilPorridge
     - Hearthstone
-    - BCA_BoiledEgg
-    - BCA_ChickenSoup
-    - BCA_FishSoup
-    - BCA_MeatSoup
-    - BCA_SpicyMeatPlatter
-    - BCA_SpicyMeatSupreme
-    - BCA_SpicySerpentMeat
-    - BCA_SweetNSpicyFish
-    - BCA_TomatoSoup
-    - BCA_VeggieSoup
     - BHP_PumpkinBread
     - BHP_PumpkinPie
     - BHP_PumpkinWine
     - ct_campfireinabottle
     - ct_bonfireinabottle
     - ct_livingroominabottle
-    - BOH_CookedHare_Meat
-    - BOH_HareStew
     - HoneyCookedMeat
     - HoneyCookedDeer
     - HoneyCookedNeck
@@ -835,6 +830,11 @@ groups:
     - HoneyHarePie
     - HoneyMeadSpeed
     - HoneyMeadDamage
+    - SurtrsDelight
+    - HoneyCookedVoltureMeat
+    - HoneyCookedAsksvin
+    - KonungrOmelette
+    - VolvasBrew
     - RS_HealthPotion_2
     - RS_WindPotion
     - RS_StrengthPotion
