@@ -146,7 +146,7 @@ Damage:
   Blunt: 14
   Chop: 0
   Damage: 0
-  Fire: 14
+  Fire: 30
   Frost: 0
   Lightning: 0
   Pickaxe: 0
@@ -158,7 +158,7 @@ Damage_Per_Level:
   Blunt: 2
   Chop: 0
   Damage: 0
-  Fire: 2
+  Fire: 3
   Frost: 0
   Lightning: 0
   Pickaxe: 0

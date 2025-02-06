@@ -662,7 +662,7 @@
   spawn: fx_fireball_staff_explosion
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=<randi_153_161> dodge=true block=true
+    1: hit, fire=<randi_53_71> dodge=true block=true
 
 - prefab: creature
   type: poke, Creature_Fire_Nova
@@ -670,7 +670,7 @@
   spawn: fx_fireball_staff_explosion
   objectRpc:
   - name: RPC_Damage
-    1: hit, fire=<randi_45_49> dodge=true block=true
+    1: hit, fire=<randi_33_39> dodge=true block=true
 
 #################
 # Summon version

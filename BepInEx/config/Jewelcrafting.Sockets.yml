@@ -218,7 +218,7 @@ momentum:
   slot: legs
   gem: green
   unique: Item
-  power: [25, 50, 75]
+  power: [30, 50, 70]
 
 restless legs:
   slot: legs

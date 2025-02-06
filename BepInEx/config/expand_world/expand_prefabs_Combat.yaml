@@ -464,7 +464,7 @@
   - prefab: creature
     limit: 1
     maxDistance: 6
-    parameter: p_sword_bleed_hp 6.1 0.25   # on-demand bleed arrows have short duration and limited stacking
+    parameter: p_sword_bleed_hp 4.1 0.25   # on-demand bleed arrows have short duration and limited stacking
 
 # unique melee bow - huntress.  bleeds on parry.
 - prefab: sfx_perfectblock

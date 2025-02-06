@@ -146,14 +146,14 @@ Damage:
   Blunt: 48
   Chop: 0
   Damage: 0
-  Fire: 144
+  Fire: 93
   Frost: 0
   Lightning: 0
   Pickaxe: 0
   Pierce: 0
   Poison: 0
   Slash: 0
-  Spirit: 0
+  Spirit: 35
 Damage_Per_Level: 
 Armor:
   armor: 10
@@ -190,7 +190,7 @@ spawn_on_terrain_hit:
 m_questItem: false
 m_teleportable: true
 m_backstabbonus: 3
-m_knockback: 35
+m_knockback: 70
 m_useDurability: false
 m_useDurabilityDrain: 1
 m_durabilityDrain: 0

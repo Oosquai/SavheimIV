@@ -1,47 +1,49 @@
-name: CWS_Item_Stand
+name: rae_iron_sharpstakes
 piecehammer: Hammer
-m_name: $cws_item_stand
+m_name: $rae_iron_sharpstakes
 sizeMultiplier: 1
-m_description: $cws_item_stand_description
+m_description: $rae_iron_sharpstakes_desc
 customIcon: 
 clonePrefabName: 
 material: 
 damagedMaterial: 
-craftingStation: $piece_forge
-piecehammerCategory: Furniture
+craftingStation: $piece_workbench
+piecehammerCategory: Alt Building
 minStationLevel: 1
 amount: 1
-disabled: true
+disabled: false
 adminonly: false
 comfort: 
 groundPiece: false
 ground: false
 waterPiece: false
-noInWater: true
+noInWater: false
 notOnFloor: false
 onlyinTeleportArea: false
-allowedInDungeons: false
+allowedInDungeons: true
 canBeRemoved: true
 notOnWood: false
 wearNTearData:
-  health: 2000
+  health: 200
   damageModifiers:
-    m_blunt: Resistant
-    m_slash: Resistant
+    m_blunt: Normal
+    m_slash: Normal
     m_pierce: Resistant
-    m_chop: Resistant
+    m_chop: Weak
     m_pickaxe: Normal
-    m_fire: Immune
-    m_frost: Immune
+    m_fire: Normal
+    m_frost: Normal
     m_lightning: Normal
     m_poison: Immune
     m_spirit: Immune
   noRoofWear: false
-  noSupportWear: false
-  supports: true
+  noSupportWear: true
+  supports: false
   triggerPrivateArea: true
+  materialType: Wood
 craftingStationData: 
 cSExtensionData: 
+cSExtensionDataList: 
 contData: 
 smelterData: 
 cookingStationData: 
@@ -51,7 +53,8 @@ sapData:
 incineratorData: 
 fireplaceData: 
 teleportWorldData: 
+plantData: 
+shipData: 
 build:
-- BlackMetal:4:1:True
-- FineWood:2:1:True
-- JuteBlue:2:1:True
+- RoundLog:10:0:True
+- IronNails:15:0:True
