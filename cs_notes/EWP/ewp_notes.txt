@@ -414,3 +414,6 @@ Use treasure chests that vanilla / dropthat are already populating
 #    limit: 1
 #    parameter: p_snd_test
 
+##############
+# cron
+objects_remove * type=ItemDrop safeZones=5

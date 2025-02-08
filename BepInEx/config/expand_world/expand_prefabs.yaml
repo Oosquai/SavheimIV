@@ -1655,3 +1655,19 @@
 - prefab: BMR_GemEssence_SH
   type: create
   swap: kg_EnchantSkillScroll_F
+
+#######################################################
+# Scythe fixes (thanks Raaka!)
+- prefab: Player
+  type: state, scything
+  poke:
+  - prefab: scythestuff
+    limit: 10
+    maxDistance: 3
+    parameter: pickit
+
+- prefab: scythestuff
+  type: poke, pickit
+  objectRpc:
+  - name: RPC_Pick
+    1: int, 3

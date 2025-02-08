@@ -365,3 +365,6 @@ piece_magetable:
 
 op_transmution_table:
   exclude: []
+
+eitrrefinery:
+  exclude: []

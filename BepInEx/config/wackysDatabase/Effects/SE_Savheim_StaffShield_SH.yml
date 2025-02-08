@@ -80,5 +80,5 @@ SeShield:
   AbsorbDmg: 50
   AbsorbDmgWorldLevel: 60
   LevelUpSkillFactor: 1
-  TtlPerItemLevel: 30
+  TtlPerItemLevel: 90
   AbsorbDmgPerSkill: 5

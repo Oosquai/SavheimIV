@@ -262,3 +262,16 @@
   - BMR_FrostEssence
   - BMR_LightningEssence
   - BMR_PoisonEssence
+
+####################
+# Scythe fixes (thanks Raaka!)
+- valueGroup: scythestuff
+  values:
+  - Pickable_Mushroom_Magecap
+  - Pickable_Mushroom_JotunPuffs
+  - Pickable_SmokePuff
+  - Pickable_Mushroom
+  - Pickable_Mushroom_yellow
+  - Pickable_Mushroom_blue
+  - Pickable_Dandelion
+  - Pickable_Fiddlehead

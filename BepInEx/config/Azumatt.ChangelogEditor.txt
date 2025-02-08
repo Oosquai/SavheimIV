@@ -4,7 +4,15 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/6/25</color>
+     0\  Savheim IV Patch Notes, 2/7/25</color>
+- Scythe can now harvest late-game crops.
+- Eitr Refinery can now load stacks from nearby containers.
+- Staves of protection now get much more shield duration per upgrade.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/5/25
 - Increased damage of Cluster Bomb and Frost Bomb spells.
 - Lowered damage of Lightning Storm spell.
 - Increased damage of Staff of Skadi.
@@ -14,9 +22,6 @@
 - Several wood stake pieces no longer need to be placed on ground.
 - Reduced duration of bleed from arrows and bolts.
 - Lowered damage from goblins carrying fire staves.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 2/5/25
 - Resurrection reagent reverted to Surtling Cores instead of Coins.
