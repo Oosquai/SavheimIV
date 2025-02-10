@@ -686,33 +686,32 @@
 # MagicRevamp Summon Tweaks
 # d_bmr_summon_tweaks(max_health, RandomSkillFactor)
 # MagicRevamp scales RandomSkillFactor by a factor of (1,21) at Blood Magic skill levels (1, 100), which is broken.
-# Scale damage by (0.3, 0.5, 0.7) at Blood Magic skill levels (1, 50, 100)
-# Scale health by (1, 1.5, 2) at Blood Magic skill levels (1, 50, 100)
+# Scale damage by (0.5, 2) at Blood Magic skill levels (1, 100)
+# Scale health by (2, 5) at Blood Magic skill levels (1, 100)
 - name: d_bmr_summon_tweaks
   ints:
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
-  - RandomSkillFactor, 0.02 * <par2> + 0.28
-  - max_health, <par1> * 0.05 * <par2> + <par1> * 0.95
-  - health, <par1> * 0.05 * <par2> + <par1> * 0.951
+  - RandomSkillFactor, 0.075 * <par2> + 0.425
+  - max_health, <par1> * 0.15 * <par2> + <par1> * 1.85
+  - health, <par1> * 0.15 * <par2> + <par1> * 1.851
 
 ####################################
 # Vanilla Summon Tweaks
 # d_bmr_summon_tweaks_vanilla(max_health, RandomSkillFactor)
 # Base game scales RandomSkillFactor by a factor of (1,2,3) at Blood Magic skill levels (1, 50, 100).
-# Scale damage by (0.75, 1, 1.25) at Blood Magic skill levels (1, 50, 100) (more powerful skeletons!)
-# Scale health by (0.5, 0.75, 1) at Blood Magic skill levels (1, 50, 100) (default 400 too high)
+# Leave damage as is.
+# Scale health by (1, 2) at Blood Magic skill levels (1, 100)
 - name: d_bmr_summon_tweaks_vanilla
   ints:
   - Humanoid.m_canSwim, 1
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
-  - RandomSkillFactor, 0.25 * <par2> + 0.5
-  - max_health, <par1> * 0.25 * <par2> + <par1> * 0.25
-  - health, <par1> * 0.25 * <par2> + <par1> * 0.251
+  - max_health, <par1> * 0.5 * <par2> + <par1> * 0.5
+  - health, <par1> * 0.5 * <par2> + <par1> * 0.501
 
 ####################################
 # Serpents

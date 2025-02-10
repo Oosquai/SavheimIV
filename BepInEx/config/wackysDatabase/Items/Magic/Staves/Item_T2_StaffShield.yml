@@ -20,7 +20,7 @@ Primary_Attack:
   Hit_Terrain: false
   Custom_AttackSpeed: 1
   m_attackStamina: 0
-  m_eitrCost: 25
+  m_eitrCost: 30
   AttackHealthCost: 0
   m_attackHealthPercentage: 40
   SpeedFactor: 0.3

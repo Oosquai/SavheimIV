@@ -1,0 +1,64 @@
+name: piece_chest_wood_public
+piecehammer: Hammer
+m_name: Public Chest
+sizeMultiplier: 1
+m_description: Identical to the standard wooden chest, but ignores wards.
+customIcon: 
+clonePrefabName: piece_chest_wood
+material: 
+damagedMaterial: 
+craftingStation: $piece_workbench
+piecehammerCategory: Furniture
+minStationLevel: 1
+amount: 1
+disabled: false
+adminonly: false
+comfort: 
+groundPiece: false
+ground: false
+waterPiece: false
+noInWater: true
+notOnFloor: false
+onlyinTeleportArea: false
+allowedInDungeons: false
+canBeRemoved: true
+notOnWood: false
+wearNTearData:
+  health: 100
+  damageModifiers:
+    m_blunt: Resistant
+    m_slash: Resistant
+    m_pierce: Resistant
+    m_chop: Resistant
+    m_pickaxe: Resistant
+    m_fire: Resistant
+    m_frost: Resistant
+    m_lightning: Normal
+    m_poison: Immune
+    m_spirit: Immune
+  noRoofWear: false
+  noSupportWear: true
+  supports: true
+  triggerPrivateArea: true
+  materialType: Wood
+craftingStationData: 
+cSExtensionData: 
+cSExtensionDataList: 
+contData:
+  Width: 6
+  Height: 2
+  CheckWard: false
+  AutoDestoryIfEmpty: false
+smelterData: 
+cookingStationData: 
+beehiveData: 
+fermStationData: 
+sapData: 
+incineratorData: 
+fireplaceData: 
+teleportWorldData: 
+plantData: 
+shipData: 
+build:
+- Wood:10:1:True
+- SurtlingCore:1:1:True

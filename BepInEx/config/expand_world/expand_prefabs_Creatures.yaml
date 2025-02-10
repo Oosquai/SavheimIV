@@ -264,6 +264,8 @@
   - Player, 2.5
   - creature, 2.5, tamed_creatures
   objectsLimit: 1
+  bannedObjects:
+  - sfx_perfectblock, 2.5    # parry might not stagger but at least prevents extra attack
   objectRpc:
   - name: SetTrigger
     target: all
@@ -451,6 +453,8 @@
   - Player, 2.5
   - creature, 2.5, tamed_creatures
   objectsLimit: 1
+  bannedObjects:
+  - sfx_perfectblock, 2.5    # parry might not stagger but at least prevents extra attack
   objectRpc:
   - name: SetTrigger
     target: all
@@ -468,6 +472,8 @@
   - Player, 2.5
   - creature, 2.5, tamed_creatures
   objectsLimit: 1
+  bannedObjects:
+  - sfx_perfectblock, 2.5    # parry might not stagger but at least prevents extra attack
   objectRpc:
   - name: SetTrigger
     target: all

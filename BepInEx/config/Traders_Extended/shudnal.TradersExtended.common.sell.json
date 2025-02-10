@@ -406,5 +406,23 @@
     "stack": 1,
     "price": 9,
     "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_Cyan_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_blueish_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
+  },
+  {
+    "prefab": "Perfect_redish_Socket",
+    "stack": 1,
+    "price": 9,
+    "requiredGlobalKey": ""
   }
 ]

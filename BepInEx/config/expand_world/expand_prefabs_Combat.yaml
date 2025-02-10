@@ -1036,12 +1036,12 @@
     delay: 2.5
     parameter: p_reaper_debuff_stack_dot3
   
-## Primary-Primary-Secondary Combo = Consume debuff stacks to heal self.  Low damage.
+## Primary-Primary-Secondary Combo = KEEP debuff stacks AND heal self.  Low damage.
 - prefab: creature
   type: poke, p_reaper_combo1_hit
   filter: d_reaper_debuff_stack_cnt_1            # 1 debuff stack
-  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
-  injectData: true
+#  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+#  injectData: true
   spawns:
   - vfx_BloodHit, 0,0,1
   - fx_natureweapon_hit, 0,0,1
@@ -1056,8 +1056,8 @@
 - prefab: creature
   type: poke, p_reaper_combo1_hit
   filter: d_reaper_debuff_stack_cnt_2            # 2 debuff stacks
-  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
-  injectData: true
+#  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+#  injectData: true
   spawns:
   - vfx_BloodHit, 0,0,1
   - fx_natureweapon_hit, 0,0,1
@@ -1074,8 +1074,8 @@
 - prefab: creature
   type: poke, p_reaper_combo1_hit
   filter: d_reaper_debuff_stack_cnt_3            # 3 debuff stacks
-  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
-  injectData: true
+#  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+#  injectData: true
   spawns:
   - vfx_BloodHit, 0,0,1
   - fx_natureweapon_hit, 0,0,1

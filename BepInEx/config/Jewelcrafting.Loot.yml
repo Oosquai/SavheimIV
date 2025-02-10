@@ -57,6 +57,8 @@ equipment:
       - bilebag
       - mandible
       - carapace
+      - black marble
+      - blue jute
   ocean:
     low health: 60
     high health: 150
