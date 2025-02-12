@@ -714,50 +714,50 @@
 - prefab: sfx_cinder_rain_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_state_reaper0_set
+  - sfx_clay_pot_break, 8, d_state_reaper0_set
   bannedObjects:
-  - sfx_clay_pot_break, 6, d_state_reaper1_set
+  - sfx_clay_pot_break, 8, d_state_reaper1_set
   spawn: sfx_clay_pot_break, d_state_reaper0_latched_set
 
 - prefab: sfx_cinder_rain_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_state_reaper1_set
+  - sfx_clay_pot_break, 8, d_state_reaper1_set
   bannedObjects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_set
   spawn: sfx_clay_pot_break, d_state_reaper1_latched_set
 
 - prefab: sfx_cinder_rain_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_state_reaper2_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_set
   bannedObjects:
-  - sfx_clay_pot_break, 6, d_state_reaper0_set
+  - sfx_clay_pot_break, 8, d_state_reaper0_set
   spawn: sfx_clay_pot_break, d_state_reaper2_latched_set
 
 ## Detect Reaper Secondary attacks after primaries make contact
 - prefab: Player
   type: state, battleaxe_attack2
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper0_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper0_latched_set
   bannedObjects:
-  - sfx_clay_pot_break, 6, d_state_reaper1_latched_set
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper1_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   bannedObjectsLimit: 1
   spawn: sfx_clay_pot_break, d_reaper_combo0_pending_set
 
 - prefab: Player
   type: state, battleaxe_attack2
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper1_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper1_latched_set
   bannedObjects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo1_pending_set
 
 # final combo needs to determine which tier reaper player is using to calculate dmg
@@ -765,54 +765,54 @@
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t3
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo2_t3_pending_set
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t4
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo2_t4_pending_set
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t5
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo2_t5_pending_set
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t6
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo2_t6_pending_set
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t7
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo2_t7_pending_set
 
 - prefab: Player
   type: state, battleaxe_attack2
   filter: d_state_reaper2_latched_filter_t8
   objects:
-  - sfx_clay_pot_break, 6, d_state_reaper2_latched_set
+  - sfx_clay_pot_break, 8, d_state_reaper2_latched_set
   spawn: sfx_clay_pot_break, d_reaper_combo2_t8_pending_set
 
 ## Trigger on reaper 2nd hit fx, then poke creatures for comboX_hit effects
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo0_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo0_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo0_hit
@@ -820,12 +820,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo1_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo1_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo1_hit
@@ -833,12 +833,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo2_t3_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo2_t3_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 1             ### damage multiplier
@@ -846,12 +846,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo2_t4_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo2_t4_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 2             ### damage multiplier
@@ -859,12 +859,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo2_t5_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo2_t5_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 3             ### damage multiplier
@@ -872,12 +872,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo2_t6_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo2_t6_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 4             ### damage multiplier
@@ -885,12 +885,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo2_t7_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo2_t7_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 5             ### damage multiplier
@@ -898,12 +898,12 @@
 - prefab: sfx_axe_flint_hit
   type: create
   objects:
-  - Player, 6, d_reaper_list
+  - Player, 8, d_reaper_list
   - sfx_sword_hit, 1
-  - sfx_clay_pot_break, 6, d_reaper_combo2_t8_pending_set
+  - sfx_clay_pot_break, 8, d_reaper_combo2_t8_pending_set
   poke:
   - prefab: creature
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: not_tamed_combat
     parameter: p_reaper_combo2_hit 6             ### damage multiplier
@@ -1040,15 +1040,15 @@
 - prefab: creature
   type: poke, p_reaper_combo1_hit
   filter: d_reaper_debuff_stack_cnt_1            # 1 debuff stack
-#  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
-#  injectData: true
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
   spawns:
   - vfx_BloodHit, 0,0,1
   - fx_natureweapon_hit, 0,0,1
   - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch1
   poke:
   - prefab: Player
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: d_reaper_list
     parameter: p_reaper_player_heal 1
@@ -1056,8 +1056,8 @@
 - prefab: creature
   type: poke, p_reaper_combo1_hit
   filter: d_reaper_debuff_stack_cnt_2            # 2 debuff stacks
-#  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
-#  injectData: true
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
   spawns:
   - vfx_BloodHit, 0,0,1
   - fx_natureweapon_hit, 0,0,1
@@ -1066,7 +1066,7 @@
   - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch2, 0.3
   poke:
   - prefab: Player
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: d_reaper_list
     parameter: p_reaper_player_heal 2
@@ -1074,8 +1074,8 @@
 - prefab: creature
   type: poke, p_reaper_combo1_hit
   filter: d_reaper_debuff_stack_cnt_3            # 3 debuff stacks
-#  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
-#  injectData: true
+  data: d_reaper_debuff_stack_cnt_0              # clear all debuff stacks
+  injectData: true
   spawns:
   - vfx_BloodHit, 0,0,1
   - fx_natureweapon_hit, 0,0,1
@@ -1086,7 +1086,7 @@
   - sfx_Potion_frostresist_Start, 0,0,0, 0,0,0, d_sfx_reaper_heal_pitch3, 0.6
   poke:
   - prefab: Player
-    maxDistance: 6
+    maxDistance: 8
     limit: 1
     data: d_reaper_list
     parameter: p_reaper_player_heal 3

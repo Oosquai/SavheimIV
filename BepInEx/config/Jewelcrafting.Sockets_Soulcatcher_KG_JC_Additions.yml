@@ -7,7 +7,7 @@ Deer Soul Power:
   unique: gem
 
 Neck Soul Power:
-  slot: legs
+  slot: [legs, head]
   gem: Neck Soul Gem
   power:
     value: [10, 15, 20, 25, 30]
@@ -59,7 +59,7 @@ Skeleton Soul Power:
   unique: gem
 
 Draugr Soul Power:
-  slot: [shield, weapon]
+  slot: [shield, weapon, bloodmagic]
   gem: Draugr Soul Gem
   power:
     value: [20, 30, 40, 50, 60]

@@ -1,7 +1,7 @@
 name: JC_Necklace_Orange
 m_weight: 0.1
 m_name: $jc_necklace_orange
-m_description: This carefully crafted amulet acts as a moderate antidote to poison when worn.
+m_description: This carefully crafted amulet acts as a moderate antidote to poison, but it also makes the wearer more susceptible to slashing attacks.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -17,7 +17,7 @@ Secondary_Attack:
 Damage: 
 Damage_Per_Level: 
 Armor:
-  armor: 1
+  armor: 0
   armorPerLevel: 1
 FoodStats: 
 Moddifiers:
@@ -33,7 +33,7 @@ Moddifiers:
   m_sneakStaminaModifier: 0
   m_runStaminaModifier: 0
 SE_Equip:
-  EffectName: SE_Savheim_Resistant_Poison
+  EffectName: SE_Savheim_Resistant_Poison_Weak_Slash
 SE_SET_Equip: 
 ShieldStats:
   m_blockPower: 10

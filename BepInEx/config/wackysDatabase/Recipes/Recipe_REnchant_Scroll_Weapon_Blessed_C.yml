@@ -9,5 +9,5 @@ disabled: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
-- kg_EnchantScroll_Weapon_Blessed_D:3:1:True
-- Coins:9:1:True
+- kg_EnchantScroll_Weapon_Blessed_D:1:1:True
+- Coins:27:1:True

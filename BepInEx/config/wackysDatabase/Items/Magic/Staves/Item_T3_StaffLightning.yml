@@ -59,7 +59,7 @@ Primary_Attack:
   Special_Hit_Type: None
   Attack_Projectile: staff_lightning_projectile
   Projectile_Vel: 200
-  Projectile_Accuraccy: 30
+  Projectile_Accuraccy: 15
   Projectiles: 12
   Skill_Accuracy: false
   Launch_Angle: -1

@@ -649,3 +649,44 @@
     maxDistance: 3.5
     delay: 1
     parameter: p_elements_player_lightning_damage <randi_41_47>
+
+###############################################################
+# Epic Spells
+- prefab: bmr_frostbomscroll_projectile
+  type: destroy
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    limit: 3
+    parameter: p_frostbomb_trigger_frozen
+
+# skip bosses
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  type: poke, p_frostbomb_trigger_frozen
+  weight: 1E30  
+
+- prefab: creature
+  type: poke, p_frostbomb_trigger_frozen
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Trigger_Frozen
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
+- prefab: bmr_clusterbombscroll_projectile
+  type: destroy
+  poke:
+  - prefab: creature
+    maxDistance: 4
+    limit: 1
+    parameter: p_clusterbomb_trigger_explosion
+
+- prefab: creature
+  type: poke, p_clusterbomb_trigger_explosion
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_Trigger_Explosion
+    2: bool, true
+    3: int, 1
+    4: float, 1

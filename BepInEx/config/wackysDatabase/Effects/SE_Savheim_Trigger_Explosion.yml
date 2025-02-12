@@ -1,8 +1,8 @@
-Name: SE_Savheim_TowerShield_HP_Regen
-Status_m_name: Recovery
+Name: SE_Savheim_Trigger_Explosion
+Status_m_name: Slowed
 Category: ''
 IconName: 
-CustomIcon: health-0.png
+CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
 Tooltip: ''
@@ -14,10 +14,32 @@ StopMessage: ''
 RepeatMessageLoc: TopLeft
 RepeatMessage: ''
 RepeatInterval: 0
-TimeToLive: 30
+TimeToLive: 0.1
 StartEffect_: 
 StopEffect_: 
-StartEffect_PLUS: []
+StartEffect_PLUS:
+- name: vfx_Burning
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
+- name: vfx_Poison
+  m_enabled: true
+  m_variant: -1
+  m_attach: true
+  m_follow: false
+  m_inheritParentRotation: false
+  m_inheritParentScale: false
+  m_multiplyParentVisualScale: false
+  m_randomRotation: false
+  m_scale: true
+  m_childTransform: ''
 StopEffect_PLUS: []
 Cooldown: 0
 ActivationAnimation: gpower
@@ -35,7 +57,7 @@ SeData:
   m_jumpStaminaUseModifier: 0
   m_eitrOverTime: 0
   m_eitrOverTimeDuration: 0
-  m_healthRegenMultiplier: 2
+  m_healthRegenMultiplier: 1
   m_staminaRegenMultiplier: 1
   m_eitrRegenMultiplier: 1
   m_raiseSkill: None
@@ -51,17 +73,9 @@ SeData:
   m_stealthModifier: 0
   m_addMaxCarryWeight: 0
   m_speedModifier: 0
-  m_jumpModifier: &o0
-    x: 0
-    y: 0
-    z: 0
-    normalized: *o0
-    magnitude: 0
-    sqrMagnitude: 0
   m_maxMaxFallSpeed: 0
   m_fallDamageModifier: 0
   m_tickTimer: 0
   m_healthOverTimeTimer: 0
   m_healthOverTimeTicks: 0
   m_healthOverTimeTickHP: 0
-SeShield: 
