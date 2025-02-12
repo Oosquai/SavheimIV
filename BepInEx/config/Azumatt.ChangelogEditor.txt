@@ -4,7 +4,15 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/11/25</color>
+     0\  Savheim IV Patch Notes, 2/12/25</color>
+- Increased drop rate of trophies from Seeker Soldiers.
+- Increased speed of Drakkar.  This will only apply to newly-built boats.
+- Increased range of summon checks to limit to one summon.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/11/25
 - Humite Necklace of Gemstone Attunement now makes wearer weak to Slash.
 - Frost Bomb spell now triggers Frozen.
 - Cluster Bomb spell now triggers explosions that knock groups of enemies away.
@@ -15,10 +23,7 @@
 - The Draugr Soul Gem can now be placed in Bloodmagic weapons.
 - Reaper combo ranges extended slightly to trigger more reliably on large enemies.
 - Reaper second combo once again removes curse stacks.
-- Enchant scroll tier up recipes at Artisan table now cost fewer scrolls but more Coins.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
+- Enchant scroll tier-up recipes at Artisan table now cost fewer scrolls but more Coins.
 
 Patch Notes, 2/9/25
 - Parries now prevent quick follow up attacks, even for creatures who don't stagger when parried.

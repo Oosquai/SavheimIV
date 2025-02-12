@@ -870,7 +870,7 @@
   - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
     parameter: only_one_summon
     minDistance: 0.1
-    maxDistance: 5
+    maxDistance: 10
 
 # special case for StaffSkeleton -> Skeleton_Friendly.  Base game scaling is BM (1, 50, 100) = RSF (1, 2, 3)
 - prefab: Skeleton_Friendly
@@ -884,7 +884,7 @@
   - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
     parameter: only_one_summon
     minDistance: 0.1
-    maxDistance: 5
+    maxDistance: 10
 
 - prefab: BMR_SummonNeck, BMR_SummonBoar, BMR_SummonGreydwarf, BMR_SummonSkeleton, BMR_SummonDraugr, BMR_SummonSurtling, BMR_SummonWolf, BMR_SummonUlv, BMR_SummonGoblin, BMR_SummonSeeker, BMR_SummonCharredMelee, Skeleton_Friendly
   type: poke, only_one_summon
