@@ -10,4 +10,4 @@ requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs:
 - SurtlingCore:1:1:True
-- Coins:9:1:True
+- Coins:18:1:True

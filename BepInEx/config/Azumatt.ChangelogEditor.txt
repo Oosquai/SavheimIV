@@ -8,6 +8,8 @@
 - Increased drop rate of trophies from Seeker Soldiers.
 - Increased speed of Drakkar.  This will only apply to newly-built boats.
 - Increased range of summon checks to limit to one summon.
+- Doubled eitr cost of Lightning Storm, Frost Spikes, and Meteor spells.
+- Removed enchant scroll tier-up recipes, since redundant to inventory crafting.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
