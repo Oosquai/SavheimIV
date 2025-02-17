@@ -2,7 +2,7 @@ name: VikingShip
 piecehammer: Hammer
 m_name: $ship_longship
 sizeMultiplier: 1
-m_description: Sail faster with up to <color=orange>3</color> additional players on board.  Hover over parts of this ship when near a Forge for further <color=yellow>upgrades</color>!
+m_description: Hover over parts of this ship when near a Forge for further <color=yellow>upgrades</color>!
 customIcon: 
 clonePrefabName: 
 material: 

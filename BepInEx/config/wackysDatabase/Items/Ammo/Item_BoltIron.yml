@@ -1,7 +1,7 @@
 name: BoltIron
 m_weight: 0.01
 m_name: Silver Bolt
-m_description: A gleaming silver missile.  The use of silver in the arrowhead wards against undead.
+m_description: A gleaming silver missile.
 clonePrefabName: 
 mockName: 
 customIcon: 
@@ -107,10 +107,10 @@ Damage:
   Frost: 0
   Lightning: 0
   Pickaxe: 0
-  Pierce: 50
+  Pierce: 57
   Poison: 0
   Slash: 0
-  Spirit: 30
+  Spirit: 0
 Damage_Per_Level: 
 Armor:
   armor: 10

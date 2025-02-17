@@ -50,9 +50,9 @@ jobs:
   - command: setkey gkshmaintenanceitemcleanup
     schedule: "3 12 * * *"
 
-# After specific day routines below, clean up world
-  - command: world_clean
-    schedule: "57 12 * * *"
+# After specific day routines below, clean up world - REMOVING CUSTOM BANNERS??
+#  - command: world_clean
+#    schedule: "57 12 * * *"
 
 ##########################################################
 # SPECIFIC DAY SCHEDULES

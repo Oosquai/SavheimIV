@@ -4,15 +4,28 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/12/25</color>
-- Increased drop rate of trophies from Seeker Soldiers.
-- Increased speed of Drakkar.  This will only apply to newly-built boats.
-- Increased range of summon checks to limit to one summon.
-- Doubled eitr cost of Lightning Storm, Frost Spikes, and Meteor spells.
-- Removed enchant scroll tier-up recipes, since redundant to inventory crafting.
+     0\  Savheim IV Patch Notes, 2/16/25</color>
+- Custom banners should stop despawning.
+- Bleeds from arrows and bolts have shorter duration but higher tick damage.
+- Bloodmagic weapons no longer gain Thunderclap from cyan gems.
+- Archmage Staff of Protection now gains Extended Embrace effect from cyan gems.
+- Essence return rate for mages increased slightly.
+- Nevermore fall speed reduction nerfed slightly.
+- Resinwood Short Bow now crafts from Core Wood instead of Finewood.
+- Removed Public Chest - wasn't working.
+- Removed boat tooltips about increased speed per player.
+- Removed spirit damage from Silver arrows and bolts.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/12/25
+- Increased drop rate of trophies from Seeker Soldiers.
+- Increased range of summon checks to limit to one summon.
+- Doubled eitr cost of Lightning Storm, Frost Spikes, and Meteor spells.
+- Removed enchant scroll tier-up recipes, since redundant to inventory crafting.
+- Workbench no longer pulls paper from containers, causing spells to sort to bottom.
+- Locations that hard reset now prevent building.
 
 Patch Notes, 2/11/25
 - Humite Necklace of Gemstone Attunement now makes wearer weak to Slash.

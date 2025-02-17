@@ -10,6 +10,6 @@ disabledUpgrade: false
 requireOnlyOneIngredient: false
 upgrade_reqs: []
 reqs: 
-- FineWood:12:6:True
+- RoundLog:12:6:True
 - DeerHide:2:1:True
 - Resin:6:3:True

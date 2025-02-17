@@ -383,6 +383,17 @@
   commands:
   - kick <pid>
 
+#### Admin kill 1 nearby creature
+#- prefab: Player
+#  type: say, !admin_queen_loot
+#  filter: d_steamidadmincheck
+#  poke:
+#  - prefab: Player
+#    minDistance: 1
+#    maxDistance: 20
+#    limit: 1
+#    parameter: p_boss_loot <bossDropsQueen>
+
 ###############################################################
 ## No drops from (distant) monster kill
 ## NO!  Smelters, etc.  BAD!

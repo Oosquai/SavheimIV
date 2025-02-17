@@ -368,3 +368,9 @@ op_transmution_table:
 
 eitrrefinery:
   exclude: []
+
+piece_workbench:
+  exclude:
+    - BMR_PaperLow
+    - BMR_PaperHigh
+    - BMR_PaperAncient

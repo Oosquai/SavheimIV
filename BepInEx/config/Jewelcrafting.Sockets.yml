@@ -105,10 +105,10 @@ thunderclap:
     gem: orange
     unique: Item
     power: [4, 7, 10]
-  - slot: bloodmagic
-    gem: cyan
-    unique: Item
-    power: [4, 7, 10]
+#  - slot: bloodmagic
+#    gem: cyan
+#    unique: Item
+#    power: [4, 7, 10]
 
 # Magic Weapons
 

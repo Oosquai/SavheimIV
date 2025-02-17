@@ -2,7 +2,7 @@ name: VikingShip_Ashlands
 piecehammer: Hammer
 m_name: $ship_longship_ashlands
 sizeMultiplier: 1
-m_description: Sail faster with up to <color=orange>3</color> additional players on board.  This giant, Ashlands-ready ship is much faster and sturdier than others, but it can't be customized.
+m_description: This giant, Ashlands-ready ship is much faster and sturdier than others, but it can't be customized.
 customIcon: 
 clonePrefabName: 
 material: 

@@ -41,6 +41,7 @@
   forestTresholdMax: 5
   exteriorRadius: 10
   clearArea: true
+  noBuild: true
 - prefab: GoblinKing
   enabled: true
   biome: Plains
@@ -55,6 +56,7 @@
   forestTresholdMax: 5
   exteriorRadius: 32
   clearArea: true
+  noBuild: true
 - prefab: Greydwarf_camp1
   enabled: true
   biome: BlackForest
@@ -146,6 +148,7 @@
   maxTerrainDelta: 5
   exteriorRadius: 5
   clearArea: true
+  noBuild: true
 - prefab: Runestone_Draugr
   enabled: true
   biome: Swamp
@@ -173,6 +176,7 @@
   forestTresholdMax: 5
   exteriorRadius: 25
   clearArea: true
+  noBuild: true
 - prefab: Bonemass
   enabled: true
   biome: Swamp
@@ -190,6 +194,7 @@
   forestTresholdMax: 5
   exteriorRadius: 19.79
   clearArea: true
+  noBuild: true
 - prefab: Crypt2
   enabled: true
   biome: BlackForest
@@ -200,6 +205,7 @@
   maxTerrainDelta: 2
   exteriorRadius: 12
   clearArea: true
+  noBuild: true
 - prefab: Ruin1
   enabled: true
   biome: BlackForest
@@ -585,6 +591,7 @@
   maxTerrainDelta: 2
   exteriorRadius: 11
   clearArea: true
+  noBuild: true
 - prefab: Crypt4
   enabled: true
   biome: BlackForest
@@ -594,6 +601,7 @@
   randomRotation: true
   maxTerrainDelta: 2
   exteriorRadius: 18
+  noBuild: true
 - prefab: InfestedTree01
   enabled: true
   biome: Swamp
@@ -797,6 +805,7 @@
   maxTerrainDelta: 4
   exteriorRadius: 12
   clearArea: true
+  noBuild: true
 - prefab: DrakeNest01
   enabled: true
   biome: Mountain
@@ -809,6 +818,7 @@
   maxTerrainDelta: 3
   exteriorRadius: 5
   clearArea: true
+  noBuild: true
 - prefab: Waymarker01
   enabled: true
   biome: Mountain
@@ -1084,6 +1094,7 @@
   exteriorRadius: 20
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: TarPit2
   enabled: true
   biome: Plains
@@ -1099,6 +1110,7 @@
   exteriorRadius: 25
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: TarPit3
   enabled: true
   biome: Plains
@@ -1114,6 +1126,7 @@
   exteriorRadius: 14
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: MountainCave02
   enabled: true
   biome: Mountain
@@ -1127,6 +1140,7 @@
   forestTresholdMax: 0
   exteriorRadius: 15
   clearArea: true
+  noBuild: true
 - prefab: Mistlands_GuardTower1_new
   enabled: true
   biome: Mistlands
@@ -1140,6 +1154,7 @@
   exteriorRadius: 24
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_GuardTower1_ruined_new
   enabled: true
   biome: Mistlands
@@ -1179,6 +1194,7 @@
   exteriorRadius: 24
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_GuardTower3_new
   enabled: true
   biome: Mistlands
@@ -1192,6 +1208,7 @@
   exteriorRadius: 24
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_GuardTower3_ruined_new
   enabled: true
   biome: Mistlands
@@ -1220,6 +1237,7 @@
   exteriorRadius: 20
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_Excavation1
   enabled: true
   biome: Mistlands
@@ -1369,6 +1387,7 @@
   exteriorRadius: 20
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_DvergrTownEntrance2
   enabled: true
   biome: Mistlands
@@ -1385,6 +1404,7 @@
   exteriorRadius: 32
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_DvergrBossEntrance1
   enabled: true
   biome: Mistlands
@@ -1401,6 +1421,7 @@
   exteriorRadius: 32
   clearArea: true
   randomDamage: true
+  noBuild: true
 - prefab: Mistlands_RoadPost1
   enabled: true
   biome: Mistlands
@@ -1507,6 +1528,7 @@
   forestTresholdMax: 0
   exteriorRadius: 15
   clearArea: true
+  noBuild: true
 - prefab: Hildir_camp
   enabled: true
   biome: Meadows
@@ -1537,6 +1559,7 @@
   randomRotation: true
   maxTerrainDelta: 2
   exteriorRadius: 18
+  noBuild: true
 - prefab: Hildir_plainsfortress
   enabled: true
   biome: Plains
@@ -1584,6 +1607,7 @@
   exteriorRadius: 24
   clearArea: true
   maxVegetation: 0.1
+  noBuild: true
 - prefab: PlaceofMystery2
   enabled: true
   biome: AshLands
@@ -1600,6 +1624,7 @@
   exteriorRadius: 24
   clearArea: true
   maxVegetation: 0.1
+  noBuild: true
 - prefab: PlaceofMystery3
   enabled: true
   biome: AshLands
@@ -1616,6 +1641,7 @@
   exteriorRadius: 24
   clearArea: true
   maxVegetation: 0.1
+  noBuild: true
 - prefab: CharredFortress
   enabled: true
   biome: AshLands
@@ -1683,6 +1709,7 @@
   minVegetation: 0.6
   surroundCheckVegetation: true
   surroundCheckDistance: 30
+  noBuild: true
 - prefab: SulfurArch
   enabled: true
   biome: AshLands
@@ -1735,6 +1762,7 @@
   clearArea: true
   randomDamage: true
   maxVegetation: 0.5
+  noBuild: true
 - prefab: CharredTowerRuins1_dvergr
   enabled: true
   biome: AshLands
@@ -1750,6 +1778,7 @@
   clearArea: true
   randomDamage: true
   maxVegetation: 0.1
+  noBuild: true
 - prefab: CharredTowerRuins2
   enabled: true
   biome: AshLands
