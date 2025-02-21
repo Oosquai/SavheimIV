@@ -13,6 +13,7 @@
 - Gems are harder to combine into higher quality gems.
 - More gem dust is required to merge into gems.
 - Fenring Chest and Leg armor can now be enchanted.
+- Fuling Shamans and Berserkers drop more Goblin Totems.
 - Seeker Soldiers drop more trophies.
 - Fallen Valkyries drop more Bell Fragments.
 - Added additional crafting extension for Black Forge.
