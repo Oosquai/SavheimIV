@@ -243,7 +243,7 @@ comfortable:
 hercules:
   slot: utility
   gem: purple
-  unique: Item
+  unique: Gem
   power: [10, 20, 30]
 
 glowing spirit:
