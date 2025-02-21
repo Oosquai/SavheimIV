@@ -4,7 +4,31 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/16/25</color>
+     0\  Savheim IV Patch Notes, 2/20/25</color>
+- Jewelry can now be socketed, starting with Plains loot.
+- Late-game bosses now drop gem fusion boxes, starting with Moder.
+- 5-stars have a chance to drop gem fusion boxes, starting in Plains.
+- Gem fusion boxes guarantee combine success for same-quality gems.
+- Raw gems drop less often.
+- Gems are harder to combine into higher quality gems.
+- More gem dust is required to merge into gems.
+- Fenring Chest and Leg armor can now be enchanted.
+- Seeker Soldiers drop more trophies.
+- Fallen Valkyries drop more Bell Fragments.
+- Added additional crafting extension for Black Forge.
+- Removed recipe to convert Wolf Pelts to Leather Scraps.
+- The Queen now spawns her story stone and loot when killed.
+- Hildir mini-bosses should now spawn their loot when killed.
+- 3, 4, and 5-star infused creatures should now drop starred loot.
+- Most vegetation resets disabled.
+- Deep North event difficulty increased.
+- Deep North boss instant-death issue ... resolved?  Tell me?
+- Tried harder to disable unintended summon spells.  Tell me?
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/16/25
 - Custom banners should stop despawning.
 - Bleeds from arrows and bolts have shorter duration but higher tick damage.
 - Bloodmagic weapons no longer gain Thunderclap from cyan gems.
@@ -15,9 +39,6 @@
 - Removed Public Chest - wasn't working.
 - Removed boat tooltips about increased speed per player.
 - Removed spirit damage from Silver arrows and bolts.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 2/12/25
 - Increased drop rate of trophies from Seeker Soldiers.

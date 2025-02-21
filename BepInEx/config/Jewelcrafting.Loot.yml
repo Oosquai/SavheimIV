@@ -32,6 +32,8 @@ equipment:
       - iron
       - root
       - ancient bark
+      - serpent scale
+      - chitin
   mountain:
     low health: 60
     high health: 250
@@ -63,8 +65,20 @@ equipment:
     low health: 60
     high health: 150
     resource map:
-      - serpent scale
-      - chitin
+      - Perfect_Black_Socket
+      - Perfect_Blue_Socket
+      - Perfect_blueish_Socket
+      - Perfect_Green_Socket
+      - Perfect_Orange_Socket
+      - Perfect_Purple_Socket
+      - Perfect_Yellow_Socket
+      - Advanced_Blue_Socket
+      - Advanced_blueish_Socket
+      - Advanced_Green_Socket
+      - Advanced_Orange_Socket
+      - Advanced_Red_Socket
+      - Simple_Black_Socket
+      - Simple_Yellow_Socket
   ash lands:
     low health: 120
     high health: 1200

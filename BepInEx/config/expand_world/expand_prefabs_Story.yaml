@@ -178,25 +178,25 @@
   bannedObjects:
   - BossStone_TheElder, 30, d_sh4_story_ch_8
   spawns:
-  - BossStone_TheElder, 0,3,snap, d_sh4_story_ch_8
-  - sign_sh4_story, 0,3,snap, 0,0,0, d_sh4_story_sign_quest_marker
-  - CL_Raw_Yellow_small_temp, 0,2.9,snap, d_sh4_story_light_data
+  - BossStone_TheElder, 0,3,0, d_sh4_story_ch_8
+  - sign_sh4_story, 0,3,0, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, 0,2.9,0, d_sh4_story_light_data
   poke:
   - prefab: BossStone_TheElder
     data: d_sh4_story_flag
     limit: 1
     maxDistance: 10
-    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+    parameter: p_sh4_story_pieces_pos 11.2        ### HOW FAR INTO GROUND TO SINK STONE
   - prefab: sign_sh4_story
     data: d_sh4_story_flag
     limit: 1
     maxDistance: 10
-    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+    parameter: p_sh4_story_pieces_pos 4          ### HOW FAR INTO GROUND TO SINK SIGN
   - prefab: CL_Raw_Yellow_small_temp
     data: d_sh4_story_flag
     limit: 2
     maxDistance: 10
-    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+    parameter: p_sh4_story_pieces_pos -2.2       ### HOW FAR INTO GROUND TO SINK LIGHT
 
 ##################################
 # Chapter 9 - Fader

@@ -1132,6 +1132,21 @@
 #####################################################################
 # Savheim Loot
 ##############################################################
+- prefab: creature
+  type: destroy
+  filters:
+  - int, tamed, 0
+  spawns:
+  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
+  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+  poke: 
+  - self: true
+    parameter: p_infusion_based_loot
+  - self: true
+    parameter: p_level_based_loot
+  - self: true
+    parameter: p_five_star_fusion_box
+
 # Infused creatures drop bezels per zone, scaled slightly by level.
 #  - CL&LC infusion, 0   # no infusion
 #  - CL&LC infusion, 1   # lightning
@@ -1141,15 +1156,13 @@
 #  - CL&LC infusion, 5   # chaos
 #  - CL&LC infusion, 6   # spirit
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Meadows
   spawns:
   - Bezel_T1
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T1
     parameter: bezel_drop_qty <int_level>
@@ -1158,15 +1171,13 @@
     limit: 1
 
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Blackforest
   spawns:
   - Bezel_T2
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T2
     parameter: bezel_drop_qty <int_level>
@@ -1175,15 +1186,13 @@
     limit: 1
 
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Swamp, Ocean
   spawns:
   - Bezel_T3
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T3
     parameter: bezel_drop_qty <int_level>
@@ -1192,15 +1201,13 @@
     limit: 1
 
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mountain
   spawns:
   - Bezel_T4
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T4
     parameter: bezel_drop_qty <int_level>
@@ -1209,15 +1216,13 @@
     limit: 1
 
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Plains
   spawns:
   - Bezel_T5
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T5
     parameter: bezel_drop_qty <int_level>
@@ -1226,15 +1231,13 @@
     limit: 1
 
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mistlands
   spawns:
   - Bezel_T6
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T6
     parameter: bezel_drop_qty <int_level>
@@ -1243,16 +1246,13 @@
     limit: 1
 
 - prefab: creature
-  type: destroy
+  type: poke, p_infusion_based_loot
   filters:
   - int, CL&LC infusion, 1;6
-  - int, tamed, 0
   - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: AshLands, DeepNorth
   spawns:
   - Bezel_T7
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
   poke: 
   - prefab: Bezel_T7
     parameter: bezel_drop_qty <int_level>
@@ -1267,399 +1267,332 @@
 ##############################################################
 # 3 star creatures drop Draumheim Essence (jewelry enchant).
 - prefab: creature
-  type: destroy
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 4
-  - int, tamed, 0
   - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   spawns:
   - DraumheimEssence
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 ##############################################################
 # 4 star creatures drop Draumheim Essense and Blessed Scrolls per zone.
 # Meadows - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Meadows
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_F
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Meadows - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Meadows
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_F
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Blackforest
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_D
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Blackforest
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_D
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_C
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_C
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mountain
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_B
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mountain
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_B
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Plains
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_A
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Plains
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_A
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mistlands, Ashlands - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
   - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mistlands, Ashlands - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 5
-  - int, tamed, 0
   - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_S
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 ##############################################################
 # 5 star creatures drop Draumheim Essense, Blessed Scrolls per zone, and a Molten Core.
 # Meadows - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Meadows
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_F
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Meadows - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Meadows
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_F
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Blackforest
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_D
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Black Forest - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Blackforest
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_D
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_C
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Swamp, Ocean - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Swamp, Ocean
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_C
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mountain
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_B
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mountain - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mountain
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_B
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Plains
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_A
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Plains - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Plains
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_A
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 
 # Mistlands, Ashlands - Weapon
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
   - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Weapon_Blessed_S
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
 - prefab: SwordCheat, SledgeCheat, Unobtainium
   type: create
   remove: true
 
 # Mistlands, Ashlands - Armor
 - prefab: creature
-  type: destroy
-  weight: 1
+  type: poke, p_level_based_loot
   filters:
-  - int, CL&LC infusion, 0
   - int, level, 6
-  - int, tamed, 0
   - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
   biomes: Mistlands, AshLands, DeepNorth
   spawns:
   - DraumheimEssence
   - kg_EnchantScroll_Armor_Blessed_S
   - MoltenCore
-  - sfx_gui_craftitem_cauldron, 0,0,0, 0,0,0, d_sfx_silent
-  - sfx_build_table, 0,0,0, 0,0,0, d_sfx_silent
+
+### Crystal Fusion Box drops
+- prefab: creature
+  type: poke, p_five_star_fusion_box
+  filters:
+  - int, level, 6
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Plains
+  weight: 0.5
+  spawn: JC_Common_Gembox
+
+- prefab: creature
+  type: poke, p_five_star_fusion_box
+  filters:
+  - int, level, 6
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Mistlands
+  weight: 0.35
+  spawn: JC_Common_Gembox
+
+- prefab: creature
+  type: poke, p_five_star_fusion_box
+  filters:
+  - int, level, 6
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: Mistlands
+  weight: 0.3
+  spawn: JC_Epic_Gembox
+
+- prefab: creature
+  type: poke, p_five_star_fusion_box
+  filters:
+  - int, level, 6
+  - int, i_creature_roguelite, 0   # must not be part of Deep North roguelite event
+  biomes: AshLands
+  weight: 0.7
+  spawn: JC_Epic_Gembox
 
 #######################################################
 # Gem Essence crafted from Gem Grinder with Perfect Gems

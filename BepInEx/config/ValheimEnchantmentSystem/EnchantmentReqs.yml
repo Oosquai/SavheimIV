@@ -320,6 +320,8 @@
   - BMR_PolarWolfLegs
   - CapeWolf
   - Cape_Eitr_SH
+  - ArmorFenringChest
+  - ArmorFenringLegs
 - enchant_prefab:
     prefab: kg_EnchantScroll_Weapon_C
     amount: 1

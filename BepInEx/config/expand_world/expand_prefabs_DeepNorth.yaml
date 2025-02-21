@@ -196,55 +196,55 @@
   - prefab: Player                               # self-looping spawners!
     maxDistance: 1                               # cannot use self: true, else data not checked
     limit: 1
-    delay: <randi_20_25>                         ### LOOP TIMER
+    delay: <randi_15_18>                         ### LOOP TIMER
     data: d_player_roguelite_tier_0              # Player is at Roguelite tier X --> Choose mob set.
     parameter: dn_roguelite_spawn <dnTrashMobsT0> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_25_30>                         ### LOOP TIMER
+    delay: <randi_18_21>                         ### LOOP TIMER
     data: d_player_roguelite_tier_1
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT0v2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_30_35>                         ### LOOP TIMER
+    delay: <randi_21_24>                         ### LOOP TIMER
     data: d_player_roguelite_tier_2
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT2> <dnTrashMobsT0v3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_35_40>                         ### LOOP TIMER
+    delay: <randi_24_27>                         ### LOOP TIMER
     data: d_player_roguelite_tier_3
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT2> <dnTrashMobsT3> <dnTrashMobsT0v4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_40_45>                         ### LOOP TIMER
+    delay: <randi_27_30>                         ### LOOP TIMER
     data: d_player_roguelite_tier_4
     parameter: dn_roguelite_spawn <dnTrashMobsT1> <dnTrashMobsT2> <dnTrashMobsT3> <dnTrashMobsT4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_45_50>                         ### LOOP TIMER
+    delay: <randi_30_33>                         ### LOOP TIMER
     data: d_player_roguelite_tier_5
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT2> <dnTrashMobsT3> <dnTrashMobsT4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_50_55>                         ### LOOP TIMER
+    delay: <randi_33_36>                         ### LOOP TIMER
     data: d_player_roguelite_tier_6
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT3> <dnTrashMobsT4>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_55_60>                         ### LOOP TIMER
+    delay: <randi_36_39>                         ### LOOP TIMER
     data: d_player_roguelite_tier_7
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT5v3> <dnTrashMobsT4v2>
   - prefab: Player
     maxDistance: 1
     limit: 1
-    delay: <randi_60_65>                         ### LOOP TIMER
+    delay: <randi_39_42>                         ### LOOP TIMER
     data: d_player_roguelite_tier_8
     parameter: dn_roguelite_spawn <dnTrashMobsT5> <dnTrashMobsT5v2> <dnTrashMobsT5v3> <dnTrashMobsT4v2>
 
@@ -1566,7 +1566,7 @@
   biomes: DeepNorth
   poke:
   - self: true
-    delay: 0.25   # need this else they insta-die.  hp not registered yet maybe?
+    delay: 0.35   # need this else they insta-die.  hp not registered yet maybe?
     parameter: p_dn_boss_hp_adjustments
 
 - prefab: Eikthyr
@@ -1604,15 +1604,15 @@
   biomes: DeepNorth
   data: d_dn_boss_hp_fader
 
-- prefab: Skeleton_Hildir
-  type: poke, p_dn_boss_hp_adjustments
-  biomes: DeepNorth
-  data: d_dn_boss_hp_brenna
-
-- prefab: Fenring_Cultist_Hildir
-  type: poke, p_dn_boss_hp_adjustments
-  biomes: DeepNorth
-  data: d_dn_boss_hp_geirrhafa
+#- prefab: Skeleton_Hildir
+#  type: poke, p_dn_boss_hp_adjustments
+#  biomes: DeepNorth
+#  data: d_dn_boss_hp_brenna
+#
+#- prefab: Fenring_Cultist_Hildir
+#  type: poke, p_dn_boss_hp_adjustments
+#  biomes: DeepNorth
+#  data: d_dn_boss_hp_geirrhafa
 
 ###################################################
 # Creature level up chances

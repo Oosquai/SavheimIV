@@ -33,14 +33,18 @@ socket cost:
       Coins: 24
   ocean:
     1:
-      Ooze: 2
-      Coins: 12
+      Bezel_T5: 1
+      DraumheimEssence: 3
+      Coins: 100
     2:
-      Iron: 1
-      Coins: 18
+      Bezel_T6: 2
+      DraumheimEssence: 6
+      Coins: 600
     3:
-      Bezel_T3: 1
-      Coins: 24
+      Bezel_T7: 3
+      DraumheimEssence: 9
+      Coins: 1200
+      JC_Gacha_Coins: 3
   mountain:
     1:
       WolfFang: 2

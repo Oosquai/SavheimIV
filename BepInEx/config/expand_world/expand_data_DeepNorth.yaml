@@ -345,7 +345,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
-  - RandomSkillFactor, 2                         # 1
+  - RandomSkillFactor, 3                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -362,7 +362,7 @@
   - Humanoid.m_runSpeed, 6                       # 4
   - Humanoid.m_turnSpeed, 120                    # 60
   - Humanoid.m_runTurnSpeed, 120                 # 100
-  - RandomSkillFactor, 1.5                       # 1
+  - RandomSkillFactor, 2.5                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -381,7 +381,7 @@
   - Humanoid.m_runTurnSpeed, 120                 # 80
   - Humanoid.m_flyTurnSpeed, 120                 # 80
   - Humanoid.m_flyFastSpeed, 30                  # 20
-  - RandomSkillFactor, 1.2                       # 1
+  - RandomSkillFactor, 2                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -398,6 +398,7 @@
   - Humanoid.m_runSpeed, 6                       # 4
   - Humanoid.m_turnSpeed, 120                    # 50
   - Humanoid.m_runTurnSpeed, 120                 # 50
+  - RandomSkillFactor, 1.5                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -412,7 +413,7 @@
   floats:
   - MonsterAI.m_alertRange, 100
   - Humanoid.m_turnSpeed, 120                    # 50
-  - RandomSkillFactor, 0.9                       # 1
+  - RandomSkillFactor, 1.2                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -429,6 +430,7 @@
   - Humanoid.m_runSpeed, 10                      # 8
   - Humanoid.m_turnSpeed, 180                    # 120
   - Humanoid.m_runTurnSpeed, 150                 # 120
+  - RandomSkillFactor, 1.2                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -443,7 +445,7 @@
   floats:
   - MonsterAI.m_alertRange, 100
   - Humanoid.m_runSpeed, 5                       # 4
-  - RandomSkillFactor, 1.4                       # 1
+  - RandomSkillFactor, 3                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_name, Awakened Brenna
@@ -458,6 +460,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - RandomSkillFactor, 2                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_name, Awakened Geirrhafa
@@ -467,48 +470,48 @@
 # Boss HP adjustments
 - name: d_dn_boss_hp_eikthyr
   floats:
-  - max_health, <mul_<float_max_health>_2>
-  - health, <mul_<float_max_health>_2.001>
+  - max_health, <mul_<float_max_health>_3>
+  - health, <mul_<float_max_health>_3.001>
 
 - name: d_dn_boss_hp_brenna
   floats:
-  - max_health, <mul_<float_max_health>_0.7>
-  - health, <mul_<float_max_health>_0.701>
+  - max_health, <mul_<float_max_health>_1>
+  - health, <mul_<float_max_health>_1.001>
 
 - name: d_dn_boss_hp_elder
   floats:
-  - max_health, <mul_<float_max_health>_0.8>
-  - health, <mul_<float_max_health>_0.801>
+  - max_health, <mul_<float_max_health>_1.2>
+  - health, <mul_<float_max_health>_1.201>
 
 - name: d_dn_boss_hp_bonemass
   floats:
-  - max_health, <mul_<float_max_health>_0.5>
-  - health, <mul_<float_max_health>_0.501>
+  - max_health, <mul_<float_max_health>_0.75>
+  - health, <mul_<float_max_health>_0.751>
 
 - name: d_dn_boss_hp_geirrhafa
   floats:
-  - max_health, <mul_<float_max_health>_0.5>
-  - health, <mul_<float_max_health>_0.501>
+  - max_health, <mul_<float_max_health>_1>
+  - health, <mul_<float_max_health>_1.001>
 
 - name: d_dn_boss_hp_moder
   floats:
-  - max_health, <mul_<float_max_health>_0.47>
-  - health, <mul_<float_max_health>_0.471>
+  - max_health, <mul_<float_max_health>_0.667>
+  - health, <mul_<float_max_health>_0.668>
 
 - name: d_dn_boss_hp_yagluth
   floats:
-  - max_health, <mul_<float_max_health>_0.35>
-  - health, <mul_<float_max_health>_0.351>
+  - max_health, <mul_<float_max_health>_0.5>
+  - health, <mul_<float_max_health>_0.501>
 
 - name: d_dn_boss_hp_queen
   floats:
-  - max_health, <mul_<float_max_health>_0.4>
-  - health, <mul_<float_max_health>_0.401>
+  - max_health, <mul_<float_max_health>_0.6>
+  - health, <mul_<float_max_health>_0.601>
 
 - name: d_dn_boss_hp_fader
   floats:
-  - max_health, <mul_<float_max_health>_0.2>
-  - health, <mul_<float_max_health>_0.201>
+  - max_health, <mul_<float_max_health>_0.3>
+  - health, <mul_<float_max_health>_0.301>
 
 - valueGroup: dnEikthyrDmgPlayer
   values:
@@ -752,6 +755,7 @@
   - MoltenCore
   - MoltenCore
   - Wispheart
+  - JC_Legendary_Gembox
 
 - valueGroup: vgTrollSummonedLoot
   values:

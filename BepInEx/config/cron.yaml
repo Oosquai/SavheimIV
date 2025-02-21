@@ -80,8 +80,10 @@ jobs:
 
 ######################
 ###### Vegetation resets 1
-  - command: vegetation_reset Leviathan,RaspberryBush,AshlandsBush1,YggaShoot1,vfx_edge_clouds,MistArea_edge,rock2_mountain,cliff_ashlands3_Arch_1,Rock_3,GraveStone_Broken_World,AshlandsTree3,FirTree_oldLog,FirTree_small_dead,Beech_small2,Flies,HeathRockPillar,YggdrasilRoot,shrub_2_heath,Birch2_aut terrain=5 start
+  - command: vegetation_reset Leviathan start
     schedule: "5 12 2,10,18,26 * *"
+#  - command: vegetation_reset Leviathan,RaspberryBush,AshlandsBush1,YggaShoot1,vfx_edge_clouds,MistArea_edge,rock2_mountain,cliff_ashlands3_Arch_1,Rock_3,GraveStone_Broken_World,AshlandsTree3,FirTree_oldLog,FirTree_small_dead,Beech_small2,Flies,HeathRockPillar,YggdrasilRoot,shrub_2_heath,Birch2_aut terrain=5 start
+#    schedule: "5 12 2,10,18,26 * *"
 
 ######################
 ###### Vanilla location resets
@@ -101,10 +103,10 @@ jobs:
   - command: locations_reset CharredFortress safeZones=0 start
     schedule: "35 12 3,11,19,27 * *"
 
-######################
-###### Vegetation resets 2
-  - command: vegetation_reset rock_mistlands1,BlueberryBush,shrub_2,Bush02_en,AshlandsTree6,cliff_mistlands1,MistArea,Oak1,Pinetree_01,Bush01_heath,Beech_small1,cliff_ashlands5,Beech1,Ashlands_ArchRoofDamaged,YggaShoot3,SwampTree2,ice_rock1,Bush01 terrain=5 start
-    schedule: "5 12 4,12,20,28 * *"
+#######################
+####### Vegetation resets 2
+#  - command: vegetation_reset rock_mistlands1,BlueberryBush,shrub_2,Bush02_en,AshlandsTree6,cliff_mistlands1,MistArea,Oak1,Pinetree_01,Bush01_heath,Beech_small1,cliff_ashlands5,Beech1,Ashlands_ArchRoofDamaged,YggaShoot3,SwampTree2,ice_rock1,Bush01 terrain=5 start
+#    schedule: "5 12 4,12,20,28 * *"
 
 ######################
 ###### Metal resets - large
@@ -114,10 +116,10 @@ jobs:
   - command: vegetation_reset rock4_copper,silvervein,giant_ribs,giant_skull,giant_brain,giant_helmet2,giant_sword2 terrain=30 start
     schedule: "15 12 26 * *"
 
-######################
-###### Vegetation resets 3
-  - command: vegetation_reset YggaShoot2,ice1,stubbe,Ashlands_rock2,Ashlands_Pillar4,rock4_forest,Birch2,Rock_4,YggaShoot_small1,vfx_swamp_mist,cliff_ashlands4,AshlandsBranch1,SwampTree1,Birch1,FirTree,rock2_heath,Rock_4_plains,SwampTree2_log terrain=5 start
-    schedule: "5 12 6,14,22,29 * *"
+#######################
+####### Vegetation resets 3
+#  - command: vegetation_reset YggaShoot2,ice1,stubbe,Ashlands_rock2,Ashlands_Pillar4,rock4_forest,Birch2,Rock_4,YggaShoot_small1,vfx_swamp_mist,cliff_ashlands4,AshlandsBranch1,SwampTree1,Birch1,FirTree,rock2_heath,Rock_4_plains,SwampTree2_log terrain=5 start
+#    schedule: "5 12 6,14,22,29 * *"
 
 ######################
 ###### Metal resets - small
@@ -127,7 +129,7 @@ jobs:
   - command: vegetation_reset MineRock_Tin,MineRock_Obsidian,BGP_SilicaVein,giant_helmet1,giant_sword1 terrain=10 start
     schedule: "15 12 28 * *"
 
-######################
-###### Vegetation resets 4
-  - command: vegetation_reset rock4_heath,CloudberryBush,FirTree_small,Ashlands_Ruins_Wall_Windows_Broken_4x6,cliff_mistlands2,rock1_mountain,AshlandsTree1,ashland_pot2_red,rock4_coast,StatueEvil,AshlandsBranch3,cliff_ashlands2,AshlandsBranch2,UnstableLavaRock,mudpile_beacon,Birch1_aut,rock3_mountain,cliff_ashlands6,Birch2_aut terrain=5 start
-    schedule: "5 12 8,16,24,30 * *"
+#######################
+####### Vegetation resets 4
+#  - command: vegetation_reset rock4_heath,CloudberryBush,FirTree_small,Ashlands_Ruins_Wall_Windows_Broken_4x6,cliff_mistlands2,rock1_mountain,AshlandsTree1,ashland_pot2_red,rock4_coast,StatueEvil,AshlandsBranch3,cliff_ashlands2,AshlandsBranch2,UnstableLavaRock,mudpile_beacon,Birch1_aut,rock3_mountain,cliff_ashlands6,Birch2_aut terrain=5 start
+#    schedule: "5 12 8,16,24,30 * *"

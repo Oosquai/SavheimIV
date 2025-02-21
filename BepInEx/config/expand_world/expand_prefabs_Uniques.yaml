@@ -1215,7 +1215,7 @@
     maxDistance: 100
     limit: 1
     delay: 6
-    parameter: p_boss_loot <bossDropsQueen>
+    parameter: p_boss_loot_lair <bossDropsQueen>
 
 - prefab: Fader
   type: destroy
@@ -1243,7 +1243,7 @@
     maxDistance: 100
     limit: 1
     delay: 3
-    parameter: p_boss_loot <bossDropsBrenna>
+    parameter: p_boss_loot_lair <bossDropsBrenna>
 
 - prefab: Fenring_Cultist_Hildir
   type: destroy
@@ -1257,7 +1257,7 @@
     maxDistance: 100
     limit: 1
     delay: 3
-    parameter: p_boss_loot <bossDropsGeirrhafa>
+    parameter: p_boss_loot_lair <bossDropsGeirrhafa>
 
 - prefab: GoblinShaman_Hildir
   type: destroy
@@ -1271,7 +1271,7 @@
     maxDistance: 100
     limit: 1
     delay: 3
-    parameter: p_boss_loot <bossDropsZil>
+    parameter: p_boss_loot_lair <bossDropsZil>
 
 - prefab: Player
   type: poke, p_boss_loot
@@ -1282,3 +1282,13 @@
   - fx_lightningweapon_hit, 0,0,snap, 0,0,0, d_empty_data_uniques, 0.2
   - vfx_coin_pile_destroyed, 0,0,snap, 0,0,0, d_empty_data_uniques, 0.35
   - sfx_coins_destroyed, 0,0,snap, 0,0,0, d_empty_data_uniques, 0.35
+
+- prefab: Player
+  type: poke, p_boss_loot_lair
+  spawns:
+  - <par1>, 0,0,0, 0,0,0, d_empty_data_uniques, 0
+  - fx_chainlightning_hit, 0,0,0, 0,0,0, d_empty_data_uniques, 0
+  - fx_HildirChest_Unlock, 0,0,0, 0,0,0, d_sfx_silent_uniques, 0
+  - fx_lightningweapon_hit, 0,0,0, 0,0,0, d_empty_data_uniques, 0.2
+  - vfx_coin_pile_destroyed, 0,0,0, 0,0,0, d_empty_data_uniques, 0.35
+  - sfx_coins_destroyed, 0,0,0, 0,0,0, d_empty_data_uniques, 0.35
