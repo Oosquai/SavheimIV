@@ -4,7 +4,14 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/20/25</color>
+     0\  Savheim IV Patch Notes, 2/21/25</color>
+- Fixed purple gem weirdness.
+- Fixed split socket weirdness between utility, ring, necklace.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/20/25
 - Jewelry can now be socketed, starting with Plains loot.
 - Late-game bosses now drop gem fusion boxes, starting with Moder.
 - 5-stars have a chance to drop gem fusion boxes, starting in Plains.
@@ -25,9 +32,6 @@
 - Deep North event difficulty increased.
 - Deep North boss instant-death issue ... resolved?  Tell me?
 - Tried harder to disable unintended summon spells.  Tell me?
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 2/16/25
 - Custom banners should stop despawning.
