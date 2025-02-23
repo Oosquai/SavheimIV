@@ -4,12 +4,16 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/21/25</color>
-- Fixed purple gem weirdness.
-- Fixed split socket weirdness between utility, ring, necklace.
+     0\  Savheim IV Patch Notes, 2/22/25</color>
+- Reduced several utility gem effects since multiple can be equipped now.
+- Rewrote gem fusion box boss drop code to only drop one per player.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/21/25
+- Fixed purple gem weirdness.
+- Fixed split socket weirdness between utility, ring, necklace.
 
 Patch Notes, 2/20/25
 - Jewelry can now be socketed, starting with Plains loot.

@@ -1188,6 +1188,10 @@
     limit: 1
     delay: 8
     parameter: p_boss_loot <bossDropsDragon>
+  - prefab: Player
+    maxDistance: 100
+    delay: 8.5
+    parameter: p_boss_loot_fusion_box <bossDropsDragonFusionBox>
 
 - prefab: GoblinKing
   type: destroy
@@ -1202,6 +1206,10 @@
     limit: 1
     delay: 10
     parameter: p_boss_loot <bossDropsYagluth>
+  - prefab: Player
+    maxDistance: 100
+    delay: 10.5
+    parameter: p_boss_loot_fusion_box <bossDropsYagluthFusionBox>
 
 - prefab: SeekerQueen
   type: destroy
@@ -1216,6 +1224,10 @@
     limit: 1
     delay: 6
     parameter: p_boss_loot_lair <bossDropsQueen>
+  - prefab: Player
+    maxDistance: 100
+    delay: 6.5
+    parameter: p_boss_loot_fusion_box <bossDropsQueenFusionBox>
 
 - prefab: Fader
   type: destroy
@@ -1230,6 +1242,10 @@
     limit: 1
     delay: 14
     parameter: p_boss_loot <bossDropsFader>
+  - prefab: Player
+    maxDistance: 100
+    delay: 14.5
+    parameter: p_boss_loot_fusion_box <bossDropsFaderFusionBox>
 
 - prefab: Skeleton_Hildir
   type: destroy
@@ -1292,3 +1308,8 @@
   - fx_lightningweapon_hit, 0,0,0, 0,0,0, d_empty_data_uniques, 0.2
   - vfx_coin_pile_destroyed, 0,0,0, 0,0,0, d_empty_data_uniques, 0.35
   - sfx_coins_destroyed, 0,0,0, 0,0,0, d_empty_data_uniques, 0.35
+
+- prefab: Player
+  type: poke, p_boss_loot_fusion_box
+  spawns:
+  - <par1>

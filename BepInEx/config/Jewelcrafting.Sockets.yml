@@ -130,7 +130,7 @@ defender:
   slot: [chest, utility]
   gem: red
   unique: Item
-  power: [4, 8, 12]
+  power: [3, 4, 5]
 
 vitality:
   slot: chest
@@ -174,7 +174,7 @@ relaxed:
   slot: [utility, crossbow]
   gem: redish
   unique: Item
-  power: [10, 20, 30]
+  power: [6, 9, 12]
 
 # Legs
 
@@ -212,7 +212,7 @@ lifeguard:
   slot: [legs, utility]
   gem: orange
   unique: Item
-  power: [20, 25, 30]
+  power: [12, 16, 20]
 
 momentum:
   slot: legs
@@ -232,13 +232,13 @@ power recovery:
   slot: utility
   gem: green
   unique: Item
-  power: [8, 16, 24]
+  power: [5, 7, 9]
 
 comfortable:
   slot: utility
   gem: yellow
   unique: Item
-  power: [3, 5, 7]
+  power: [1, 2, 3]
 
 hercules:
   slot: utility

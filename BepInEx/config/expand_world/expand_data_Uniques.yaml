@@ -306,3 +306,22 @@
 - valueGroup: bossDropsZil
   values:
   - Cape_Stam_SH
+
+- valueGroup: bossDropsDragonFusionBox
+  values:
+  - JC_Common_Gembox
+
+- valueGroup: bossDropsYagluthFusionBox
+  values:
+  - JC_Common_Gembox
+  - JC_Common_Gembox
+  - JC_Epic_Gembox
+
+- valueGroup: bossDropsQueenFusionBox
+  values:
+  - JC_Common_Gembox
+  - JC_Epic_Gembox
+
+- valueGroup: bossDropsFaderFusionBox
+  values:
+  - JC_Epic_Gembox
