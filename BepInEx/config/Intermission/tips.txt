@@ -22,7 +22,7 @@
 <color=#AF7F7F>Savheim IV</color> - Boss powers have both passive and active aspects, and you get to choose two!  Read about them at the starting stones or in your <color=yellow>Valheim Compendium</color> (Inventory -> Raven icon).  Keybinds are hardcoded to <color=orange>T</color> and <color=orange>G</color>, regardless of in-game settings.
 <color=#AF7F7F>Savheim IV</color> - World progression is tied to your character.  You must be present for boss kills to get credit for them.  This affects your ability to equip gear & boss powers, trader inventory, world spawns, and maybe more!
 <color=#AF7F7F>Savheim IV</color> - You must defeat all main bosses preceeding the tier of gear you wish to equip, including unique weapons.  Iron Sword?  Gotta deal with Eikthyr and The Elder before you know how to use one.
-<color=#AF7F7F>Savheim IV</color> - You'll keep your gear when you die, but all skills will lose experience.  Resurrect each other with Coins.
+<color=#AF7F7F>Savheim IV</color> - You'll keep your gear when you die, but all skills will lose experience.  Resurrect each other with Surtling Cores.
 <color=#AF7F7F>Savheim IV</color> - Check your <color=yellow>Valheim Compendium</color> (Inventory -> Raven icon) for useful game and mod information, such as Active Effects, chapters of Jayk's story you've uncovered, gem effects, and more.
 <color=#AF7F7F>Savheim IV</color> - <color=orange>F6</color> toggles a list of comforting pieces while in shelter.  Rest in groups for extra duration!
 <color=#AF7F7F>Savheim IV</color> - <color=yellow>Waypoints</color> offer safety from monsters, warmth, and a way to pick up a <color=yellow>Rested</color> buff in the field if you sit near it during favorable weather.
