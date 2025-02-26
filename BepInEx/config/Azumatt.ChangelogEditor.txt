@@ -11,6 +11,7 @@
 - Unique reaper special effect range increased to match other reaper logic.
 - Resonating Echoes gem synergy increased.
 - Craft from containers now warns if the last item is being saved in a nearby chest.
+- Several mod updates for bug fixes and other improvements.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
