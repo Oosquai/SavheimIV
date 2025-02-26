@@ -9,7 +9,7 @@ exactly three yellow:
   conditions:
     - yellow = 3
   effect:
-    resonating echoes: 20
+    resonating echoes: 40
     
 same number of all colors:
   conditions:

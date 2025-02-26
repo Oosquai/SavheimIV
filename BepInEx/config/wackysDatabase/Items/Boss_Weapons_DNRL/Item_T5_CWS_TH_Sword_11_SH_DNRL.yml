@@ -18,7 +18,7 @@ Primary_Attack:
   Attack_Random_Animation: 0
   Chain_Attacks: 3
   Hit_Terrain: true
-  Custom_AttackSpeed: 1.3
+  Custom_AttackSpeed: 1.25
   m_attackStamina: 7
   m_eitrCost: 0
   AttackHealthCost: 0

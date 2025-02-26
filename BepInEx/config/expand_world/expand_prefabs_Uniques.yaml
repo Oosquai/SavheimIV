@@ -706,8 +706,8 @@
 - prefab: sfx_fallenvalkyrie_attack_spit_projectile
   type: create
   objects:
-  - Player, 6, d_sanguino_reaper
-  - sfx_troll_attack_hit, 6, d_sfx_troll_attack_hit_pitch
+  - Player, 8, d_sanguino_reaper
+  - sfx_troll_attack_hit, 8, d_sfx_troll_attack_hit_pitch
   spawn: Bat, tamed_reduced_dmg_uniques
   poke:
   - prefab: Bat

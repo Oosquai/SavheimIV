@@ -4,12 +4,20 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 2/22/25</color>
-- Reduced several utility gem effects since multiple can be equipped now.
-- Rewrote gem fusion box boss drop code to only drop one per player.
+     0\  Savheim IV Patch Notes, 2/25/25</color>
+- Bows now show the selected arrow at the crosshairs.
+- Yellow crystal arrows now do blunt damage, and enfeeble lasts longer.
+- Reaper primary attacks are slightly slower.
+- Unique reaper special effect range increased to match other reaper logic.
+- Resonating Echoes gem synergy increased.
+- Craft from containers now warns if the last item is being saved in a nearby chest.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 2/22/25
+- Reduced several utility gem effects since multiple can be equipped now.
+- Rewrote gem fusion box boss drop code to only drop one per player.
 
 Patch Notes, 2/21/25
 - Fixed purple gem weirdness.
