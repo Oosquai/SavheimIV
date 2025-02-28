@@ -5,7 +5,7 @@
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 2/27/25</color>
-- Fixed Deep North event code to be more stable and work for multiplayer.
+- Refactored Deep North event code for stability and multiplayer.
 - Deep North event balancing.
 - Clarified tooltips on wisp weapons.
 
