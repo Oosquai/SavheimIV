@@ -1,7 +1,7 @@
 name: CWS_Sword_1_SH
 m_weight: 0.8
 m_name: Mistblade
-m_description: The essence of the Wispheart lives within this mythical weapon, granting <color=yellow>falling damage immunity</color> to short-range allies for a medium duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting <color=yellow>falling damage immunity</color> to all allies within a short range for a medium duration.
 clonePrefabName: CWS_Sword_1
 mockName: 
 customIcon: 

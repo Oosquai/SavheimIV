@@ -32,6 +32,10 @@
   - ZSFX.m_minPitch, 0.5
   - ZSFX.m_maxPitch, 0.5
 
+- value: vDNRLRange, 60
+- value: vDNRLRangeFleeing, 50
+- value: vDNRLRangeFailSafe, 126
+
 ####################################
 # Player variables and controls
 - name: d_player_roguelite_on
@@ -41,48 +45,6 @@
 - name: d_player_roguelite_off
   ints:
   - i_player_roguelite_on, 0
-
-- name: d_player_roguelite_spawn_loop_on
-  ints:
-  - i_player_roguelite_spawn_loop_on, 1
-
-- name: d_player_roguelite_start
-  ints:
-  - i_player_roguelite_on, 1
-  - i_player_roguelite_kills, 0
-  - i_player_roguelite_boss_kills, 0
-  - i_player_roguelite_boss_spawns, 0
-  - i_player_roguelite_eikthyr_spawn, 0
-  - i_player_roguelite_brenna_spawn, 0
-  - i_player_roguelite_geirrhafa_spawn, 0
-  - i_player_roguelite_subtier, 0
-  - i_player_roguelite_tier, 0
-  - i_player_roguelite_wave, 0
-  - i_player_roguelite_win, 0
-  - i_player_roguelite_spawn_loop_on, 0
-
-- name: d_player_roguelite_clear
-  ints:
-  - i_player_roguelite_on, 0
-  - i_player_roguelite_kills, 0
-  - i_player_roguelite_boss_kills, 0
-  - i_player_roguelite_boss_spawns, 0
-  - i_player_roguelite_eikthyr_spawn, 0
-  - i_player_roguelite_brenna_spawn, 0
-  - i_player_roguelite_geirrhafa_spawn, 0
-  - i_player_roguelite_subtier, 0
-  - i_player_roguelite_tier, 0
-  - i_player_roguelite_wave, 0
-  - i_player_roguelite_spawn_loop_on, 0
-
-- name: d_player_roguelite_win_eligible
-  ints:
-  - i_player_roguelite_on, 1
-  - i_player_roguelite_win, 0
-
-- name: d_player_roguelite_win_set
-  ints:
-  - i_player_roguelite_win, 1
 
 - name: d_player_roguelite_wave_inc
   ints:
@@ -308,6 +270,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   strings:
   - Humanoid.m_group, dn_mobs
   vecs:
@@ -323,6 +286,7 @@
   - level, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - MonsterAI.m_circleTargetDuration, 0
   - MonsterAI.m_circleTargetInterval, 1E30
   - Humanoid.m_runSpeed, 16
@@ -345,6 +309,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - RandomSkillFactor, 3                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
@@ -359,6 +324,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 6                       # 4
   - Humanoid.m_turnSpeed, 120                    # 60
   - Humanoid.m_runTurnSpeed, 120                 # 100
@@ -376,6 +342,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 9                       # 6
   - Humanoid.m_turnSpeed, 90                     # 60
   - Humanoid.m_runTurnSpeed, 120                 # 80
@@ -395,6 +362,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 6                       # 4
   - Humanoid.m_turnSpeed, 120                    # 50
   - Humanoid.m_runTurnSpeed, 120                 # 50
@@ -412,6 +380,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - Humanoid.m_turnSpeed, 120                    # 50
   - RandomSkillFactor, 1.2                       # 1
   strings:
@@ -427,6 +396,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 10                      # 8
   - Humanoid.m_turnSpeed, 180                    # 120
   - Humanoid.m_runTurnSpeed, 150                 # 120
@@ -444,6 +414,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 5                       # 4
   - RandomSkillFactor, 3                         # 1
   strings:
@@ -460,6 +431,7 @@
   - HasFieldsHumanoid, 1
   floats:
   - MonsterAI.m_alertRange, 100
+  - MonsterAI.m_hearRange, 9999
   - RandomSkillFactor, 2                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
@@ -475,43 +447,43 @@
 
 - name: d_dn_boss_hp_brenna
   floats:
-  - max_health, <mul_<float_max_health>_1>
-  - health, <mul_<float_max_health>_1.001>
+  - max_health, <mul_<float_max_health>_1.5>
+  - health, <mul_<float_max_health>_1.501>
 
 - name: d_dn_boss_hp_elder
   floats:
-  - max_health, <mul_<float_max_health>_1.2>
-  - health, <mul_<float_max_health>_1.201>
+  - max_health, <mul_<float_max_health>_1.6>
+  - health, <mul_<float_max_health>_1.601>
 
 - name: d_dn_boss_hp_bonemass
+  floats:
+  - max_health, <mul_<float_max_health>_1>
+  - health, <mul_<float_max_health>_1.001>
+
+- name: d_dn_boss_hp_geirrhafa
+  floats:
+  - max_health, <mul_<float_max_health>_1.5>
+  - health, <mul_<float_max_health>_1.501>
+
+- name: d_dn_boss_hp_moder
+  floats:
+  - max_health, <mul_<float_max_health>_1>
+  - health, <mul_<float_max_health>_1.001>
+
+- name: d_dn_boss_hp_yagluth
   floats:
   - max_health, <mul_<float_max_health>_0.75>
   - health, <mul_<float_max_health>_0.751>
 
-- name: d_dn_boss_hp_geirrhafa
+- name: d_dn_boss_hp_queen
   floats:
   - max_health, <mul_<float_max_health>_1>
   - health, <mul_<float_max_health>_1.001>
 
-- name: d_dn_boss_hp_moder
-  floats:
-  - max_health, <mul_<float_max_health>_0.667>
-  - health, <mul_<float_max_health>_0.668>
-
-- name: d_dn_boss_hp_yagluth
+- name: d_dn_boss_hp_fader
   floats:
   - max_health, <mul_<float_max_health>_0.5>
   - health, <mul_<float_max_health>_0.501>
-
-- name: d_dn_boss_hp_queen
-  floats:
-  - max_health, <mul_<float_max_health>_0.6>
-  - health, <mul_<float_max_health>_0.601>
-
-- name: d_dn_boss_hp_fader
-  floats:
-  - max_health, <mul_<float_max_health>_0.3>
-  - health, <mul_<float_max_health>_0.301>
 
 - valueGroup: dnEikthyrDmgPlayer
   values:
@@ -550,7 +522,7 @@
   floats:
   - Ragdoll.m_ttl, 14400  # 60*60*4 = 14400 = 4 hours
 
-- value: vDnWeatherAshlandsSeaStorm, 100,Ashlands_SeaStorm
+- value: vDnWeatherAshlandsSeaStorm, <vDNRLRange>,Ashlands_SeaStorm
 
 - name: d_dnrl_weather_ashlands_seastorm
   strings:
@@ -752,7 +724,6 @@
   - JC_Gacha_Coins
   - JC_Gacha_Coins
   - JC_Gacha_Coins
-  - MoltenCore
   - MoltenCore
   - Wispheart
   - JC_Legendary_Gembox

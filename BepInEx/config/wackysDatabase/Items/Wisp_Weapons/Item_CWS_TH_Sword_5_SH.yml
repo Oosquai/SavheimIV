@@ -1,7 +1,7 @@
 name: CWS_TH_Sword_5_SH
 m_weight: 4
 m_name: Cloudsplitter
-m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>health regeneration</color> to short-range allies for a medium duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>health regeneration</color> to all allies within a short range for a medium duration.
 clonePrefabName: CWS_TH_Sword_5
 mockName: 
 customIcon: 

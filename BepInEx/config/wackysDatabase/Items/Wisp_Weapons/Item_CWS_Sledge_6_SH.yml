@@ -1,7 +1,7 @@
 name: CWS_Sledge_6_SH
 m_weight: 4
 m_name: Fogbreaker
-m_description: The essence of the Wispheart lives within this mythical weapon, granting <color=yellow>physical immunity</color> to short-range allies for a very short duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting <color=yellow>physical immunity</color> to all allies within a short range for a very short duration.
 clonePrefabName: CWS_Sledge_6
 mockName: 
 customIcon: 

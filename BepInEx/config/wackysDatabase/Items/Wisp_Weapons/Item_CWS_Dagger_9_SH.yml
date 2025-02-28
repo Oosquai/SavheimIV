@@ -1,7 +1,7 @@
 name: CWS_Dagger_9_SH
 m_weight: 0.3
 m_name: Mistfang
-m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>stealth</color> to short-range allies for a medium duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting improved <color=yellow>stealth</color> to all allies within a short range for a medium duration.
 clonePrefabName: CWS_Dagger_9
 mockName: 
 customIcon: 

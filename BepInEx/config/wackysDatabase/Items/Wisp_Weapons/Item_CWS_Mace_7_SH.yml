@@ -1,7 +1,7 @@
 name: CWS_Mace_7_SH
 m_weight: 2
 m_name: Shroudbane
-m_description: The essence of the Wispheart lives within this mythical weapon, granting <color=yellow>elemental immunity</color> to short-range allies for a very short duration.
+m_description: The essence of the Wispheart lives within this mythical weapon, granting <color=yellow>elemental immunity</color> to all allies within a short range for a very short duration.
 clonePrefabName: CWS_Mace_7
 mockName: 
 customIcon: 
