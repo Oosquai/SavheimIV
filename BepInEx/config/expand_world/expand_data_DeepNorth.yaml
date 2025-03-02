@@ -300,6 +300,7 @@
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_name, Awakened Eikthyr
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:
@@ -319,6 +320,7 @@
   - RandomSkillFactor, 3                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:
@@ -341,6 +343,7 @@
   - RandomSkillFactor, 2.5                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:
@@ -365,6 +368,7 @@
   - RandomSkillFactor, 2                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:
@@ -387,6 +391,7 @@
   - RandomSkillFactor, 1.5                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:
@@ -407,6 +412,7 @@
   - RandomSkillFactor, 1.2                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:
@@ -429,6 +435,7 @@
   - RandomSkillFactor, 1.2                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  - Humanoid.m_bossEvent, ""
   - MonsterAI.m_spawnMessage, ""
   - MonsterAI.m_deathMessage, ""
   bools:

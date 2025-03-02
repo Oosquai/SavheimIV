@@ -134,7 +134,7 @@
     3: int, 0
     delay: 12
   poke:
-  - self: true               # start player cleanup loop - warn about flee then broadcast if flee
+  - self: true               # start player cleanup loop - warn about flee then announce if flee
     delay: 1                 # wait for data
     parameter: p_dnrl_cleanup_player_loop
 
@@ -150,7 +150,7 @@
   data: d_player_roguelite_wave_inc     # increment wave counter
   injectData: true
 ### DEBUG #########
-#  command: s Wave <int_i_player_roguelite_wave> STier <int_i_player_roguelite_subtier> Tier <int_i_player_roguelite_tier> BSpawns <int_i_player_roguelite_boss_spawns> BKills <int_i_player_roguelite_boss_kills> Kills <int_i_player_roguelite_kills>
+#  command: s Tier <int_i_player_roguelite_tier> STier <int_i_player_roguelite_subtier> BSp <int_i_player_roguelite_boss_spawns> BKi <int_i_player_roguelite_boss_kills>
 ###################
   poke:
   - self: true                                   # separate process for spawns to check max creatures
@@ -263,40 +263,40 @@
   bannedObjectsLimit: 4                          ### TRASH SPAWN CAP - 1 player
   spawn:
   - prefab: <par1>  ########## creature 1
-    pos: 12,12,snap
+    pos: 9,9,snap
     rot: 225,0,0
     data: dn_mob_group_roguelite
     delay: <par5>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,12,snap
+    pos: 9,9,snap
     delay: <sub_<par5>_1>
   - prefab: <par2>  ########## creature 2
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     rot: 315,0,0
     data: dn_mob_group_roguelite
     delay: <par6>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     delay: <sub_<par6>_1>
   - prefab: <par3>  ########## creature 3
-    pos: -12,12,snap
+    pos: -9,9,snap
     rot: 135,0,0
     data: dn_mob_group_roguelite
     delay: <par7>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,12,snap
+    pos: -9,9,snap
     delay: <sub_<par7>_1>
   - prefab: <par4>  ########## creature 4
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     rot: 45,0,0
     data: dn_mob_group_roguelite
     delay: <par8>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     delay: <sub_<par8>_1>
 
 - prefab: deer_ragdoll
@@ -307,40 +307,40 @@
   bannedObjectsLimit: 7                          ### TRASH SPAWN CAP - 2 players
   spawn:
   - prefab: <par1>  ########## creature 1
-    pos: 12,12,snap
+    pos: 9,9,snap
     rot: 225,0,0
     data: dn_mob_group_roguelite
     delay: <par5>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,12,snap
+    pos: 9,9,snap
     delay: <sub_<par5>_1>
   - prefab: <par2>  ########## creature 2
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     rot: 315,0,0
     data: dn_mob_group_roguelite
     delay: <par6>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     delay: <sub_<par6>_1>
   - prefab: <par3>  ########## creature 3
-    pos: -12,12,snap
+    pos: -9,9,snap
     rot: 135,0,0
     data: dn_mob_group_roguelite
     delay: <par7>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,12,snap
+    pos: -9,9,snap
     delay: <sub_<par7>_1>
   - prefab: <par4>  ########## creature 4
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     rot: 45,0,0
     data: dn_mob_group_roguelite
     delay: <par8>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     delay: <sub_<par8>_1>
 
 - prefab: deer_ragdoll
@@ -351,40 +351,40 @@
   bannedObjectsLimit: 10                         ### TRASH SPAWN CAP - 3 players
   spawn:
   - prefab: <par1>  ########## creature 1
-    pos: 12,12,snap
+    pos: 9,9,snap
     rot: 225,0,0
     data: dn_mob_group_roguelite
     delay: <par5>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,12,snap
+    pos: 9,9,snap
     delay: <sub_<par5>_1>
   - prefab: <par2>  ########## creature 2
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     rot: 315,0,0
     data: dn_mob_group_roguelite
     delay: <par6>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     delay: <sub_<par6>_1>
   - prefab: <par3>  ########## creature 3
-    pos: -12,12,snap
+    pos: -9,9,snap
     rot: 135,0,0
     data: dn_mob_group_roguelite
     delay: <par7>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,12,snap
+    pos: -9,9,snap
     delay: <sub_<par7>_1>
   - prefab: <par4>  ########## creature 4
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     rot: 45,0,0
     data: dn_mob_group_roguelite
     delay: <par8>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     delay: <sub_<par8>_1>
 
 - prefab: deer_ragdoll
@@ -395,40 +395,40 @@
   bannedObjectsLimit: 13                         ### TRASH SPAWN CAP - 4+ players
   spawn:
   - prefab: <par1>  ########## creature 1
-    pos: 12,12,snap
+    pos: 9,9,snap
     rot: 225,0,0
     data: dn_mob_group_roguelite
     delay: <par5>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,12,snap
+    pos: 9,9,snap
     delay: <sub_<par5>_1>
   - prefab: <par2>  ########## creature 2
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     rot: 315,0,0
     data: dn_mob_group_roguelite
     delay: <par6>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: 12,-12,snap
+    pos: 9,-9,snap
     delay: <sub_<par6>_1>
   - prefab: <par3>  ########## creature 3
-    pos: -12,12,snap
+    pos: -9,9,snap
     rot: 135,0,0
     data: dn_mob_group_roguelite
     delay: <par7>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,12,snap
+    pos: -9,9,snap
     delay: <sub_<par7>_1>
   - prefab: <par4>  ########## creature 4
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     rot: 45,0,0
     data: dn_mob_group_roguelite
     delay: <par8>
     triggerRules: true
   - prefab: fx_summon_troll  # fx
-    pos: -12,-12,snap
+    pos: -9,-9,snap
     delay: <sub_<par8>_1>
 ####################################
 ########################################################################
@@ -1136,12 +1136,12 @@
     delay: 15
     parameter: p_dn_roguelite_win_sequence <rogueliteLootUniques> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot> <rogueliteLoot>
 
-# ... or tier 7 and killed all bosses and no mobs left
+# ... or tier 6 and killed all bosses and no mobs left
 - prefab: deer_ragdoll
   type: poke, p_dn_roguelite_win_check
   biomes: DeepNorth                         # only process if in Deep North
   filters:
-  - int, i_player_roguelite_tier, 7;9999    # Player must be at least tier 8
+  - int, i_player_roguelite_tier, 6;9999    # Player must be at least tier 8
   - int, i_player_roguelite_win_only_once, 0  # prevent multiple win sequences
   - int, i_player_roguelite_boss_kills, 5   # killed all bosses
   bannedObjects:
@@ -1158,16 +1158,6 @@
 - prefab: Player
   type: poke, p_dn_roguelite_win_sequence
   biomes: DeepNorth                         # only process if in Deep North
-  commands:
-  - broadcast center <#00AFAF>Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
-  clientRpc:
-  - name: ChatMessage
-    target: <zdo>
-    1: vec, 0,0,0
-    2: int, 1
-    3: userinfo, Server
-    4: "string, Odin honors Deep North champion <string_playerName>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures."
-    5: string, 
   data: d_player_roguelite_off
   injectData: true
   spawns:
@@ -1215,6 +1205,11 @@
   - prefab: stone_marker_savheim_dn
     maxDistance: <vDNRLRange>
     parameter: p_dnrl_remove_items
+  - prefab: deer_ragdoll
+    data: dn_deer_ragdoll
+    maxDistance: 20000
+    limit: 1
+    parameter: p_dnrl_broadcast_stats_win <string_playerName>    
 
 - prefab: deer_ragdoll
   type: poke, p_dnrl_victory_remove_deer_ragdoll
@@ -1222,7 +1217,7 @@
   remove: true
 
 ########################################################################
-# Clean up player state and mobs, broadcast failure results
+# Clean up player state and mobs, announce failure results
 ####################################
 # Player main cleanup loop - do not check biome since want to clear if teleport
 - prefab: Player
@@ -1240,7 +1235,7 @@
     data: dn_mob_group_patrol
     maxDistance: <vDNRLRange>
     parameter: p_dn_patrol_aggravate_group
-  - prefab: Player                     # do this from players instead of deer_ragdoll, so fleeing players don't get reflagged if they turn around as soon as they see the broadcast.
+  - prefab: Player                     # do this from players instead of deer_ragdoll so fleeing players don't get reflagged if they turn around as soon as they see the announcement.
     maxDistance: <vDNRLRange>
     data: d_player_roguelite_off       # tag any players who showed up late with dnrl flag
     parameter: p_dnrl_player_late_arrival
@@ -1274,16 +1269,12 @@
   - deer_ragdoll, <vDNRLRange>, dn_deer_ragdoll
   data: d_player_roguelite_off
   injectData: true
-  commands:
-  - broadcast center <#00AFAF><string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
-  clientRpc:
-  - name: ChatMessage
-    target: <zdo>
-    1: vec, 0,0,0
-    2: int, 1
-    3: userinfo, Server
-    4: "string, <string_playerName> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures."
-    5: string, 
+  poke:
+  - prefab: deer_ragdoll
+    data: dn_deer_ragdoll
+    maxDistance: 20000
+    limit: 1
+    parameter: p_dnrl_broadcast_stats_fled <string_playerName>    
 
 # players who show up late need to be flagged so they get death and fled events
 - prefab: Player
@@ -1411,18 +1402,14 @@
   type: destroy
   biomes: DeepNorth
   filter: d_player_roguelite_on
-  commands:
-  - broadcast center <#00AFAF><string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
-  clientRpc:
-  - name: ChatMessage
-    target: <zdo>
-    1: vec, 0,0,0
-    2: int, 1
-    3: userinfo, Server
-    4: "string, <string_playerName> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures."
-    5: string, 
   data: d_player_roguelite_off
   injectData: true
+  poke:
+  - prefab: deer_ragdoll
+    data: dn_deer_ragdoll
+    limit: 1
+    maxDistance: 20000
+    parameter: p_dnrl_broadcast_stats_death <string_playerName>    
 
 # roguelite_remove_failsafe - any player action when not near dnrl-flagged deer_ragdoll clears roguelite state
 - prefab: Player
@@ -1433,6 +1420,47 @@
   data: d_player_roguelite_off
   injectData: true
   command: s DEBUG - Deep North roguelite_remove_failsafe - tell Sav!
+
+########################################################################
+# Stats broadcast from deer ragdoll
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_broadcast_stats_win
+  commands:
+  - broadcast center <#00AFAF>Odin honors Deep North champion <par1>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures.
+  clientRpc:
+  - name: ChatMessage
+    target: all
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, Odin honors Deep North champion <par1>!  They conquered <int_i_player_roguelite_wave> waves and killed <int_i_player_roguelite_kills> creatures."
+    5: string, 
+
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_broadcast_stats_fled
+  commands:
+  - broadcast center <#00AFAF><par1> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+  clientRpc:
+  - name: ChatMessage
+    target: all
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, <par1> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures."
+    5: string, 
+
+- prefab: deer_ragdoll
+  type: poke, p_dnrl_broadcast_stats_death
+  commands:
+  - broadcast center <#00AFAF><par1> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+  clientRpc:
+  - name: ChatMessage
+    target: all
+    1: vec, 0,0,0
+    2: int, 1
+    3: userinfo, Server
+    4: "string, <par1> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures."
+    5: string, 
 
 ########################################################################
 # Spawn data and specific creature data
