@@ -266,12 +266,43 @@
   type: poke, p_sh4_story_ch_10_enable
   data: d_sh4_story_light_data_on
 
+################
+# Chapter 10 - Deep North (alt spawn - to make sure people don't miss this chapter)
+- prefab: Troll_Summoned
+  type: poke, p_story_dnrl_ch10
+  biomes: DeepNorth
+  weight: 1
+  bannedObjects:
+  - BossStone_TheElder, 100, d_sh4_story_ch_10_alt_spawn
+  spawns:
+  - BossStone_TheElder, -3,0,snap, d_sh4_story_ch_10_alt_spawn
+  - sign_sh4_story, -3,0,snap, 0,0,0, d_sh4_story_sign_quest_marker
+  - CL_Raw_Yellow_small_temp, -3,0.1,snap, d_sh4_story_light_data
+  poke:
+  - prefab: BossStone_TheElder
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 8.2        ### HOW FAR INTO GROUND TO SINK STONE
+  - prefab: sign_sh4_story
+    data: d_sh4_story_flag
+    limit: 1
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos 1          ### HOW FAR INTO GROUND TO SINK SIGN
+  - prefab: CL_Raw_Yellow_small_temp
+    data: d_sh4_story_flag
+    limit: 2
+    maxDistance: 10
+    parameter: p_sh4_story_pieces_pos -3.2       ### HOW FAR INTO GROUND TO SINK LIGHT
+
 ##################################
 # Chapter 11 - Deep North (roguelite victory - Odin)
 - prefab: Odin
   type: poke, p_story_dnrl_odin
   biomes: DeepNorth
   filter: int, i_dnrl_victory_odin, 1
+  bannedObjects:
+  - BossStone_TheElder, 60, d_sh4_story_ch_11
   spawns:
   - BossStone_TheElder, -3,0,snap, d_sh4_story_ch_11
   - sign_sh4_story, -3,0,snap, 0,0,0, d_sh4_story_sign_quest_marker

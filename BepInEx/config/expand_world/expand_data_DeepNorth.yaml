@@ -119,6 +119,10 @@
   ints:
   - i_player_roguelite_tier, 8
 
+- name: d_player_roguelite_win_only_once
+  ints:
+  - i_player_roguelite_win_only_once, 1
+
 ###########################################
 # Odin data
 - name: d_odin_persist
@@ -313,6 +317,8 @@
   - RandomSkillFactor, 3                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  bools:
+  - Humanoid.m_boss, false
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -331,6 +337,8 @@
   - RandomSkillFactor, 2.5                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  bools:
+  - Humanoid.m_boss, false
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -351,6 +359,8 @@
   - RandomSkillFactor, 2                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  bools:
+  - Humanoid.m_boss, false
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -369,6 +379,8 @@
   - RandomSkillFactor, 1.5                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  bools:
+  - Humanoid.m_boss, false
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -385,6 +397,8 @@
   - RandomSkillFactor, 1.2                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  bools:
+  - Humanoid.m_boss, false
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -403,6 +417,8 @@
   - RandomSkillFactor, 1.2                       # 1
   strings:
   - Humanoid.m_group, dn_mobs
+  bools:
+  - Humanoid.m_boss, false
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
 
@@ -442,8 +458,8 @@
 # Boss HP adjustments
 - name: d_dn_boss_hp_eikthyr
   floats:
-  - max_health, <mul_<float_max_health>_3>
-  - health, <mul_<float_max_health>_3.001>
+  - max_health, <mul_<float_max_health>_4>
+  - health, <mul_<float_max_health>_4.001>
 
 - name: d_dn_boss_hp_brenna
   floats:
@@ -452,13 +468,13 @@
 
 - name: d_dn_boss_hp_elder
   floats:
-  - max_health, <mul_<float_max_health>_1.6>
-  - health, <mul_<float_max_health>_1.601>
+  - max_health, <mul_<float_max_health>_2>
+  - health, <mul_<float_max_health>_2.001>
 
 - name: d_dn_boss_hp_bonemass
   floats:
-  - max_health, <mul_<float_max_health>_1>
-  - health, <mul_<float_max_health>_1.001>
+  - max_health, <mul_<float_max_health>_1.25>
+  - health, <mul_<float_max_health>_1.251>
 
 - name: d_dn_boss_hp_geirrhafa
   floats:
@@ -724,9 +740,20 @@
   - JC_Gacha_Coins
   - JC_Gacha_Coins
   - JC_Gacha_Coins
+  - JC_Gacha_Coins
   - MoltenCore
   - Wispheart
   - JC_Legendary_Gembox
+
+- valueGroup: rogueliteLootUniques
+  values:
+  - <bossDropsEikthyrDnRoguelite>
+  - <bossDropsElderDnRoguelite>
+  - <bossDropsBonemassDnRoguelite>
+  - <bossDropsDragonDnRoguelite>
+  - <bossDropsYagluthDnRoguelite>
+  - <bossDropsQueenDnRoguelite>
+  - <bossDropsFaderDnRoguelite>
 
 - valueGroup: vgTrollSummonedLoot
   values:

@@ -180,6 +180,16 @@
   ints:
   - override_interact, 0
 
+- name: d_sh4_story_ch_10_alt_spawn
+  ints:
+  - HasFieldsRuneStone, 1
+  - HasFields, 1
+  - i_sh4_story_flag, 1
+  strings:
+  - RuneStone.m_name, <#AF7F7F>Jayk's Journey - Ch. 9
+  - RuneStone.m_label, Jayk's Journey - Ch. 9
+  - RuneStone.m_text, <vSH4StoryCh10>
+
 - name: d_sh4_story_ch_11
   ints:
   - HasFieldsRuneStone, 1
