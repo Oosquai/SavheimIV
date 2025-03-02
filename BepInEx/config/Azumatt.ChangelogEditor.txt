@@ -4,13 +4,16 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 3/1/25</color>
-- More balancing to Deep North event.  Good hunting!
-- Less loot from Deep North event.
-- Added an alternate way to unlock the last numbered story chapter.
+     0\  Savheim IV Patch Notes, 3/2/25</color>
+- Several more fixes to Deep North event.  Thanks for patience!
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 3/1/25
+- More balancing to Deep North event.  Good hunting!
+- Less loot from Deep North event.
+- Added an alternate way to unlock the last numbered story chapter.
 
 Patch Notes, 2/27/25
 - Refactored Deep North event code for stability and multiplayer.
