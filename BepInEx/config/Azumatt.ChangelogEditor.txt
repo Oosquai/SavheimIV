@@ -12,7 +12,7 @@
 ------ Additional changes, 3/2/25
 - Ashlands mage armor can now reach max upgrades.
 - Volva's Brew crafting recipe fixed.
-- Updated Deep North even to spam fewer messages.
+- Updated Deep North event to spam fewer messages.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
