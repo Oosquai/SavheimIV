@@ -9,6 +9,10 @@
 - Moved two Eitr meads from cauldron to mead kettle.
 - Buffed yellow necklace and Stone Ring.
 - Guilds can now earn achievements and experience.
+------ Additional changes, 3/2/25
+- Ashlands mage armor can now reach max upgrades.
+- Volva's Brew crafting recipe fixed.
+- Updated Deep North even to spam fewer messages.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

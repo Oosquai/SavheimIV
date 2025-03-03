@@ -1,0 +1,16 @@
+name: VolvasBrew
+clonePrefabName: 
+craftingStation: $piece_cauldron
+minStationLevel: 6
+maxStationLevelCap: 
+repairStation: 
+amount: 2
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: false
+upgrade_reqs: []
+reqs:
+- Honey:4:0:True
+- Sap:4:0:True
+- MushroomMagecap:1:0:True
+- MushroomSmokePuff:1:0:True

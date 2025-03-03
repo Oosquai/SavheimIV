@@ -1209,12 +1209,21 @@
     data: dn_deer_ragdoll
     maxDistance: 20000
     limit: 1
-    parameter: p_dnrl_broadcast_stats_win <string_playerName>    
+    parameter: p_dnrl_broadcast_stats_win <string_playerName>
+  - prefab: Player
+    data: d_player_roguelite_on
+    maxDistance: <vDNRLRange>
+    parameter: p_player_roguelite_off
 
 - prefab: deer_ragdoll
   type: poke, p_dnrl_victory_remove_deer_ragdoll
   spawn: vfx_corpse_destruction_small
   remove: true
+
+- prefab: Player
+  type: poke, p_player_roguelite_off
+  data: d_player_roguelite_off
+  injectData: true
 
 ########################################################################
 # Clean up player state and mobs, announce failure results
@@ -1419,7 +1428,7 @@
   - deer_ragdoll, <vDNRLRangeFailSafe>, dn_deer_ragdoll   # wider range so this doesn't trigger before normal Player Fled process
   data: d_player_roguelite_off
   injectData: true
-  command: s DEBUG - Deep North roguelite_remove_failsafe - tell Sav!
+#  command: s DEBUG - Deep North roguelite_remove_failsafe - tell Sav!
 
 ########################################################################
 # Stats broadcast from deer ragdoll
@@ -1438,8 +1447,8 @@
 
 - prefab: deer_ragdoll
   type: poke, p_dnrl_broadcast_stats_fled
-  commands:
-  - broadcast center <#00AFAF><par1> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+#  commands:
+#  - broadcast center <#00AFAF><par1> has fled the Deep North's wrath!  They ran away during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
   clientRpc:
   - name: ChatMessage
     target: all
@@ -1451,8 +1460,8 @@
 
 - prefab: deer_ragdoll
   type: poke, p_dnrl_broadcast_stats_death
-  commands:
-  - broadcast center <#00AFAF><par1> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
+#  commands:
+#  - broadcast center <#00AFAF><par1> was consumed by the Deep North!  They perished during wave <int_i_player_roguelite_wave> after killing <int_i_player_roguelite_kills> creatures.
   clientRpc:
   - name: ChatMessage
     target: all
