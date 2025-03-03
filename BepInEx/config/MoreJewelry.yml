@@ -81,7 +81,6 @@ Stone ring:
       Simple_Yellow_Socket: 1
       Stone: 10
   effect:
-    blockstaminamodifier: -0.1
     skilllevel:
       type: blocking
       modifier: 10

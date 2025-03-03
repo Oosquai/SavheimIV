@@ -1,6 +1,6 @@
 name: MeadBaseEitrLingering
 clonePrefabName: 
-craftingStation: $piece_cauldron
+craftingStation: $piece_meadcauldron
 minStationLevel: 1
 maxStationLevelCap: 
 repairStation: 

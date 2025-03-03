@@ -6,6 +6,9 @@
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 3/2/25</color>
 - Several more fixes to Deep North event.  Thanks for patience!
+- Moved two Eitr meads from cauldron to mead kettle.
+- Buffed yellow necklace and Stone Ring.
+- Guilds can now earn achievements and experience.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

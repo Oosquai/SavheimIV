@@ -6,7 +6,7 @@ ClonedSE: JC_Se_Necklace_Yellow
 CustomIcon: 
 FlashIcon: false
 CooldownIcon: false
-Tooltip: $jc_se_necklace_yellow_description  In exchange, it deals increased damage to trees.
+Tooltip: $jc_se_necklace_yellow_description  In exchange, it deals increased damage to trees and increases your carry weight.
 Attributes: None
 StartMessageLoc: Center
 StartMessage: ''
@@ -50,7 +50,7 @@ SeData:
   m_damageModifier: 1.3
   m_noiseModifier: 0
   m_stealthModifier: 0
-  m_addMaxCarryWeight: 0
+  m_addMaxCarryWeight: 15
   m_speedModifier: 0
   m_jumpModifier: &o0
     x: 0
