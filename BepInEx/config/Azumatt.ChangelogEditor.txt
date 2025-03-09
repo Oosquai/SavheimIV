@@ -4,7 +4,22 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 3/2/25</color>
+     0\  Savheim IV Patch Notes, 3/8/25</color>
+- Bog Witch now sells Red Jute after killing Yagluth.
+- Bog Witch now sells Blue Jute after killing Queen.
+- Ovens should now have infinite fuel.
+- Increased detection range on block, knife, and bleed trigger logic, which should make these mechanics more reliable on larger enemies.
+- Refactored code for Hel's Reaver, unique battleaxe, to work on all kills.
+- Removed Hel's Reaver special code from Deep North event.
+- Increased range of effect of Skelfang, unique knife.
+- Ymir's Fang, unique spear, now freezes targets it passes in flight, and with increased range of effect.
+- Adjusted damage of Staff of Fracturing to be higher before upgrades.
+- Try the above four items please.  Tell me if they're too OP.
+
+<color=#FFA8A8>----------------------------------------------------------------------------
+Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 3/2/25
 - Several more fixes to Deep North event.  Thanks for patience!
 - Moved two Eitr meads from cauldron to mead kettle.
 - Buffed yellow necklace and Stone Ring.
@@ -13,9 +28,6 @@
 - Ashlands mage armor can now reach max upgrades.
 - Volva's Brew crafting recipe fixed.
 - Updated Deep North event to spam fewer messages.
-
-<color=#FFA8A8>----------------------------------------------------------------------------
-Previous Savheim IV Patch Notes</color>
 
 Patch Notes, 3/1/25
 - More balancing to Deep North event.  Good hunting!

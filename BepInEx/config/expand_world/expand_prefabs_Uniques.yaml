@@ -731,12 +731,12 @@
 - prefab: fx_crit, fx_backstab
   type: create
   objects:
-  - Player, 2, d_skelfang_knife
+  - Player, 8, d_skelfang_knife
   - vfx_ghost_hit, 1
   poke:
   - prefab: creature
-    minDistance: 1
-    maxDistance: 3
+    minDistance: 0.1
+    maxDistance: 4
     limit: 2
     data: not_tamed_uniques
     parameter: p_skelfang_stagger <vec>
@@ -819,12 +819,25 @@
 
 ######################
 # Hel's Reaver (purple battleaxe)
-- prefab: Ragdoll
-  type: create
-  biomes: Meadows, Blackforest, Swamp, Ocean, Mountain, Plains, Mistlands, AshLands
+- prefab: Player
+  types:
+  - state, battleaxe_attack0
+  - state, battleaxe_attack1
+  - state, battleaxe_attack2
+  - state, greatsword2
+  filter: d_purple_battleaxe
+  poke:
+  - self: true
+    delay: 1.5
+    parameter: p_soulcleave_death_check
+
+- prefab: Player
+  type: poke, p_soulcleave_death_check
   objects:
-  - Player, 6, d_purple_battleaxe
-  - vfx_wraith_hit, 6
+  - vfx_wraith_hit, 8
+  - sfx_gui_craftitem_cauldron, 8
+  - sfx_build_table, 8
+  - creature, 12, not_tamed_uniques
   spawns:
   - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_uniques, 0.3
   - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_uniques, 0.3
@@ -833,31 +846,17 @@
   - prefab: creature
     maxDistance: 12
     data: not_tamed_uniques
-    parameter: p_soulcleave_randomDelay
+    parameter: p_soulcleave_creature_rndDelay
 
 - prefab: creature
-  type: poke, p_soulcleave_randomDelay
+  type: poke, p_soulcleave_creature_rndDelay
   poke:
   - self: true
-    delay: 0.5
-    parameter: d_soulcleave_creature <vec>
+    delay: <randf_0.3_1.2>
+    parameter: p_soulcleave_creature <vec>
 
 - prefab: creature
-  type: poke, p_soulcleave_randomDelay
-  poke:
-  - self: true
-    delay: 0.7
-    parameter: d_soulcleave_creature <vec>
-
-- prefab: creature
-  type: poke, p_soulcleave_randomDelay
-  poke:
-  - self: true
-    delay: 0.9
-    parameter: d_soulcleave_creature <vec>
-
-- prefab: creature
-  type: poke, d_soulcleave_creature
+  type: poke, p_soulcleave_creature
   spawns:
   - sfx_wraith_alerted
   - vfx_puff_small, 0,0,1
@@ -873,23 +872,23 @@
     data: d_purple_battleaxe
     limit: 1
     delay: 0.3
-    parameter: d_soulcleave_player <round_<sqrt_<float_max_health>>>
+    parameter: p_soulcleave_player <pow_<float_max_health>_0.42>*<randf_0.9_1.1>
 
 - prefab: Player
-  type: poke, d_soulcleave_player
+  type: poke, p_soulcleave_player
   spawns:
   - fx_natureweapon_hit, 0,0,1.5
   - sfx_wraith_idle
   objectRpc:
   - name: RPC_Heal
-    1: float, <par1>
+    1: float, <round_<par1>>
     2: bool, 1
   clientRpc:
   - name: RPC_DamageText
     packaged: true
     1: enum_damagetext, Heal
     2: vec, <x>,<z>,<y>+2
-    3: string, <par1>
+    3: string, <round_<par1>>
     4: bool, false
 
 ######################
@@ -1016,7 +1015,7 @@
     delay: 0.1
     parameter: p_ymir_fang_loop
   - prefab: creature
-    maxDistance: 2
+    maxDistance: 2.5
     data: not_tamed_uniques
     parameter: p_ymir_fang_dmg
 
@@ -1025,7 +1024,7 @@
   spawn: fx_iceshard_hit
   objectRpc:
   - name: RPC_Damage
-    1: hit, frost=<randi_12_16>
+    1: hit, frost=<randi_12_16> status=SE_Savheim_Trigger_Frozen
 
 #####################
 # Ravenclaws, T2 claws

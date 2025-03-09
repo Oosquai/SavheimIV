@@ -516,7 +516,7 @@
 
 ###############################################################
 # Infinite fuel for fireplaces, plus Warm (thanks, Raaka!)  (Warm flashes, feels buggy, commented out of data)
-- prefab: Fireplace, piece_bathtub
+- prefab: Fireplace, piece_bathtub, piece_oven
   type: create
   data: fueler
 

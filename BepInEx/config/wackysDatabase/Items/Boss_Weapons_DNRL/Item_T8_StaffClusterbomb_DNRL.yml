@@ -26,7 +26,7 @@ Primary_Attack:
   SpeedFactor: 0.3
   DmgMultiplier: 1
   ForceMultiplier: 1
-  StaggerMultiplier: 1
+  StaggerMultiplier: 2
   RecoilMultiplier: 0
   AttackRange: 2
   AttackHeight: 1.2
@@ -143,10 +143,10 @@ Secondary_Attack:
     Trail_Effect: []
     Burst_Effect: []
 Damage:
-  Blunt: 15
+  Blunt: 17
   Chop: 0
   Damage: 0
-  Fire: 33
+  Fire: 36
   Frost: 0
   Lightning: 0
   Pickaxe: 0
@@ -155,10 +155,10 @@ Damage:
   Slash: 0
   Spirit: 0
 Damage_Per_Level:
-  Blunt: 2
+  Blunt: 1
   Chop: 0
   Damage: 0
-  Fire: 4
+  Fire: 1
   Frost: 0
   Lightning: 0
   Pickaxe: 0

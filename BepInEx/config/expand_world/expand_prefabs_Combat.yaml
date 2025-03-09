@@ -24,12 +24,12 @@
   - prefab: Player
     data: PlayerBlocking
     limit: 1
-    maxDistance: 6
+    maxDistance: 8
     parameter: PlayerBlock
   - prefab: Player
     data: PlayerBlockingShield
     limit: 1
-    maxDistance: 6
+    maxDistance: 8
     parameter: p_shield_counter_start
 
 ###############################################################
@@ -385,10 +385,10 @@
   - state, knife_secondary
   - state, dual_knives_secondary
   objects:
-  - sfx_arrow_hit, 6
-  - sfx_knife_swing, 6
-  - sfx_gui_craftitem_cauldron, 6
-  - sfx_build_table, 6
+  - sfx_arrow_hit, 8
+  - sfx_knife_swing, 8
+  - sfx_gui_craftitem_cauldron, 8
+  - sfx_build_table, 8
   spawns:
   - fx_DvergerMage_Mistile_die
   - vfx_wraith_death
@@ -403,6 +403,10 @@
   - prefab: creature
     maxDistance: 4                               ### RANGE WITHIN WHICH CREATURES AFFECTED
     parameter: p_vanish_deaggro
+
+- prefab: Eikthyr, gd_king, Bonemass, Dragon, GoblinKing, SeekerQueen, Fader
+  type: poke, p_vanish_deaggro
+  weight: 1E30
 
 - prefab: creature
   type: poke, p_vanish_deaggro
@@ -424,11 +428,11 @@
   type: create
   objects:
   - sfx_build_hoe, 1                # Wacky's Database SE sfx added to secondary attacks of 1h swords only
-  - sfx_perfectblock, 7             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
+  - sfx_perfectblock, 8             # Only trigger after parry.  sfx shortened to 3s in expand_prefabs.yaml.  need range in case player moves after parry
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 6                  # big range for big creatures (troll 2.  bonemass 4.  8-star bonemass 6)
+    maxDistance: 8                  # big range for big creatures (troll 2.  bonemass 4.  8-star bonemass 6)
     parameter: p_sword_bleed_hp 6.1 0.25   # bleed time | power used to scale max hp - higher is exponentially more damage
 
 # 2h swords
@@ -436,11 +440,11 @@
   type: create
   objects:
   - sfx_build_cultivator, 1         # specific to greatswords
-  - sfx_perfectblock, 7
+  - sfx_perfectblock, 8
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 6
+    maxDistance: 8
     parameter: p_sword_bleed_hp 9.1 0.285
 
 # claws - chance to bleed on primary attacks.  this is also used with Ryvers (CWS_Sword_5_SH).
@@ -452,7 +456,7 @@
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 6
+    maxDistance: 8
     parameter: p_sword_bleed_hp 4.1 0.25   # rapid short-duration bleeds
 
 # bleed arrows and bolts
@@ -463,7 +467,7 @@
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 6
+    maxDistance: 8
     parameter: p_sword_bleed_hp 3.1 0.285  # on-demand bleed arrows have short duration and limited stacking
 
 # unique melee bow - huntress.  bleeds on parry.
@@ -477,7 +481,7 @@
   poke:
   - prefab: creature
     limit: 1
-    maxDistance: 6
+    maxDistance: 8
     parameter: p_sword_bleed_hp 4.1 0.25
 
 ##########################

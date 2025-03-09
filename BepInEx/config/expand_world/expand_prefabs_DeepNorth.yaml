@@ -2,7 +2,7 @@
 # Savheim Deep North - prefabs
 # REQUIRES
 # - expand_prefabs_Creatures (gear_buff)
-# - expand_prefabs_Uniques (loot!  and d_purple_battleaxe)
+# - expand_prefabs_Uniques (loot!)
 ########################################################################
 # Killing a deer in Deep North starts the Roguelite minigame.
 # Mobs get spawned in Waves at regular intervals.
@@ -779,50 +779,6 @@
 
 # The altitude trick doesn't help with creatures who leave ragdolls though, so another Raaka trick!
 # Swap ragdolls, causing them to abandon their loot tables
-# Need special processes to duplicate behavior of unique battleaxe, for roguelite ON and OFF.
-### Battleaxe, roguelite OFF
-- prefab: Ragdoll
-  type: create
-  biomes: DeepNorth
-  objects:
-  - Player, 6, d_purple_battleaxe
-  - vfx_wraith_hit, 6
-  bannedObjects:
-  - Player, <vDNRLRange>, d_player_roguelite_on
-  spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
-  - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
-  poke:
-  - prefab: creature
-    maxDistance: 12
-    data: not_tamed_dn
-    parameter: p_soulcleave_randomDelay
-
-### Battleaxe, roguelite ON
-- prefab: Ragdoll
-  type: create
-  biomes: DeepNorth
-  objects:
-  - Player, <vDNRLRange>, d_player_roguelite_on
-  - Player, 6, d_purple_battleaxe
-  - vfx_wraith_hit, 6
-  weight: 1E30      # ensure always triggers vs. no battleaxe version below
-  spawns:
-  - fx_goblinking_beam_hit, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
-  - vfx_puff_small, 0,0,1, 0,0,0, d_empty_data_dn, 0.3
-  - sfx_wraith_alerted, 0,0,0, 0,0,0, purple_axe_low_pitch, 0
-  poke:
-  - prefab: creature
-    maxDistance: 12
-    data: not_tamed_dn
-    parameter: p_soulcleave_randomDelay
-  remove: true
-  spawn:
-  - prefab: <prefab>
-    triggerRules: false
-
-### No battleaxe, roguelite ON (no further action needed for neither battleaxe nor roguelite)
 - prefab: Ragdoll
   type: create
   biomes: DeepNorth

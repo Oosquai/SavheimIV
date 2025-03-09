@@ -18,6 +18,18 @@
     "requiredGlobalKey": "defeated_bonemass"
   },
   {
+    "prefab": "JuteRed",
+    "stack": 1,
+    "price": 150,
+    "requiredGlobalKey": "defeated_dragon"
+  },
+  {
+    "prefab": "JuteBlue",
+    "stack": 1,
+    "price": 250,
+    "requiredGlobalKey": "defeated_queen"
+  },
+  {
     "prefab": "BlackCore",
     "stack": 1,
     "price": 999,
