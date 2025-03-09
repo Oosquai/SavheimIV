@@ -1,0 +1,22 @@
+name: RJC_Common_Gembox
+clonePrefabName: JC_Common_Gembox
+craftingStation: $jc_transmution_table
+minStationLevel: 3
+maxStationLevelCap: 
+repairStation: 
+amount: 1
+disabled: false
+disabledUpgrade: false
+requireOnlyOneIngredient: true
+upgrade_reqs: []
+reqs:
+- Perfect_Black_Socket:12:0:True
+- Perfect_Blue_Socket:12:0:True
+- Perfect_Green_Socket:12:0:True
+- Perfect_Orange_Socket:12:0:True
+- Perfect_Purple_Socket:12:0:True
+- Perfect_Red_Socket:12:0:True
+- Perfect_Yellow_Socket:12:0:True
+- Perfect_Cyan_Socket:12:0:True
+- Perfect_blueish_Socket:12:0:True
+- Perfect_redish_Socket:12:0:True

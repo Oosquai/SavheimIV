@@ -5,9 +5,11 @@
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
      0\  Savheim IV Patch Notes, 3/8/25</color>
+- Crystal Fusion Boxes can now be crafted at the Gemcutters table.
 - Bog Witch now sells Red Jute after killing Yagluth.
 - Bog Witch now sells Blue Jute after killing Queen.
 - Ovens should now have infinite fuel.
+- Vortex Arrows snare for slightly longer.
 - Increased detection range on block, knife, and bleed trigger logic, which should make these mechanics more reliable on larger enemies.
 - Refactored code for Hel's Reaver, unique battleaxe, to work on all kills.
 - Removed Hel's Reaver special code from Deep North event.
