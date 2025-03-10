@@ -691,6 +691,28 @@
   - sfx_UndeadBurn_Start, 1
   spawn: fx_Fader_Roar_Projectile_Hit
 
+# Successful parry with Sanctis bubble refreshes bubble
+- prefab: fx_StaffShield_Break
+  type: create
+  objects:
+  - Player, 1, gear_sanctis_any
+  - sfx_perfectblock, 8
+  poke:
+  - prefab: Player
+    data: gear_sanctis_any
+    limit: 1
+    maxDistance: 1
+    parameter: p_sanctis_parry_bubble
+
+- prefab: Player
+  type: poke, p_sanctis_parry_bubble
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_StaffShield_SH
+    2: bool, true
+    3: int, 1
+    4: float, -9.8
+
 ################################################################
 # Reapers
 # Primary X -> Secondary attacks have effects if they connect
