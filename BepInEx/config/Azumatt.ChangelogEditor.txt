@@ -4,13 +4,20 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 3/9/25</color>
-- Parrying with a barrier and Sanctis no longer consumes the barrier.
-- Vanish no longer works on bosses in the Deep North.
-- Honey Bread now lasts 30 minutes instead of 25.
+     0\  Savheim IV Patch Notes, 3/16/25</color>
+- Several staves converted to standard enchanting stats.
+- Plains tier mage armor is easier to craft and upgrade.
+- Skelfang unique knife has extended effect range but only works with backstabs.
+- Ymir's Fang unique spear has extended effect range.
+- Reverted to default character intro.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 3/9/25
+- Parrying with a barrier and Sanctis no longer consumes the barrier.
+- Vanish no longer works on bosses in the Deep North.
+- Honey Bread now lasts 30 minutes instead of 25.
 
 Patch Notes, 3/8/25
 - Crystal Fusion Boxes can now be crafted at the Gemcutters table.

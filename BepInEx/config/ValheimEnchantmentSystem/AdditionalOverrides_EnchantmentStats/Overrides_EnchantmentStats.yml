@@ -527,6 +527,17 @@
     - StaffShield
     - StaffSkeleton
     - StaffRedTroll
+    - StaffIceShards
+    - StaffFireball
+    - JC_Lightning_Staff_SH
+    - StaffClusterbomb
+    - StaffIceShards_DNRL
+    - StaffFireball_DNRL
+    - JC_Lightning_Staff_SH_DNRL
+    - StaffClusterbomb_DNRL
+    - StaffGreenRoots_T3
+    - StaffGreenRoots_T5
+    - StaffGreenRoots
   Stats:
     1:
       durability_percentage: 1

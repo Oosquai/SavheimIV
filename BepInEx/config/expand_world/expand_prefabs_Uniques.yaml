@@ -728,7 +728,7 @@
 
 ######################
 # Skelfang (Crit stagger knife)
-- prefab: fx_crit, fx_backstab
+- prefab: fx_backstab
   type: create
   objects:
   - Player, 8, d_skelfang_knife
@@ -736,7 +736,7 @@
   poke:
   - prefab: creature
     minDistance: 0.1
-    maxDistance: 6
+    maxDistance: 8
     limit: 2
     data: not_tamed_uniques
     parameter: p_skelfang_stagger <vec>
@@ -1015,7 +1015,7 @@
     delay: 0.1
     parameter: p_ymir_fang_loop
   - prefab: creature
-    maxDistance: 2.5
+    maxDistance: 3
     data: not_tamed_uniques
     parameter: p_ymir_fang_dmg
 
