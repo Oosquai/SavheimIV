@@ -1130,6 +1130,29 @@
   data: d_unique_knife_toxin_subtract_stack
   injectData: true
 
+#####################
+# Nevermore, T4 Longbow
+- prefab: sfx_bow_draw
+  type: create
+  objects:
+  - Player, 1, d_player_airborne_longbow_nevermore
+  poke:
+  - prefab: Player
+    limit: 1
+    maxDistance: 1
+    data: d_player_airborne_longbow_nevermore
+    parameter: p_longbow_jump_shot_nevermore
+
+- prefab: Player
+  type: poke, p_longbow_jump_shot_nevermore
+  filter: d_player_airborne_longbow_nevermore
+  objectRpc:
+  - name: RPC_AddStatusEffect
+    1: hash, SE_Savheim_LongbowSkill_Nevermore
+    2: bool, true
+    3: int, 1
+    4: float, 1
+
 ##############################################################
 # Boss Drops
 - prefab: Eikthyr

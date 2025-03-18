@@ -175,7 +175,7 @@
   - $onGround, 0
   - i_longbow_jump_shot_cd, 0
   hashes:
-  - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5_SH, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow_SH, CWS_Bow_7_SH, CWS_Bow_4_SH, BBP_ElvenBow_SH_DNRL, CWS_Bow_7_SH_DNRL
+  - LeftItem, BowFineWood, BowHuntsman, BowDraugrFang, CWS_Bow_5_SH, BowSpineSnap, BowAshlands, BowAshlandsBlood, BowAshlandsRoot, BowAshlandsStorm, BBP_ElvenBow_SH, CWS_Bow_4_SH, BBP_ElvenBow_SH_DNRL
 
 - name: d_longbow_jump_shot_cd_on
   ints:

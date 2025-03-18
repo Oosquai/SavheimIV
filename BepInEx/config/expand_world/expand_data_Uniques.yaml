@@ -230,6 +230,14 @@
   hashes:
   - RightItem, CWS_Sword_6_SH_DNRL
 
+####################################
+# T4 Bow Nevermore
+- name: d_player_airborne_longbow_nevermore
+  ints:
+  - $onGround, 0
+  hashes:
+  - LeftItem, CWS_Bow_7_SH, CWS_Bow_7_SH_DNRL
+
 ##############################################################
 # Boss Drop Tables
 - valueGroup: bossDropsEikthyr

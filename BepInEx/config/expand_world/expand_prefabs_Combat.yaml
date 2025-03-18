@@ -697,6 +697,8 @@
   objects:
   - Player, 1, gear_sanctis_any
   - sfx_perfectblock, 8
+  remove: true
+  spawn: fx_DvergerMage_Mistile_attack
   poke:
   - prefab: Player
     data: gear_sanctis_any
