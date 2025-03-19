@@ -4,12 +4,19 @@
 - Move windows: click & drag; some need <color=orange>Left-Alt</color>/<color=orange>Ctrl</color>. <color=orange>Esc</color> for cursor.
 <color=#00FFFF>* Dodge</color>: Valheim\BepInEx\config\Searica.Valheim.DodgeShortcut.cfg
 <color=#FFFF00>__ 0/_______________________________
-     0\  Savheim IV Patch Notes, 3/17/25</color>
-- Sanctis barrier parry effects improved.
-- Unique Longbow Nevermore no longer gives infinite levitation but now offers several rapid shots instead.
+     0\  Savheim IV Patch Notes, 3/18/25</color>
+- Reverted to latest game version.
+- Updated lots of mods to latest game version.
+- Markets should now show item tooltips.
+- Goblin Caves in the Plains should now eventually reset.
+- Removed Hauler's Helper and Mining Caves mods.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>
+
+Patch Notes, 3/17/25
+- Sanctis barrier parry effects improved.
+- Unique Longbow Nevermore no longer gives infinite levitation but now offers several rapid shots instead.
 
 Patch Notes, 3/16/25
 - Several staves converted to standard enchanting stats.

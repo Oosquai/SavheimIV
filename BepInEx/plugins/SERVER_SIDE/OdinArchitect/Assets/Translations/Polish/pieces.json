@@ -79,6 +79,8 @@
 	"stonewall_hardrock_pillar_desc": "Alternatywna kamienna ściana",
 	"stonewall_hardrock_stairs": "Schody z twardej skały",
 	"stonewall_hardrock_stairs_desc": "Alternatywna kamienna ściana",
+	"stonewall_hardrock_stairs_corner": "Róg Schodów z Twardej Skały",	
+    "stonewall_hardrock_stairs_corner_desc": "Alternatywna ściana kamienna"
 	"stonewall_hardrock_arch": "Łuk z twardej skały",
 	"stonewall_hardrock_arch_desc": "Alternatywna kamienna ściana",
 	"big_pillar": "Masywny kamienny filar",
