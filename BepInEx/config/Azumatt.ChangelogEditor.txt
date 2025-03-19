@@ -10,6 +10,8 @@
 - Markets should now show item tooltips.
 - Goblin Caves in the Plains should now eventually reset.
 - Removed Hauler's Helper and Mining Caves mods.
+- Deep North event bosses should no longer have a chance to instantly die.
+- Removed double quotes when Deep North event bosses spawn or die.
 
 <color=#FFA8A8>----------------------------------------------------------------------------
 Previous Savheim IV Patch Notes</color>

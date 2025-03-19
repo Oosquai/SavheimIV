@@ -289,6 +289,8 @@
   - HasFieldsHumanoid, 1
   - level, 1
   floats:
+  - max_health, 2000
+  - health, 2000.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - MonsterAI.m_circleTargetDuration, 0
@@ -301,8 +303,8 @@
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_name, Awakened Eikthyr
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -315,14 +317,16 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 5000
+  - health, 5000.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - RandomSkillFactor, 3                         # 1
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -335,6 +339,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 5000
+  - health, 5000.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 6                       # 4
@@ -344,8 +350,8 @@
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -358,6 +364,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 7500
+  - health, 7500.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 9                       # 6
@@ -369,8 +377,8 @@
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -383,6 +391,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 7500
+  - health, 7500.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 6                       # 4
@@ -392,8 +402,8 @@
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -406,6 +416,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 12500
+  - health, 12500.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - Humanoid.m_turnSpeed, 120                    # 50
@@ -413,8 +425,8 @@
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -427,6 +439,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 12500
+  - health, 12500.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 10                      # 8
@@ -436,8 +450,8 @@
   strings:
   - Humanoid.m_group, dn_mobs
   - Humanoid.m_bossEvent, ""
-  - MonsterAI.m_spawnMessage, ""
-  - MonsterAI.m_deathMessage, ""
+  - MonsterAI.m_spawnMessage,
+  - MonsterAI.m_deathMessage,
   bools:
   - Humanoid.m_boss, false
   vecs:
@@ -450,6 +464,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 1800
+  - health, 1800.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - Humanoid.m_runSpeed, 5                       # 4
@@ -467,6 +483,8 @@
   - HasFields, 1
   - HasFieldsHumanoid, 1
   floats:
+  - max_health, 5550
+  - health, 5550.1
   - MonsterAI.m_alertRange, 100
   - MonsterAI.m_hearRange, 9999
   - RandomSkillFactor, 2                         # 1
@@ -475,52 +493,6 @@
   - Humanoid.m_name, Awakened Geirrhafa
   vecs:
   - CharacterDrop.m_spawnOffset, 0,0,10000
-
-# Boss HP adjustments
-- name: d_dn_boss_hp_eikthyr
-  floats:
-  - max_health, <mul_<float_max_health>_4>
-  - health, <mul_<float_max_health>_4.001>
-
-- name: d_dn_boss_hp_brenna
-  floats:
-  - max_health, <mul_<float_max_health>_1.5>
-  - health, <mul_<float_max_health>_1.501>
-
-- name: d_dn_boss_hp_elder
-  floats:
-  - max_health, <mul_<float_max_health>_2>
-  - health, <mul_<float_max_health>_2.001>
-
-- name: d_dn_boss_hp_bonemass
-  floats:
-  - max_health, <mul_<float_max_health>_1.25>
-  - health, <mul_<float_max_health>_1.251>
-
-- name: d_dn_boss_hp_geirrhafa
-  floats:
-  - max_health, <mul_<float_max_health>_1.5>
-  - health, <mul_<float_max_health>_1.501>
-
-- name: d_dn_boss_hp_moder
-  floats:
-  - max_health, <mul_<float_max_health>_1>
-  - health, <mul_<float_max_health>_1.001>
-
-- name: d_dn_boss_hp_yagluth
-  floats:
-  - max_health, <mul_<float_max_health>_0.75>
-  - health, <mul_<float_max_health>_0.751>
-
-- name: d_dn_boss_hp_queen
-  floats:
-  - max_health, <mul_<float_max_health>_1>
-  - health, <mul_<float_max_health>_1.001>
-
-- name: d_dn_boss_hp_fader
-  floats:
-  - max_health, <mul_<float_max_health>_0.5>
-  - health, <mul_<float_max_health>_0.501>
 
 - valueGroup: dnEikthyrDmgPlayer
   values:
